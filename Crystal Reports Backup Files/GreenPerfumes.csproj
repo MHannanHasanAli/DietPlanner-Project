@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF1D3B7A-10B6-4CFC-ADA8-6C111C78160D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GreenPerfumes</RootNamespace>
+    <AssemblyName>GreenPerfumes</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Green.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyTabs, Version=2.0.0.39, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyTabs.2.0.0\lib\net40\EasyTabs.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyTabs.2.0.0\lib\net40\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyTabs.2.0.0\lib\net40\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg, Version=2.4.3.29446, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Svg.2.4.3\lib\Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Data.DataSetExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Win32Interop.Dwmapi, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Win32Interop.Dwmapi.1.0.1\lib\Win32Interop.Dwmapi.dll</HintPath>
+    </Reference>
+    <Reference Include="Win32Interop.Gdi32, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Win32Interop.Gdi32.1.0.1\lib\Win32Interop.Gdi32.dll</HintPath>
+    </Reference>
+    <Reference Include="Win32Interop.Kernel32, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Win32Interop.Kernel32.1.0.1\lib\Win32Interop.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="Win32Interop.User32, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Win32Interop.User32.1.0.1\lib\Win32Interop.User32.dll</HintPath>
+    </Reference>
+    <Reference Include="Win32Interop.Uxtheme, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Win32Interop.Uxtheme.1.0.1\lib\Win32Interop.Uxtheme.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminLogin.cs" />
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel.cs" />
+    <Compile Include="AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllReports.cs" />
+    <Compile Include="AllReports.Designer.cs">
+      <DependentUpon>AllReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categories.cs" />
+    <Compile Include="Categories.Designer.cs">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppContainer.cs" />
+    <Compile Include="AppContainer.Designer.cs">
+      <DependentUpon>AppContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersAndSupplier.cs" />
+    <Compile Include="CustomersAndSupplier.Designer.cs">
+      <DependentUpon>CustomersAndSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerStatement.cs" />
+    <Compile Include="CustomerStatement.Designer.cs">
+      <DependentUpon>CustomerStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs" />
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Expenses.cs" />
+    <Compile Include="Expenses.Designer.cs">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerInfoReportForm.cs" />
+    <Compile Include="LedgerInfoReportForm.Designer.cs">
+      <DependentUpon>LedgerInfoReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerReportForm.cs" />
+    <Compile Include="LedgerReportForm.Designer.cs">
+      <DependentUpon>LedgerReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ledgers.cs" />
+    <Compile Include="Ledgers.Designer.cs">
+      <DependentUpon>Ledgers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginScreen.cs" />
+    <Compile Include="LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainClass.cs" />
+    <Compile Include="MDI.cs" />
+    <Compile Include="MDI.Designer.cs">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpeningBalance.cs" />
+    <Compile Include="OpeningBalance.Designer.cs">
+      <DependentUpon>OpeningBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpeningBalanceReport.cs" />
+    <Compile Include="OpeningBalanceReport.Designer.cs">
+      <DependentUpon>OpeningBalanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpeninigReciept.cs" />
+    <Compile Include="OpeninigReciept.Designer.cs">
+      <DependentUpon>OpeninigReciept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpeniningExport.cs" />
+    <Compile Include="OpeniningExport.Designer.cs">
+      <DependentUpon>OpeniningExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persons.cs" />
+    <Compile Include="Persons.Designer.cs">
+      <DependentUpon>Persons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductEntry.cs" />
+    <Compile Include="ProductEntry.Designer.cs">
+      <DependentUpon>ProductEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseInvoice.cs" />
+    <Compile Include="PurchaseInvoice.Designer.cs">
+      <DependentUpon>PurchaseInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReportForm.cs" />
+    <Compile Include="PurchaseReportForm.Designer.cs">
+      <DependentUpon>PurchaseReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleInvoice.cs" />
+    <Compile Include="SaleInvoice.Designer.cs">
+      <DependentUpon>SaleInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleReportForm.cs" />
+    <Compile Include="SaleReportForm.Designer.cs">
+      <DependentUpon>SaleReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScrapItems.cs" />
+    <Compile Include="ScrapItems.Designer.cs">
+      <DependentUpon>ScrapItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchProducts.cs" />
+    <Compile Include="SearchProducts.Designer.cs">
+      <DependentUpon>SearchProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingScreen.cs" />
+    <Compile Include="SettingScreen.Designer.cs">
+      <DependentUpon>SettingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShopInventory.cs" />
+    <Compile Include="ShopInventory.Designer.cs">
+      <DependentUpon>ShopInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer.cs" />
+    <Compile Include="Transfer.Designer.cs">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units.cs" />
+    <Compile Include="Units.Designer.cs">
+      <DependentUpon>Units.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSaleInvoices.cs" />
+    <Compile Include="ViewSaleInvoices.Designer.cs">
+      <DependentUpon>ViewSaleInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouses.cs" />
+    <Compile Include="Warehouses.Designer.cs">
+      <DependentUpon>Warehouses.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports.resx">
+      <DependentUpon>AllReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categories.resx">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppContainer.resx">
+      <DependentUpon>AppContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersAndSupplier.resx">
+      <DependentUpon>CustomersAndSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerStatement.resx">
+      <DependentUpon>CustomerStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expenses.resx">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerInfoReportForm.resx">
+      <DependentUpon>LedgerInfoReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerReportForm.resx">
+      <DependentUpon>LedgerReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledgers.resx">
+      <DependentUpon>Ledgers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI.resx">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpeningBalance.resx">
+      <DependentUpon>OpeningBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpeningBalanceReport.resx">
+      <DependentUpon>OpeningBalanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpeninigReciept.resx">
+      <DependentUpon>OpeninigReciept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpeniningExport.resx">
+      <DependentUpon>OpeniningExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persons.resx">
+      <DependentUpon>Persons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductEntry.resx">
+      <DependentUpon>ProductEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PurchaseInvoice.resx">
+      <DependentUpon>PurchaseInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseReportForm.resx">
+      <DependentUpon>PurchaseReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleInvoice.resx">
+      <DependentUpon>SaleInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleReportForm.resx">
+      <DependentUpon>SaleReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScrapItems.resx">
+      <DependentUpon>ScrapItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchProducts.resx">
+      <DependentUpon>SearchProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingScreen.resx">
+      <DependentUpon>SettingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopInventory.resx">
+      <DependentUpon>ShopInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer.resx">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units.resx">
+      <DependentUpon>Units.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSaleInvoices.resx">
+      <DependentUpon>ViewSaleInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouses.resx">
+      <DependentUpon>Warehouses.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Green.snk" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-method %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ledger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reset-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product-return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-method %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ledger1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-report1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\price-tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justice-scale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-bag-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box-icon-18-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\area-chart-icon-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-out-of-stock-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_paper_plane_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Brutal.Dev.StrongNameSigner.2.8.0\build\Brutal.Dev.StrongNameSigner.targets" Condition="Exists('..\packages\Brutal.Dev.StrongNameSigner.2.8.0\build\Brutal.Dev.StrongNameSigner.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Brutal.Dev.StrongNameSigner.2.8.0\build\Brutal.Dev.StrongNameSigner.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Brutal.Dev.StrongNameSigner.2.8.0\build\Brutal.Dev.StrongNameSigner.targets'))" />
+  </Target>
+</Project>
