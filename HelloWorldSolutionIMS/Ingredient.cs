@@ -818,25 +818,25 @@ namespace HelloWorldSolutionIMS
 
 
 
-                        if (
-                               calories != 0 &&
-                               fats != 0 &&
-                               fibers != 0 &&
-                               potassium != 0 &&
-                               water != 0 &&
-                               sugar != 0 &&
-                               calcium != 0 &&
-                               a != 0 &&
-                               protein != 0 &&
-                               carbohydrates != 0 &&
-                               sodium != 0 &&
-                               phosphor != 0 &&
-                               magnesium != 0 &&
-                               iron != 0 &&
-                               iodine != 0 &&
-                               b != 0 &&
-                               fdc_id != 0)
-                        {
+                        //if (
+                        //       calories != 0 &&
+                        //       fats != 0 &&
+                        //       fibers != 0 &&
+                        //       potassium != 0 &&
+                        //       water != 0 &&
+                        //       sugar != 0 &&
+                        //       calcium != 0 &&
+                        //       a != 0 &&
+                        //       protein != 0 &&
+                        //       carbohydrates != 0 &&
+                        //       sodium != 0 &&
+                        //       phosphor != 0 &&
+                        //       magnesium != 0 &&
+                        //       iron != 0 &&
+                        //       iodine != 0 &&
+                        //       b != 0 &&
+                        //       fdc_id != 0)
+                        //{
                             // The columns from the Excel file are not null or empty, proceed to insert the record
                             string query = "INSERT INTO Ingredient (INGREDIENT_AR, INGREDIENT_EN, GROUP_AR, GROUP_EN, " +
                                            "CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, " +
@@ -876,14 +876,15 @@ namespace HelloWorldSolutionIMS
                                 command.ExecuteNonQuery();
 
                             }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Some of the crusial columns are empty or null");
-                        }
-                        
-                        MainClass.con.Close();
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("Some of the crusial columns are empty or null");
+                        //}
+
+
                     }
+                    MainClass.con.Close();
                     ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
                     MessageBox.Show("Ingredients imported successfully!");
                 }

@@ -3088,24 +3088,24 @@ namespace HelloWorldSolutionIMS
                         string notes = worksheet.Cells[row, 23].Value?.ToString();
                         string preparation = worksheet.Cells[row, 24].Value?.ToString();
 
-                        if (
-                            calories != 0 &&
-                            fats != 0 &&
-                            fibers != 0 &&
-                            potassium != 0 &&
-                            water != 0 &&
-                            sugar != 0 &&
-                            calcium != 0 &&
-                            a != 0 &&
-                            protein != 0 &&
-                            carbohydrates != 0 &&
-                            sodium != 0 &&
-                            phosphor != 0 &&
-                            magnesium != 0 &&
-                            iron != 0 &&
-                            iodine != 0 &&
-                            b != 0)
-                        {
+                        //if (
+                        //    calories != 0 &&
+                        //    fats != 0 &&
+                        //    fibers != 0 &&
+                        //    potassium != 0 &&
+                        //    water != 0 &&
+                        //    sugar != 0 &&
+                        //    calcium != 0 &&
+                        //    a != 0 &&
+                        //    protein != 0 &&
+                        //    carbohydrates != 0 &&
+                        //    sodium != 0 &&
+                        //    phosphor != 0 &&
+                        //    magnesium != 0 &&
+                        //    iron != 0 &&
+                        //    iodine != 0 &&
+                        //    b != 0)
+                        //{
                             string query = "INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, " +
                                 "CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, " +
                                 "PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Category, Notes, Preparation) " +
@@ -3144,11 +3144,11 @@ namespace HelloWorldSolutionIMS
 
                                 command.ExecuteNonQuery();
                             }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Some of the crucial columns are empty or null");
-                        }
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("Some of the crucial columns are empty or null");
+                        //}
                     }
 
                     MainClass.con.Close();
