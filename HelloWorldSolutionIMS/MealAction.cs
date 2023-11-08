@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using iTextSharp.text.pdf.codec.wmf;
+using OfficeOpenXml;
 using RestSharp.Extensions;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -726,6 +728,138 @@ namespace HelloWorldSolutionIMS
         }
         private void MealAction_Load(object sender, EventArgs e)
         {
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    string colorString = reader["Color"].ToString();
+                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+
+                    foreach (Control control in panel1.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (Control control in panel2.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (Control control in panel3.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (Control control in panel4.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    string colorString = reader["Color"].ToString();
+                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+
+                    foreach (Control control in panel1.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+
+                    foreach (Control control in panel2.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (Control control in panel3.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+
+                    foreach (Control control in panel4.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
             chart1.Series.Clear();
             MainClass.HideAllTabsOnTabControl(tabControl1);
             save.Visible = false;
@@ -1844,6 +1978,7 @@ namespace HelloWorldSolutionIMS
                         notes.Text = reader["Notes"].ToString();
                         preparation.Text = reader["Preparation"].ToString();
                         classification.Text = reader["CLASSIFICATION"].ToString();
+                        typebox.Text = reader["Category"].ToString();
                     }
                     reader.Close(); // Close the first DataReader
 
@@ -1943,8 +2078,8 @@ namespace HelloWorldSolutionIMS
                     try
                     {
                         MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Notes, Preparation) " +
-                            "VALUES (@MealAr, @MealEn, @GroupNAr, @GroupNEn, @GroupCAr, @GroupCEn, @CLASSIFICATION, @CALORIES, @FATS, @FIBERS, @POTASSIUM, @WATER, @SUGAR, @CALCIUM, @A, @PROTEIN, @CARBOHYDRATES, @SODIUM, @PHOSPHOR, @MAGNESIUM, @IRON, @IODINE, @B, @Notes, @Preparation)", MainClass.con);
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Notes, Preparation, Category) " +
+                            "VALUES (@MealAr, @MealEn, @GroupNAr, @GroupNEn, @GroupCAr, @GroupCEn, @CLASSIFICATION, @CALORIES, @FATS, @FIBERS, @POTASSIUM, @WATER, @SUGAR, @CALCIUM, @A, @PROTEIN, @CARBOHYDRATES, @SODIUM, @PHOSPHOR, @MAGNESIUM, @IRON, @IODINE, @B, @Notes, @Preparation, @Category)", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@MealAr", mealar.Text);
                         cmd.Parameters.AddWithValue("@MealEn", mealen.Text);
@@ -1972,7 +2107,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text));
                         cmd.Parameters.AddWithValue("@Notes", notes.Text);
                         cmd.Parameters.AddWithValue("@Preparation", preparation.Text);
-
+                        cmd.Parameters.AddWithValue("@Category", typebox.Text);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Meal added successfully");
                         MainClass.con.Close();
@@ -2003,6 +2138,7 @@ namespace HelloWorldSolutionIMS
                         bbox.Text = "";
                         notes.Text = "";
                         preparation.Text = "";
+                        typebox.SelectedItem = null;
 
 
 
@@ -2104,7 +2240,7 @@ namespace HelloWorldSolutionIMS
                     try
                     {
                         MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("UPDATE Meal SET MealAr = @MealAr, MealEn = @MealEn, GroupNAr = @GroupNAr, GroupNEn = @GroupNEn, GroupCAr = @GroupCAr, GroupCEn = @GroupCEn, CLASSIFICATION = @CLASSIFICATION, CALORIES = @CALORIES, FATS = @FATS, FIBERS = @FIBERS, POTASSIUM = @POTASSIUM, WATER = @WATER, SUGAR = @SUGAR, CALCIUM = @CALCIUM, A = @A, PROTEIN = @PROTEIN, CARBOHYDRATES = @CARBOHYDRATES, SODIUM = @SODIUM, PHOSPHOR = @PHOSPHOR, MAGNESIUM = @MAGNESIUM, IRON = @IRON, IODINE = @IODINE, B = @B, Notes = @Notes, Preparation = @Preparation WHERE ID = @ID", MainClass.con);
+                        SqlCommand cmd = new SqlCommand("UPDATE Meal SET MealAr = @MealAr, MealEn = @MealEn, GroupNAr = @GroupNAr, GroupNEn = @GroupNEn, GroupCAr = @GroupCAr, GroupCEn = @GroupCEn, CLASSIFICATION = @CLASSIFICATION, CALORIES = @CALORIES, FATS = @FATS, FIBERS = @FIBERS, POTASSIUM = @POTASSIUM, WATER = @WATER, SUGAR = @SUGAR, CALCIUM = @CALCIUM, A = @A, PROTEIN = @PROTEIN, CARBOHYDRATES = @CARBOHYDRATES, SODIUM = @SODIUM, PHOSPHOR = @PHOSPHOR, MAGNESIUM = @MAGNESIUM, IRON = @IRON, IODINE = @IODINE, B = @B, Notes = @Notes, Preparation = @Preparation, Category = @Category WHERE ID = @ID", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@ID", mealIDToEdit);
                         cmd.Parameters.AddWithValue("@MealAr", mealar.Text);
@@ -2133,6 +2269,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text));
                         cmd.Parameters.AddWithValue("@Notes", notes.Text);
                         cmd.Parameters.AddWithValue("@Preparation", preparation.Text);
+                        cmd.Parameters.AddWithValue("@Category", typebox.Text);
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Meal updated successfully");
@@ -2166,7 +2303,7 @@ namespace HelloWorldSolutionIMS
                         bbox.Text = "";
                         notes.Text = "";
                         preparation.Text = "";
-
+                        typebox.SelectedItem = null;
 
 
                     }
@@ -2454,6 +2591,701 @@ namespace HelloWorldSolutionIMS
         {
             tabControl1.SelectedIndex = 2;
         }
+
+        public void ImportExcelToDatabase(string excelFilePath, string category)
+        {
+            MainClass.con.Open();
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            try
+            {
+                using (ExcelPackage package = new ExcelPackage(new FileInfo(excelFilePath)))
+                {
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    int rowCount = worksheet.Dimension.Rows;
+
+                    for (int row = 2; row <= rowCount; row++)
+                    {
+                        string mealAr = worksheet.Cells[row, 1].Value?.ToString();
+                        string mealEn = worksheet.Cells[row, 2].Value?.ToString();
+
+                        if (string.IsNullOrEmpty(mealAr) && !string.IsNullOrEmpty(mealEn))
+                        {
+                            mealAr = mealEn;
+                        }
+                        else if (string.IsNullOrEmpty(mealAr) && string.IsNullOrEmpty(mealEn))
+                        {
+                            mealAr = "Imported";
+                        }
+
+                        if (string.IsNullOrEmpty(mealEn) && !string.IsNullOrEmpty(mealAr))
+                        {
+                            mealEn = mealAr;
+                        }
+
+                        string groupNAr = worksheet.Cells[row, 3].Value?.ToString();
+                        string groupNEn = worksheet.Cells[row, 4].Value?.ToString();
+
+                        if(groupNAr != null && groupNEn != null)
+                        {
+                            try
+                            {
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
+                                SqlCommand cmd = new SqlCommand("SELECT * FROM GROUPN " +
+                                    "WHERE (Namear = @Namear) AND (Nameen = @Nameen) ", MainClass.con);
+
+                                cmd.Parameters.AddWithValue("@Namear", groupNAr);
+                                cmd.Parameters.AddWithValue("@Nameen", groupNEn);
+
+                                SqlDataReader reader = cmd.ExecuteReader();
+
+                                if (reader.Read())
+                                {
+                                    groupNAr = reader["Namear"].ToString();
+                                    groupNEn = reader["Nameen"].ToString();
+                                }
+                                else
+                                {
+                                    reader.Close();
+                                    try
+                                    {
+                                        if (MainClass.con.State != ConnectionState.Open)
+                                        {
+                                            MainClass.con.Open();
+                                            conn = 1;
+                                        }
+                                        SqlCommand cmd2 = new SqlCommand("INSERT INTO GROUPN (Namear, Nameen) " +
+                                            "VALUES (@Namear, @Nameen)", MainClass.con);
+
+                                        cmd2.Parameters.AddWithValue("@Namear", groupNAr);
+                                        cmd2.Parameters.AddWithValue("@Nameen", groupNEn);
+
+
+                                        cmd2.ExecuteNonQuery();
+
+                                        if (conn == 1)
+                                        {
+                                            MainClass.con.Close();
+                                            conn = 0;
+                                        }
+
+                                        UpdateGroupsN();
+                                        
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MainClass.con.Close();
+                                        MessageBox.Show(ex.Message);
+                                    }
+                                }
+
+                                reader.Close(); // Close the reader
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
+
+                        
+                                UpdateGroupsN();
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+
+
+                            
+                        }
+                        else if(groupNAr != null && groupNEn == null)
+                        {
+                            try
+                            {
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
+                                SqlCommand cmd = new SqlCommand("SELECT * FROM GROUPN " +
+                                    "WHERE Namear = @Namear", MainClass.con);
+
+                                cmd.Parameters.AddWithValue("@Namear", groupNAr);
+ 
+
+                                SqlDataReader reader = cmd.ExecuteReader();
+
+                                if (reader.Read())
+                                {
+                                    groupNAr = reader["Namear"].ToString();
+                                    groupNEn = reader["Nameen"].ToString();
+                                }
+                                else
+                                {
+                                    reader.Close();
+                                    try
+                                    {
+                                        if (MainClass.con.State != ConnectionState.Open)
+                                        {
+                                            MainClass.con.Open();
+                                            conn = 1;
+                                        }
+                                        SqlCommand cmd2 = new SqlCommand("INSERT INTO GROUPN (Namear, Nameen) " +
+                                            "VALUES (@Namear, @Namear)", MainClass.con);
+
+                                        cmd2.Parameters.AddWithValue("@Namear", groupNAr);
+                                        groupNEn = groupNAr;
+                                        cmd2.ExecuteNonQuery();
+
+                                        if (conn == 1)
+                                        {
+                                            MainClass.con.Close();
+                                            conn = 0;
+                                        }
+
+                                        UpdateGroupsN();
+
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MainClass.con.Close();
+                                        MessageBox.Show(ex.Message);
+                                    }
+                                }
+
+                                reader.Close(); // Close the reader
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
+
+                                UpdateGroupsN();
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                        else if (groupNAr == null && groupNEn != null)
+                        {
+                            try
+                            {
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
+                                SqlCommand cmd = new SqlCommand("SELECT * FROM GROUPN " +
+                                    "WHERE Nameen = @Nameen", MainClass.con);
+
+                                cmd.Parameters.AddWithValue("@Nameen", groupNEn);
+
+
+                                SqlDataReader reader = cmd.ExecuteReader();
+
+                                if (reader.Read())
+                                {
+                                    groupNAr = reader["Namear"].ToString();
+                                    groupNEn = reader["Nameen"].ToString();
+                                }
+                                else
+                                {
+                                    reader.Close();
+                                    try
+                                    {
+                                        if (MainClass.con.State != ConnectionState.Open)
+                                        {
+                                            MainClass.con.Open();
+                                            conn = 1;
+                                        }
+                                        SqlCommand cmd2 = new SqlCommand("INSERT INTO GROUPN (Namear, Nameen) " +
+                                            "VALUES (@Nameen, @Nameen)", MainClass.con);
+
+                                        cmd2.Parameters.AddWithValue("@Nameen", groupNEn);
+                                        groupNAr = groupNEn;
+                                        cmd2.ExecuteNonQuery();
+
+                                        if (conn == 1)
+                                        {
+                                            MainClass.con.Close();
+                                            conn = 0;
+                                        }
+                                       
+                                        UpdateGroupsN();
+
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MainClass.con.Close();
+                                        MessageBox.Show(ex.Message);
+                                    }
+                                }
+
+                                reader.Close(); // Close the reader
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
+
+                              
+                                UpdateGroupsN();
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+
+
+                        string groupCAr = worksheet.Cells[row, 5].Value?.ToString();
+                        string groupCEn = worksheet.Cells[row, 6].Value?.ToString();
+
+                        if (groupCAr != null && groupCEn != null)
+                        {
+                            try
+                            {
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
+                                SqlCommand cmd = new SqlCommand("SELECT * FROM GROUPC " +
+                                    "WHERE (Namear = @Namear) AND (Nameen = @Nameen) ", MainClass.con);
+
+                                cmd.Parameters.AddWithValue("@Namear", groupCAr);
+                                cmd.Parameters.AddWithValue("@Nameen", groupCEn);
+
+                                SqlDataReader reader = cmd.ExecuteReader();
+
+                                if (reader.Read())
+                                {
+                                    groupCAr = reader["Namear"].ToString();
+                                    groupCEn = reader["Nameen"].ToString();
+                                }
+                                else
+                                {
+                                    reader.Close();
+                                    try
+                                    {
+                                        if (MainClass.con.State != ConnectionState.Open)
+                                        {
+                                            MainClass.con.Open();
+                                            conn = 1;
+                                        }
+                                        SqlCommand cmd2 = new SqlCommand("INSERT INTO GROUPC (Namear, Nameen) " +
+                                            "VALUES (@Namear, @Nameen)", MainClass.con);
+
+                                        cmd2.Parameters.AddWithValue("@Namear", groupCAr);
+                                        cmd2.Parameters.AddWithValue("@Nameen", groupCEn);
+
+
+                                        cmd2.ExecuteNonQuery();
+
+                                        if (conn == 1)
+                                        {
+                                            MainClass.con.Close();
+                                            conn = 0;
+                                        }
+
+                                        UpdateGroupsC();
+
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MainClass.con.Close();
+                                        MessageBox.Show(ex.Message);
+                                    }
+                                }
+
+                                reader.Close(); // Close the reader
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
+
+
+                                UpdateGroupsC();
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+
+
+
+                        }
+                        else if (groupCAr != null && groupCEn == null)
+                        {
+                            try
+                            {
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
+                                SqlCommand cmd = new SqlCommand("SELECT * FROM GROUPC " +
+                                    "WHERE Namear = @Namear", MainClass.con);
+
+                                cmd.Parameters.AddWithValue("@Namear", groupCAr);
+
+
+                                SqlDataReader reader = cmd.ExecuteReader();
+
+                                if (reader.Read())
+                                {
+                                    groupCAr = reader["Namear"].ToString();
+                                    groupCEn = reader["Nameen"].ToString();
+                                }
+                                else
+                                {
+                                    reader.Close();
+                                    try
+                                    {
+                                        if (MainClass.con.State != ConnectionState.Open)
+                                        {
+                                            MainClass.con.Open();
+                                            conn = 1;
+                                        }
+                                        SqlCommand cmd2 = new SqlCommand("INSERT INTO GROUPC (Namear, Nameen) " +
+                                            "VALUES (@Namear, @Namear)", MainClass.con);
+
+                                        cmd2.Parameters.AddWithValue("@Namear", groupCAr);
+                                        groupCEn = groupCAr;
+                                        cmd2.ExecuteNonQuery();
+
+                                        if (conn == 1)
+                                        {
+                                            MainClass.con.Close();
+                                            conn = 0;
+                                        }
+
+                                        UpdateGroupsC();
+
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MainClass.con.Close();
+                                        MessageBox.Show(ex.Message);
+                                    }
+                                }
+
+                                reader.Close(); // Close the reader
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
+
+
+                                UpdateGroupsC();
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                        else if (groupCAr == null && groupCEn != null)
+                        {
+                            try
+                            {
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
+                                SqlCommand cmd = new SqlCommand("SELECT * FROM GROUPC " +
+                                    "WHERE Nameen = @Nameen", MainClass.con);
+
+                                cmd.Parameters.AddWithValue("@Nameen", groupCEn);
+
+
+                                SqlDataReader reader = cmd.ExecuteReader();
+
+                                if (reader.Read())
+                                {
+                                    groupCAr = reader["Namear"].ToString();
+                                    groupCEn = reader["Nameen"].ToString();
+                                }
+                                else
+                                {
+                                    reader.Close();
+                                    try
+                                    {
+                                        if (MainClass.con.State != ConnectionState.Open)
+                                        {
+                                            MainClass.con.Open();
+                                            conn = 1;
+                                        }
+                                        SqlCommand cmd2 = new SqlCommand("INSERT INTO GROUPC (Namear, Nameen) " +
+                                            "VALUES (@Nameen, @Nameen)", MainClass.con);
+
+                                        cmd2.Parameters.AddWithValue("@Nameen", groupCEn);
+                                        groupCAr = groupCEn;
+                                        cmd2.ExecuteNonQuery();
+
+                                        if (conn == 1)
+                                        {
+                                            MainClass.con.Close();
+                                            conn = 0;
+                                        }
+
+                                        UpdateGroupsC();
+
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MainClass.con.Close();
+                                        MessageBox.Show(ex.Message);
+                                    }
+                                }
+
+                                reader.Close(); // Close the reader
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
+
+
+                                UpdateGroupsC();
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+
+                        float calories, fats, fibers, potassium, water, sugar, calcium, a, protein, carbohydrates, sodium, phosphor, magnesium, iron, iodine, b;
+
+                        float.TryParse(worksheet.Cells[row, 7].Value?.ToString(), out calories);
+                        float.TryParse(worksheet.Cells[row, 8].Value?.ToString(), out fats);
+                        float.TryParse(worksheet.Cells[row, 9].Value?.ToString(), out fibers);
+                        float.TryParse(worksheet.Cells[row, 10].Value?.ToString(), out potassium);
+                        float.TryParse(worksheet.Cells[row, 11].Value?.ToString(), out water);
+                        float.TryParse(worksheet.Cells[row, 12].Value?.ToString(), out sugar);
+                        float.TryParse(worksheet.Cells[row, 13].Value?.ToString(), out calcium);
+                        float.TryParse(worksheet.Cells[row, 14].Value?.ToString(), out a);
+                        float.TryParse(worksheet.Cells[row, 15].Value?.ToString(), out protein);
+                        float.TryParse(worksheet.Cells[row, 16].Value?.ToString(), out carbohydrates);
+                        float.TryParse(worksheet.Cells[row, 17].Value?.ToString(), out sodium);
+                        float.TryParse(worksheet.Cells[row, 18].Value?.ToString(), out phosphor);
+                        float.TryParse(worksheet.Cells[row, 19].Value?.ToString(), out magnesium);
+                        float.TryParse(worksheet.Cells[row, 20].Value?.ToString(), out iron);
+                        float.TryParse(worksheet.Cells[row, 21].Value?.ToString(), out iodine);
+                        float.TryParse(worksheet.Cells[row, 22].Value?.ToString(), out b);
+
+                        string notes = worksheet.Cells[row, 23].Value?.ToString();
+                        string preparation = worksheet.Cells[row, 24].Value?.ToString();
+
+                        if (
+                            calories != 0 &&
+                            fats != 0 &&
+                            fibers != 0 &&
+                            potassium != 0 &&
+                            water != 0 &&
+                            sugar != 0 &&
+                            calcium != 0 &&
+                            a != 0 &&
+                            protein != 0 &&
+                            carbohydrates != 0 &&
+                            sodium != 0 &&
+                            phosphor != 0 &&
+                            magnesium != 0 &&
+                            iron != 0 &&
+                            iodine != 0 &&
+                            b != 0)
+                        {
+                            string query = "INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, " +
+                                "CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, " +
+                                "PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Category, Notes, Preparation) " +
+                                "VALUES (@MealAr, @MealEn, @GroupNAr, @GroupNEn, @GroupCAr, @GroupCEn, " +
+                                "@Classification, @Calories, @Fats, @Fibers, @Potassium, @Water, @Sugar, @Calcium, @A, " +
+                                "@Protein, @Carbohydrates, @Sodium, @Phosphor, @Magnesium, @Iron, @Iodine, @B, @Category, @Notes, @Preparation)";
+
+                            using (SqlCommand command = new SqlCommand(query, MainClass.con))
+                            {
+                                command.Parameters.AddWithValue("@MealAr", mealAr);
+                                command.Parameters.AddWithValue("@MealEn", mealEn);
+                                command.Parameters.AddWithValue("@GroupNAr", groupNAr);
+                                command.Parameters.AddWithValue("@GroupNEn", groupNEn);
+                                command.Parameters.AddWithValue("@GroupCAr", groupCAr);
+                                command.Parameters.AddWithValue("@GroupCEn", groupCEn);
+                                command.Parameters.AddWithValue("@Classification", "Per 100 gram");
+                                command.Parameters.AddWithValue("@Calories", calories);
+                                command.Parameters.AddWithValue("@Fats", fats);
+                                command.Parameters.AddWithValue("@Fibers", fibers);
+                                command.Parameters.AddWithValue("@Potassium", potassium);
+                                command.Parameters.AddWithValue("@Water", water);
+                                command.Parameters.AddWithValue("@Sugar", sugar);
+                                command.Parameters.AddWithValue("@Calcium", calcium);
+                                command.Parameters.AddWithValue("@A", a);
+                                command.Parameters.AddWithValue("@Protein", protein);
+                                command.Parameters.AddWithValue("@Carbohydrates", carbohydrates);
+                                command.Parameters.AddWithValue("@Sodium", sodium);
+                                command.Parameters.AddWithValue("@Phosphor", phosphor);
+                                command.Parameters.AddWithValue("@Magnesium", magnesium);
+                                command.Parameters.AddWithValue("@Iron", iron);
+                                command.Parameters.AddWithValue("@Iodine", iodine);
+                                command.Parameters.AddWithValue("@B", b);
+                                command.Parameters.AddWithValue("@Category", category);
+                                command.Parameters.AddWithValue("@Notes", notes);
+                                command.Parameters.AddWithValue("@Preparation", preparation);
+
+                                command.ExecuteNonQuery();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Some of the crucial columns are empty or null");
+                        }
+                    }
+
+                    MainClass.con.Close();
+
+                    ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                    MessageBox.Show("Data imported successfully!");
+                    tabControl1.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+            }
+        }
+
+        private void All_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                try
+                {
+                    ImportExcelToDatabase(filePath, "All");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void Breakfast_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                try
+                {
+                    ImportExcelToDatabase(filePath, "Breakfast");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void lunch_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                try
+                {
+                    ImportExcelToDatabase(filePath, "Lunch");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void dinner_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                try
+                {
+                    ImportExcelToDatabase(filePath, "Dinner");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void snack_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                try
+                {
+                    ImportExcelToDatabase(filePath, "Snack");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void ff_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                try
+                {
+                    ImportExcelToDatabase(filePath, "Functional Food");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
     }
-      
+
 }

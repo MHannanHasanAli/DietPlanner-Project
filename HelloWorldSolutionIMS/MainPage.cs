@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 using Win32Interop.Enums;
+using Color = System.Drawing.Color;
 
 namespace HelloWorldSolutionIMS
 {
@@ -19,7 +22,7 @@ namespace HelloWorldSolutionIMS
             InitializeComponent();
         }
 
-       static Color selectedColor = Color.White;
+       static System.Drawing.Color selectedColor = System.Drawing.Color.White;
         private void MainPage_Load(object sender, EventArgs e)
         {
             try
@@ -32,13 +35,13 @@ namespace HelloWorldSolutionIMS
                if(reader.Read())
                 {
                     string colorString = reader["Color"].ToString();
-                    Color color = ColorTranslator.FromHtml(colorString);
+                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
                     sidebar.BackColor = color;
 
                 }
                 else
                 {
-                    sidebar.BackColor = Color.White;
+                    sidebar.BackColor = System.Drawing.Color.White;
                   
                 }
                 
@@ -53,7 +56,9 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
+
            
+
             int w = 1200;
             int h = 737;
             //this.Location = new Point(0, 0);
@@ -74,6 +79,16 @@ namespace HelloWorldSolutionIMS
         f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.mainpanel.Controls.Add(f);
+            foreach (Control control in f.Controls)
+            {
+                if (control is Guna2Button)
+                {
+                    Guna2Button button = (Guna2Button)control;
+                    // Access each button here, for instance, you can print the text of each button
+                    button.ForeColor =Color.Orange;
+                    // You can access other properties or perform actions with the buttons here
+                }
+            }
             this.mainpanel.Tag = f;
             f.Show();
         }

@@ -36,7 +36,7 @@ namespace HelloWorldSolutionIMS
         }
 
         static int conn = 0;
-        private void SaveFileAsExcel()
+        private void SaveFileAsExcel(string filename)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Excel Files|*.xlsx;*.xls";
@@ -45,7 +45,8 @@ namespace HelloWorldSolutionIMS
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 // Replace this path with the path of your Excel file
-                string sourceFilePath = "C:\\Users\\Hannan\\Desktop\\Import\\DemoIngredientsImport.xlsx";
+                var pth = AppDomain.CurrentDomain.BaseDirectory;
+                string sourceFilePath = pth+filename;
                 string destinationFilePath = saveFileDialog1.FileName;
 
                 try
@@ -916,9 +917,6 @@ namespace HelloWorldSolutionIMS
 
         private void Apply_Click(object sender, EventArgs e)
         {
-           
-
-           
 
             try
             {
@@ -978,10 +976,103 @@ namespace HelloWorldSolutionIMS
 
         private void downloadingredient_Click(object sender, EventArgs e)
         {
-            SaveFileAsExcel();
+            SaveFileAsExcel("\\DemoIngredientsImport.xlsx");
         }
 
-       
+        private void importmeals_Click(object sender, EventArgs e)
+        {
+            SaveFileAsExcel("\\DemoMealsImport.xlsx");
+        }
 
+        private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
+        {
+            Bitmap pixelData = (Bitmap)pictureBox2.Image;
+            Color clr = pixelData.GetPixel(e.X, e.Y);
+            showbuttonpanel.BackColor = clr;
+        }
+
+        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
+        {
+            Bitmap pixelData = (Bitmap)pictureBox2.Image;
+            Color clr = pixelData.GetPixel(e.X, e.Y);
+            selectedbuttonpanel.BackColor = clr;
+            color = clr;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            showbuttonpanel.BackColor = Color.White;
+        }
+
+        private void gapplybutton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE buttoncolor  SET Color = @color WHERE Id = @colorId", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@colorId", 1);
+                cmd.Parameters.AddWithValue("@color", ColorTranslator.ToHtml(color));
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Button color updated successfully");
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+            Application.Restart();
+        }
+
+        private void Colorsetting_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 9;
+        }
+
+        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
+        {
+            Bitmap pixelData = (Bitmap)pictureBox2.Image;
+            Color clr = pixelData.GetPixel(e.X, e.Y);
+            textselectpanel.BackColor = clr;
+            color = clr;
+        }
+
+        private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
+        {
+            Bitmap pixelData = (Bitmap)pictureBox2.Image;
+            Color clr = pixelData.GetPixel(e.X, e.Y);
+            textshowpanel.BackColor = clr;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            textshowpanel.BackColor = Color.White;
+        }
+
+        private void ApplyText_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE textcolor SET Color = @color WHERE Id = @colorId", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@colorId", 1);
+                cmd.Parameters.AddWithValue("@color", ColorTranslator.ToHtml(color));
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Button text theme updated successfully");
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+            Application.Restart();
+        }
     }
 }
