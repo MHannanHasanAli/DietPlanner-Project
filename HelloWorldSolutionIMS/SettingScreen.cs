@@ -14,6 +14,10 @@ using Svg;
 using Win32Interop.Enums;
 using System.Runtime.ConstrainedExecution;
 using Win32Interop.Structs;
+using System.IO;
+using System.Net.Http.Headers;
+using System.Net.Http;
+using System.Net;
 
 namespace HelloWorldSolutionIMS
 {
@@ -32,6 +36,32 @@ namespace HelloWorldSolutionIMS
         }
 
         static int conn = 0;
+        private void SaveFileAsExcel()
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "Excel Files|*.xlsx;*.xls";
+            saveFileDialog1.Title = "Save an Excel File";
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                // Replace this path with the path of your Excel file
+                string sourceFilePath = "C:\\Users\\Hannan\\Desktop\\Import\\DemoIngredientsImport.xlsx";
+                string destinationFilePath = saveFileDialog1.FileName;
+
+                try
+                {
+                    File.Copy(sourceFilePath, destinationFilePath);
+                    MessageBox.Show("File saved successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+        }
+
+      
+
         private void UpdateNutritionist()
         {
             SqlCommand cmd;
@@ -935,5 +965,23 @@ namespace HelloWorldSolutionIMS
                 e.Handled = true; // Ignore the keypress if it's not a number or a control character
             }
         }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 8;
+        }
+
+        private void downloadingredient_Click(object sender, EventArgs e)
+        {
+            SaveFileAsExcel();
+        }
+
+       
+
     }
 }

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.classification = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -77,11 +77,6 @@
             this.carbohydrates = new Guna.UI2.WinForms.Guna2TextBox();
             this.protein = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Search = new Guna.UI2.WinForms.Guna2Button();
-            this.New = new Guna.UI2.WinForms.Guna2Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.DeleteBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.EditBTN = new Guna.UI2.WinForms.Guna2Button();
             this.nodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fdciddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classificationdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +88,19 @@
             this.calciumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fibersdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sodiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Search = new Guna.UI2.WinForms.Guna2Button();
+            this.New = new Guna.UI2.WinForms.Guna2Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.DeleteBTN = new Guna.UI2.WinForms.Guna2Button();
+            this.EditBTN = new Guna.UI2.WinForms.Guna2Button();
+            this.importall = new Guna.UI2.WinForms.Guna2Button();
+            this.importff = new Guna.UI2.WinForms.Guna2Button();
+            this.importfndds = new Guna.UI2.WinForms.Guna2Button();
+            this.importsr = new Guna.UI2.WinForms.Guna2Button();
+            this.importlocal = new Guna.UI2.WinForms.Guna2Button();
+            this.importbranded = new Guna.UI2.WinForms.Guna2Button();
+            this.categorybox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.categorylabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -849,21 +857,21 @@
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.ColumnHeadersHeight = 52;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nodgv,
@@ -877,14 +885,14 @@
             this.calciumdgv,
             this.fibersdgv,
             this.sodiumdgv});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(63, 553);
@@ -919,100 +927,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // Search
-            // 
-            this.Search.AutoRoundedCorners = true;
-            this.Search.BorderRadius = 21;
-            this.Search.CheckedState.Parent = this.Search;
-            this.Search.CustomImages.Parent = this.Search;
-            this.Search.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.Search.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.Search.ForeColor = System.Drawing.Color.White;
-            this.Search.HoverState.Parent = this.Search;
-            this.Search.Location = new System.Drawing.Point(266, 480);
-            this.Search.Name = "Search";
-            this.Search.ShadowDecoration.Parent = this.Search;
-            this.Search.Size = new System.Drawing.Size(204, 45);
-            this.Search.TabIndex = 110;
-            this.Search.Text = "Search Ingredient";
-            this.Search.Click += new System.EventHandler(this.Search_Click);
-            // 
-            // New
-            // 
-            this.New.AutoRoundedCorners = true;
-            this.New.BorderRadius = 21;
-            this.New.CausesValidation = false;
-            this.New.CheckedState.Parent = this.New;
-            this.New.CustomImages.Parent = this.New;
-            this.New.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.New.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.New.ForeColor = System.Drawing.Color.White;
-            this.New.HoverState.Parent = this.New;
-            this.New.Location = new System.Drawing.Point(61, 480);
-            this.New.Name = "New";
-            this.New.ShadowDecoration.Parent = this.New;
-            this.New.Size = new System.Drawing.Size(199, 45);
-            this.New.TabIndex = 109;
-            this.New.Text = "Save Ingredient";
-            this.New.Click += new System.EventHandler(this.New_Click);
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.IsTextAutoFit = false;
-            legend1.MaximumAutoSize = 20F;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(824, 12);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(307, 250);
-            this.chart1.TabIndex = 111;
-            this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
-            // 
-            // DeleteBTN
-            // 
-            this.DeleteBTN.AutoRoundedCorners = true;
-            this.DeleteBTN.BorderRadius = 21;
-            this.DeleteBTN.CheckedState.Parent = this.DeleteBTN;
-            this.DeleteBTN.CustomImages.Parent = this.DeleteBTN;
-            this.DeleteBTN.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.DeleteBTN.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.DeleteBTN.ForeColor = System.Drawing.Color.White;
-            this.DeleteBTN.HoverState.Parent = this.DeleteBTN;
-            this.DeleteBTN.Location = new System.Drawing.Point(681, 480);
-            this.DeleteBTN.Name = "DeleteBTN";
-            this.DeleteBTN.ShadowDecoration.Parent = this.DeleteBTN;
-            this.DeleteBTN.Size = new System.Drawing.Size(204, 45);
-            this.DeleteBTN.TabIndex = 113;
-            this.DeleteBTN.Text = "Delete Ingredient";
-            this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
-            // 
-            // EditBTN
-            // 
-            this.EditBTN.AutoRoundedCorners = true;
-            this.EditBTN.BorderRadius = 21;
-            this.EditBTN.CausesValidation = false;
-            this.EditBTN.CheckedState.Parent = this.EditBTN;
-            this.EditBTN.CustomImages.Parent = this.EditBTN;
-            this.EditBTN.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.EditBTN.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.EditBTN.ForeColor = System.Drawing.Color.White;
-            this.EditBTN.HoverState.Parent = this.EditBTN;
-            this.EditBTN.Location = new System.Drawing.Point(476, 480);
-            this.EditBTN.Name = "EditBTN";
-            this.EditBTN.ShadowDecoration.Parent = this.EditBTN;
-            this.EditBTN.Size = new System.Drawing.Size(199, 45);
-            this.EditBTN.TabIndex = 112;
-            this.EditBTN.Text = "Edit Ingredient";
-            this.EditBTN.Click += new System.EventHandler(this.EditBTN_Click);
-            // 
             // nodgv
             // 
             this.nodgv.HeaderText = "NO";
@@ -1029,7 +943,7 @@
             // 
             // classificationdgv
             // 
-            this.classificationdgv.HeaderText = "CLASSIFICATION";
+            this.classificationdgv.HeaderText = "UNIT";
             this.classificationdgv.MinimumWidth = 6;
             this.classificationdgv.Name = "classificationdgv";
             this.classificationdgv.ReadOnly = true;
@@ -1090,12 +1004,264 @@
             this.sodiumdgv.Name = "sodiumdgv";
             this.sodiumdgv.ReadOnly = true;
             // 
+            // Search
+            // 
+            this.Search.AutoRoundedCorners = true;
+            this.Search.BorderRadius = 21;
+            this.Search.CheckedState.Parent = this.Search;
+            this.Search.CustomImages.Parent = this.Search;
+            this.Search.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.Search.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.Search.ForeColor = System.Drawing.Color.White;
+            this.Search.HoverState.Parent = this.Search;
+            this.Search.Location = new System.Drawing.Point(266, 480);
+            this.Search.Name = "Search";
+            this.Search.ShadowDecoration.Parent = this.Search;
+            this.Search.Size = new System.Drawing.Size(204, 45);
+            this.Search.TabIndex = 110;
+            this.Search.Text = "Search Ingredient";
+            this.Search.Click += new System.EventHandler(this.Search_Click);
+            // 
+            // New
+            // 
+            this.New.AutoRoundedCorners = true;
+            this.New.BorderRadius = 21;
+            this.New.CausesValidation = false;
+            this.New.CheckedState.Parent = this.New;
+            this.New.CustomImages.Parent = this.New;
+            this.New.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.New.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.New.ForeColor = System.Drawing.Color.White;
+            this.New.HoverState.Parent = this.New;
+            this.New.Location = new System.Drawing.Point(61, 480);
+            this.New.Name = "New";
+            this.New.ShadowDecoration.Parent = this.New;
+            this.New.Size = new System.Drawing.Size(199, 45);
+            this.New.TabIndex = 109;
+            this.New.Text = "Save Ingredient";
+            this.New.Click += new System.EventHandler(this.New_Click);
+            // 
+            // chart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.IsTextAutoFit = false;
+            legend2.MaximumAutoSize = 20F;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(824, 12);
+            this.chart1.Name = "chart1";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(307, 250);
+            this.chart1.TabIndex = 111;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
+            // DeleteBTN
+            // 
+            this.DeleteBTN.AutoRoundedCorners = true;
+            this.DeleteBTN.BorderRadius = 21;
+            this.DeleteBTN.CheckedState.Parent = this.DeleteBTN;
+            this.DeleteBTN.CustomImages.Parent = this.DeleteBTN;
+            this.DeleteBTN.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.DeleteBTN.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.DeleteBTN.ForeColor = System.Drawing.Color.White;
+            this.DeleteBTN.HoverState.Parent = this.DeleteBTN;
+            this.DeleteBTN.Location = new System.Drawing.Point(681, 480);
+            this.DeleteBTN.Name = "DeleteBTN";
+            this.DeleteBTN.ShadowDecoration.Parent = this.DeleteBTN;
+            this.DeleteBTN.Size = new System.Drawing.Size(204, 45);
+            this.DeleteBTN.TabIndex = 113;
+            this.DeleteBTN.Text = "Delete Ingredient";
+            this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
+            // 
+            // EditBTN
+            // 
+            this.EditBTN.AutoRoundedCorners = true;
+            this.EditBTN.BorderRadius = 21;
+            this.EditBTN.CausesValidation = false;
+            this.EditBTN.CheckedState.Parent = this.EditBTN;
+            this.EditBTN.CustomImages.Parent = this.EditBTN;
+            this.EditBTN.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.EditBTN.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.EditBTN.ForeColor = System.Drawing.Color.White;
+            this.EditBTN.HoverState.Parent = this.EditBTN;
+            this.EditBTN.Location = new System.Drawing.Point(476, 480);
+            this.EditBTN.Name = "EditBTN";
+            this.EditBTN.ShadowDecoration.Parent = this.EditBTN;
+            this.EditBTN.Size = new System.Drawing.Size(199, 45);
+            this.EditBTN.TabIndex = 112;
+            this.EditBTN.Text = "Edit Ingredient";
+            this.EditBTN.Click += new System.EventHandler(this.EditBTN_Click);
+            // 
+            // importall
+            // 
+            this.importall.AutoRoundedCorners = true;
+            this.importall.BorderRadius = 13;
+            this.importall.CausesValidation = false;
+            this.importall.CheckedState.Parent = this.importall;
+            this.importall.CustomImages.Parent = this.importall;
+            this.importall.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.importall.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.importall.ForeColor = System.Drawing.Color.White;
+            this.importall.HoverState.Parent = this.importall;
+            this.importall.Location = new System.Drawing.Point(634, 44);
+            this.importall.Name = "importall";
+            this.importall.ShadowDecoration.Parent = this.importall;
+            this.importall.Size = new System.Drawing.Size(199, 29);
+            this.importall.TabIndex = 115;
+            this.importall.Text = "All";
+            this.importall.Click += new System.EventHandler(this.importall_Click);
+            // 
+            // importff
+            // 
+            this.importff.AutoRoundedCorners = true;
+            this.importff.BorderRadius = 13;
+            this.importff.CausesValidation = false;
+            this.importff.CheckedState.Parent = this.importff;
+            this.importff.CustomImages.Parent = this.importff;
+            this.importff.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.importff.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.importff.ForeColor = System.Drawing.Color.White;
+            this.importff.HoverState.Parent = this.importff;
+            this.importff.Location = new System.Drawing.Point(634, 75);
+            this.importff.Name = "importff";
+            this.importff.ShadowDecoration.Parent = this.importff;
+            this.importff.Size = new System.Drawing.Size(199, 29);
+            this.importff.TabIndex = 116;
+            this.importff.Text = "Foundation Foods";
+            this.importff.Click += new System.EventHandler(this.importff_Click);
+            // 
+            // importfndds
+            // 
+            this.importfndds.AutoRoundedCorners = true;
+            this.importfndds.BorderRadius = 13;
+            this.importfndds.CausesValidation = false;
+            this.importfndds.CheckedState.Parent = this.importfndds;
+            this.importfndds.CustomImages.Parent = this.importfndds;
+            this.importfndds.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.importfndds.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.importfndds.ForeColor = System.Drawing.Color.White;
+            this.importfndds.HoverState.Parent = this.importfndds;
+            this.importfndds.Location = new System.Drawing.Point(634, 141);
+            this.importfndds.Name = "importfndds";
+            this.importfndds.ShadowDecoration.Parent = this.importfndds;
+            this.importfndds.Size = new System.Drawing.Size(199, 29);
+            this.importfndds.TabIndex = 118;
+            this.importfndds.Text = "FNDDS";
+            this.importfndds.Click += new System.EventHandler(this.importfndds_Click);
+            // 
+            // importsr
+            // 
+            this.importsr.AutoRoundedCorners = true;
+            this.importsr.BorderRadius = 13;
+            this.importsr.CausesValidation = false;
+            this.importsr.CheckedState.Parent = this.importsr;
+            this.importsr.CustomImages.Parent = this.importsr;
+            this.importsr.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.importsr.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.importsr.ForeColor = System.Drawing.Color.White;
+            this.importsr.HoverState.Parent = this.importsr;
+            this.importsr.Location = new System.Drawing.Point(634, 110);
+            this.importsr.Name = "importsr";
+            this.importsr.ShadowDecoration.Parent = this.importsr;
+            this.importsr.Size = new System.Drawing.Size(199, 29);
+            this.importsr.TabIndex = 117;
+            this.importsr.Text = "SR legacy";
+            this.importsr.Click += new System.EventHandler(this.importsr_Click);
+            // 
+            // importlocal
+            // 
+            this.importlocal.AutoRoundedCorners = true;
+            this.importlocal.BorderRadius = 13;
+            this.importlocal.CausesValidation = false;
+            this.importlocal.CheckedState.Parent = this.importlocal;
+            this.importlocal.CustomImages.Parent = this.importlocal;
+            this.importlocal.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.importlocal.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.importlocal.ForeColor = System.Drawing.Color.White;
+            this.importlocal.HoverState.Parent = this.importlocal;
+            this.importlocal.Location = new System.Drawing.Point(634, 207);
+            this.importlocal.Name = "importlocal";
+            this.importlocal.ShadowDecoration.Parent = this.importlocal;
+            this.importlocal.Size = new System.Drawing.Size(199, 29);
+            this.importlocal.TabIndex = 120;
+            this.importlocal.Text = "Local";
+            this.importlocal.Click += new System.EventHandler(this.importlocal_Click);
+            // 
+            // importbranded
+            // 
+            this.importbranded.AutoRoundedCorners = true;
+            this.importbranded.BorderRadius = 13;
+            this.importbranded.CausesValidation = false;
+            this.importbranded.CheckedState.Parent = this.importbranded;
+            this.importbranded.CustomImages.Parent = this.importbranded;
+            this.importbranded.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.importbranded.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.importbranded.ForeColor = System.Drawing.Color.White;
+            this.importbranded.HoverState.Parent = this.importbranded;
+            this.importbranded.Location = new System.Drawing.Point(634, 176);
+            this.importbranded.Name = "importbranded";
+            this.importbranded.ShadowDecoration.Parent = this.importbranded;
+            this.importbranded.Size = new System.Drawing.Size(199, 29);
+            this.importbranded.TabIndex = 119;
+            this.importbranded.Text = "Branded";
+            this.importbranded.Click += new System.EventHandler(this.importbranded_Click);
+            // 
+            // categorybox
+            // 
+            this.categorybox.BackColor = System.Drawing.Color.Transparent;
+            this.categorybox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.categorybox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categorybox.FocusedColor = System.Drawing.Color.Empty;
+            this.categorybox.FocusedState.Parent = this.categorybox;
+            this.categorybox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.categorybox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.categorybox.FormattingEnabled = true;
+            this.categorybox.HoverState.Parent = this.categorybox;
+            this.categorybox.ItemHeight = 30;
+            this.categorybox.Items.AddRange(new object[] {
+            "All",
+            "Foundation Foods",
+            "SR Legacy",
+            "FNDDS",
+            "Branded",
+            "Local"});
+            this.categorybox.ItemsAppearance.Parent = this.categorybox;
+            this.categorybox.Location = new System.Drawing.Point(634, 84);
+            this.categorybox.Name = "categorybox";
+            this.categorybox.ShadowDecoration.Parent = this.categorybox;
+            this.categorybox.Size = new System.Drawing.Size(164, 36);
+            this.categorybox.TabIndex = 122;
+            // 
+            // categorylabel
+            // 
+            this.categorylabel.AutoSize = true;
+            this.categorylabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.categorylabel.Location = new System.Drawing.Point(630, 46);
+            this.categorylabel.Name = "categorylabel";
+            this.categorylabel.Size = new System.Drawing.Size(85, 24);
+            this.categorylabel.TabIndex = 121;
+            this.categorylabel.Text = "Category";
+            // 
             // Ingredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1141, 875);
+            this.Controls.Add(this.categorybox);
+            this.Controls.Add(this.categorylabel);
+            this.Controls.Add(this.importlocal);
+            this.Controls.Add(this.importbranded);
+            this.Controls.Add(this.importfndds);
+            this.Controls.Add(this.importsr);
+            this.Controls.Add(this.importff);
+            this.Controls.Add(this.importall);
             this.Controls.Add(this.DeleteBTN);
             this.Controls.Add(this.EditBTN);
             this.Controls.Add(this.chart1);
@@ -1216,5 +1382,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn calciumdgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn fibersdgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodiumdgv;
+        private Guna.UI2.WinForms.Guna2Button importall;
+        private Guna.UI2.WinForms.Guna2Button importff;
+        private Guna.UI2.WinForms.Guna2Button importfndds;
+        private Guna.UI2.WinForms.Guna2Button importsr;
+        private Guna.UI2.WinForms.Guna2Button importlocal;
+        private Guna.UI2.WinForms.Guna2Button importbranded;
+        private Guna.UI2.WinForms.Guna2ComboBox categorybox;
+        private System.Windows.Forms.Label categorylabel;
     }
 }

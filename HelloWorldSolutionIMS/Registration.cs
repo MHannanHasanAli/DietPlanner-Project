@@ -164,19 +164,20 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
         }
-        private void SearchCustomer(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn file, DataGridViewColumn name, DataGridViewColumn familyname, DataGridViewColumn start, DataGridViewColumn end, DataGridViewColumn nutritionist)
+        private void SearchCustomer(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn file, DataGridViewColumn name, DataGridViewColumn fname, DataGridViewColumn start, DataGridViewColumn end, DataGridViewColumn nutritionist)
         {
             //string file_no = fileno.Text;
             string searchname = firstname.Text;
-            if(searchname != "")
-            {
+            string searchfamily = familyname.Text;
+            
                 try
                 {
                     MainClass.con.Open();
 
-                    SqlCommand cmd = new SqlCommand("SELECT ID, FileNo, FirstName, FamilyName, SubscriptionStartDate, SubscriptionEndDate, NutritionistName FROM Customer WHERE FirstName LIKE @FirstName", MainClass.con);
+                    SqlCommand cmd = new SqlCommand("SELECT ID, FileNo, FirstName, FamilyName, SubscriptionStartDate, SubscriptionEndDate, NutritionistName FROM Customer WHERE (FirstName LIKE @FirstName) OR (FAMILYNAME LIKE @FamilyName)", MainClass.con);
 
                     cmd.Parameters.AddWithValue("@FirstName", "%" + searchname + "%");
+                    cmd.Parameters.AddWithValue("@FamilyName", "%" + searchfamily + "%");
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -184,7 +185,7 @@ namespace HelloWorldSolutionIMS
                     id.DataPropertyName = dt.Columns["ID"].ToString();
                     file.DataPropertyName = dt.Columns["FileNo"].ToString();
                     name.DataPropertyName = dt.Columns["FirstName"].ToString();
-                    familyname.DataPropertyName = dt.Columns["FamilyName"].ToString();
+                    fname.DataPropertyName = dt.Columns["FamilyName"].ToString();
                     start.DataPropertyName = dt.Columns["SubscriptionStartDate"].ToString();
                     end.DataPropertyName = dt.Columns["SubscriptionEndDate"].ToString();
                     nutritionist.DataPropertyName = dt.Columns["NutritionistName"].ToString();
@@ -197,12 +198,8 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     MessageBox.Show(ex.Message);
                 }
-            }            
-            else
-            {
-                ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
-                MessageBox.Show("Fill First Name");
-            }
+                        
+            
         }
         private void New_Click(object sender, EventArgs e)
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -273,6 +274,105 @@ namespace HelloWorldSolutionIMS
             if (e.KeyChar == '.' && textBox.Text.Contains("."))
             {
                 e.Handled = true;
+            }
+        }
+        private void intlock(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignore the keypress if it's not a number or a control character
+            }
+        }
+        static int conn = 0;
+        private void fileno_TextChanged(object sender, EventArgs e)
+        {
+            if (fileno.Text != "")
+            {
+                int value = int.Parse(fileno.Text);
+
+                try
+                {
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
+
+                    SqlCommand cmd2 = new SqlCommand("SELECT FIRSTNAME,FAMILYNAME,DOB FROM CUSTOMER " +
+                        "WHERE FILENO = @fileno", MainClass.con);
+
+                    cmd2.Parameters.AddWithValue("@fileno", value);
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+                    if (reader2.Read())
+                    {
+                        // Assign values from the reader to the respective text boxes
+                        dob.Value = Convert.ToDateTime(reader2["DOB"]);
+                        firstname.Text = reader2["FirstName"].ToString();
+                        familyname.Text = reader2["FamilyName"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No customer with this file no exist!");
+                    }
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
+                    reader2.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+
+                try
+                {
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
+
+                    SqlCommand cmd2 = new SqlCommand("SELECT WEIGHT FROM BODYCOMPOSITION " +
+                        "WHERE CustomerID = @fileno", MainClass.con);
+
+                    cmd2.Parameters.AddWithValue("@fileno", value);
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+                    if (reader2.Read())
+                    {
+                        // Assign values from the reader to the respective text boxes
+                        weight.Text = reader2["WEIGHT"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No customer with this file no exist!");
+                    }
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
+                    reader2.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                firstname.Text = "";
+                familyname.Text = "";
+                dob.Value = DateTime.Now;
+                weight.Text = "";
+                totalinsulin.Text = "";
+                baselineinsulin.Text = "";
+                insulincharb.Text = "";
+                bolusinsulin.Text = "";
+
             }
         }
     }
