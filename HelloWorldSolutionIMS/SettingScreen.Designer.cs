@@ -81,6 +81,7 @@ namespace HelloWorldSolutionIMS
             this.DatabaseSettings = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Colorsetting = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.modifyuser = new Guna.UI2.WinForms.Guna2Button();
             this.usermanagement = new Guna.UI2.WinForms.Guna2Button();
@@ -159,27 +160,26 @@ namespace HelloWorldSolutionIMS
             this.usernameedit = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.importmeals = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.downloadingredient = new Guna.UI2.WinForms.Guna2Button();
-            this.importmeals = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.selectedpanel = new System.Windows.Forms.Panel();
-            this.Apply = new Guna.UI2.WinForms.Guna2Button();
-            this.showpanel = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.selectedbuttonpanel = new System.Windows.Forms.Panel();
-            this.gapplybutton = new Guna.UI2.WinForms.Guna2Button();
-            this.showbuttonpanel = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.Colorsetting = new Guna.UI2.WinForms.Guna2Button();
             this.textselectpanel = new System.Windows.Forms.Panel();
             this.ApplyText = new Guna.UI2.WinForms.Guna2Button();
             this.textshowpanel = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.selectedbuttonpanel = new System.Windows.Forms.Panel();
+            this.gapplybutton = new Guna.UI2.WinForms.Guna2Button();
+            this.showbuttonpanel = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.selectedpanel = new System.Windows.Forms.Panel();
+            this.Apply = new Guna.UI2.WinForms.Guna2Button();
+            this.showpanel = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagridview1)).BeginInit();
@@ -208,9 +208,9 @@ namespace HelloWorldSolutionIMS
             this.panel10.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -701,6 +701,7 @@ namespace HelloWorldSolutionIMS
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1810, 831);
             this.panel3.TabIndex = 1;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnClose
             // 
@@ -815,6 +816,25 @@ namespace HelloWorldSolutionIMS
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1065, 760);
             this.panel4.TabIndex = 0;
+            // 
+            // Colorsetting
+            // 
+            this.Colorsetting.AutoRoundedCorners = true;
+            this.Colorsetting.BorderRadius = 21;
+            this.Colorsetting.CausesValidation = false;
+            this.Colorsetting.CheckedState.Parent = this.Colorsetting;
+            this.Colorsetting.CustomImages.Parent = this.Colorsetting;
+            this.Colorsetting.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.Colorsetting.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.Colorsetting.ForeColor = System.Drawing.Color.White;
+            this.Colorsetting.HoverState.Parent = this.Colorsetting;
+            this.Colorsetting.Location = new System.Drawing.Point(643, 699);
+            this.Colorsetting.Name = "Colorsetting";
+            this.Colorsetting.ShadowDecoration.Parent = this.Colorsetting;
+            this.Colorsetting.Size = new System.Drawing.Size(199, 45);
+            this.Colorsetting.TabIndex = 132;
+            this.Colorsetting.Text = "Color Settings";
+            this.Colorsetting.Click += new System.EventHandler(this.Colorsetting_Click);
             // 
             // guna2Button6
             // 
@@ -2105,6 +2125,25 @@ namespace HelloWorldSolutionIMS
             this.panel10.Size = new System.Drawing.Size(1065, 760);
             this.panel10.TabIndex = 0;
             // 
+            // importmeals
+            // 
+            this.importmeals.AutoRoundedCorners = true;
+            this.importmeals.BorderRadius = 21;
+            this.importmeals.CausesValidation = false;
+            this.importmeals.CheckedState.Parent = this.importmeals;
+            this.importmeals.CustomImages.Parent = this.importmeals;
+            this.importmeals.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.importmeals.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.importmeals.ForeColor = System.Drawing.Color.White;
+            this.importmeals.HoverState.Parent = this.importmeals;
+            this.importmeals.Location = new System.Drawing.Point(25, 104);
+            this.importmeals.Name = "importmeals";
+            this.importmeals.ShadowDecoration.Parent = this.importmeals;
+            this.importmeals.Size = new System.Drawing.Size(383, 45);
+            this.importmeals.TabIndex = 291;
+            this.importmeals.Text = "Download Meals Demo Import File";
+            this.importmeals.Click += new System.EventHandler(this.importmeals_Click);
+            // 
             // guna2Button4
             // 
             this.guna2Button4.AutoRoundedCorners = true;
@@ -2143,25 +2182,6 @@ namespace HelloWorldSolutionIMS
             this.downloadingredient.Text = "Download Ingredient Demo Import File";
             this.downloadingredient.Click += new System.EventHandler(this.downloadingredient_Click);
             // 
-            // importmeals
-            // 
-            this.importmeals.AutoRoundedCorners = true;
-            this.importmeals.BorderRadius = 21;
-            this.importmeals.CausesValidation = false;
-            this.importmeals.CheckedState.Parent = this.importmeals;
-            this.importmeals.CustomImages.Parent = this.importmeals;
-            this.importmeals.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.importmeals.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.importmeals.ForeColor = System.Drawing.Color.White;
-            this.importmeals.HoverState.Parent = this.importmeals;
-            this.importmeals.Location = new System.Drawing.Point(25, 104);
-            this.importmeals.Name = "importmeals";
-            this.importmeals.ShadowDecoration.Parent = this.importmeals;
-            this.importmeals.Size = new System.Drawing.Size(383, 45);
-            this.importmeals.TabIndex = 291;
-            this.importmeals.Text = "Download Meals Demo Import File";
-            this.importmeals.Click += new System.EventHandler(this.importmeals_Click);
-            // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.panel11);
@@ -2196,137 +2216,6 @@ namespace HelloWorldSolutionIMS
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1065, 760);
             this.panel11.TabIndex = 0;
-            // 
-            // selectedpanel
-            // 
-            this.selectedpanel.Location = new System.Drawing.Point(187, 258);
-            this.selectedpanel.Name = "selectedpanel";
-            this.selectedpanel.Size = new System.Drawing.Size(101, 66);
-            this.selectedpanel.TabIndex = 134;
-            // 
-            // Apply
-            // 
-            this.Apply.AutoRoundedCorners = true;
-            this.Apply.BorderRadius = 21;
-            this.Apply.CausesValidation = false;
-            this.Apply.CheckedState.Parent = this.Apply;
-            this.Apply.CustomImages.Parent = this.Apply;
-            this.Apply.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.Apply.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.Apply.ForeColor = System.Drawing.Color.White;
-            this.Apply.HoverState.Parent = this.Apply;
-            this.Apply.Location = new System.Drawing.Point(21, 279);
-            this.Apply.Name = "Apply";
-            this.Apply.ShadowDecoration.Parent = this.Apply;
-            this.Apply.Size = new System.Drawing.Size(160, 45);
-            this.Apply.TabIndex = 135;
-            this.Apply.Text = "Apply";
-            this.Apply.Click += new System.EventHandler(this.Apply_Click);
-            // 
-            // showpanel
-            // 
-            this.showpanel.Location = new System.Drawing.Point(294, 77);
-            this.showpanel.Name = "showpanel";
-            this.showpanel.Size = new System.Drawing.Size(37, 39);
-            this.showpanel.TabIndex = 133;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label28.Location = new System.Drawing.Point(17, 28);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(197, 24);
-            this.label28.TabIndex = 132;
-            this.label28.Text = "Change Sidebar Color";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::HelloWorldSolutionIMS.Properties.Resources.rgbSpectrum;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 69);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(267, 183);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 131;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
-            // 
-            // selectedbuttonpanel
-            // 
-            this.selectedbuttonpanel.Location = new System.Drawing.Point(559, 258);
-            this.selectedbuttonpanel.Name = "selectedbuttonpanel";
-            this.selectedbuttonpanel.Size = new System.Drawing.Size(101, 66);
-            this.selectedbuttonpanel.TabIndex = 139;
-            // 
-            // gapplybutton
-            // 
-            this.gapplybutton.AutoRoundedCorners = true;
-            this.gapplybutton.BorderRadius = 21;
-            this.gapplybutton.CausesValidation = false;
-            this.gapplybutton.CheckedState.Parent = this.gapplybutton;
-            this.gapplybutton.CustomImages.Parent = this.gapplybutton;
-            this.gapplybutton.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.gapplybutton.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.gapplybutton.ForeColor = System.Drawing.Color.White;
-            this.gapplybutton.HoverState.Parent = this.gapplybutton;
-            this.gapplybutton.Location = new System.Drawing.Point(393, 279);
-            this.gapplybutton.Name = "gapplybutton";
-            this.gapplybutton.ShadowDecoration.Parent = this.gapplybutton;
-            this.gapplybutton.Size = new System.Drawing.Size(160, 45);
-            this.gapplybutton.TabIndex = 140;
-            this.gapplybutton.Text = "Apply";
-            this.gapplybutton.Click += new System.EventHandler(this.gapplybutton_Click);
-            // 
-            // showbuttonpanel
-            // 
-            this.showbuttonpanel.Location = new System.Drawing.Point(666, 77);
-            this.showbuttonpanel.Name = "showbuttonpanel";
-            this.showbuttonpanel.Size = new System.Drawing.Size(37, 39);
-            this.showbuttonpanel.TabIndex = 138;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label29.Location = new System.Drawing.Point(389, 28);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(185, 24);
-            this.label29.TabIndex = 137;
-            this.label29.Text = "Change Button Color";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::HelloWorldSolutionIMS.Properties.Resources.rgbSpectrum;
-            this.pictureBox3.Location = new System.Drawing.Point(393, 69);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(267, 183);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 136;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
-            // 
-            // Colorsetting
-            // 
-            this.Colorsetting.AutoRoundedCorners = true;
-            this.Colorsetting.BorderRadius = 21;
-            this.Colorsetting.CausesValidation = false;
-            this.Colorsetting.CheckedState.Parent = this.Colorsetting;
-            this.Colorsetting.CustomImages.Parent = this.Colorsetting;
-            this.Colorsetting.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.Colorsetting.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.Colorsetting.ForeColor = System.Drawing.Color.White;
-            this.Colorsetting.HoverState.Parent = this.Colorsetting;
-            this.Colorsetting.Location = new System.Drawing.Point(643, 699);
-            this.Colorsetting.Name = "Colorsetting";
-            this.Colorsetting.ShadowDecoration.Parent = this.Colorsetting;
-            this.Colorsetting.Size = new System.Drawing.Size(199, 45);
-            this.Colorsetting.TabIndex = 132;
-            this.Colorsetting.Text = "Color Settings";
-            this.Colorsetting.Click += new System.EventHandler(this.Colorsetting_Click);
             // 
             // textselectpanel
             // 
@@ -2384,6 +2273,118 @@ namespace HelloWorldSolutionIMS
             this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
             this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
             // 
+            // selectedbuttonpanel
+            // 
+            this.selectedbuttonpanel.Location = new System.Drawing.Point(559, 258);
+            this.selectedbuttonpanel.Name = "selectedbuttonpanel";
+            this.selectedbuttonpanel.Size = new System.Drawing.Size(101, 66);
+            this.selectedbuttonpanel.TabIndex = 139;
+            // 
+            // gapplybutton
+            // 
+            this.gapplybutton.AutoRoundedCorners = true;
+            this.gapplybutton.BorderRadius = 21;
+            this.gapplybutton.CausesValidation = false;
+            this.gapplybutton.CheckedState.Parent = this.gapplybutton;
+            this.gapplybutton.CustomImages.Parent = this.gapplybutton;
+            this.gapplybutton.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.gapplybutton.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.gapplybutton.ForeColor = System.Drawing.Color.White;
+            this.gapplybutton.HoverState.Parent = this.gapplybutton;
+            this.gapplybutton.Location = new System.Drawing.Point(393, 279);
+            this.gapplybutton.Name = "gapplybutton";
+            this.gapplybutton.ShadowDecoration.Parent = this.gapplybutton;
+            this.gapplybutton.Size = new System.Drawing.Size(160, 45);
+            this.gapplybutton.TabIndex = 140;
+            this.gapplybutton.Text = "Apply";
+            this.gapplybutton.Click += new System.EventHandler(this.gapplybutton_Click);
+            // 
+            // showbuttonpanel
+            // 
+            this.showbuttonpanel.Location = new System.Drawing.Point(666, 77);
+            this.showbuttonpanel.Name = "showbuttonpanel";
+            this.showbuttonpanel.Size = new System.Drawing.Size(37, 39);
+            this.showbuttonpanel.TabIndex = 138;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label29.Location = new System.Drawing.Point(389, 28);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(185, 24);
+            this.label29.TabIndex = 137;
+            this.label29.Text = "Change Button Color";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HelloWorldSolutionIMS.Properties.Resources.rgbSpectrum;
+            this.pictureBox3.Location = new System.Drawing.Point(393, 69);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(267, 183);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 136;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
+            // 
+            // selectedpanel
+            // 
+            this.selectedpanel.Location = new System.Drawing.Point(187, 258);
+            this.selectedpanel.Name = "selectedpanel";
+            this.selectedpanel.Size = new System.Drawing.Size(101, 66);
+            this.selectedpanel.TabIndex = 134;
+            // 
+            // Apply
+            // 
+            this.Apply.AutoRoundedCorners = true;
+            this.Apply.BorderRadius = 21;
+            this.Apply.CausesValidation = false;
+            this.Apply.CheckedState.Parent = this.Apply;
+            this.Apply.CustomImages.Parent = this.Apply;
+            this.Apply.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.Apply.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.Apply.ForeColor = System.Drawing.Color.White;
+            this.Apply.HoverState.Parent = this.Apply;
+            this.Apply.Location = new System.Drawing.Point(21, 279);
+            this.Apply.Name = "Apply";
+            this.Apply.ShadowDecoration.Parent = this.Apply;
+            this.Apply.Size = new System.Drawing.Size(160, 45);
+            this.Apply.TabIndex = 135;
+            this.Apply.Text = "Apply";
+            this.Apply.Click += new System.EventHandler(this.Apply_Click);
+            // 
+            // showpanel
+            // 
+            this.showpanel.Location = new System.Drawing.Point(294, 77);
+            this.showpanel.Name = "showpanel";
+            this.showpanel.Size = new System.Drawing.Size(37, 39);
+            this.showpanel.TabIndex = 133;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label28.Location = new System.Drawing.Point(17, 28);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(197, 24);
+            this.label28.TabIndex = 132;
+            this.label28.Text = "Change Sidebar Color";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::HelloWorldSolutionIMS.Properties.Resources.rgbSpectrum;
+            this.pictureBox2.Location = new System.Drawing.Point(21, 69);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(267, 183);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 131;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
+            // 
             // SettingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2435,9 +2436,9 @@ namespace HelloWorldSolutionIMS
             this.tabPage8.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

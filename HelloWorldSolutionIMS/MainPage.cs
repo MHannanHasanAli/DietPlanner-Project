@@ -76,6 +76,7 @@ namespace HelloWorldSolutionIMS
              if(this.mainpanel.Controls.Count > 0 )
                 this.mainpanel.Controls.RemoveAt(0);
             System.Drawing.Color color = Color.Orange;
+            System.Drawing.Color textcolor = Color.White;
             try
             {
                 MainClass.con.Open();
@@ -88,9 +89,28 @@ namespace HelloWorldSolutionIMS
                     string colorString = reader["Color"].ToString();
                    color = ColorTranslator.FromHtml(colorString);
 
-                   
+                }
 
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
 
+            }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    string colorString = reader["Color"].ToString();
+                    textcolor = ColorTranslator.FromHtml(colorString);
 
                 }
 
@@ -104,7 +124,7 @@ namespace HelloWorldSolutionIMS
 
             }
             Form f = Form as Form;
-        f.TopLevel = false;
+            f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.mainpanel.Controls.Add(f);
             foreach (Control control in f.Controls)
@@ -113,7 +133,17 @@ namespace HelloWorldSolutionIMS
                 {
                     Guna2Button button = (Guna2Button)control;
                     // Access each button here, for instance, you can print the text of each button
-                    button.ForeColor = color;
+                    button.FillColor = color;
+                    // You can access other properties or perform actions with the buttons here
+                }
+            }
+            foreach (Control control in f.Controls)
+            {
+                if (control is Guna2Button)
+                {
+                    Guna2Button button = (Guna2Button)control;
+                    // Access each button here, for instance, you can print the text of each button
+                    button.ForeColor = textcolor;
                     // You can access other properties or perform actions with the buttons here
                 }
             }
@@ -124,7 +154,17 @@ namespace HelloWorldSolutionIMS
                 {
                     Guna2Button button = (Guna2Button)control;
                     // Access each button here, for instance, you can print the text of each button
-                    button.ForeColor = color;
+                    button.FillColor = color;
+                    // You can access other properties or perform actions with the buttons here
+                }
+            }
+            foreach (Control control in obj.tabControl1.Controls)
+            {
+                if (control is Guna2Button)
+                {
+                    Guna2Button button = (Guna2Button)control;
+                    // Access each button here, for instance, you can print the text of each button
+                    button.ForeColor = textcolor;
                     // You can access other properties or perform actions with the buttons here
                 }
             }
