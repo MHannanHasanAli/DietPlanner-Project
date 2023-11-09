@@ -52,70 +52,71 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
         }
+        static int conn = 1;
+        public class NutritionistInfo
+        {
+            public int ID { get; set; }
+            public string Name { get; set; }
+        }
+        private void UpdateNutritionist()
+        {
+            SqlCommand cmd;
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
+
+                cmd = new SqlCommand("SELECT ID, Name FROM NUTRITIONIST", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                nutritionistname.DataSource = null;
+                nutritionistname.Items.Clear();
+
+                List<NutritionistInfo> Nutrition = new List<NutritionistInfo>();
+
+
+                Nutrition.Add(new NutritionistInfo { ID = 0, Name = "Null" });
+
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    int Id = row.Field<int>("ID");
+                    string Name = row.Field<string>("Name");
+
+
+                    NutritionistInfo Temp = new NutritionistInfo { ID = Id, Name = Name };
+                    Nutrition.Add(Temp);
+
+                }
+
+                nutritionistname.DataSource = Nutrition;
+                nutritionistname.DisplayMember = "Name"; // Display Member is Name
+                nutritionistname.ValueMember = "ID"; // Value Member is ID
+
+
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void SearchInstructions(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn instruction, DataGridViewColumn nutritionist, DataGridViewColumn date)
         {
             string instructionName = instructionname.Text;
-            string nutritionistName = nutritionistname.Text;
-            if (instructionName != "" && nutritionistName != "")
-            {
-                try
-                {
-                    MainClass.con.Open();
-
-                    SqlCommand cmd = new SqlCommand("SELECT ID, InstructionName, NutritionistName, InstructionDate FROM Instruction WHERE (@InstructionName = '' OR InstructionName LIKE @InstructionName) AND (@NutritionistName = '' OR NutritionistName LIKE @NutritionistName)", MainClass.con);
-
-                    cmd.Parameters.AddWithValue("@InstructionName", "%" + instructionName + "%");
-                    cmd.Parameters.AddWithValue("@NutritionistName", "%" + nutritionistName + "%");
-
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    // Modify the column names to match your data grid view
-                    no.DataPropertyName = dt.Columns["ID"].ToString();
-                    instruction.DataPropertyName = dt.Columns["InstructionName"].ToString();
-                    nutritionist.DataPropertyName = dt.Columns["NutritionistName"].ToString();
-                    date.DataPropertyName = dt.Columns["InstructionDate"].ToString();
-
-                    dgv.DataSource = dt;
-                    MainClass.con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else if (instructionName == "" && nutritionistName != "")
-            {
-                try
-                {
-                    MainClass.con.Open();
-
-                    SqlCommand cmd = new SqlCommand("SELECT ID, InstructionName, NutritionistName, InstructionDate FROM Instruction WHERE NutritionistName LIKE @NutritionistName", MainClass.con);
-
-                    cmd.Parameters.AddWithValue("@NutritionistName", "%" + nutritionistName + "%");
-
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    // Modify the column names to match your data grid view
-                    no.DataPropertyName = dt.Columns["ID"].ToString();
-                    instruction.DataPropertyName = dt.Columns["InstructionName"].ToString();
-                    nutritionist.DataPropertyName = dt.Columns["NutritionistName"].ToString();
-                    date.DataPropertyName = dt.Columns["InstructionDate"].ToString();
-
-                    dgv.DataSource = dt;
-                    MainClass.con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else if (instructionName != "" && nutritionistName == "")
+            
+           if(instructionName != "")
             {
                 try
                 {
@@ -143,15 +144,17 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     MessageBox.Show(ex.Message);
                 }
+
             }
             else
             {
                 ShowInstructions(guna2DataGridView1, nodgv, instructionnamedgv, nutritionistnamedgv, datedgv);
-                MessageBox.Show("Fill Instruction Name or Nutritionist Name");
+                MessageBox.Show("Fill Instruction Name");
             }
         }
         private void Instruction_Load(object sender, EventArgs e)
         {
+            UpdateNutritionist();
             try
             {
                 MainClass.con.Open();
@@ -252,7 +255,7 @@ namespace HelloWorldSolutionIMS
 
                         // Clear the input controls or set them to default values.
                         instructionname.Text = "";
-                        nutritionistname.Text = "";
+                        nutritionistname.SelectedItem = null;
                         date.Value = DateTime.Now; // Reset to the current date or your default value.
                         instructionbox.Text = "";
 
@@ -292,7 +295,7 @@ namespace HelloWorldSolutionIMS
 
                         // Clear the input controls or set them to default values.
                         instructionname.Text = "";
-                        nutritionistname.Text = "";
+                        nutritionistname.SelectedItem = null;
                         date.Value = DateTime.Now; // Reset to the current date or your default value.
                         instructionbox.Text = "";
                         MainClass.con.Close();
@@ -345,6 +348,7 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+           
 
         }
 
@@ -356,6 +360,7 @@ namespace HelloWorldSolutionIMS
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            edit = 0;
             if (guna2DataGridView1 != null)
             {
                 if (guna2DataGridView1.Rows.Count > 0)
@@ -387,6 +392,10 @@ namespace HelloWorldSolutionIMS
                                 MessageBox.Show(ex.Message);
                             }
                         }
+                        instructionname.Text = "";
+                        nutritionistname.SelectedItem = null;
+                        date.Value = DateTime.Now; // Reset to the current date or your default value.
+                        instructionbox.Text = "";
                     }
                 }
             }

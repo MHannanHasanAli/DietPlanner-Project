@@ -49,8 +49,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.nutritionistname = new Guna.UI2.WinForms.Guna2TextBox();
             this.instructionname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.nutritionistname = new Guna.UI2.WinForms.Guna2ComboBox();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -81,6 +81,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.nutritionistname);
             this.panel1.Controls.Add(this.Search);
             this.panel1.Controls.Add(this.New);
             this.panel1.Controls.Add(this.guna2DataGridView1);
@@ -90,7 +91,6 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.nutritionistname);
             this.panel1.Controls.Add(this.instructionname);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -307,31 +307,6 @@
             this.label1.TabIndex = 52;
             this.label1.Text = "Instruction Name";
             // 
-            // nutritionistname
-            // 
-            this.nutritionistname.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nutritionistname.DefaultText = "";
-            this.nutritionistname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nutritionistname.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nutritionistname.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nutritionistname.DisabledState.Parent = this.nutritionistname;
-            this.nutritionistname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nutritionistname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nutritionistname.FocusedState.Parent = this.nutritionistname;
-            this.nutritionistname.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.nutritionistname.ForeColor = System.Drawing.Color.Black;
-            this.nutritionistname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nutritionistname.HoverState.Parent = this.nutritionistname;
-            this.nutritionistname.Location = new System.Drawing.Point(183, 69);
-            this.nutritionistname.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.nutritionistname.Name = "nutritionistname";
-            this.nutritionistname.PasswordChar = '\0';
-            this.nutritionistname.PlaceholderText = "";
-            this.nutritionistname.SelectedText = "";
-            this.nutritionistname.ShadowDecoration.Parent = this.nutritionistname;
-            this.nutritionistname.Size = new System.Drawing.Size(268, 38);
-            this.nutritionistname.TabIndex = 51;
-            // 
             // instructionname
             // 
             this.instructionname.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -356,6 +331,25 @@
             this.instructionname.ShadowDecoration.Parent = this.instructionname;
             this.instructionname.Size = new System.Drawing.Size(268, 38);
             this.instructionname.TabIndex = 50;
+            // 
+            // nutritionistname
+            // 
+            this.nutritionistname.BackColor = System.Drawing.Color.Transparent;
+            this.nutritionistname.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.nutritionistname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nutritionistname.FocusedColor = System.Drawing.Color.Empty;
+            this.nutritionistname.FocusedState.Parent = this.nutritionistname;
+            this.nutritionistname.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.nutritionistname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.nutritionistname.FormattingEnabled = true;
+            this.nutritionistname.HoverState.Parent = this.nutritionistname;
+            this.nutritionistname.ItemHeight = 30;
+            this.nutritionistname.ItemsAppearance.Parent = this.nutritionistname;
+            this.nutritionistname.Location = new System.Drawing.Point(183, 71);
+            this.nutritionistname.Name = "nutritionistname";
+            this.nutritionistname.ShadowDecoration.Parent = this.nutritionistname;
+            this.nutritionistname.Size = new System.Drawing.Size(268, 36);
+            this.nutritionistname.TabIndex = 61;
             // 
             // Instruction
             // 
@@ -394,7 +388,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox nutritionistname;
         private Guna.UI2.WinForms.Guna2TextBox instructionname;
+        private Guna.UI2.WinForms.Guna2ComboBox nutritionistname;
     }
 }

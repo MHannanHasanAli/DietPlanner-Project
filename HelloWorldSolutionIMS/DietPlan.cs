@@ -36,6 +36,12 @@ namespace HelloWorldSolutionIMS
         static string dietPlanIDToEdit;
         static int counter = 0;
         static int connectionflag = 0;
+        public class Instruction
+        {
+            public int ID { get; set; }
+            public string Name { get; set; }
+
+        }
         public class DietTemplates
         {
             public int ID { get; set; }
@@ -155,20 +161,77 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
         }
+        private void UpdateInstruction()
+        {
+            SqlCommand cmd;
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
+
+                cmd = new SqlCommand("SELECT ID, InstructionName FROM INSTRUCTION", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Clear the dropdown items before adding new ones
+                instruction.DataSource = null;
+                // Clear the items (if DataSource is not being set)
+                instruction.Items.Clear();
+                List<Instruction> Template = new List<Instruction>();
+
+                // Add the default 'Null' option
+                Template.Add(new Instruction { ID = 0, Name = "Null" });
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    int promotionId = row.Field<int>("ID");
+                    string promotionName = row.Field<string>("InstructionName");
+
+                    Instruction Temp = new Instruction { ID = promotionId, Name = promotionName };
+                    Template.Add(Temp);
+                }
+
+                instruction.DataSource = Template;
+                instruction.DisplayMember = "Name"; // Display Member is Name
+                instruction.ValueMember = "ID"; // Value Member is ID
+
+
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void extrafunc()
         {
-            List<int> itemids = GetMealsForDietPlan();
+            List<int> breakfastitemids = GetMealsForDietPlanBreakfast();
+            List<int> lunchtitemids = GetMealsForDietPlanLunch();
+            
             guna2DataGridView2.Rows.Clear();
+            guna2DataGridView4.Rows.Clear();
+            guna2DataGridView5.Rows.Clear();
+            guna2DataGridView6.Rows.Clear();
 
             MainClass.con.Open();
-            for (int i = 0; i < itemids.Count; i++)
+            for (int i = 0; i < breakfastitemids.Count; i++)
             {
-                
-                string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID";
+
+                string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID AND Category = 'Breakfast'";
 
                 SqlCommand cmd2 = new SqlCommand(query, MainClass.con);
                     
-                        cmd2.Parameters.AddWithValue("@DietPlanID", itemids[i]);
+                        cmd2.Parameters.AddWithValue("@DietPlanID", breakfastitemids[i]);
 
                         SqlDataReader reader75 = cmd2.ExecuteReader();
 
@@ -213,13 +276,10 @@ namespace HelloWorldSolutionIMS
 
                             }
                             //comboCellCategory.Value = GetCategory();
-                        // Replace with your specific field
-                        guna2DataGridView2.Rows[i].Cells[1] = comboCellCategory;
-
-                            // Decide and add different columns based on your conditions for each cell
-                            AddDifferentColumnsToRow(row, one, two, three, Four, Five, Six, Seven,i);
-
-
+                            // Replace with your specific field
+                            guna2DataGridView2.Rows[i].Cells[1] = comboCellCategory;
+                    // Decide and add different columns based on your conditions for each cell
+                    AddDifferentColumnsToRowBreakfast(row, one, two, three, Four, Five, Six, Seven,i);
 
                         }
 
@@ -227,9 +287,73 @@ namespace HelloWorldSolutionIMS
 
                 
             }
+            for (int i = 0; i < lunchtitemids.Count; i++)
+            {
+
+                string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID AND Category = 'Lunch'";
+
+                SqlCommand cmd2 = new SqlCommand(query, MainClass.con);
+
+                cmd2.Parameters.AddWithValue("@DietPlanID", lunchtitemids[i]);
+
+                SqlDataReader reader75 = cmd2.ExecuteReader();
+
+                if (reader75.Read())
+                {
+                    string category = reader75["category"].ToString();
+                    string one = reader75["one"].ToString();
+                    string two = reader75["two"].ToString();
+                    string three = reader75["three"].ToString();
+                    string Four = reader75["Four"].ToString();
+                    string Five = reader75["Five"].ToString();
+                    string Six = reader75["Six"].ToString();
+                    string Seven = reader75["Seven"].ToString();
+                    reader75.Close();
+
+                    DataGridViewRow row = new DataGridViewRow();
+                    guna2DataGridView4.Rows.Add(row);
+
+                    // Add the category column to the row
+                    DataGridViewComboBoxCell comboCellCategory = new DataGridViewComboBoxCell();
+                    comboCellCategory.Items.Clear();
+                    comboCellCategory.DataSource = GetCategory();
+                    if (category == "Breakfast")
+                    {
+                        comboCellCategory.Value = GetCategory()[0];
+                    }
+                    else if (category == "Functional Food")
+                    {
+                        comboCellCategory.Value = GetCategory()[4];
+                    }
+                    else if (category == "Dinner")
+                    {
+                        comboCellCategory.Value = GetCategory()[2];
+                    }
+                    else if (category == "Lunch")
+                    {
+                        comboCellCategory.Value = GetCategory()[1];
+                    }
+                    else
+                    {
+                        comboCellCategory.Value = GetCategory()[3];
+
+                    }
+                    //comboCellCategory.Value = GetCategory();
+                    // Replace with your specific field
+                    guna2DataGridView4.Rows[i].Cells[1] = comboCellCategory;
+                    // Decide and add different columns based on your conditions for each cell
+                    AddDifferentColumnsToRowLunch(row, one, two, three, Four, Five, Six, Seven, i);
+
+                }
+
+
+
+
+            }
+
             MainClass.con.Close();
         }
-        private void AddDifferentColumnsToRow(DataGridViewRow row, string one, string two, string three, string Four, string Five, string Six, string Seven,int i)
+        private void AddDifferentColumnsToRowBreakfast(DataGridViewRow row, string one, string two, string three, string Four, string Five, string Six, string Seven,int i)
         {
             // Example condition to add different columns to cells in the row
             if (!string.IsNullOrEmpty(one))
@@ -417,7 +541,196 @@ namespace HelloWorldSolutionIMS
             //guna2DataGridView2.Rows.Add(row);
             // You can add other cells based on the other parameters (two, three, Four, Five, Six, Seven) in a similar fashion.
         }
-        private List<int> GetMealsForDietPlan()
+        private void AddDifferentColumnsToRowLunch(DataGridViewRow row, string one, string two, string three, string Four, string Five, string Six, string Seven, int i)
+        {
+            // Example condition to add different columns to cells in the row
+            if (!string.IsNullOrEmpty(one))
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+                comboCell.Items.Clear();
+                comboCell.DataSource = GetMeals(int.Parse(one)); // Replace with your specific field
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+                comboCell.Value = GetMeals(int.Parse(one))[0].ID;
+                guna2DataGridView4.Rows[i].Cells[2] = comboCell;
+            }
+            else
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+
+                // Clear the items in the combo cell to avoid duplicates.
+                comboCell.Items.Clear();
+
+                // Set the DataSource, DisplayMember, and ValueMember for the combo cell.
+                comboCell.DataSource = GetMeals();
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+
+                // Set the default selected value for the combo box.
+                guna2DataGridView4.Rows[i].Cells[2] = comboCell;
+            }
+
+            if (!string.IsNullOrEmpty(two))
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+                comboCell.Items.Clear();
+                comboCell.DataSource = GetMeals(int.Parse(two)); // Replace with your specific field
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+                comboCell.Value = GetMeals(int.Parse(two))[0].ID;
+                guna2DataGridView4.Rows[i].Cells[3] = comboCell;
+            }
+            else
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+
+                // Clear the items in the combo cell to avoid duplicates.
+                comboCell.Items.Clear();
+
+                // Set the DataSource, DisplayMember, and ValueMember for the combo cell.
+                comboCell.DataSource = GetMeals();
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+
+                // Set the default selected value for the combo box.
+                guna2DataGridView4.Rows[i].Cells[3] = comboCell;
+            }
+
+            if (!string.IsNullOrEmpty(three))
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+                comboCell.Items.Clear();
+                comboCell.DataSource = GetMeals(int.Parse(three)); // Replace with your specific field
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+                comboCell.Value = GetMeals(int.Parse(three))[0].ID;
+                guna2DataGridView4.Rows[i].Cells[4] = comboCell;
+            }
+            else
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+
+                // Clear the items in the combo cell to avoid duplicates.
+                comboCell.Items.Clear();
+
+                // Set the DataSource, DisplayMember, and ValueMember for the combo cell.
+                comboCell.DataSource = GetMeals();
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+
+                // Set the default selected value for the combo box.
+                guna2DataGridView4.Rows[i].Cells[4] = comboCell;
+            }
+
+            if (!string.IsNullOrEmpty(Four))
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+                comboCell.Items.Clear();
+                comboCell.DataSource = GetMeals(int.Parse(Four)); // Replace with your specific field
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+                comboCell.Value = GetMeals(int.Parse(Four))[0].ID;
+                guna2DataGridView4.Rows[i].Cells[5] = comboCell;
+            }
+            else
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+
+                // Clear the items in the combo cell to avoid duplicates.
+                comboCell.Items.Clear();
+
+                // Set the DataSource, DisplayMember, and ValueMember for the combo cell.
+                comboCell.DataSource = GetMeals();
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+
+                // Set the default selected value for the combo box.
+                guna2DataGridView4.Rows[i].Cells[5] = comboCell;
+            }
+
+            if (!string.IsNullOrEmpty(Five))
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+                comboCell.Items.Clear();
+                comboCell.DataSource = GetMeals(int.Parse(Five)); // Replace with your specific field
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+                comboCell.Value = GetMeals(int.Parse(Five))[0].ID;
+                guna2DataGridView4.Rows[i].Cells[6] = comboCell;
+            }
+            else
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+
+                // Clear the items in the combo cell to avoid duplicates.
+                comboCell.Items.Clear();
+
+                // Set the DataSource, DisplayMember, and ValueMember for the combo cell.
+                comboCell.DataSource = GetMeals();
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+
+                // Set the default selected value for the combo box.
+                guna2DataGridView4.Rows[i].Cells[6] = comboCell;
+            }
+
+            if (!string.IsNullOrEmpty(Six))
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+                comboCell.Items.Clear();
+                comboCell.DataSource = GetMeals(int.Parse(Six)); // Replace with your specific field
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+                comboCell.Value = GetMeals(int.Parse(Six))[0].ID;
+                guna2DataGridView4.Rows[i].Cells[7] = comboCell;
+            }
+            else
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+
+                // Clear the items in the combo cell to avoid duplicates.
+                comboCell.Items.Clear();
+
+                // Set the DataSource, DisplayMember, and ValueMember for the combo cell.
+                comboCell.DataSource = GetMeals();
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+
+                // Set the default selected value for the combo box.
+                guna2DataGridView4.Rows[i].Cells[7] = comboCell;
+            }
+
+            if (!string.IsNullOrEmpty(Seven))
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+                comboCell.Items.Clear();
+                comboCell.DataSource = GetMeals(int.Parse(Seven)); // Replace with your specific field
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+                comboCell.Value = GetMeals(int.Parse(Seven))[0].ID;
+                guna2DataGridView4.Rows[i].Cells[8] = comboCell;
+            }
+            else
+            {
+                DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+
+                // Clear the items in the combo cell to avoid duplicates.
+                comboCell.Items.Clear();
+
+                // Set the DataSource, DisplayMember, and ValueMember for the combo cell.
+                comboCell.DataSource = GetMeals();
+                comboCell.DisplayMember = "Name";
+                comboCell.ValueMember = "ID";
+
+                // Set the default selected value for the combo box.
+                guna2DataGridView4.Rows[i].Cells[8] = comboCell;
+            }
+
+            //guna2DataGridView4.Rows.Add(row);
+            // You can add other cells based on the other parameters (two, three, Four, Five, Six, Seven) in a similar fashion.
+        }
+
+        private List<int> GetMealsForDietPlanBreakfast()
         {
             List<int> idlist = new List<int>();
 
@@ -425,7 +738,7 @@ namespace HelloWorldSolutionIMS
             {
 
                 MainClass.con.Open();
-                SqlCommand cmdthree = new SqlCommand("SELECT ID FROM DietPlanAction WHERE DietPlanID = @Mealid", MainClass.con);
+                SqlCommand cmdthree = new SqlCommand("SELECT ID FROM DietPlanAction WHERE DietPlanID = @Mealid AND Category = 'Breakfast'", MainClass.con);
                     cmdthree.Parameters.AddWithValue("@Mealid", dietPlanIDToEdit);
 
                     using (SqlDataReader reader = cmdthree.ExecuteReader())
@@ -436,6 +749,34 @@ namespace HelloWorldSolutionIMS
                             idlist.Add(id);
                         }
                     }
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return idlist;
+        }
+        private List<int> GetMealsForDietPlanLunch()
+        {
+            List<int> idlist = new List<int>();
+
+            try
+            {
+
+                MainClass.con.Open();
+                SqlCommand cmdthree = new SqlCommand("SELECT ID FROM DietPlanAction WHERE DietPlanID = @Mealid AND Category = 'Lunch'", MainClass.con);
+                cmdthree.Parameters.AddWithValue("@Mealid", dietPlanIDToEdit);
+
+                using (SqlDataReader reader = cmdthree.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int id = Convert.ToInt32(reader["ID"]);
+                        idlist.Add(id);
+                    }
+                }
                 MainClass.con.Close();
             }
             catch (Exception ex)
@@ -786,6 +1127,7 @@ namespace HelloWorldSolutionIMS
             edit = 0;
             UpdateDietPlanTemplate();
             updatepreviousdietplan();
+            UpdateInstruction();
         }
         private void DietPlan_Load(object sender, EventArgs e)
         {
@@ -793,7 +1135,9 @@ namespace HelloWorldSolutionIMS
             MainClass.HideAllTabsOnTabControl(tabControl1);
             ShowDietPlans(guna2DataGridView1, filenodgv, namedgv, agedgv, dietnamedgv);
             guna2DataGridView2.EditingControlShowing += guna2DataGridView2_EditingControlShowing;
-
+            guna2DataGridView4.EditingControlShowing += guna2DataGridView4_EditingControlShowing;
+            guna2DataGridView5.EditingControlShowing += guna2DataGridView5_EditingControlShowing;
+            guna2DataGridView6.EditingControlShowing += guna2DataGridView6_EditingControlShowing;
         }
         private void AddIngredient_Click(object sender, EventArgs e)
         {
@@ -1033,14 +1377,14 @@ namespace HelloWorldSolutionIMS
                                 
                                string category="", one = "", two = "", three = "", four = "", five = "", six = "", seven = "";
 
-                                if (row.Cells[1] == null)
-                                {
-                                    MessageBox.Show("The category is empty!");
-                                }
-                                if (row.Cells[1].Value != null)
-                                {
-                                    category = row.Cells[1].Value.ToString();
-                                }
+                                //if (row.Cells[1] == null)
+                                //{
+                                //    MessageBox.Show("The category is empty!");
+                                //}
+                                //if (row.Cells[1].Value != null)
+                                //{
+                                    category = "Breakfast";
+                                //}
                                 
                                 if (row.Cells["onedgv"].Value != null)
                                 {
@@ -1110,6 +1454,98 @@ namespace HelloWorldSolutionIMS
 
                         }
                        
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                    try
+                    {
+                        foreach (DataGridViewRow row in guna2DataGridView4.Rows)
+                        {
+                            if (!row.IsNewRow) // Skip the last empty row if present.
+                            {
+
+                                string category = "", one = "", two = "", three = "", four = "", five = "", six = "", seven = "";
+
+                                //if (row.Cells[1] == null)
+                                //{
+                                //    MessageBox.Show("The category is empty!");
+                                //}
+                                //if (row.Cells[1].Value != null)
+                                //{
+                                    category = "Lunch";
+                                //}
+
+                                if (row.Cells[2].Value != null)
+                                {
+                                    one = row.Cells[2].Value.ToString();
+                                }
+
+                                if (row.Cells[3].Value != null)
+                                {
+                                    two = row.Cells[3].Value.ToString();
+                                }
+
+                                if (row.Cells[4].Value != null)
+                                {
+                                    three = row.Cells[4].Value.ToString();
+                                }
+
+                                if (row.Cells[5].Value != null)
+                                {
+                                    four = row.Cells[5].Value.ToString();
+                                }
+
+                                if (row.Cells[6].Value != null)
+                                {
+                                    five = row.Cells[6].Value.ToString();
+                                }
+
+                                if (row.Cells[7].Value != null)
+                                {
+                                    six = row.Cells[7].Value.ToString();
+                                }
+
+                                if (row.Cells[8].Value != null)
+                                {
+                                    seven = row.Cells[8].Value.ToString();
+                                }
+                                try
+                                {
+                                    MainClass.con.Open();
+                                    SqlCommand cmd = new SqlCommand("INSERT INTO DietPlanAction (DietPlanID, one, two, three, Four, Five, Six, Seven, Category) " +
+                                        "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
+
+                                    // Assuming appropriate variables for the values in the DietPlanAction table
+                                    cmd.Parameters.AddWithValue("@DietPlanID", GetLastMeal()); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
+                                    cmd.Parameters.AddWithValue("@One", one);
+                                    cmd.Parameters.AddWithValue("@Two", two);
+                                    cmd.Parameters.AddWithValue("@Three", three);
+                                    cmd.Parameters.AddWithValue("@Four", four);
+                                    cmd.Parameters.AddWithValue("@Five", five);
+                                    cmd.Parameters.AddWithValue("@Six", six);
+                                    cmd.Parameters.AddWithValue("@Seven", seven);
+                                    cmd.Parameters.AddWithValue("@Category", category); // Change 'categoryTextBox' to the actual textbox capturing the category value
+
+                                    cmd.ExecuteNonQuery();
+                                    //MessageBox.Show("Diet Plan added Successfully!");
+                                    MainClass.con.Close();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("An error occurred: " + ex.Message);
+                                }
+
+                            }
+
+
+
+
+
+                        }
+
                     }
                     catch (Exception ex)
                     {
@@ -1879,6 +2315,265 @@ namespace HelloWorldSolutionIMS
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '+')
             {
                 e.Handled = true; // Ignore the keypress if it's not a number, a control character, or a plus sign
+            }
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DietPlanDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddLunch_Click(object sender, EventArgs e)
+        {
+            // Create a single row for your DataGridView.
+            DataGridViewRow row = new DataGridViewRow();
+
+            // Create a DataGridViewComboBoxCell for the combo box.
+            DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+            DataGridViewComboBoxCell comboCellcategory = new DataGridViewComboBoxCell();
+
+            // Clear the items in the combo cell to avoid duplicates.
+            comboCell.Items.Clear();
+
+            // Set the DataSource, DisplayMember, and ValueMember for the combo cell.
+            comboCell.DataSource = GetMeals();
+            comboCell.DisplayMember = "Name";
+            comboCell.ValueMember = "ID";
+
+            // Set the default selected value for the combo box.
+            comboCell.Value = GetMeals()[0].ID; // Replace with the desired default value.
+
+            comboCellcategory.Items.Clear();
+
+            comboCellcategory.DataSource = GetCategory();
+
+
+
+            for (int i = 1; i < guna2DataGridView4.ColumnCount; i++)
+            {
+                // Create a DataGridViewColumn for the current column.
+                DataGridViewColumn column = guna2DataGridView4.Columns[i];
+
+                if (i == 1)
+                {
+                    column.CellTemplate = comboCellcategory;
+                }
+                //else if(i == 9)
+                //{
+                //    DataGridViewButtonCell removeButtonCell = new DataGridViewButtonCell();
+                //    removeButtonCell.Value = "Remove";
+                //    row.Cells.Add(removeButtonCell);
+                //}
+                else
+                {
+                    if (i == 9)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        column.CellTemplate = comboCell;
+
+                    }
+                }
+            }
+            //DataGridViewButtonCell buttonCell = new DataGridViewButtonCell();
+            //buttonCell.Value = "Remove"; // Set the button text to "Remove"
+            //row.Cells.Add(buttonCell);
+
+            guna2DataGridView4.Rows.Add(row);
+        }
+
+        private void guna2DataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView4.Columns["lunchbuttondgv"].Index && e.RowIndex >= 0)
+            {
+                // Remove the corresponding row when the remove button is clicked.
+                guna2DataGridView4.Rows.RemoveAt(e.RowIndex);
+            }
+        }
+
+        private void guna2DataGridView4_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (e.Control is ComboBox comboBox)
+            {
+                // Attach the SelectionChangeCommitted event to the ComboBox
+                comboBox.SelectionChangeCommitted -= ComboBox_SelectionChangeCommitted; // Ensure it's detached first
+                comboBox.SelectionChangeCommitted += ComboBox_SelectionChangeCommitted;
+            }
+        }
+
+        private void DinnerAdd_Click(object sender, EventArgs e)
+        {
+            // Create a single row for your DataGridView.
+            DataGridViewRow row = new DataGridViewRow();
+
+            // Create a DataGridViewComboBoxCell for the combo box.
+            DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+            DataGridViewComboBoxCell comboCellcategory = new DataGridViewComboBoxCell();
+
+            // Clear the items in the combo cell to avoid duplicates.
+            comboCell.Items.Clear();
+
+            // Set the DataSource, DisplayMember, and ValueMember for the combo cell.
+            comboCell.DataSource = GetMeals();
+            comboCell.DisplayMember = "Name";
+            comboCell.ValueMember = "ID";
+
+            // Set the default selected value for the combo box.
+            comboCell.Value = GetMeals()[0].ID; // Replace with the desired default value.
+
+            comboCellcategory.Items.Clear();
+
+            comboCellcategory.DataSource = GetCategory();
+
+
+
+            for (int i = 1; i < guna2DataGridView5.ColumnCount; i++)
+            {
+                // Create a DataGridViewColumn for the current column.
+                DataGridViewColumn column = guna2DataGridView5.Columns[i];
+
+                if (i == 1)
+                {
+                    column.CellTemplate = comboCellcategory;
+                }
+                //else if(i == 9)
+                //{
+                //    DataGridViewButtonCell removeButtonCell = new DataGridViewButtonCell();
+                //    removeButtonCell.Value = "Remove";
+                //    row.Cells.Add(removeButtonCell);
+                //}
+                else
+                {
+                    if (i == 9)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        column.CellTemplate = comboCell;
+
+                    }
+                }
+            }
+            //DataGridViewButtonCell buttonCell = new DataGridViewButtonCell();
+            //buttonCell.Value = "Remove"; // Set the button text to "Remove"
+            //row.Cells.Add(buttonCell);
+
+            guna2DataGridView5.Rows.Add(row);
+        }
+
+        private void SnackAdd_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = new DataGridViewRow();
+
+            // Create a DataGridViewComboBoxCell for the combo box.
+            DataGridViewComboBoxCell comboCell = new DataGridViewComboBoxCell();
+            DataGridViewComboBoxCell comboCellcategory = new DataGridViewComboBoxCell();
+
+            // Clear the items in the combo cell to avoid duplicates.
+            comboCell.Items.Clear();
+
+            // Set the DataSource, DisplayMember, and ValueMember for the combo cell.
+            comboCell.DataSource = GetMeals();
+            comboCell.DisplayMember = "Name";
+            comboCell.ValueMember = "ID";
+
+            // Set the default selected value for the combo box.
+            comboCell.Value = GetMeals()[0].ID; // Replace with the desired default value.
+
+            comboCellcategory.Items.Clear();
+
+            comboCellcategory.DataSource = GetCategory();
+
+
+
+            for (int i = 1; i < guna2DataGridView6.ColumnCount; i++)
+            {
+                // Create a DataGridViewColumn for the current column.
+                DataGridViewColumn column = guna2DataGridView6.Columns[i];
+
+                if (i == 1)
+                {
+                    column.CellTemplate = comboCellcategory;
+                }
+                //else if(i == 9)
+                //{
+                //    DataGridViewButtonCell removeButtonCell = new DataGridViewButtonCell();
+                //    removeButtonCell.Value = "Remove";
+                //    row.Cells.Add(removeButtonCell);
+                //}
+                else
+                {
+                    if (i == 9)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        column.CellTemplate = comboCell;
+
+                    }
+                }
+            }
+            //DataGridViewButtonCell buttonCell = new DataGridViewButtonCell();
+            //buttonCell.Value = "Remove"; // Set the button text to "Remove"
+            //row.Cells.Add(buttonCell);
+
+            guna2DataGridView6.Rows.Add(row);
+        }
+
+        private void guna2DataGridView5_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (e.Control is ComboBox comboBox)
+            {
+                // Attach the SelectionChangeCommitted event to the ComboBox
+                comboBox.SelectionChangeCommitted -= ComboBox_SelectionChangeCommitted; // Ensure it's detached first
+                comboBox.SelectionChangeCommitted += ComboBox_SelectionChangeCommitted;
+            }
+        }
+
+        private void guna2DataGridView6_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (e.Control is ComboBox comboBox)
+            {
+                // Attach the SelectionChangeCommitted event to the ComboBox
+                comboBox.SelectionChangeCommitted -= ComboBox_SelectionChangeCommitted; // Ensure it's detached first
+                comboBox.SelectionChangeCommitted += ComboBox_SelectionChangeCommitted;
+            }
+        }
+
+        private void guna2DataGridView5_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView5.Columns["dinnerbuttondgv"].Index && e.RowIndex >= 0)
+            {
+                // Remove the corresponding row when the remove button is clicked.
+                guna2DataGridView5.Rows.RemoveAt(e.RowIndex);
+            }
+        }
+
+        private void guna2DataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView6.Columns["snackbuttondgv"].Index && e.RowIndex >= 0)
+            {
+                // Remove the corresponding row when the remove button is clicked.
+                guna2DataGridView6.Rows.RemoveAt(e.RowIndex);
             }
         }
     }
