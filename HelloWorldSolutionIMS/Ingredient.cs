@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using OfficeOpenXml;
 using System.IO;
 using Guna.UI2.WinForms;
+using static HelloWorldSolutionIMS.MealAction;
+using Win32Interop.Enums;
 
 namespace HelloWorldSolutionIMS
 {
@@ -246,6 +248,46 @@ namespace HelloWorldSolutionIMS
             {
                 ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
                 MessageBox.Show("Fill Ingredient Ar or Group Ar");
+            }
+        }
+
+        private void ShowIngredientsWithFilter(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn fdc, DataGridViewColumn classification, DataGridViewColumn ingredientAr, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium, string category)
+        {
+            try
+            {
+                MainClass.con.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
+                    "WHERE CATEGORY LIKE @Category", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@Category", "%" + category + "%");
+               
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Modify the column names to match your data grid view
+                no.DataPropertyName = dt.Columns["ID"].ToString();
+                ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_AR"].ToString();
+                calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
+                fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+
+
+
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
             }
         }
         private void Ingredient_Load(object sender, EventArgs e)
@@ -898,121 +940,230 @@ namespace HelloWorldSolutionIMS
         }
         private void importall_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (result == DialogResult.Yes)
             {
-                string filePath = openFileDialog.FileName;
-
                 try
                 {
-                    ImportExcelToDatabase(filePath,"All");
+                    OpenFileDialog openFileDialog = new OpenFileDialog();
+                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string filePath = openFileDialog.FileName;
+
+                        try
+                        {
+                            ImportExcelToDatabase(filePath, "All");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
                 }
             }
-        }
+            else
+            {
+                ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
 
+            }
+
+        }
         private void importff_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (result == DialogResult.Yes)
             {
-                string filePath = openFileDialog.FileName;
-
                 try
                 {
-                    ImportExcelToDatabase(filePath, "Foundation Foods");
+                    OpenFileDialog openFileDialog = new OpenFileDialog();
+                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string filePath = openFileDialog.FileName;
+
+                        try
+                        {
+                            ImportExcelToDatabase(filePath, "Foundation Foods");
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
                 }
             }
-        }
+            else
+            {
+                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Foundation Foods");
 
+            }
+        }
         private void importsr_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (result == DialogResult.Yes)
             {
-                string filePath = openFileDialog.FileName;
-
                 try
                 {
-                    ImportExcelToDatabase(filePath, "SR Legacy");
+                    OpenFileDialog openFileDialog = new OpenFileDialog();
+                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string filePath = openFileDialog.FileName;
+
+                        try
+                        {
+                            ImportExcelToDatabase(filePath, "SR Legacy");
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
                 }
             }
-        }
+            else
+            {
+                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "SR Legacy");
 
+            }
+        }
         private void importfndds_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (result == DialogResult.Yes)
             {
-                string filePath = openFileDialog.FileName;
-
                 try
                 {
-                    ImportExcelToDatabase(filePath, "FNDDS");
+                    OpenFileDialog openFileDialog = new OpenFileDialog();
+                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string filePath = openFileDialog.FileName;
+
+                        try
+                        {
+                            ImportExcelToDatabase(filePath, "FNDDS");
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
                 }
             }
-        }
+            else
+            {
+                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "FNDDS");
 
+            }
+        }
+        
         private void importbranded_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (result == DialogResult.Yes)
             {
-                string filePath = openFileDialog.FileName;
-
                 try
                 {
-                    ImportExcelToDatabase(filePath, "Branded");
+                    OpenFileDialog openFileDialog = new OpenFileDialog();
+                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string filePath = openFileDialog.FileName;
+
+                        try
+                        {
+                            ImportExcelToDatabase(filePath, "Branded");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
                 }
             }
-        }
+            else
+            {
+                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Branded");
 
+            }
+        }
+        
         private void importlocal_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (result == DialogResult.Yes)
             {
-                string filePath = openFileDialog.FileName;
-
                 try
                 {
-                    ImportExcelToDatabase(filePath, "Local");
+                    OpenFileDialog openFileDialog = new OpenFileDialog();
+                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string filePath = openFileDialog.FileName;
+
+                        try
+                        {
+                            ImportExcelToDatabase(filePath, "Local");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
                 }
+            }
+            else
+            {
+                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Local");
+
             }
         }
     }
