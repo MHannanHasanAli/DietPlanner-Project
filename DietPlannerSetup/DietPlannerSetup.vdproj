@@ -33,6 +33,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_0417EBBE793F4BDB8A5C8791B877ACBE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0695B47F87D2DADAB2501C5D975F07DC"
         "OwnerKey" = "8:_AC26FDD2CBA44C598F3A7DE3BD05E2B7"
         "MsmSig" = "8:_UNDEFINED"
@@ -1054,13 +1060,13 @@
         "Entry"
         {
         "MsmKey" = "8:_C517F3A0DCD0AEFC72619C195BA83032"
-        "OwnerKey" = "8:_2FCF6AD43F2E1DB3FC9C998D8D287C32"
+        "OwnerKey" = "8:_AC26FDD2CBA44C598F3A7DE3BD05E2B7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_C517F3A0DCD0AEFC72619C195BA83032"
-        "OwnerKey" = "8:_AC26FDD2CBA44C598F3A7DE3BD05E2B7"
+        "OwnerKey" = "8:_2FCF6AD43F2E1DB3FC9C998D8D287C32"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1576,6 +1582,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C517F3A0DCD0AEFC72619C195BA83032"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_DC4F69CF2128409A659A0649D54E6F03"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1991,12 +2003,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2FCF6AD43F2E1DB3FC9C998D8D287C32"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C517F3A0DCD0AEFC72619C195BA83032"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2672,6 +2678,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -2696,6 +2710,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -2817,6 +2839,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0417EBBE793F4BDB8A5C8791B877ACBE"
+            {
+            "SourcePath" = "8:..\\..\\DemoSettingsImport.xlsx"
+            "TargetName" = "8:DemoSettingsImport.xlsx"
+            "Tag" = "8:"
+            "Folder" = "8:_F4BB8D72F2FA4D7B966C2735328BB7F7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0695B47F87D2DADAB2501C5D975F07DC"
@@ -5200,7 +5242,7 @@
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_CE8DD4D3BB1B481FB924BB0CAE6EF4BC"
+            "Folder" = "8:_F4BB8D72F2FA4D7B966C2735328BB7F7"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -8114,7 +8156,7 @@
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_CE8DD4D3BB1B481FB924BB0CAE6EF4BC"
+            "Folder" = "8:_F4BB8D72F2FA4D7B966C2735328BB7F7"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"

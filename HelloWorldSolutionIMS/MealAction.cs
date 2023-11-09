@@ -3250,7 +3250,6 @@ namespace HelloWorldSolutionIMS
 
             if (result == DialogResult.Yes)
             {
-                string id = guna2DataGridView2.CurrentRow.Cells[0].Value.ToString();
                 try
                 {
                     OpenFileDialog openFileDialog = new OpenFileDialog();

@@ -18,6 +18,7 @@ using System.IO;
 using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Net;
+using OfficeOpenXml;
 
 namespace HelloWorldSolutionIMS
 {
@@ -1308,6 +1309,112 @@ namespace HelloWorldSolutionIMS
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public void ImportExcelToDatabase(string excelFilePath)
+        {
+            MainClass.con.Open();
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            try
+            {
+                using (ExcelPackage package = new ExcelPackage(new FileInfo(excelFilePath)))
+                {
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    int rowCount = worksheet.Dimension.Rows;
+
+                    for (int row = 2; row <= rowCount; row++)
+                    {
+                        string CompanyName = worksheet.Cells[row, 1].Value?.ToString();
+                        string Branch = worksheet.Cells[row, 2].Value?.ToString();
+
+                      
+
+                        string landline = worksheet.Cells[row, 3].Value?.ToString();
+                        string mobile = worksheet.Cells[row, 4].Value?.ToString();
+
+
+                        string email = worksheet.Cells[row, 5].Value?.ToString();
+                        string pobox = worksheet.Cells[row, 6].Value?.ToString();
+                        string tradeliscense = worksheet.Cells[row, 7].Value?.ToString();
+                        string welcome = worksheet.Cells[row, 8].Value?.ToString();
+
+
+                        string query = "UPDATE Settings " +
+                        "SET CompanyName = @CompanyName, Branch = @Branch, Landline = @Landline, Mobile = @Mobile, " +
+                        "Email = @Email, POBox = @POBox, TradeNo = @TradeNo, Welcome = @Welcome, " +
+                        "Room1 = COALESCE(Room1, @Room1), Room2 = COALESCE(Room2, @Room2), " +
+                        "Room3 = COALESCE(Room3, @Room3), Room4 = COALESCE(Room4, @Room4), Logo = COALESCE(Logo, @Logo)";
+
+                        using (SqlCommand command = new SqlCommand(query, MainClass.con))
+                        {
+                            command.Parameters.AddWithValue("@CompanyName", CompanyName);
+                            command.Parameters.AddWithValue("@Branch", Branch);
+                            command.Parameters.AddWithValue("@Landline", landline);
+                            command.Parameters.AddWithValue("@Mobile", mobile);
+                            command.Parameters.AddWithValue("@Email", email);
+                            command.Parameters.AddWithValue("@POBox", pobox);
+                            command.Parameters.AddWithValue("@TradeNo", tradeliscense);
+                            command.Parameters.AddWithValue("@Welcome", welcome);
+                            command.Parameters.AddWithValue("@Room1", "tradeliscense");
+                            command.Parameters.AddWithValue("@Room2", "tradeliscense");
+                            command.Parameters.AddWithValue("@Room3", "tradeliscense");
+                            command.Parameters.AddWithValue("@Room4", "tradeliscense");
+                            command.Parameters.AddWithValue("@Logo", "tradeliscense");
+
+                            command.ExecuteNonQuery();
+                        }
+
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("Some of the crucial columns are empty or null");
+                        //}
+                    }
+
+                    MainClass.con.Close();
+
+                    Start();                    
+                    MessageBox.Show("Data imported successfully!");
+                  
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+            }
+        }
+
+        private void ColorClose_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+        }
+
+        private void importsettings_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog.FileName;
+
+                try
+                {
+                    ImportExcelToDatabase(filePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            SaveFileAsExcel("\\DemoSettingsImport.xlsx");
         }
     }
 }
