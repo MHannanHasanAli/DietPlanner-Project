@@ -74,6 +74,9 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.newbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.searchplan = new Guna.UI2.WinForms.Guna2Button();
+            this.template = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteBtn = new Guna.UI2.WinForms.Guna2Button();
             this.EditBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -207,21 +210,18 @@
             this.calories = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.template = new Guna.UI2.WinForms.Guna2Button();
+            this.savetemplate = new Guna.UI2.WinForms.Guna2Button();
+            this.dietplantemplateforsave = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label37 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label37 = new System.Windows.Forms.Label();
-            this.dietplantemplateforsave = new Guna.UI2.WinForms.Guna2TextBox();
-            this.savetemplate = new Guna.UI2.WinForms.Guna2Button();
-            this.searchplan = new Guna.UI2.WinForms.Guna2Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label38 = new System.Windows.Forms.Label();
             this.backbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label38 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
             this.updateback = new Guna.UI2.WinForms.Guna2Button();
             this.label39 = new System.Windows.Forms.Label();
-            this.newbtn = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -262,6 +262,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1169, 871);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -609,6 +610,63 @@
             this.panel2.Size = new System.Drawing.Size(1155, 836);
             this.panel2.TabIndex = 0;
             // 
+            // newbtn
+            // 
+            this.newbtn.AutoRoundedCorners = true;
+            this.newbtn.BorderRadius = 21;
+            this.newbtn.CausesValidation = false;
+            this.newbtn.CheckedState.Parent = this.newbtn;
+            this.newbtn.CustomImages.Parent = this.newbtn;
+            this.newbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.newbtn.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.newbtn.ForeColor = System.Drawing.Color.White;
+            this.newbtn.HoverState.Parent = this.newbtn;
+            this.newbtn.Location = new System.Drawing.Point(741, 378);
+            this.newbtn.Name = "newbtn";
+            this.newbtn.ShadowDecoration.Parent = this.newbtn;
+            this.newbtn.Size = new System.Drawing.Size(171, 45);
+            this.newbtn.TabIndex = 340;
+            this.newbtn.Text = "New Plan";
+            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
+            // 
+            // searchplan
+            // 
+            this.searchplan.AutoRoundedCorners = true;
+            this.searchplan.BorderRadius = 21;
+            this.searchplan.CausesValidation = false;
+            this.searchplan.CheckedState.Parent = this.searchplan;
+            this.searchplan.CustomImages.Parent = this.searchplan;
+            this.searchplan.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.searchplan.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.searchplan.ForeColor = System.Drawing.Color.White;
+            this.searchplan.HoverState.Parent = this.searchplan;
+            this.searchplan.Location = new System.Drawing.Point(26, 378);
+            this.searchplan.Name = "searchplan";
+            this.searchplan.ShadowDecoration.Parent = this.searchplan;
+            this.searchplan.Size = new System.Drawing.Size(171, 45);
+            this.searchplan.TabIndex = 339;
+            this.searchplan.Text = "Search";
+            this.searchplan.Click += new System.EventHandler(this.searchplan_Click);
+            // 
+            // template
+            // 
+            this.template.AutoRoundedCorners = true;
+            this.template.BorderRadius = 21;
+            this.template.CausesValidation = false;
+            this.template.CheckedState.Parent = this.template;
+            this.template.CustomImages.Parent = this.template;
+            this.template.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.template.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.template.ForeColor = System.Drawing.Color.White;
+            this.template.HoverState.Parent = this.template;
+            this.template.Location = new System.Drawing.Point(941, 378);
+            this.template.Name = "template";
+            this.template.ShadowDecoration.Parent = this.template;
+            this.template.Size = new System.Drawing.Size(171, 45);
+            this.template.TabIndex = 338;
+            this.template.Text = "Save as template";
+            this.template.Click += new System.EventHandler(this.template_Click);
+            // 
             // DeleteBtn
             // 
             this.DeleteBtn.AutoRoundedCorners = true;
@@ -806,7 +864,6 @@
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView2_CellContentClick);
-            this.guna2DataGridView2.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.guna2DataGridView2_EditingControlShowing);
             // 
             // iddgv
             // 
@@ -1628,6 +1685,7 @@
             this.Calculation.ShadowDecoration.Parent = this.Calculation;
             this.Calculation.Size = new System.Drawing.Size(123, 26);
             this.Calculation.TabIndex = 322;
+            this.Calculation.SelectedValueChanged += new System.EventHandler(this.Calculation_SelectedValueChanged);
             // 
             // label35
             // 
@@ -2643,55 +2701,24 @@
             this.panel3.Size = new System.Drawing.Size(1155, 836);
             this.panel3.TabIndex = 0;
             // 
-            // template
+            // savetemplate
             // 
-            this.template.AutoRoundedCorners = true;
-            this.template.BorderRadius = 21;
-            this.template.CausesValidation = false;
-            this.template.CheckedState.Parent = this.template;
-            this.template.CustomImages.Parent = this.template;
-            this.template.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.template.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.template.ForeColor = System.Drawing.Color.White;
-            this.template.HoverState.Parent = this.template;
-            this.template.Location = new System.Drawing.Point(941, 378);
-            this.template.Name = "template";
-            this.template.ShadowDecoration.Parent = this.template;
-            this.template.Size = new System.Drawing.Size(171, 45);
-            this.template.TabIndex = 338;
-            this.template.Text = "Save as template";
-            this.template.Click += new System.EventHandler(this.template_Click);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.panel8);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1161, 842);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1155, 836);
-            this.panel8.TabIndex = 0;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(26, 46);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(176, 18);
-            this.label37.TabIndex = 294;
-            this.label37.Text = "Diet Plan Template Name";
+            this.savetemplate.AutoRoundedCorners = true;
+            this.savetemplate.BorderRadius = 21;
+            this.savetemplate.CausesValidation = false;
+            this.savetemplate.CheckedState.Parent = this.savetemplate;
+            this.savetemplate.CustomImages.Parent = this.savetemplate;
+            this.savetemplate.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.savetemplate.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.savetemplate.ForeColor = System.Drawing.Color.White;
+            this.savetemplate.HoverState.Parent = this.savetemplate;
+            this.savetemplate.Location = new System.Drawing.Point(29, 108);
+            this.savetemplate.Name = "savetemplate";
+            this.savetemplate.ShadowDecoration.Parent = this.savetemplate;
+            this.savetemplate.Size = new System.Drawing.Size(199, 45);
+            this.savetemplate.TabIndex = 339;
+            this.savetemplate.Text = "Save as template";
+            this.savetemplate.Click += new System.EventHandler(this.savetemplate_Click);
             // 
             // dietplantemplateforsave
             // 
@@ -2718,43 +2745,36 @@
             this.dietplantemplateforsave.Size = new System.Drawing.Size(202, 24);
             this.dietplantemplateforsave.TabIndex = 315;
             // 
-            // savetemplate
+            // label37
             // 
-            this.savetemplate.AutoRoundedCorners = true;
-            this.savetemplate.BorderRadius = 21;
-            this.savetemplate.CausesValidation = false;
-            this.savetemplate.CheckedState.Parent = this.savetemplate;
-            this.savetemplate.CustomImages.Parent = this.savetemplate;
-            this.savetemplate.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.savetemplate.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.savetemplate.ForeColor = System.Drawing.Color.White;
-            this.savetemplate.HoverState.Parent = this.savetemplate;
-            this.savetemplate.Location = new System.Drawing.Point(29, 108);
-            this.savetemplate.Name = "savetemplate";
-            this.savetemplate.ShadowDecoration.Parent = this.savetemplate;
-            this.savetemplate.Size = new System.Drawing.Size(199, 45);
-            this.savetemplate.TabIndex = 339;
-            this.savetemplate.Text = "Save as template";
-            this.savetemplate.Click += new System.EventHandler(this.savetemplate_Click);
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(26, 46);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(176, 18);
+            this.label37.TabIndex = 294;
+            this.label37.Text = "Diet Plan Template Name";
             // 
-            // searchplan
+            // tabPage4
             // 
-            this.searchplan.AutoRoundedCorners = true;
-            this.searchplan.BorderRadius = 21;
-            this.searchplan.CausesValidation = false;
-            this.searchplan.CheckedState.Parent = this.searchplan;
-            this.searchplan.CustomImages.Parent = this.searchplan;
-            this.searchplan.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.searchplan.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.searchplan.ForeColor = System.Drawing.Color.White;
-            this.searchplan.HoverState.Parent = this.searchplan;
-            this.searchplan.Location = new System.Drawing.Point(26, 378);
-            this.searchplan.Name = "searchplan";
-            this.searchplan.ShadowDecoration.Parent = this.searchplan;
-            this.searchplan.Size = new System.Drawing.Size(171, 45);
-            this.searchplan.TabIndex = 339;
-            this.searchplan.Text = "Search";
-            this.searchplan.Click += new System.EventHandler(this.searchplan_Click);
+            this.tabPage4.Controls.Add(this.panel8);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1161, 842);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1155, 836);
+            this.panel8.TabIndex = 0;
             // 
             // panel9
             // 
@@ -2765,16 +2785,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1155, 836);
             this.panel9.TabIndex = 0;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(234, 153);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(645, 54);
-            this.label38.TabIndex = 295;
-            this.label38.Text = "Diet Plan Added Successfully!";
             // 
             // backbtn
             // 
@@ -2794,6 +2804,16 @@
             this.backbtn.TabIndex = 340;
             this.backbtn.Text = "Back";
             this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(234, 153);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(645, 54);
+            this.label38.TabIndex = 295;
+            this.label38.Text = "Diet Plan Added Successfully!";
             // 
             // tabPage5
             // 
@@ -2845,25 +2865,6 @@
             this.label39.Size = new System.Drawing.Size(687, 54);
             this.label39.TabIndex = 295;
             this.label39.Text = "Diet Plan Updated Successfully!";
-            // 
-            // newbtn
-            // 
-            this.newbtn.AutoRoundedCorners = true;
-            this.newbtn.BorderRadius = 21;
-            this.newbtn.CausesValidation = false;
-            this.newbtn.CheckedState.Parent = this.newbtn;
-            this.newbtn.CustomImages.Parent = this.newbtn;
-            this.newbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.newbtn.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.newbtn.ForeColor = System.Drawing.Color.White;
-            this.newbtn.HoverState.Parent = this.newbtn;
-            this.newbtn.Location = new System.Drawing.Point(741, 378);
-            this.newbtn.Name = "newbtn";
-            this.newbtn.ShadowDecoration.Parent = this.newbtn;
-            this.newbtn.Size = new System.Drawing.Size(171, 45);
-            this.newbtn.TabIndex = 340;
-            this.newbtn.Text = "New Plan";
-            this.newbtn.Click += new System.EventHandler(this.newbtn_Click);
             // 
             // DietPlan
             // 
