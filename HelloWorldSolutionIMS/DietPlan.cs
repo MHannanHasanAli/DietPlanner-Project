@@ -1870,8 +1870,204 @@ namespace HelloWorldSolutionIMS
                 }
             }
         }
-        private void save_Click(object sender, EventArgs e)
+        private void Calculate(Guna2DataGridView grid)
         {
+            foreach (DataGridViewRow row4 in grid.Rows)
+            {
+                if (!row4.IsNewRow) // Skip the last empty row4 if present.
+                {
+
+                    string category = "", one = "", two = "", three = "", four = "", five = "", six = "", seven = "";
+
+                    //if (row4.Cells[1] == null)
+                    //{
+                    //    MessageBox.Show("The category is empty!");
+                    //}
+                    //if (row4.Cells[1].Value != null)
+                    //{
+                    if(grid.Name == "guna2DataGridView2")
+                    {
+                        category = "Breakfast";
+                    }
+                    else if (grid.Name == "guna2DataGridView4")
+                    {
+                        category = "Lunch";
+                    }
+                    else if (grid.Name == "guna2DataGridView5")
+                    {
+                        category = "Dinner";
+                    }
+                    else if (grid.Name == "guna2DataGridView6")
+                    {
+                        category = "Snack";
+                    }
+
+                    //}
+
+                    if (row4.Cells[2].Value != null)
+                    {
+                        one = row4.Cells[2].Value.ToString();
+                    }
+
+                    if (row4.Cells[3].Value != null)
+                    {
+                        two = row4.Cells[3].Value.ToString();
+                    }
+
+                    if (row4.Cells[4].Value != null)
+                    {
+                        three = row4.Cells[4].Value.ToString();
+                    }
+
+                    if (row4.Cells[5].Value != null)
+                    {
+                        four = row4.Cells[5].Value.ToString();
+                    }
+
+                    if (row4.Cells[6].Value != null)
+                    {
+                        five = row4.Cells[6].Value.ToString();
+                    }
+
+                    if (row4.Cells[7].Value != null)
+                    {
+                        six = row4.Cells[7].Value.ToString();
+                    }
+
+                    if (row4.Cells[8].Value != null)
+                    {
+                        seven = row4.Cells[8].Value.ToString();
+                    }
+                    try
+                    {
+                        MainClass.con.Open();
+                        SqlCommand cmd = new SqlCommand("INSERT INTO DietPlanAction (DietPlanID, one, two, three, Four, Five, Six, Seven, Category) " +
+                            "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
+
+                        // Assuming appropriate variables for the values in the DietPlanAction table
+                        cmd.Parameters.AddWithValue("@DietPlanID", fileno.Text); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
+                        cmd.Parameters.AddWithValue("@One", one);
+                        cmd.Parameters.AddWithValue("@Two", two);
+                        cmd.Parameters.AddWithValue("@Three", three);
+                        cmd.Parameters.AddWithValue("@Four", four);
+                        cmd.Parameters.AddWithValue("@Five", five);
+                        cmd.Parameters.AddWithValue("@Six", six);
+                        cmd.Parameters.AddWithValue("@Seven", seven);
+                        cmd.Parameters.AddWithValue("@Category", category); // Change 'categoryTextBox' to the actual textbox capturing the category value
+
+                        cmd.ExecuteNonQuery();
+                        //MessageBox.Show("Diet Plan added Successfully!");
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+
+                }
+
+            }
+        }
+        private void CalculateTemplate(Guna2DataGridView grid)
+        {
+            foreach (DataGridViewRow row4 in grid.Rows)
+            {
+                if (!row4.IsNewRow) // Skip the last empty row4 if present.
+                {
+
+                    string category = "", one = "", two = "", three = "", four = "", five = "", six = "", seven = "";
+
+                    //if (row4.Cells[1] == null)
+                    //{
+                    //    MessageBox.Show("The category is empty!");
+                    //}
+                    //if (row4.Cells[1].Value != null)
+                    //{
+                    if (grid.Name == "guna2DataGridView2")
+                    {
+                        category = "Breakfast";
+                    }
+                    else if (grid.Name == "guna2DataGridView4")
+                    {
+                        category = "Lunch";
+                    }
+                    else if (grid.Name == "guna2DataGridView5")
+                    {
+                        category = "Dinner";
+                    }
+                    else if (grid.Name == "guna2DataGridView6")
+                    {
+                        category = "Snack";
+                    }
+
+                    //}
+
+                    if (row4.Cells[2].Value != null)
+                    {
+                        one = row4.Cells[2].Value.ToString();
+                    }
+
+                    if (row4.Cells[3].Value != null)
+                    {
+                        two = row4.Cells[3].Value.ToString();
+                    }
+
+                    if (row4.Cells[4].Value != null)
+                    {
+                        three = row4.Cells[4].Value.ToString();
+                    }
+
+                    if (row4.Cells[5].Value != null)
+                    {
+                        four = row4.Cells[5].Value.ToString();
+                    }
+
+                    if (row4.Cells[6].Value != null)
+                    {
+                        five = row4.Cells[6].Value.ToString();
+                    }
+
+                    if (row4.Cells[7].Value != null)
+                    {
+                        six = row4.Cells[7].Value.ToString();
+                    }
+
+                    if (row4.Cells[8].Value != null)
+                    {
+                        seven = row4.Cells[8].Value.ToString();
+                    }
+                    try
+                    {
+                        MainClass.con.Open();
+                        SqlCommand cmd = new SqlCommand("INSERT INTO DietPlanTemplateAction (DietPlanID, one, two, three, Four, Five, Six, Seven, Category) " +
+                            "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
+
+                        // Assuming appropriate variables for the values in the DietPlanAction table
+                        cmd.Parameters.AddWithValue("@DietPlanID", fileno.Text); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
+                        cmd.Parameters.AddWithValue("@One", one);
+                        cmd.Parameters.AddWithValue("@Two", two);
+                        cmd.Parameters.AddWithValue("@Three", three);
+                        cmd.Parameters.AddWithValue("@Four", four);
+                        cmd.Parameters.AddWithValue("@Five", five);
+                        cmd.Parameters.AddWithValue("@Six", six);
+                        cmd.Parameters.AddWithValue("@Seven", seven);
+                        cmd.Parameters.AddWithValue("@Category", category); // Change 'categoryTextBox' to the actual textbox capturing the category value
+
+                        cmd.ExecuteNonQuery();
+                        //MessageBox.Show("Diet Plan added Successfully!");
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message);
+                    }
+
+                }
+
+            }
+        }
+        private void save_Click(object sender, EventArgs e)
+            {
             chartfiller = 0;
             if (edit == 0)
             {
@@ -1887,7 +2083,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@Fileno", fileno.Text);
                         cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
                         cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
-                        cmd.Parameters.AddWithValue("@DietPlanDate", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@DietPlanDate", Convert.ToDateTime(DietPlanDate.Value));
                         cmd.Parameters.AddWithValue("@DietPlanTemplateName", dietplantemplatename.Text);
                         cmd.Parameters.AddWithValue("@DietPlanTemplate", dietplantemplate.Text);
                         cmd.Parameters.AddWithValue("@DietPlanDays", dietplandays.Text);
@@ -1914,7 +2110,6 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text));
 
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Diet Plan added successfully");
                         MainClass.con.Close();
 
                         firstname.Text = "";
@@ -1958,93 +2153,10 @@ namespace HelloWorldSolutionIMS
                         MainClass.con.Close();
                         MessageBox.Show(ex.Message);
                     }
-
+                    tabControl1.SelectedIndex = 3;
                     try
                     {
-                        foreach (DataGridViewRow row in guna2DataGridView2.Rows)
-                        {
-                            if (!row.IsNewRow) // Skip the last empty row if present.
-                            {
-                                
-                               string category="", one = "", two = "", three = "", four = "", five = "", six = "", seven = "";
-
-                                //if (row.Cells[1] == null)
-                                //{
-                                //    MessageBox.Show("The category is empty!");
-                                //}
-                                //if (row.Cells[1].Value != null)
-                                //{
-                                    category = "Breakfast";
-                                //}
-                                
-                                if (row.Cells["onedgv"].Value != null)
-                                {
-                                    one = row.Cells["onedgv"].Value.ToString();
-                                }
-                                
-                                if (row.Cells["twodgv"].Value != null)
-                                {
-                                    two = row.Cells["twodgv"].Value.ToString();
-                                }
-
-                                if (row.Cells["threedgv"].Value != null)
-                                {
-                                    three = row.Cells["threedgv"].Value.ToString();
-                                }
-
-                                if (row.Cells["fourdgv"].Value != null)
-                                {
-                                    four = row.Cells["fourdgv"].Value.ToString();
-                                }
-
-                                if (row.Cells["fivedgv"].Value != null)
-                                {
-                                    five = row.Cells["fivedgv"].Value.ToString();
-                                }
-
-                                if (row.Cells["sixdgv"].Value != null)
-                                {
-                                    six = row.Cells["sixdgv"].Value.ToString();
-                                }
-
-                                if (row.Cells["sevendgv"].Value != null)
-                                {
-                                    seven = row.Cells["sevendgv"].Value.ToString();
-                                }
-                                try
-                                {
-                                    MainClass.con.Open();
-                                    SqlCommand cmd = new SqlCommand("INSERT INTO DietPlanAction (DietPlanID, one, two, three, Four, Five, Six, Seven, Category) " +
-                                        "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
-
-                                    // Assuming appropriate variables for the values in the DietPlanAction table
-                                    cmd.Parameters.AddWithValue("@DietPlanID", fileno.Text); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
-                                    cmd.Parameters.AddWithValue("@One", one);
-                                    cmd.Parameters.AddWithValue("@Two", two);
-                                    cmd.Parameters.AddWithValue("@Three", three);
-                                    cmd.Parameters.AddWithValue("@Four", four);
-                                    cmd.Parameters.AddWithValue("@Five", five);
-                                    cmd.Parameters.AddWithValue("@Six", six);
-                                    cmd.Parameters.AddWithValue("@Seven", seven);
-                                    cmd.Parameters.AddWithValue("@Category", category); // Change 'categoryTextBox' to the actual textbox capturing the category value
-
-                                    cmd.ExecuteNonQuery();
-                                    //MessageBox.Show("Diet Plan added Successfully!");
-                                    MainClass.con.Close();
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("An error occurred: " + ex.Message);
-                                }
-
-                            }
-
-
-
-
-
-                        }
-                       
+                        Calculate(guna2DataGridView2);         
                     }
                     catch (Exception ex)
                     {
@@ -2053,90 +2165,7 @@ namespace HelloWorldSolutionIMS
                     }
                     try
                     {
-                        foreach (DataGridViewRow row4 in guna2DataGridView4.Rows)
-                        {
-                            if (!row4.IsNewRow) // Skip the last empty row4 if present.
-                            {
-
-                                string category = "", one = "", two = "", three = "", four = "", five = "", six = "", seven = "";
-
-                                //if (row4.Cells[1] == null)
-                                //{
-                                //    MessageBox.Show("The category is empty!");
-                                //}
-                                //if (row4.Cells[1].Value != null)
-                                //{
-                                    category = "Lunch";
-                                //}
-
-                                if (row4.Cells[2].Value != null)
-                                {
-                                    one = row4.Cells[2].Value.ToString();
-                                }
-
-                                if (row4.Cells[3].Value != null)
-                                {
-                                    two = row4.Cells[3].Value.ToString();
-                                }
-
-                                if (row4.Cells[4].Value != null)
-                                {
-                                    three = row4.Cells[4].Value.ToString();
-                                }
-
-                                if (row4.Cells[5].Value != null)
-                                {
-                                    four = row4.Cells[5].Value.ToString();
-                                }
-
-                                if (row4.Cells[6].Value != null)
-                                {
-                                    five = row4.Cells[6].Value.ToString();
-                                }
-
-                                if (row4.Cells[7].Value != null)
-                                {
-                                    six = row4.Cells[7].Value.ToString();
-                                }
-
-                                if (row4.Cells[8].Value != null)
-                                {
-                                    seven = row4.Cells[8].Value.ToString();
-                                }
-                                try
-                                {
-                                    MainClass.con.Open();
-                                    SqlCommand cmd = new SqlCommand("INSERT INTO DietPlanAction (DietPlanID, one, two, three, Four, Five, Six, Seven, Category) " +
-                                        "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
-
-                                    // Assuming appropriate variables for the values in the DietPlanAction table
-                                    cmd.Parameters.AddWithValue("@DietPlanID", fileno.Text); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
-                                    cmd.Parameters.AddWithValue("@One", one);
-                                    cmd.Parameters.AddWithValue("@Two", two);
-                                    cmd.Parameters.AddWithValue("@Three", three);
-                                    cmd.Parameters.AddWithValue("@Four", four);
-                                    cmd.Parameters.AddWithValue("@Five", five);
-                                    cmd.Parameters.AddWithValue("@Six", six);
-                                    cmd.Parameters.AddWithValue("@Seven", seven);
-                                    cmd.Parameters.AddWithValue("@Category", category); // Change 'categoryTextBox' to the actual textbox capturing the category value
-
-                                    cmd.ExecuteNonQuery();
-                                    //MessageBox.Show("Diet Plan added Successfully!");
-                                    MainClass.con.Close();
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("An error occurred: " + ex.Message);
-                                }
-
-                            }
-
-
-
-
-
-                        }
-
+                        Calculate(guna2DataGridView4);
                     }
                     catch (Exception ex)
                     {
@@ -2145,90 +2174,7 @@ namespace HelloWorldSolutionIMS
                     }
                     try
                     {
-                        foreach (DataGridViewRow row5 in guna2DataGridView5.Rows)
-                        {
-                            if (!row5.IsNewRow) // Skip the last empty row5 if present.
-                            {
-
-                                string category = "", one = "", two = "", three = "", four = "", five = "", six = "", seven = "";
-
-                                //if (row5.Cells[1] == null)
-                                //{
-                                //    MessageBox.Show("The category is empty!");
-                                //}
-                                //if (row5.Cells[1].Value != null)
-                                //{
-                                category = "Dinner";
-                                //}
-
-                                if (row5.Cells[2].Value != null)
-                                {
-                                    one = row5.Cells[2].Value.ToString();
-                                }
-
-                                if (row5.Cells[3].Value != null)
-                                {
-                                    two = row5.Cells[3].Value.ToString();
-                                }
-
-                                if (row5.Cells[4].Value != null)
-                                {
-                                    three = row5.Cells[4].Value.ToString();
-                                }
-
-                                if (row5.Cells[5].Value != null)
-                                {
-                                    four = row5.Cells[5].Value.ToString();
-                                }
-
-                                if (row5.Cells[6].Value != null)
-                                {
-                                    five = row5.Cells[6].Value.ToString();
-                                }
-
-                                if (row5.Cells[7].Value != null)
-                                {
-                                    six = row5.Cells[7].Value.ToString();
-                                }
-
-                                if (row5.Cells[8].Value != null)
-                                {
-                                    seven = row5.Cells[8].Value.ToString();
-                                }
-                                try
-                                {
-                                    MainClass.con.Open();
-                                    SqlCommand cmd = new SqlCommand("INSERT INTO DietPlanAction (DietPlanID, one, two, three, Four, Five, Six, Seven, Category) " +
-                                        "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
-
-                                    // Assuming appropriate variables for the values in the DietPlanAction table
-                                    cmd.Parameters.AddWithValue("@DietPlanID", fileno.Text); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
-                                    cmd.Parameters.AddWithValue("@One", one);
-                                    cmd.Parameters.AddWithValue("@Two", two);
-                                    cmd.Parameters.AddWithValue("@Three", three);
-                                    cmd.Parameters.AddWithValue("@Four", four);
-                                    cmd.Parameters.AddWithValue("@Five", five);
-                                    cmd.Parameters.AddWithValue("@Six", six);
-                                    cmd.Parameters.AddWithValue("@Seven", seven);
-                                    cmd.Parameters.AddWithValue("@Category", category); // Change 'categoryTextBox' to the actual textbox capturing the category value
-
-                                    cmd.ExecuteNonQuery();
-                                    //MessageBox.Show("Diet Plan added Successfully!");
-                                    MainClass.con.Close();
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("An error occurred: " + ex.Message);
-                                }
-
-                            }
-
-
-
-
-
-                        }
-
+                        Calculate(guna2DataGridView5);                    
                     }
                     catch (Exception ex)
                     {
@@ -2237,96 +2183,14 @@ namespace HelloWorldSolutionIMS
                     }
                     try
                     {
-                        foreach (DataGridViewRow row6 in guna2DataGridView6.Rows)
-                        {
-                            if (!row6.IsNewRow) // Skip the last empty row6 if present.
-                            {
-
-                                string category = "", one = "", two = "", three = "", four = "", five = "", six = "", seven = "";
-
-                                //if (row6.Cells[1] == null)
-                                //{
-                                //    MessageBox.Show("The category is empty!");
-                                //}
-                                //if (row6.Cells[1].Value != null)
-                                //{
-                                category = "Snack";
-                                //}
-
-                                if (row6.Cells[2].Value != null)
-                                {
-                                    one = row6.Cells[2].Value.ToString();
-                                }
-
-                                if (row6.Cells[3].Value != null)
-                                {
-                                    two = row6.Cells[3].Value.ToString();
-                                }
-
-                                if (row6.Cells[4].Value != null)
-                                {
-                                    three = row6.Cells[4].Value.ToString();
-                                }
-
-                                if (row6.Cells[5].Value != null)
-                                {
-                                    four = row6.Cells[5].Value.ToString();
-                                }
-
-                                if (row6.Cells[6].Value != null)
-                                {
-                                    five = row6.Cells[6].Value.ToString();
-                                }
-
-                                if (row6.Cells[7].Value != null)
-                                {
-                                    six = row6.Cells[7].Value.ToString();
-                                }
-
-                                if (row6.Cells[8].Value != null)
-                                {
-                                    seven = row6.Cells[8].Value.ToString();
-                                }
-                                try
-                                {
-                                    MainClass.con.Open();
-                                    SqlCommand cmd = new SqlCommand("INSERT INTO DietPlanAction (DietPlanID, one, two, three, Four, Five, Six, Seven, Category) " +
-                                        "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
-
-                                    // Assuming appropriate variables for the values in the DietPlanAction table
-                                    cmd.Parameters.AddWithValue("@DietPlanID", fileno.Text); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
-                                    cmd.Parameters.AddWithValue("@One", one);
-                                    cmd.Parameters.AddWithValue("@Two", two);
-                                    cmd.Parameters.AddWithValue("@Three", three);
-                                    cmd.Parameters.AddWithValue("@Four", four);
-                                    cmd.Parameters.AddWithValue("@Five", five);
-                                    cmd.Parameters.AddWithValue("@Six", six);
-                                    cmd.Parameters.AddWithValue("@Seven", seven);
-                                    cmd.Parameters.AddWithValue("@Category", category); // Change 'categoryTextBox' to the actual textbox capturing the category value
-
-                                    cmd.ExecuteNonQuery();
-                                    //MessageBox.Show("Diet Plan added Successfully!");
-                                    MainClass.con.Close();
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show("An error occurred: " + ex.Message);
-                                }
-
-                            }
-
-
-
-
-
-                        }
-
+                        Calculate(guna2DataGridView6);
                     }
                     catch (Exception ex)
                     {
                         MainClass.con.Close();
                         MessageBox.Show(ex.Message);
                     }
+                   
                 }
                 else
                 {
@@ -2347,7 +2211,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@Fileno", fileno.Text);
                         cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
                         cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
-                        cmd.Parameters.AddWithValue("@DietPlanDate", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@DietPlanDate", Convert.ToDateTime(DietPlanDate.Value));
                         cmd.Parameters.AddWithValue("@DietPlanTemplateName", dietplantemplatename.Text);
                         cmd.Parameters.AddWithValue("@DietPlanTemplate", dietplantemplate.Text);
                         cmd.Parameters.AddWithValue("@DietPlanDays", dietplandays.Text);
@@ -2374,7 +2238,6 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text));
 
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Diet Plan updated successfully");
                         MainClass.con.Close();
 
                         firstname.Text = "";
@@ -2407,11 +2270,7 @@ namespace HelloWorldSolutionIMS
 
                         MainClass.con.Close();
 
-                        // Switch to the first tab of your tab control (assuming it's called tabControl1)
-                        //tabControl1.SelectedIndex = 0;
-
-                        // Refresh the DataGridView
-                        //ShowDietPlans(guna2DataGridView1, filenodgv, namedgv, agedgv, dietnamedgv);
+                      
                     }
                     catch (Exception ex)
                     {
@@ -2427,7 +2286,7 @@ namespace HelloWorldSolutionIMS
                         cmdingredients.ExecuteNonQuery();
                         //MessageBox.Show("Meal removed successfully");
                         //MainClass.con.Close();
-
+                        tabControl1.SelectedIndex = 4;
                         foreach (DataGridViewRow row2 in guna2DataGridView2.Rows)
                         {
                             if (!row2.IsNewRow) // Skip the last empty row2 if present.
@@ -2481,7 +2340,7 @@ namespace HelloWorldSolutionIMS
                                         "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
 
                                     // Assuming appropriate variables for the values in the DietPlanAction table
-                                    cmd.Parameters.AddWithValue("@DietPlanID", dietPlanIDToEdit); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
+                                    cmd.Parameters.AddWithValue("@DietPlanID", fileno.Text); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
                                     cmd.Parameters.AddWithValue("@One", one);
                                     cmd.Parameters.AddWithValue("@Two", two);
                                     cmd.Parameters.AddWithValue("@Three", three);
@@ -2560,7 +2419,7 @@ namespace HelloWorldSolutionIMS
                                         "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
 
                                     // Assuming appropriate variables for the values in the DietPlanAction table
-                                    cmd.Parameters.AddWithValue("@DietPlanID", GetLastMeal()); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
+                                    cmd.Parameters.AddWithValue("@DietPlanID", fileno.Text); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
                                     cmd.Parameters.AddWithValue("@One", one);
                                     cmd.Parameters.AddWithValue("@Two", two);
                                     cmd.Parameters.AddWithValue("@Three", three);
@@ -2643,7 +2502,7 @@ namespace HelloWorldSolutionIMS
                                         "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
 
                                     // Assuming appropriate variables for the values in the DietPlanAction table
-                                    cmd.Parameters.AddWithValue("@DietPlanID", GetLastMeal()); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
+                                    cmd.Parameters.AddWithValue("@DietPlanID", fileno.Text); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
                                     cmd.Parameters.AddWithValue("@One", one);
                                     cmd.Parameters.AddWithValue("@Two", two);
                                     cmd.Parameters.AddWithValue("@Three", three);
@@ -2726,7 +2585,7 @@ namespace HelloWorldSolutionIMS
                                         "VALUES (@DietPlanID, @One, @Two, @Three, @Four, @Five, @Six, @Seven, @Category)", MainClass.con);
 
                                     // Assuming appropriate variables for the values in the DietPlanAction table
-                                    cmd.Parameters.AddWithValue("@DietPlanID", GetLastMeal()); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
+                                    cmd.Parameters.AddWithValue("@DietPlanID", fileno.Text); // Replace GetLastMeal() with the appropriate method or value for DietPlanID
                                     cmd.Parameters.AddWithValue("@One", one);
                                     cmd.Parameters.AddWithValue("@Two", two);
                                     cmd.Parameters.AddWithValue("@Three", three);
@@ -2770,6 +2629,7 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView5.Rows.Clear();
             guna2DataGridView6.Rows.Clear();
             fileno.Text = string.Empty;
+            edit = 0;
         }
         private int GetLastMeal()
         {
@@ -3310,73 +3170,8 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     MessageBox.Show(ex.Message);
                 }
-
-                string template = null;
-                string PreviousPlan = null;
                
-                try
-                {
-                    
-                    dietPlanIDToEdit = fileno.Text.ToString();
-                    MainClass.con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM DietPlan WHERE FILENO = @DietPlanID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@DietPlanID", dietPlanIDToEdit);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            // Set the retrieved data into input controls
-                            edit = 1;
-                           
-                            firstname.Text = reader["FIRSTNAME"].ToString();
-                            familyname.Text = reader["FAMILYNAME"].ToString();
-                            template = reader["DietPlanTemplateName"].ToString();
-                            dietplantemplate.Text = reader["DietPlanTemplate"].ToString();
-                            dietplandays.Text = reader["DietPlanDays"].ToString();
-                            instruction.Text = reader["Instructions"].ToString();
-                            gender.Text = reader["Gender"].ToString();
-                            age.Text = reader["Age"].ToString();
-                            mobileno.Text = reader["MobileNo"].ToString();
-                            PreviousPlan = reader["PreviousDiePlan"].ToString();
-                            calories.Text = reader["CALORIES"].ToString();
-                            fats.Text = reader["FATS"].ToString();
-                            fibers.Text = reader["FIBERS"].ToString();
-                            potassium.Text = reader["POTASSIUM"].ToString();
-                            water.Text = reader["WATER"].ToString();
-                            sugar.Text = reader["SUGAR"].ToString();
-                            calcium.Text = reader["CALCIUM"].ToString();
-                            abox.Text = reader["A"].ToString();
-                            protein.Text = reader["PROTEIN"].ToString();
-                            carbohydrates.Text = reader["CARBOHYDRATES"].ToString();
-                            sodium.Text = reader["SODIUM"].ToString();
-                            phosphor.Text = reader["PHOSPHOR"].ToString();
-                            magnesium.Text = reader["MAGNESIUM"].ToString();
-                            iron.Text = reader["IRON"].ToString();
-                            iodine.Text = reader["IODINE"].ToString();
-                            bbox.Text = reader["B"].ToString();
-                        }
-                        reader.Close();
-                        MainClass.con.Close();
-                        dietplantemplatename.Text = template;
-                        previousdietplan.Text = PreviousPlan;
-                        extrafunc();
-                        
-                        //tabControl1.SelectedIndex = 1;
-                    }
-                    else
-                    {
-                        reader.Close();
-                        MainClass.con.Close();
-                        //MessageBox.Show("Diet Plan not found with ID: " + dietPlanIDToEdit);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
+               
             }
             else
             {
@@ -3727,67 +3522,14 @@ namespace HelloWorldSolutionIMS
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-           
-            string template = null;
-            string PreviousPlan = null;
-            edit = 1;
-            try
-            {
-                dietPlanIDToEdit = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
-                MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM DietPlan WHERE FILENO = @DietPlanID", MainClass.con);
-                cmd.Parameters.AddWithValue("@DietPlanID", dietPlanIDToEdit);
 
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        // Set the retrieved data into input controls
-                        firstname.Text = reader["FIRSTNAME"].ToString();
-                        familyname.Text = reader["FAMILYNAME"].ToString();
-                        template = reader["DietPlanTemplateName"].ToString();
-                        dietplantemplate.Text = reader["DietPlanTemplate"].ToString();
-                        dietplandays.Text = reader["DietPlanDays"].ToString();
-                        instruction.Text = reader["Instructions"].ToString();
-                        gender.Text = reader["Gender"].ToString();
-                        age.Text = reader["Age"].ToString();
-                        mobileno.Text = reader["MobileNo"].ToString();
-                        PreviousPlan = reader["PreviousDiePlan"].ToString();
-                        calories.Text = reader["CALORIES"].ToString();
-                        fats.Text = reader["FATS"].ToString();
-                        fibers.Text = reader["FIBERS"].ToString();
-                        potassium.Text = reader["POTASSIUM"].ToString();
-                        water.Text = reader["WATER"].ToString();
-                        sugar.Text = reader["SUGAR"].ToString();
-                        calcium.Text = reader["CALCIUM"].ToString();
-                        abox.Text = reader["A"].ToString();
-                        protein.Text = reader["PROTEIN"].ToString();
-                        carbohydrates.Text = reader["CARBOHYDRATES"].ToString();
-                        sodium.Text = reader["SODIUM"].ToString();
-                        phosphor.Text = reader["PHOSPHOR"].ToString();
-                        magnesium.Text = reader["MAGNESIUM"].ToString();
-                        iron.Text = reader["IRON"].ToString();
-                        iodine.Text = reader["IODINE"].ToString();
-                        bbox.Text = reader["B"].ToString();
-                    }
-                    reader.Close();
-                    MainClass.con.Close();
-                    dietplantemplatename.Text = template;
-                    previousdietplan.Text = PreviousPlan;
-                    extrafunc();
-                    tabControl1.SelectedIndex = 1;
-                }
-                else
-                {
-                    MessageBox.Show("Diet Plan not found with ID: " + dietPlanIDToEdit);
-                }
-            }
-            catch (Exception ex)
-            {
-                MainClass.con.Close();
-                MessageBox.Show(ex.Message);
-            }
+            save.Enabled = true;
+            AddMealrow.Enabled = true;
+            AddLunch.Enabled = true;
+            DinnerAdd.Enabled = true;
+            SnackAdd.Enabled = true;
+            edit = 1;
+            save.Text = "Update Plan";
 
         }
 
@@ -3824,7 +3566,7 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView4.Rows.Clear();
             guna2DataGridView5.Rows.Clear();
             guna2DataGridView6.Rows.Clear();
-
+            save.Text = "Save Plan";
             string ingredientIDToDelete = "0";
             
             if (fileno.Text != "")
@@ -3877,6 +3619,270 @@ namespace HelloWorldSolutionIMS
             edit = 0;
              
 
+        }
+
+        private void template_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 2;
+        }
+
+        private void savetemplate_Click(object sender, EventArgs e)
+        {
+            if (dietplantemplateforsave.Text != "")
+            {
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("INSERT INTO DietPlanTemplate (DietPlanTemplateName, DietPlanTemplate, DietPlanDays, Instructions,  Calories, Fats, Fibers, Potassium, Water, Sugar, Calcium, A, Protein, Carbohydrates, Sodium, Phosphor, Magnesium, Iron, Iodine, B) " +
+                        "VALUES (@DietPlanTemplateName, @DietPlanTemplate, @DietPlanDays, @Instructions,  @Calories, @Fats, @Fibers, @Potassium, @Water, @Sugar, @Calcium, @A, @Protein, @Carbohydrates, @Sodium, @Phosphor, @Magnesium, @Iron, @Iodine, @B)", MainClass.con);
+
+                    // Assuming appropriate text boxes for each field in the DietPlan table
+                    //cmd.Parameters.AddWithValue("@Fileno", fileno.Text);
+
+                    cmd.Parameters.AddWithValue("@DietPlanTemplateName", dietplantemplateforsave.Text);
+                    cmd.Parameters.AddWithValue("@DietPlanTemplate", dietplantemplate.Text);
+                    cmd.Parameters.AddWithValue("@DietPlanDays", dietplandays.Text);
+                    cmd.Parameters.AddWithValue("@Instructions", instruction.Text);
+                    //cmd.Parameters.AddWithValue("@medicalhistory", medicalhistory.Text);
+                    cmd.Parameters.AddWithValue("@Calories", Convert.ToDouble(calories.Text));
+                    cmd.Parameters.AddWithValue("@Fats", Convert.ToDouble(fats.Text));
+                    cmd.Parameters.AddWithValue("@Fibers", Convert.ToDouble(fibers.Text));
+                    cmd.Parameters.AddWithValue("@Potassium", Convert.ToDouble(potassium.Text));
+                    cmd.Parameters.AddWithValue("@Water", Convert.ToDouble(water.Text));
+                    cmd.Parameters.AddWithValue("@Sugar", Convert.ToDouble(sugar.Text));
+                    cmd.Parameters.AddWithValue("@Calcium", Convert.ToDouble(calcium.Text));
+                    cmd.Parameters.AddWithValue("@A", Convert.ToDouble(abox.Text));
+                    cmd.Parameters.AddWithValue("@Protein", Convert.ToDouble(protein.Text));
+                    cmd.Parameters.AddWithValue("@Carbohydrates", Convert.ToDouble(carbohydrates.Text));
+                    cmd.Parameters.AddWithValue("@Sodium", Convert.ToDouble(sodium.Text));
+                    cmd.Parameters.AddWithValue("@Phosphor", Convert.ToDouble(phosphor.Text));
+                    cmd.Parameters.AddWithValue("@Magnesium", Convert.ToDouble(magnesium.Text));
+                    cmd.Parameters.AddWithValue("@Iron", Convert.ToDouble(iron.Text));
+                    cmd.Parameters.AddWithValue("@Iodine", Convert.ToDouble(iodine.Text));
+                    cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text));
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Diet Plan Template added successfully");
+                    MainClass.con.Close();
+
+
+                    firstname.Text = "";
+                    familyname.Text = "";
+                    gender.Text = "";
+                    age.Text = "";
+                    mobileno.Text = "";
+                    dietplantemplate.Text = "";
+                    dietplantemplatename.Text = "";
+                    previousdietplan.Text = "";
+                    dietplandays.Text = "";
+                    calories.Text = "";
+                    fats.Text = "";
+                    fibers.Text = "";
+                    potassium.Text = "";
+                    water.Text = "";
+                    sugar.Text = "";
+                    calcium.Text = "";
+                    abox.Text = "";
+                    protein.Text = "";
+                    carbohydrates.Text = "";
+                    sodium.Text = "";
+                    phosphor.Text = "";
+                    magnesium.Text = "";
+                    iron.Text = "";
+                    iodine.Text = "";
+                    bbox.Text = "";
+
+
+                    MainClass.con.Close();
+
+                    // Switch to the first tab of your tab control (assuming it's called tabControl1)
+                    tabControl1.SelectedIndex = 1;
+
+                    // Refresh the DataGridView
+                    //ShowDietPlans(guna2DataGridView1, filenodgv, namedgv, agedgv, dietnamedgv);
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+
+                try
+                {
+                    CalculateTemplate(guna2DataGridView2);
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+                try
+                {
+                    CalculateTemplate(guna2DataGridView4);
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+                try
+                {
+                    CalculateTemplate(guna2DataGridView5);
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+                try
+                {
+                    CalculateTemplate(guna2DataGridView6);
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter the Diet Plan Template name."); // Or any other required field.
+            }
+        }
+
+        private void searchplan_Click(object sender, EventArgs e)
+        {
+           if(fileno.Text != "")
+            {
+                string template = null;
+                string PreviousPlan = null;
+                try
+                {
+
+                    dietPlanIDToEdit = fileno.Text.ToString();
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM DietPlan WHERE FILENO = @DietPlanID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@DietPlanID", dietPlanIDToEdit);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                           
+
+                            template = reader["DietPlanTemplateName"].ToString();
+                            dietplantemplate.Text = reader["DietPlanTemplate"].ToString();
+                            dietplandays.Text = reader["DietPlanDays"].ToString();
+                            instruction.Text = reader["Instructions"].ToString();
+                            PreviousPlan = reader["PreviousDiePlan"].ToString();
+                            calories.Text = reader["CALORIES"].ToString();
+                            fats.Text = reader["FATS"].ToString();
+                            fibers.Text = reader["FIBERS"].ToString();
+                            potassium.Text = reader["POTASSIUM"].ToString();
+                            water.Text = reader["WATER"].ToString();
+                            sugar.Text = reader["SUGAR"].ToString();
+                            calcium.Text = reader["CALCIUM"].ToString();
+                            abox.Text = reader["A"].ToString();
+                            protein.Text = reader["PROTEIN"].ToString();
+                            carbohydrates.Text = reader["CARBOHYDRATES"].ToString();
+                            sodium.Text = reader["SODIUM"].ToString();
+                            phosphor.Text = reader["PHOSPHOR"].ToString();
+                            magnesium.Text = reader["MAGNESIUM"].ToString();
+                            iron.Text = reader["IRON"].ToString();
+                            iodine.Text = reader["IODINE"].ToString();
+                            bbox.Text = reader["B"].ToString();
+                        }
+                        reader.Close();
+                        MainClass.con.Close();
+                        dietplantemplatename.Text = template;
+                        previousdietplan.Text = PreviousPlan;
+                        extrafunc();
+                        save.Enabled = false;
+                        AddMealrow.Enabled = false;
+                        AddLunch.Enabled = false;
+                        DinnerAdd.Enabled = false;
+                        SnackAdd.Enabled = false;
+                        //tabControl1.SelectedIndex = 1;
+                    }
+                    else
+                    {
+                        reader.Close();
+                        MainClass.con.Close();
+                        save.Enabled = true;
+                        AddMealrow.Enabled = true;
+                        AddLunch.Enabled = true;
+                        DinnerAdd.Enabled = true;
+                        SnackAdd.Enabled = true;
+                        MessageBox.Show("No Diet Plan found for file no :" + fileno.Text);
+                    }
+                 
+
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                save.Enabled = true;
+                AddMealrow.Enabled = true;
+                AddLunch.Enabled = true;
+                DinnerAdd.Enabled = true;
+                SnackAdd.Enabled = true;
+                MessageBox.Show("Enter File no!");
+            }
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void updateback_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void newbtn_Click(object sender, EventArgs e)
+        {
+            fileno.Text = "";
+            firstname.Text = "";
+            familyname.Text = "";
+            dietplantemplatename.SelectedItem = null;
+            dietplantemplate.SelectedItem = null;
+            dietplandays.Text = "";
+            instruction.SelectedItem = null;
+            gender.Text = "";
+            age.Text = "";
+            mobileno.Text = "";
+            previousdietplan.Text = "";
+            calories.Text = "";
+            fats.Text = "";
+            fibers.Text = "";
+            potassium.Text = "";
+            water.Text = "";
+            sugar.Text = "";
+            calcium.Text = "";
+            abox.Text = "";
+            protein.Text = "";
+            carbohydrates.Text = "";
+            sodium.Text = "";
+            phosphor.Text = "";
+            magnesium.Text = "";
+            iron.Text = "";
+            iodine.Text = "";
+            bbox.Text = "";
+
+            save.Enabled = true;
+            AddMealrow.Enabled = true;
+            AddLunch.Enabled = true;
+            DinnerAdd.Enabled = true;
+            SnackAdd.Enabled = true;
+            edit = 1;
+            save.Text = "Save Plan";
         }
     }
 }
