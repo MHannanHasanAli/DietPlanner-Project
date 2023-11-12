@@ -2112,7 +2112,7 @@ namespace HelloWorldSolutionIMS
         }
         private void AddIngredient_Click(object sender, EventArgs e)
         {
-
+            
             // Create a single row for your DataGridView.
             DataGridViewRow row = new DataGridViewRow();
 
@@ -2557,6 +2557,7 @@ namespace HelloWorldSolutionIMS
                                     dietplantemplatename.Text = "";
                                     dietplantemplate.SelectedItem = null;
                                     dietplandays.Text = "";
+                                    DietPlanDate.Value = DateTime.Now;
                                     instruction.Text = "";
                                     gender.Text = "";
                                     age.Text = "";
@@ -4034,8 +4035,138 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
         }
+        private void ChartPlusForFilter(int id)
+        {
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, PROTEIN, SODIUM, POTASSIUM, PHOSPHOR, WATER, MAGNESIUM, SUGAR, IRON, IODINE, A, B FROM Meal WHERE ID = @ID", MainClass.con);
+                cmd.Parameters.AddWithValue("@ID", id);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        float caloriesValue, fatsValue, fibersValue, potassiumValue, waterValue, sugarValue,
+                        calciumValue, aboxValue, proteinValue, carbohydratesValue, sodiumValue, phosphorValue,
+                        magnesiumValue, ironValue, iodineValue, bboxValue;
+
+                        if (calories.Text != "")
+                        {
+                            caloriesValue = float.Parse(calories.Text);
+                            fatsValue = float.Parse(fats.Text);
+                            fibersValue = float.Parse(fibers.Text);
+                            potassiumValue = float.Parse(potassium.Text);
+                            waterValue = float.Parse(water.Text);
+                            sugarValue = float.Parse(sugar.Text);
+                            calciumValue = float.Parse(calcium.Text);
+                            aboxValue = float.Parse(abox.Text);
+                            proteinValue = float.Parse(protein.Text);
+                            carbohydratesValue = float.Parse(carbohydrates.Text);
+                            sodiumValue = float.Parse(sodium.Text);
+                            phosphorValue = float.Parse(phosphor.Text);
+                            magnesiumValue = float.Parse(magnesium.Text);
+                            ironValue = float.Parse(iron.Text);
+                            iodineValue = float.Parse(iodine.Text);
+                            bboxValue = float.Parse(bbox.Text);
+                        }
+                        else
+                        {
+                            caloriesValue = 0;
+                            fatsValue = 0;
+                            fibersValue = 0;
+                            potassiumValue = 0;
+                            waterValue = 0;
+                            sugarValue = 0;
+                            calciumValue = 0;
+                            aboxValue = 0;
+                            proteinValue = 0;
+                            carbohydratesValue = 0;
+                            sodiumValue = 0;
+                            phosphorValue = 0;
+                            magnesiumValue = 0;
+                            ironValue = 0;
+                            iodineValue = 0;
+                            bboxValue = 0;
+                        }
+
+
+                        caloriesValue += float.Parse(reader["CALORIES"].ToString());
+                        fatsValue += float.Parse(reader["FATS"].ToString());
+                        fibersValue += float.Parse(reader["FIBERS"].ToString());
+                        potassiumValue += float.Parse(reader["POTASSIUM"].ToString());
+                        waterValue += float.Parse(reader["WATER"].ToString());
+                        sugarValue += float.Parse(reader["SUGAR"].ToString());
+                        calciumValue += float.Parse(reader["CALCIUM"].ToString());
+                        aboxValue += float.Parse(reader["A"].ToString());
+                        proteinValue += float.Parse(reader["PROTEIN"].ToString());
+                        carbohydratesValue += float.Parse(reader["CARBOHYDRATES"].ToString());
+                        sodiumValue += float.Parse(reader["SODIUM"].ToString());
+                        phosphorValue += float.Parse(reader["PHOSPHOR"].ToString());
+                        magnesiumValue += float.Parse(reader["MAGNESIUM"].ToString());
+                        ironValue += float.Parse(reader["IRON"].ToString());
+                        iodineValue += float.Parse(reader["IODINE"].ToString());
+                        bboxValue += float.Parse(reader["B"].ToString());
+
+                        // Assign the summed values back to the respective text boxes
+                        calories.Text = caloriesValue.ToString();
+                        fats.Text = fatsValue.ToString();
+                        fibers.Text = fibersValue.ToString();
+                        potassium.Text = potassiumValue.ToString();
+                        water.Text = waterValue.ToString();
+                        sugar.Text = sugarValue.ToString();
+                        calcium.Text = calciumValue.ToString();
+                        abox.Text = aboxValue.ToString();
+                        protein.Text = proteinValue.ToString();
+                        carbohydrates.Text = carbohydratesValue.ToString();
+                        sodium.Text = sodiumValue.ToString();
+                        phosphor.Text = phosphorValue.ToString();
+                        magnesium.Text = magnesiumValue.ToString();
+                        iron.Text = ironValue.ToString();
+                        iodine.Text = iodineValue.ToString();
+                        bbox.Text = bboxValue.ToString();
+
+                    }
+                    reader.Close();
+                    MainClass.con.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("Meal Not Found!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void ComboBox_SelectionChangeCommitted(object sender, EventArgs e, string dataGridViewName)
         {
+            calories.Text = "";
+            fats.Text = "";
+            fibers.Text = "";
+            potassium.Text = "";
+            water.Text = "";
+            sugar.Text = "";
+            calcium.Text = "";
+            abox.Text = "";
+            protein.Text = "";
+            carbohydrates.Text = "";
+            sodium.Text = "";
+            phosphor.Text = "";
+            magnesium.Text = "";
+            iron.Text = "";
+            iodine.Text = "";
+            bbox.Text = "";
+            Calculation.SelectedItem = null;
+            foreach (var item in Mapping)
+            {
+                ChartPlusForFilter(item.ID);
+            }
             var comboBox = (ComboBox)sender;
             string name = dataGridViewName;
             // Assuming the ComboBox contains items of a custom class "YourCustomClass"
@@ -5391,6 +5522,7 @@ namespace HelloWorldSolutionIMS
 
                             template = reader["DietPlanTemplateName"].ToString();
                             dietplantemplate.Text = reader["DietPlanTemplate"].ToString();
+                            DietPlanDate.Value = Convert.ToDateTime(reader["DIETPLANDATE"]);
                             dietplandays.Text = reader["DietPlanDays"].ToString();
                             instruction.Text = reader["Instructions"].ToString();
                             PreviousPlan = reader["PreviousDiePlan"].ToString();
@@ -5511,14 +5643,101 @@ namespace HelloWorldSolutionIMS
 
         private void Calculation_SelectedValueChanged(object sender, EventArgs e)
         {
+            calories.Text = "";
+            fats.Text = "";
+            fibers.Text = "";
+            potassium.Text = "";
+            water.Text = "";
+            sugar.Text = "";
+            calcium.Text = "";
+            abox.Text = "";
+            protein.Text = "";
+            carbohydrates.Text = "";
+            sodium.Text = "";
+            phosphor.Text = "";
+            magnesium.Text = "";
+            iron.Text = "";
+            iodine.Text = "";
+            bbox.Text = "";
 
             string selectedValue = Calculation.Text;
             if (selectedValue == "1st Day")
             {
-
+                foreach(var item in Mapping)
+                {
+                    if(item.Col == 2)
+                    {
+                        ChartPlusForFilter(item.ID);
+                    }
+                }
             }
-
-
+            else if (selectedValue == "2nd Day")
+            {
+                foreach (var item in Mapping)
+                {
+                    if (item.Col == 3)
+                    {
+                        ChartPlusForFilter(item.ID);
+                    }
+                }
+            }
+            else if (selectedValue == "3rd Day")
+            {
+                foreach (var item in Mapping)
+                {
+                    if (item.Col == 4)
+                    {
+                        ChartPlusForFilter(item.ID);
+                    }
+                }
+            }
+            else if (selectedValue == "4th Day")
+            {
+                foreach (var item in Mapping)
+                {
+                    if (item.Col == 5)
+                    {
+                        ChartPlusForFilter(item.ID);
+                    }
+                }
+            }
+            else if (selectedValue == "5th Day")
+            {
+                foreach (var item in Mapping)
+                {
+                    if (item.Col == 6)
+                    {
+                        ChartPlusForFilter(item.ID);
+                    }
+                }
+            }
+            else if (selectedValue == "6th Day")
+            {
+                foreach (var item in Mapping)
+                {
+                    if (item.Col == 7)
+                    {
+                        ChartPlusForFilter(item.ID);
+                    }
+                }
+            }
+            else if (selectedValue == "7th Day")
+            {
+                foreach (var item in Mapping)
+                {
+                    if (item.Col == 8)
+                    {
+                        ChartPlusForFilter(item.ID);
+                    }
+                }
+            }
+            else if (selectedValue == "All")
+            {
+                foreach (var item in Mapping)
+                {
+                    ChartPlusForFilter(item.ID);                 
+                }
+            }
 
 
         }
