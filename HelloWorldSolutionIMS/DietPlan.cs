@@ -38,6 +38,39 @@ namespace HelloWorldSolutionIMS
         static string dietPlanIDToEdit;
         static int counter = 0;
         static int connectionflag = 0;
+
+        ArtificialMapping EditMap1 = new ArtificialMapping();
+        ArtificialMapping EditMap2 = new ArtificialMapping();
+        ArtificialMapping EditMap3 = new ArtificialMapping();
+        ArtificialMapping EditMap4 = new ArtificialMapping();
+        ArtificialMapping EditMap5 = new ArtificialMapping();
+        ArtificialMapping EditMap6 = new ArtificialMapping();
+        ArtificialMapping EditMap7 = new ArtificialMapping();
+
+        ArtificialMapping EditMap8 = new ArtificialMapping();
+        ArtificialMapping EditMap9 = new ArtificialMapping();
+        ArtificialMapping EditMap10 = new ArtificialMapping();
+        ArtificialMapping EditMap11 = new ArtificialMapping();
+        ArtificialMapping EditMap12 = new ArtificialMapping();
+        ArtificialMapping EditMap13 = new ArtificialMapping();
+        ArtificialMapping EditMap14 = new ArtificialMapping();
+
+        ArtificialMapping EditMap15 = new ArtificialMapping();
+        ArtificialMapping EditMap16 = new ArtificialMapping();
+        ArtificialMapping EditMap17 = new ArtificialMapping();
+        ArtificialMapping EditMap18 = new ArtificialMapping();
+        ArtificialMapping EditMap19 = new ArtificialMapping();
+        ArtificialMapping EditMap20 = new ArtificialMapping();
+        ArtificialMapping EditMap21 = new ArtificialMapping();
+
+        ArtificialMapping EditMap22 = new ArtificialMapping();
+        ArtificialMapping EditMap23 = new ArtificialMapping();
+        ArtificialMapping EditMap24 = new ArtificialMapping();
+        ArtificialMapping EditMap25 = new ArtificialMapping();
+        ArtificialMapping EditMap26 = new ArtificialMapping();
+        ArtificialMapping EditMap27 = new ArtificialMapping();
+        ArtificialMapping EditMap28 = new ArtificialMapping();
+
         public class Instruction
         {
             public int ID { get; set; }
@@ -230,7 +263,7 @@ namespace HelloWorldSolutionIMS
             MainClass.con.Open();
             for (int i = 0; i < breakfastitemids.Count; i++)
             {
-
+                
                 string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID AND Category = 'Breakfast'";
 
                 SqlCommand cmd2 = new SqlCommand(query, MainClass.con);
@@ -282,7 +315,69 @@ namespace HelloWorldSolutionIMS
                     //comboCellCategory.Value = GetCategory();
                     // Replace with your specific field
                     guna2DataGridView2.Rows[i].Cells[1] = comboCellCategory;
-                    // Decide and add different columns based on your conditions for each cell
+                    if (one != "")
+                    {
+                        EditMap1.Row = i;
+                       
+                        EditMap1.ChartName = "guna2DataGridView2";
+                        EditMap1.Col = 2;
+                        Mapping.Add(EditMap1);
+                    }
+
+                    if (two != "")
+                    {
+                        EditMap2.Row = i;
+                        
+                        EditMap2.ChartName = "guna2DataGridView2";
+                        EditMap2.Col = 3;
+                        Mapping.Add(EditMap2);
+                    }
+
+                    if (three != "")
+                    {
+                        EditMap3.Row = i;
+                       
+                        EditMap3.ChartName = "guna2DataGridView2";
+                        EditMap3.Col = 4;
+                        Mapping.Add(EditMap3);
+                    }
+
+                    if (Four != "")
+                    {
+                        EditMap4.Row = i;
+                      
+                        EditMap4.ChartName = "guna2DataGridView2";
+                        EditMap4.Col = 5;
+                        Mapping.Add(EditMap4);
+                    }
+
+                    if (Five != "")
+                    {
+                        EditMap5.Row = i;
+                       
+                        EditMap5.ChartName = "guna2DataGridView2";
+                        EditMap5.Col = 6;
+                        Mapping.Add(EditMap5);
+
+                    }
+
+                    if (Six != "")
+                    {
+                        EditMap6.Row = i;
+                        
+                        EditMap6.ChartName = "guna2DataGridView2";
+                        EditMap6.Col = 7;
+                        Mapping.Add(EditMap6);
+                    }
+
+                    if (Seven != "")
+                    {
+                        EditMap7.Row = i;
+                        EditMap7.ChartName = "guna2DataGridView2";
+                        EditMap7.Col = 8;
+                        Mapping.Add(EditMap7);
+                    }
+
                     AddDifferentColumnsToRowBreakfast(row, one, two, three, Four, Five, Six, Seven, i);
 
                 }
@@ -292,8 +387,8 @@ namespace HelloWorldSolutionIMS
 
             }
             for (int i = 0; i < lunchtitemids.Count; i++)
-            {
-
+            {             
+                
                 string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID AND Category = 'Lunch'";
 
                 SqlCommand cmd2 = new SqlCommand(query, MainClass.con);
@@ -345,6 +440,68 @@ namespace HelloWorldSolutionIMS
                     //comboCellCategory.Value = GetCategory();
                     // Replace with your specific field
                     guna2DataGridView4.Rows[i].Cells[1] = comboCellCategory;
+                    if (one != "")
+                    {
+                        EditMap8.Row = i;
+                       
+                        EditMap8.ChartName = "guna2DataGridView4";
+                        EditMap8.Col = 2;
+                        Mapping.Add(EditMap8);
+                    }
+
+                    if (two != "")
+                    {
+                        EditMap9.Row = i;
+                      
+                        EditMap9.ChartName = "guna2DataGridView4";
+                        EditMap9.Col = 3;
+                        Mapping.Add(EditMap9);
+                    }
+
+                    if (three != "")
+                    {
+                        EditMap10.Row = i;
+                        
+                        EditMap10.ChartName = "guna2DataGridView4";
+                        EditMap10.Col = 4;
+                        Mapping.Add(EditMap10);
+                    }
+
+                    if (Four != "")
+                    {
+                        EditMap11.Row = i;
+                       
+                        EditMap11.ChartName = "guna2DataGridView4";
+                        EditMap11.Col = 5;
+                        Mapping.Add(EditMap11);
+                    }
+
+                    if (Five != "")
+                    {
+                        EditMap12.Row = i;
+                       
+                        EditMap12.ChartName = "guna2DataGridView4";
+                        EditMap12.Col = 6;
+                        Mapping.Add(EditMap12);
+                    }
+
+                    if (Six != "")
+                    {
+                        EditMap13.Row = i;
+                       
+                        EditMap13.ChartName = "guna2DataGridView4";
+                        EditMap13.Col = 7;
+                        Mapping.Add(EditMap13);
+                    }
+
+                    if (Seven != "")
+                    {
+                        EditMap14.Row = i;
+                        EditMap14.ChartName = "guna2DataGridView4";
+                        EditMap14.Col = 8;
+                        Mapping.Add(EditMap14);
+                    }
+
                     // Decide and add different columns based on your conditions for each cell
                     AddDifferentColumnsToRowLunch(row, one, two, three, Four, Five, Six, Seven, i);
 
@@ -356,6 +513,7 @@ namespace HelloWorldSolutionIMS
             }
             for (int i = 0; i < dinnertitemids.Count; i++)
             {
+               
 
                 string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID AND Category = 'Dinner'";
 
@@ -408,6 +566,68 @@ namespace HelloWorldSolutionIMS
                     //comboCellCategory.Value = GetCategory();
                     // Replace with your specific field
                     guna2DataGridView5.Rows[i].Cells[1] = comboCellCategory;
+                    if (one != "")
+                    {
+                        EditMap15.Row = i;
+                        
+                        EditMap15.ChartName = "guna2DataGridView5";
+                        EditMap15.Col = 2;
+                        Mapping.Add(EditMap15);
+                    }
+
+                    if (two != "")
+                    {
+                        EditMap16.Row = i;
+                        
+                        EditMap16.ChartName = "guna2DataGridView5";
+                        EditMap16.Col = 3;
+                        Mapping.Add(EditMap16);
+                    }
+
+                    if (three != "")
+                    {
+                        EditMap17.Row = i;
+                        
+                        EditMap17.ChartName = "guna2DataGridView5";
+                        EditMap17.Col = 4;
+                        Mapping.Add(EditMap17);
+                    }
+
+                    if (Four != "")
+                    {
+                        EditMap18.Row = i;
+                        
+                        EditMap18.ChartName = "guna2DataGridView5";
+                        EditMap18.Col = 5;
+                        Mapping.Add(EditMap18);
+                    }
+
+                    if (Five != "")
+                    {
+                        EditMap19.Row = i;
+                        
+                        EditMap19.ChartName = "guna2DataGridView5";
+                        EditMap19.Col = 6;
+                        Mapping.Add(EditMap19);
+                    }
+
+                    if (Six != "")
+                    {
+                        EditMap20.Row = i;
+                        
+                        EditMap20.ChartName = "guna2DataGridView5";
+                        EditMap20.Col = 7;
+                        Mapping.Add(EditMap20);
+                    }
+
+                    if (Seven != "")
+                    {
+                        EditMap21.Row = i;
+                        EditMap21.ChartName = "guna2DataGridView5";
+                        EditMap21.Col = 8;
+                        Mapping.Add(EditMap21);
+                    }
+
                     // Decide and add different columns based on your conditions for each cell
                     AddDifferentColumnsToRowDinner(row, one, two, three, Four, Five, Six, Seven, i);
 
@@ -419,6 +639,7 @@ namespace HelloWorldSolutionIMS
             }
             for (int i = 0; i < snacktitemids.Count; i++)
             {
+               
 
                 string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID AND Category = 'Snack'";
 
@@ -471,6 +692,78 @@ namespace HelloWorldSolutionIMS
                     //comboCellCategory.Value = GetCategory();
                     // Replace with your specific field
                     guna2DataGridView6.Rows[i].Cells[1] = comboCellCategory;
+                    if (one != "")
+                    {
+                        EditMap22.Row = i;
+                    
+                        EditMap22.ChartName = "guna2DataGridView6";
+                     
+                        EditMap22.Col = 2;
+                        Mapping.Add(EditMap22);
+                    }
+
+                    if (two != "")
+                    {
+                        EditMap23.Row = i;
+                   
+                        EditMap23.ChartName = "guna2DataGridView6";
+
+                        EditMap23.Col = 3;
+                        Mapping.Add(EditMap23);
+                    }
+
+                    if (three != "")
+                    {
+                        
+                        EditMap24.Row = i;
+                       
+
+                        EditMap24.ChartName = "guna2DataGridView6";
+
+                        EditMap24.Col = 4;
+                        Mapping.Add(EditMap24);
+                    }
+
+                    if (Four != "")
+                    {
+                        EditMap25.Row = i;
+                       
+
+                        EditMap25.ChartName = "guna2DataGridView6";
+
+                        EditMap25.Col = 5;
+                        Mapping.Add(EditMap25);
+
+                    }
+
+                    if (Five != "")
+                    {
+                        EditMap26.Row = i;
+                       
+                        EditMap26.ChartName = "guna2DataGridView6";
+
+                        EditMap26.Col = 6;
+                        Mapping.Add(EditMap26);
+                    }
+
+                    if (Six != "")
+                    {
+                        EditMap27.Row = i;
+                       
+                        EditMap27.ChartName = "guna2DataGridView6";
+
+                        EditMap27.Col = 7;
+                        Mapping.Add(EditMap27);
+                    }
+
+                    if (Seven != "")
+                    {
+                        EditMap28.Row = i;
+                        EditMap28.ChartName = "guna2DataGridView6";
+                        EditMap28.Col = 8;
+                        Mapping.Add(EditMap28);
+                    }
+
                     // Decide and add different columns based on your conditions for each cell
                     AddDifferentColumnsToRowSnack(row, one, two, three, Four, Five, Six, Seven, i);
 
@@ -495,6 +788,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(one))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[2] = comboCell;
+                
             }
             else
             {
@@ -521,6 +815,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(two))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[3] = comboCell;
+               
             }
             else
             {
@@ -547,6 +842,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(three))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[4] = comboCell;
+               
             }
             else
             {
@@ -573,6 +869,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Four))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[5] = comboCell;
+                
             }
             else
             {
@@ -599,6 +896,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Five))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[6] = comboCell;
+               
             }
             else
             {
@@ -625,6 +923,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Six))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[7] = comboCell;
+              
             }
             else
             {
@@ -651,6 +950,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Seven))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[8] = comboCell;
+                
             }
             else
             {
@@ -683,6 +983,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(one))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[2] = comboCell;
+                
             }
             else
             {
@@ -709,6 +1010,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(two))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[3] = comboCell;
+                
             }
             else
             {
@@ -735,6 +1037,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(three))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[4] = comboCell;
+               
             }
             else
             {
@@ -761,6 +1064,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Four))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[5] = comboCell;
+                
             }
             else
             {
@@ -787,6 +1091,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Five))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[6] = comboCell;
+             
             }
             else
             {
@@ -813,6 +1118,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Six))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[7] = comboCell;
+                
             }
             else
             {
@@ -839,6 +1145,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Seven))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[8] = comboCell;
+              
             }
             else
             {
@@ -871,6 +1178,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(one))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[2] = comboCell;
+                
             }
             else
             {
@@ -897,6 +1205,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(two))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[3] = comboCell;
+              
             }
             else
             {
@@ -923,6 +1232,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(three))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[4] = comboCell;
+                
             }
             else
             {
@@ -949,6 +1259,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Four))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[5] = comboCell;
+                
             }
             else
             {
@@ -975,6 +1286,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Five))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[6] = comboCell;
+                
             }
             else
             {
@@ -1001,6 +1313,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Six))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[7] = comboCell;
+                
             }
             else
             {
@@ -1027,6 +1340,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Seven))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[8] = comboCell;
+                
             }
             else
             {
@@ -1059,6 +1373,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(one))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[2] = comboCell;
+                
             }
             else
             {
@@ -1085,6 +1400,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(two))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[3] = comboCell;
+               
             }
             else
             {
@@ -1111,6 +1427,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(three))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[4] = comboCell;
+              
             }
             else
             {
@@ -1137,6 +1454,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Four))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[5] = comboCell;
+               
             }
             else
             {
@@ -1163,6 +1481,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Five))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[6] = comboCell;
+               
             }
             else
             {
@@ -1189,6 +1508,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Six))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[7] = comboCell;
+              
             }
             else
             {
@@ -1215,6 +1535,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Seven))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[8] = comboCell;
+              
             }
             else
             {
@@ -1364,6 +1685,36 @@ namespace HelloWorldSolutionIMS
                 while (reader65.Read())
                 {
                     int id = Convert.ToInt32(reader65["ID"]);
+
+                    EditMap1.ID = id;
+                    EditMap2.ID = id;
+                    EditMap3.ID = id;
+                    EditMap4.ID = id;
+                    EditMap5.ID = id;
+                    EditMap6.ID = id;
+                    EditMap7.ID = id;
+                    EditMap8.ID = id;
+                    EditMap9.ID = id;
+                    EditMap10.ID = id;
+                    EditMap11.ID = id;
+                    EditMap12.ID = id;
+                    EditMap13.ID = id;
+                    EditMap14.ID = id;
+                    EditMap15.ID = id;
+                    EditMap16.ID = id;
+                    EditMap17.ID = id;
+                    EditMap18.ID = id;
+                    EditMap19.ID = id;
+                    EditMap20.ID = id;
+                    EditMap21.ID = id;
+                    EditMap22.ID = id;
+                    EditMap23.ID = id;
+                    EditMap24.ID = id;
+                    EditMap25.ID = id;
+                    EditMap26.ID = id;
+                    EditMap27.ID = id;
+                    EditMap28.ID = id;
+
                     string ingredientAr = reader65["MealAr"].ToString();
                     Mealslist.Add(new MealsDropdown { ID = id, Name = ingredientAr });
                 }
@@ -4167,6 +4518,7 @@ namespace HelloWorldSolutionIMS
         static int conn = 0;
         private void fileno_TextChanged(object sender, EventArgs e)
         {
+            Mapping.Clear();
             firstname.Text = string.Empty;
             familyname.Text = string.Empty;
             dietplantemplate.Text = string.Empty;
@@ -4610,7 +4962,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in Mapping)
                 {
-                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView5")
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView6")
                     {
                         ChartMinus(item.ID);
                     }
@@ -4618,7 +4970,7 @@ namespace HelloWorldSolutionIMS
 
                 Mapping.RemoveAll(item =>
                 item.Row == e.RowIndex &&
-                item.ChartName == "guna2DataGridView5");
+                item.ChartName == "guna2DataGridView6");
 
                 // Remove the corresponding row when the remove button is clicked.
                 guna2DataGridView6.Rows.RemoveAt(e.RowIndex);
@@ -4627,7 +4979,7 @@ namespace HelloWorldSolutionIMS
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-
+          
             save.Enabled = true;
             AddMealrow.Enabled = true;
             AddLunch.Enabled = true;
@@ -4640,7 +4992,7 @@ namespace HelloWorldSolutionIMS
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-
+            Mapping.Clear();
 
             firstname.Text = "";
             familyname.Text = "";
@@ -4961,6 +5313,7 @@ namespace HelloWorldSolutionIMS
 
         private void newbtn_Click(object sender, EventArgs e)
         {
+            Mapping.Clear();
             fileno.Text = "";
             firstname.Text = "";
             familyname.Text = "";
