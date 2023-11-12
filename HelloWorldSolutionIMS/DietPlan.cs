@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Web.UI;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using Win32Interop.Enums;
 using static HelloWorldSolutionIMS.MealAction;
 using static HelloWorldSolutionIMS.Payment;
 
@@ -1796,7 +1797,18 @@ namespace HelloWorldSolutionIMS
         {
             if (e.ColumnIndex == guna2DataGridView2.Columns["buttondgv"].Index && e.RowIndex >= 0)
             {
-                // Remove the corresponding row when the remove button is clicked.
+                foreach (var item in Mapping)
+                {
+                    if(item.Row == e.RowIndex && item.ChartName == "guna2DataGridView2")
+                    {
+                        ChartMinus(item.ID);
+                    }
+                }
+
+                Mapping.RemoveAll(item =>
+                item.Row == e.RowIndex &&
+                item.ChartName == "guna2DataGridView2");
+
                 guna2DataGridView2.Rows.RemoveAt(e.RowIndex);
             }
         }
@@ -4403,6 +4415,18 @@ namespace HelloWorldSolutionIMS
         {
             if (e.ColumnIndex == guna2DataGridView4.Columns["lunchbuttondgv"].Index && e.RowIndex >= 0)
             {
+                foreach (var item in Mapping)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView4")
+                    {
+                        ChartMinus(item.ID);
+                    }
+                }
+
+                Mapping.RemoveAll(item =>
+                item.Row == e.RowIndex &&
+                item.ChartName == "guna2DataGridView4");
+
                 // Remove the corresponding row when the remove button is clicked.
                 guna2DataGridView4.Rows.RemoveAt(e.RowIndex);
             }
@@ -4563,6 +4587,18 @@ namespace HelloWorldSolutionIMS
         {
             if (e.ColumnIndex == guna2DataGridView5.Columns["dinnerbuttondgv"].Index && e.RowIndex >= 0)
             {
+                foreach (var item in Mapping)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView5")
+                    {
+                        ChartMinus(item.ID);
+                    }
+                }
+
+                Mapping.RemoveAll(item =>
+                item.Row == e.RowIndex &&
+                item.ChartName == "guna2DataGridView5");
+
                 // Remove the corresponding row when the remove button is clicked.
                 guna2DataGridView5.Rows.RemoveAt(e.RowIndex);
             }
@@ -4572,6 +4608,18 @@ namespace HelloWorldSolutionIMS
         {
             if (e.ColumnIndex == guna2DataGridView6.Columns["snackbuttondgv"].Index && e.RowIndex >= 0)
             {
+                foreach (var item in Mapping)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView5")
+                    {
+                        ChartMinus(item.ID);
+                    }
+                }
+
+                Mapping.RemoveAll(item =>
+                item.Row == e.RowIndex &&
+                item.ChartName == "guna2DataGridView5");
+
                 // Remove the corresponding row when the remove button is clicked.
                 guna2DataGridView6.Rows.RemoveAt(e.RowIndex);
             }
