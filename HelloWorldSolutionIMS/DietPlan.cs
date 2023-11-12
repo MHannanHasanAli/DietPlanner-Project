@@ -2188,6 +2188,37 @@ namespace HelloWorldSolutionIMS
                 item.Row == e.RowIndex &&
                 item.ChartName == "guna2DataGridView2");
 
+                List<ArtificialMapping> itemsToAdd = new List<ArtificialMapping>();
+                List<ArtificialMapping> itemsToRemove = new List<ArtificialMapping>();
+
+                foreach (var item in Mapping)
+                {
+                    if (item.ChartName == "guna2DataGridView2")
+                    {                       
+                            if (item.Row > e.RowIndex)
+                            {
+                                ArtificialMapping NewIndex = new ArtificialMapping();
+                                NewIndex.ID = item.ID;
+                                NewIndex.Row = item.Row - 1;
+                                NewIndex.Col = item.Col;
+                                NewIndex.ChartName = item.ChartName;
+
+                                itemsToAdd.Add(NewIndex);
+
+                                itemsToRemove.Add(item);
+                            }                        
+                    }
+                }
+
+                foreach (var item in itemsToRemove)
+                {
+                    Mapping.Remove(item);
+                }
+
+                foreach (var item in itemsToAdd)
+                {
+                    Mapping.Add(item);
+                }
                 guna2DataGridView2.Rows.RemoveAt(e.RowIndex);
             }
         }
@@ -4807,6 +4838,37 @@ namespace HelloWorldSolutionIMS
                 item.Row == e.RowIndex &&
                 item.ChartName == "guna2DataGridView4");
 
+                List<ArtificialMapping> itemsToAdd = new List<ArtificialMapping>();
+                List<ArtificialMapping> itemsToRemove = new List<ArtificialMapping>();
+
+                foreach (var item in Mapping)
+                {
+                    if (item.ChartName == "guna2DataGridView4")
+                    {
+                        if (item.Row > e.RowIndex)
+                        {
+                            ArtificialMapping NewIndex = new ArtificialMapping();
+                            NewIndex.ID = item.ID;
+                            NewIndex.Row = item.Row - 1;
+                            NewIndex.Col = item.Col;
+                            NewIndex.ChartName = item.ChartName;
+
+                            itemsToAdd.Add(NewIndex);
+
+                            itemsToRemove.Add(item);
+                        }
+                    }
+                }
+
+                foreach (var item in itemsToRemove)
+                {
+                    Mapping.Remove(item);
+                }
+
+                foreach (var item in itemsToAdd)
+                {
+                    Mapping.Add(item);
+                }
                 // Remove the corresponding row when the remove button is clicked.
                 guna2DataGridView4.Rows.RemoveAt(e.RowIndex);
             }
@@ -4979,6 +5041,38 @@ namespace HelloWorldSolutionIMS
                 item.Row == e.RowIndex &&
                 item.ChartName == "guna2DataGridView5");
 
+                List<ArtificialMapping> itemsToAdd = new List<ArtificialMapping>();
+                List<ArtificialMapping> itemsToRemove = new List<ArtificialMapping>();
+
+                foreach (var item in Mapping)
+                {
+                    if (item.ChartName == "guna2DataGridView5")
+                    {
+                        if (item.Row > e.RowIndex)
+                        {
+                            ArtificialMapping NewIndex = new ArtificialMapping();
+                            NewIndex.ID = item.ID;
+                            NewIndex.Row = item.Row - 1;
+                            NewIndex.Col = item.Col;
+                            NewIndex.ChartName = item.ChartName;
+
+                            itemsToAdd.Add(NewIndex);
+
+                            itemsToRemove.Add(item);
+                        }
+                    }
+                }
+
+                foreach (var item in itemsToRemove)
+                {
+                    Mapping.Remove(item);
+                }
+
+                foreach (var item in itemsToAdd)
+                {
+                    Mapping.Add(item);
+                }
+
                 // Remove the corresponding row when the remove button is clicked.
                 guna2DataGridView5.Rows.RemoveAt(e.RowIndex);
             }
@@ -4999,6 +5093,38 @@ namespace HelloWorldSolutionIMS
                 Mapping.RemoveAll(item =>
                 item.Row == e.RowIndex &&
                 item.ChartName == "guna2DataGridView6");
+
+                List<ArtificialMapping> itemsToAdd = new List<ArtificialMapping>();
+                List<ArtificialMapping> itemsToRemove = new List<ArtificialMapping>();
+
+                foreach (var item in Mapping)
+                {
+                    if (item.ChartName == "guna2DataGridView6")
+                    {
+                        if (item.Row > e.RowIndex)
+                        {
+                            ArtificialMapping NewIndex = new ArtificialMapping();
+                            NewIndex.ID = item.ID;
+                            NewIndex.Row = item.Row - 1;
+                            NewIndex.Col = item.Col;
+                            NewIndex.ChartName = item.ChartName;
+
+                            itemsToAdd.Add(NewIndex);
+
+                            itemsToRemove.Add(item);
+                        }
+                    }
+                }
+
+                foreach (var item in itemsToRemove)
+                {
+                    Mapping.Remove(item);
+                }
+
+                foreach (var item in itemsToAdd)
+                {
+                    Mapping.Add(item);
+                }
 
                 // Remove the corresponding row when the remove button is clicked.
                 guna2DataGridView6.Rows.RemoveAt(e.RowIndex);
