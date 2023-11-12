@@ -3155,14 +3155,20 @@ namespace HelloWorldSolutionIMS
             if (e.Control is ComboBox comboBox)
             {
 
-                //// Attach the SelectionChangeCommitted event to the ComboBox
-                object combobox = comboBox;
-                comboBox.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
+                Guna.UI2.WinForms.Guna2DataGridView dataGridView = (Guna.UI2.WinForms.Guna2DataGridView)sender;
+                DataGridViewCell currentCell = dataGridView.CurrentCell;
 
-                // Attach the event handler to the SelectedIndexChanged event
-                comboBox.SelectedIndexChanged += ComboBox_SelectedIndexChanged; 
-                //comboBox.SelectionChangeCommitted -= ComboBox_SelectionChangeCommitted; // Ensure it's detached first
-                //comboBox.SelectionChangeCommitted += (s, args) => ComboBox_SelectionChangeCommitted(s, args, guna2DataGridView2.Name);               
+                if (currentCell != null)
+                {
+                    // Get the row and column index
+                    int rowIndex = currentCell.RowIndex;
+                    int colIndex = currentCell.ColumnIndex;
+
+                    // Now you can use rowIndex and colIndex as needed
+                }
+                          
+                comboBox.SelectionChangeCommitted -= ComboBox_SelectionChangeCommitted; // Ensure it's detached first
+                comboBox.SelectionChangeCommitted += (s, args) => ComboBox_SelectionChangeCommitted(s, args, guna2DataGridView2.Name);               
             }
             //CalculateChart(guna2DataGridView2);
 
@@ -3175,7 +3181,7 @@ namespace HelloWorldSolutionIMS
             if (sender is ComboBox comboBox)
             {
                 // Get the selected value
-
+               
                 // Do something with the selected value
                 ChartNewFunction(comboBox, guna2DataGridView2.Name);
             }
@@ -3294,22 +3300,22 @@ namespace HelloWorldSolutionIMS
 
                             if (calories.Text != "")
                             {
-                                float = calories.Text;
-                               float = fats.Text;
-                                float = fibers.Text;
-                                float = potassium.Text;
-                               float = water.Text;
-                                float = sugar.Text;
-                                float = calcium.Text;
-                                float = abox.Text;
-                                float = protein.Text;
-                                float = carbohydrates.Text;
-                                float = sodium.Text;
-                                float = phosphor.Text;
-                                float = magnesium.Text;
-                                float = iron.Text;
-                                float = iodine.Text;
-                                float = bbox.Text;
+                               // float = calories.Text;
+                               //float = fats.Text;
+                               // float = fibers.Text;
+                               // float = potassium.Text;
+                               //float = water.Text;
+                               // float = sugar.Text;
+                               // float = calcium.Text;
+                               // float = abox.Text;
+                               // float = protein.Text;
+                               // float = carbohydrates.Text;
+                               // float = sodium.Text;
+                               // float = phosphor.Text;
+                               // float = magnesium.Text;
+                               // float = iron.Text;
+                               // float = iodine.Text;
+                               // float = bbox.Text;
                             }
                             else
                             {
@@ -3389,6 +3395,16 @@ namespace HelloWorldSolutionIMS
 
             }
         }
+
+        public class ArtificialMapping
+        {
+            public int ID { get; set; }
+            public int Row { get; set; }
+            public int Col { get; set; }
+        }
+
+        List<ArtificialMapping> Mapping = new List<ArtificialMapping>();
+
         private void ComboBox_SelectionChangeCommitted(object sender, EventArgs e, string dataGridViewName)
         {
             var comboBox = (ComboBox)sender;
@@ -3396,35 +3412,26 @@ namespace HelloWorldSolutionIMS
             // Assuming the ComboBox contains items of a custom class "YourCustomClass"
             if (comboBox.SelectedItem is MealsDropdown selectedObject)
             {
+                ArtificialMapping data = new ArtificialMapping();
+                data.ID = selectedObject.ID;
                 int selectedValue = selectedObject.ID;
-                //if(chartfiller == 0)
-                //{
-                //    calories.Text = "0";
-                //    fats.Text = "0";
-                //    fibers.Text = "0";
-                //    potassium.Text = "0";
-                //    water.Text = "0";
-                //    sugar.Text = "0";
-                //    calcium.Text = "0";
-                //    abox.Text = "0";
-                //    protein.Text = "0";
-                //    carbohydrates.Text = "0";
-                //    sodium.Text = "0";
-                //    phosphor.Text = "0";
-                //    magnesium.Text = "0";
-                //    iron.Text = "0";
-                //    iodine.Text = "0";
-                //    bbox.Text = "0";
+                
+                int rowIndex = -1;
+                int columnIndex = -1;
 
-                //    chartfiller = 1;
-                //}
-                comboBox.BackColor = Color.Orange;
                 if (name == "guna2DataGridView2")
                 {
-                    CalculateChart(guna2DataGridView2);
+                    rowIndex = guna2DataGridView2.CurrentRow.Index;
+                    columnIndex = guna2DataGridView2.CurrentCell.ColumnIndex;
+                    
+                    //CalculateChart(guna2DataGridView2, rowIndex, columnIndex);
                 }
 
-                // Use the value as needed in your application
+                //if (name == "guna2DataGridView2")
+                //{
+                //    CalculateChart(guna2DataGridView2);
+                //}
+
             }
         }
         private void ComboBox_SelectionChangeCommitted(object sender, EventArgs e)
@@ -4597,6 +4604,11 @@ namespace HelloWorldSolutionIMS
 
 
 
+
+        }
+
+        private void guna2DataGridView2_CellValueChanged_1(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
