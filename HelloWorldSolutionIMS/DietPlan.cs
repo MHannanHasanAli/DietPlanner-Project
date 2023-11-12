@@ -3401,6 +3401,7 @@ namespace HelloWorldSolutionIMS
             public int ID { get; set; }
             public int Row { get; set; }
             public int Col { get; set; }
+            public string ChartName { get; set; }
         }
 
         List<ArtificialMapping> Mapping = new List<ArtificialMapping>();
@@ -3415,18 +3416,36 @@ namespace HelloWorldSolutionIMS
                 ArtificialMapping data = new ArtificialMapping();
                 data.ID = selectedObject.ID;
                 int selectedValue = selectedObject.ID;
-                
-                int rowIndex = -1;
-                int columnIndex = -1;
+
 
                 if (name == "guna2DataGridView2")
                 {
-                    rowIndex = guna2DataGridView2.CurrentRow.Index;
-                    columnIndex = guna2DataGridView2.CurrentCell.ColumnIndex;
-                    
-                    //CalculateChart(guna2DataGridView2, rowIndex, columnIndex);
+                    data.Row = guna2DataGridView2.CurrentRow.Index;
+                    data.Col = guna2DataGridView2.CurrentCell.ColumnIndex;
+                    data.ChartName = name;
+                    Mapping.Add(data);
                 }
-
+                else if (name == "guna2DataGridView4")
+                {
+                    data.Row = guna2DataGridView2.CurrentRow.Index;
+                    data.Col = guna2DataGridView2.CurrentCell.ColumnIndex;
+                    data.ChartName = name;
+                    Mapping.Add(data);
+                }
+                else if (name == "guna2DataGridView5")
+                {
+                    data.Row = guna2DataGridView2.CurrentRow.Index;
+                    data.Col = guna2DataGridView2.CurrentCell.ColumnIndex;
+                    data.ChartName = name;
+                    Mapping.Add(data);
+                }
+                else if (name == "guna2DataGridView6")
+                {
+                    data.Row = guna2DataGridView2.CurrentRow.Index;
+                    data.Col = guna2DataGridView2.CurrentCell.ColumnIndex;
+                    data.ChartName = name;
+                    Mapping.Add(data);
+                }
                 //if (name == "guna2DataGridView2")
                 //{
                 //    CalculateChart(guna2DataGridView2);
