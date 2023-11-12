@@ -321,6 +321,8 @@ namespace HelloWorldSolutionIMS
                        
                         EditMap1.ChartName = "guna2DataGridView2";
                         EditMap1.Col = 2;
+                        EditMap1.ID = int.Parse(one);
+
                         Mapping.Add(EditMap1);
                     }
 
@@ -330,6 +332,7 @@ namespace HelloWorldSolutionIMS
                         
                         EditMap2.ChartName = "guna2DataGridView2";
                         EditMap2.Col = 3;
+                        EditMap2.ID = int.Parse(two);
                         Mapping.Add(EditMap2);
                     }
 
@@ -339,6 +342,8 @@ namespace HelloWorldSolutionIMS
                        
                         EditMap3.ChartName = "guna2DataGridView2";
                         EditMap3.Col = 4;
+                        
+                        EditMap3.ID = int.Parse(three);
                         Mapping.Add(EditMap3);
                     }
 
@@ -348,6 +353,8 @@ namespace HelloWorldSolutionIMS
                       
                         EditMap4.ChartName = "guna2DataGridView2";
                         EditMap4.Col = 5;
+                       
+                        EditMap4.ID = int.Parse(Four);
                         Mapping.Add(EditMap4);
                     }
 
@@ -357,6 +364,8 @@ namespace HelloWorldSolutionIMS
                        
                         EditMap5.ChartName = "guna2DataGridView2";
                         EditMap5.Col = 6;
+                        
+                        EditMap5.ID = int.Parse(Five);
                         Mapping.Add(EditMap5);
 
                     }
@@ -367,6 +376,8 @@ namespace HelloWorldSolutionIMS
                         
                         EditMap6.ChartName = "guna2DataGridView2";
                         EditMap6.Col = 7;
+                       
+                        EditMap6.ID = int.Parse(Six);
                         Mapping.Add(EditMap6);
                     }
 
@@ -375,6 +386,8 @@ namespace HelloWorldSolutionIMS
                         EditMap7.Row = i;
                         EditMap7.ChartName = "guna2DataGridView2";
                         EditMap7.Col = 8;
+                        
+                        EditMap7.ID = int.Parse(Seven);
                         Mapping.Add(EditMap7);
                     }
 
@@ -446,6 +459,8 @@ namespace HelloWorldSolutionIMS
                        
                         EditMap8.ChartName = "guna2DataGridView4";
                         EditMap8.Col = 2;
+                       
+                        EditMap8.ID = int.Parse(one);
                         Mapping.Add(EditMap8);
                     }
 
@@ -455,6 +470,8 @@ namespace HelloWorldSolutionIMS
                       
                         EditMap9.ChartName = "guna2DataGridView4";
                         EditMap9.Col = 3;
+                       
+                        EditMap9.ID = int.Parse(two);
                         Mapping.Add(EditMap9);
                     }
 
@@ -464,6 +481,8 @@ namespace HelloWorldSolutionIMS
                         
                         EditMap10.ChartName = "guna2DataGridView4";
                         EditMap10.Col = 4;
+                       
+                        EditMap10.ID = int.Parse(three);
                         Mapping.Add(EditMap10);
                     }
 
@@ -473,6 +492,8 @@ namespace HelloWorldSolutionIMS
                        
                         EditMap11.ChartName = "guna2DataGridView4";
                         EditMap11.Col = 5;
+                      
+                        EditMap11.ID = int.Parse(Four);
                         Mapping.Add(EditMap11);
                     }
 
@@ -482,6 +503,8 @@ namespace HelloWorldSolutionIMS
                        
                         EditMap12.ChartName = "guna2DataGridView4";
                         EditMap12.Col = 6;
+                       
+                        EditMap12.ID = int.Parse(Five);
                         Mapping.Add(EditMap12);
                     }
 
@@ -491,6 +514,8 @@ namespace HelloWorldSolutionIMS
                        
                         EditMap13.ChartName = "guna2DataGridView4";
                         EditMap13.Col = 7;
+                        
+                        EditMap13.ID = int.Parse(Six);
                         Mapping.Add(EditMap13);
                     }
 
@@ -499,6 +524,8 @@ namespace HelloWorldSolutionIMS
                         EditMap14.Row = i;
                         EditMap14.ChartName = "guna2DataGridView4";
                         EditMap14.Col = 8;
+                   
+                        EditMap14.ID = int.Parse(Seven);
                         Mapping.Add(EditMap14);
                     }
 
@@ -572,6 +599,8 @@ namespace HelloWorldSolutionIMS
                         
                         EditMap15.ChartName = "guna2DataGridView5";
                         EditMap15.Col = 2;
+                       
+                        EditMap15.ID = int.Parse(one);
                         Mapping.Add(EditMap15);
                     }
 
@@ -581,6 +610,8 @@ namespace HelloWorldSolutionIMS
                         
                         EditMap16.ChartName = "guna2DataGridView5";
                         EditMap16.Col = 3;
+                       
+                        EditMap16.ID = int.Parse(two);
                         Mapping.Add(EditMap16);
                     }
 
@@ -590,6 +621,8 @@ namespace HelloWorldSolutionIMS
                         
                         EditMap17.ChartName = "guna2DataGridView5";
                         EditMap17.Col = 4;
+                       
+                        EditMap17.ID = int.Parse(three);
                         Mapping.Add(EditMap17);
                     }
 
@@ -599,6 +632,8 @@ namespace HelloWorldSolutionIMS
                         
                         EditMap18.ChartName = "guna2DataGridView5";
                         EditMap18.Col = 5;
+                       
+                        EditMap18.ID = int.Parse(Four);
                         Mapping.Add(EditMap18);
                     }
 
@@ -608,6 +643,8 @@ namespace HelloWorldSolutionIMS
                         
                         EditMap19.ChartName = "guna2DataGridView5";
                         EditMap19.Col = 6;
+                       
+                        EditMap19.ID = int.Parse(Five);
                         Mapping.Add(EditMap19);
                     }
 
@@ -617,6 +654,8 @@ namespace HelloWorldSolutionIMS
                         
                         EditMap20.ChartName = "guna2DataGridView5";
                         EditMap20.Col = 7;
+                       
+                        EditMap20.ID = int.Parse(Six);
                         Mapping.Add(EditMap20);
                     }
 
@@ -625,6 +664,8 @@ namespace HelloWorldSolutionIMS
                         EditMap21.Row = i;
                         EditMap21.ChartName = "guna2DataGridView5";
                         EditMap21.Col = 8;
+                       
+                        EditMap21.ID = int.Parse(Seven);
                         Mapping.Add(EditMap21);
                     }
 
@@ -699,6 +740,8 @@ namespace HelloWorldSolutionIMS
                         EditMap22.ChartName = "guna2DataGridView6";
                      
                         EditMap22.Col = 2;
+                        
+                        EditMap22.ID = int.Parse(one);
                         Mapping.Add(EditMap22);
                     }
 
@@ -709,6 +752,8 @@ namespace HelloWorldSolutionIMS
                         EditMap23.ChartName = "guna2DataGridView6";
 
                         EditMap23.Col = 3;
+                       
+                        EditMap23.ID = int.Parse(two);
                         Mapping.Add(EditMap23);
                     }
 
@@ -721,6 +766,8 @@ namespace HelloWorldSolutionIMS
                         EditMap24.ChartName = "guna2DataGridView6";
 
                         EditMap24.Col = 4;
+                        
+                        EditMap24.ID = int.Parse(three);
                         Mapping.Add(EditMap24);
                     }
 
@@ -732,6 +779,8 @@ namespace HelloWorldSolutionIMS
                         EditMap25.ChartName = "guna2DataGridView6";
 
                         EditMap25.Col = 5;
+                       
+                        EditMap25.ID = int.Parse(Four);
                         Mapping.Add(EditMap25);
 
                     }
@@ -743,6 +792,8 @@ namespace HelloWorldSolutionIMS
                         EditMap26.ChartName = "guna2DataGridView6";
 
                         EditMap26.Col = 6;
+                       
+                        EditMap26.ID = int.Parse(Five);
                         Mapping.Add(EditMap26);
                     }
 
@@ -753,6 +804,8 @@ namespace HelloWorldSolutionIMS
                         EditMap27.ChartName = "guna2DataGridView6";
 
                         EditMap27.Col = 7;
+                     
+                        EditMap27.ID = int.Parse(Six);
                         Mapping.Add(EditMap27);
                     }
 
@@ -761,6 +814,8 @@ namespace HelloWorldSolutionIMS
                         EditMap28.Row = i;
                         EditMap28.ChartName = "guna2DataGridView6";
                         EditMap28.Col = 8;
+                       
+                        EditMap28.ID = int.Parse(Seven);
                         Mapping.Add(EditMap28);
                     }
 
@@ -1686,34 +1741,7 @@ namespace HelloWorldSolutionIMS
                 {
                     int id = Convert.ToInt32(reader65["ID"]);
 
-                    EditMap1.ID = id;
-                    EditMap2.ID = id;
-                    EditMap3.ID = id;
-                    EditMap4.ID = id;
-                    EditMap5.ID = id;
-                    EditMap6.ID = id;
-                    EditMap7.ID = id;
-                    EditMap8.ID = id;
-                    EditMap9.ID = id;
-                    EditMap10.ID = id;
-                    EditMap11.ID = id;
-                    EditMap12.ID = id;
-                    EditMap13.ID = id;
-                    EditMap14.ID = id;
-                    EditMap15.ID = id;
-                    EditMap16.ID = id;
-                    EditMap17.ID = id;
-                    EditMap18.ID = id;
-                    EditMap19.ID = id;
-                    EditMap20.ID = id;
-                    EditMap21.ID = id;
-                    EditMap22.ID = id;
-                    EditMap23.ID = id;
-                    EditMap24.ID = id;
-                    EditMap25.ID = id;
-                    EditMap26.ID = id;
-                    EditMap27.ID = id;
-                    EditMap28.ID = id;
+                   
 
                     string ingredientAr = reader65["MealAr"].ToString();
                     Mealslist.Add(new MealsDropdown { ID = id, Name = ingredientAr });
