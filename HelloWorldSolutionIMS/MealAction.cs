@@ -2671,7 +2671,7 @@ namespace HelloWorldSolutionIMS
 
         public void ImportExcelToDatabase(string excelFilePath)
         {
-            MainClass.con.Open();
+            
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             try
             {
@@ -2743,7 +2743,7 @@ namespace HelloWorldSolutionIMS
 
                                         cmd2.ExecuteNonQuery();
 
-                                        if (conn == 1)
+                                        if (MainClass.con.State == ConnectionState.Open)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -2760,13 +2760,13 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (conn == 1)
+                                if (MainClass.con.State == ConnectionState.Open)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
                                 }
 
-                        
+
                                 UpdateGroupsN();
                             }
                             catch (Exception ex)
@@ -2817,7 +2817,7 @@ namespace HelloWorldSolutionIMS
                                         groupNEn = groupNAr;
                                         cmd2.ExecuteNonQuery();
 
-                                        if (conn == 1)
+                                        if (MainClass.con.State == ConnectionState.Open)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -2834,7 +2834,7 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (conn == 1)
+                                if (MainClass.con.State == ConnectionState.Open)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
@@ -2887,12 +2887,12 @@ namespace HelloWorldSolutionIMS
                                         groupNAr = groupNEn;
                                         cmd2.ExecuteNonQuery();
 
-                                        if (conn == 1)
+                                        if (MainClass.con.State == ConnectionState.Open)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
                                         }
-                                       
+
                                         UpdateGroupsN();
 
                                     }
@@ -2904,13 +2904,13 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (conn == 1)
+                                if (MainClass.con.State == ConnectionState.Open)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
                                 }
 
-                              
+
                                 UpdateGroupsN();
                             }
                             catch (Exception ex)
@@ -2928,10 +2928,10 @@ namespace HelloWorldSolutionIMS
                         {
                             try
                             {
-                                if (conn == 1)
+                                if (MainClass.con.State != ConnectionState.Open)
                                 {
-                                    MainClass.con.Close();
-                                    conn = 0;
+                                    MainClass.con.Open();
+                                    conn = 1;
                                 }
                                 SqlCommand cmd = new SqlCommand("SELECT * FROM GROUPC " +
                                     "WHERE (Namear = @Namear) AND (Nameen = @Nameen) ", MainClass.con);
@@ -2965,7 +2965,7 @@ namespace HelloWorldSolutionIMS
 
                                         cmd2.ExecuteNonQuery();
 
-                                        if (conn == 1)
+                                        if (MainClass.con.State == ConnectionState.Open)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -2982,7 +2982,7 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (conn == 1)
+                                if (MainClass.con.State == ConnectionState.Open)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
@@ -3039,7 +3039,7 @@ namespace HelloWorldSolutionIMS
                                         groupCEn = groupCAr;
                                         cmd2.ExecuteNonQuery();
 
-                                        if (conn == 1)
+                                        if (MainClass.con.State == ConnectionState.Open)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -3056,7 +3056,7 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (conn == 1)
+                                if (MainClass.con.State == ConnectionState.Open)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
@@ -3110,7 +3110,7 @@ namespace HelloWorldSolutionIMS
                                         groupCAr = groupCEn;
                                         cmd2.ExecuteNonQuery();
 
-                                        if (conn == 1)
+                                        if (MainClass.con.State == ConnectionState.Open)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -3127,7 +3127,7 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (conn == 1)
+                                if (MainClass.con.State == ConnectionState.Open)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
@@ -3141,6 +3141,12 @@ namespace HelloWorldSolutionIMS
                                 MainClass.con.Close();
                                 MessageBox.Show(ex.Message);
                             }
+                        }
+
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
                         }
 
                         float calories, fats, fibers, potassium, water, sugar, calcium, a, protein, carbohydrates, sodium, phosphor, magnesium, iron, iodine, b;
@@ -3162,10 +3168,28 @@ namespace HelloWorldSolutionIMS
                         float.TryParse(worksheet.Cells[row, 21].Value?.ToString(), out iodine);
                         float.TryParse(worksheet.Cells[row, 22].Value?.ToString(), out b);
 
-                        string notes = worksheet.Cells[row, 23].Value?.ToString();
-                        string preparation = worksheet.Cells[row, 24].Value?.ToString();
+                        string notes;
+                        if (worksheet.Cells[row, 23].Value == null)
+                        {
+                            notes = "Nothing";
+                        }
+                        else
+                        {
+                            notes = worksheet.Cells[row, 23].Value.ToString();
+                        }
+                        string preparation;
+
+                        if (worksheet.Cells[row, 24].Value == null)
+                        {
+                            preparation = "Nothing";
+                        }
+                        else
+                        {
+                            preparation = worksheet.Cells[row, 24].Value.ToString();
+                        }
+
                         string source;
-                        if(worksheet.Cells[row, 25].Value == "")
+                        if(worksheet.Cells[row, 25].Value == null)
                         {
                             source = "All";
                         }
@@ -3215,11 +3239,15 @@ namespace HelloWorldSolutionIMS
                         
                     }
 
-                    MainClass.con.Close();
+                    if (MainClass.con.State == ConnectionState.Open)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
 
                     ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                     MessageBox.Show("Data imported successfully!");
-                    tabControl1.SelectedIndex = 0;
+                    //tabControl1.SelectedIndex = 0;
                 }
             }
             catch (Exception ex)
