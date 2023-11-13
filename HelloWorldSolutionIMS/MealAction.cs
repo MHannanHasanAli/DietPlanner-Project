@@ -330,7 +330,7 @@ namespace HelloWorldSolutionIMS
         static string mealIDToEdit;
         static int counter = 0;
         static int conn = 0;
-
+        static string Catgry;
         public class GroupnarContent
         {
             public int ID { get; set; }
@@ -2055,7 +2055,7 @@ namespace HelloWorldSolutionIMS
                         notes.Text = reader["Notes"].ToString();
                         preparation.Text = reader["Preparation"].ToString();
                         classification.Text = reader["CLASSIFICATION"].ToString();
-                        typebox.Text = reader["Category"].ToString();
+                       Catgry = reader["Category"].ToString();
                     }
                     reader.Close(); // Close the first DataReader
 
@@ -2184,7 +2184,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text));
                         cmd.Parameters.AddWithValue("@Notes", notes.Text);
                         cmd.Parameters.AddWithValue("@Preparation", preparation.Text);
-                        cmd.Parameters.AddWithValue("@Category", typebox.Text);
+                        cmd.Parameters.AddWithValue("@Category", "All");
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Meal added successfully");
                         MainClass.con.Close();
@@ -2215,7 +2215,7 @@ namespace HelloWorldSolutionIMS
                         bbox.Text = "";
                         notes.Text = "";
                         preparation.Text = "";
-                        typebox.SelectedItem = null;
+                        //typebox.SelectedItem = null;
 
 
 
@@ -2346,7 +2346,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text));
                         cmd.Parameters.AddWithValue("@Notes", notes.Text);
                         cmd.Parameters.AddWithValue("@Preparation", preparation.Text);
-                        cmd.Parameters.AddWithValue("@Category", typebox.Text);
+                        cmd.Parameters.AddWithValue("@Category", Catgry);
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Meal updated successfully");
@@ -2380,7 +2380,7 @@ namespace HelloWorldSolutionIMS
                         bbox.Text = "";
                         notes.Text = "";
                         preparation.Text = "";
-                        typebox.SelectedItem = null;
+                        //typebox.SelectedItem = null;
 
 
                     }
@@ -2669,7 +2669,7 @@ namespace HelloWorldSolutionIMS
             tabControl1.SelectedIndex = 2;
         }
 
-        public void ImportExcelToDatabase(string excelFilePath, string category)
+        public void ImportExcelToDatabase(string excelFilePath)
         {
             MainClass.con.Open();
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
@@ -3164,26 +3164,17 @@ namespace HelloWorldSolutionIMS
 
                         string notes = worksheet.Cells[row, 23].Value?.ToString();
                         string preparation = worksheet.Cells[row, 24].Value?.ToString();
-
-                        //if (
-                        //    calories != 0 &&
-                        //    fats != 0 &&
-                        //    fibers != 0 &&
-                        //    potassium != 0 &&
-                        //    water != 0 &&
-                        //    sugar != 0 &&
-                        //    calcium != 0 &&
-                        //    a != 0 &&
-                        //    protein != 0 &&
-                        //    carbohydrates != 0 &&
-                        //    sodium != 0 &&
-                        //    phosphor != 0 &&
-                        //    magnesium != 0 &&
-                        //    iron != 0 &&
-                        //    iodine != 0 &&
-                        //    b != 0)
-                        //{
-                            string query = "INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, " +
+                        string source;
+                        if(worksheet.Cells[row, 25].Value == "")
+                        {
+                            source = "All";
+                        }
+                        else
+                        {
+                            source = worksheet.Cells[row, 25].Value.ToString();
+                        }
+                       
+                        string query = "INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, " +
                                 "CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, " +
                                 "PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Category, Notes, Preparation) " +
                                 "VALUES (@MealAr, @MealEn, @GroupNAr, @GroupNEn, @GroupCAr, @GroupCEn, " +
@@ -3215,17 +3206,13 @@ namespace HelloWorldSolutionIMS
                                 command.Parameters.AddWithValue("@Iron", iron);
                                 command.Parameters.AddWithValue("@Iodine", iodine);
                                 command.Parameters.AddWithValue("@B", b);
-                                command.Parameters.AddWithValue("@Category", category);
+                                command.Parameters.AddWithValue("@Category", source);
                                 command.Parameters.AddWithValue("@Notes", notes);
                                 command.Parameters.AddWithValue("@Preparation", preparation);
 
                                 command.ExecuteNonQuery();
                             }
-                        //}
-                        //else
-                        //{
-                        //    MessageBox.Show("Some of the crucial columns are empty or null");
-                        //}
+                        
                     }
 
                     MainClass.con.Close();
@@ -3246,241 +3233,73 @@ namespace HelloWorldSolutionIMS
 
         private void All_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Meals?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "All");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
                 ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
-                tabControl1.SelectedIndex = 0;
-
-            }
 
         }
 
         private void Breakfast_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Meals?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "Breakfast");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
+    
                 SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Breakfast");
-                tabControl1.SelectedIndex = 0;
-
-            }
+ 
         }
 
         private void lunch_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Meals?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "Lunch");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
+            
                 SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Lunch");
-                tabControl1.SelectedIndex = 0;
-
-            }
+ 
         }
 
         private void dinner_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Meals?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "Dinner");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
+            
                 SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Dinner");
-                tabControl1.SelectedIndex = 0;
 
-            }
         }
 
         private void snack_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Meals?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "Snack");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
+            
                 SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Snack");
-                tabControl1.SelectedIndex = 0;
-
-            }
+  
         }
 
         private void ff_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Meals?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "Functional Food");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
+            
                 SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Functional Food");
-                tabControl1.SelectedIndex = 0;
+           
+        }
+
+        private void ImportMeal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = openFileDialog.FileName;
+
+                    try
+                    {
+                        ImportExcelToDatabase(filePath);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
             }
         }
     }
