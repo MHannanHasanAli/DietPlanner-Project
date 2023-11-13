@@ -359,8 +359,8 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
-            categorylabel.Visible = false;
-            categorybox.Visible = false;
+            //categorylabel.Visible = false;
+            //categorybox.Visible = false;
             ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
 
             chart1.Series.Clear();
@@ -424,7 +424,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-                        categorybox.SelectedItem = null;
+                        //categorybox.SelectedItem = null;
 
                         MainClass.con.Close();
 
@@ -474,7 +474,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@IRON", Convert.ToDouble(iron.Text)); // Replace with the actual input control for IRON.
                         cmd.Parameters.AddWithValue("@IODINE", Convert.ToDouble(iodine.Text)); // Replace with the actual input control for IODINE.
                         cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text)); // Replace with the actual input control for B.
-                        cmd.Parameters.AddWithValue("@Category", categorybox.Text);
+                        //cmd.Parameters.AddWithValue("@Category", categorybox.Text);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Ingredient updated successfully");
 
@@ -500,7 +500,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-                        categorybox.SelectedItem = null;
+                        //categorybox.SelectedItem = null;
                         MainClass.con.Close();
                         importall.Visible = true;
                         importbranded.Visible = true;
@@ -508,8 +508,8 @@ namespace HelloWorldSolutionIMS
                         importfndds.Visible = true;
                         importlocal.Visible = true;
                         importsr.Visible = true;
-                        categorylabel.Visible = false;
-                        categorybox.Visible = false;
+                        //categorylabel.Visible = false;
+                        //categorybox.Visible = false;
                         ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
                     }
                     catch (Exception ex)
@@ -608,7 +608,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-                        categorybox.SelectedItem = null;
+                        //categorybox.SelectedItem = null;
                         // Get the Ingredient ID to display in the confirmation message
                         string ingredientIDToDelete = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
 
@@ -673,8 +673,8 @@ namespace HelloWorldSolutionIMS
             importfndds.Visible = false;
             importlocal.Visible = false;
             importsr.Visible = false;
-            categorylabel.Visible = true;
-            categorybox.Visible = true;
+            //categorylabel.Visible = true;
+            //categorybox.Visible = true;
             try
             {
                 ingredientIDToEdit = guna2DataGridView1.SelectedRows[0].Cells[0].Value.ToString();
@@ -709,7 +709,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = reader["IRON"].ToString();
                         iodine.Text = reader["IODINE"].ToString();
                         bbox.Text = reader["B"].ToString();
-                        categorybox.Text = reader["Category"].ToString();
+                        //categorybox.Text = reader["Category"].ToString();
                     }
                 }
                 else
@@ -784,17 +784,21 @@ namespace HelloWorldSolutionIMS
                 }
             }
         }
-        public void ImportExcelToDatabase(string excelFilePath, string category)
+        static int conn = 0;
+        public void ImportExcelToDatabase(string excelFilePath)
         {
-           
+            if (MainClass.con.State != ConnectionState.Open)
+            {
                 MainClass.con.Open();
-                ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+                conn = 1;
+            }
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             try
+            {
+                using (ExcelPackage package = new ExcelPackage(new FileInfo(excelFilePath)))
                 {
-                    using (ExcelPackage package = new ExcelPackage(new FileInfo(excelFilePath)))
-                    {
-                        ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
-                        int rowCount = worksheet.Dimension.Rows;
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    int rowCount = worksheet.Dimension.Rows;
 
                     for (int row = 2; row <= rowCount; row++)
                     {
@@ -806,7 +810,7 @@ namespace HelloWorldSolutionIMS
                         {
                             ingredientAR = ingredientEN;
                         }
-                        else if(string.IsNullOrEmpty(ingredientAR) && string.IsNullOrEmpty(ingredientEN))
+                        else if (string.IsNullOrEmpty(ingredientAR) && string.IsNullOrEmpty(ingredientEN))
                         {
                             ingredientAR = "Imported";
                         }
@@ -820,7 +824,7 @@ namespace HelloWorldSolutionIMS
                         {
                             groupAR = groupEN;
                         }
-                        else if(string.IsNullOrEmpty(groupAR) && string.IsNullOrEmpty(groupEN))
+                        else if (string.IsNullOrEmpty(groupAR) && string.IsNullOrEmpty(groupEN))
                         {
                             groupAR = "Imported";
                         }
@@ -857,314 +861,121 @@ namespace HelloWorldSolutionIMS
                         if (!string.IsNullOrEmpty(datatypeString))
                             datatype = datatypeString;
 
+                        // The columns from the Excel file are not null or empty, proceed to insert the record
+                        string query = "INSERT INTO Ingredient (INGREDIENT_AR, INGREDIENT_EN, GROUP_AR, GROUP_EN, " +
+                                       "CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, " +
+                                       "PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, fdc_id, " +
+                                       "datatype, Category) VALUES (@IngredientAR, @IngredientEN, @GroupAR, @GroupEN, " +
+                                       "@Classification, @Calories, @Fats, @Fibers, @Potassium, @Water, @Sugar, @Calcium, " +
+                                       "@A, @Protein, @Carbohydrates, @Sodium, @Phosphor, @Magnesium, @Iron, @Iodine, @B, " +
+                                       "@fdc_id, @datatype, @Category)";
 
+                        using (SqlCommand command = new SqlCommand(query, MainClass.con))
+                        {
+                            command.Parameters.AddWithValue("@IngredientAR", ingredientAR);
+                            command.Parameters.AddWithValue("@IngredientEN", ingredientEN);
+                            command.Parameters.AddWithValue("@GroupAR", groupAR);
+                            command.Parameters.AddWithValue("@GroupEN", groupEN);
+                            command.Parameters.AddWithValue("@Classification", "Per 100 gram");
+                            command.Parameters.AddWithValue("@Calories", calories);
+                            command.Parameters.AddWithValue("@Fats", fats);
+                            command.Parameters.AddWithValue("@Fibers", fibers);
+                            command.Parameters.AddWithValue("@Potassium", potassium);
+                            command.Parameters.AddWithValue("@Water", water);
+                            command.Parameters.AddWithValue("@Sugar", sugar);
+                            command.Parameters.AddWithValue("@Calcium", calcium);
+                            command.Parameters.AddWithValue("@A", a);
+                            command.Parameters.AddWithValue("@Protein", protein);
+                            command.Parameters.AddWithValue("@Carbohydrates", carbohydrates);
+                            command.Parameters.AddWithValue("@Sodium", sodium);
+                            command.Parameters.AddWithValue("@Phosphor", phosphor);
+                            command.Parameters.AddWithValue("@Magnesium", magnesium);
+                            command.Parameters.AddWithValue("@Iron", iron);
+                            command.Parameters.AddWithValue("@Iodine", iodine);
+                            command.Parameters.AddWithValue("@B", b);
+                            command.Parameters.AddWithValue("@fdc_id", fdc_id);
+                            command.Parameters.AddWithValue("@datatype", datatype);
+                            command.Parameters.AddWithValue("@Category", datatype);
 
+                            command.ExecuteNonQuery();
 
-                        //if (
-                        //       calories != 0 &&
-                        //       fats != 0 &&
-                        //       fibers != 0 &&
-                        //       potassium != 0 &&
-                        //       water != 0 &&
-                        //       sugar != 0 &&
-                        //       calcium != 0 &&
-                        //       a != 0 &&
-                        //       protein != 0 &&
-                        //       carbohydrates != 0 &&
-                        //       sodium != 0 &&
-                        //       phosphor != 0 &&
-                        //       magnesium != 0 &&
-                        //       iron != 0 &&
-                        //       iodine != 0 &&
-                        //       b != 0 &&
-                        //       fdc_id != 0)
-                        //{
-                            // The columns from the Excel file are not null or empty, proceed to insert the record
-                            string query = "INSERT INTO Ingredient (INGREDIENT_AR, INGREDIENT_EN, GROUP_AR, GROUP_EN, " +
-                                           "CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, " +
-                                           "PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, fdc_id, " +
-                                           "datatype, Category) VALUES (@IngredientAR, @IngredientEN, @GroupAR, @GroupEN, " +
-                                           "@Classification, @Calories, @Fats, @Fibers, @Potassium, @Water, @Sugar, @Calcium, " +
-                                           "@A, @Protein, @Carbohydrates, @Sodium, @Phosphor, @Magnesium, @Iron, @Iodine, @B, " +
-                                           "@fdc_id, @datatype, @Category)";
-
-                            using (SqlCommand command = new SqlCommand(query, MainClass.con))
-                            {
-                                command.Parameters.AddWithValue("@IngredientAR", ingredientAR);
-                                command.Parameters.AddWithValue("@IngredientEN", ingredientEN);
-                                command.Parameters.AddWithValue("@GroupAR", groupAR);
-                                command.Parameters.AddWithValue("@GroupEN", groupEN);
-                                command.Parameters.AddWithValue("@Classification", "Per 100 gram");
-                                command.Parameters.AddWithValue("@Calories", calories);
-                                command.Parameters.AddWithValue("@Fats", fats);
-                                command.Parameters.AddWithValue("@Fibers", fibers);
-                                command.Parameters.AddWithValue("@Potassium", potassium);
-                                command.Parameters.AddWithValue("@Water", water);
-                                command.Parameters.AddWithValue("@Sugar", sugar);
-                                command.Parameters.AddWithValue("@Calcium", calcium);
-                                command.Parameters.AddWithValue("@A", a);
-                                command.Parameters.AddWithValue("@Protein", protein);
-                                command.Parameters.AddWithValue("@Carbohydrates", carbohydrates);
-                                command.Parameters.AddWithValue("@Sodium", sodium);
-                                command.Parameters.AddWithValue("@Phosphor", phosphor);
-                                command.Parameters.AddWithValue("@Magnesium", magnesium);
-                                command.Parameters.AddWithValue("@Iron", iron);
-                                command.Parameters.AddWithValue("@Iodine", iodine);
-                                command.Parameters.AddWithValue("@B", b);
-                                command.Parameters.AddWithValue("@fdc_id", fdc_id);
-                                command.Parameters.AddWithValue("@datatype", datatype);
-                                command.Parameters.AddWithValue("@Category", category);
-
-                                command.ExecuteNonQuery();
-
-                            }
-                        //}
-                        //else
-                        //{
-                        //    MessageBox.Show("Some of the crusial columns are empty or null");
-                        //}
-
+                        }
 
                     }
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                     ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
                     MessageBox.Show("Ingredients imported successfully!");
                 }
-                }
-                catch (Exception ex)
-                {
-                    // Handle exceptions (e.g., log or display errors)
-                    Console.WriteLine("An error occurred: " + ex.Message);
-                }
-            
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (e.g., log or display errors)
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+
+
         }
         private void importall_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "All");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
                 ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
-
-            }
 
         }
         private void importff_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "Foundation Foods");
-
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
                 ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Foundation Foods");
 
-            }
         }
         private void importsr_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "SR Legacy");
-
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
                 ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "SR Legacy");
 
-            }
         }
         private void importfndds_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "FNDDS");
-
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
                 ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "FNDDS");
 
-            }
         }
         
         private void importbranded_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (result == DialogResult.Yes)
-            {
-                try
-                {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "Branded");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
                 ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Branded");
 
-            }
         }
         
         private void importlocal_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to import Ingredients?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+           
+                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Local");
 
-            if (result == DialogResult.Yes)
+        }
+
+        private void ImportButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                string filePath = openFileDialog.FileName;
+
                 try
                 {
-                    OpenFileDialog openFileDialog = new OpenFileDialog();
-                    openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
-
-                    if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string filePath = openFileDialog.FileName;
-
-                        try
-                        {
-                            ImportExcelToDatabase(filePath, "Local");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error: " + ex.Message);
-                        }
-                    }
+                    ImportExcelToDatabase(filePath);
                 }
                 catch (Exception ex)
                 {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
-            else
-            {
-                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Local");
 
-            }
         }
     }
 }

@@ -96,6 +96,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.CalendarFilter = new System.Windows.Forms.MonthCalendar();
             back = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -139,7 +140,7 @@
             this.search.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.search.ForeColor = System.Drawing.Color.White;
             this.search.HoverState.Parent = this.search;
-            this.search.Location = new System.Drawing.Point(33, 121);
+            this.search.Location = new System.Drawing.Point(33, 240);
             this.search.Name = "search";
             this.search.ShadowDecoration.Parent = this.search;
             this.search.Size = new System.Drawing.Size(200, 45);
@@ -157,7 +158,7 @@
             this.New.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.New.ForeColor = System.Drawing.Color.White;
             this.New.HoverState.Parent = this.New;
-            this.New.Location = new System.Drawing.Point(879, 121);
+            this.New.Location = new System.Drawing.Point(879, 240);
             this.New.Name = "New";
             this.New.ShadowDecoration.Parent = this.New;
             this.New.Size = new System.Drawing.Size(218, 45);
@@ -203,7 +204,7 @@
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(35, 186);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(35, 305);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
@@ -316,6 +317,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.CalendarFilter);
             this.panel1.Controls.Add(this.delete);
             this.panel1.Controls.Add(this.EditBTN);
             this.panel1.Controls.Add(this.label5);
@@ -341,7 +343,7 @@
             this.delete.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.delete.ForeColor = System.Drawing.Color.White;
             this.delete.HoverState.Parent = this.delete;
-            this.delete.Location = new System.Drawing.Point(673, 121);
+            this.delete.Location = new System.Drawing.Point(673, 240);
             this.delete.Name = "delete";
             this.delete.ShadowDecoration.Parent = this.delete;
             this.delete.Size = new System.Drawing.Size(200, 45);
@@ -359,7 +361,7 @@
             this.EditBTN.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.EditBTN.ForeColor = System.Drawing.Color.White;
             this.EditBTN.HoverState.Parent = this.EditBTN;
-            this.EditBTN.Location = new System.Drawing.Point(239, 121);
+            this.EditBTN.Location = new System.Drawing.Point(239, 240);
             this.EditBTN.Name = "EditBTN";
             this.EditBTN.ShadowDecoration.Parent = this.EditBTN;
             this.EditBTN.Size = new System.Drawing.Size(200, 45);
@@ -1072,6 +1074,13 @@
             this.label14.TabIndex = 49;
             this.label14.Text = "Family Name";
             // 
+            // CalendarFilter
+            // 
+            this.CalendarFilter.Location = new System.Drawing.Point(835, 21);
+            this.CalendarFilter.Name = "CalendarFilter";
+            this.CalendarFilter.TabIndex = 55;
+            this.CalendarFilter.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.CalendarFilter_DateChanged);
+            // 
             // Appointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1150,5 +1159,6 @@
         public System.Windows.Forms.Label room4label;
         public System.Windows.Forms.Label room3label;
         public System.Windows.Forms.Label room2label;
+        private System.Windows.Forms.MonthCalendar CalendarFilter;
     }
 }

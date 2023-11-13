@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IdentityModel.Claims;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
@@ -1485,8 +1486,49 @@ namespace HelloWorldSolutionIMS
             Room3.ClearSelection();
             Room3.CurrentCell = null;
         }
+        private void SearchAppointmentsWithDate(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn firstname, DataGridViewColumn familyname, DataGridViewColumn mobile, DataGridViewColumn room, DataGridViewColumn slot, DataGridViewColumn date)
+        {
+            var SelectedDate = CalendarFilter.SelectionStart;
+            
+                try
+                {
+                    MainClass.con.Open();
 
- 
+                    SqlCommand cmd = new SqlCommand("SELECT ID, FileNo, FirstName, FamilyName, Date, Room, Slot, MOBILENO FROM Appointment WHERE CONVERT(date, Date) = @SelectedDate", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@SelectedDate", SelectedDate);
+
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    id.DataPropertyName = dt.Columns["ID"].ToString();
+                    fileno.DataPropertyName = dt.Columns["FileNo"].ToString();
+                    firstname.DataPropertyName = dt.Columns["FirstName"].ToString();
+                    familyname.DataPropertyName = dt.Columns["FamilyName"].ToString();
+                    room.DataPropertyName = dt.Columns["Room"].ToString();
+                    slot.DataPropertyName = dt.Columns["Slot"].ToString();
+                    date.DataPropertyName = dt.Columns["Date"].ToString();
+                    mobile.DataPropertyName = dt.Columns["MOBILENO"].ColumnName;
+
+
+                    dgv.DataSource = dt;
+                    MainClass.con.Close();
+                }
+
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            
+        }
+            private void CalendarFilter_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            
+            SearchAppointmentsWithDate(guna2DataGridView1, iddgv, filenodgv, firstnamedgv, familynamedgv, mobilenodgv, roomdgv, slotdgv, datedgv);
+            
+        }
     }
 }
 
