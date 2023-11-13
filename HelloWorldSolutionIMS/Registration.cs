@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using Guna.UI2.WinForms.Suite;
+using OfficeOpenXml.LoadFunctions.Params;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,109 @@ namespace HelloWorldSolutionIMS
         public Registration()
         {
             InitializeComponent();
+        }
+        public Registration(int id)
+        {
+            
+            InitializeComponent();
+            loaddata(id);
+        }
+       public void loaddata(int id)
+        {
+            edit = 1;
+            try
+            {
+               
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Customer WHERE ID = @CustomerID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CustomerID", id); // Replace 'customerIdToFind' with the actual ID you want to find.
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        // Set the retrieved data into input boxes
+                        filenoTobeedited = int.Parse(reader["FileNo"].ToString());
+
+                        firstname.Text = reader["FirstName"].ToString();
+                        familyname.Text = reader["FamilyName"].ToString();
+                        gender.Text = reader["Gender"].ToString();
+                        dob.Value = Convert.ToDateTime(reader["DOB"]);
+                        age.Text = reader["Age"].ToString();
+                        mobileno.Text = reader["MobileNo"].ToString();
+                        landline.Text = reader["Landline"].ToString();
+                        email.Text = reader["Email"].ToString();
+                        //subscriptionstatus.Text = reader["SubscriptionStatus"].ToString();
+                        startdate.Value = Convert.ToDateTime(reader["SubscriptionStartDate"]);
+                        enddate.Value = Convert.ToDateTime(reader["SubscriptionEndDate"]);
+                        branch.Text = reader["Branch"].ToString();
+                        lastvisitdate.Value = Convert.ToDateTime(reader["LastVisitDate"]);
+                        nutritionistname.Text = reader["NutritionistName"].ToString();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Customer not found with FILE NO : " + filenoTobeedited);
+                }
+                reader.Close();
+                MainClass.con.Close();
+                bool anyRowsFound = false;
+                SqlCommand cmd2;
+                try
+                {
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
+
+                    cmd2 = new SqlCommand("SELECT STARTDATE, ENDDATE FROM PAYMENT WHERE FILENO = @FILENO", MainClass.con);
+                    cmd2.Parameters.AddWithValue("@FILENO", filenoTobeedited);
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                    while (reader2.Read())
+                    {
+                        anyRowsFound = true;
+                        DateTime startDate = (DateTime)reader2["STARTDATE"];
+                        DateTime endDate = (DateTime)reader2["ENDDATE"];
+                        DateTime currentDate = DateTime.Now;
+
+                        if (currentDate >= startDate && currentDate <= endDate)
+                        {
+                            subscriptionstatus.Text = "Yes";
+                        }
+                        else
+                        {
+                            subscriptionstatus.Text = "Freezed";
+                        }
+                    }
+
+                    reader2.Close();
+                    if (!anyRowsFound)
+                    {
+                        // Execute other code when no rows are found
+                        // For example:
+                        subscriptionstatus.Text = "No";
+                    }
+
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
         static int edit = 0;
         public class NutritionistInfo
@@ -1055,6 +1159,7 @@ namespace HelloWorldSolutionIMS
         private void EditBTN_Click(object sender, EventArgs e)
         {
             edit = 1;
+            int id = int.Parse(guna2DataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             try
             {
                 string customerIDToEdit = guna2DataGridView1.SelectedRows[0].Cells[0].Value.ToString();
@@ -1149,6 +1254,11 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+
+            this.Hide();
+            MainPage page = new MainPage(id);
+            page.Show();
+            //Application.Exit();
         }
 
         private void Delete_Click(object sender, EventArgs e)

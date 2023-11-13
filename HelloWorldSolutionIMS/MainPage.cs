@@ -18,12 +18,19 @@ namespace HelloWorldSolutionIMS
 {
     public partial class MainPage : Form
     {
+        static int client_id = 0;
         public MainPage()
         {
             InitializeComponent();
         }
+        public MainPage(int id)
+        {
+            client_id= id;
+            InitializeComponent();
+            loadform(new Registration(client_id));
+        }
 
-       static System.Drawing.Color selectedColor = System.Drawing.Color.White;
+        static System.Drawing.Color selectedColor = System.Drawing.Color.White;
         private void MainPage_Load(object sender, EventArgs e)
         {
             try
@@ -173,7 +180,15 @@ namespace HelloWorldSolutionIMS
         }
         private void guna2TileButton9_Click(object sender, EventArgs e)
         {
-            loadform(new Registration());
+            if(client_id==0)
+            {
+                loadform(new Registration());
+
+            }
+            else
+            {
+                loadform(new Registration(client_id));
+            }
         }
 
         private void guna2TileButton6_Click(object sender, EventArgs e)
