@@ -23,8 +23,56 @@ namespace HelloWorldSolutionIMS
         {
             InitializeComponent();
         }
+        public Payment(int id)
+        {
+            InitializeComponent();
+            LoadData(id);
+        }
+        private void LoadData(int file_no)
+        {
+            edit = 1;
+            try
+            {
+                PaymentIDToEdit = file_no.ToString(); // Assuming the ID is in the first cell
 
-        static int edit = 0;
+                updatepromotions();
+                SqlCommand cmd = new SqlCommand("SELECT FileNo,PaymentName,Amount,Startdate,Enddate,PromotionName FROM Payment WHERE FILENO = @paymentID", MainClass.con);
+                cmd.Parameters.AddWithValue("@paymentID", PaymentIDToEdit);
+                MainClass.con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        fileno.Text = reader["FileNo"].ToString();
+                        paymentname.Text = reader["PaymentName"].ToString();
+                        amount.Text = reader["Amount"].ToString();
+                        startdate.Text = reader["Startdate"].ToString();
+                        enddate.Text = reader["Enddate"].ToString();
+
+                        promotionName = reader["PromotionName"].ToString();
+
+                        tabControl1.SelectedIndex = 1;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Payment data not found with File no: " + PaymentIDToEdit);
+                }
+                reader.Close();
+                updatewithfile();
+                promotionname.SelectedValue = int.Parse(promotionName);
+                MainClass.con.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+            static int edit = 0;
         static string PaymentIDToEdit;
        
         public class Deal
@@ -581,7 +629,7 @@ namespace HelloWorldSolutionIMS
                 PaymentIDToEdit = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString(); // Assuming the ID is in the first cell
 
                 updatepromotions();
-                SqlCommand cmd = new SqlCommand("SELECT FileNo,PaymentName,Amount,Startdate,Enddate,PromotionName FROM Payment WHERE ID = @paymentID", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Payment WHERE ID = @paymentID", MainClass.con);
                     cmd.Parameters.AddWithValue("@paymentID", PaymentIDToEdit);
                 MainClass.con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -595,12 +643,15 @@ namespace HelloWorldSolutionIMS
                                  amount.Text = reader["Amount"].ToString();
                                  startdate.Text = reader["Startdate"].ToString();
                                  enddate.Text = reader["Enddate"].ToString();                       
-                                 
-                                 promotionName = reader["PromotionName"].ToString();
+                                 promotioncode.Text = reader["PromotionCode"].ToString();
+                        promotiondetails.Text = reader["PromotionDetails"].ToString();
+                        amountafterpromotion.Text = reader["AmountAfterPromotion"].ToString();
+                        promotionName = reader["PromotionName"].ToString();
+                        promotionpercentage.Text = reader["PromotionPercentage"].ToString();
 
-                        
-                                 
-                        
+
+
+
                         //promotiondetails.Text = reader["PromotionDetails"].ToString();
 
                         tabControl1.SelectedIndex = 1;

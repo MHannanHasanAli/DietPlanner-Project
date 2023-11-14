@@ -24,6 +24,92 @@ namespace HelloWorldSolutionIMS
 
         static int edit = 0;
         static string SpecialDealIDToEdit;
+        static int conn = 0;
+        public class NutritionistInfo
+        {
+            public int ID { get; set; }
+            public string Name { get; set; }
+        }
+        private void UpdateBranch()
+        {
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT BRANCH FROM SETTINGS", MainClass.con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+
+                    branch.Text = dr["BRANCH"].ToString();
+
+                }
+
+                dr.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void UpdateNutritionist()
+        {
+            SqlCommand cmd;
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
+
+                cmd = new SqlCommand("SELECT ID, Name FROM NUTRITIONIST", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                nutritionist.DataSource = null;
+                nutritionist.Items.Clear();
+
+                List<NutritionistInfo> Nutrition = new List<NutritionistInfo>();
+
+
+                Nutrition.Add(new NutritionistInfo { ID = 0, Name = "Null" });
+
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    int Id = row.Field<int>("ID");
+                    string Name = row.Field<string>("Name");
+
+
+                    NutritionistInfo Temp = new NutritionistInfo { ID = Id, Name = Name };
+                    Nutrition.Add(Temp);
+
+                }
+
+                nutritionist.DataSource = Nutrition;
+                nutritionist.DisplayMember = "Name"; // Display Member is Name
+                nutritionist.ValueMember = "ID"; // Value Member is ID
+
+
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void ShowSpecialDeals(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn name, DataGridViewColumn code, DataGridViewColumn percentage, DataGridViewColumn start, DataGridViewColumn end, DataGridViewColumn nutritionist, DataGridViewColumn branch)
         {
             SqlCommand cmd;
@@ -184,8 +270,8 @@ namespace HelloWorldSolutionIMS
             promotionpercentage.Text = "";
             startdate.Text = "";
             enddate.Text = "";
-            nutritionist.Text = "";
-            branch.Text = "";
+            nutritionist.Text = "null";
+            UpdateBranch();
             promotiondetails.Text = "";
             edit = 0;
             tabControl1.SelectedIndex = 1;
@@ -224,8 +310,8 @@ namespace HelloWorldSolutionIMS
                         promotionpercentage.Text = "";
                         startdate.Text = "";
                         enddate.Text = "";
-                        nutritionist.Text = "";
-                        branch.Text = "";
+                        nutritionist.Text = "null";
+                        UpdateBranch();
                         promotiondetails.Text = "";
 
                         MainClass.con.Close();
@@ -274,8 +360,8 @@ namespace HelloWorldSolutionIMS
                         promotionpercentage.Text = "";
                         startdate.Text = "";
                         enddate.Text = "";
-                        nutritionist.Text = "";
-                        branch.Text = "";
+                        nutritionist.Text = "null";
+                        UpdateBranch();
                         promotiondetails.Text = "";
 
                         MainClass.con.Close();
@@ -392,7 +478,8 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
-
+            UpdateBranch();
+            UpdateNutritionist();
             MainClass.HideAllTabsOnTabControl(tabControl1);
             ShowSpecialDeals(guna2DataGridView1, iddgv, promotionnamedgv, promotioncodedgv, promotionpercentagedgv, startdatedgv, enddatedgv, nutritionistdgv, branchdgv);
         }
@@ -451,8 +538,8 @@ namespace HelloWorldSolutionIMS
                         promotionpercentage.Text = "";
                         startdate.Text = "";
                         enddate.Text = "";
-                        nutritionist.Text = "";
-                        branch.Text = "";
+                        nutritionist.Text = "null";
+                        UpdateBranch();
                         promotiondetails.Text = "";
 
                         // Get the SpecialDeal ID to display in the confirmation message

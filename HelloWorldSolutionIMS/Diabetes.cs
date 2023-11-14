@@ -15,6 +15,7 @@ namespace HelloWorldSolutionIMS
 {
     public partial class Diabetes : Form
     {
+        static int coderunner = 0;
         public Diabetes()
         {
             InitializeComponent();
@@ -22,7 +23,16 @@ namespace HelloWorldSolutionIMS
             weight.TextChanged += weight_TextChanged;
 
         }
+        static int valueid=0;
+        public Diabetes(int id)
+        {
+            InitializeComponent();
+            weight.KeyPress += weight_KeyPress;
+            weight.TextChanged += weight_TextChanged;
+            coderunner = id;
+           
 
+        }
         static int total;
         static double insulincharbcalc;
         static int rowflag = 0;
@@ -173,6 +183,12 @@ namespace HelloWorldSolutionIMS
 
             guna2DataGridView1.Visible = false;
             guna2DataGridView2.Visible = false;
+
+            if(coderunner!=0)
+            {
+                fileno.Text = coderunner.ToString();
+                coderunner = 0;
+            }
 
         }
         
@@ -326,41 +342,119 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     MessageBox.Show(ex.Message);
                 }
+                //if(coderunner!=0)
+                //{
+                //    int idtemp=0;
+                //    try
+                //    {
+                //        if (MainClass.con.State != ConnectionState.Open)
+                //        {
+                //            MainClass.con.Open();
+                //            conn = 1;
+                //        }
 
-                try
-                {
-                    if (MainClass.con.State != ConnectionState.Open)
-                    {
-                        MainClass.con.Open();
-                        conn = 1;
-                    }
+                //        SqlCommand cmd2 = new SqlCommand("SELECT ID FROM Customer " +
+                //            "WHERE FILENO = @fileno", MainClass.con);
 
-                    SqlCommand cmd2 = new SqlCommand("SELECT WEIGHT FROM BODYCOMPOSITION " +
-                        "WHERE CustomerID = @fileno", MainClass.con);
+                //        cmd2.Parameters.AddWithValue("@fileno", value);
+                //        SqlDataReader reader2 = cmd2.ExecuteReader();
+                //        if (reader2.Read())
+                //        {
+                //            // Assign values from the reader to the respective text boxes
+                //            idtemp = int.Parse(reader2["ID"].ToString());
+                //        }
+                //        else
+                //        {
+                //            MessageBox.Show("No customer with this file no exist!");
+                //        }
+                //        if (conn == 1)
+                //        {
+                //            MainClass.con.Close();
+                //            conn = 0;
+                //        }
+                //        reader2.Close();
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        MainClass.con.Close();
+                //        MessageBox.Show(ex.Message);
+                //    }
 
-                    cmd2.Parameters.AddWithValue("@fileno", value);
-                    SqlDataReader reader2 = cmd2.ExecuteReader();
-                    if (reader2.Read())
+                //    try
+                //    {
+                //        if (MainClass.con.State != ConnectionState.Open)
+                //        {
+                //            MainClass.con.Open();
+                //            conn = 1;
+                //        }
+
+                //        SqlCommand cmd2 = new SqlCommand("SELECT WEIGHT FROM BODYCOMPOSITION " +
+                //            "WHERE CustomerID = @fileno", MainClass.con);
+
+                //        cmd2.Parameters.AddWithValue("@fileno", idtemp);
+                //        SqlDataReader reader2 = cmd2.ExecuteReader();
+                //        if (reader2.Read())
+                //        {
+                //            // Assign values from the reader to the respective text boxes
+                //            weight.Text = reader2["WEIGHT"].ToString();
+                //        }
+                //        else
+                //        {
+                //            MessageBox.Show("No customer with this file no exist!");
+                //        }
+                //        if (conn == 1)
+                //        {
+                //            MainClass.con.Close();
+                //            conn = 0;
+                //        }
+                //        reader2.Close();
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        MainClass.con.Close();
+                //        MessageBox.Show(ex.Message);
+                //    }
+
+                //    coderunner = 0;
+                //}
+                //else
+                //{
+                    try
                     {
-                        // Assign values from the reader to the respective text boxes
-                        weight.Text = reader2["WEIGHT"].ToString();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
+
+                        SqlCommand cmd2 = new SqlCommand("SELECT WEIGHT FROM BODYCOMPOSITION " +
+                            "WHERE CustomerID = @fileno", MainClass.con);
+
+                        cmd2.Parameters.AddWithValue("@fileno", value.ToString());
+                        SqlDataReader reader2 = cmd2.ExecuteReader();
+                        if (reader2.Read())
+                        {
+                            // Assign values from the reader to the respective text boxes
+                            weight.Text = reader2["WEIGHT"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No customer with this file no exist!");
+                        }
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
+                        reader2.Close();
                     }
-                    else
-                    {
-                        MessageBox.Show("No customer with this file no exist!");
-                    }
-                    if (conn == 1)
+                    catch (Exception ex)
                     {
                         MainClass.con.Close();
-                        conn = 0;
+                        MessageBox.Show(ex.Message);
                     }
-                    reader2.Close();
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
+                //}
+                
             }
             else
             {

@@ -61,7 +61,6 @@
             this.save = new Guna.UI2.WinForms.Guna2Button();
             this.branch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.nutritionist = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.promotiondetails = new Guna.UI2.WinForms.Guna2TextBox();
             this.enddate = new System.Windows.Forms.DateTimePicker();
@@ -75,6 +74,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.promotionpercentage = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.nutritionist = new Guna.UI2.WinForms.Guna2ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -397,11 +397,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.nutritionist);
             this.panel2.Controls.Add(this.Backtodeal);
             this.panel2.Controls.Add(this.save);
             this.panel2.Controls.Add(this.branch);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.nutritionist);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.promotiondetails);
             this.panel2.Controls.Add(this.enddate);
@@ -493,31 +493,6 @@
             this.label3.Size = new System.Drawing.Size(70, 24);
             this.label3.TabIndex = 273;
             this.label3.Text = "Branch";
-            // 
-            // nutritionist
-            // 
-            this.nutritionist.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nutritionist.DefaultText = "";
-            this.nutritionist.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nutritionist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nutritionist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nutritionist.DisabledState.Parent = this.nutritionist;
-            this.nutritionist.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nutritionist.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nutritionist.FocusedState.Parent = this.nutritionist;
-            this.nutritionist.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.nutritionist.ForeColor = System.Drawing.Color.Black;
-            this.nutritionist.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nutritionist.HoverState.Parent = this.nutritionist;
-            this.nutritionist.Location = new System.Drawing.Point(776, 91);
-            this.nutritionist.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.nutritionist.Name = "nutritionist";
-            this.nutritionist.PasswordChar = '\0';
-            this.nutritionist.PlaceholderText = "";
-            this.nutritionist.SelectedText = "";
-            this.nutritionist.ShadowDecoration.Parent = this.nutritionist;
-            this.nutritionist.Size = new System.Drawing.Size(300, 32);
-            this.nutritionist.TabIndex = 6;
             // 
             // label4
             // 
@@ -705,6 +680,25 @@
             this.label10.TabIndex = 258;
             this.label10.Text = "Promotion Percentage";
             // 
+            // nutritionist
+            // 
+            this.nutritionist.BackColor = System.Drawing.Color.Transparent;
+            this.nutritionist.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.nutritionist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nutritionist.FocusedColor = System.Drawing.Color.Empty;
+            this.nutritionist.FocusedState.Parent = this.nutritionist;
+            this.nutritionist.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.nutritionist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.nutritionist.FormattingEnabled = true;
+            this.nutritionist.HoverState.Parent = this.nutritionist;
+            this.nutritionist.ItemHeight = 30;
+            this.nutritionist.ItemsAppearance.Parent = this.nutritionist;
+            this.nutritionist.Location = new System.Drawing.Point(776, 83);
+            this.nutritionist.Name = "nutritionist";
+            this.nutritionist.ShadowDecoration.Parent = this.nutritionist;
+            this.nutritionist.Size = new System.Drawing.Size(300, 36);
+            this.nutritionist.TabIndex = 274;
+            // 
             // SpecialDeal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -749,7 +743,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox branch;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox nutritionist;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox promotiondetails;
         private Guna.UI2.WinForms.Guna2Button Backtodeal;
@@ -773,5 +766,6 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2ComboBox nutritionist;
     }
 }

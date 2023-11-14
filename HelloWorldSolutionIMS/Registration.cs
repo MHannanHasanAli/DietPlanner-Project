@@ -38,7 +38,7 @@ namespace HelloWorldSolutionIMS
             {
                
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Customer WHERE ID = @CustomerID", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Customer WHERE FILENO = @CustomerID", MainClass.con);
                 cmd.Parameters.AddWithValue("@CustomerID", id); // Replace 'customerIdToFind' with the actual ID you want to find.
 
                 SqlDataReader reader = cmd.ExecuteReader();

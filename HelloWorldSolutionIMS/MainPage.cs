@@ -288,7 +288,43 @@ namespace HelloWorldSolutionIMS
 
         private void guna2TileButton11_Click(object sender, EventArgs e)
         {
-            loadform(new Payment());
+            SqlCommand cmd2;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
+
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+
+                    client_id = int.Parse(reader2["ClientID"].ToString());
+
+                }
+
+
+
+                MainClass.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+
+            if (client_id != 0)
+            {
+                loadform(new Payment(client_id));
+            }
+            else
+            {
+                loadform(new Payment());
+            }
+            client_id = 0;
         }
 
         private void guna2TileButton10_Click(object sender, EventArgs e)
@@ -299,13 +335,84 @@ namespace HelloWorldSolutionIMS
 
         private void guna2TileButton3_Click(object sender, EventArgs e)
         {
-            loadform(new DietPlan());
+            SqlCommand cmd2;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
+
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+
+                    client_id = int.Parse(reader2["ClientID"].ToString());
+
+                }
+
+
+
+                MainClass.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+            if (client_id != 0)
+            {
+                loadform(new DietPlan(client_id));
+            }
+            else
+            {
+                loadform(new DietPlan());
+            }
+
+            client_id = 0;
 
         }
 
         private void guna2TileButton4_Click(object sender, EventArgs e)
         {
-            loadform(new Diabetes());
+            SqlCommand cmd2;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
+
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+
+                    client_id = int.Parse(reader2["ClientID"].ToString());
+
+                }
+
+
+
+                MainClass.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            if(client_id!=0)
+            {
+                loadform(new Diabetes(client_id));
+
+            }
+            else
+            {
+                loadform(new Diabetes());
+
+            }
         }
 
         private void guna2TileButton1_Click(object sender, EventArgs e)

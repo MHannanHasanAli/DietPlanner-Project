@@ -31,6 +31,104 @@ namespace HelloWorldSolutionIMS
             protein.TextChanged += UpdateChart;
             carbohydrates.TextChanged += UpdateChart;
         }
+        static int coderunner = 0;
+        public DietPlan(int id)
+        {
+            InitializeComponent();
+            //calories.TextChanged += UpdateChart;
+            fats.TextChanged += UpdateChart;
+            protein.TextChanged += UpdateChart;
+            carbohydrates.TextChanged += UpdateChart;
+            coderunner = id;
+        }
+        private void LoadData(int id)
+        {
+            if (fileno.Text != "")
+            {
+                string template = null;
+                string PreviousPlan = null;
+                try
+                {
+
+                    dietPlanIDToEdit = fileno.Text.ToString();
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM DietPlan WHERE FILENO = @DietPlanID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@DietPlanID", dietPlanIDToEdit);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+
+
+                            template = reader["DietPlanTemplateName"].ToString();
+                            dietplantemplate.Text = reader["DietPlanTemplate"].ToString();
+                            DietPlanDate.Value = Convert.ToDateTime(reader["DIETPLANDATE"]);
+                            dietplandays.Text = reader["DietPlanDays"].ToString();
+                            instruction.Text = reader["Instructions"].ToString();
+                            PreviousPlan = reader["PreviousDiePlan"].ToString();
+                            calories.Text = reader["CALORIES"].ToString();
+                            fats.Text = reader["FATS"].ToString();
+                            fibers.Text = reader["FIBERS"].ToString();
+                            potassium.Text = reader["POTASSIUM"].ToString();
+                            water.Text = reader["WATER"].ToString();
+                            sugar.Text = reader["SUGAR"].ToString();
+                            calcium.Text = reader["CALCIUM"].ToString();
+                            abox.Text = reader["A"].ToString();
+                            protein.Text = reader["PROTEIN"].ToString();
+                            carbohydrates.Text = reader["CARBOHYDRATES"].ToString();
+                            sodium.Text = reader["SODIUM"].ToString();
+                            phosphor.Text = reader["PHOSPHOR"].ToString();
+                            magnesium.Text = reader["MAGNESIUM"].ToString();
+                            iron.Text = reader["IRON"].ToString();
+                            iodine.Text = reader["IODINE"].ToString();
+                            bbox.Text = reader["B"].ToString();
+                        }
+                        reader.Close();
+                        MainClass.con.Close();
+                        dietplantemplatename.Text = template;
+                        previousdietplan.Text = PreviousPlan;
+                        extrafunc();
+                        save.Enabled = false;
+                        AddMealrow.Enabled = false;
+                        AddLunch.Enabled = false;
+                        DinnerAdd.Enabled = false;
+                        SnackAdd.Enabled = false;
+                        //tabControl1.SelectedIndex = 1;
+                    }
+                    else
+                    {
+                        reader.Close();
+                        MainClass.con.Close();
+                        save.Enabled = true;
+                        AddMealrow.Enabled = true;
+                        AddLunch.Enabled = true;
+                        DinnerAdd.Enabled = true;
+                        SnackAdd.Enabled = true;
+                        MessageBox.Show("No Diet Plan found for file no :" + fileno.Text);
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                save.Enabled = true;
+                AddMealrow.Enabled = true;
+                AddLunch.Enabled = true;
+                DinnerAdd.Enabled = true;
+                SnackAdd.Enabled = true;
+                MessageBox.Show("Enter File no!");
+            }
+            edit = 0;
+
+        }
         static int removeflag = 0;
         static int edit = 0;
         static int titlecheck = 0;
@@ -2237,6 +2335,12 @@ namespace HelloWorldSolutionIMS
             UpdateDietPlanTemplate();
             updatepreviousdietplan();
             UpdateInstruction();
+
+            if(coderunner!=0)
+            {
+                fileno.Text = coderunner.ToString();
+                LoadData(coderunner);
+            }
         }
         private void AddIngredient_Click(object sender, EventArgs e)
         {

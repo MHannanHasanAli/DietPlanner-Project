@@ -195,6 +195,7 @@
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.Location = new System.Drawing.Point(27, 118);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -220,7 +221,7 @@
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 77;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = true;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -234,6 +235,7 @@
             this.iddgv.HeaderText = "ID";
             this.iddgv.MinimumWidth = 6;
             this.iddgv.Name = "iddgv";
+            this.iddgv.ReadOnly = true;
             this.iddgv.Visible = false;
             // 
             // filenodgv
@@ -241,48 +243,56 @@
             this.filenodgv.HeaderText = "FILE NO";
             this.filenodgv.MinimumWidth = 6;
             this.filenodgv.Name = "filenodgv";
+            this.filenodgv.ReadOnly = true;
             // 
             // paymentnamedgv
             // 
             this.paymentnamedgv.HeaderText = "PAYMENT NAME";
             this.paymentnamedgv.MinimumWidth = 6;
             this.paymentnamedgv.Name = "paymentnamedgv";
+            this.paymentnamedgv.ReadOnly = true;
             // 
             // firstnamedgv
             // 
             this.firstnamedgv.HeaderText = "FIRST NAME";
             this.firstnamedgv.MinimumWidth = 6;
             this.firstnamedgv.Name = "firstnamedgv";
+            this.firstnamedgv.ReadOnly = true;
             // 
             // familynamedgv
             // 
             this.familynamedgv.HeaderText = "FAMILY NAME";
             this.familynamedgv.MinimumWidth = 6;
             this.familynamedgv.Name = "familynamedgv";
+            this.familynamedgv.ReadOnly = true;
             // 
             // amountdgv
             // 
             this.amountdgv.HeaderText = "AMOUNT";
             this.amountdgv.MinimumWidth = 6;
             this.amountdgv.Name = "amountdgv";
+            this.amountdgv.ReadOnly = true;
             // 
             // amountaftrpromotiondgv
             // 
             this.amountaftrpromotiondgv.HeaderText = "AMOUNT AFTER PROMOTION";
             this.amountaftrpromotiondgv.MinimumWidth = 6;
             this.amountaftrpromotiondgv.Name = "amountaftrpromotiondgv";
+            this.amountaftrpromotiondgv.ReadOnly = true;
             // 
             // promotionpercentagedgv
             // 
             this.promotionpercentagedgv.HeaderText = "PROMOTION PERCENTAGE";
             this.promotionpercentagedgv.MinimumWidth = 6;
             this.promotionpercentagedgv.Name = "promotionpercentagedgv";
+            this.promotionpercentagedgv.ReadOnly = true;
             // 
             // datedgv
             // 
             this.datedgv.HeaderText = "DATE";
             this.datedgv.MinimumWidth = 6;
             this.datedgv.Name = "datedgv";
+            this.datedgv.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
@@ -490,17 +500,17 @@
             this.promotionname.HoverState.Parent = this.promotionname;
             this.promotionname.ItemHeight = 30;
             this.promotionname.ItemsAppearance.Parent = this.promotionname;
-            this.promotionname.Location = new System.Drawing.Point(771, 214);
+            this.promotionname.Location = new System.Drawing.Point(238, 161);
             this.promotionname.Name = "promotionname";
             this.promotionname.ShadowDecoration.Parent = this.promotionname;
-            this.promotionname.Size = new System.Drawing.Size(344, 36);
+            this.promotionname.Size = new System.Drawing.Size(284, 36);
             this.promotionname.TabIndex = 238;
             this.promotionname.SelectedIndexChanged += new System.EventHandler(this.promotionname_SelectedIndexChanged);
             // 
             // enddate
             // 
             this.enddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.enddate.Location = new System.Drawing.Point(238, 397);
+            this.enddate.Location = new System.Drawing.Point(238, 353);
             this.enddate.Name = "enddate";
             this.enddate.Size = new System.Drawing.Size(284, 22);
             this.enddate.TabIndex = 236;
@@ -509,7 +519,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label17.Location = new System.Drawing.Point(31, 395);
+            this.label17.Location = new System.Drawing.Point(31, 351);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(88, 24);
             this.label17.TabIndex = 237;
@@ -592,7 +602,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label12.Location = new System.Drawing.Point(546, 214);
+            this.label12.Location = new System.Drawing.Point(31, 161);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(152, 24);
             this.label12.TabIndex = 230;
@@ -613,7 +623,7 @@
             this.promotioncode.ForeColor = System.Drawing.Color.Black;
             this.promotioncode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotioncode.HoverState.Parent = this.promotioncode;
-            this.promotioncode.Location = new System.Drawing.Point(238, 346);
+            this.promotioncode.Location = new System.Drawing.Point(238, 302);
             this.promotioncode.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.promotioncode.Name = "promotioncode";
             this.promotioncode.PasswordChar = '\0';
@@ -627,7 +637,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label11.Location = new System.Drawing.Point(31, 346);
+            this.label11.Location = new System.Drawing.Point(31, 302);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(147, 24);
             this.label11.TabIndex = 228;
@@ -648,7 +658,7 @@
             this.promotionpercentage.ForeColor = System.Drawing.Color.Black;
             this.promotionpercentage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotionpercentage.HoverState.Parent = this.promotionpercentage;
-            this.promotionpercentage.Location = new System.Drawing.Point(238, 302);
+            this.promotionpercentage.Location = new System.Drawing.Point(238, 258);
             this.promotionpercentage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.promotionpercentage.Name = "promotionpercentage";
             this.promotionpercentage.PasswordChar = '\0';
@@ -665,7 +675,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label10.Location = new System.Drawing.Point(31, 302);
+            this.label10.Location = new System.Drawing.Point(31, 258);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(198, 24);
             this.label10.TabIndex = 226;
@@ -686,7 +696,7 @@
             this.amount.ForeColor = System.Drawing.Color.Black;
             this.amount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.amount.HoverState.Parent = this.amount;
-            this.amount.Location = new System.Drawing.Point(238, 258);
+            this.amount.Location = new System.Drawing.Point(238, 214);
             this.amount.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.amount.Name = "amount";
             this.amount.PasswordChar = '\0';
@@ -701,7 +711,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label9.Location = new System.Drawing.Point(31, 258);
+            this.label9.Location = new System.Drawing.Point(31, 214);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 24);
             this.label9.TabIndex = 224;
@@ -776,21 +786,21 @@
             this.paymentname.ForeColor = System.Drawing.Color.Black;
             this.paymentname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.paymentname.HoverState.Parent = this.paymentname;
-            this.paymentname.Location = new System.Drawing.Point(238, 214);
+            this.paymentname.Location = new System.Drawing.Point(771, 214);
             this.paymentname.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.paymentname.Name = "paymentname";
             this.paymentname.PasswordChar = '\0';
             this.paymentname.PlaceholderText = "";
             this.paymentname.SelectedText = "";
             this.paymentname.ShadowDecoration.Parent = this.paymentname;
-            this.paymentname.Size = new System.Drawing.Size(284, 32);
+            this.paymentname.Size = new System.Drawing.Size(344, 32);
             this.paymentname.TabIndex = 219;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label5.Location = new System.Drawing.Point(31, 214);
+            this.label5.Location = new System.Drawing.Point(545, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 24);
             this.label5.TabIndex = 218;
