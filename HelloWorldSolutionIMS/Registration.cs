@@ -1256,7 +1256,7 @@ namespace HelloWorldSolutionIMS
                     {
                         // Set the retrieved data into input boxes
                         filenoTobeedited = int.Parse(reader["FileNo"].ToString());
-
+                        fileno.Text = reader["FileNo"].ToString();
                         firstname.Text = reader["FirstName"].ToString();
                         familyname.Text = reader["FamilyName"].ToString();
                         gender.Text = reader["Gender"].ToString();
