@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IdentityModel.Claims;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
@@ -22,11 +23,76 @@ namespace HelloWorldSolutionIMS
 {
     public partial class Appointment : Form
     {
+        static int ClientID;
+        static int coderunner = 0;
         public Appointment()
         {
             InitializeComponent();
         }
+        public Appointment(int id)
+        {
+            ClientID = id;
+            InitializeComponent();
+            LoadData(ClientID);
+            coderunner = 1;
+        }
 
+        private void LoadData(int file_no)
+        {
+            Room1.ClearSelection();
+            Room1.CurrentCell = null;
+            Room2.ClearSelection();
+            Room2.CurrentCell = null;
+            Room3.ClearSelection();
+            Room3.CurrentCell = null;
+            Room4.ClearSelection();
+            Room4.CurrentCell = null;
+            edit = 1;
+            stopper = 1;
+            check = 1;
+
+            DateTime datefiller = DateTime.Now;
+            try
+            {
+
+                slot.Visible = true;
+                slotlabel.Visible = true;
+                AppointmentIDToEdit = file_no;
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Appointment WHERE FILENO = @appointmentID", MainClass.con);
+                cmd.Parameters.AddWithValue("@appointmentID", AppointmentIDToEdit);
+                MainClass.con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        fileno.Text = reader["FILENO"].ToString();
+                        firstname.Text = reader["FIRSTNAME"].ToString();
+                        familyname.Text = reader["FAMILYNAME"].ToString();
+                        mobileno.Text = reader["MOBILENO"].ToString();
+                        datefiller = Convert.ToDateTime(reader["DATE"]);
+                        slot.Text = reader["SLOT"].ToString();
+
+                        tabControl1.SelectedIndex = 1; // Switch to the desired tab
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Appointment data not found with FILENO: " + AppointmentIDToEdit);
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+                date.SetDate(datefiller);
+                slotupdate();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         static int edit = 0;
         static int conn = 0;
         static int check = 0;
@@ -478,11 +544,15 @@ namespace HelloWorldSolutionIMS
 
             }
             MainClass.HideAllTabsOnTabControl(tabControl1);
-            InsertColumnsAndRowsToRoom1(Room1);
-            InsertColumnsAndRowsToRoom2(Room2);
-            InsertColumnsAndRowsToRoom3(Room3);
-            InsertColumnsAndRowsToRoom4(Room4);
-          
+            if(coderunner==0)
+            {
+                InsertColumnsAndRowsToRoom1(Room1);
+                InsertColumnsAndRowsToRoom2(Room2);
+                InsertColumnsAndRowsToRoom3(Room3);
+                InsertColumnsAndRowsToRoom4(Room4);
+            }
+            coderunner = 1;
+
             ShowAppointments(guna2DataGridView1, iddgv, filenodgv, firstnamedgv, familynamedgv, mobilenodgv, roomdgv, slotdgv, datedgv);
         }
         private void Save_Click(object sender, EventArgs e)

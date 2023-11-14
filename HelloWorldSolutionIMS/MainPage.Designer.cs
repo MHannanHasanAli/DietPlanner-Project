@@ -180,7 +180,7 @@
             this.guna2TileButton7.ShadowDecoration.Parent = this.guna2TileButton7;
             this.guna2TileButton7.Size = new System.Drawing.Size(300, 70);
             this.guna2TileButton7.TabIndex = 6;
-            this.guna2TileButton7.Text = "Diet Plan Templates";
+            this.guna2TileButton7.Text = "Diet Plan Temp.";
             this.guna2TileButton7.TextOffset = new System.Drawing.Point(0, -15);
             this.guna2TileButton7.Click += new System.EventHandler(this.guna2TileButton7_Click);
             // 

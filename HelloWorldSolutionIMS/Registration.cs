@@ -1255,9 +1255,24 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
 
-            MainPage page = new MainPage(id);
-            page.Show();
-            
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE LoadData SET ClientID = @FileNoE WHERE ID = @id", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@id", 1); // Replace fileNoValue with the actual file number.
+                cmd.Parameters.AddWithValue("@FileNoE", filenoTobeedited);
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            //MainPage page = new MainPage(id);
+            //page.Show();
+
         }
 
         private void Delete_Click(object sender, EventArgs e)

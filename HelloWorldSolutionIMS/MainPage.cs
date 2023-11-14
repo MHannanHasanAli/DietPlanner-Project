@@ -22,13 +22,23 @@ namespace HelloWorldSolutionIMS
         public MainPage()
         {
             InitializeComponent();
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE LoadData SET ClientID = @FileNoE WHERE ID = @id", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@id", 1); // Replace fileNoValue with the actual file number.
+                cmd.Parameters.AddWithValue("@FileNoE", 0);
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
-        public MainPage(int id)
-        {
-            client_id= id;
-            InitializeComponent();
-            loadform(new Registration(client_id));
-        }
+       
 
         static System.Drawing.Color selectedColor = System.Drawing.Color.White;
         private void MainPage_Load(object sender, EventArgs e)
@@ -180,20 +190,84 @@ namespace HelloWorldSolutionIMS
         }
         private void guna2TileButton9_Click(object sender, EventArgs e)
         {
-            if(client_id==0)
+            SqlCommand cmd2;
+            try
             {
-                loadform(new Registration());
+                MainClass.con.Open();
+
+                cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
+
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+
+                    client_id = int.Parse(reader2["ClientID"].ToString());
+
+                }
+
+
+
+                MainClass.con.Close();
 
             }
-            else
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+            if (client_id!=0)
             {
                 loadform(new Registration(client_id));
             }
-        }
+            else
+            {
+                loadform(new Registration());
+            }
 
+            client_id = 0;
+        }
+        
         private void guna2TileButton6_Click(object sender, EventArgs e)
         {
-            loadform(new Appointment());
+            SqlCommand cmd2;
+            try
+            {              
+                MainClass.con.Open();
+                  
+                cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
+               
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+                   
+                    client_id = int.Parse(reader2["ClientID"].ToString());
+   
+                }
+
+              
+              
+                    MainClass.con.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            
+            
+            if(client_id != 0)
+            {
+                loadform(new Appointment(client_id));
+            }
+            else
+            {
+                loadform(new Appointment());
+            }
+            client_id = 0;
         }
 
         private void guna2TileButton2_Click(object sender, EventArgs e)
