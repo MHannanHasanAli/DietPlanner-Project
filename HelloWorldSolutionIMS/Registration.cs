@@ -1255,10 +1255,9 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
 
-            this.Hide();
             MainPage page = new MainPage(id);
             page.Show();
-            //Application.Exit();
+            
         }
 
         private void Delete_Click(object sender, EventArgs e)
