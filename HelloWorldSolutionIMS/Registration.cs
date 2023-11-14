@@ -271,40 +271,128 @@ namespace HelloWorldSolutionIMS
         }
         private void SearchCustomer(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn file, DataGridViewColumn name, DataGridViewColumn fname, DataGridViewColumn start, DataGridViewColumn end, DataGridViewColumn nutritionist)
         {
-            //string file_no = fileno.Text;
+            string file_no = fileno.Text;
             string searchname = firstname.Text;
             string searchfamily = familyname.Text;
-            
-                try
+            string searchgender = gender.Text;
+            string searchmobileno = mobileno.Text;
+            string searchlandline = landline.Text;
+            string searchage = age.Text;
+            string searchemail = email.Text;
+
+          
+
+            string whereClause = "1 = 1"; // Initialize an empty where clause
+
+            if (file_no != "")
+            {
+                whereClause += " AND (FileNo = @FileNo)";
+            }
+            if (searchname != "")
+            {
+                whereClause += " AND (ISNULL(FirstName, '') LIKE @FirstName)";
+            }
+
+            if (searchfamily != "")
+            {
+                whereClause += " AND (ISNULL(FamilyName, '') LIKE @FamilyName)";
+            }
+
+            if (searchgender != "")
+            {
+                whereClause += " AND (Gender = @Gender)";
+            }
+
+            if (searchmobileno != "")
+            {
+                whereClause += " AND (MobileNo LIKE @MobileNo)";
+            }
+
+            if (searchlandline != "")
+            {
+                whereClause += " AND (Landline LIKE @Landline)";
+            }
+
+            if (searchage != "")
+            {
+                whereClause += " AND (Age = @Age)";
+            }
+
+            if (searchemail != "")
+            {
+                whereClause += " AND (Email LIKE @Email)";
+            }
+
+            try
+            {
+                MainClass.con.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT ID, FileNo, FirstName, FamilyName, SubscriptionStartDate, SubscriptionEndDate, NutritionistName FROM Customer WHERE " + whereClause, MainClass.con);
+
+                if (file_no != "")
                 {
-                    MainClass.con.Open();
+                    cmd.Parameters.AddWithValue("@FileNo", int.Parse(file_no));
+                }
 
-                    SqlCommand cmd = new SqlCommand("SELECT ID, FileNo, FirstName, FamilyName, SubscriptionStartDate, SubscriptionEndDate, NutritionistName FROM Customer WHERE (FirstName LIKE @FirstName) OR (FAMILYNAME LIKE @FamilyName)", MainClass.con);
-
+                if (searchname != "")
+                {
                     cmd.Parameters.AddWithValue("@FirstName", "%" + searchname + "%");
-                    cmd.Parameters.AddWithValue("@FamilyName", "%" + searchfamily + "%");
-
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    id.DataPropertyName = dt.Columns["ID"].ToString();
-                    file.DataPropertyName = dt.Columns["FileNo"].ToString();
-                    name.DataPropertyName = dt.Columns["FirstName"].ToString();
-                    fname.DataPropertyName = dt.Columns["FamilyName"].ToString();
-                    start.DataPropertyName = dt.Columns["SubscriptionStartDate"].ToString();
-                    end.DataPropertyName = dt.Columns["SubscriptionEndDate"].ToString();
-                    nutritionist.DataPropertyName = dt.Columns["NutritionistName"].ToString();
-                    dgv.DataSource = dt;
-                    MainClass.con.Close();
                 }
 
-                catch (Exception ex)
+                if (searchfamily != "")
                 {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
+                    cmd.Parameters.AddWithValue("@FamilyName", "%" + searchfamily + "%");
                 }
-                        
-            
+
+                if (searchgender != "")
+                {
+                    cmd.Parameters.AddWithValue("@Gender", searchgender);
+                }
+
+                if (searchmobileno != "")
+                {
+                    cmd.Parameters.AddWithValue("@MobileNo", "%" + searchmobileno + "%");
+                }
+
+                if (searchlandline != "")
+                {
+                    cmd.Parameters.AddWithValue("@Landline", "%" + searchlandline + "%");
+                }
+
+                if (searchage != "")
+                {
+                    cmd.Parameters.AddWithValue("@Age", int.Parse(searchage));
+                }
+
+                if (searchemail != "")
+                {
+                    cmd.Parameters.AddWithValue("@Email", "%" + searchemail + "%");
+                }
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                id.DataPropertyName = dt.Columns["ID"].ToString();
+                file.DataPropertyName = dt.Columns["FileNo"].ToString();
+                name.DataPropertyName = dt.Columns["FirstName"].ToString();
+                fname.DataPropertyName = dt.Columns["FamilyName"].ToString();
+                start.DataPropertyName = dt.Columns["SubscriptionStartDate"].ToString();
+                end.DataPropertyName = dt.Columns["SubscriptionEndDate"].ToString();
+                nutritionist.DataPropertyName = dt.Columns["NutritionistName"].ToString();
+                dgv.DataSource = dt;
+
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
         }
         private void New_Click(object sender, EventArgs e)
         {
@@ -578,14 +666,7 @@ namespace HelloWorldSolutionIMS
             UpdateBranch();
             UpdateNutritionist();
             MainClass.HideAllTabsOnTabControl(tabControl1);
-            int fileno_new = GetLastFileno();
-            fileno_new = fileno_new + 1;
-
-            fileno.Text = fileno_new.ToString();
-
-            subscriptionstatus.Text = "No";
-
-            fileno.ReadOnly = true;
+           
             ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
 
         }
@@ -1310,6 +1391,18 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
+        }
+
+        private void AddClient_Click(object sender, EventArgs e)
+        {
+            int fileno_new = GetLastFileno();
+            fileno_new = fileno_new + 1;
+
+            fileno.Text = fileno_new.ToString();
+
+            subscriptionstatus.Text = "No";
+
+            //fileno.ReadOnly = true;
         }
     }
 }

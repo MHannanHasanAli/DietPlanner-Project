@@ -139,6 +139,7 @@
             this.height = new Guna.UI2.WinForms.Guna2TextBox();
             this.bca = new Guna.UI2.WinForms.Guna2TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.AddClient = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -175,6 +176,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.AddClient);
             this.panel1.Controls.Add(this.nutritionistname);
             this.panel1.Controls.Add(this.Delete);
             this.panel1.Controls.Add(this.EditBTN);
@@ -246,10 +248,10 @@
             this.Delete.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Delete.ForeColor = System.Drawing.Color.White;
             this.Delete.HoverState.Parent = this.Delete;
-            this.Delete.Location = new System.Drawing.Point(845, 486);
+            this.Delete.Location = new System.Drawing.Point(902, 486);
             this.Delete.Name = "Delete";
             this.Delete.ShadowDecoration.Parent = this.Delete;
-            this.Delete.Size = new System.Drawing.Size(220, 45);
+            this.Delete.Size = new System.Drawing.Size(214, 45);
             this.Delete.TabIndex = 68;
             this.Delete.Text = "Delete Client";
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
@@ -265,10 +267,10 @@
             this.EditBTN.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.EditBTN.ForeColor = System.Drawing.Color.White;
             this.EditBTN.HoverState.Parent = this.EditBTN;
-            this.EditBTN.Location = new System.Drawing.Point(618, 486);
+            this.EditBTN.Location = new System.Drawing.Point(683, 486);
             this.EditBTN.Name = "EditBTN";
             this.EditBTN.ShadowDecoration.Parent = this.EditBTN;
-            this.EditBTN.Size = new System.Drawing.Size(220, 45);
+            this.EditBTN.Size = new System.Drawing.Size(214, 45);
             this.EditBTN.TabIndex = 67;
             this.EditBTN.Text = "Edit Client";
             this.EditBTN.Click += new System.EventHandler(this.EditBTN_Click);
@@ -293,10 +295,11 @@
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
@@ -499,10 +502,10 @@
             this.Search.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Search.ForeColor = System.Drawing.Color.White;
             this.Search.HoverState.Parent = this.Search;
-            this.Search.Location = new System.Drawing.Point(295, 486);
+            this.Search.Location = new System.Drawing.Point(241, 486);
             this.Search.Name = "Search";
             this.Search.ShadowDecoration.Parent = this.Search;
-            this.Search.Size = new System.Drawing.Size(220, 45);
+            this.Search.Size = new System.Drawing.Size(214, 45);
             this.Search.TabIndex = 49;
             this.Search.Text = "Search Client";
             this.Search.Click += new System.EventHandler(this.Search_Click);
@@ -518,10 +521,10 @@
             this.New.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.New.ForeColor = System.Drawing.Color.White;
             this.New.HoverState.Parent = this.New;
-            this.New.Location = new System.Drawing.Point(68, 486);
+            this.New.Location = new System.Drawing.Point(21, 486);
             this.New.Name = "New";
             this.New.ShadowDecoration.Parent = this.New;
-            this.New.Size = new System.Drawing.Size(220, 45);
+            this.New.Size = new System.Drawing.Size(214, 45);
             this.New.TabIndex = 48;
             this.New.Text = "Save Client";
             this.New.Click += new System.EventHandler(this.New_Click);
@@ -1803,6 +1806,24 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
+            // AddClient
+            // 
+            this.AddClient.AutoRoundedCorners = true;
+            this.AddClient.BorderRadius = 21;
+            this.AddClient.CheckedState.Parent = this.AddClient;
+            this.AddClient.CustomImages.Parent = this.AddClient;
+            this.AddClient.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.AddClient.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.AddClient.ForeColor = System.Drawing.Color.White;
+            this.AddClient.HoverState.Parent = this.AddClient;
+            this.AddClient.Location = new System.Drawing.Point(463, 486);
+            this.AddClient.Name = "AddClient";
+            this.AddClient.ShadowDecoration.Parent = this.AddClient;
+            this.AddClient.Size = new System.Drawing.Size(214, 45);
+            this.AddClient.TabIndex = 70;
+            this.AddClient.Text = "Add Client";
+            this.AddClient.Click += new System.EventHandler(this.AddClient_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1934,5 +1955,6 @@
         private Guna.UI2.WinForms.Guna2Button Delete;
         private Guna.UI2.WinForms.Guna2Button EditBTN;
         private Guna.UI2.WinForms.Guna2ComboBox nutritionistname;
+        private Guna.UI2.WinForms.Guna2Button AddClient;
     }
 }
