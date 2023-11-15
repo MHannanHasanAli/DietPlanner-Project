@@ -12,8 +12,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using Win32Interop.Enums;
+using Win32Interop.Structs;
 using static HelloWorldSolutionIMS.Payment;
 using static HelloWorldSolutionIMS.SettingScreen;
 
@@ -727,8 +729,7 @@ namespace HelloWorldSolutionIMS
                 }
             }
 
-            guna2DataGridView6.ClearSelection();
-            guna2DataGridView13.ClearSelection();
+           
 
             guna2DataGridView7.Rows[0].Cells[0].Value = "No";
             guna2DataGridView7.Rows[0].Cells[1].Value = "Yes";
@@ -839,6 +840,11 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView16.Rows[i].Height = 18;
 
             }
+
+            guna2DataGridView6.ClearSelection();
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView14.ClearSelection();
+            guna2DataGridView16.ClearSelection();
         }
         private void Registration_Load(object sender, EventArgs e)
         {
@@ -1014,9 +1020,9 @@ namespace HelloWorldSolutionIMS
 
                     foreach (System.Windows.Forms.Control control in panel1.Controls)
                     {
-                        if (control is Label)
+                        if (control is System.Windows.Forms.Label)
                         {
-                            Label label = (Label)control;
+                            System.Windows.Forms.Label label = (System.Windows.Forms.Label)control;
 
                             Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
@@ -1024,9 +1030,9 @@ namespace HelloWorldSolutionIMS
                     }
                     foreach (System.Windows.Forms.Control control in panel2.Controls)
                     {
-                        if (control is Label)
+                        if (control is System.Windows.Forms.Label)
                         {
-                            Label label = (Label)control;
+                            System.Windows.Forms.Label label = (System.Windows.Forms.Label)control;
 
                             Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
@@ -1034,9 +1040,9 @@ namespace HelloWorldSolutionIMS
                     }
                     foreach (System.Windows.Forms.Control control in panel3.Controls)
                     {
-                        if (control is Label)
+                        if (control is System.Windows.Forms.Label)
                         {
-                            Label label = (Label)control;
+                            System.Windows.Forms.Label label = (System.Windows.Forms.Label)control;
 
                             Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
@@ -1466,6 +1472,37 @@ namespace HelloWorldSolutionIMS
         {
             tabControl1.SelectedIndex = 1;
         }
+        private void ShowMedicalHistory(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn name, DataGridViewColumn fname)
+        {
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT ID,FILENO,FIRSTNAME,FAMILYNAME FROM MedicalHistory WHERE CustomerID = @CUSTOMERID ORDER BY ID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CUSTOMERID", filenomh.Text); // Replace 'customerIdToFind' with the actual ID you want to find.
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                id.DataPropertyName = dt.Columns["ID"].ToString();
+                fileno.DataPropertyName = dt.Columns["FILENO"].ToString();
+                name.DataPropertyName = dt.Columns["FIRSTNAME"].ToString();
+                fname.DataPropertyName = dt.Columns["FAMILYNAME"].ToString();
+               
+
+
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void ShowBodyComposition(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn date, DataGridViewColumn bca, DataGridViewColumn height, DataGridViewColumn weight, DataGridViewColumn age, DataGridViewColumn fats, DataGridViewColumn protein, DataGridViewColumn water, DataGridViewColumn mineral, DataGridViewColumn fat1, DataGridViewColumn fat2, DataGridViewColumn bmi, DataGridViewColumn bmr)
         {
             SqlCommand cmd;
@@ -1803,7 +1840,7 @@ namespace HelloWorldSolutionIMS
 
         private void label32_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 3;
+            tabControl1.SelectedIndex = 4;
         }
 
         private void guna2DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1832,6 +1869,7 @@ namespace HelloWorldSolutionIMS
         List<Indexing> Allegiescoordinates = new List<Indexing>();
         List<Indexing> Deficiencycoordinates = new List<Indexing>();
         List<Indexing> Medicationcoordinates = new List<Indexing>();
+        List<Indexing> Dietcoordinates = new List<Indexing>();
         private void guna2DataGridView6_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Indexing index = new Indexing();
@@ -1915,7 +1953,7 @@ namespace HelloWorldSolutionIMS
             Indexing index = new Indexing();
             index.row = e.RowIndex;
             index.col = e.ColumnIndex;
-            index.value = guna2DataGridView13.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            index.value = guna2DataGridView14.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
             int checker = 0;
             foreach (var item in Deficiencycoordinates)
             {
@@ -1931,20 +1969,20 @@ namespace HelloWorldSolutionIMS
             {
                 Deficiencycoordinates.Add(index);
             }
-            guna2DataGridView13.ClearSelection();
-            for (int i = 0; i < guna2DataGridView13.Rows.Count; i++)
+            guna2DataGridView14.ClearSelection();
+            for (int i = 0; i < guna2DataGridView14.Rows.Count; i++)
             {
-                for (int j = 0; j < guna2DataGridView13.Columns.Count; j++)
+                for (int j = 0; j < guna2DataGridView14.Columns.Count; j++)
                 {
-                    guna2DataGridView13.Rows[i].Cells[j].Style.BackColor = Color.White;
-                    guna2DataGridView13.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    guna2DataGridView14.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView14.Rows[i].Cells[j].Style.ForeColor = Color.Black;
                 }
             }
 
             foreach (var item in Deficiencycoordinates)
             {
-                guna2DataGridView13.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
-                guna2DataGridView13.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
+                guna2DataGridView14.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
+                guna2DataGridView14.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
 
             }
         }
@@ -1954,7 +1992,7 @@ namespace HelloWorldSolutionIMS
             Indexing index = new Indexing();
             index.row = e.RowIndex;
             index.col = e.ColumnIndex;
-            index.value = guna2DataGridView13.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            index.value = guna2DataGridView15.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
             int checker = 0;
             foreach (var item in Medicationcoordinates)
             {
@@ -1970,22 +2008,380 @@ namespace HelloWorldSolutionIMS
             {
                 Medicationcoordinates.Add(index);
             }
-            guna2DataGridView13.ClearSelection();
-            for (int i = 0; i < guna2DataGridView13.Rows.Count; i++)
+            guna2DataGridView15.ClearSelection();
+            for (int i = 0; i < guna2DataGridView15.Rows.Count; i++)
             {
-                for (int j = 0; j < guna2DataGridView13.Columns.Count; j++)
+                for (int j = 0; j < guna2DataGridView15.Columns.Count; j++)
                 {
-                    guna2DataGridView13.Rows[i].Cells[j].Style.BackColor = Color.White;
-                    guna2DataGridView13.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    guna2DataGridView15.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView15.Rows[i].Cells[j].Style.ForeColor = Color.Black;
                 }
             }
 
             foreach (var item in Medicationcoordinates)
             {
-                guna2DataGridView13.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
-                guna2DataGridView13.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
+                guna2DataGridView15.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
+                guna2DataGridView15.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
 
             }
+        }
+
+        private void guna2DataGridView7_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex==1)
+            {
+                hd.Visible=true;
+            }
+            else
+            {
+                hd.Visible = false;
+            }
+        }
+
+        private void guna2DataGridView8_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                c.Visible = true;
+            }
+            else
+            {
+                c.Visible = false;
+            }
+        }
+
+        private void guna2DataGridView9_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                id.Visible = true;
+            }
+            else
+            {
+                id.Visible = false;
+            }
+        }
+
+        private void guna2DataGridView10_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                hed.Visible = true;
+            }
+            else
+            {
+                hed.Visible = false;
+            }
+        }
+
+        private void guna2DataGridView11_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                pd.Visible = true;
+            }
+            else
+            {
+                pd.Visible = false;
+            }
+        }
+
+        private void guna2DataGridView12_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                od.Visible = true;
+            }
+            else
+            {
+                od.Visible = false;
+            }
+        }
+
+        private void guna2DataGridView16_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Indexing index = new Indexing();
+            index.row = e.RowIndex;
+            index.col = e.ColumnIndex;
+            index.value = guna2DataGridView15.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            int checker = 0;
+            foreach (var item in Dietcoordinates)
+            {
+                if (item.row == index.row && item.col == index.col)
+                {
+                    Dietcoordinates.Remove(item);
+                    checker = 1;
+                    break;
+                }
+            }
+
+            if (checker == 0)
+            {
+                Dietcoordinates.Add(index);
+            }
+            guna2DataGridView15.ClearSelection();
+            for (int i = 0; i < guna2DataGridView15.Rows.Count; i++)
+            {
+                for (int j = 0; j < guna2DataGridView15.Columns.Count; j++)
+                {
+                    guna2DataGridView15.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView15.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+
+            foreach (var item in Dietcoordinates)
+            {
+                guna2DataGridView15.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
+                guna2DataGridView15.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void filenomh_TextChanged(object sender, EventArgs e)
+        {
+            if (filenomh.Text != "")
+            {
+                int value = int.Parse(filenomh.Text);
+
+                try
+                {
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
+
+                    SqlCommand cmd2 = new SqlCommand("SELECT  FIRSTNAME, FAMILYNAME, MOBILENO, GENDER, AGE, NutritionistName FROM CUSTOMER " +
+                        "WHERE FILENO = @fileno", MainClass.con);
+
+                    cmd2.Parameters.AddWithValue("@fileno", value);
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+                    if (reader2.Read())
+                    {
+
+
+                        firstnamemh.Text = reader2["FIRSTNAME"].ToString();
+                        familynamemh.Text = reader2["FAMILYNAME"].ToString();
+                        mobilenomh.Text = reader2["MOBILENO"].ToString();
+                        gendermh.Text = reader2["GENDER"].ToString();
+                        agemh.Text = reader2["AGE"].ToString();
+                        nutritionistmh.Text = reader2["NutritionistName"].ToString();
+                        //tabControl1.SelectedIndex = 1;
+                        //filenomh.ReadOnly = false;
+                        firstnamemh.ReadOnly = true;
+                        familynamemh.ReadOnly = true;
+                        mobilenomh.ReadOnly = true;
+                        gendermh.DropDownStyle = ComboBoxStyle.DropDownList;
+                        agemh.ReadOnly = true;
+                        nutritionistmh.ReadOnly = true;
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("No customer with this file no exist!");
+                    }
+
+                    reader2.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
+                    ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
+                }
+                catch (Exception ex)
+                {
+
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+
+                }
+            }
+        }
+
+        private void guna2Button3_Click_1(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 3;
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 4;
+        }
+
+        private void SaveMedicalHistory_Click(object sender, EventArgs e)
+        {
+
+            if (edit == 0)
+            {
+                if (firstnamemh.Text != "" && familynamemh.Text != "" && gendermh.Text != "" && mobilenomh.Text != "")
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+                        SqlCommand cmd = new SqlCommand("INSERT INTO MedicalHistory (FileNo, Status, Smoking, BloodType) " +
+                        "VALUES (@FileNo, @Status, @Smoking, @BloodType)", MainClass.con);
+
+                        int fileNoValue = int.Parse(filenomh.Text); // Get the actual file number from your application logic.
+                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
+                        cmd.Parameters.AddWithValue("@Status", status); // Replace statusValue with the actual value.
+                        cmd.Parameters.AddWithValue("@Smoking", smoking); // Replace smokingValue with the actual value.
+                        cmd.Parameters.AddWithValue("@BloodType", bloodtype); // Replace bloodTypeValue with the actual value.
+
+                        cmd.ExecuteNonQuery();
+                       
+
+                        var genderval = gendermh.Text;
+                        var heightval = double.Parse(height.Text);
+                        var heightforBMR = heightval;
+                        heightval = heightval / 100;
+                        heightval = heightval * heightval;
+
+                        var weightval = double.Parse(weight.Text);
+                        var mh = weightval / heightval;
+
+                        weightval = weightval * 10;
+                        heightforBMR = heightforBMR * 6.25;
+
+                        int ageval = int.Parse(agemh.Text);
+
+                        ageval = ageval * 5;
+                        double bmr = 0;
+
+                        if (genderval == "Female")
+                        {
+                            bmr = weightval + heightforBMR - ageval - 161;
+                        }
+                        else
+                        {
+                            bmr = weightval + heightforBMR - ageval + 5;
+                        }
+
+                        cmd.Parameters.AddWithValue("@BMI", mh); // Replace mhValue with the actual value.
+                        cmd.Parameters.AddWithValue("@BMR", bmr); // Replace bmrValue with the actual value.
+                        //cmd.Parameters.AddWithValue("@CustomerID", customerIDValue);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Body composition data added successfully");
+                        MainClass.con.Close();
+                        //ShowBodyComposition(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, mhbc, bmrbc);
+                        tabControl1.SelectedIndex = 1;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("First name, Family name, gender, mobile no, Date of birth are mandory!.");
+                }
+            }
+            else
+            {
+                if (filenomh.Text != "")
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+                        SqlCommand cmd = new SqlCommand("UPDATE BodyComposition SET DATE = @DATE, BCA = @BCA, LENGTH = @LENGTH, WEIGHT = @WEIGHT, AGE = @AGE, FATS = @FATS, PROTEIN = @PROTEIN, WATER = @WATER, MINERALS = @MINERALS, VISCERAL_FATS = @VISCERAL_FATS, ABDOMINAL_FAT = @ABDOMINAL_FAT, BMI = @BMI, BMR = @BMR WHERE ID = @CustomerID", MainClass.con);
+
+                        // Assuming you have a customer ID, replace customerIDValue with the actual ID.
+                        int customerIDValue = int.Parse(filenomh.Text); // Get the actual customer ID from your application logic.
+
+                        // Set parameters for the BodyComposition update
+                        cmd.Parameters.AddWithValue("@DATE", DateTime.Now); // Assuming the current date is used.
+                        cmd.Parameters.AddWithValue("@BCA", bca.Text); // Replace bcaValue with the actual value.
+                        cmd.Parameters.AddWithValue("@LENGTH", height.Text); // Replace lengthValue with the actual value.
+                        cmd.Parameters.AddWithValue("@WEIGHT", weight.Text); // Replace weightValue with the actual value.
+                        cmd.Parameters.AddWithValue("@AGE", agemh.Text); // Replace ageValue with the actual value.
+                        cmd.Parameters.AddWithValue("@FATS", fats.Text); // Replace fatsValue with the actual value.
+                        cmd.Parameters.AddWithValue("@PROTEIN", protein.Text); // Replace proteinValue with the actual value.
+                        cmd.Parameters.AddWithValue("@WATER", water.Text); // Replace waterValue with the actual value.
+                        cmd.Parameters.AddWithValue("@MINERALS", minerals.Text); // Replace mineralsValue with the actual value.
+                        cmd.Parameters.AddWithValue("@VISCERAL_FATS", visceralfats.Text); // Replace visceralFatsValue with the actual value.
+                        cmd.Parameters.AddWithValue("@ABDOMINAL_FAT", abdominalfats.Text); // Replace abdominalFatValue with the actual value.
+
+                        var genderval = gendermh.Text;
+                        var heightval = double.Parse(height.Text);
+                        var heightforBMR = heightval;
+                        heightval = heightval / 100;
+                        heightval = heightval * heightval;
+
+                        var weightval = double.Parse(weight.Text);
+                        var mh = weightval / heightval;
+
+                        weightval = weightval * 10;
+                        heightforBMR = heightforBMR * 6.25;
+
+                        int ageval = int.Parse(agemh.Text);
+
+                        ageval = ageval * 5;
+                        double bmr = 0;
+
+                        if (genderval == "Female")
+                        {
+                            bmr = weightval + heightforBMR - ageval - 161;
+                        }
+                        else
+                        {
+                            bmr = weightval + heightforBMR - ageval + 5;
+                        }
+
+                        cmd.Parameters.AddWithValue("@BMI", mh); // Replace mhValue with the actual value.
+                        cmd.Parameters.AddWithValue("@BMR", bmr); // Replace bmrValue with the actual value.
+                        cmd.Parameters.AddWithValue("@CustomerID", BMIID);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Body composition data updated successfully");
+                        MainClass.con.Close();
+                        bca.Text = "";
+                        height.Text = "";
+                        weight.Text = "";
+                        protein.Text = "";
+                        water.Text = "";
+                        minerals.Text = "";
+                        abdominalfats.Text = "";
+                        visceralfats.Text = "";
+                        fats.Text = "";
+                        ShowBodyComposition(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
+                        tabControl1.SelectedIndex = 1;
+                        edit = 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("First name, Family name, gender, mobile no, Date of birth are mandory!.");
+                }
+            }
+        }
+
+        static string status;
+        static string smoking;
+        static string bloodtype;
+        private void guna2DataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            status = guna2DataGridView3.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+        }
+
+        private void guna2DataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            smoking = guna2DataGridView4.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+        }
+
+        private void guna2DataGridView5_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bloodtype = guna2DataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
         }
     }
 }
