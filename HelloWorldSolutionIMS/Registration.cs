@@ -1479,7 +1479,7 @@ namespace HelloWorldSolutionIMS
             {
                 MainClass.con.Open();
 
-                cmd = new SqlCommand("SELECT ID,FILENO,FIRSTNAME,FAMILYNAME FROM MedicalHistory WHERE CustomerID = @CUSTOMERID ORDER BY ID", MainClass.con);
+                cmd = new SqlCommand("SELECT ID,FILENO,FIRSTNAME,FAMILYNAME FROM MedicalHistory WHERE FILENO = @CUSTOMERID ORDER BY ID", MainClass.con);
                 cmd.Parameters.AddWithValue("@CUSTOMERID", filenomh.Text); // Replace 'customerIdToFind' with the actual ID you want to find.
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -2103,7 +2103,7 @@ namespace HelloWorldSolutionIMS
             Indexing index = new Indexing();
             index.row = e.RowIndex;
             index.col = e.ColumnIndex;
-            index.value = guna2DataGridView15.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            index.value = guna2DataGridView16.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
             int checker = 0;
             foreach (var item in Dietcoordinates)
             {
@@ -2119,20 +2119,20 @@ namespace HelloWorldSolutionIMS
             {
                 Dietcoordinates.Add(index);
             }
-            guna2DataGridView15.ClearSelection();
-            for (int i = 0; i < guna2DataGridView15.Rows.Count; i++)
+            guna2DataGridView16.ClearSelection();
+            for (int i = 0; i < guna2DataGridView16.Rows.Count; i++)
             {
                 for (int j = 0; j < guna2DataGridView15.Columns.Count; j++)
                 {
-                    guna2DataGridView15.Rows[i].Cells[j].Style.BackColor = Color.White;
-                    guna2DataGridView15.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    guna2DataGridView16.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView16.Rows[i].Cells[j].Style.ForeColor = Color.Black;
                 }
             }
 
             foreach (var item in Dietcoordinates)
             {
-                guna2DataGridView15.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
-                guna2DataGridView15.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
+                guna2DataGridView16.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
+                guna2DataGridView16.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
 
             }
         }
@@ -2211,61 +2211,30 @@ namespace HelloWorldSolutionIMS
 
         private void SaveMedicalHistory_Click(object sender, EventArgs e)
         {
-
+            int fileNoValue = int.Parse(filenomh.Text);
             if (edit == 0)
             {
                 if (firstnamemh.Text != "" && familynamemh.Text != "" && gendermh.Text != "" && mobilenomh.Text != "")
                 {
                     try
                     {
-                        MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("INSERT INTO MedicalHistory (FileNo, Status, Smoking, BloodType) " +
-                        "VALUES (@FileNo, @Status, @Smoking, @BloodType)", MainClass.con);
+                        MainClass.con.Open(); // Open the connection to the database
 
-                        int fileNoValue = int.Parse(filenomh.Text); // Get the actual file number from your application logic.
-                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
-                        cmd.Parameters.AddWithValue("@Status", status); // Replace statusValue with the actual value.
-                        cmd.Parameters.AddWithValue("@Smoking", smoking); // Replace smokingValue with the actual value.
-                        cmd.Parameters.AddWithValue("@BloodType", bloodtype); // Replace bloodTypeValue with the actual value.
+                        // Prepare an SQL query to insert a new record into the MedicalHistory table
+                        SqlCommand cmd = new SqlCommand("INSERT INTO MedicalHistory (FileNo, Status, Smoking, BloodType, Firstname, Familyname) " +
+                                                        "VALUES (@FileNo, @Status, @Smoking, @BloodType, @Firstname, @Familyname)", MainClass.con);
 
-                        cmd.ExecuteNonQuery();
-                       
-
-                        var genderval = gendermh.Text;
-                        var heightval = double.Parse(height.Text);
-                        var heightforBMR = heightval;
-                        heightval = heightval / 100;
-                        heightval = heightval * heightval;
-
-                        var weightval = double.Parse(weight.Text);
-                        var mh = weightval / heightval;
-
-                        weightval = weightval * 10;
-                        heightforBMR = heightforBMR * 6.25;
-
-                        int ageval = int.Parse(agemh.Text);
-
-                        ageval = ageval * 5;
-                        double bmr = 0;
-
-                        if (genderval == "Female")
-                        {
-                            bmr = weightval + heightforBMR - ageval - 161;
-                        }
-                        else
-                        {
-                            bmr = weightval + heightforBMR - ageval + 5;
-                        }
-
-                        cmd.Parameters.AddWithValue("@BMI", mh); // Replace mhValue with the actual value.
-                        cmd.Parameters.AddWithValue("@BMR", bmr); // Replace bmrValue with the actual value.
-                        //cmd.Parameters.AddWithValue("@CustomerID", customerIDValue);
+                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value
+                        cmd.Parameters.AddWithValue("@Status", status); // Replace statusValue with the actual value
+                        cmd.Parameters.AddWithValue("@Smoking", smoking); // Replace smokingValue with the actual value
+                        cmd.Parameters.AddWithValue("@BloodType", bloodtype); // Replace bloodTypeValue with the actual value
+                        cmd.Parameters.AddWithValue("@Firstname", firstnamemh.Text); // Replace firstnameValue with the actual value
+                        cmd.Parameters.AddWithValue("@Familyname", familynamemh.Text); // Replace familynameValue with the actual value
 
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Body composition data added successfully");
+
+                        // Close the connection to the database
                         MainClass.con.Close();
-                        //ShowBodyComposition(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, mhbc, bmrbc);
-                        tabControl1.SelectedIndex = 1;
 
                     }
                     catch (Exception ex)
@@ -2273,7 +2242,188 @@ namespace HelloWorldSolutionIMS
                         MainClass.con.Close();
                         MessageBox.Show(ex.Message);
                     }
+                    try
+                    {
+                        MainClass.con.Open();
+                        foreach (var item in coordinates)
+                        {
+                            SqlCommand cmd = new SqlCommand("INSERT INTO DiseaseHistory (FileNo, rowindex, colindex, data) " +
+                                                         "VALUES (@FileNo, @rowindex, @colindex, @data)", MainClass.con);
+
+                            // Get the actual file number from your application logic.
+                            cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
+                            cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
+                            cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
+                            cmd.Parameters.AddWithValue("@data", item.value); // Replace data with the actual value.
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        
+
+                        //MessageBox.Show("Disease history data added successfully");
+                        MainClass.con.Close();
+
+                        // Update the UI with the new data
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("INSERT INTO FoodAllergies (FileNo, rowindex, colindex, data) " +
+                                                         "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
+
+                        // Get the actual file number from your application logic.
+                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
+
+                        foreach (var item in Allegiescoordinates)
+                        {
+                            cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
+                            cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
+                            cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        //MessageBox.Show("Food allergy data added successfully");
+                        MainClass.con.Close();
+
+                        // Update the UI with the new data
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Deficiency (FileNo, rowindex, colindex, data) " +
+                                                         "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
+
+                        // Get the actual file number from your application logic.
+                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
+
+                        foreach (var item in Deficiencycoordinates)
+                        {
+                            cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
+                            cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
+                            cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        //MessageBox.Show("Food allergy data added successfully");
+                        MainClass.con.Close();
+
+                        // Update the UI with the new data
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Medication (FileNo, rowindex, colindex, data) " +
+                                                         "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
+
+                        // Get the actual file number from your application logic.
+                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
+
+                        foreach (var item in Medicationcoordinates)
+                        {
+                            cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
+                            cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
+                            cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        //MessageBox.Show("Food allergy data added successfully");
+                        MainClass.con.Close();
+
+                        // Update the UI with the new data
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Diet (FileNo, rowindex, colindex, data) " +
+                                                         "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
+
+                        // Get the actual file number from your application logic.
+                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
+
+                        foreach (var item in Medicationcoordinates)
+                        {
+                            cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
+                            cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
+                            cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+
+                            cmd.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Medical history added successfully");
+                        MainClass.con.Close();
+
+                        // Update the UI with the new data
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                    //try
+                    //{
+                    //    MainClass.con.Open();
+
+                    //    SqlCommand cmd = new SqlCommand("INSERT INTO Questions (FileNo, hormonalDisease, cancer, immuneDisease, hereditaryDisease, pancreaticDisease, otherDisease, hormonalDiseaseText, cancerText, immuneDiseaseText, hereditaryDiseaseText, pancreaticDiseaseText, otherDiseaseText) " +
+                    //                                    "VALUES (@FileNo, @hormonalDisease, @cancer, @immuneDisease, @hereditaryDisease, @pancreaticDisease, @otherDisease, @hormonalDiseaseText, @cancerText, @immuneDiseaseText, @hereditaryDiseaseText, @pancreaticDiseaseText, @otherDiseaseText)", MainClass.con);
+
+                    //    // Get the actual file number from your application logic and assign it to the @FileNo parameter
+                    //    cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value
+
+                    //    // Get the values for each disease and disease text from your application logic and assign them to the corresponding parameters
+                    //    cmd.Parameters.AddWithValue("@hormonalDisease", hormonalDiseaseValue); // Replace hormonalDiseaseValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@cancer", cancerValue); // Replace cancerValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@immuneDisease", immuneDiseaseValue); // Replace immuneDiseaseValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@hereditaryDisease", hereditaryDiseaseValue); // Replace hereditaryDiseaseValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@pancreaticDisease", pancreaticDiseaseValue); // Replace pancreaticDiseaseValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@otherDisease", otherDiseaseValue); // Replace otherDiseaseValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@hormonalDiseaseText", hormonalDiseaseTextValue); // Replace hormonalDiseaseTextValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@cancerText", cancerTextValue); // Replace cancerTextValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@immuneDiseaseText", immuneDiseaseTextValue); // Replace immuneDiseaseTextValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@hereditaryDiseaseText", hereditaryDiseaseTextValue); // Replace hereditaryDiseaseTextValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@pancreaticDiseaseText", pancreaticDiseaseTextValue); // Replace pancreaticDiseaseTextValue with the actual value
+                    //    cmd.Parameters.AddWithValue("@otherDiseaseText", otherDiseaseTextValue); // Replace otherDiseaseTextValue with the actual value
+
+                    //    cmd.ExecuteNonQuery();
+
+                    //    MessageBox.Show("Questions added successfully");
+                    //    MainClass.con.Close();
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    MainClass.con.Close();
+                    //    MessageBox.Show(ex.Message);
+                    //}
+
                 }
+
                 else
                 {
                     MessageBox.Show("First name, Family name, gender, mobile no, Date of birth are mandory!.");
