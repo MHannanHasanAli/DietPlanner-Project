@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -189,7 +190,136 @@ namespace HelloWorldSolutionIMS
                 fileno.Text = coderunner.ToString();
                 coderunner = 0;
             }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
 
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    string colorString = reader["Color"].ToString();
+                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+
+                    foreach (Control control in panel1.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                   
+
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    string colorString = reader["Color"].ToString();
+                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+
+                    foreach (Control control in panel1.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                   
+
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Text", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    string bold = reader["Bold"].ToString();
+                    string italic = reader["italic"].ToString();
+                    string underline = reader["underline"].ToString();
+                    string size = reader["size"].ToString();
+                    FontStyle fontStyle = FontStyle.Regular;
+
+                    if (bold.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Bold;
+                    }
+
+                    if (italic.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Italic;
+                    }
+
+                    if (underline.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Underline;
+                    }
+
+                    int fontSize = int.Parse(size);
+
+                 
+                    foreach (System.Windows.Forms.Control control in panel1.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                  
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
         }
         
         static int counter = 0;

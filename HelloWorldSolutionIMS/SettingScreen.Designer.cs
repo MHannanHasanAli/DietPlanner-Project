@@ -30,18 +30,18 @@ namespace HelloWorldSolutionIMS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDatabaseSettings = new System.Windows.Forms.Button();
             this.btnUserSettings = new System.Windows.Forms.Button();
@@ -98,9 +98,6 @@ namespace HelloWorldSolutionIMS
             this.room1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Delete = new Guna.UI2.WinForms.Guna2Button();
             this.AddNutri = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Attach = new Guna.UI2.WinForms.Guna2Button();
-            this.label16 = new System.Windows.Forms.Label();
             this.Dbsetting = new Guna.UI2.WinForms.Guna2Button();
             this.Save = new Guna.UI2.WinForms.Guna2Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -169,6 +166,17 @@ namespace HelloWorldSolutionIMS
             this.downloadingredient = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.SaveSettings = new Guna.UI2.WinForms.Guna2Button();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.underline = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.itallic = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.bold = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textsize = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Attach = new Guna.UI2.WinForms.Guna2Button();
             this.ColorClose = new Guna.UI2.WinForms.Guna2Button();
             this.textselectpanel = new System.Windows.Forms.Panel();
             this.ApplyText = new Guna.UI2.WinForms.Guna2Button();
@@ -185,6 +193,7 @@ namespace HelloWorldSolutionIMS
             this.showpanel = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagridview1)).BeginInit();
@@ -196,7 +205,6 @@ namespace HelloWorldSolutionIMS
             this.DatabaseSettings.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -213,6 +221,7 @@ namespace HelloWorldSolutionIMS
             this.panel10.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -288,22 +297,22 @@ namespace HelloWorldSolutionIMS
             // 
             this.Datagridview1.AllowUserToAddRows = false;
             this.Datagridview1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.Datagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            this.Datagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.Datagridview1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Datagridview1.BackgroundColor = System.Drawing.Color.White;
             this.Datagridview1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Datagridview1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Datagridview1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Datagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Datagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.Datagridview1.ColumnHeadersHeight = 30;
             this.Datagridview1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameGV,
@@ -311,14 +320,14 @@ namespace HelloWorldSolutionIMS
             this.PasswordGV,
             this.RoleGV});
             this.Datagridview1.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Datagridview1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Datagridview1.DefaultCellStyle = dataGridViewCellStyle23;
             this.Datagridview1.EnableHeadersVisualStyles = false;
             this.Datagridview1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Datagridview1.Location = new System.Drawing.Point(28, 400);
@@ -327,8 +336,8 @@ namespace HelloWorldSolutionIMS
             this.Datagridview1.ReadOnly = true;
             this.Datagridview1.RowHeadersVisible = false;
             this.Datagridview1.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Datagridview1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Datagridview1.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.Datagridview1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Datagridview1.Size = new System.Drawing.Size(1013, 220);
             this.Datagridview1.TabIndex = 7;
@@ -796,9 +805,6 @@ namespace HelloWorldSolutionIMS
             this.panel4.Controls.Add(this.room1);
             this.panel4.Controls.Add(this.Delete);
             this.panel4.Controls.Add(this.AddNutri);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.Attach);
-            this.panel4.Controls.Add(this.label16);
             this.panel4.Controls.Add(this.Dbsetting);
             this.panel4.Controls.Add(this.Save);
             this.panel4.Controls.Add(this.label12);
@@ -858,7 +864,7 @@ namespace HelloWorldSolutionIMS
             this.Colorsetting.ShadowDecoration.Parent = this.Colorsetting;
             this.Colorsetting.Size = new System.Drawing.Size(199, 45);
             this.Colorsetting.TabIndex = 132;
-            this.Colorsetting.Text = "Color Settings";
+            this.Colorsetting.Text = "Color & Text Settings";
             this.Colorsetting.Click += new System.EventHandler(this.Colorsetting_Click);
             // 
             // guna2Button6
@@ -1072,44 +1078,6 @@ namespace HelloWorldSolutionIMS
             this.AddNutri.Text = "Add Nutritionist";
             this.AddNutri.Click += new System.EventHandler(this.AddNutri_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(17, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 104);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 114;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Attach
-            // 
-            this.Attach.AutoRoundedCorners = true;
-            this.Attach.BorderRadius = 16;
-            this.Attach.CausesValidation = false;
-            this.Attach.CheckedState.Parent = this.Attach;
-            this.Attach.CustomImages.Parent = this.Attach;
-            this.Attach.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.Attach.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.Attach.ForeColor = System.Drawing.Color.White;
-            this.Attach.HoverState.Parent = this.Attach;
-            this.Attach.Location = new System.Drawing.Point(204, 114);
-            this.Attach.Name = "Attach";
-            this.Attach.ShadowDecoration.Parent = this.Attach;
-            this.Attach.Size = new System.Drawing.Size(267, 34);
-            this.Attach.TabIndex = 113;
-            this.Attach.Text = "Attach";
-            this.Attach.Click += new System.EventHandler(this.Attach_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label16.Location = new System.Drawing.Point(13, 114);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(139, 24);
-            this.label16.TabIndex = 112;
-            this.label16.Text = "Company Logo";
-            // 
             // Dbsetting
             // 
             this.Dbsetting.AutoRoundedCorners = true;
@@ -1152,7 +1120,7 @@ namespace HelloWorldSolutionIMS
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label12.Location = new System.Drawing.Point(13, 504);
+            this.label12.Location = new System.Drawing.Point(14, 363);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(151, 24);
             this.label12.TabIndex = 90;
@@ -1171,7 +1139,7 @@ namespace HelloWorldSolutionIMS
             this.welcomewords.FocusedState.Parent = this.welcomewords;
             this.welcomewords.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.welcomewords.HoverState.Parent = this.welcomewords;
-            this.welcomewords.Location = new System.Drawing.Point(204, 497);
+            this.welcomewords.Location = new System.Drawing.Point(205, 356);
             this.welcomewords.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.welcomewords.Multiline = true;
             this.welcomewords.Name = "welcomewords";
@@ -1186,7 +1154,7 @@ namespace HelloWorldSolutionIMS
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label13.Location = new System.Drawing.Point(13, 456);
+            this.label13.Location = new System.Drawing.Point(14, 315);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(175, 24);
             this.label13.TabIndex = 88;
@@ -1205,7 +1173,7 @@ namespace HelloWorldSolutionIMS
             this.trade.FocusedState.Parent = this.trade;
             this.trade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.trade.HoverState.Parent = this.trade;
-            this.trade.Location = new System.Drawing.Point(204, 449);
+            this.trade.Location = new System.Drawing.Point(205, 308);
             this.trade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.trade.Name = "trade";
             this.trade.PasswordChar = '\0';
@@ -1220,7 +1188,7 @@ namespace HelloWorldSolutionIMS
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label14.Location = new System.Drawing.Point(13, 407);
+            this.label14.Location = new System.Drawing.Point(14, 266);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(85, 24);
             this.label14.TabIndex = 86;
@@ -1239,7 +1207,7 @@ namespace HelloWorldSolutionIMS
             this.pobox.FocusedState.Parent = this.pobox;
             this.pobox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.pobox.HoverState.Parent = this.pobox;
-            this.pobox.Location = new System.Drawing.Point(204, 400);
+            this.pobox.Location = new System.Drawing.Point(205, 259);
             this.pobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pobox.Name = "pobox";
             this.pobox.PasswordChar = '\0';
@@ -1254,7 +1222,7 @@ namespace HelloWorldSolutionIMS
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label15.Location = new System.Drawing.Point(13, 359);
+            this.label15.Location = new System.Drawing.Point(14, 218);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(57, 24);
             this.label15.TabIndex = 84;
@@ -1273,7 +1241,7 @@ namespace HelloWorldSolutionIMS
             this.email.FocusedState.Parent = this.email;
             this.email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.email.HoverState.Parent = this.email;
-            this.email.Location = new System.Drawing.Point(204, 352);
+            this.email.Location = new System.Drawing.Point(205, 211);
             this.email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.email.Name = "email";
             this.email.PasswordChar = '\0';
@@ -1287,7 +1255,7 @@ namespace HelloWorldSolutionIMS
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label11.Location = new System.Drawing.Point(13, 311);
+            this.label11.Location = new System.Drawing.Point(14, 170);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(67, 24);
             this.label11.TabIndex = 82;
@@ -1306,7 +1274,7 @@ namespace HelloWorldSolutionIMS
             this.mobile.FocusedState.Parent = this.mobile;
             this.mobile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.mobile.HoverState.Parent = this.mobile;
-            this.mobile.Location = new System.Drawing.Point(204, 304);
+            this.mobile.Location = new System.Drawing.Point(205, 163);
             this.mobile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mobile.Name = "mobile";
             this.mobile.PasswordChar = '\0';
@@ -1321,7 +1289,7 @@ namespace HelloWorldSolutionIMS
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label10.Location = new System.Drawing.Point(13, 263);
+            this.label10.Location = new System.Drawing.Point(14, 122);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 24);
             this.label10.TabIndex = 80;
@@ -1340,7 +1308,7 @@ namespace HelloWorldSolutionIMS
             this.landline.FocusedState.Parent = this.landline;
             this.landline.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.landline.HoverState.Parent = this.landline;
-            this.landline.Location = new System.Drawing.Point(204, 256);
+            this.landline.Location = new System.Drawing.Point(205, 115);
             this.landline.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.landline.Name = "landline";
             this.landline.PasswordChar = '\0';
@@ -1355,7 +1323,7 @@ namespace HelloWorldSolutionIMS
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label9.Location = new System.Drawing.Point(13, 214);
+            this.label9.Location = new System.Drawing.Point(14, 73);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 24);
             this.label9.TabIndex = 78;
@@ -1374,7 +1342,7 @@ namespace HelloWorldSolutionIMS
             this.branch.FocusedState.Parent = this.branch;
             this.branch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.branch.HoverState.Parent = this.branch;
-            this.branch.Location = new System.Drawing.Point(204, 207);
+            this.branch.Location = new System.Drawing.Point(205, 66);
             this.branch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.branch.Name = "branch";
             this.branch.PasswordChar = '\0';
@@ -1388,7 +1356,7 @@ namespace HelloWorldSolutionIMS
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label7.Location = new System.Drawing.Point(13, 166);
+            this.label7.Location = new System.Drawing.Point(14, 25);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(147, 24);
             this.label7.TabIndex = 76;
@@ -1407,7 +1375,7 @@ namespace HelloWorldSolutionIMS
             this.companyname.FocusedState.Parent = this.companyname;
             this.companyname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.companyname.HoverState.Parent = this.companyname;
-            this.companyname.Location = new System.Drawing.Point(204, 159);
+            this.companyname.Location = new System.Drawing.Point(205, 18);
             this.companyname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.companyname.Name = "companyname";
             this.companyname.PasswordChar = '\0';
@@ -1599,33 +1567,33 @@ namespace HelloWorldSolutionIMS
             // 
             this.guna2DataGridView4.AllowUserToAddRows = false;
             this.guna2DataGridView4.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.guna2DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView4.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView4.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.guna2DataGridView4.ColumnHeadersHeight = 27;
             this.guna2DataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddgv,
             this.namedgv});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView4.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView4.DefaultCellStyle = dataGridViewCellStyle15;
             this.guna2DataGridView4.EnableHeadersVisualStyles = false;
             this.guna2DataGridView4.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView4.Location = new System.Drawing.Point(45, 120);
@@ -1633,11 +1601,11 @@ namespace HelloWorldSolutionIMS
             this.guna2DataGridView4.ReadOnly = true;
             this.guna2DataGridView4.RowHeadersVisible = false;
             this.guna2DataGridView4.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.guna2DataGridView4.RowTemplate.Height = 24;
             this.guna2DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView4.Size = new System.Drawing.Size(968, 400);
@@ -1916,32 +1884,33 @@ namespace HelloWorldSolutionIMS
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.guna2DataGridView1.ColumnHeadersHeight = 27;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.useriddgv,
             this.usernamedgv});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle27;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.Location = new System.Drawing.Point(49, 131);
@@ -1949,11 +1918,11 @@ namespace HelloWorldSolutionIMS
             this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle28;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView1.Size = new System.Drawing.Size(968, 400);
@@ -2250,6 +2219,18 @@ namespace HelloWorldSolutionIMS
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Controls.Add(this.label16);
+            this.panel11.Controls.Add(this.SaveSettings);
+            this.panel11.Controls.Add(this.label34);
+            this.panel11.Controls.Add(this.label33);
+            this.panel11.Controls.Add(this.label32);
+            this.panel11.Controls.Add(this.underline);
+            this.panel11.Controls.Add(this.itallic);
+            this.panel11.Controls.Add(this.bold);
+            this.panel11.Controls.Add(this.label31);
+            this.panel11.Controls.Add(this.textsize);
+            this.panel11.Controls.Add(this.pictureBox1);
+            this.panel11.Controls.Add(this.Attach);
             this.panel11.Controls.Add(this.ColorClose);
             this.panel11.Controls.Add(this.textselectpanel);
             this.panel11.Controls.Add(this.ApplyText);
@@ -2271,6 +2252,195 @@ namespace HelloWorldSolutionIMS
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1065, 760);
             this.panel11.TabIndex = 0;
+            // 
+            // SaveSettings
+            // 
+            this.SaveSettings.AutoRoundedCorners = true;
+            this.SaveSettings.BorderRadius = 21;
+            this.SaveSettings.CausesValidation = false;
+            this.SaveSettings.CheckedState.Parent = this.SaveSettings;
+            this.SaveSettings.CustomImages.Parent = this.SaveSettings;
+            this.SaveSettings.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.SaveSettings.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.SaveSettings.ForeColor = System.Drawing.Color.White;
+            this.SaveSettings.HoverState.Parent = this.SaveSettings;
+            this.SaveSettings.Location = new System.Drawing.Point(850, 466);
+            this.SaveSettings.Name = "SaveSettings";
+            this.SaveSettings.ShadowDecoration.Parent = this.SaveSettings;
+            this.SaveSettings.Size = new System.Drawing.Size(160, 45);
+            this.SaveSettings.TabIndex = 302;
+            this.SaveSettings.Text = "Save";
+            this.SaveSettings.Click += new System.EventHandler(this.SaveSettings_Click);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label34.Location = new System.Drawing.Point(389, 534);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(92, 24);
+            this.label34.TabIndex = 301;
+            this.label34.Text = "Underline";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label33.Location = new System.Drawing.Point(389, 475);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(50, 24);
+            this.label33.TabIndex = 300;
+            this.label33.Text = "Itallic";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label32.Location = new System.Drawing.Point(389, 415);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(48, 24);
+            this.label32.TabIndex = 299;
+            this.label32.Text = "Bold";
+            // 
+            // underline
+            // 
+            this.underline.BackColor = System.Drawing.Color.Transparent;
+            this.underline.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.underline.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.underline.FocusedColor = System.Drawing.Color.Empty;
+            this.underline.FocusedState.Parent = this.underline;
+            this.underline.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.underline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.underline.FormattingEnabled = true;
+            this.underline.HoverState.Parent = this.underline;
+            this.underline.ItemHeight = 30;
+            this.underline.Items.AddRange(new object[] {
+            "On",
+            "Off"});
+            this.underline.ItemsAppearance.Parent = this.underline;
+            this.underline.Location = new System.Drawing.Point(483, 534);
+            this.underline.Name = "underline";
+            this.underline.ShadowDecoration.Parent = this.underline;
+            this.underline.Size = new System.Drawing.Size(177, 36);
+            this.underline.TabIndex = 298;
+            // 
+            // itallic
+            // 
+            this.itallic.BackColor = System.Drawing.Color.Transparent;
+            this.itallic.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.itallic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.itallic.FocusedColor = System.Drawing.Color.Empty;
+            this.itallic.FocusedState.Parent = this.itallic;
+            this.itallic.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.itallic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.itallic.FormattingEnabled = true;
+            this.itallic.HoverState.Parent = this.itallic;
+            this.itallic.ItemHeight = 30;
+            this.itallic.Items.AddRange(new object[] {
+            "On",
+            "Off"});
+            this.itallic.ItemsAppearance.Parent = this.itallic;
+            this.itallic.Location = new System.Drawing.Point(483, 475);
+            this.itallic.Name = "itallic";
+            this.itallic.ShadowDecoration.Parent = this.itallic;
+            this.itallic.Size = new System.Drawing.Size(177, 36);
+            this.itallic.TabIndex = 297;
+            // 
+            // bold
+            // 
+            this.bold.BackColor = System.Drawing.Color.Transparent;
+            this.bold.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.bold.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bold.FocusedColor = System.Drawing.Color.Empty;
+            this.bold.FocusedState.Parent = this.bold;
+            this.bold.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.bold.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.bold.FormattingEnabled = true;
+            this.bold.HoverState.Parent = this.bold;
+            this.bold.ItemHeight = 30;
+            this.bold.Items.AddRange(new object[] {
+            "On",
+            "Off"});
+            this.bold.ItemsAppearance.Parent = this.bold;
+            this.bold.Location = new System.Drawing.Point(483, 415);
+            this.bold.Name = "bold";
+            this.bold.ShadowDecoration.Parent = this.bold;
+            this.bold.Size = new System.Drawing.Size(177, 36);
+            this.bold.TabIndex = 296;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label31.Location = new System.Drawing.Point(739, 415);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(88, 24);
+            this.label31.TabIndex = 295;
+            this.label31.Text = "Text Size";
+            // 
+            // textsize
+            // 
+            this.textsize.BackColor = System.Drawing.Color.Transparent;
+            this.textsize.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.textsize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.textsize.FocusedColor = System.Drawing.Color.Empty;
+            this.textsize.FocusedState.Parent = this.textsize;
+            this.textsize.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.textsize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.textsize.FormattingEnabled = true;
+            this.textsize.HoverState.Parent = this.textsize;
+            this.textsize.ItemHeight = 30;
+            this.textsize.Items.AddRange(new object[] {
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "14",
+            "16",
+            "18",
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "36",
+            "48",
+            "72"});
+            this.textsize.ItemsAppearance.Parent = this.textsize;
+            this.textsize.Location = new System.Drawing.Point(833, 415);
+            this.textsize.Name = "textsize";
+            this.textsize.ShadowDecoration.Parent = this.textsize;
+            this.textsize.Size = new System.Drawing.Size(177, 36);
+            this.textsize.TabIndex = 294;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(31, 407);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(161, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 293;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Attach
+            // 
+            this.Attach.AutoRoundedCorners = true;
+            this.Attach.BorderRadius = 16;
+            this.Attach.CausesValidation = false;
+            this.Attach.CheckedState.Parent = this.Attach;
+            this.Attach.CustomImages.Parent = this.Attach;
+            this.Attach.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.Attach.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.Attach.ForeColor = System.Drawing.Color.White;
+            this.Attach.HoverState.Parent = this.Attach;
+            this.Attach.Location = new System.Drawing.Point(31, 529);
+            this.Attach.Name = "Attach";
+            this.Attach.ShadowDecoration.Parent = this.Attach;
+            this.Attach.Size = new System.Drawing.Size(161, 34);
+            this.Attach.TabIndex = 292;
+            this.Attach.Text = "Attach";
+            this.Attach.Click += new System.EventHandler(this.Attach_Click);
             // 
             // ColorClose
             // 
@@ -2459,6 +2629,16 @@ namespace HelloWorldSolutionIMS
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label16.Location = new System.Drawing.Point(27, 380);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(139, 24);
+            this.label16.TabIndex = 303;
+            this.label16.Text = "Company Logo";
+            // 
             // SettingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2487,7 +2667,6 @@ namespace HelloWorldSolutionIMS
             this.tabPage1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -2510,6 +2689,7 @@ namespace HelloWorldSolutionIMS
             this.tabPage8.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -2577,9 +2757,6 @@ namespace HelloWorldSolutionIMS
         private Guna.UI2.WinForms.Guna2TextBox branch;
         private Guna.UI2.WinForms.Guna2Button Dbsetting;
         private Guna.UI2.WinForms.Guna2Button Save;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Button Attach;
-        private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2Button back;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel5;
@@ -2662,5 +2839,17 @@ namespace HelloWorldSolutionIMS
         private Guna.UI2.WinForms.Guna2Button ColorClose;
         private Guna.UI2.WinForms.Guna2Button importsettings;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2ComboBox textsize;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button Attach;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private Guna.UI2.WinForms.Guna2ComboBox underline;
+        private Guna.UI2.WinForms.Guna2ComboBox itallic;
+        private Guna.UI2.WinForms.Guna2ComboBox bold;
+        private Guna.UI2.WinForms.Guna2Button SaveSettings;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -17,6 +17,8 @@ using Org.BouncyCastle.Asn1.Crmf;
 using System.Web.UI;
 using Win32Interop.Enums;
 using Guna.UI2.WinForms;
+using System.Globalization;
+using System.Threading;
 
 namespace HelloWorldSolutionIMS
 {
@@ -24,7 +26,9 @@ namespace HelloWorldSolutionIMS
     {
         public Instruction()
         {
+            
             InitializeComponent();
+
         }
         private void ShowInstructions(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn instruction, DataGridViewColumn nutritionist, DataGridViewColumn date)
         {
@@ -216,6 +220,63 @@ namespace HelloWorldSolutionIMS
                     }
 
                   
+
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Text", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    string bold = reader["Bold"].ToString();
+                    string italic = reader["italic"].ToString();
+                    string underline = reader["underline"].ToString();
+                    string size = reader["size"].ToString();
+                    FontStyle fontStyle = FontStyle.Regular;
+
+                    if (bold.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Bold;
+                    }
+
+                    if (italic.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Italic;
+                    }
+
+                    if (underline.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Underline;
+                    }
+
+                    int fontSize = int.Parse(size);
+
+                    foreach (System.Windows.Forms.Control control in panel1.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+
+
 
 
                 }

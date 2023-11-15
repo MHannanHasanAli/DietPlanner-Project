@@ -6,8 +6,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -272,6 +274,8 @@ namespace HelloWorldSolutionIMS
 
         private void guna2TileButton2_Click(object sender, EventArgs e)
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
+
             loadform(new Instruction());
 
         }

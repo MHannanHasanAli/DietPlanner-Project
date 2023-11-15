@@ -204,6 +204,31 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT * FROM Text", MainClass.con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    bold.Text = dr["Bold"].ToString();
+                    itallic.Text = dr["Italic"].ToString();
+                    underline.Text = dr["Underline"].ToString();
+                    textsize.Text = dr["Size"].ToString();                  
+                }
+
+                dr.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
         }
         private void SettingScreen_Load(object sender, EventArgs e)
         {
@@ -426,6 +451,134 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Text", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    string bold = reader["Bold"].ToString();
+                    string italic = reader["italic"].ToString();
+                    string underline = reader["underline"].ToString();
+                    string size = reader["size"].ToString();
+                    FontStyle fontStyle = FontStyle.Regular;
+
+                    if (bold.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Bold;
+                    }
+
+                    if (italic.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Italic;
+                    }
+
+                    if (underline.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Underline;
+                    }
+
+                    int fontSize = int.Parse(size);
+
+                    foreach (System.Windows.Forms.Control control in panel8.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel7.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel6.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel5.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel4.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel11.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel10.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in DatabaseSettingPanel.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+
+
+
+
                 }
 
                 reader.Close();
@@ -1415,6 +1568,32 @@ namespace HelloWorldSolutionIMS
         private void guna2Button8_Click(object sender, EventArgs e)
         {
             SaveFileAsExcel("\\DemoSettingsImport.xlsx");
+        }
+
+        private void SaveSettings_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE text SET bold = @bold, italic = @itallic, underline = @underline, Size = @size WHERE Id = @Id", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@Id", 1);
+                cmd.Parameters.AddWithValue("@bold",bold.Text);
+                cmd.Parameters.AddWithValue("@itallic", itallic.Text);
+                cmd.Parameters.AddWithValue("@underline", underline.Text);
+                cmd.Parameters.AddWithValue("@size", textsize.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Setting updated successfully");
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+            Application.Restart();
         }
     }
 }

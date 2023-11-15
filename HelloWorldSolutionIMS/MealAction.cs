@@ -937,6 +937,113 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Text", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    string bold = reader["Bold"].ToString();
+                    string italic = reader["italic"].ToString();
+                    string underline = reader["underline"].ToString();
+                    string size = reader["size"].ToString();
+                    FontStyle fontStyle = FontStyle.Regular;
+
+                    if (bold.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Bold;
+                    }
+
+                    if (italic.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Italic;
+                    }
+
+                    if (underline.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Underline;
+                    }
+
+                    int fontSize = int.Parse(size);
+
+                    foreach (System.Windows.Forms.Control control in panel1.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel2.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel3.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel4.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel5.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel6.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+
+
+
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
             chart1.Series.Clear();
             MainClass.HideAllTabsOnTabControl(tabControl1);
             save.Visible = false;

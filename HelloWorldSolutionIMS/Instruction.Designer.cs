@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Instruction));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -64,20 +65,18 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(123, 52);
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
-            this.editToolStripMenuItem.Text = "Edit";
+            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // panel1
@@ -93,11 +92,8 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.instructionname);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1120, 832);
-            this.panel1.TabIndex = 1;
             // 
             // nutritionistname
             // 
@@ -106,17 +102,13 @@
             this.nutritionistname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nutritionistname.FocusedColor = System.Drawing.Color.Empty;
             this.nutritionistname.FocusedState.Parent = this.nutritionistname;
-            this.nutritionistname.Font = new System.Drawing.Font("Segoe UI", 10F);
+            resources.ApplyResources(this.nutritionistname, "nutritionistname");
             this.nutritionistname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.nutritionistname.FormattingEnabled = true;
             this.nutritionistname.HoverState.Parent = this.nutritionistname;
-            this.nutritionistname.ItemHeight = 30;
             this.nutritionistname.ItemsAppearance.Parent = this.nutritionistname;
-            this.nutritionistname.Location = new System.Drawing.Point(183, 71);
             this.nutritionistname.Name = "nutritionistname";
             this.nutritionistname.ShadowDecoration.Parent = this.nutritionistname;
-            this.nutritionistname.Size = new System.Drawing.Size(268, 36);
-            this.nutritionistname.TabIndex = 61;
             // 
             // Search
             // 
@@ -125,15 +117,11 @@
             this.Search.CheckedState.Parent = this.Search;
             this.Search.CustomImages.Parent = this.Search;
             this.Search.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.Search.Font = new System.Drawing.Font("Segoe UI", 11F);
+            resources.ApplyResources(this.Search, "Search");
             this.Search.ForeColor = System.Drawing.Color.White;
             this.Search.HoverState.Parent = this.Search;
-            this.Search.Location = new System.Drawing.Point(852, 324);
             this.Search.Name = "Search";
             this.Search.ShadowDecoration.Parent = this.Search;
-            this.Search.Size = new System.Drawing.Size(220, 45);
-            this.Search.TabIndex = 60;
-            this.Search.Text = "Search Instruction";
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // New
@@ -144,15 +132,11 @@
             this.New.CheckedState.Parent = this.New;
             this.New.CustomImages.Parent = this.New;
             this.New.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.New.Font = new System.Drawing.Font("Segoe UI", 11F);
+            resources.ApplyResources(this.New, "New");
             this.New.ForeColor = System.Drawing.Color.White;
             this.New.HoverState.Parent = this.New;
-            this.New.Location = new System.Drawing.Point(183, 323);
             this.New.Name = "New";
             this.New.ShadowDecoration.Parent = this.New;
-            this.New.Size = new System.Drawing.Size(220, 45);
-            this.New.TabIndex = 59;
-            this.New.Text = "Save Instruction";
             this.New.Click += new System.EventHandler(this.New_Click);
             // 
             // guna2DataGridView1
@@ -174,7 +158,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeight = 27;
+            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nodgv,
             this.instructionnamedgv,
@@ -191,11 +175,9 @@
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.Location = new System.Drawing.Point(183, 389);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowHeadersWidth = 51;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -203,8 +185,6 @@
             this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(889, 398);
-            this.guna2DataGridView1.TabIndex = 58;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -231,44 +211,35 @@
             // nodgv
             // 
             this.nodgv.FillWeight = 104.2909F;
-            this.nodgv.HeaderText = "NO";
-            this.nodgv.MinimumWidth = 6;
+            resources.ApplyResources(this.nodgv, "nodgv");
             this.nodgv.Name = "nodgv";
             this.nodgv.ReadOnly = true;
             // 
             // instructionnamedgv
             // 
             this.instructionnamedgv.FillWeight = 95.2524F;
-            this.instructionnamedgv.HeaderText = "INSTRUCTION NAME";
-            this.instructionnamedgv.MinimumWidth = 6;
+            resources.ApplyResources(this.instructionnamedgv, "instructionnamedgv");
             this.instructionnamedgv.Name = "instructionnamedgv";
             this.instructionnamedgv.ReadOnly = true;
             // 
             // nutritionistnamedgv
             // 
             this.nutritionistnamedgv.FillWeight = 95.2524F;
-            this.nutritionistnamedgv.HeaderText = "NUTRITIONIST NAME";
-            this.nutritionistnamedgv.MinimumWidth = 6;
+            resources.ApplyResources(this.nutritionistnamedgv, "nutritionistnamedgv");
             this.nutritionistnamedgv.Name = "nutritionistnamedgv";
             this.nutritionistnamedgv.ReadOnly = true;
             // 
             // datedgv
             // 
             this.datedgv.FillWeight = 95.2524F;
-            this.datedgv.HeaderText = "DATE";
-            this.datedgv.MinimumWidth = 6;
+            resources.ApplyResources(this.datedgv, "datedgv");
             this.datedgv.Name = "datedgv";
             this.datedgv.ReadOnly = true;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label3.Location = new System.Drawing.Point(72, 131);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 24);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "Instruction";
             // 
             // instructionbox
             // 
@@ -283,54 +254,34 @@
             this.instructionbox.FocusedState.Parent = this.instructionbox;
             this.instructionbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.instructionbox.HoverState.Parent = this.instructionbox;
-            this.instructionbox.Location = new System.Drawing.Point(183, 130);
-            this.instructionbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            resources.ApplyResources(this.instructionbox, "instructionbox");
             this.instructionbox.Multiline = true;
             this.instructionbox.Name = "instructionbox";
             this.instructionbox.PasswordChar = '\0';
             this.instructionbox.PlaceholderText = "";
             this.instructionbox.SelectedText = "";
             this.instructionbox.ShadowDecoration.Parent = this.instructionbox;
-            this.instructionbox.Size = new System.Drawing.Size(889, 187);
-            this.instructionbox.TabIndex = 56;
             // 
             // date
             // 
             this.date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.date.Location = new System.Drawing.Point(541, 85);
+            resources.ApplyResources(this.date, "date");
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(268, 22);
-            this.date.TabIndex = 55;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label5.Location = new System.Drawing.Point(487, 83);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 24);
-            this.label5.TabIndex = 54;
-            this.label5.Text = "Date";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label2.Location = new System.Drawing.Point(13, 69);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 24);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Nutritionist Name";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(23, 19);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 24);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Instruction Name";
             // 
             // instructionname
             // 
@@ -343,30 +294,24 @@
             this.instructionname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.instructionname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.instructionname.FocusedState.Parent = this.instructionname;
-            this.instructionname.Font = new System.Drawing.Font("Segoe UI", 11F);
+            resources.ApplyResources(this.instructionname, "instructionname");
             this.instructionname.ForeColor = System.Drawing.Color.Black;
             this.instructionname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.instructionname.HoverState.Parent = this.instructionname;
-            this.instructionname.Location = new System.Drawing.Point(183, 19);
-            this.instructionname.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.instructionname.Name = "instructionname";
             this.instructionname.PasswordChar = '\0';
             this.instructionname.PlaceholderText = "";
             this.instructionname.SelectedText = "";
             this.instructionname.ShadowDecoration.Parent = this.instructionname;
-            this.instructionname.Size = new System.Drawing.Size(268, 38);
-            this.instructionname.TabIndex = 50;
             // 
             // Instruction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1120, 832);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Instruction";
-            this.Text = "Instruction";
             this.Load += new System.EventHandler(this.Instruction_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
