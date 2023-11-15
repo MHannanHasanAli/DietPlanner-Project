@@ -524,6 +524,322 @@ namespace HelloWorldSolutionIMS
             }
            
         }
+
+        List<string> history = new List<string>
+{
+    "Dysphagia",
+    "Celiac disease",
+    "Hepatitis",
+    "Total cholesterol",
+    "Esophageal reflux",
+    "Gluten sensitivity",
+    "Fatty liver",
+    "LDL",
+    "Indigestion (dyspepsia)",
+    "Inflammatory bowel disease",
+    "Diabetes type 1",
+    "Nephrotic syndrome",
+    "Vomiting",
+    "Crohn's disease",
+    "Diabetes type 2",
+    "Acute kidney failure",
+    "Peptic ulcer",
+    "Short-bowel syndrome",
+    "Atherosclerosis",
+    "Chronic kidney failure",
+    "H. pylori",
+    "Diverticulitis",
+    "Coronary heart disease",
+    "Kidney stone",
+    "Constipation",
+    "Lactose intolerance",
+    "Stroke",
+    "Hypothyroidism",
+    "Bloating",
+    "Gallstone",
+    "Hypertension",
+    "Hyperthyroidism",
+    "Irritable bowel syndrome",
+    "Liver transplant",
+    "Heart failure",
+    "Irregular menstruation",
+    "Steatorrhea",
+    "Cirrhosis",
+    "Triglycerides",
+    "Gout"
+};
+        List<string> allegies = new List<string>
+{
+    "No",
+    "Milk",
+    "wheat",
+    "Beans",
+    "Strawberry",
+    "Honey",
+    "Peanut",
+    "Nuts",
+    "Fish",
+    "Soy",
+    "Sesame",
+    "eggs"
+};
+        List<string> Deficiency = new List<string>
+{
+    "Iron",
+    "vitamin D",
+    "B12",
+    "Folate",
+    "calcium",
+    "N/A"
+};
+        List<string> foodGroups = new List<string>
+{
+    "Milk group",
+    "Dried fruits",
+    "Avocado",
+    "Eggs",
+    "Red meat",
+    "Eggplant",
+    "White meat",
+    "Wheat products",
+    "Fish",
+    "Nuts",
+    "Legumes",
+    "Seafood"
+};
+
+        private void PrepareMCQS()
+        {
+            DataGridViewCell cell1 = guna2DataGridView3.Rows[0].Cells[0];
+            DataGridViewCell cell2 = guna2DataGridView3.Rows[0].Cells[1];
+            DataGridViewCell cell3 = guna2DataGridView3.Rows[0].Cells[2];
+            DataGridViewCell cell4 = guna2DataGridView3.Rows[0].Cells[3];
+
+            DataGridViewCell cell5 = guna2DataGridView4.Rows[0].Cells[0];
+            DataGridViewCell cell6 = guna2DataGridView4.Rows[0].Cells[1];
+            DataGridViewCell cell7 = guna2DataGridView4.Rows[0].Cells[2];
+            DataGridViewCell cell8 = guna2DataGridView4.Rows[0].Cells[3];
+
+            DataGridViewCell cell9  = guna2DataGridView5.Rows[0].Cells[0];
+            DataGridViewCell cell10 = guna2DataGridView5.Rows[0].Cells[1];
+            DataGridViewCell cell11 = guna2DataGridView5.Rows[0].Cells[2];
+            DataGridViewCell cell12 = guna2DataGridView5.Rows[0].Cells[3];
+            DataGridViewCell cell13 = guna2DataGridView5.Rows[0].Cells[4];
+            DataGridViewCell cell14 = guna2DataGridView5.Rows[0].Cells[5];
+            DataGridViewCell cell15 = guna2DataGridView5.Rows[0].Cells[6];
+            DataGridViewCell cell16 = guna2DataGridView5.Rows[0].Cells[7];
+            guna2DataGridView3.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView3.GridColor = Color.Black;
+            guna2DataGridView3.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView3.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView4.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView4.GridColor = Color.Black;
+            guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView5.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView5.GridColor = Color.Black;
+            guna2DataGridView5.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView5.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView6.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView6.GridColor = Color.Black;
+            guna2DataGridView6.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView6.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView7.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView7.GridColor = Color.Black;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView8.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView8.GridColor = Color.Black;
+            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView9.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView9.GridColor = Color.Black;
+            guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView10.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView10.GridColor = Color.Black;
+            guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView11.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView11.GridColor = Color.Black;
+            guna2DataGridView11.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView11.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView12.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView12.GridColor = Color.Black;
+            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView13.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView13.GridColor = Color.Black;
+            guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView14.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView14.GridColor = Color.Black;
+            guna2DataGridView14.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView14.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+            
+            guna2DataGridView15.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView15.GridColor = Color.Black;
+            guna2DataGridView15.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView15.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView16.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView16.GridColor = Color.Black;
+            guna2DataGridView16.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView16.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+
+            cell1.Value = "Single";
+            cell2.Value = "Pregnant";
+            cell3.Value = "Breast Feeding";
+            cell4.Value = "N/A";
+
+            cell5.Value = "Smoker (Cigarettes)";
+            cell6.Value = "Smoker (Hookah)";
+            cell7.Value = "Smoker (Cigarettes & Hookah)";
+            cell8.Value = "Non-Smoker";
+
+            cell9 .Value = "A+";
+            cell10.Value = "A-";
+            cell11.Value = "B+";
+            cell12.Value = "B-";
+            cell13.Value = "O+";
+            cell14.Value = "O-";
+            cell15.Value = "AB+";
+            cell16.Value = "AB-";
+
+            for (int i = 0; i < 10; i++)
+            {
+                guna2DataGridView6.Rows.Add();
+            }
+
+            int index = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    guna2DataGridView6.Rows[i].Cells[j].Value = history[index];
+                    index++;
+                }
+            }
+
+            guna2DataGridView6.ClearSelection();
+            guna2DataGridView13.ClearSelection();
+
+            guna2DataGridView7.Rows[0].Cells[0].Value = "No";
+            guna2DataGridView7.Rows[0].Cells[1].Value = "Yes";
+            guna2DataGridView8.Rows[0].Cells[0].Value = "No";
+            guna2DataGridView8.Rows[0].Cells[1].Value = "Yes";
+            guna2DataGridView9.Rows[0].Cells[0].Value = "No";
+            guna2DataGridView9.Rows[0].Cells[1].Value = "Yes";
+            guna2DataGridView10.Rows[0].Cells[0].Value = "No";
+            guna2DataGridView10.Rows[0].Cells[1].Value = "Yes";
+            guna2DataGridView11.Rows[0].Cells[0].Value = "No";
+            guna2DataGridView11.Rows[0].Cells[1].Value = "Yes";
+            guna2DataGridView12.Rows[0].Cells[0].Value = "No";
+            guna2DataGridView12.Rows[0].Cells[1].Value = "Yes";
+
+            for (int i = 0; i < 4; i++)
+            {
+                guna2DataGridView13.Rows.Add();
+            }
+
+            int index2 = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    guna2DataGridView13.Rows[i].Cells[j].Value = allegies[index2];
+                    index2++;
+                }
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+                guna2DataGridView14.Rows.Add();
+            }
+
+            int index3 = 0;
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    guna2DataGridView14.Rows[i].Cells[j].Value = Deficiency[index3];
+                    index3++;
+                }
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                guna2DataGridView16.Rows.Add();
+            }
+
+            int index4 = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    guna2DataGridView16.Rows[i].Cells[j].Value = foodGroups[index4];
+                    index4++;
+                }
+            }
+
+            guna2DataGridView15.Rows[0].Cells[0].Value = "Cortisone";
+            guna2DataGridView15.Rows[0].Cells[1].Value = "Warfarin";
+            guna2DataGridView15.Rows[0].Cells[2].Value = "Coumadin";
+            guna2DataGridView15.Rows[0].Cells[3].Value = "N/A";
+
+
+            guna2DataGridView3.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView4.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView5.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView6.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView7.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView8.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView9.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView10.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView11.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView12.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView13.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView14.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView15.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView16.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+
+            guna2DataGridView3.Rows[0].Height = 15;
+            guna2DataGridView4.Rows[0].Height = 15;
+            guna2DataGridView5.Rows[0].Height = 15;
+            for (int i = 0; i < 10; i++)
+            {
+                guna2DataGridView6.Rows[i].Height = 15;
+
+            }
+            guna2DataGridView7.Rows[0].Height = 15;
+            guna2DataGridView8.Rows[0].Height = 15;
+            guna2DataGridView9.Rows[0].Height = 15;
+            guna2DataGridView10.Rows[0].Height = 15;
+            guna2DataGridView11.Rows[0].Height = 15;
+            guna2DataGridView12.Rows[0].Height = 15;
+            for (int i = 0; i < 4; i++)
+            {
+                guna2DataGridView13.Rows[i].Height = 15;
+                if(i==3)
+                {
+                    guna2DataGridView13.Rows[i].Height = 18;
+                }
+            }
+            guna2DataGridView14.Rows[0].Height = 15;
+            guna2DataGridView14.Rows[1].Height = 15;
+            guna2DataGridView15.Rows[0].Height = 15;
+            for (int i = 0; i < 3; i++)
+            {
+                guna2DataGridView16.Rows[i].Height = 18;
+
+            }
+        }
         private void Registration_Load(object sender, EventArgs e)
         {
             try
@@ -740,12 +1056,15 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
+
             UpdateBranch();
             UpdateNutritionist();
+
+            PrepareMCQS();
             MainClass.HideAllTabsOnTabControl(tabControl1);
            
             ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
-
+          
         }
         static int conn = 0;
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1480,6 +1799,193 @@ namespace HelloWorldSolutionIMS
             subscriptionstatus.Text = "No";
 
             //fileno.ReadOnly = true;
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 3;
+        }
+
+        private void guna2DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            int columnIndex = e.ColumnIndex;
+
+            guna2DataGridView3.Rows[rowIndex].Cells[columnIndex].Selected = true;
+        }
+
+
+        private void guna2DataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Get the row index of the clicked cell
+            
+        }
+        public class Indexing
+        {
+            public int row { get; set; }
+            public int col { get; set; }
+
+            public string value { get; set; }
+        }
+
+        List<Indexing> coordinates = new List<Indexing>();
+        List<Indexing> Allegiescoordinates = new List<Indexing>();
+        List<Indexing> Deficiencycoordinates = new List<Indexing>();
+        List<Indexing> Medicationcoordinates = new List<Indexing>();
+        private void guna2DataGridView6_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Indexing index = new Indexing();
+            index.row = e.RowIndex;
+            index.col = e.ColumnIndex;
+            index.value = guna2DataGridView6.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            int checker = 0;
+            foreach (var item in coordinates)
+            {
+                if (item.row == index.row && item.col == index.col)
+                {
+                    coordinates.Remove(item);
+                    checker = 1;
+                    break;
+                }
+            }
+
+            if (checker == 0)
+            {
+                coordinates.Add(index);
+            }
+            guna2DataGridView6.ClearSelection();
+            for (int i = 0; i < guna2DataGridView6.Rows.Count; i++)
+            {
+                for (int j = 0; j < guna2DataGridView6.Columns.Count; j++)
+                {
+                    guna2DataGridView6.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView6.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+
+            foreach (var item in coordinates)
+            {
+                guna2DataGridView6.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
+                guna2DataGridView6.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void guna2DataGridView13_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Indexing index = new Indexing();
+            index.row = e.RowIndex;
+            index.col = e.ColumnIndex;
+            index.value = guna2DataGridView13.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            int checker = 0;
+            foreach (var item in Allegiescoordinates)
+            {
+                if (item.row == index.row && item.col == index.col)
+                {
+                    Allegiescoordinates.Remove(item);
+                    checker = 1;
+                    break;
+                }
+            }
+
+            if (checker == 0)
+            {
+                Allegiescoordinates.Add(index);
+            }
+            guna2DataGridView13.ClearSelection();
+            for (int i = 0; i < guna2DataGridView13.Rows.Count; i++)
+            {
+                for (int j = 0; j < guna2DataGridView13.Columns.Count; j++)
+                {
+                    guna2DataGridView13.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView13.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+
+            foreach (var item in Allegiescoordinates)
+            {
+                guna2DataGridView13.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
+                guna2DataGridView13.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void guna2DataGridView14_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Indexing index = new Indexing();
+            index.row = e.RowIndex;
+            index.col = e.ColumnIndex;
+            index.value = guna2DataGridView13.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            int checker = 0;
+            foreach (var item in Deficiencycoordinates)
+            {
+                if (item.row == index.row && item.col == index.col)
+                {
+                    Deficiencycoordinates.Remove(item);
+                    checker = 1;
+                    break;
+                }
+            }
+
+            if (checker == 0)
+            {
+                Deficiencycoordinates.Add(index);
+            }
+            guna2DataGridView13.ClearSelection();
+            for (int i = 0; i < guna2DataGridView13.Rows.Count; i++)
+            {
+                for (int j = 0; j < guna2DataGridView13.Columns.Count; j++)
+                {
+                    guna2DataGridView13.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView13.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+
+            foreach (var item in Deficiencycoordinates)
+            {
+                guna2DataGridView13.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
+                guna2DataGridView13.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void guna2DataGridView15_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Indexing index = new Indexing();
+            index.row = e.RowIndex;
+            index.col = e.ColumnIndex;
+            index.value = guna2DataGridView13.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            int checker = 0;
+            foreach (var item in Medicationcoordinates)
+            {
+                if (item.row == index.row && item.col == index.col)
+                {
+                    Medicationcoordinates.Remove(item);
+                    checker = 1;
+                    break;
+                }
+            }
+
+            if (checker == 0)
+            {
+                Medicationcoordinates.Add(index);
+            }
+            guna2DataGridView13.ClearSelection();
+            for (int i = 0; i < guna2DataGridView13.Rows.Count; i++)
+            {
+                for (int j = 0; j < guna2DataGridView13.Columns.Count; j++)
+                {
+                    guna2DataGridView13.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView13.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+
+            foreach (var item in Medicationcoordinates)
+            {
+                guna2DataGridView13.Rows[item.row].Cells[item.col].Style.BackColor = Color.FromArgb(128, 255, 128);
+                guna2DataGridView13.Rows[item.row].Cells[item.col].Style.ForeColor = Color.Black;
+
+            }
         }
     }
 }
