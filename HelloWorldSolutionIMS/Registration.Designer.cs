@@ -238,7 +238,7 @@
             this.od = new Guna.UI2.WinForms.Guna2TextBox();
             this.pd = new Guna.UI2.WinForms.Guna2TextBox();
             this.hed = new Guna.UI2.WinForms.Guna2TextBox();
-            this.id = new Guna.UI2.WinForms.Guna2TextBox();
+            this.idbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.c = new Guna.UI2.WinForms.Guna2TextBox();
             this.hd = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DataGridView12 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -285,6 +285,7 @@
             this.one4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.MedicalHistoryDelete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView17 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.idmhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filenomhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -308,7 +309,6 @@
             this.firstnamemh = new Guna.UI2.WinForms.Guna2TextBox();
             this.filenomh = new Guna.UI2.WinForms.Guna2TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.MedicalHistoryDelete = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -2058,7 +2058,7 @@
             this.panel4.Controls.Add(this.od);
             this.panel4.Controls.Add(this.pd);
             this.panel4.Controls.Add(this.hed);
-            this.panel4.Controls.Add(this.id);
+            this.panel4.Controls.Add(this.idbox);
             this.panel4.Controls.Add(this.c);
             this.panel4.Controls.Add(this.hd);
             this.panel4.Controls.Add(this.guna2DataGridView12);
@@ -2088,7 +2088,7 @@
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Location = new System.Drawing.Point(904, 809);
+            this.guna2Button4.Location = new System.Drawing.Point(904, 775);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
             this.guna2Button4.Size = new System.Drawing.Size(139, 45);
@@ -2107,7 +2107,7 @@
             this.SaveMedicalHistory.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.SaveMedicalHistory.ForeColor = System.Drawing.Color.White;
             this.SaveMedicalHistory.HoverState.Parent = this.SaveMedicalHistory;
-            this.SaveMedicalHistory.Location = new System.Drawing.Point(904, 758);
+            this.SaveMedicalHistory.Location = new System.Drawing.Point(904, 724);
             this.SaveMedicalHistory.Name = "SaveMedicalHistory";
             this.SaveMedicalHistory.ShadowDecoration.Parent = this.SaveMedicalHistory;
             this.SaveMedicalHistory.Size = new System.Drawing.Size(139, 45);
@@ -2707,30 +2707,30 @@
             this.hed.TabIndex = 13;
             this.hed.Visible = false;
             // 
-            // id
+            // idbox
             // 
-            this.id.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.id.DefaultText = "";
-            this.id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id.DisabledState.Parent = this.id;
-            this.id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.id.FocusedState.Parent = this.id;
-            this.id.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.id.HoverState.Parent = this.id;
-            this.id.Location = new System.Drawing.Point(441, 457);
-            this.id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.id.Name = "id";
-            this.id.PasswordChar = '\0';
-            this.id.PlaceholderText = "";
-            this.id.SelectedText = "";
-            this.id.ShadowDecoration.Parent = this.id;
-            this.id.Size = new System.Drawing.Size(290, 20);
-            this.id.TabIndex = 12;
-            this.id.Visible = false;
+            this.idbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.idbox.DefaultText = "";
+            this.idbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.idbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.idbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.idbox.DisabledState.Parent = this.idbox;
+            this.idbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.idbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.idbox.FocusedState.Parent = this.idbox;
+            this.idbox.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.idbox.HoverState.Parent = this.idbox;
+            this.idbox.Location = new System.Drawing.Point(441, 457);
+            this.idbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idbox.Name = "idbox";
+            this.idbox.PasswordChar = '\0';
+            this.idbox.PlaceholderText = "";
+            this.idbox.SelectedText = "";
+            this.idbox.ShadowDecoration.Parent = this.idbox;
+            this.idbox.Size = new System.Drawing.Size(290, 20);
+            this.idbox.TabIndex = 12;
+            this.idbox.Visible = false;
             // 
             // c
             // 
@@ -3770,6 +3770,25 @@
             this.panel5.Size = new System.Drawing.Size(1147, 965);
             this.panel5.TabIndex = 0;
             // 
+            // MedicalHistoryDelete
+            // 
+            this.MedicalHistoryDelete.AutoRoundedCorners = true;
+            this.MedicalHistoryDelete.BorderRadius = 21;
+            this.MedicalHistoryDelete.CausesValidation = false;
+            this.MedicalHistoryDelete.CheckedState.Parent = this.MedicalHistoryDelete;
+            this.MedicalHistoryDelete.CustomImages.Parent = this.MedicalHistoryDelete;
+            this.MedicalHistoryDelete.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.MedicalHistoryDelete.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.MedicalHistoryDelete.ForeColor = System.Drawing.Color.White;
+            this.MedicalHistoryDelete.HoverState.Parent = this.MedicalHistoryDelete;
+            this.MedicalHistoryDelete.Location = new System.Drawing.Point(935, 224);
+            this.MedicalHistoryDelete.Name = "MedicalHistoryDelete";
+            this.MedicalHistoryDelete.ShadowDecoration.Parent = this.MedicalHistoryDelete;
+            this.MedicalHistoryDelete.Size = new System.Drawing.Size(141, 45);
+            this.MedicalHistoryDelete.TabIndex = 98;
+            this.MedicalHistoryDelete.Text = "Delete";
+            this.MedicalHistoryDelete.Click += new System.EventHandler(this.MedicalHistoryDelete_Click);
+            // 
             // guna2DataGridView17
             // 
             this.guna2DataGridView17.AllowUserToAddRows = false;
@@ -4174,25 +4193,6 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // MedicalHistoryDelete
-            // 
-            this.MedicalHistoryDelete.AutoRoundedCorners = true;
-            this.MedicalHistoryDelete.BorderRadius = 21;
-            this.MedicalHistoryDelete.CausesValidation = false;
-            this.MedicalHistoryDelete.CheckedState.Parent = this.MedicalHistoryDelete;
-            this.MedicalHistoryDelete.CustomImages.Parent = this.MedicalHistoryDelete;
-            this.MedicalHistoryDelete.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.MedicalHistoryDelete.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.MedicalHistoryDelete.ForeColor = System.Drawing.Color.White;
-            this.MedicalHistoryDelete.HoverState.Parent = this.MedicalHistoryDelete;
-            this.MedicalHistoryDelete.Location = new System.Drawing.Point(935, 224);
-            this.MedicalHistoryDelete.Name = "MedicalHistoryDelete";
-            this.MedicalHistoryDelete.ShadowDecoration.Parent = this.MedicalHistoryDelete;
-            this.MedicalHistoryDelete.Size = new System.Drawing.Size(141, 45);
-            this.MedicalHistoryDelete.TabIndex = 98;
-            this.MedicalHistoryDelete.Text = "Delete";
-            this.MedicalHistoryDelete.Click += new System.EventHandler(this.MedicalHistoryDelete_Click);
-            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -4395,7 +4395,7 @@
         private Guna.UI2.WinForms.Guna2TextBox od;
         private Guna.UI2.WinForms.Guna2TextBox pd;
         private Guna.UI2.WinForms.Guna2TextBox hed;
-        private Guna.UI2.WinForms.Guna2TextBox id;
+        private Guna.UI2.WinForms.Guna2TextBox idbox;
         private Guna.UI2.WinForms.Guna2TextBox c;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;

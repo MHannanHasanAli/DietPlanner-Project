@@ -2205,18 +2205,18 @@ namespace HelloWorldSolutionIMS
         {
             if (e.ColumnIndex == 1)
             {
-                id.Visible = true;
+                idbox.Visible = true;
             }
             else
             {
-                id.Visible = false;
+                idbox.Visible = false;
             }
             IndexingQuestions index = new IndexingQuestions();
             index.row = 0;
             index.col = e.ColumnIndex;
             index.TableName = "guna2DataGridView9";
             index.value = guna2DataGridView9.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-            index.explanantion = id.Text;
+            index.explanantion = idbox.Text;
 
             foreach (var item in Questions)
             {
@@ -2427,6 +2427,8 @@ namespace HelloWorldSolutionIMS
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 4;
+            Clean();
+            edit = 0;
             ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
 
         }
@@ -2503,7 +2505,7 @@ namespace HelloWorldSolutionIMS
             c.Text = "";
             hed.Text = "";
             pd.Text = "";
-            id.Text = "";
+            idbox.Text = "";
             od.Text = "";
         }
         private void SaveMedicalHistory_Click(object sender, EventArgs e)
@@ -2762,7 +2764,7 @@ namespace HelloWorldSolutionIMS
                                 cmd.Parameters.AddWithValue("@immuneDisease", item.value); // Replace immuneDiseaseValue with the actual value
                                 if (item.value == "Yes")
                                 {
-                                    cmd.Parameters.AddWithValue("@immuneDiseaseText", id.Text); // Replace immuneDiseaseTextValue with the actual value
+                                    cmd.Parameters.AddWithValue("@immuneDiseaseText", idbox.Text); // Replace immuneDiseaseTextValue with the actual value
                                 }
                                 else
                                 {
@@ -3106,8 +3108,9 @@ namespace HelloWorldSolutionIMS
 
         private void EditMedicalHistory_Click(object sender, EventArgs e)
         {
-            edit = 1;
-            int id = int.Parse(guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString());
+            edit = 0;
+            coordinates.Clear();
+            //int id = int.Parse(guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString());
             try
             {
                 string customerIDToEdit = guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString();
@@ -3172,7 +3175,7 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd2 = new SqlCommand("SELECT * FROM DiseaseHistory WHERE FILENO = @CustomerID", MainClass.con);
                 cmd2.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
                 List<string> datas = new List<string>();
-                SqlDataReader reader2 = cmd.ExecuteReader();
+                SqlDataReader reader2 = cmd2.ExecuteReader();
                 if (reader2.HasRows)
                 {
                     while (reader2.Read())
@@ -3180,9 +3183,12 @@ namespace HelloWorldSolutionIMS
                         // Set the retrieved data into input boxes
                        
                        datas.Add(reader2["Data"].ToString());
-                        
-                       
-                        
+                       Indexing SavedDisease = new Indexing();
+                        SavedDisease.row = int.Parse(reader2["rowindex"].ToString());
+                        SavedDisease.col = int.Parse(reader2["colindex"].ToString());
+                        SavedDisease.value = reader2["Data"].ToString();
+                        coordinates.Add(SavedDisease);
+
                     }
                     foreach (var item in datas)
                     {
@@ -3199,10 +3205,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
-                }
+                
                 reader2.Close();
                 MainClass.con.Close();
 
@@ -3210,7 +3213,7 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd3 = new SqlCommand("SELECT * FROM FoodAllergies WHERE FILENO = @CustomerID", MainClass.con);
                 cmd3.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
                 List<string> Alergies = new List<string>();
-                SqlDataReader reader3 = cmd.ExecuteReader();
+                SqlDataReader reader3 = cmd3.ExecuteReader();
                 if (reader3.HasRows)
                 {
                     while (reader3.Read())
@@ -3237,10 +3240,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
-                }
+                
                 reader3.Close();
                 MainClass.con.Close();
 
@@ -3248,7 +3248,7 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd4 = new SqlCommand("SELECT * FROM Deficiency WHERE FILENO = @CustomerID", MainClass.con);
                 cmd4.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
                 List<string> nutrients = new List<string>();
-                SqlDataReader reader4 = cmd.ExecuteReader();
+                SqlDataReader reader4 = cmd4.ExecuteReader();
                 if (reader4.HasRows)
                 {
                     while (reader4.Read())
@@ -3275,10 +3275,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
-                }
+               
                 reader4.Close();
                 MainClass.con.Close();
 
@@ -3286,7 +3283,7 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd5 = new SqlCommand("SELECT * FROM Medication WHERE FILENO = @CustomerID", MainClass.con);
                 cmd5.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
                 List<string> medicines = new List<string>();
-                SqlDataReader reader5 = cmd.ExecuteReader();
+                SqlDataReader reader5 = cmd5.ExecuteReader();
                 if (reader5.HasRows)
                 {
                     while (reader5.Read())
@@ -3313,10 +3310,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
-                }
+               
                 reader5.Close();
                 MainClass.con.Close();
 
@@ -3324,7 +3318,7 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd6 = new SqlCommand("SELECT * FROM Diet WHERE FILENO = @CustomerID", MainClass.con);
                 cmd6.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
                 List<string> dietavoid = new List<string>();
-                SqlDataReader reader6 = cmd.ExecuteReader();
+                SqlDataReader reader6 = cmd6.ExecuteReader();
                 if (reader6.HasRows)
                 {
                     while (reader6.Read())
@@ -3351,56 +3345,124 @@ namespace HelloWorldSolutionIMS
                         }
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
-                }
+                
                 reader6.Close();
                 MainClass.con.Close();
 
-                //MainClass.con.Open();
-                //SqlCommand cmd6 = new SqlCommand("SELECT * FROM Diet WHERE FILENO = @CustomerID", MainClass.con);
-                //cmd6.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
-                //List<string> dietavoid = new List<string>();
-                //SqlDataReader reader6 = cmd.ExecuteReader();
-                //if (reader6.HasRows)
-                //{
-                //    while (reader6.Read())
-                //    {
-                //        // Set the retrieved data into input boxes
+                MainClass.con.Open();
+                SqlCommand cmd7 = new SqlCommand("SELECT * FROM Questions WHERE FILENO = @CustomerID", MainClass.con);
+                cmd7.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                SqlDataReader reader7 = cmd7.ExecuteReader();
+                if (reader7.HasRows)
+                {
+                    while (reader7.Read())
+                    {
+                        // Set the retrieved data into input boxes
 
-                //        dietavoid.Add(reader6["Data"].ToString());
+                        string hdans = reader7["hormonalDisease"].ToString();
+                        string cans = reader7["cancer"].ToString();
+                        string hians = reader7["immuneDisease"].ToString();
+                        string hedans = reader7["hereditaryDisease"].ToString();
+                        string pdans = reader7["pancreaticDisease"].ToString();
+                        string odans = reader7["otherDisease"].ToString();
 
+                        if(hdans=="Yes")
+                        {
+                            hd.Visible = true;
+                            hd.Text = reader7["hormonalDiseaseText"].ToString();
+                            guna2DataGridView7.Rows[0].Cells[1].Selected = true;
 
+                        }else if(hdans == "No")
+                        {
+                            hd.Visible = false;
+                          
+                            guna2DataGridView7.Rows[0].Cells[0].Selected = true;
+                        }
 
-                //    }
-                //    foreach (var item in dietavoid)
-                //    {
-                //        foreach (DataGridViewRow row in guna2DataGridView16.Rows)
-                //        {
-                //            foreach (DataGridViewCell cell in row.Cells)
-                //            {
-                //                if (cell.Value.ToString().Equals(item))
-                //                {
-                //                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
-                //                    cell.Style.ForeColor = Color.Black;
-                //                }
-                //            }
-                //        }
-                //    }
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
-                //}
-                //reader6.Close();
-                //MainClass.con.Close();
+                        if (cans == "Yes")
+                        {
+                            c.Visible = true;
+                            c.Text = reader7["cancerText"].ToString();
+                            guna2DataGridView8.Rows[0].Cells[1].Selected = true;
+
+                        }
+                        else if (cans == "No")
+                        {
+                            c.Visible = false;
+
+                            guna2DataGridView8.Rows[0].Cells[0].Selected = true;
+                        }
+
+                        if (hians == "Yes")
+                        {
+                            idbox.Visible = true;
+                            idbox.Text = reader7["immuneDiseaseText"].ToString();
+                            guna2DataGridView9.Rows[0].Cells[1].Selected = true;
+
+                        }
+                        else if (hians == "No")
+                        {
+                            idbox.Visible = false;
+
+                            guna2DataGridView9.Rows[0].Cells[0].Selected = true;
+                        }
+
+                        if (hedans == "Yes")
+                        {
+                            hed.Visible = true;
+                            hed.Text = reader7["hereditaryDiseaseText"].ToString();
+                            guna2DataGridView10.Rows[0].Cells[1].Selected = true;
+
+                        }
+                        else if (hedans == "No")
+                        {
+                            idbox.Visible = false;
+
+                            guna2DataGridView10.Rows[0].Cells[0].Selected = true;
+                        }
+
+                        if (pdans == "Yes")
+                        {
+                            pd.Visible = true;
+                            pd.Text = reader7["pancreaticDiseaseText"].ToString();
+                            guna2DataGridView11.Rows[0].Cells[1].Selected = true;
+
+                        }
+                        else if (pdans == "No")
+                        {
+                            pd.Visible = false;
+
+                            guna2DataGridView11.Rows[0].Cells[0].Selected = true;
+                        }
+
+                        if (odans == "Yes")
+                        {
+                            od.Visible = true;
+                            od.Text = reader7["otherDiseaseText"].ToString();
+                            guna2DataGridView12.Rows[0].Cells[1].Selected = true;
+
+                        }
+                        else if (odans == "No")
+                        {
+                            od.Visible = false;
+
+                            guna2DataGridView12.Rows[0].Cells[0].Selected = true;
+                        }
+
+                    }
+                   
+                }
+               
+                reader7.Close();
+                MainClass.con.Close();
             }                           
             catch (Exception ex)
             {
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+
+            tabControl1.SelectedIndex = 3;
         }
     }
 }
