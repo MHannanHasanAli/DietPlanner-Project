@@ -201,6 +201,18 @@
             this.bca = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.SaveMedicalHistory = new Guna.UI2.WinForms.Guna2Button();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -271,19 +283,16 @@
             this.one2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.one3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.one4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.guna2DataGridView17 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idmhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filenomhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnamemhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familynamemhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.EditMedicalHistory = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.gendermh = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -298,16 +307,8 @@
             this.familynamemh = new Guna.UI2.WinForms.Guna2TextBox();
             this.firstnamemh = new Guna.UI2.WinForms.Guna2TextBox();
             this.filenomh = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DataGridView17 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idmhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filenomhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnamemhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familynamemhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.SaveMedicalHistory = new Guna.UI2.WinForms.Guna2Button();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MedicalHistoryDelete = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -2076,6 +2077,134 @@
             this.panel4.Size = new System.Drawing.Size(1147, 965);
             this.panel4.TabIndex = 0;
             // 
+            // guna2Button4
+            // 
+            this.guna2Button4.AutoRoundedCorners = true;
+            this.guna2Button4.BorderRadius = 21;
+            this.guna2Button4.CausesValidation = false;
+            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
+            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
+            this.guna2Button4.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.HoverState.Parent = this.guna2Button4;
+            this.guna2Button4.Location = new System.Drawing.Point(904, 809);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
+            this.guna2Button4.Size = new System.Drawing.Size(139, 45);
+            this.guna2Button4.TabIndex = 101;
+            this.guna2Button4.Text = "Back";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            // 
+            // SaveMedicalHistory
+            // 
+            this.SaveMedicalHistory.AutoRoundedCorners = true;
+            this.SaveMedicalHistory.BorderRadius = 21;
+            this.SaveMedicalHistory.CausesValidation = false;
+            this.SaveMedicalHistory.CheckedState.Parent = this.SaveMedicalHistory;
+            this.SaveMedicalHistory.CustomImages.Parent = this.SaveMedicalHistory;
+            this.SaveMedicalHistory.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.SaveMedicalHistory.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.SaveMedicalHistory.ForeColor = System.Drawing.Color.White;
+            this.SaveMedicalHistory.HoverState.Parent = this.SaveMedicalHistory;
+            this.SaveMedicalHistory.Location = new System.Drawing.Point(904, 758);
+            this.SaveMedicalHistory.Name = "SaveMedicalHistory";
+            this.SaveMedicalHistory.ShadowDecoration.Parent = this.SaveMedicalHistory;
+            this.SaveMedicalHistory.Size = new System.Drawing.Size(139, 45);
+            this.SaveMedicalHistory.TabIndex = 100;
+            this.SaveMedicalHistory.Text = "Save";
+            this.SaveMedicalHistory.Click += new System.EventHandler(this.SaveMedicalHistory_Click);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(17, 753);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(296, 16);
+            this.label46.TabIndex = 33;
+            this.label46.Text = "14. Is there something you don\'t want in your diet?";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(14, 664);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(254, 16);
+            this.label45.TabIndex = 32;
+            this.label45.Text = "13. Do you take the following medications:";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(14, 581);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(219, 16);
+            this.label44.TabIndex = 31;
+            this.label44.Text = "12. Do you have nutrient deficiency?";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(764, 400);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(191, 16);
+            this.label43.TabIndex = 30;
+            this.label43.Text = "11. Do you have food allegies?";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(11, 533);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(202, 16);
+            this.label42.TabIndex = 29;
+            this.label42.Text = "10. Do you have other diseases?";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(11, 507);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(228, 16);
+            this.label41.TabIndex = 28;
+            this.label41.Text = "9. Do you have pancreatic diseases?";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(11, 481);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(225, 16);
+            this.label40.TabIndex = 27;
+            this.label40.Text = "8. Do you have hereditary diseases?";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(11, 457);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(212, 16);
+            this.label39.TabIndex = 26;
+            this.label39.Text = "7. Do you have immune diseases?";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(11, 432);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(147, 16);
+            this.label38.TabIndex = 25;
+            this.label38.Text = "6. Do you have cancer?";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(11, 404);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(224, 16);
+            this.label37.TabIndex = 24;
+            this.label37.Text = "5. Do you have  hormonal diseases?";
+            // 
             // label36
             // 
             this.label36.AutoSize = true;
@@ -2159,6 +2288,7 @@
             this.guna2DataGridView16.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.guna2DataGridView16.RowTemplate.Height = 24;
             this.guna2DataGridView16.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView16.ShowCellToolTips = false;
             this.guna2DataGridView16.Size = new System.Drawing.Size(578, 82);
             this.guna2DataGridView16.TabIndex = 19;
             this.guna2DataGridView16.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -2259,6 +2389,7 @@
             this.guna2DataGridView15.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.guna2DataGridView15.RowTemplate.Height = 24;
             this.guna2DataGridView15.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView15.ShowCellToolTips = false;
             this.guna2DataGridView15.Size = new System.Drawing.Size(578, 31);
             this.guna2DataGridView15.TabIndex = 18;
             this.guna2DataGridView15.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -2359,6 +2490,7 @@
             this.guna2DataGridView14.RowsDefaultCellStyle = dataGridViewCellStyle19;
             this.guna2DataGridView14.RowTemplate.Height = 24;
             this.guna2DataGridView14.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView14.ShowCellToolTips = false;
             this.guna2DataGridView14.Size = new System.Drawing.Size(297, 42);
             this.guna2DataGridView14.TabIndex = 17;
             this.guna2DataGridView14.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -2452,6 +2584,7 @@
             this.guna2DataGridView13.RowsDefaultCellStyle = dataGridViewCellStyle23;
             this.guna2DataGridView13.RowTemplate.Height = 24;
             this.guna2DataGridView13.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView13.ShowCellToolTips = false;
             this.guna2DataGridView13.Size = new System.Drawing.Size(297, 82);
             this.guna2DataGridView13.TabIndex = 16;
             this.guna2DataGridView13.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -2693,6 +2826,7 @@
             this.guna2DataGridView12.RowsDefaultCellStyle = dataGridViewCellStyle27;
             this.guna2DataGridView12.RowTemplate.Height = 24;
             this.guna2DataGridView12.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView12.ShowCellToolTips = false;
             this.guna2DataGridView12.Size = new System.Drawing.Size(173, 31);
             this.guna2DataGridView12.TabIndex = 9;
             this.guna2DataGridView12.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -2777,6 +2911,7 @@
             this.guna2DataGridView11.RowsDefaultCellStyle = dataGridViewCellStyle31;
             this.guna2DataGridView11.RowTemplate.Height = 24;
             this.guna2DataGridView11.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView11.ShowCellToolTips = false;
             this.guna2DataGridView11.Size = new System.Drawing.Size(173, 31);
             this.guna2DataGridView11.TabIndex = 8;
             this.guna2DataGridView11.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -2861,6 +2996,7 @@
             this.guna2DataGridView10.RowsDefaultCellStyle = dataGridViewCellStyle35;
             this.guna2DataGridView10.RowTemplate.Height = 24;
             this.guna2DataGridView10.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView10.ShowCellToolTips = false;
             this.guna2DataGridView10.Size = new System.Drawing.Size(173, 31);
             this.guna2DataGridView10.TabIndex = 7;
             this.guna2DataGridView10.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -2945,6 +3081,7 @@
             this.guna2DataGridView9.RowsDefaultCellStyle = dataGridViewCellStyle39;
             this.guna2DataGridView9.RowTemplate.Height = 24;
             this.guna2DataGridView9.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView9.ShowCellToolTips = false;
             this.guna2DataGridView9.Size = new System.Drawing.Size(173, 31);
             this.guna2DataGridView9.TabIndex = 6;
             this.guna2DataGridView9.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -3029,6 +3166,7 @@
             this.guna2DataGridView8.RowsDefaultCellStyle = dataGridViewCellStyle43;
             this.guna2DataGridView8.RowTemplate.Height = 24;
             this.guna2DataGridView8.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView8.ShowCellToolTips = false;
             this.guna2DataGridView8.Size = new System.Drawing.Size(173, 31);
             this.guna2DataGridView8.TabIndex = 5;
             this.guna2DataGridView8.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -3113,6 +3251,7 @@
             this.guna2DataGridView7.RowsDefaultCellStyle = dataGridViewCellStyle47;
             this.guna2DataGridView7.RowTemplate.Height = 24;
             this.guna2DataGridView7.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView7.ShowCellToolTips = false;
             this.guna2DataGridView7.Size = new System.Drawing.Size(173, 31);
             this.guna2DataGridView7.TabIndex = 4;
             this.guna2DataGridView7.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -3200,6 +3339,7 @@
             this.guna2DataGridView6.RowsDefaultCellStyle = dataGridViewCellStyle51;
             this.guna2DataGridView6.RowTemplate.Height = 24;
             this.guna2DataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView6.ShowCellToolTips = false;
             this.guna2DataGridView6.Size = new System.Drawing.Size(1050, 188);
             this.guna2DataGridView6.TabIndex = 3;
             this.guna2DataGridView6.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -3304,6 +3444,7 @@
             this.guna2DataGridView5.RowsDefaultCellStyle = dataGridViewCellStyle55;
             this.guna2DataGridView5.RowTemplate.Height = 24;
             this.guna2DataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView5.ShowCellToolTips = false;
             this.guna2DataGridView5.Size = new System.Drawing.Size(1050, 37);
             this.guna2DataGridView5.TabIndex = 2;
             this.guna2DataGridView5.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -3433,6 +3574,7 @@
             this.guna2DataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle59;
             this.guna2DataGridView4.RowTemplate.Height = 24;
             this.guna2DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView4.ShowCellToolTips = false;
             this.guna2DataGridView4.Size = new System.Drawing.Size(1050, 33);
             this.guna2DataGridView4.TabIndex = 1;
             this.guna2DataGridView4.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -3533,6 +3675,7 @@
             this.guna2DataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle63;
             this.guna2DataGridView3.RowTemplate.Height = 24;
             this.guna2DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.guna2DataGridView3.ShowCellToolTips = false;
             this.guna2DataGridView3.Size = new System.Drawing.Size(578, 31);
             this.guna2DataGridView3.TabIndex = 0;
             this.guna2DataGridView3.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
@@ -3588,102 +3731,6 @@
             this.one4.Name = "one4";
             this.one4.ReadOnly = true;
             // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(11, 404);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(224, 16);
-            this.label37.TabIndex = 24;
-            this.label37.Text = "5. Do you have  hormonal diseases?";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(11, 432);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(147, 16);
-            this.label38.TabIndex = 25;
-            this.label38.Text = "6. Do you have cancer?";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(11, 457);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(212, 16);
-            this.label39.TabIndex = 26;
-            this.label39.Text = "7. Do you have immune diseases?";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(11, 481);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(225, 16);
-            this.label40.TabIndex = 27;
-            this.label40.Text = "8. Do you have hereditary diseases?";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(11, 507);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(228, 16);
-            this.label41.TabIndex = 28;
-            this.label41.Text = "9. Do you have pancreatic diseases?";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(11, 533);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(202, 16);
-            this.label42.TabIndex = 29;
-            this.label42.Text = "10. Do you have other diseases?";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(764, 400);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(191, 16);
-            this.label43.TabIndex = 30;
-            this.label43.Text = "11. Do you have food allegies?";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(14, 581);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(219, 16);
-            this.label44.TabIndex = 31;
-            this.label44.Text = "12. Do you have nutrient deficiency?";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(14, 664);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(254, 16);
-            this.label45.TabIndex = 32;
-            this.label45.Text = "13. Do you take the following medications:";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(17, 753);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(296, 16);
-            this.label46.TabIndex = 33;
-            this.label46.Text = "14. Is there something you don\'t want in your diet?";
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.panel5);
@@ -3698,9 +3745,10 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.MedicalHistoryDelete);
             this.panel5.Controls.Add(this.guna2DataGridView17);
             this.panel5.Controls.Add(this.guna2Button1);
-            this.panel5.Controls.Add(this.guna2Button2);
+            this.panel5.Controls.Add(this.EditMedicalHistory);
             this.panel5.Controls.Add(this.guna2Button3);
             this.panel5.Controls.Add(this.gendermh);
             this.panel5.Controls.Add(this.label47);
@@ -3721,6 +3769,159 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1147, 965);
             this.panel5.TabIndex = 0;
+            // 
+            // guna2DataGridView17
+            // 
+            this.guna2DataGridView17.AllowUserToAddRows = false;
+            this.guna2DataGridView17.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.guna2DataGridView17.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle64;
+            this.guna2DataGridView17.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.guna2DataGridView17.BackgroundColor = System.Drawing.Color.White;
+            this.guna2DataGridView17.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guna2DataGridView17.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView17.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle65.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle65.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle65.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle65.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle65.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView17.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle65;
+            this.guna2DataGridView17.ColumnHeadersHeight = 27;
+            this.guna2DataGridView17.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idmhdgv,
+            this.filenomhdgv,
+            this.firstnamemhdgv,
+            this.familynamemhdgv});
+            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            dataGridViewCellStyle66.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle66.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle66.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle66.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle66.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView17.DefaultCellStyle = dataGridViewCellStyle66;
+            this.guna2DataGridView17.EnableHeadersVisualStyles = false;
+            this.guna2DataGridView17.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
+            this.guna2DataGridView17.Location = new System.Drawing.Point(174, 295);
+            this.guna2DataGridView17.Name = "guna2DataGridView17";
+            this.guna2DataGridView17.ReadOnly = true;
+            this.guna2DataGridView17.RowHeadersVisible = false;
+            this.guna2DataGridView17.RowHeadersWidth = 51;
+            this.guna2DataGridView17.RowTemplate.Height = 24;
+            this.guna2DataGridView17.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.guna2DataGridView17.Size = new System.Drawing.Size(900, 414);
+            this.guna2DataGridView17.TabIndex = 97;
+            this.guna2DataGridView17.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Emerald;
+            this.guna2DataGridView17.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
+            this.guna2DataGridView17.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView17.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView17.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView17.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView17.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView17.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
+            this.guna2DataGridView17.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.guna2DataGridView17.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView17.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView17.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView17.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView17.ThemeStyle.HeaderStyle.Height = 27;
+            this.guna2DataGridView17.ThemeStyle.ReadOnly = true;
+            this.guna2DataGridView17.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
+            this.guna2DataGridView17.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView17.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView17.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView17.ThemeStyle.RowsStyle.Height = 24;
+            this.guna2DataGridView17.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
+            this.guna2DataGridView17.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // idmhdgv
+            // 
+            this.idmhdgv.HeaderText = "ID";
+            this.idmhdgv.MinimumWidth = 6;
+            this.idmhdgv.Name = "idmhdgv";
+            this.idmhdgv.ReadOnly = true;
+            this.idmhdgv.Visible = false;
+            // 
+            // filenomhdgv
+            // 
+            this.filenomhdgv.HeaderText = "FILE NO";
+            this.filenomhdgv.MinimumWidth = 6;
+            this.filenomhdgv.Name = "filenomhdgv";
+            this.filenomhdgv.ReadOnly = true;
+            // 
+            // firstnamemhdgv
+            // 
+            this.firstnamemhdgv.HeaderText = "FIRST NAME";
+            this.firstnamemhdgv.MinimumWidth = 6;
+            this.firstnamemhdgv.Name = "firstnamemhdgv";
+            this.firstnamemhdgv.ReadOnly = true;
+            // 
+            // familynamemhdgv
+            // 
+            this.familynamemhdgv.HeaderText = "FAMILY NAME";
+            this.familynamemhdgv.MinimumWidth = 6;
+            this.familynamemhdgv.Name = "familynamemhdgv";
+            this.familynamemhdgv.ReadOnly = true;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BorderRadius = 21;
+            this.guna2Button1.CausesValidation = false;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(935, 736);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(139, 45);
+            this.guna2Button1.TabIndex = 96;
+            this.guna2Button1.Text = "Close";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // EditMedicalHistory
+            // 
+            this.EditMedicalHistory.AutoRoundedCorners = true;
+            this.EditMedicalHistory.BorderRadius = 21;
+            this.EditMedicalHistory.CausesValidation = false;
+            this.EditMedicalHistory.CheckedState.Parent = this.EditMedicalHistory;
+            this.EditMedicalHistory.CustomImages.Parent = this.EditMedicalHistory;
+            this.EditMedicalHistory.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.EditMedicalHistory.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.EditMedicalHistory.ForeColor = System.Drawing.Color.White;
+            this.EditMedicalHistory.HoverState.Parent = this.EditMedicalHistory;
+            this.EditMedicalHistory.Location = new System.Drawing.Point(933, 173);
+            this.EditMedicalHistory.Name = "EditMedicalHistory";
+            this.EditMedicalHistory.ShadowDecoration.Parent = this.EditMedicalHistory;
+            this.EditMedicalHistory.Size = new System.Drawing.Size(141, 45);
+            this.EditMedicalHistory.TabIndex = 95;
+            this.EditMedicalHistory.Text = "Edit";
+            this.EditMedicalHistory.Click += new System.EventHandler(this.EditMedicalHistory_Click);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.AutoRoundedCorners = true;
+            this.guna2Button3.BorderRadius = 21;
+            this.guna2Button3.CausesValidation = false;
+            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
+            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
+            this.guna2Button3.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.HoverState.Parent = this.guna2Button3;
+            this.guna2Button3.Location = new System.Drawing.Point(730, 173);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
+            this.guna2Button3.Size = new System.Drawing.Size(139, 45);
+            this.guna2Button3.TabIndex = 94;
+            this.guna2Button3.Text = "Add";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click_1);
             // 
             // gendermh
             // 
@@ -3967,194 +4168,30 @@
             this.filenomh.TextChanged += new System.EventHandler(this.filenomh_TextChanged);
             this.filenomh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fileno_KeyPress);
             // 
-            // guna2Button1
+            // contextMenuStrip2
             // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 21;
-            this.guna2Button1.CausesValidation = false;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(935, 736);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(139, 45);
-            this.guna2Button1.TabIndex = 96;
-            this.guna2Button1.Text = "Close";
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // guna2Button2
+            // MedicalHistoryDelete
             // 
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BorderRadius = 21;
-            this.guna2Button2.CausesValidation = false;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(933, 173);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(141, 45);
-            this.guna2Button2.TabIndex = 95;
-            this.guna2Button2.Text = "Edit";
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BorderRadius = 21;
-            this.guna2Button3.CausesValidation = false;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(730, 173);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(139, 45);
-            this.guna2Button3.TabIndex = 94;
-            this.guna2Button3.Text = "Add";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click_1);
-            // 
-            // guna2DataGridView17
-            // 
-            this.guna2DataGridView17.AllowUserToAddRows = false;
-            this.guna2DataGridView17.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
-            this.guna2DataGridView17.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle64;
-            this.guna2DataGridView17.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.guna2DataGridView17.BackgroundColor = System.Drawing.Color.White;
-            this.guna2DataGridView17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.guna2DataGridView17.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView17.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle65.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle65.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle65.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle65.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle65.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView17.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle65;
-            this.guna2DataGridView17.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.guna2DataGridView17.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idmhdgv,
-            this.filenomhdgv,
-            this.firstnamemhdgv,
-            this.familynamemhdgv});
-            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
-            dataGridViewCellStyle66.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle66.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle66.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
-            dataGridViewCellStyle66.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle66.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView17.DefaultCellStyle = dataGridViewCellStyle66;
-            this.guna2DataGridView17.EnableHeadersVisualStyles = false;
-            this.guna2DataGridView17.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
-            this.guna2DataGridView17.Location = new System.Drawing.Point(174, 295);
-            this.guna2DataGridView17.Name = "guna2DataGridView17";
-            this.guna2DataGridView17.ReadOnly = true;
-            this.guna2DataGridView17.RowHeadersVisible = false;
-            this.guna2DataGridView17.RowHeadersWidth = 51;
-            this.guna2DataGridView17.RowTemplate.Height = 24;
-            this.guna2DataGridView17.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView17.Size = new System.Drawing.Size(900, 414);
-            this.guna2DataGridView17.TabIndex = 97;
-            this.guna2DataGridView17.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Emerald;
-            this.guna2DataGridView17.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
-            this.guna2DataGridView17.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView17.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView17.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView17.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView17.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView17.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(238)))), ((int)(((byte)(208)))));
-            this.guna2DataGridView17.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.guna2DataGridView17.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView17.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView17.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView17.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.guna2DataGridView17.ThemeStyle.HeaderStyle.Height = 27;
-            this.guna2DataGridView17.ThemeStyle.ReadOnly = true;
-            this.guna2DataGridView17.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(244)))), ((int)(((byte)(226)))));
-            this.guna2DataGridView17.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView17.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.guna2DataGridView17.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView17.ThemeStyle.RowsStyle.Height = 24;
-            this.guna2DataGridView17.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(221)))), ((int)(((byte)(160)))));
-            this.guna2DataGridView17.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // idmhdgv
-            // 
-            this.idmhdgv.HeaderText = "ID";
-            this.idmhdgv.MinimumWidth = 6;
-            this.idmhdgv.Name = "idmhdgv";
-            this.idmhdgv.ReadOnly = true;
-            this.idmhdgv.Visible = false;
-            // 
-            // filenomhdgv
-            // 
-            this.filenomhdgv.HeaderText = "FILE NO";
-            this.filenomhdgv.MinimumWidth = 6;
-            this.filenomhdgv.Name = "filenomhdgv";
-            this.filenomhdgv.ReadOnly = true;
-            // 
-            // firstnamemhdgv
-            // 
-            this.firstnamemhdgv.HeaderText = "FIRST NAME";
-            this.firstnamemhdgv.MinimumWidth = 6;
-            this.firstnamemhdgv.Name = "firstnamemhdgv";
-            this.firstnamemhdgv.ReadOnly = true;
-            // 
-            // familynamemhdgv
-            // 
-            this.familynamemhdgv.HeaderText = "FAMILY NAME";
-            this.familynamemhdgv.MinimumWidth = 6;
-            this.familynamemhdgv.Name = "familynamemhdgv";
-            this.familynamemhdgv.ReadOnly = true;
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.AutoRoundedCorners = true;
-            this.guna2Button4.BorderRadius = 21;
-            this.guna2Button4.CausesValidation = false;
-            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
-            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
-            this.guna2Button4.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Location = new System.Drawing.Point(904, 809);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
-            this.guna2Button4.Size = new System.Drawing.Size(139, 45);
-            this.guna2Button4.TabIndex = 101;
-            this.guna2Button4.Text = "Back";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
-            // 
-            // SaveMedicalHistory
-            // 
-            this.SaveMedicalHistory.AutoRoundedCorners = true;
-            this.SaveMedicalHistory.BorderRadius = 21;
-            this.SaveMedicalHistory.CausesValidation = false;
-            this.SaveMedicalHistory.CheckedState.Parent = this.SaveMedicalHistory;
-            this.SaveMedicalHistory.CustomImages.Parent = this.SaveMedicalHistory;
-            this.SaveMedicalHistory.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.SaveMedicalHistory.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.SaveMedicalHistory.ForeColor = System.Drawing.Color.White;
-            this.SaveMedicalHistory.HoverState.Parent = this.SaveMedicalHistory;
-            this.SaveMedicalHistory.Location = new System.Drawing.Point(904, 758);
-            this.SaveMedicalHistory.Name = "SaveMedicalHistory";
-            this.SaveMedicalHistory.ShadowDecoration.Parent = this.SaveMedicalHistory;
-            this.SaveMedicalHistory.Size = new System.Drawing.Size(139, 45);
-            this.SaveMedicalHistory.TabIndex = 100;
-            this.SaveMedicalHistory.Text = "Save";
-            this.SaveMedicalHistory.Click += new System.EventHandler(this.SaveMedicalHistory_Click);
+            this.MedicalHistoryDelete.AutoRoundedCorners = true;
+            this.MedicalHistoryDelete.BorderRadius = 21;
+            this.MedicalHistoryDelete.CausesValidation = false;
+            this.MedicalHistoryDelete.CheckedState.Parent = this.MedicalHistoryDelete;
+            this.MedicalHistoryDelete.CustomImages.Parent = this.MedicalHistoryDelete;
+            this.MedicalHistoryDelete.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.MedicalHistoryDelete.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.MedicalHistoryDelete.ForeColor = System.Drawing.Color.White;
+            this.MedicalHistoryDelete.HoverState.Parent = this.MedicalHistoryDelete;
+            this.MedicalHistoryDelete.Location = new System.Drawing.Point(935, 224);
+            this.MedicalHistoryDelete.Name = "MedicalHistoryDelete";
+            this.MedicalHistoryDelete.ShadowDecoration.Parent = this.MedicalHistoryDelete;
+            this.MedicalHistoryDelete.Size = new System.Drawing.Size(141, 45);
+            this.MedicalHistoryDelete.TabIndex = 98;
+            this.MedicalHistoryDelete.Text = "Delete";
+            this.MedicalHistoryDelete.Click += new System.EventHandler(this.MedicalHistoryDelete_Click);
             // 
             // Registration
             // 
@@ -4410,7 +4447,7 @@
         private Guna.UI2.WinForms.Guna2TextBox filenomh;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView17;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button EditMedicalHistory;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmhdgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn filenomhdgv;
@@ -4418,5 +4455,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn familynamemhdgv;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button SaveMedicalHistory;
+        private Guna.UI2.WinForms.Guna2Button MedicalHistoryDelete;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using Guna.UI2.WinForms.Suite;
+using iTextSharp.text;
 using OfficeOpenXml.LoadFunctions.Params;
 using System;
 using System.Collections.Generic;
@@ -795,20 +796,20 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView15.Rows[0].Cells[3].Value = "N/A";
 
 
-            guna2DataGridView3.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView4.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView5.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView6.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView7.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView8.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView9.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView10.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView11.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView12.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView13.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView14.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView15.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
-            guna2DataGridView16.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView3.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView4.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView5.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView6.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView7.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView8.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView9.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView10.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView11.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView12.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView13.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView14.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView15.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
+            guna2DataGridView16.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8f);
 
             guna2DataGridView3.Rows[0].Height = 15;
             guna2DataGridView4.Rows[0].Height = 15;
@@ -1024,7 +1025,7 @@ namespace HelloWorldSolutionIMS
                         {
                             System.Windows.Forms.Label label = (System.Windows.Forms.Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -1034,7 +1035,7 @@ namespace HelloWorldSolutionIMS
                         {
                             System.Windows.Forms.Label label = (System.Windows.Forms.Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -1044,7 +1045,7 @@ namespace HelloWorldSolutionIMS
                         {
                             System.Windows.Forms.Label label = (System.Windows.Forms.Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -1479,8 +1480,8 @@ namespace HelloWorldSolutionIMS
             {
                 MainClass.con.Open();
 
-                cmd = new SqlCommand("SELECT ID,FILENO,FIRSTNAME,FAMILYNAME FROM MedicalHistory WHERE FILENO = @CUSTOMERID ORDER BY ID", MainClass.con);
-                cmd.Parameters.AddWithValue("@CUSTOMERID", filenomh.Text); // Replace 'customerIdToFind' with the actual ID you want to find.
+                cmd = new SqlCommand("SELECT ID,FILENO,FIRSTNAME,FAMILYNAME FROM MedicalHistory ORDER BY ID", MainClass.con);
+               /* cmd.Parameters.AddWithValue("@CUSTOMERID", filenomh.Text); */// Replace 'customerIdToFind' with the actual ID you want to find.
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -1841,6 +1842,7 @@ namespace HelloWorldSolutionIMS
         private void label32_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 4;
+            ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
         }
 
         private void guna2DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1864,12 +1866,125 @@ namespace HelloWorldSolutionIMS
 
             public string value { get; set; }
         }
+        public class IndexingQuestions
+        {
+            public int row { get; set; }
+            public int col { get; set; }
+            public string TableName { get; set; }
+            public string value { get; set; }
+            public string explanantion { get; set; }
+        }
+        private void ClearOldMedicalHistory()
+        {
+            string CurrentFileNo = filenomh.Text;
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("delete from MedicalHistory where FILENO = @CustomerID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("delete from Diet where FILENO = @CustomerID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("delete from Questions where FILENO = @CustomerID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("delete from Medication where FILENO = @CustomerID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("delete from Deficiency where FILENO = @CustomerID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("delete from DiseaseHistory where FILENO = @CustomerID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("delete from FoodAllergies where FILENO = @CustomerID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                cmd.ExecuteNonQuery();
 
+                MainClass.con.Close();
+                MessageBox.Show("Medical history removed successfully");
+
+                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
         List<Indexing> coordinates = new List<Indexing>();
         List<Indexing> Allegiescoordinates = new List<Indexing>();
         List<Indexing> Deficiencycoordinates = new List<Indexing>();
         List<Indexing> Medicationcoordinates = new List<Indexing>();
         List<Indexing> Dietcoordinates = new List<Indexing>();
+        List<IndexingQuestions> Questions = new List<IndexingQuestions>();
         private void guna2DataGridView6_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Indexing index = new Indexing();
@@ -2036,6 +2151,25 @@ namespace HelloWorldSolutionIMS
             {
                 hd.Visible = false;
             }
+            IndexingQuestions index = new IndexingQuestions();
+            index.row = 0;
+            index.col = e.ColumnIndex;
+            index.TableName = "guna2DataGridView7";
+            index.value= guna2DataGridView7.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            index.explanantion = hd.Text;
+
+
+            foreach (var item in Questions)
+            {
+                if (item.TableName == index.TableName)
+                {
+                    Questions.Remove(item);
+                    break;
+                }
+            }
+
+                Questions.Add(index);
+            
         }
 
         private void guna2DataGridView8_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -2048,6 +2182,23 @@ namespace HelloWorldSolutionIMS
             {
                 c.Visible = false;
             }
+            IndexingQuestions index = new IndexingQuestions();
+            index.row = 0;
+            index.col = e.ColumnIndex;
+            index.TableName = "guna2DataGridView8";
+            index.value = guna2DataGridView8.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            index.explanantion = c.Text;
+
+            foreach (var item in Questions)
+            {
+                if (item.TableName == index.TableName)
+                {
+                    Questions.Remove(item);
+                    break;
+                }
+            }
+
+            Questions.Add(index);
         }
 
         private void guna2DataGridView9_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -2060,6 +2211,23 @@ namespace HelloWorldSolutionIMS
             {
                 id.Visible = false;
             }
+            IndexingQuestions index = new IndexingQuestions();
+            index.row = 0;
+            index.col = e.ColumnIndex;
+            index.TableName = "guna2DataGridView9";
+            index.value = guna2DataGridView9.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            index.explanantion = id.Text;
+
+            foreach (var item in Questions)
+            {
+                if (item.TableName == index.TableName)
+                {
+                    Questions.Remove(item);
+                    break;
+                }
+            }
+
+            Questions.Add(index);
         }
 
         private void guna2DataGridView10_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -2072,6 +2240,23 @@ namespace HelloWorldSolutionIMS
             {
                 hed.Visible = false;
             }
+            IndexingQuestions index = new IndexingQuestions();
+            index.row = 0;
+            index.col = e.ColumnIndex;
+            index.TableName = "guna2DataGridView10";
+            index.value = guna2DataGridView10.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            index.explanantion = hed.Text;
+
+            foreach (var item in Questions)
+            {
+                if (item.TableName == index.TableName)
+                {
+                    Questions.Remove(item);
+                    break;
+                }
+            }
+
+            Questions.Add(index);
         }
 
         private void guna2DataGridView11_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -2084,6 +2269,24 @@ namespace HelloWorldSolutionIMS
             {
                 pd.Visible = false;
             }
+            IndexingQuestions index = new IndexingQuestions();
+            index.row = 0;
+            index.col = e.ColumnIndex;
+            index.TableName = "guna2DataGridView11";
+            index.value = guna2DataGridView11.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            index.explanantion = pd.Text;
+
+           
+            foreach (var item in Questions)
+            {
+                if (item.TableName == index.TableName)
+                {
+                    Questions.Remove(item);
+                    break;
+                }
+            }
+
+            Questions.Add(index);
         }
 
         private void guna2DataGridView12_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -2096,6 +2299,24 @@ namespace HelloWorldSolutionIMS
             {
                 od.Visible = false;
             }
+            IndexingQuestions index = new IndexingQuestions();
+            index.row = 0;
+            index.col = e.ColumnIndex;
+            index.TableName = "guna2DataGridView12";
+            index.value = guna2DataGridView12.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            index.explanantion = od.Text;
+
+     
+            foreach (var item in Questions)
+            {
+                if (item.TableName == index.TableName)
+                {
+                    Questions.Remove(item);
+                    break;
+                }
+            }
+
+            Questions.Add(index);
         }
 
         private void guna2DataGridView16_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -2136,7 +2357,7 @@ namespace HelloWorldSolutionIMS
 
             }
         }
-
+       
         private void filenomh_TextChanged(object sender, EventArgs e)
         {
             if (filenomh.Text != "")
@@ -2187,7 +2408,6 @@ namespace HelloWorldSolutionIMS
                         MainClass.con.Close();
                         conn = 0;
                     }
-                    ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
                 }
                 catch (Exception ex)
                 {
@@ -2207,10 +2427,88 @@ namespace HelloWorldSolutionIMS
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 4;
-        }
+            ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
 
+        }
+        private void Clean()
+        {
+            coordinates.Clear();
+            Allegiescoordinates.Clear();
+            Deficiencycoordinates.Clear();
+            Medicationcoordinates.Clear();
+            Dietcoordinates.Clear();
+            Questions.Clear();
+
+            guna2DataGridView3.ClearSelection();
+            guna2DataGridView4.ClearSelection();
+            guna2DataGridView5.ClearSelection();
+            guna2DataGridView6.ClearSelection();
+            guna2DataGridView7.ClearSelection();
+            guna2DataGridView8.ClearSelection();
+            guna2DataGridView9.ClearSelection();
+            guna2DataGridView10.ClearSelection();
+            guna2DataGridView11.ClearSelection();
+            guna2DataGridView12.ClearSelection();
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView14.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+
+            for (int i = 0; i < guna2DataGridView6.Rows.Count; i++)
+            {
+                for (int j = 0; j < guna2DataGridView6.Columns.Count; j++)
+                {
+                    guna2DataGridView6.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView6.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+
+            for (int i = 0; i < guna2DataGridView13.Rows.Count; i++)
+            {
+                for (int j = 0; j < guna2DataGridView13.Columns.Count; j++)
+                {
+                    guna2DataGridView13.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView13.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+
+            for (int i = 0; i < guna2DataGridView14.Rows.Count; i++)
+            {
+                for (int j = 0; j < guna2DataGridView14.Columns.Count; j++)
+                {
+                    guna2DataGridView14.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView14.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+
+            for (int i = 0; i < guna2DataGridView15.Rows.Count; i++)
+            {
+                for (int j = 0; j < guna2DataGridView15.Columns.Count; j++)
+                {
+                    guna2DataGridView15.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView15.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+
+            for (int i = 0; i < guna2DataGridView16.Rows.Count; i++)
+            {
+                for (int j = 0; j < guna2DataGridView15.Columns.Count; j++)
+                {
+                    guna2DataGridView16.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    guna2DataGridView16.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+
+            hd.Text = "";
+            c.Text = "";
+            hed.Text = "";
+            pd.Text = "";
+            id.Text = "";
+            od.Text = "";
+        }
         private void SaveMedicalHistory_Click(object sender, EventArgs e)
         {
+            ClearOldMedicalHistory();
             int fileNoValue = int.Parse(filenomh.Text);
             if (edit == 0)
             {
@@ -2224,8 +2522,8 @@ namespace HelloWorldSolutionIMS
                         SqlCommand cmd = new SqlCommand("INSERT INTO MedicalHistory (FileNo, Status, Smoking, BloodType, Firstname, Familyname) " +
                                                         "VALUES (@FileNo, @Status, @Smoking, @BloodType, @Firstname, @Familyname)", MainClass.con);
 
-                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value
-                        cmd.Parameters.AddWithValue("@Status", status); // Replace statusValue with the actual value
+                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue);                       
+                        cmd.Parameters.AddWithValue("@Status", status);
                         cmd.Parameters.AddWithValue("@Smoking", smoking); // Replace smokingValue with the actual value
                         cmd.Parameters.AddWithValue("@BloodType", bloodtype); // Replace bloodTypeValue with the actual value
                         cmd.Parameters.AddWithValue("@Firstname", firstnamemh.Text); // Replace firstnameValue with the actual value
@@ -2244,26 +2542,28 @@ namespace HelloWorldSolutionIMS
                     }
                     try
                     {
-                        MainClass.con.Open();
-                        foreach (var item in coordinates)
+                        if (coordinates.Count != 0)
                         {
-                            SqlCommand cmd = new SqlCommand("INSERT INTO DiseaseHistory (FileNo, rowindex, colindex, data) " +
-                                                         "VALUES (@FileNo, @rowindex, @colindex, @data)", MainClass.con);
+                            MainClass.con.Open();
+                            foreach (var item in coordinates)
+                            {
+                                SqlCommand cmd = new SqlCommand("INSERT INTO DiseaseHistory (FileNo, rowindex, colindex, data) " +
+                                                             "VALUES (@FileNo, @rowindex, @colindex, @data)", MainClass.con);
 
-                            // Get the actual file number from your application logic.
-                            cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
-                            cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
-                            cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
-                            cmd.Parameters.AddWithValue("@data", item.value); // Replace data with the actual value.
+                                // Get the actual file number from your application logic.
+                                cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
+                                cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
+                                cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
+                                cmd.Parameters.AddWithValue("@data", item.value); // Replace data with the actual value.
 
-                            cmd.ExecuteNonQuery();
+                                cmd.ExecuteNonQuery();
+                            }
+
+
+
+                            //MessageBox.Show("Disease history data added successfully");
+                            MainClass.con.Close();
                         }
-
-                        
-
-                        //MessageBox.Show("Disease history data added successfully");
-                        MainClass.con.Close();
-
                         // Update the UI with the new data
                     }
                     catch (Exception ex)
@@ -2273,26 +2573,29 @@ namespace HelloWorldSolutionIMS
                     }
                     try
                     {
-                        MainClass.con.Open();
-
-                        SqlCommand cmd = new SqlCommand("INSERT INTO FoodAllergies (FileNo, rowindex, colindex, data) " +
-                                                         "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
-
-                        // Get the actual file number from your application logic.
-                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
-
-                        foreach (var item in Allegiescoordinates)
+                        if (Allegiescoordinates.Count != 0)
                         {
-                            cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
-                            cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
-                            cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+                            MainClass.con.Open();
 
-                            cmd.ExecuteNonQuery();
+                             // Replace fileNoValue with the actual value.
+
+                            foreach (var item in Allegiescoordinates)
+                            {
+                                SqlCommand cmd = new SqlCommand("INSERT INTO FoodAllergies (FileNo, rowindex, colindex, data) " +
+                                                             "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
+
+                                // Get the actual file number from your application logic.
+                                cmd.Parameters.AddWithValue("@FileNo", fileNoValue);
+                                cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
+                                cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
+                                cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            //MessageBox.Show("Food allergy data added successfully");
+                            MainClass.con.Close();
                         }
-
-                        //MessageBox.Show("Food allergy data added successfully");
-                        MainClass.con.Close();
-
                         // Update the UI with the new data
                     }
                     catch (Exception ex)
@@ -2302,26 +2605,29 @@ namespace HelloWorldSolutionIMS
                     }
                     try
                     {
-                        MainClass.con.Open();
-
-                        SqlCommand cmd = new SqlCommand("INSERT INTO Deficiency (FileNo, rowindex, colindex, data) " +
-                                                         "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
-
-                        // Get the actual file number from your application logic.
-                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
-
-                        foreach (var item in Deficiencycoordinates)
+                        if (Deficiencycoordinates.Count != 0)
                         {
-                            cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
-                            cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
-                            cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+                            MainClass.con.Open();
 
-                            cmd.ExecuteNonQuery();
+                            // Replace fileNoValue with the actual value.
+
+                            foreach (var item in Deficiencycoordinates)
+                            {
+                                SqlCommand cmd = new SqlCommand("INSERT INTO Deficiency (FileNo, rowindex, colindex, data) " +
+                                                            "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
+
+                                // Get the actual file number from your application logic.
+                                cmd.Parameters.AddWithValue("@FileNo", fileNoValue);
+                                cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
+                                cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
+                                cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            //MessageBox.Show("Food allergy data added successfully");
+                            MainClass.con.Close();
                         }
-
-                        //MessageBox.Show("Food allergy data added successfully");
-                        MainClass.con.Close();
-
                         // Update the UI with the new data
                     }
                     catch (Exception ex)
@@ -2331,26 +2637,29 @@ namespace HelloWorldSolutionIMS
                     }
                     try
                     {
-                        MainClass.con.Open();
-
-                        SqlCommand cmd = new SqlCommand("INSERT INTO Medication (FileNo, rowindex, colindex, data) " +
-                                                         "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
-
-                        // Get the actual file number from your application logic.
-                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
-
-                        foreach (var item in Medicationcoordinates)
+                        if (Medicationcoordinates.Count != 0)
                         {
-                            cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
-                            cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
-                            cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+                            MainClass.con.Open();
 
-                            cmd.ExecuteNonQuery();
+                            // Replace fileNoValue with the actual value.
+
+                            foreach (var item in Medicationcoordinates)
+                            {
+                                SqlCommand cmd = new SqlCommand("INSERT INTO Medication (FileNo, rowindex, colindex, data) " +
+                                                            "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
+
+                                // Get the actual file number from your application logic.
+                                cmd.Parameters.AddWithValue("@FileNo", fileNoValue);
+                                cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
+                                cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
+                                cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            //MessageBox.Show("Food allergy data added successfully");
+                            MainClass.con.Close();
                         }
-
-                        //MessageBox.Show("Food allergy data added successfully");
-                        MainClass.con.Close();
-
                         // Update the UI with the new data
                     }
                     catch (Exception ex)
@@ -2360,67 +2669,198 @@ namespace HelloWorldSolutionIMS
                     }
                     try
                     {
+                        if (Dietcoordinates.Count != 0)
+                        {
+
+
+                            MainClass.con.Open();
+
+                           // Replace fileNoValue with the actual value.
+
+
+                            foreach (var item in Dietcoordinates)
+                            {
+                                SqlCommand cmd = new SqlCommand("INSERT INTO Diet (FileNo, rowindex, colindex, data) " +
+                                                            "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
+
+                                // Get the actual file number from your application logic.
+                                cmd.Parameters.AddWithValue("@FileNo", fileNoValue);
+                                cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
+                                cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
+                                cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            MainClass.con.Close();
+
+                            // Update the UI with the new data
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+
+                   
+                    try
+                    {
+                        int check1 = 0;
+                        int check2 = 0;
+                        int check3 = 0;
+                        int check4 = 0;
+                        int check5 = 0;
+                        int check6 = 0;
                         MainClass.con.Open();
 
-                        SqlCommand cmd = new SqlCommand("INSERT INTO Diet (FileNo, rowindex, colindex, data) " +
-                                                         "VALUES (@FileNo, @rowindex, @colindex, @allergen)", MainClass.con);
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Questions (FileNo, hormonalDisease, cancer, immuneDisease, hereditaryDisease, pancreaticDisease, otherDisease, hormonalDiseaseText, cancerText, immuneDiseaseText, hereditaryDiseaseText, pancreaticDiseaseText, otherDiseaseText) " +
+                                                        "VALUES (@FileNo, @hormonalDisease, @cancer, @immuneDisease, @hereditaryDisease, @pancreaticDisease, @otherDisease, @hormonalDiseaseText, @cancerText, @immuneDiseaseText, @hereditaryDiseaseText, @pancreaticDiseaseText, @otherDiseaseText)", MainClass.con);
 
-                        // Get the actual file number from your application logic.
-                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value.
+                        // Get the actual file number from your application logic and assign it to the @FileNo parameter
+                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value
 
-                        foreach (var item in Medicationcoordinates)
+                        foreach (var item in Questions)
                         {
-                            cmd.Parameters.AddWithValue("@rowindex", item.row); // Replace rowIndex with the actual value.
-                            cmd.Parameters.AddWithValue("@colindex", item.col); // Replace colIndex with the actual value.
-                            cmd.Parameters.AddWithValue("@allergen", item.value); // Replace allergen with the actual value.
+                            if(item.TableName == "guna2DataGridView7")
+                            {
+                                check1 = 1;
+                                cmd.Parameters.AddWithValue("@hormonalDisease",item.value );
+                                if(item.value == "Yes")
+                                {
+                                    cmd.Parameters.AddWithValue("@hormonalDiseaseText", hd.Text); // Replace hormonalDiseaseTextValue with the actual value
 
-                            cmd.ExecuteNonQuery();
+                                }
+                                else
+                                {
+                                    cmd.Parameters.AddWithValue("@hormonalDiseaseText", "Nothing"); // Replace hormonalDiseaseTextValue with the actual value
+
+                                }
+
+                            }
+
+                            if (item.TableName == "guna2DataGridView8")
+                            {
+                                check2 = 1;
+                                cmd.Parameters.AddWithValue("@cancer", item.value);
+                                if (item.value == "Yes")
+                                {
+                                    cmd.Parameters.AddWithValue("@cancerText", c.Text); // Replace cancerTextValue with the actual value
+
+                                }
+                                else
+                                {
+                                    cmd.Parameters.AddWithValue("@cancerText", "Nothing"); // Replace cancerTextValue with the actual value
+
+                                }
+
+                            }
+
+                            if (item.TableName == "guna2DataGridView9")
+                            {
+                                check3 = 1;
+                                cmd.Parameters.AddWithValue("@immuneDisease", item.value); // Replace immuneDiseaseValue with the actual value
+                                if (item.value == "Yes")
+                                {
+                                    cmd.Parameters.AddWithValue("@immuneDiseaseText", id.Text); // Replace immuneDiseaseTextValue with the actual value
+                                }
+                                else
+                                {
+                                    cmd.Parameters.AddWithValue("@immuneDiseaseText", "Nothing"); // Replace immuneDiseaseTextValue with the actual value
+
+                                }
+                            }
+
+                            if (item.TableName == "guna2DataGridView10")
+                            {
+                                check4 = 1;
+                                cmd.Parameters.AddWithValue("@hereditaryDisease", item.value); // Replace hereditaryDiseaseValue with the actual value
+                                if (item.value == "Yes")
+                                {
+                                    cmd.Parameters.AddWithValue("@hereditaryDiseaseText", hed.Text); // Replace hereditaryDiseaseTextValue with the actual value
+                                }
+                                else
+                                {
+                                    cmd.Parameters.AddWithValue("@hereditaryDiseaseText", "Nothing"); // Replace hereditaryDiseaseTextValue with the actual value
+
+                                }
+                            }
+
+                            if (item.TableName == "guna2DataGridView11")
+                            {
+                                check5 = 1;
+                                cmd.Parameters.AddWithValue("@pancreaticDisease", item.value); // Replace pancreaticDiseaseValue with the actual value
+                                if (item.value == "Yes")
+                                {
+                                    cmd.Parameters.AddWithValue("@pancreaticDiseaseText", pd.Text); // Replace pancreaticDiseaseTextValue with the actual value
+                                }
+                                else
+                                {
+                                    cmd.Parameters.AddWithValue("@pancreaticDiseaseText", "Nothing"); // Replace pancreaticDiseaseTextValue with the actual value
+
+                                }
+                            }
+
+                            if (item.TableName == "guna2DataGridView12")
+                            {
+                                check6 = 1;
+                                cmd.Parameters.AddWithValue("@otherDisease", item.value); // Replace otherDiseaseValue with the actual value
+                                if (item.value == "Yes")
+                                {
+                                    cmd.Parameters.AddWithValue("@otherDiseaseText", od.Text); // Replace otherDiseaseTextValue with the actual value
+                                }
+                                else
+                                {
+                                    cmd.Parameters.AddWithValue("@otherDiseaseText", "Nothing"); // Replace otherDiseaseTextValue with the actual value
+
+                                }
+                            }
+                           
+
                         }
+                        if (check1 == 0)
+                        {
+                            cmd.Parameters.AddWithValue("@hormonalDisease", "No");
+                            cmd.Parameters.AddWithValue("@hormonalDiseaseText", "Nothing");
+                        }
+                        if (check2 == 0)
+                        {
+                            cmd.Parameters.AddWithValue("@cancer", "No");
+                            cmd.Parameters.AddWithValue("@cancerText", "Nothing");
+                        }
+                        if (check3 == 0)
+                        {
+                            cmd.Parameters.AddWithValue("@immuneDisease", "No");
+                            cmd.Parameters.AddWithValue("@immuneDiseaseText", "Nothing");
+                        }
+                        if (check4 == 0)
+                        {
+                            cmd.Parameters.AddWithValue("@hereditaryDisease", "No");
+                            cmd.Parameters.AddWithValue("@hereditaryDiseaseText", "Nothing");
+                        }
+                        if (check5 == 0)
+                        {
+                            cmd.Parameters.AddWithValue("@pancreaticDisease", "No");
+                            cmd.Parameters.AddWithValue("@pancreaticDiseaseText", "Nothing");
+                        }
+                        if (check6 == 0)
+                        {
+                            cmd.Parameters.AddWithValue("@otherDisease","No");
+                            cmd.Parameters.AddWithValue("@otherDiseaseText", "Nothing");
+                        }
+
+                        cmd.ExecuteNonQuery();
 
                         MessageBox.Show("Medical history added successfully");
                         MainClass.con.Close();
-
-                        // Update the UI with the new data
                     }
                     catch (Exception ex)
                     {
                         MainClass.con.Close();
                         MessageBox.Show(ex.Message);
                     }
-                    //try
-                    //{
-                    //    MainClass.con.Open();
-
-                    //    SqlCommand cmd = new SqlCommand("INSERT INTO Questions (FileNo, hormonalDisease, cancer, immuneDisease, hereditaryDisease, pancreaticDisease, otherDisease, hormonalDiseaseText, cancerText, immuneDiseaseText, hereditaryDiseaseText, pancreaticDiseaseText, otherDiseaseText) " +
-                    //                                    "VALUES (@FileNo, @hormonalDisease, @cancer, @immuneDisease, @hereditaryDisease, @pancreaticDisease, @otherDisease, @hormonalDiseaseText, @cancerText, @immuneDiseaseText, @hereditaryDiseaseText, @pancreaticDiseaseText, @otherDiseaseText)", MainClass.con);
-
-                    //    // Get the actual file number from your application logic and assign it to the @FileNo parameter
-                    //    cmd.Parameters.AddWithValue("@FileNo", fileNoValue); // Replace fileNoValue with the actual value
-
-                    //    // Get the values for each disease and disease text from your application logic and assign them to the corresponding parameters
-                    //    cmd.Parameters.AddWithValue("@hormonalDisease", hormonalDiseaseValue); // Replace hormonalDiseaseValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@cancer", cancerValue); // Replace cancerValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@immuneDisease", immuneDiseaseValue); // Replace immuneDiseaseValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@hereditaryDisease", hereditaryDiseaseValue); // Replace hereditaryDiseaseValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@pancreaticDisease", pancreaticDiseaseValue); // Replace pancreaticDiseaseValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@otherDisease", otherDiseaseValue); // Replace otherDiseaseValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@hormonalDiseaseText", hormonalDiseaseTextValue); // Replace hormonalDiseaseTextValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@cancerText", cancerTextValue); // Replace cancerTextValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@immuneDiseaseText", immuneDiseaseTextValue); // Replace immuneDiseaseTextValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@hereditaryDiseaseText", hereditaryDiseaseTextValue); // Replace hereditaryDiseaseTextValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@pancreaticDiseaseText", pancreaticDiseaseTextValue); // Replace pancreaticDiseaseTextValue with the actual value
-                    //    cmd.Parameters.AddWithValue("@otherDiseaseText", otherDiseaseTextValue); // Replace otherDiseaseTextValue with the actual value
-
-                    //    cmd.ExecuteNonQuery();
-
-                    //    MessageBox.Show("Questions added successfully");
-                    //    MainClass.con.Close();
-                    //}
-                    //catch (Exception ex)
-                    //{
-                    //    MainClass.con.Close();
-                    //    MessageBox.Show(ex.Message);
-                    //}
+                    tabControl1.SelectedIndex = 0;
+                    Clean();
 
                 }
 
@@ -2513,9 +2953,9 @@ namespace HelloWorldSolutionIMS
             }
         }
 
-        static string status;
-        static string smoking;
-        static string bloodtype;
+        static string status = "Nothing";
+        static string smoking = "Nothing";
+        static string bloodtype = "Nothing";
         private void guna2DataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             status = guna2DataGridView3.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
@@ -2532,6 +2972,435 @@ namespace HelloWorldSolutionIMS
         {
             bloodtype = guna2DataGridView5.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
+        }
+
+        private void MedicalHistoryDelete_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView17 != null)
+            {
+                if (guna2DataGridView17.Rows.Count > 0)
+                {
+                    if (guna2DataGridView17.SelectedRows.Count == 1)
+                    {
+                        // Get the CustomerID to display in the confirmation message
+                        string customerIDToDelete = guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString();
+                        string CurrentFileNo = guna2DataGridView17.SelectedRows[0].Cells[1].Value.ToString();
+                        // Ask for confirmation
+                        DialogResult result = MessageBox.Show("Are you sure you want to delete Medical History of Customer with FILE NO: " + CurrentFileNo + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("delete from MedicalHistory where ID = @CustomerID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@CustomerID", guna2DataGridView17.CurrentRow.Cells[0].Value.ToString());
+                                cmd.ExecuteNonQuery();
+                                MainClass.con.Close();
+                                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("delete from Diet where FILENO = @CustomerID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                                cmd.ExecuteNonQuery();
+                                MainClass.con.Close();
+                                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("delete from Questions where FILENO = @CustomerID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                                cmd.ExecuteNonQuery();
+                                MainClass.con.Close();
+                                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("delete from Medication where FILENO = @CustomerID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                                cmd.ExecuteNonQuery();
+                                MainClass.con.Close();
+                                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("delete from Deficiency where FILENO = @CustomerID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                                cmd.ExecuteNonQuery();
+                                MainClass.con.Close();
+                                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("delete from DiseaseHistory where FILENO = @CustomerID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                                cmd.ExecuteNonQuery();
+                                MainClass.con.Close();
+                                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("delete from FoodAllergies where FILENO = @CustomerID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@CustomerID", CurrentFileNo);
+                                cmd.ExecuteNonQuery();
+
+                                MainClass.con.Close();
+                                MessageBox.Show("Medical history removed successfully");
+
+                                //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                            ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
+
+                        }
+                    }
+                }
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex= 0;
+        }
+
+        private void EditMedicalHistory_Click(object sender, EventArgs e)
+        {
+            edit = 1;
+            int id = int.Parse(guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString());
+            try
+            {
+                string customerIDToEdit = guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString();
+                string customerFilenoToEdit = guna2DataGridView17.SelectedRows[0].Cells[1].Value.ToString();
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM MedicalHistory WHERE ID = @CustomerID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CustomerID", customerIDToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        // Set the retrieved data into input boxes
+                       
+                        string dbstatus = reader["Status"].ToString();
+                        string dbSmoking = reader["Smoking"].ToString();
+                        string dbblood = reader["BloodType"].ToString();
+                        foreach (DataGridViewRow row in guna2DataGridView3.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                if (cell.Value.ToString().Equals(dbstatus))
+                                {
+                                    cell.Selected = true;
+                                    break; // Stop iterating through the cells once the matching cell is found
+                                }
+                            }
+                        }
+                        foreach (DataGridViewRow row in guna2DataGridView4.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                if (cell.Value.ToString().Equals(dbSmoking))
+                                {
+                                    cell.Selected = true;
+                                    break; // Stop iterating through the cells once the matching cell is found
+                                }
+                            }
+                        }
+                        foreach (DataGridViewRow row in guna2DataGridView5.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                if (cell.Value.ToString().Equals(dbblood))
+                                {
+                                    cell.Selected = true;
+                                    break; // Stop iterating through the cells once the matching cell is found
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
+                }
+                reader.Close();
+                MainClass.con.Close();
+
+                MainClass.con.Open();
+                SqlCommand cmd2 = new SqlCommand("SELECT * FROM DiseaseHistory WHERE FILENO = @CustomerID", MainClass.con);
+                cmd2.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                List<string> datas = new List<string>();
+                SqlDataReader reader2 = cmd.ExecuteReader();
+                if (reader2.HasRows)
+                {
+                    while (reader2.Read())
+                    {
+                        // Set the retrieved data into input boxes
+                       
+                       datas.Add(reader2["Data"].ToString());
+                        
+                       
+                        
+                    }
+                    foreach (var item in datas)
+                    {
+                        foreach (DataGridViewRow row in guna2DataGridView6.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                if (cell.Value.ToString().Equals(item))
+                                {
+                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                    cell.Style.ForeColor = Color.Black;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
+                }
+                reader2.Close();
+                MainClass.con.Close();
+
+                MainClass.con.Open();
+                SqlCommand cmd3 = new SqlCommand("SELECT * FROM FoodAllergies WHERE FILENO = @CustomerID", MainClass.con);
+                cmd3.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                List<string> Alergies = new List<string>();
+                SqlDataReader reader3 = cmd.ExecuteReader();
+                if (reader3.HasRows)
+                {
+                    while (reader3.Read())
+                    {
+                        // Set the retrieved data into input boxes
+
+                        Alergies.Add(reader3["Data"].ToString());
+
+
+
+                    }
+                    foreach (var item in Alergies)
+                    {
+                        foreach (DataGridViewRow row in guna2DataGridView13.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                if (cell.Value.ToString().Equals(item))
+                                {
+                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                    cell.Style.ForeColor = Color.Black;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
+                }
+                reader3.Close();
+                MainClass.con.Close();
+
+                MainClass.con.Open();
+                SqlCommand cmd4 = new SqlCommand("SELECT * FROM Deficiency WHERE FILENO = @CustomerID", MainClass.con);
+                cmd4.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                List<string> nutrients = new List<string>();
+                SqlDataReader reader4 = cmd.ExecuteReader();
+                if (reader4.HasRows)
+                {
+                    while (reader4.Read())
+                    {
+                        // Set the retrieved data into input boxes
+
+                        nutrients.Add(reader4["Data"].ToString());
+
+
+
+                    }
+                    foreach (var item in nutrients)
+                    {
+                        foreach (DataGridViewRow row in guna2DataGridView14.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                if (cell.Value.ToString().Equals(item))
+                                {
+                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                    cell.Style.ForeColor = Color.Black;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
+                }
+                reader4.Close();
+                MainClass.con.Close();
+
+                MainClass.con.Open();
+                SqlCommand cmd5 = new SqlCommand("SELECT * FROM Medication WHERE FILENO = @CustomerID", MainClass.con);
+                cmd5.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                List<string> medicines = new List<string>();
+                SqlDataReader reader5 = cmd.ExecuteReader();
+                if (reader5.HasRows)
+                {
+                    while (reader5.Read())
+                    {
+                        // Set the retrieved data into input boxes
+
+                        medicines.Add(reader5["Data"].ToString());
+
+
+
+                    }
+                    foreach (var item in medicines)
+                    {
+                        foreach (DataGridViewRow row in guna2DataGridView15.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                if (cell.Value.ToString().Equals(item))
+                                {
+                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                    cell.Style.ForeColor = Color.Black;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
+                }
+                reader5.Close();
+                MainClass.con.Close();
+
+                MainClass.con.Open();
+                SqlCommand cmd6 = new SqlCommand("SELECT * FROM Diet WHERE FILENO = @CustomerID", MainClass.con);
+                cmd6.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                List<string> dietavoid = new List<string>();
+                SqlDataReader reader6 = cmd.ExecuteReader();
+                if (reader6.HasRows)
+                {
+                    while (reader6.Read())
+                    {
+                        // Set the retrieved data into input boxes
+
+                        dietavoid.Add(reader6["Data"].ToString());
+
+
+
+                    }
+                    foreach (var item in dietavoid)
+                    {
+                        foreach (DataGridViewRow row in guna2DataGridView16.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                if (cell.Value.ToString().Equals(item))
+                                {
+                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                    cell.Style.ForeColor = Color.Black;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
+                }
+                reader6.Close();
+                MainClass.con.Close();
+
+                MainClass.con.Open();
+                SqlCommand cmd6 = new SqlCommand("SELECT * FROM Diet WHERE FILENO = @CustomerID", MainClass.con);
+                cmd6.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                List<string> dietavoid = new List<string>();
+                SqlDataReader reader6 = cmd.ExecuteReader();
+                if (reader6.HasRows)
+                {
+                    while (reader6.Read())
+                    {
+                        // Set the retrieved data into input boxes
+
+                        dietavoid.Add(reader6["Data"].ToString());
+
+
+
+                    }
+                    foreach (var item in dietavoid)
+                    {
+                        foreach (DataGridViewRow row in guna2DataGridView16.Rows)
+                        {
+                            foreach (DataGridViewCell cell in row.Cells)
+                            {
+                                if (cell.Value.ToString().Equals(item))
+                                {
+                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                    cell.Style.ForeColor = Color.Black;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
+                }
+                reader6.Close();
+                MainClass.con.Close();
+            }                           
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
