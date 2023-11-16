@@ -3358,43 +3358,43 @@ namespace HelloWorldSolutionIMS
                 reader6.Close();
                 MainClass.con.Close();
 
-                MainClass.con.Open();
-                SqlCommand cmd6 = new SqlCommand("SELECT * FROM Diet WHERE FILENO = @CustomerID", MainClass.con);
-                cmd6.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
-                List<string> dietavoid = new List<string>();
-                SqlDataReader reader6 = cmd.ExecuteReader();
-                if (reader6.HasRows)
-                {
-                    while (reader6.Read())
-                    {
-                        // Set the retrieved data into input boxes
+                //MainClass.con.Open();
+                //SqlCommand cmd6 = new SqlCommand("SELECT * FROM Diet WHERE FILENO = @CustomerID", MainClass.con);
+                //cmd6.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                //List<string> dietavoid = new List<string>();
+                //SqlDataReader reader6 = cmd.ExecuteReader();
+                //if (reader6.HasRows)
+                //{
+                //    while (reader6.Read())
+                //    {
+                //        // Set the retrieved data into input boxes
 
-                        dietavoid.Add(reader6["Data"].ToString());
+                //        dietavoid.Add(reader6["Data"].ToString());
 
 
 
-                    }
-                    foreach (var item in dietavoid)
-                    {
-                        foreach (DataGridViewRow row in guna2DataGridView16.Rows)
-                        {
-                            foreach (DataGridViewCell cell in row.Cells)
-                            {
-                                if (cell.Value.ToString().Equals(item))
-                                {
-                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
-                                    cell.Style.ForeColor = Color.Black;
-                                }
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
-                }
-                reader6.Close();
-                MainClass.con.Close();
+                //    }
+                //    foreach (var item in dietavoid)
+                //    {
+                //        foreach (DataGridViewRow row in guna2DataGridView16.Rows)
+                //        {
+                //            foreach (DataGridViewCell cell in row.Cells)
+                //            {
+                //                if (cell.Value.ToString().Equals(item))
+                //                {
+                //                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                //                    cell.Style.ForeColor = Color.Black;
+                //                }
+                //            }
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
+                //}
+                //reader6.Close();
+                //MainClass.con.Close();
             }                           
             catch (Exception ex)
             {

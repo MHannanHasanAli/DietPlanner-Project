@@ -14,6 +14,7 @@ using static HelloWorldSolutionIMS.MealAction;
 using Win32Interop.Enums;
 using System.Drawing.Printing;
 using Fizzler;
+using System.Collections;
 
 namespace HelloWorldSolutionIMS
 {
@@ -48,8 +49,8 @@ namespace HelloWorldSolutionIMS
                         fileno.Text = reader["FileNo"].ToString();
                         paymentname.Text = reader["PaymentName"].ToString();
                         amount.Text = reader["Amount"].ToString();
-                        startdate.Text = reader["Startdate"].ToString();
-                        enddate.Text = reader["Enddate"].ToString();
+                        enddate.Text = reader["Startdate"].ToString();
+                        startdate.Text = reader["Enddate"].ToString();
 
                         promotionName = reader["PromotionName"].ToString();
 
@@ -336,8 +337,8 @@ namespace HelloWorldSolutionIMS
                         mobileno.Text = "";
                         paymentname.Text = "";
                         amount.Text = "";
-                        startdate.Text = "";
                         enddate.Text = "";
+                        startdate.Text = "";
                         amountafterpromotion.Text = "";
                         promotionpercentage.Text = "";
                         promotioncode.Text = "";
@@ -409,8 +410,8 @@ namespace HelloWorldSolutionIMS
                         mobileno.Text = "";
                         paymentname.Text = "";
                         amount.Text = "";
-                        startdate.Text = "";
                         enddate.Text = "";
+                        startdate.Text = "";
                         amountafterpromotion.Text = "";
                         promotionpercentage.Text = "";
                         promotioncode.Text = "";
@@ -651,8 +652,8 @@ namespace HelloWorldSolutionIMS
                         mobileno.Text = "";
                         paymentname.Text = "";
                         amount.Text = "";
-                        startdate.Text = "";
                         enddate.Text = "";
+                        startdate.Text = "";
                         amountafterpromotion.Text = "";
                         promotionpercentage.Text = "";
                         promotioncode.Text = "";
@@ -709,8 +710,8 @@ namespace HelloWorldSolutionIMS
                                  fileno.Text = reader["FileNo"].ToString();
                                  paymentname.Text = reader["PaymentName"].ToString();
                                  amount.Text = reader["Amount"].ToString();
-                                 startdate.Text = reader["Startdate"].ToString();
-                                 enddate.Text = reader["Enddate"].ToString();                       
+                                 enddate.Text = reader["Startdate"].ToString();
+                                 startdate.Text = reader["Enddate"].ToString();                       
                                  promotioncode.Text = reader["PromotionCode"].ToString();
                         promotiondetails.Text = reader["PromotionDetails"].ToString();
                         amountafterpromotion.Text = reader["AmountAfterPromotion"].ToString();
@@ -756,8 +757,8 @@ namespace HelloWorldSolutionIMS
             mobileno.Text = "";
             paymentname.Text = "";
             amount.Text = "";
-            startdate.Text = "";
             enddate.Text = "";
+            startdate.Text = "";
             amountafterpromotion.Text = "";
             promotionpercentage.Text = "";
             promotioncode.Text = "";
@@ -979,7 +980,7 @@ namespace HelloWorldSolutionIMS
                     {
                         float amountvalue = float.Parse(amount.Text);
 
-                        var amountupdate = amountvalue + ((percentage / 100.00) * amountvalue);
+                        var amountupdate = amountvalue - ((percentage / 100.00) * amountvalue);
 
                         amountafterpromotion.Text = amountupdate.ToString();
                     }
@@ -1037,6 +1038,151 @@ namespace HelloWorldSolutionIMS
                     e.Handled = true; // Ensure the text remains an integer, doesn't exceed 10 digits, and starts with 0
                 }
             }
+        }
+        float defaultamount = 0;
+        List<int> Defaulters = new List<int>();
+        private void nonpaidpayment_Click(object sender, EventArgs e)
+        {
+            defaultamount = 0;
+            Defaulters.Clear();
+            List<int> filenos = new List<int>();
+            tabControl1.SelectedIndex = 2;
+            MainClass.con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT FILENO FROM CUSTOMER", MainClass.con);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    filenos.Add(int.Parse(reader["FILENO"].ToString()));
+                }
+            }
+            
+            reader.Close();
+            MainClass.con.Close();
+            
+           
+            MainClass.con.Open();
+
+            foreach (var item in filenos)
+            {
+                SqlCommand cmd2 = new SqlCommand("SELECT TOP 1 * FROM PAYMENT WHERE FILENO = @FILENO AND STARTDATE <= GETDATE() AND ENDDATE >= GETDATE() ORDER BY FILENO DESC", MainClass.con);
+                cmd2.Parameters.AddWithValue("@FILENO", item);
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                if (reader2.HasRows)
+                {
+                    
+                }
+                else
+                {
+                    Defaulters.Add(item);
+                    //float amount = float.Parse(reader2["Amount"].ToString());
+                    //defaultamount = defaultamount + amount;
+                }
+                reader2.Close();
+            }
+            MainClass.con.Close();
+
+            MainClass.con.Open();
+
+            foreach (var item in Defaulters)
+            {
+                SqlCommand cmd3 = new SqlCommand("SELECT TOP 1 Amount FROM PAYMENT WHERE FILENO = @FILENO ORDER BY ID DESC", MainClass.con);
+                cmd3.Parameters.AddWithValue("@FILENO", item.ToString());
+
+                using (SqlDataReader reader3 = cmd3.ExecuteReader())
+                {
+                    if (reader3.HasRows)
+                    {
+                        reader3.Read(); // Read the first row
+
+                        // Check if "Amount" column exists before accessing it
+                        int amountOrdinal = reader3.GetOrdinal("Amount");
+                        if (!reader3.IsDBNull(amountOrdinal))
+                        {
+                            float amount = float.Parse(reader3["Amount"].ToString());
+                            defaultamount += amount;
+                        }
+                    }
+                }
+            }
+
+            defaultlabel.Text = "Total Defaulted Amount: " + defaultamount;
+            MainClass.con.Close();
+
+
+            ShowDefaulter(guna2DataGridView2,iddefaultdgv,filenodefaultdgv,defaulterdgv,familynamedefaultdgv,Defaulters);
+            
+        }
+        private void ShowDefaulter(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn name, DataGridViewColumn fname,List<int> defaultCustomers)
+        {
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                StringBuilder filenoList = new StringBuilder();
+                foreach (var filenos in defaultCustomers)
+                {
+                    if (filenoList.Length > 0)
+                    {
+                        filenoList.Append(",");
+                    }
+                    filenoList.Append("@fileno" + filenos);
+                }
+
+                // Move the assignment of query here
+                string query = "SELECT ID, FILENO, FIRSTNAME, FAMILYNAME FROM Customer WHERE FILENO IN (" + filenoList.ToString() + ")";
+
+                using (cmd = new SqlCommand(query, MainClass.con)) // Create SqlCommand object from query
+                {
+                    // Add parameters to the command
+                    foreach (var filenos in defaultCustomers)
+                    {
+                        cmd.Parameters.AddWithValue("@fileno" + filenos, filenos);
+                    }
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    id.DataPropertyName = dt.Columns["ID"].ToString();
+                    fileno.DataPropertyName = dt.Columns["FILENO"].ToString();
+                    name.DataPropertyName = dt.Columns["FIRSTNAME"].ToString();
+                    fname.DataPropertyName = dt.Columns["FAMILYNAME"].ToString();
+
+                    dgv.DataSource = dt;
+                }
+
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex= 0;
         }
     }
 }
