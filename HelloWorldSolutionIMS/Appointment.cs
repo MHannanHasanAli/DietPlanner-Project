@@ -16,6 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Win32Interop.Enums;
+using static HelloWorldSolutionIMS.Appointment;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
@@ -655,20 +656,24 @@ namespace HelloWorldSolutionIMS
                                 try
                                 {
                                     MainClass.con.Open();
-                                    SqlCommand cmd = new SqlCommand("INSERT INTO Appointment (Fileno, Firstname, Familyname, Mobileno, Date, Room, RowIndex, ColumnIndex, Slot) " +
-                                        "VALUES (@Fileno, @Firstname, @Familyname, @Mobileno, @Date, @Room, @RowIndex, @ColumnIndex, @Slot)", MainClass.con);
+                                    foreach (var item in ForRoom1)
+                                    {
+                                        SqlCommand cmd = new SqlCommand("INSERT INTO Appointment (Fileno, Firstname, Familyname, Mobileno, Date, Room, RowIndex, ColumnIndex, Slot) " +
+                                       "VALUES (@Fileno, @Firstname, @Familyname, @Mobileno, @Date, @Room, @RowIndex, @ColumnIndex, @Slot)", MainClass.con);
 
-                                    cmd.Parameters.AddWithValue("@Fileno", fileno.Text); // Assuming 'fileno' is a control related to 'Fileno' in the database
-                                    cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
-                                    cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
-                                    cmd.Parameters.AddWithValue("@Mobileno", mobileno.Text);
-                                    cmd.Parameters.AddWithValue("@Date", date.SelectionStart); // Assuming it's the current date
-                                    cmd.Parameters.AddWithValue("@Room", selectedCellIndexesRoom1.RoomNo); // Assuming 'room' is a control related to 'Room' in the database
-                                    cmd.Parameters.AddWithValue("@RowIndex", selectedCellIndexesRoom1.RowIndex); // Assuming 'rowIndex' is a control related to 'RowIndex' in the database
-                                    cmd.Parameters.AddWithValue("@ColumnIndex", selectedCellIndexesRoom1.ColumnIndex); // Assuming 'columnIndex' is a control related to 'ColumnIndex' in the database
-                                    cmd.Parameters.AddWithValue("@Slot", selectedCellIndexesRoom1.time); // Assuming 'slot' is a control related to 'Slot' in the database
+                                        cmd.Parameters.AddWithValue("@Fileno", fileno.Text); // Assuming 'fileno' is a control related to 'Fileno' in the database
+                                        cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
+                                        cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
+                                        cmd.Parameters.AddWithValue("@Mobileno", mobileno.Text);
+                                        cmd.Parameters.AddWithValue("@Date", date.SelectionStart); // Assuming it's the current date
+                                        cmd.Parameters.AddWithValue("@Room", selectedCellIndexesRoom1.RoomNo); // Assuming 'room' is a control related to 'Room' in the database
+                                        cmd.Parameters.AddWithValue("@RowIndex", item.rowindex); // Assuming 'rowIndex' is a control related to 'RowIndex' in the database
+                                        cmd.Parameters.AddWithValue("@ColumnIndex", item.colindex); // Assuming 'columnIndex' is a control related to 'ColumnIndex' in the database
+                                        cmd.Parameters.AddWithValue("@Slot", item.Time); // Assuming 'slot' is a control related to 'Slot' in the database
 
-                                    cmd.ExecuteNonQuery();
+                                        cmd.ExecuteNonQuery();
+                                    }
+                                   
                                     MessageBox.Show("Appointment added successfully");
                                     MainClass.con.Close();
 
@@ -696,20 +701,23 @@ namespace HelloWorldSolutionIMS
                                 try
                                 {
                                     MainClass.con.Open();
-                                    SqlCommand cmd = new SqlCommand("INSERT INTO Appointment (Fileno, Firstname, Familyname, Mobileno, Date, Room, RowIndex, ColumnIndex, Slot) " +
+                                    foreach (var item in ForRoom2)
+                                    {
+                                        SqlCommand cmd = new SqlCommand("INSERT INTO Appointment (Fileno, Firstname, Familyname, Mobileno, Date, Room, RowIndex, ColumnIndex, Slot) " +
                                         "VALUES (@Fileno, @Firstname, @Familyname, @Mobileno, @Date, @Room, @RowIndex, @ColumnIndex, @Slot)", MainClass.con);
 
-                                    cmd.Parameters.AddWithValue("@Fileno", fileno.Text); // Assuming 'fileno' is a control related to 'Fileno' in the database
-                                    cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
-                                    cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
-                                    cmd.Parameters.AddWithValue("@Mobileno", mobileno.Text);
-                                    cmd.Parameters.AddWithValue("@Date", date.SelectionStart); // Assuming it's the current date
-                                    cmd.Parameters.AddWithValue("@Room", selectedCellIndexesRoom2.RoomNo); // Assuming 'room' is a control related to 'Room' in the database
-                                    cmd.Parameters.AddWithValue("@RowIndex", selectedCellIndexesRoom2.RowIndex); // Assuming 'rowIndex' is a control related to 'RowIndex' in the database
-                                    cmd.Parameters.AddWithValue("@ColumnIndex", selectedCellIndexesRoom2.ColumnIndex); // Assuming 'columnIndex' is a control related to 'ColumnIndex' in the database
-                                    cmd.Parameters.AddWithValue("@Slot", selectedCellIndexesRoom2.time); // Assuming 'slot' is a control related to 'Slot' in the database
+                                        cmd.Parameters.AddWithValue("@Fileno", fileno.Text); // Assuming 'fileno' is a control related to 'Fileno' in the database
+                                        cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
+                                        cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
+                                        cmd.Parameters.AddWithValue("@Mobileno", mobileno.Text);
+                                        cmd.Parameters.AddWithValue("@Date", date.SelectionStart); // Assuming it's the current date
+                                        cmd.Parameters.AddWithValue("@Room", selectedCellIndexesRoom2.RoomNo); // Assuming 'room' is a control related to 'Room' in the database
+                                        cmd.Parameters.AddWithValue("@RowIndex", item.rowindex); // Assuming 'rowIndex' is a control related to 'RowIndex' in the database
+                                        cmd.Parameters.AddWithValue("@ColumnIndex", item.colindex); // Assuming 'columnIndex' is a control related to 'ColumnIndex' in the database
+                                        cmd.Parameters.AddWithValue("@Slot", item.Time); // Assuming 'slot' is a control related to 'Slot' in the database
 
-                                    cmd.ExecuteNonQuery();
+                                        cmd.ExecuteNonQuery();
+                                    }
                                     MessageBox.Show("Appointment added successfully");
                                     MainClass.con.Close();
 
@@ -737,20 +745,23 @@ namespace HelloWorldSolutionIMS
                                 try
                                 {
                                     MainClass.con.Open();
-                                    SqlCommand cmd = new SqlCommand("INSERT INTO Appointment (Fileno, Firstname, Familyname, Mobileno, Date, Room, RowIndex, ColumnIndex, Slot) " +
+                                    foreach (var item in ForRoom3)
+                                    {
+                                        SqlCommand cmd = new SqlCommand("INSERT INTO Appointment (Fileno, Firstname, Familyname, Mobileno, Date, Room, RowIndex, ColumnIndex, Slot) " +
                                         "VALUES (@Fileno, @Firstname, @Familyname, @Mobileno, @Date, @Room, @RowIndex, @ColumnIndex, @Slot)", MainClass.con);
 
-                                    cmd.Parameters.AddWithValue("@Fileno", fileno.Text); // Assuming 'fileno' is a control related to 'Fileno' in the database
-                                    cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
-                                    cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
-                                    cmd.Parameters.AddWithValue("@Mobileno", mobileno.Text);
-                                    cmd.Parameters.AddWithValue("@Date", date.SelectionStart); // Assuming it's the current date
-                                    cmd.Parameters.AddWithValue("@Room", selectedCellIndexesRoom3.RoomNo); // Assuming 'room' is a control related to 'Room' in the database
-                                    cmd.Parameters.AddWithValue("@RowIndex", selectedCellIndexesRoom3.RowIndex); // Assuming 'rowIndex' is a control related to 'RowIndex' in the database
-                                    cmd.Parameters.AddWithValue("@ColumnIndex", selectedCellIndexesRoom3.ColumnIndex); // Assuming 'columnIndex' is a control related to 'ColumnIndex' in the database
-                                    cmd.Parameters.AddWithValue("@Slot", selectedCellIndexesRoom3.time); // Assuming 'slot' is a control related to 'Slot' in the database
+                                        cmd.Parameters.AddWithValue("@Fileno", fileno.Text); // Assuming 'fileno' is a control related to 'Fileno' in the database
+                                        cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
+                                        cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
+                                        cmd.Parameters.AddWithValue("@Mobileno", mobileno.Text);
+                                        cmd.Parameters.AddWithValue("@Date", date.SelectionStart); // Assuming it's the current date
+                                        cmd.Parameters.AddWithValue("@Room", selectedCellIndexesRoom3.RoomNo); // Assuming 'room' is a control related to 'Room' in the database
+                                        cmd.Parameters.AddWithValue("@RowIndex", item.rowindex); // Assuming 'rowIndex' is a control related to 'RowIndex' in the database
+                                        cmd.Parameters.AddWithValue("@ColumnIndex", item.colindex); // Assuming 'columnIndex' is a control related to 'ColumnIndex' in the database
+                                        cmd.Parameters.AddWithValue("@Slot", item.Time); // Assuming 'slot' is a control related to 'Slot' in the database
 
-                                    cmd.ExecuteNonQuery();
+                                        cmd.ExecuteNonQuery();
+                                    }
                                     MessageBox.Show("Appointment added successfully");
                                     MainClass.con.Close();
 
@@ -778,20 +789,23 @@ namespace HelloWorldSolutionIMS
                                 try
                                 {
                                     MainClass.con.Open();
-                                    SqlCommand cmd = new SqlCommand("INSERT INTO Appointment (Fileno, Firstname, Familyname, Mobileno, Date, Room, RowIndex, ColumnIndex, Slot) " +
+                                    foreach (var item in ForRoom4)
+                                    {
+                                        SqlCommand cmd = new SqlCommand("INSERT INTO Appointment (Fileno, Firstname, Familyname, Mobileno, Date, Room, RowIndex, ColumnIndex, Slot) " +
                                         "VALUES (@Fileno, @Firstname, @Familyname, @Mobileno, @Date, @Room, @RowIndex, @ColumnIndex, @Slot)", MainClass.con);
 
-                                    cmd.Parameters.AddWithValue("@Fileno", fileno.Text); // Assuming 'fileno' is a control related to 'Fileno' in the database
-                                    cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
-                                    cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
-                                    cmd.Parameters.AddWithValue("@Mobileno", mobileno.Text);
-                                    cmd.Parameters.AddWithValue("@Date", date.SelectionStart); // Assuming it's the current date
-                                    cmd.Parameters.AddWithValue("@Room", selectedCellIndexesRoom4.RoomNo); // Assuming 'room' is a control related to 'Room' in the database
-                                    cmd.Parameters.AddWithValue("@RowIndex", selectedCellIndexesRoom4.RowIndex); // Assuming 'rowIndex' is a control related to 'RowIndex' in the database
-                                    cmd.Parameters.AddWithValue("@ColumnIndex", selectedCellIndexesRoom4.ColumnIndex); // Assuming 'columnIndex' is a control related to 'ColumnIndex' in the database
-                                    cmd.Parameters.AddWithValue("@Slot", selectedCellIndexesRoom4.time); // Assuming 'slot' is a control related to 'Slot' in the database
+                                        cmd.Parameters.AddWithValue("@Fileno", fileno.Text); // Assuming 'fileno' is a control related to 'Fileno' in the database
+                                        cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
+                                        cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
+                                        cmd.Parameters.AddWithValue("@Mobileno", mobileno.Text);
+                                        cmd.Parameters.AddWithValue("@Date", date.SelectionStart); // Assuming it's the current date
+                                        cmd.Parameters.AddWithValue("@Room", selectedCellIndexesRoom4.RoomNo); // Assuming 'room' is a control related to 'Room' in the database
+                                        cmd.Parameters.AddWithValue("@RowIndex", item.rowindex); // Assuming 'rowIndex' is a control related to 'RowIndex' in the database
+                                        cmd.Parameters.AddWithValue("@ColumnIndex", item.colindex); // Assuming 'columnIndex' is a control related to 'ColumnIndex' in the database
+                                        cmd.Parameters.AddWithValue("@Slot", item.Time); // Assuming 'slot' is a control related to 'Slot' in the database
 
-                                    cmd.ExecuteNonQuery();
+                                        cmd.ExecuteNonQuery();
+                                    }
                                     MessageBox.Show("Appointment added successfully");
                                     MainClass.con.Close();
 
@@ -983,6 +997,43 @@ namespace HelloWorldSolutionIMS
             {
                 MessageBox.Show("Appointment for this day and time is already booked!");
             }
+
+            ForRoom1.Clear();
+            ForRoom2.Clear();
+            ForRoom3.Clear();
+            ForRoom4.Clear();
+            for (int i = 0; i < Room1.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room1.Columns.Count; j++)
+                {
+                    Room1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    Room1.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+            for (int i = 0; i < Room2.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room2.Columns.Count; j++)
+                {
+                    Room2.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    Room2.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+            for (int i = 0; i < Room3.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room3.Columns.Count; j++)
+                {
+                    Room3.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    Room3.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+            for (int i = 0; i < Room4.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room4.Columns.Count; j++)
+                {
+                    Room4.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    Room4.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
         }
         private void Clear_Click(object sender, EventArgs e)
         {
@@ -994,6 +1045,54 @@ namespace HelloWorldSolutionIMS
             Room3.CurrentCell = null;
             Room4.ClearSelection();
             Room4.CurrentCell = null;
+            ForRoom1.Clear();
+            ForRoom2.Clear();
+            ForRoom3.Clear();
+            ForRoom4.Clear();
+            for (int i = 0; i < Room1.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room1.Columns.Count; j++)
+                {
+                    if (Room1.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room1.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room2.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room2.Columns.Count; j++)
+                {
+                    if (Room2.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room2.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room2.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room3.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room3.Columns.Count; j++)
+                {
+                    if (Room3.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room3.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room3.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room4.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room4.Columns.Count; j++)
+                {
+                    if (Room4.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room4.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room4.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
         }
         private void mobileno_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -1472,6 +1571,42 @@ namespace HelloWorldSolutionIMS
             tabControl1.SelectedIndex = 0;
             slot.Visible = false;
             slotlabel.Visible = false;
+            ForRoom1.Clear();
+            ForRoom2.Clear();
+            ForRoom3.Clear();
+            ForRoom4.Clear();
+            for (int i = 0; i < Room1.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room1.Columns.Count; j++)
+                {
+                    Room1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    Room1.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+            for (int i = 0; i < Room2.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room2.Columns.Count; j++)
+                {
+                    Room2.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    Room2.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+            for (int i = 0; i < Room3.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room3.Columns.Count; j++)
+                {
+                    Room3.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    Room3.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
+            for (int i = 0; i < Room4.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room4.Columns.Count; j++)
+                {
+                    Room4.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    Room4.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                }
+            }
         }
 
         private void search_Click(object sender, EventArgs e)
@@ -1584,7 +1719,16 @@ namespace HelloWorldSolutionIMS
         {
 
         }
-
+        public class Index
+        {
+            public string Time { get; set; }
+            public int rowindex { get; set; }
+            public int colindex { get; set; }
+        }
+        List<Index> ForRoom1 = new List<Index>();
+        List<Index> ForRoom2 = new List<Index>();
+        List<Index> ForRoom3= new List<Index>();
+        List<Index> ForRoom4 = new List<Index>();
         private void Room1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Room2.ClearSelection();
@@ -1593,6 +1737,80 @@ namespace HelloWorldSolutionIMS
             Room3.CurrentCell = null;
             Room4.ClearSelection();
             Room4.CurrentCell = null;
+            ForRoom2.Clear();
+            ForRoom3.Clear();
+            ForRoom4.Clear();
+            for (int i = 0; i < Room2.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room2.Columns.Count; j++)
+                {
+                    if (Room2.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room2.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room2.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room3.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room3.Columns.Count; j++)
+                {
+                    if (Room3.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room3.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room3.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room4.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room4.Columns.Count; j++)
+                {
+                    if (Room4.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room4.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room4.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            Index timeselected = new Index();
+            timeselected.colindex = e.ColumnIndex;
+            timeselected.rowindex = e.RowIndex;
+            timeselected.Time = Room1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            int checker = 0;
+            foreach (var item in ForRoom1)
+            {
+                if (item.rowindex == timeselected.rowindex && item.colindex == timeselected.colindex)
+                {
+                    ForRoom1.Remove(item);
+                    checker = 1;
+                    break;
+                }
+            }
+
+            if (checker == 0)
+            {
+                ForRoom1.Add(timeselected);
+            }
+            Room1.ClearSelection();
+            for (int i = 0; i < Room1.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room1.Columns.Count; j++)
+                {
+                    if (Room1.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room1.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+
+            foreach (var item in ForRoom1)
+            {
+                Room1.Rows[item.rowindex].Cells[item.colindex].Style.BackColor = Color.FromArgb(128, 255, 128);
+                Room1.Rows[item.rowindex].Cells[item.colindex].Style.ForeColor = Color.Black;
+
+            }
         }
 
         private void Room2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -1603,6 +1821,80 @@ namespace HelloWorldSolutionIMS
             Room3.CurrentCell = null;
             Room4.ClearSelection();
             Room4.CurrentCell = null;
+            ForRoom1.Clear();
+            ForRoom3.Clear();
+            ForRoom4.Clear();
+            for (int i = 0; i < Room1.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room1.Columns.Count; j++)
+                {
+                    if (Room1.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room1.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room3.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room3.Columns.Count; j++)
+                {
+                    if (Room3.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room3.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room3.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room4.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room4.Columns.Count; j++)
+                {
+                    if (Room4.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room4.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room4.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            Index timeselected = new Index();
+            timeselected.colindex = e.ColumnIndex;
+            timeselected.rowindex = e.RowIndex;
+            timeselected.Time = Room2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            int checker = 0;
+            foreach (var item in ForRoom2)
+            {
+                if (item.rowindex == timeselected.rowindex && item.colindex == timeselected.colindex)
+                {
+                    ForRoom2.Remove(item);
+                    checker = 1;
+                    break;
+                }
+            }
+
+            if (checker == 0)
+            {
+                ForRoom2.Add(timeselected);
+            }
+            Room2.ClearSelection();
+            for (int i = 0; i < Room2.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room2.Columns.Count; j++)
+                {
+                    if (Room2.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room2.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room2.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+
+            foreach (var item in ForRoom2)
+            {
+                Room2.Rows[item.rowindex].Cells[item.colindex].Style.BackColor = Color.FromArgb(128, 255, 128);
+                Room2.Rows[item.rowindex].Cells[item.colindex].Style.ForeColor = Color.Black;
+
+            }
         }
 
         private void Room3_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -1613,6 +1905,81 @@ namespace HelloWorldSolutionIMS
             Room2.CurrentCell = null;
             Room4.ClearSelection();
             Room4.CurrentCell = null;
+            ForRoom2.Clear();
+            ForRoom1.Clear();
+            ForRoom4.Clear();
+            for (int i = 0; i < Room1.Rows.Count; i++)
+            {
+
+                for (int j = 0; j < Room1.Columns.Count; j++)
+                {
+                    if (Room1.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room1.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room2.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room2.Columns.Count; j++)
+                {
+                    if (Room2.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room2.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room2.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room4.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room4.Columns.Count; j++)
+                {
+                    if (Room4.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room4.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room4.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            Index timeselected = new Index();
+            timeselected.colindex = e.ColumnIndex;
+            timeselected.rowindex = e.RowIndex;
+            timeselected.Time = Room3.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            int checker = 0;
+            foreach (var item in ForRoom3)
+            {
+                if (item.rowindex == timeselected.rowindex && item.colindex == timeselected.colindex)
+                {
+                    ForRoom3.Remove(item);
+                    checker = 1;
+                    break;
+                }
+            }
+
+            if (checker == 0)
+            {
+                ForRoom3.Add(timeselected);
+            }
+            Room3.ClearSelection();
+            for (int i = 0; i < Room3.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room3.Columns.Count; j++)
+                {
+                    if (Room3.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room3.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room3.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+
+            foreach (var item in ForRoom3)
+            {
+                Room3.Rows[item.rowindex].Cells[item.colindex].Style.BackColor = Color.FromArgb(128, 255, 128);
+                Room3.Rows[item.rowindex].Cells[item.colindex].Style.ForeColor = Color.Black;
+
+            }
         }
 
         private void Room4_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -1623,6 +1990,81 @@ namespace HelloWorldSolutionIMS
             Room2.CurrentCell = null;
             Room3.ClearSelection();
             Room3.CurrentCell = null;
+            ForRoom2.Clear();
+            ForRoom3.Clear();
+            ForRoom1.Clear();
+            for (int i = 0; i < Room1.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room1.Columns.Count; j++)
+                {
+                    if (Room1.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room1.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room2.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room2.Columns.Count; j++)
+                {
+                    if (Room2.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room2.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room2.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+            for (int i = 0; i < Room3.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room3.Columns.Count; j++)
+                {
+                    if (Room3.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room3.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room3.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+
+            Index timeselected = new Index();
+            timeselected.colindex = e.ColumnIndex;
+            timeselected.rowindex = e.RowIndex;
+            timeselected.Time = Room4.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            int checker = 0;
+            foreach (var item in ForRoom4)
+            {
+                if (item.rowindex == timeselected.rowindex && item.colindex == timeselected.colindex)
+                {
+                    ForRoom4.Remove(item);
+                    checker = 1;
+                    break;
+                }
+            }
+
+            if (checker == 0)
+            {
+                ForRoom4.Add(timeselected);
+            }
+            Room4.ClearSelection();
+            for (int i = 0; i < Room4.Rows.Count; i++)
+            {
+                for (int j = 0; j < Room4.Columns.Count; j++)
+                {
+                    if (Room4.Rows[i].Cells[j].Style.BackColor != Color.Red)
+                    {
+                        Room4.Rows[i].Cells[j].Style.BackColor = Color.White;
+                        Room4.Rows[i].Cells[j].Style.ForeColor = Color.Black;
+                    }
+                }
+            }
+
+            foreach (var item in ForRoom4)
+            {
+                Room4.Rows[item.rowindex].Cells[item.colindex].Style.BackColor = Color.FromArgb(128, 255, 128);
+                Room4.Rows[item.rowindex].Cells[item.colindex].Style.ForeColor = Color.Black;
+
+            }
         }
         private void SearchAppointmentsWithDate(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn firstname, DataGridViewColumn familyname, DataGridViewColumn mobile, DataGridViewColumn room, DataGridViewColumn slot, DataGridViewColumn date)
         {

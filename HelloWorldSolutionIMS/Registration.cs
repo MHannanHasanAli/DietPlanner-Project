@@ -1969,7 +1969,7 @@ namespace HelloWorldSolutionIMS
                 cmd.ExecuteNonQuery();
 
                 MainClass.con.Close();
-                MessageBox.Show("Medical history removed successfully");
+                //MessageBox.Show("Medical history removed successfully");
 
                 //ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
             }
@@ -2853,7 +2853,7 @@ namespace HelloWorldSolutionIMS
 
                         cmd.ExecuteNonQuery();
 
-                        MessageBox.Show("Medical history added successfully");
+                        MessageBox.Show("Task completed successfully");
                         MainClass.con.Close();
                     }
                     catch (Exception ex)
@@ -3135,6 +3135,9 @@ namespace HelloWorldSolutionIMS
                         string dbstatus = reader["Status"].ToString();
                         string dbSmoking = reader["Smoking"].ToString();
                         string dbblood = reader["BloodType"].ToString();
+                        status = dbstatus;
+                        smoking= dbSmoking;
+                        bloodtype= dbblood;
                         foreach (DataGridViewRow row in guna2DataGridView3.Rows)
                         {
                             foreach (DataGridViewCell cell in row.Cells)
@@ -3395,7 +3398,7 @@ namespace HelloWorldSolutionIMS
 
                             IndexingQuestions newitem = new IndexingQuestions();
                             newitem.TableName = "guna2DataGridView7";
-                            newitem.value= reader7["hormonalDiseaseText"].ToString();
+                            newitem.value= "Yes";
                             Questions.Add(newitem);
 
                         }
@@ -3418,7 +3421,7 @@ namespace HelloWorldSolutionIMS
                             guna2DataGridView8.Rows[0].Cells[1].Selected = true;
                             IndexingQuestions newitem = new IndexingQuestions();
                             newitem.TableName = "guna2DataGridView8";
-                            newitem.value = reader7["cancerText"].ToString();
+                            newitem.value = "Yes";
                             Questions.Add(newitem);
                         }
                         else if (cans == "No")
@@ -3439,7 +3442,7 @@ namespace HelloWorldSolutionIMS
                             guna2DataGridView9.Rows[0].Cells[1].Selected = true;
                             IndexingQuestions newitem = new IndexingQuestions();
                             newitem.TableName = "guna2DataGridView9";
-                            newitem.value = reader7["immuneDiseaseText"].ToString();
+                            newitem.value = "Yes";
                             Questions.Add(newitem);
                         }
                         else if (hians == "No")
@@ -3460,7 +3463,7 @@ namespace HelloWorldSolutionIMS
                             guna2DataGridView10.Rows[0].Cells[1].Selected = true;
                             IndexingQuestions newitem = new IndexingQuestions();
                             newitem.TableName = "guna2DataGridView10";
-                            newitem.value = reader7["hereditaryDiseaseText"].ToString();
+                            newitem.value = "Yes";
                             Questions.Add(newitem);
                         }
                         else if (hedans == "No")
@@ -3481,7 +3484,7 @@ namespace HelloWorldSolutionIMS
                             guna2DataGridView11.Rows[0].Cells[1].Selected = true;
                             IndexingQuestions newitem = new IndexingQuestions();
                             newitem.TableName = "guna2DataGridView11";
-                            newitem.value = reader7["pancreaticDiseaseText"].ToString();
+                            newitem.value = "Yes";
                             Questions.Add(newitem);
                         }
                         else if (pdans == "No")
@@ -3502,7 +3505,7 @@ namespace HelloWorldSolutionIMS
                             guna2DataGridView12.Rows[0].Cells[1].Selected = true;
                             IndexingQuestions newitem = new IndexingQuestions();
                             newitem.TableName = "guna2DataGridView12";
-                            newitem.value = reader7["otherDiseaseText"].ToString();
+                            newitem.value = "Yes";
                             Questions.Add(newitem);
                         }
                         else if (odans == "No")
