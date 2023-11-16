@@ -320,8 +320,19 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
+
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView2.GridColor = Color.Black;
+            guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.ForeColor;
+
         }
-        
+
         static int counter = 0;
         private void guna2DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {

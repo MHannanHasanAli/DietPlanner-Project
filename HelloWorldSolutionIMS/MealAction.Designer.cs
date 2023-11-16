@@ -60,6 +60,16 @@
             this.Delete = new Guna.UI2.WinForms.Guna2Button();
             this.EditBTN = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealardgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealendgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caloriesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proteinmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatsmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carbohydratesmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calciummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fibermaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodiummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Add = new Guna.UI2.WinForms.Guna2Button();
             this.search = new Guna.UI2.WinForms.Guna2Button();
             this.groupnarsearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -168,16 +178,6 @@
             this.gcid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealardgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealendgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caloriesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proteinmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatsmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carbohydratesmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calciummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fibermaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodiummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ingredientardgv = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ingredientendgv = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -515,6 +515,82 @@
             this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // iddgv
+            // 
+            this.iddgv.HeaderText = "NO";
+            this.iddgv.MinimumWidth = 6;
+            this.iddgv.Name = "iddgv";
+            this.iddgv.ReadOnly = true;
+            // 
+            // mealardgv
+            // 
+            this.mealardgv.FillWeight = 180F;
+            this.mealardgv.HeaderText = "MEAL (AR)";
+            this.mealardgv.MinimumWidth = 6;
+            this.mealardgv.Name = "mealardgv";
+            this.mealardgv.ReadOnly = true;
+            this.mealardgv.Visible = false;
+            // 
+            // mealendgv
+            // 
+            this.mealendgv.FillWeight = 480F;
+            this.mealendgv.HeaderText = "MEAL (EN)";
+            this.mealendgv.MinimumWidth = 6;
+            this.mealendgv.Name = "mealendgv";
+            this.mealendgv.ReadOnly = true;
+            // 
+            // caloriesdgv
+            // 
+            this.caloriesdgv.HeaderText = "CALORIES";
+            this.caloriesdgv.MinimumWidth = 6;
+            this.caloriesdgv.Name = "caloriesdgv";
+            this.caloriesdgv.ReadOnly = true;
+            // 
+            // proteinmaindgv
+            // 
+            this.proteinmaindgv.HeaderText = "PROTEIN";
+            this.proteinmaindgv.MinimumWidth = 6;
+            this.proteinmaindgv.Name = "proteinmaindgv";
+            this.proteinmaindgv.ReadOnly = true;
+            // 
+            // fatsmaindgv
+            // 
+            this.fatsmaindgv.HeaderText = "FATS";
+            this.fatsmaindgv.MinimumWidth = 6;
+            this.fatsmaindgv.Name = "fatsmaindgv";
+            this.fatsmaindgv.ReadOnly = true;
+            // 
+            // carbohydratesmaindgv
+            // 
+            this.carbohydratesmaindgv.HeaderText = "CARBOHYDRATES";
+            this.carbohydratesmaindgv.MinimumWidth = 6;
+            this.carbohydratesmaindgv.Name = "carbohydratesmaindgv";
+            this.carbohydratesmaindgv.ReadOnly = true;
+            // 
+            // calciummaindgv
+            // 
+            this.calciummaindgv.HeaderText = "CALCIUM";
+            this.calciummaindgv.MinimumWidth = 6;
+            this.calciummaindgv.Name = "calciummaindgv";
+            this.calciummaindgv.ReadOnly = true;
+            this.calciummaindgv.Visible = false;
+            // 
+            // fibermaindgv
+            // 
+            this.fibermaindgv.HeaderText = "FIBER";
+            this.fibermaindgv.MinimumWidth = 6;
+            this.fibermaindgv.Name = "fibermaindgv";
+            this.fibermaindgv.ReadOnly = true;
+            this.fibermaindgv.Visible = false;
+            // 
+            // sodiummaindgv
+            // 
+            this.sodiummaindgv.HeaderText = "SODIUM";
+            this.sodiummaindgv.MinimumWidth = 6;
+            this.sodiummaindgv.Name = "sodiummaindgv";
+            this.sodiummaindgv.ReadOnly = true;
+            this.sodiummaindgv.Visible = false;
             // 
             // Add
             // 
@@ -1094,7 +1170,7 @@
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.Location = new System.Drawing.Point(3, 597);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(21, 612);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
@@ -1106,7 +1182,7 @@
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1118, 244);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1058, 244);
             this.guna2DataGridView1.TabIndex = 262;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -2428,82 +2504,6 @@
             this.gcnen.Name = "gcnen";
             this.gcnen.ReadOnly = true;
             // 
-            // iddgv
-            // 
-            this.iddgv.HeaderText = "NO";
-            this.iddgv.MinimumWidth = 6;
-            this.iddgv.Name = "iddgv";
-            this.iddgv.ReadOnly = true;
-            // 
-            // mealardgv
-            // 
-            this.mealardgv.FillWeight = 180F;
-            this.mealardgv.HeaderText = "MEAL (AR)";
-            this.mealardgv.MinimumWidth = 6;
-            this.mealardgv.Name = "mealardgv";
-            this.mealardgv.ReadOnly = true;
-            this.mealardgv.Visible = false;
-            // 
-            // mealendgv
-            // 
-            this.mealendgv.FillWeight = 480F;
-            this.mealendgv.HeaderText = "MEAL (EN)";
-            this.mealendgv.MinimumWidth = 6;
-            this.mealendgv.Name = "mealendgv";
-            this.mealendgv.ReadOnly = true;
-            // 
-            // caloriesdgv
-            // 
-            this.caloriesdgv.HeaderText = "CALORIES";
-            this.caloriesdgv.MinimumWidth = 6;
-            this.caloriesdgv.Name = "caloriesdgv";
-            this.caloriesdgv.ReadOnly = true;
-            // 
-            // proteinmaindgv
-            // 
-            this.proteinmaindgv.HeaderText = "PROTEIN";
-            this.proteinmaindgv.MinimumWidth = 6;
-            this.proteinmaindgv.Name = "proteinmaindgv";
-            this.proteinmaindgv.ReadOnly = true;
-            // 
-            // fatsmaindgv
-            // 
-            this.fatsmaindgv.HeaderText = "FATS";
-            this.fatsmaindgv.MinimumWidth = 6;
-            this.fatsmaindgv.Name = "fatsmaindgv";
-            this.fatsmaindgv.ReadOnly = true;
-            // 
-            // carbohydratesmaindgv
-            // 
-            this.carbohydratesmaindgv.HeaderText = "CARBOHYDRATES";
-            this.carbohydratesmaindgv.MinimumWidth = 6;
-            this.carbohydratesmaindgv.Name = "carbohydratesmaindgv";
-            this.carbohydratesmaindgv.ReadOnly = true;
-            // 
-            // calciummaindgv
-            // 
-            this.calciummaindgv.HeaderText = "CALCIUM";
-            this.calciummaindgv.MinimumWidth = 6;
-            this.calciummaindgv.Name = "calciummaindgv";
-            this.calciummaindgv.ReadOnly = true;
-            this.calciummaindgv.Visible = false;
-            // 
-            // fibermaindgv
-            // 
-            this.fibermaindgv.HeaderText = "FIBER";
-            this.fibermaindgv.MinimumWidth = 6;
-            this.fibermaindgv.Name = "fibermaindgv";
-            this.fibermaindgv.ReadOnly = true;
-            this.fibermaindgv.Visible = false;
-            // 
-            // sodiummaindgv
-            // 
-            this.sodiummaindgv.HeaderText = "SODIUM";
-            this.sodiummaindgv.MinimumWidth = 6;
-            this.sodiummaindgv.Name = "sodiummaindgv";
-            this.sodiummaindgv.ReadOnly = true;
-            this.sodiummaindgv.Visible = false;
-            // 
             // unitdgv
             // 
             this.unitdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -2524,6 +2524,7 @@
             // ingredientendgv
             // 
             this.ingredientendgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ingredientendgv.FillWeight = 200F;
             this.ingredientendgv.Frozen = true;
             this.ingredientendgv.HeaderText = "INGREDIENT (EN)";
             this.ingredientendgv.MinimumWidth = 6;
@@ -2584,6 +2585,7 @@
             this.calciumdgv.HeaderText = "CALCIUM";
             this.calciumdgv.MinimumWidth = 6;
             this.calciumdgv.Name = "calciumdgv";
+            this.calciumdgv.Visible = false;
             this.calciumdgv.Width = 111;
             // 
             // fiberdgv
@@ -2593,6 +2595,7 @@
             this.fiberdgv.HeaderText = "FIBER";
             this.fiberdgv.MinimumWidth = 6;
             this.fiberdgv.Name = "fiberdgv";
+            this.fiberdgv.Visible = false;
             this.fiberdgv.Width = 112;
             // 
             // sodiumdgv
@@ -2602,6 +2605,7 @@
             this.sodiumdgv.HeaderText = "SODIUM";
             this.sodiumdgv.MinimumWidth = 6;
             this.sodiumdgv.Name = "sodiumdgv";
+            this.sodiumdgv.Visible = false;
             this.sodiumdgv.Width = 112;
             // 
             // potassiumdgv

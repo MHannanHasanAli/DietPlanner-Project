@@ -623,6 +623,10 @@ namespace HelloWorldSolutionIMS
             coderunner = 1;
 
             ShowAppointments(guna2DataGridView1, iddgv, filenodgv, firstnamedgv, familynamedgv, mobilenodgv, roomdgv, slotdgv, datedgv);
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
         }
         private void Save_Click(object sender, EventArgs e)
         {

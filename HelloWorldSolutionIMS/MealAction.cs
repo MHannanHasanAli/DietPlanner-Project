@@ -1049,7 +1049,28 @@ namespace HelloWorldSolutionIMS
             save.Visible = false;
             
             ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
+
+
             guna2DataGridView1.EditingControlShowing += guna2DataGridView1_EditingControlShowing;
+            guna2DataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView2.GridColor = Color.Black;
+            guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView3.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView3.GridColor = Color.Black;
+            guna2DataGridView3.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView3.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView4.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView4.GridColor = Color.Black;
+            guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView4.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView4.RowTemplate.DefaultCellStyle.ForeColor;
+
         }
         List<int> idlist = new List<int>();
         private List<int> GetIngredientsForMeal()

@@ -550,6 +550,11 @@ namespace HelloWorldSolutionIMS
             UpdateNutritionist();
             MainClass.HideAllTabsOnTabControl(tabControl1);
             ShowSpecialDeals(guna2DataGridView1, iddgv, promotionnamedgv, promotioncodedgv, promotionpercentagedgv, startdatedgv, enddatedgv, nutritionistdgv, branchdgv);
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
+
         }
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {

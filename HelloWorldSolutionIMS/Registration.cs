@@ -871,7 +871,46 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-
+                    foreach (Control control in panel2.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (Control control in panel3.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (Control control in panel5.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (Control control in panel4.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
 
                 }
                 else
@@ -940,7 +979,26 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-
+                    foreach (Control control in panel4.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (Control control in panel5.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
 
                 }
                 else
@@ -1071,7 +1129,20 @@ namespace HelloWorldSolutionIMS
             MainClass.HideAllTabsOnTabControl(tabControl1);
            
             ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
-          
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView2.GridColor = Color.Black;
+            guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.ForeColor;
+            
+            guna2DataGridView17.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView17.GridColor = Color.Black;
+            guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.ForeColor;
         }
         static int conn = 0;
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1842,6 +1913,13 @@ namespace HelloWorldSolutionIMS
         private void label32_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 4;
+            filenomh.Text = "";
+            firstnamemh.Text = "";
+            familynamemh.Text = "";
+            agemh.Text = "";
+            mobilenomh.Text = "";
+            nutritionistmh.Text = "";
+            gendermh.SelectedItem = null;
             ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
         }
 
@@ -2421,7 +2499,14 @@ namespace HelloWorldSolutionIMS
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 3;
+            if(filenomh.Text != "")
+            {
+                tabControl1.SelectedIndex = 3;
+            }
+            else
+            {
+                MessageBox.Show("Please Fill file no first!");
+            }
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)

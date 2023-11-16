@@ -427,7 +427,10 @@ namespace HelloWorldSolutionIMS
             //categorylabel.Visible = false;
             //categorybox.Visible = false;
             ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
-
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
             chart1.Series.Clear();
         }
         private void New_Click(object sender, EventArgs e)
@@ -1040,6 +1043,11 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

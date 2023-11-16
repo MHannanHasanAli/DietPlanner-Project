@@ -291,8 +291,13 @@ namespace HelloWorldSolutionIMS
 
             }
             ShowInstructions(guna2DataGridView1, nodgv, instructionnamedgv, nutritionistnamedgv, datedgv);
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
+
         }
-        
+
         static string instructionIDToEdit;
         static int edit = 0;
         private void New_Click(object sender, EventArgs e)

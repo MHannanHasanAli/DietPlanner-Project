@@ -476,7 +476,16 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-
+                    foreach (Control control in panel3.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
 
                 }
 
@@ -523,7 +532,16 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-
+                    foreach (Control control in panel3.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
 
                 }
 
@@ -589,7 +607,16 @@ namespace HelloWorldSolutionIMS
                             label.Font = font;
                         }
                     }
+                    foreach (System.Windows.Forms.Control control in panel3.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
 
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
 
 
 
@@ -607,7 +634,15 @@ namespace HelloWorldSolutionIMS
             MainClass.HideAllTabsOnTabControl(tabControl1);
             ShowPayments(guna2DataGridView1, iddgv, filenodgv, paymentnamedgv, firstnamedgv, familynamedgv, amountdgv, amountaftrpromotiondgv, promotionpercentagedgv, datedgv);
             total();
-           
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView2.GridColor = Color.Black;
+            guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.ForeColor;
+
         }
         private void total()
         {
