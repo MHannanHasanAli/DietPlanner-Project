@@ -147,7 +147,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.MedicalHistory = new Guna.UI2.WinForms.Guna2TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.Calculation = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label35 = new System.Windows.Forms.Label();
@@ -549,7 +549,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.guna2DataGridView4);
             this.panel2.Controls.Add(this.guna2DataGridView3);
-            this.panel2.Controls.Add(this.guna2TextBox1);
+            this.panel2.Controls.Add(this.MedicalHistory);
             this.panel2.Controls.Add(this.label36);
             this.panel2.Controls.Add(this.Calculation);
             this.panel2.Controls.Add(this.label35);
@@ -1630,31 +1630,31 @@
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
-            // guna2TextBox1
+            // MedicalHistory
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(152, 154);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.guna2TextBox1.Multiline = true;
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(398, 61);
-            this.guna2TextBox1.TabIndex = 325;
+            this.MedicalHistory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.MedicalHistory.DefaultText = "";
+            this.MedicalHistory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.MedicalHistory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.MedicalHistory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.MedicalHistory.DisabledState.Parent = this.MedicalHistory;
+            this.MedicalHistory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.MedicalHistory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.MedicalHistory.FocusedState.Parent = this.MedicalHistory;
+            this.MedicalHistory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MedicalHistory.ForeColor = System.Drawing.Color.Black;
+            this.MedicalHistory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.MedicalHistory.HoverState.Parent = this.MedicalHistory;
+            this.MedicalHistory.Location = new System.Drawing.Point(152, 154);
+            this.MedicalHistory.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.MedicalHistory.Multiline = true;
+            this.MedicalHistory.Name = "MedicalHistory";
+            this.MedicalHistory.PasswordChar = '\0';
+            this.MedicalHistory.PlaceholderText = "";
+            this.MedicalHistory.SelectedText = "";
+            this.MedicalHistory.ShadowDecoration.Parent = this.MedicalHistory;
+            this.MedicalHistory.Size = new System.Drawing.Size(398, 61);
+            this.MedicalHistory.TabIndex = 325;
             // 
             // label36
             // 
@@ -3002,7 +3002,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox dietplantemplatename;
         private Guna.UI2.WinForms.Guna2ComboBox previousdietplan;
         private Guna.UI2.WinForms.Guna2ComboBox instruction;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox MedicalHistory;
         private System.Windows.Forms.Label label36;
         private Guna.UI2.WinForms.Guna2ComboBox Calculation;
         private System.Windows.Forms.Label label35;

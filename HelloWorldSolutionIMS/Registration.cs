@@ -3110,11 +3110,17 @@ namespace HelloWorldSolutionIMS
         {
             edit = 0;
             coordinates.Clear();
+            Medicationcoordinates.Clear();
+            Allegiescoordinates.Clear();
+            Dietcoordinates.Clear();
+            Deficiencycoordinates.Clear();
+            Questions.Clear();
             //int id = int.Parse(guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString());
             try
             {
                 string customerIDToEdit = guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString();
                 string customerFilenoToEdit = guna2DataGridView17.SelectedRows[0].Cells[1].Value.ToString();
+                filenomh.Text = customerFilenoToEdit;
                 MainClass.con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM MedicalHistory WHERE ID = @CustomerID", MainClass.con);
                 cmd.Parameters.AddWithValue("@CustomerID", customerIDToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
@@ -3221,8 +3227,11 @@ namespace HelloWorldSolutionIMS
                         // Set the retrieved data into input boxes
 
                         Alergies.Add(reader3["Data"].ToString());
-
-
+                        Indexing SavedDisease = new Indexing();
+                        SavedDisease.row = int.Parse(reader3["rowindex"].ToString());
+                        SavedDisease.col = int.Parse(reader3["colindex"].ToString());
+                        SavedDisease.value = reader3["Data"].ToString();
+                        Allegiescoordinates.Add(SavedDisease);
 
                     }
                     foreach (var item in Alergies)
@@ -3256,7 +3265,11 @@ namespace HelloWorldSolutionIMS
                         // Set the retrieved data into input boxes
 
                         nutrients.Add(reader4["Data"].ToString());
-
+                        Indexing SavedDisease = new Indexing();
+                        SavedDisease.row = int.Parse(reader4["rowindex"].ToString());
+                        SavedDisease.col = int.Parse(reader4["colindex"].ToString());
+                        SavedDisease.value = reader4["Data"].ToString();
+                        Deficiencycoordinates.Add(SavedDisease);
 
 
                     }
@@ -3291,7 +3304,11 @@ namespace HelloWorldSolutionIMS
                         // Set the retrieved data into input boxes
 
                         medicines.Add(reader5["Data"].ToString());
-
+                        Indexing SavedDisease = new Indexing();
+                        SavedDisease.row = int.Parse(reader5["rowindex"].ToString());
+                        SavedDisease.col = int.Parse(reader5["colindex"].ToString());
+                        SavedDisease.value = reader5["Data"].ToString();
+                        Medicationcoordinates.Add(SavedDisease);
 
 
                     }
@@ -3326,7 +3343,11 @@ namespace HelloWorldSolutionIMS
                         // Set the retrieved data into input boxes
 
                         dietavoid.Add(reader6["Data"].ToString());
-
+                        Indexing SavedDisease = new Indexing();
+                        SavedDisease.row = int.Parse(reader6["rowindex"].ToString());
+                        SavedDisease.col = int.Parse(reader6["colindex"].ToString());
+                        SavedDisease.value = reader6["Data"].ToString();
+                        Dietcoordinates.Add(SavedDisease);
 
 
                     }
@@ -3372,11 +3393,22 @@ namespace HelloWorldSolutionIMS
                             hd.Text = reader7["hormonalDiseaseText"].ToString();
                             guna2DataGridView7.Rows[0].Cells[1].Selected = true;
 
-                        }else if(hdans == "No")
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView7";
+                            newitem.value= reader7["hormonalDiseaseText"].ToString();
+                            Questions.Add(newitem);
+
+                        }
+                        else if(hdans == "No")
                         {
                             hd.Visible = false;
                           
                             guna2DataGridView7.Rows[0].Cells[0].Selected = true;
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView7";
+                            newitem.value = "No";
+                            Questions.Add(newitem);
+
                         }
 
                         if (cans == "Yes")
@@ -3384,13 +3416,20 @@ namespace HelloWorldSolutionIMS
                             c.Visible = true;
                             c.Text = reader7["cancerText"].ToString();
                             guna2DataGridView8.Rows[0].Cells[1].Selected = true;
-
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView8";
+                            newitem.value = reader7["cancerText"].ToString();
+                            Questions.Add(newitem);
                         }
                         else if (cans == "No")
                         {
                             c.Visible = false;
 
                             guna2DataGridView8.Rows[0].Cells[0].Selected = true;
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView8";
+                            newitem.value = "No";
+                            Questions.Add(newitem);
                         }
 
                         if (hians == "Yes")
@@ -3398,13 +3437,20 @@ namespace HelloWorldSolutionIMS
                             idbox.Visible = true;
                             idbox.Text = reader7["immuneDiseaseText"].ToString();
                             guna2DataGridView9.Rows[0].Cells[1].Selected = true;
-
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView9";
+                            newitem.value = reader7["immuneDiseaseText"].ToString();
+                            Questions.Add(newitem);
                         }
                         else if (hians == "No")
                         {
                             idbox.Visible = false;
 
                             guna2DataGridView9.Rows[0].Cells[0].Selected = true;
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView9";
+                            newitem.value = "No";
+                            Questions.Add(newitem);
                         }
 
                         if (hedans == "Yes")
@@ -3412,13 +3458,20 @@ namespace HelloWorldSolutionIMS
                             hed.Visible = true;
                             hed.Text = reader7["hereditaryDiseaseText"].ToString();
                             guna2DataGridView10.Rows[0].Cells[1].Selected = true;
-
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView10";
+                            newitem.value = reader7["hereditaryDiseaseText"].ToString();
+                            Questions.Add(newitem);
                         }
                         else if (hedans == "No")
                         {
-                            idbox.Visible = false;
+                            hed.Visible = false;
 
                             guna2DataGridView10.Rows[0].Cells[0].Selected = true;
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView10";
+                            newitem.value = "No";
+                            Questions.Add(newitem);
                         }
 
                         if (pdans == "Yes")
@@ -3426,13 +3479,20 @@ namespace HelloWorldSolutionIMS
                             pd.Visible = true;
                             pd.Text = reader7["pancreaticDiseaseText"].ToString();
                             guna2DataGridView11.Rows[0].Cells[1].Selected = true;
-
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView11";
+                            newitem.value = reader7["pancreaticDiseaseText"].ToString();
+                            Questions.Add(newitem);
                         }
                         else if (pdans == "No")
                         {
                             pd.Visible = false;
 
                             guna2DataGridView11.Rows[0].Cells[0].Selected = true;
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView11";
+                            newitem.value = "No";
+                            Questions.Add(newitem);
                         }
 
                         if (odans == "Yes")
@@ -3440,13 +3500,20 @@ namespace HelloWorldSolutionIMS
                             od.Visible = true;
                             od.Text = reader7["otherDiseaseText"].ToString();
                             guna2DataGridView12.Rows[0].Cells[1].Selected = true;
-
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView12";
+                            newitem.value = reader7["otherDiseaseText"].ToString();
+                            Questions.Add(newitem);
                         }
                         else if (odans == "No")
                         {
                             od.Visible = false;
 
                             guna2DataGridView12.Rows[0].Cells[0].Selected = true;
+                            IndexingQuestions newitem = new IndexingQuestions();
+                            newitem.TableName = "guna2DataGridView12";
+                            newitem.value = "No";
+                            Questions.Add(newitem);
                         }
 
                     }

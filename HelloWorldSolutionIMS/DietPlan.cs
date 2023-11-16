@@ -1,6 +1,7 @@
 ﻿using Fizzler;
 using Guna.UI2.WinForms;
 using iTextSharp.text.pdf.codec.wmf;
+using Org.BouncyCastle.Utilities.Encoders;
 using RestSharp.Extensions;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 using Win32Interop.Enums;
 using static HelloWorldSolutionIMS.MealAction;
 using static HelloWorldSolutionIMS.Payment;
+using static HelloWorldSolutionIMS.Registration;
 
 namespace HelloWorldSolutionIMS
 {
@@ -2650,6 +2652,7 @@ namespace HelloWorldSolutionIMS
             iron.Text = "";
             iodine.Text = "";
             bbox.Text = "";
+            MedicalHistory.Text = "";
             edit = 0;
             UpdateDietPlanTemplate();
             updatepreviousdietplan();
@@ -2907,6 +2910,7 @@ namespace HelloWorldSolutionIMS
             iron.Text = "";
             iodine.Text = "";
             bbox.Text = "";
+            MedicalHistory.Text = "";
             edit = 0;
             UpdateDietPlanTemplate();
             updatepreviousdietplan();
@@ -3077,6 +3081,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
+                        MedicalHistory.Text = "";
                         // Get the Ingredient ID to display in the confirmation message
                         string ingredientIDToDelete = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
 
@@ -3400,7 +3405,7 @@ namespace HelloWorldSolutionIMS
                                     iron.Text = "";
                                     iodine.Text = "";
                                     bbox.Text = "";
-
+                                    MedicalHistory.Text = "";
 
                                     MainClass.con.Close();
 
@@ -3826,7 +3831,7 @@ namespace HelloWorldSolutionIMS
                                 iron.Text = "";
                                 iodine.Text = "";
                                 bbox.Text = "";
-
+                                MedicalHistory.Text = "";
 
                                 MainClass.con.Close();
 
@@ -3957,7 +3962,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-
+                        MedicalHistory.Text = "";
 
                         MainClass.con.Close();
 
@@ -5406,7 +5411,7 @@ namespace HelloWorldSolutionIMS
                     iron.Text = "";
                     iodine.Text = "";
                     bbox.Text = "";
-
+                    MedicalHistory.Text = "";
 
                     MainClass.con.Close();
 
@@ -5612,6 +5617,7 @@ namespace HelloWorldSolutionIMS
                 familyname.Text = "";
                 mobileno.Text = "";
                 gender.SelectedItem = null;
+                MedicalHistory.Text = "";
                 age.Text = "";
 
             }
@@ -6154,6 +6160,7 @@ namespace HelloWorldSolutionIMS
             iron.Text = "";
             iodine.Text = "";
             bbox.Text = "";
+            MedicalHistory.Text = "";
             guna2DataGridView2.Rows.Clear();
             guna2DataGridView4.Rows.Clear();
             guna2DataGridView5.Rows.Clear();
@@ -6289,7 +6296,7 @@ namespace HelloWorldSolutionIMS
                     iron.Text = "";
                     iodine.Text = "";
                     bbox.Text = "";
-
+                    MedicalHistory.Text = "";
 
                     MainClass.con.Close();
 
@@ -6355,6 +6362,7 @@ namespace HelloWorldSolutionIMS
             {
                 string template = null;
                 string PreviousPlan = null;
+                StringBuilder stringBuilder = new StringBuilder();
                 try
                 {
 
@@ -6425,6 +6433,225 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     MessageBox.Show(ex.Message);
                 }
+
+                try
+                {
+                    string customerIDToEdit = dietPlanIDToEdit;
+                    string customerFilenoToEdit = dietPlanIDToEdit;
+                   
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM MedicalHistory WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@CustomerID", customerIDToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            string dbstatus = reader["Status"].ToString();
+                            string dbSmoking = reader["Smoking"].ToString();
+                            string dbblood = reader["BloodType"].ToString();
+                           
+                            if(dbstatus == "Pregnant" || dbstatus== "Breast Feeding")
+                            {
+                                stringBuilder.Append(dbstatus);
+                                stringBuilder.AppendLine();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
+                    }
+                    reader.Close();
+                    MainClass.con.Close();
+
+                    MainClass.con.Open();
+                    SqlCommand cmd2 = new SqlCommand("SELECT * FROM DiseaseHistory WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd2.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+                    if (reader2.HasRows)
+                    {
+                        stringBuilder.Append("Diseases:");
+                        stringBuilder.AppendLine();
+                        while (reader2.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            stringBuilder.Append(reader2["Data"].ToString()+", ");
+                            
+
+                        }
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Append(".");
+                        stringBuilder.AppendLine();
+                        stringBuilder.AppendLine();
+                    }
+
+                    reader2.Close();
+                    MainClass.con.Close();
+
+                    MainClass.con.Open();
+                    SqlCommand cmd3 = new SqlCommand("SELECT * FROM FoodAllergies WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd3.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    SqlDataReader reader3 = cmd3.ExecuteReader();
+                    if (reader3.HasRows)
+                    {
+                        stringBuilder.Append("Food Allergies:");
+                        stringBuilder.AppendLine();
+                        while (reader3.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            stringBuilder.Append(reader3["Data"].ToString()+ ", ");
+                           
+
+                        }
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Append(".");
+                        stringBuilder.AppendLine();
+                        stringBuilder.AppendLine();
+                    }
+
+                    reader3.Close();
+                    MainClass.con.Close();
+
+                   
+
+                    MainClass.con.Open();
+                    SqlCommand cmd5 = new SqlCommand("SELECT * FROM Medication WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd5.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    List<string> medicines = new List<string>();
+                    SqlDataReader reader5 = cmd5.ExecuteReader();
+                    if (reader5.HasRows)
+                    {
+                        stringBuilder.Append("Medications:");
+                        stringBuilder.AppendLine();
+                        while (reader5.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            stringBuilder.Append(reader5["Data"].ToString()+", ");
+                            
+
+                        }
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Append(".");
+                        stringBuilder.AppendLine();
+                        stringBuilder.AppendLine();
+
+                    }
+
+                    reader5.Close();
+                    MainClass.con.Close();
+
+                    MainClass.con.Open();
+                    SqlCommand cmd6 = new SqlCommand("SELECT * FROM Diet WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd6.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    SqlDataReader reader6 = cmd6.ExecuteReader();
+                    if (reader6.HasRows)
+                    {
+                        stringBuilder.Append("Diet Avoidance:");
+                        stringBuilder.AppendLine();
+                        while (reader6.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            stringBuilder.Append(reader6["Data"].ToString()+", ");
+                           
+
+
+                        }
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Append(".");
+                        //stringBuilder.RemoveLast();
+                        stringBuilder.AppendLine();
+                        stringBuilder.AppendLine();
+
+                    }
+
+                    reader6.Close();
+                    MainClass.con.Close();
+
+                    MainClass.con.Open();
+                    SqlCommand cmd7 = new SqlCommand("SELECT * FROM Questions WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd7.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    SqlDataReader reader7 = cmd7.ExecuteReader();
+                    if (reader7.HasRows)
+                    {
+                        stringBuilder.Append("Other Problems: ");
+                        stringBuilder.AppendLine();
+                        while (reader7.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            string hdans = reader7["hormonalDisease"].ToString();
+                            string cans = reader7["cancer"].ToString();
+                            string hians = reader7["immuneDisease"].ToString();
+                            string hedans = reader7["hereditaryDisease"].ToString();
+                            string pdans = reader7["pancreaticDisease"].ToString();
+                            string odans = reader7["otherDisease"].ToString();
+
+                            if (hdans == "Yes")
+                            {
+
+                                stringBuilder.Append("Harmonal Discease, ");
+                                                          
+
+                            }
+                           
+
+                            if (cans == "Yes")
+                            {
+                                stringBuilder.Append("Cancer, ");
+                            }
+                            
+
+                            if (hians == "Yes")
+                            {
+                                stringBuilder.Append("Immunity Disease, ");
+                            }
+                           
+
+                            if (hedans == "Yes")
+                            {
+                                stringBuilder.Append("Hereditary Disease, ");
+                            }
+                            
+
+                            if (pdans == "Yes")
+                            {
+                                stringBuilder.Append("Pancreatic Disease, ");
+                            }
+                           
+
+                            if (odans == "Yes")
+                            {
+                                stringBuilder.Append("Other Disease. ");
+                            }
+                           
+
+                        }
+
+                    }
+                    stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                    stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                    stringBuilder.Append(".");
+                    MedicalHistory.Text = stringBuilder.ToString();
+                    reader7.Close();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
             }
             else
             {
@@ -6479,7 +6706,7 @@ namespace HelloWorldSolutionIMS
             iron.Text = "";
             iodine.Text = "";
             bbox.Text = "";
-
+            MedicalHistory.Text = "";
             save.Enabled = true;
             AddMealrow.Enabled = true;
             AddLunch.Enabled = true;
