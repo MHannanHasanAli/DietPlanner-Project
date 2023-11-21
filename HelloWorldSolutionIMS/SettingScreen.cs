@@ -1567,7 +1567,7 @@ namespace HelloWorldSolutionIMS
 
         private void guna2Button8_Click(object sender, EventArgs e)
         {
-            SaveFileAsExcel("\\DemoSettingsImport.xlsx");
+            SaveFileAsExcel("\\DemoSettingImport.xlsx");
         }
 
         private void SaveSettings_Click(object sender, EventArgs e)

@@ -33,12 +33,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0417EBBE793F4BDB8A5C8791B877ACBE"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_0695B47F87D2DADAB2501C5D975F07DC"
         "OwnerKey" = "8:_AC26FDD2CBA44C598F3A7DE3BD05E2B7"
         "MsmSig" = "8:_UNDEFINED"
@@ -47,6 +41,12 @@
         {
         "MsmKey" = "8:_06CFF8ACDD05D0D2FBBC0B52C3FF7B22"
         "OwnerKey" = "8:_AC26FDD2CBA44C598F3A7DE3BD05E2B7"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_08358937BAB144818704C05AFEB66BC1"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2841,26 +2841,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0417EBBE793F4BDB8A5C8791B877ACBE"
-            {
-            "SourcePath" = "8:..\\..\\DemoSettingsImport.xlsx"
-            "TargetName" = "8:DemoSettingsImport.xlsx"
-            "Tag" = "8:"
-            "Folder" = "8:_F4BB8D72F2FA4D7B966C2735328BB7F7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0695B47F87D2DADAB2501C5D975F07DC"
             {
             "AssemblyRegister" = "3:1"
@@ -2921,6 +2901,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_08358937BAB144818704C05AFEB66BC1"
+            {
+            "SourcePath" = "8:..\\..\\DemoSettingImport.xlsx"
+            "TargetName" = "8:DemoSettingImport.xlsx"
+            "Tag" = "8:"
+            "Folder" = "8:_F4BB8D72F2FA4D7B966C2735328BB7F7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0886BF7772CE22195E087317720EA396"
@@ -5222,7 +5222,7 @@
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_F4BB8D72F2FA4D7B966C2735328BB7F7"
+            "Folder" = "8:_CE8DD4D3BB1B481FB924BB0CAE6EF4BC"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -8156,7 +8156,7 @@
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_F4BB8D72F2FA4D7B966C2735328BB7F7"
+            "Folder" = "8:_CE8DD4D3BB1B481FB924BB0CAE6EF4BC"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -8424,15 +8424,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DietPlannerSetup"
-        "ProductCode" = "8:{809348E8-F600-4B3E-8D36-0B04884BF284}"
-        "PackageCode" = "8:{8C2D5A78-A600-40F2-84C7-946265AE81F3}"
+        "ProductCode" = "8:{00AD613B-8ACE-49F1-A857-5F97FE1D813C}"
+        "PackageCode" = "8:{D6F3ABE1-C93C-4C66-B0D0-29AF97D78D37}"
         "UpgradeCode" = "8:{E793F7F2-C640-4945-8B0F-2127AAB4C301}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.2"
         "Manufacturer" = "8:MubixSol"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

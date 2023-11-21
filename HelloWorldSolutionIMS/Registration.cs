@@ -1,24 +1,10 @@
 ﻿using Guna.UI2.WinForms;
-using Guna.UI2.WinForms.Suite;
-using iTextSharp.text;
-using OfficeOpenXml.LoadFunctions.Params;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
-using Win32Interop.Enums;
-using Win32Interop.Structs;
-using static HelloWorldSolutionIMS.Payment;
-using static HelloWorldSolutionIMS.SettingScreen;
 
 namespace HelloWorldSolutionIMS
 {
@@ -30,16 +16,16 @@ namespace HelloWorldSolutionIMS
         }
         public Registration(int id)
         {
-            
+
             InitializeComponent();
             loaddata(id);
         }
-       public void loaddata(int id)
+        public void loaddata(int id)
         {
             edit = 1;
             try
             {
-               
+
                 MainClass.con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Customer WHERE FILENO = @CustomerID", MainClass.con);
                 cmd.Parameters.AddWithValue("@CustomerID", id); // Replace 'customerIdToFind' with the actual ID you want to find.
@@ -149,9 +135,9 @@ namespace HelloWorldSolutionIMS
 
                 if (dr.Read())
                 {
-                    
+
                     branch.Text = dr["BRANCH"].ToString();
-                    
+
                 }
 
                 dr.Close();
@@ -204,7 +190,7 @@ namespace HelloWorldSolutionIMS
                 nutritionistname.DisplayMember = "Name"; // Display Member is Name
                 nutritionistname.ValueMember = "ID"; // Value Member is ID
 
-               
+
                 if (conn == 1)
                 {
                     MainClass.con.Close();
@@ -250,9 +236,9 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-               
-              cmd = new SqlCommand("select ID,FileNo,FirstName,FamilyName,SubscriptionStartDate,SubscriptionEndDate,NutritionistName from Customer order by FileNo", MainClass.con);
-               
+
+                cmd = new SqlCommand("select ID,FileNo,FirstName,FamilyName,SubscriptionStartDate,SubscriptionEndDate,NutritionistName from Customer order by FileNo", MainClass.con);
+
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -283,7 +269,7 @@ namespace HelloWorldSolutionIMS
             string searchage = age.Text;
             string searchemail = email.Text;
 
-          
+
 
             string whereClause = "1 = 1"; // Initialize an empty where clause
 
@@ -428,7 +414,7 @@ namespace HelloWorldSolutionIMS
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Customer added successfully");
-                        
+
                         firstname.Text = "";
                         familyname.Text = "";
                         gender.SelectedItem = null;
@@ -525,7 +511,7 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show("First name, Family name, gender, mobile no, Date of birth are mandatory!.");
                 }
             }
-           
+
         }
 
         List<string> history = new List<string>
@@ -623,7 +609,7 @@ namespace HelloWorldSolutionIMS
             DataGridViewCell cell7 = guna2DataGridView4.Rows[0].Cells[2];
             DataGridViewCell cell8 = guna2DataGridView4.Rows[0].Cells[3];
 
-            DataGridViewCell cell9  = guna2DataGridView5.Rows[0].Cells[0];
+            DataGridViewCell cell9 = guna2DataGridView5.Rows[0].Cells[0];
             DataGridViewCell cell10 = guna2DataGridView5.Rows[0].Cells[1];
             DataGridViewCell cell11 = guna2DataGridView5.Rows[0].Cells[2];
             DataGridViewCell cell12 = guna2DataGridView5.Rows[0].Cells[3];
@@ -685,7 +671,7 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView14.GridColor = Color.Black;
             guna2DataGridView14.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView14.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.ForeColor;
-            
+
             guna2DataGridView15.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView15.GridColor = Color.Black;
             guna2DataGridView15.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView3.RowTemplate.DefaultCellStyle.BackColor;
@@ -706,7 +692,7 @@ namespace HelloWorldSolutionIMS
             cell7.Value = "Smoker (Cigarettes & Hookah)";
             cell8.Value = "Non-Smoker";
 
-            cell9 .Value = "A+";
+            cell9.Value = "A+";
             cell10.Value = "A-";
             cell11.Value = "B+";
             cell12.Value = "B-";
@@ -730,7 +716,7 @@ namespace HelloWorldSolutionIMS
                 }
             }
 
-           
+
 
             guna2DataGridView7.Rows[0].Cells[0].Value = "No";
             guna2DataGridView7.Rows[0].Cells[1].Value = "Yes";
@@ -828,7 +814,7 @@ namespace HelloWorldSolutionIMS
             for (int i = 0; i < 4; i++)
             {
                 guna2DataGridView13.Rows[i].Height = 15;
-                if(i==3)
+                if (i == 3)
                 {
                     guna2DataGridView13.Rows[i].Height = 18;
                 }
@@ -1127,7 +1113,7 @@ namespace HelloWorldSolutionIMS
 
             PrepareMCQS();
             MainClass.HideAllTabsOnTabControl(tabControl1);
-           
+
             ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView1.GridColor = Color.Black;
@@ -1138,7 +1124,7 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView2.GridColor = Color.Black;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.ForeColor;
-            
+
             guna2DataGridView17.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView17.GridColor = Color.Black;
             guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.BackColor;
@@ -1148,44 +1134,44 @@ namespace HelloWorldSolutionIMS
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             edit = 1;
-             try
+            try
+            {
+                string customerIDToEdit = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
+                string customerFilenoToEdit = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Customer WHERE ID = @CustomerID", MainClass.con);
+                cmd.Parameters.AddWithValue("@CustomerID", customerIDToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
                 {
-                    string customerIDToEdit = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
-                    string customerFilenoToEdit = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
-                    MainClass.con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM Customer WHERE ID = @CustomerID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@CustomerID", customerIDToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
+                    while (reader.Read())
                     {
-                        while (reader.Read())
-                        {
-                            // Set the retrieved data into input boxes
-                            fileno.Text = reader["FileNo"].ToString();
+                        // Set the retrieved data into input boxes
+                        fileno.Text = reader["FileNo"].ToString();
 
-                            firstname.Text = reader["FirstName"].ToString();
-                            familyname.Text = reader["FamilyName"].ToString();
-                            gender.Text = reader["Gender"].ToString();
-                            dob.Value = Convert.ToDateTime(reader["DOB"]);
-                            age.Text = reader["Age"].ToString();
-                            mobileno.Text = reader["MobileNo"].ToString();
-                            landline.Text = reader["Landline"].ToString();
-                            email.Text = reader["Email"].ToString();
-                            //subscriptionstatus.Text = reader["SubscriptionStatus"].ToString();
-                            startdate.Value = Convert.ToDateTime(reader["SubscriptionStartDate"]);
-                            enddate.Value = Convert.ToDateTime(reader["SubscriptionEndDate"]);
-                            branch.Text = reader["Branch"].ToString();
-                            lastvisitdate.Value = Convert.ToDateTime(reader["LastVisitDate"]);
-                            nutritionistname.Text = reader["NutritionistName"].ToString();
-                        }
+                        firstname.Text = reader["FirstName"].ToString();
+                        familyname.Text = reader["FamilyName"].ToString();
+                        gender.Text = reader["Gender"].ToString();
+                        dob.Value = Convert.ToDateTime(reader["DOB"]);
+                        age.Text = reader["Age"].ToString();
+                        mobileno.Text = reader["MobileNo"].ToString();
+                        landline.Text = reader["Landline"].ToString();
+                        email.Text = reader["Email"].ToString();
+                        //subscriptionstatus.Text = reader["SubscriptionStatus"].ToString();
+                        startdate.Value = Convert.ToDateTime(reader["SubscriptionStartDate"]);
+                        enddate.Value = Convert.ToDateTime(reader["SubscriptionEndDate"]);
+                        branch.Text = reader["Branch"].ToString();
+                        lastvisitdate.Value = Convert.ToDateTime(reader["LastVisitDate"]);
+                        nutritionistname.Text = reader["NutritionistName"].ToString();
                     }
-                    else
-                    {
-                        MessageBox.Show("Customer not found with FILE NO : " + customerFilenoToEdit);
-                    }
-                    reader.Close();
-                    MainClass.con.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Customer not found with FILE NO : " + customerFilenoToEdit);
+                }
+                reader.Close();
+                MainClass.con.Close();
                 bool anyRowsFound = false;
                 SqlCommand cmd2;
                 try
@@ -1237,11 +1223,11 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show(ex.Message);
                 }
             }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1281,7 +1267,7 @@ namespace HelloWorldSolutionIMS
         }
         private void Update_Click(object sender, EventArgs e)
         {
-           
+
         }
         private void guna2Button3_Click(object sender, EventArgs e)
         {
@@ -1382,7 +1368,7 @@ namespace HelloWorldSolutionIMS
 
         private void SaveBMI_Click(object sender, EventArgs e)
         {
-            
+
             if (edit == 0)
             {
                 if (firstnamebmi.Text != "" && familynamebmi.Text != "" && genderbmi.Text != "" && mobilenobmi.Text != "")
@@ -1424,7 +1410,7 @@ namespace HelloWorldSolutionIMS
 
                         ageval = ageval * 5;
                         double bmr = 0;
-                        
+
                         if (genderval == "Female")
                         {
                             bmr = weightval + heightforBMR - ageval - 161;
@@ -1443,7 +1429,7 @@ namespace HelloWorldSolutionIMS
                         MainClass.con.Close();
                         ShowBodyComposition(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
                         tabControl1.SelectedIndex = 1;
-                      
+
                     }
                     catch (Exception ex)
                     {
@@ -1458,7 +1444,7 @@ namespace HelloWorldSolutionIMS
             }
             else
             {
-                if (filenobmi.Text != "" )
+                if (filenobmi.Text != "")
                 {
                     try
                     {
@@ -1544,7 +1530,7 @@ namespace HelloWorldSolutionIMS
         {
             tabControl1.SelectedIndex = 1;
         }
-        private void ShowMedicalHistory(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn name, DataGridViewColumn fname)
+        private void ShowMedicalHistoryAll(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn name, DataGridViewColumn fname)
         {
             SqlCommand cmd;
             try
@@ -1552,7 +1538,7 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Open();
 
                 cmd = new SqlCommand("SELECT ID,FILENO,FIRSTNAME,FAMILYNAME FROM MedicalHistory ORDER BY ID", MainClass.con);
-               /* cmd.Parameters.AddWithValue("@CUSTOMERID", filenomh.Text); */// Replace 'customerIdToFind' with the actual ID you want to find.
+                //cmd.Parameters.AddWithValue("@FILENO", filenomh.Text); // Replace 'customerIdToFind' with the actual ID you want to find.
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -1562,7 +1548,39 @@ namespace HelloWorldSolutionIMS
                 fileno.DataPropertyName = dt.Columns["FILENO"].ToString();
                 name.DataPropertyName = dt.Columns["FIRSTNAME"].ToString();
                 fname.DataPropertyName = dt.Columns["FAMILYNAME"].ToString();
-               
+
+
+
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ShowMedicalHistory(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn name, DataGridViewColumn fname)
+        {
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT ID,FILENO,FIRSTNAME,FAMILYNAME FROM MedicalHistory WHERE FILENO = @fileno", MainClass.con);
+                cmd.Parameters.AddWithValue("@fileno", filenomh.Text); // Replace 'customerIdToFind' with the actual ID you want to find.
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                id.DataPropertyName = dt.Columns["ID"].ToString();
+                fileno.DataPropertyName = dt.Columns["FILENO"].ToString();
+                name.DataPropertyName = dt.Columns["FIRSTNAME"].ToString();
+                fname.DataPropertyName = dt.Columns["FAMILYNAME"].ToString();
+
 
 
                 dgv.DataSource = dt;
@@ -1584,7 +1602,7 @@ namespace HelloWorldSolutionIMS
 
                 cmd = new SqlCommand("SELECT ID,BCA,WATER,MINERALS,DATE,AGE,LENGTH,WEIGHT,FATS,PROTEIN,ABDOMINAL_FAT,VISCERAL_FATS,BMI,BMR FROM BodyComposition WHERE CustomerID = @CUSTOMERID ORDER BY ID", MainClass.con);
                 cmd.Parameters.AddWithValue("@CUSTOMERID", filenobmi.Text); // Replace 'customerIdToFind' with the actual ID you want to find.
-                
+
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -1603,11 +1621,11 @@ namespace HelloWorldSolutionIMS
                 fat2.DataPropertyName = dt.Columns["ABDOMINAL_FAT"].ToString();
                 bmi.DataPropertyName = dt.Columns["BMI"].ToString();
                 bmr.DataPropertyName = dt.Columns["BMR"].ToString();
-               
+
 
                 dgv.DataSource = dt;
                 MainClass.con.Close();
-                
+
             }
             catch (Exception ex)
             {
@@ -1679,7 +1697,7 @@ namespace HelloWorldSolutionIMS
 
         private void filenobmi_TextChanged(object sender, EventArgs e)
         {
-            if(filenobmi.Text != "")
+            if (filenobmi.Text != "")
             {
                 int value = int.Parse(filenobmi.Text);
 
@@ -1738,7 +1756,7 @@ namespace HelloWorldSolutionIMS
 
                 }
             }
-           
+
         }
 
         static int filenoTobeedited;
@@ -1920,7 +1938,7 @@ namespace HelloWorldSolutionIMS
             mobilenomh.Text = "";
             nutritionistmh.Text = "";
             gendermh.SelectedItem = null;
-            ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
+            ShowMedicalHistoryAll(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
         }
 
         private void guna2DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -1935,7 +1953,7 @@ namespace HelloWorldSolutionIMS
         private void guna2DataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Get the row index of the clicked cell
-            
+
         }
         public class Indexing
         {
@@ -2221,9 +2239,9 @@ namespace HelloWorldSolutionIMS
 
         private void guna2DataGridView7_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex==1)
+            if (e.ColumnIndex == 1)
             {
-                hd.Visible=true;
+                hd.Visible = true;
             }
             else
             {
@@ -2233,7 +2251,7 @@ namespace HelloWorldSolutionIMS
             index.row = 0;
             index.col = e.ColumnIndex;
             index.TableName = "guna2DataGridView7";
-            index.value= guna2DataGridView7.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            index.value = guna2DataGridView7.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
             index.explanantion = hd.Text;
 
 
@@ -2246,8 +2264,8 @@ namespace HelloWorldSolutionIMS
                 }
             }
 
-                Questions.Add(index);
-            
+            Questions.Add(index);
+
         }
 
         private void guna2DataGridView8_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -2354,7 +2372,7 @@ namespace HelloWorldSolutionIMS
             index.value = guna2DataGridView11.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
             index.explanantion = pd.Text;
 
-           
+
             foreach (var item in Questions)
             {
                 if (item.TableName == index.TableName)
@@ -2384,7 +2402,7 @@ namespace HelloWorldSolutionIMS
             index.value = guna2DataGridView12.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
             index.explanantion = od.Text;
 
-     
+
             foreach (var item in Questions)
             {
                 if (item.TableName == index.TableName)
@@ -2435,7 +2453,7 @@ namespace HelloWorldSolutionIMS
 
             }
         }
-       
+
         private void filenomh_TextChanged(object sender, EventArgs e)
         {
             if (filenomh.Text != "")
@@ -2494,12 +2512,24 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show(ex.Message);
 
                 }
+                ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
+            }
+            else
+            {
+                firstnamemh.Text = "";
+                familynamemh.Text = "";
+                agemh.Text = "";
+                mobilenomh.Text = "";
+                nutritionistmh.Text = "";
+                gendermh.SelectedItem = null;
+                ShowMedicalHistoryAll(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
+
             }
         }
 
         private void guna2Button3_Click_1(object sender, EventArgs e)
         {
-            if(filenomh.Text != "")
+            if (filenomh.Text != "")
             {
                 tabControl1.SelectedIndex = 3;
             }
@@ -2609,7 +2639,7 @@ namespace HelloWorldSolutionIMS
                         SqlCommand cmd = new SqlCommand("INSERT INTO MedicalHistory (FileNo, Status, Smoking, BloodType, Firstname, Familyname) " +
                                                         "VALUES (@FileNo, @Status, @Smoking, @BloodType, @Firstname, @Familyname)", MainClass.con);
 
-                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue);                       
+                        cmd.Parameters.AddWithValue("@FileNo", fileNoValue);
                         cmd.Parameters.AddWithValue("@Status", status);
                         cmd.Parameters.AddWithValue("@Smoking", smoking); // Replace smokingValue with the actual value
                         cmd.Parameters.AddWithValue("@BloodType", bloodtype); // Replace bloodTypeValue with the actual value
@@ -2664,7 +2694,7 @@ namespace HelloWorldSolutionIMS
                         {
                             MainClass.con.Open();
 
-                             // Replace fileNoValue with the actual value.
+                            // Replace fileNoValue with the actual value.
 
                             foreach (var item in Allegiescoordinates)
                             {
@@ -2762,7 +2792,7 @@ namespace HelloWorldSolutionIMS
 
                             MainClass.con.Open();
 
-                           // Replace fileNoValue with the actual value.
+                            // Replace fileNoValue with the actual value.
 
 
                             foreach (var item in Dietcoordinates)
@@ -2790,7 +2820,7 @@ namespace HelloWorldSolutionIMS
                         MessageBox.Show(ex.Message);
                     }
 
-                   
+
                     try
                     {
                         int check1 = 0;
@@ -2809,11 +2839,11 @@ namespace HelloWorldSolutionIMS
 
                         foreach (var item in Questions)
                         {
-                            if(item.TableName == "guna2DataGridView7")
+                            if (item.TableName == "guna2DataGridView7")
                             {
                                 check1 = 1;
-                                cmd.Parameters.AddWithValue("@hormonalDisease",item.value );
-                                if(item.value == "Yes")
+                                cmd.Parameters.AddWithValue("@hormonalDisease", item.value);
+                                if (item.value == "Yes")
                                 {
                                     cmd.Parameters.AddWithValue("@hormonalDiseaseText", hd.Text); // Replace hormonalDiseaseTextValue with the actual value
 
@@ -2902,7 +2932,7 @@ namespace HelloWorldSolutionIMS
 
                                 }
                             }
-                           
+
 
                         }
                         if (check1 == 0)
@@ -2932,7 +2962,7 @@ namespace HelloWorldSolutionIMS
                         }
                         if (check6 == 0)
                         {
-                            cmd.Parameters.AddWithValue("@otherDisease","No");
+                            cmd.Parameters.AddWithValue("@otherDisease", "No");
                             cmd.Parameters.AddWithValue("@otherDiseaseText", "Nothing");
                         }
 
@@ -3188,7 +3218,7 @@ namespace HelloWorldSolutionIMS
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex= 0;
+            tabControl1.SelectedIndex = 0;
         }
 
         private void EditMedicalHistory_Click(object sender, EventArgs e)
@@ -3216,13 +3246,13 @@ namespace HelloWorldSolutionIMS
                     while (reader.Read())
                     {
                         // Set the retrieved data into input boxes
-                       
+
                         string dbstatus = reader["Status"].ToString();
                         string dbSmoking = reader["Smoking"].ToString();
                         string dbblood = reader["BloodType"].ToString();
                         status = dbstatus;
-                        smoking= dbSmoking;
-                        bloodtype= dbblood;
+                        smoking = dbSmoking;
+                        bloodtype = dbblood;
                         foreach (DataGridViewRow row in guna2DataGridView3.Rows)
                         {
                             foreach (DataGridViewCell cell in row.Cells)
@@ -3275,9 +3305,9 @@ namespace HelloWorldSolutionIMS
                     while (reader2.Read())
                     {
                         // Set the retrieved data into input boxes
-                       
-                       datas.Add(reader2["Data"].ToString());
-                       Indexing SavedDisease = new Indexing();
+
+                        datas.Add(reader2["Data"].ToString());
+                        Indexing SavedDisease = new Indexing();
                         SavedDisease.row = int.Parse(reader2["rowindex"].ToString());
                         SavedDisease.col = int.Parse(reader2["colindex"].ToString());
                         SavedDisease.value = reader2["Data"].ToString();
@@ -3299,7 +3329,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
                 }
-                
+
                 reader2.Close();
                 MainClass.con.Close();
 
@@ -3337,7 +3367,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
                 }
-                
+
                 reader3.Close();
                 MainClass.con.Close();
 
@@ -3376,7 +3406,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
                 }
-               
+
                 reader4.Close();
                 MainClass.con.Close();
 
@@ -3415,7 +3445,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
                 }
-               
+
                 reader5.Close();
                 MainClass.con.Close();
 
@@ -3454,7 +3484,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
                 }
-                
+
                 reader6.Close();
                 MainClass.con.Close();
 
@@ -3475,7 +3505,7 @@ namespace HelloWorldSolutionIMS
                         string pdans = reader7["pancreaticDisease"].ToString();
                         string odans = reader7["otherDisease"].ToString();
 
-                        if(hdans=="Yes")
+                        if (hdans == "Yes")
                         {
                             hd.Visible = true;
                             hd.Text = reader7["hormonalDiseaseText"].ToString();
@@ -3483,14 +3513,14 @@ namespace HelloWorldSolutionIMS
 
                             IndexingQuestions newitem = new IndexingQuestions();
                             newitem.TableName = "guna2DataGridView7";
-                            newitem.value= "Yes";
+                            newitem.value = "Yes";
                             Questions.Add(newitem);
 
                         }
-                        else if(hdans == "No")
+                        else if (hdans == "No")
                         {
                             hd.Visible = false;
-                          
+
                             guna2DataGridView7.Rows[0].Cells[0].Selected = true;
                             IndexingQuestions newitem = new IndexingQuestions();
                             newitem.TableName = "guna2DataGridView7";
@@ -3605,12 +3635,12 @@ namespace HelloWorldSolutionIMS
                         }
 
                     }
-                   
+
                 }
-               
+
                 reader7.Close();
                 MainClass.con.Close();
-            }                           
+            }
             catch (Exception ex)
             {
                 MainClass.con.Close();
