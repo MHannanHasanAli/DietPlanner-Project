@@ -1336,6 +1336,14 @@ namespace HelloWorldSolutionIMS
 
         private void bodycomp_Click(object sender, EventArgs e)
         {
+            filenobmi.Text = "";
+            firstnamebmi.Text = "";
+            familynamebmi.Text = "";
+            mobilenobmi.Text = "";
+            genderbmi.SelectedItem = null;
+            agebmi.Text = "";
+            nutritionistbmi.Text = "";
+            ShowBodyCompositionAll(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
             tabControl1.SelectedIndex = 1;
         }
         private void floatlock(object sender, KeyPressEventArgs e)
@@ -1633,6 +1641,47 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
         }
+        private void ShowBodyCompositionAll(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn date, DataGridViewColumn bca, DataGridViewColumn height, DataGridViewColumn weight, DataGridViewColumn age, DataGridViewColumn fats, DataGridViewColumn protein, DataGridViewColumn water, DataGridViewColumn mineral, DataGridViewColumn fat1, DataGridViewColumn fat2, DataGridViewColumn bmi, DataGridViewColumn bmr)
+        {
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT ID,BCA,WATER,MINERALS,DATE,AGE,LENGTH,WEIGHT,FATS,PROTEIN,ABDOMINAL_FAT,VISCERAL_FATS,BMI,BMR FROM BodyComposition ORDER BY ID", MainClass.con);
+                /* cmd.Parameters.AddWithValue("@CUSTOMERID", filenobmi.Text);*/ // Replace 'customerIdToFind' with the actual ID you want to find.
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                id.DataPropertyName = dt.Columns["ID"].ToString();
+                date.DataPropertyName = dt.Columns["DATE"].ToString();
+                bca.DataPropertyName = dt.Columns["BCA"].ToString();
+                height.DataPropertyName = dt.Columns["LENGTH"].ToString();
+                weight.DataPropertyName = dt.Columns["WEIGHT"].ToString();
+                age.DataPropertyName = dt.Columns["AGE"].ToString();
+                fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+                water.DataPropertyName = dt.Columns["WATER"].ToString();
+                mineral.DataPropertyName = dt.Columns["MINERALS"].ToString();
+                fat1.DataPropertyName = dt.Columns["VISCERAL_FATS"].ToString();
+                fat2.DataPropertyName = dt.Columns["ABDOMINAL_FAT"].ToString();
+                bmi.DataPropertyName = dt.Columns["BMI"].ToString();
+                bmr.DataPropertyName = dt.Columns["BMR"].ToString();
+
+
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         static string BMIID;
         private void EditBMI_Click(object sender, EventArgs e)
         {
@@ -1755,6 +1804,17 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show(ex.Message);
 
                 }
+            }
+            else
+            {
+                firstnamebmi.Text = "";
+                familynamebmi.Text = "";
+                mobilenobmi.Text = "";
+                genderbmi.SelectedItem = null;
+                agebmi.Text = "";
+                nutritionistbmi.Text = "";
+                ShowBodyCompositionAll(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
+
             }
 
         }
