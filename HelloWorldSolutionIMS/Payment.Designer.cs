@@ -40,6 +40,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.nonpaidpayment = new Guna.UI2.WinForms.Guna2Button();
             this.totalvalues = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +55,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Add = new Guna.UI2.WinForms.Guna2Button();
             this.search = new Guna.UI2.WinForms.Guna2Button();
             this.label15 = new System.Windows.Forms.Label();
@@ -96,8 +96,8 @@
             this.firstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.fileno = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.nonpaidpayment = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.defaultlabel = new System.Windows.Forms.Label();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.iddefaultdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,7 +105,6 @@
             this.defaulterdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.familynamedefaultdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountdefaultdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -159,6 +158,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1140, 673);
             this.panel1.TabIndex = 0;
+            // 
+            // nonpaidpayment
+            // 
+            this.nonpaidpayment.AutoRoundedCorners = true;
+            this.nonpaidpayment.BorderRadius = 21;
+            this.nonpaidpayment.CausesValidation = false;
+            this.nonpaidpayment.CheckedState.Parent = this.nonpaidpayment;
+            this.nonpaidpayment.CustomImages.Parent = this.nonpaidpayment;
+            this.nonpaidpayment.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.nonpaidpayment.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.nonpaidpayment.ForeColor = System.Drawing.Color.White;
+            this.nonpaidpayment.HoverState.Parent = this.nonpaidpayment;
+            this.nonpaidpayment.Location = new System.Drawing.Point(926, 556);
+            this.nonpaidpayment.Name = "nonpaidpayment";
+            this.nonpaidpayment.ShadowDecoration.Parent = this.nonpaidpayment;
+            this.nonpaidpayment.Size = new System.Drawing.Size(199, 45);
+            this.nonpaidpayment.TabIndex = 236;
+            this.nonpaidpayment.Text = "Non-Paid Payments";
+            this.nonpaidpayment.Click += new System.EventHandler(this.nonpaidpayment_Click);
             // 
             // totalvalues
             // 
@@ -318,31 +336,23 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem,
-            this.printToolStripMenuItem});
+            this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(123, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // printToolStripMenuItem
-            // 
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
-            this.printToolStripMenuItem.Text = "Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // Add
             // 
@@ -1049,25 +1059,6 @@
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // nonpaidpayment
-            // 
-            this.nonpaidpayment.AutoRoundedCorners = true;
-            this.nonpaidpayment.BorderRadius = 21;
-            this.nonpaidpayment.CausesValidation = false;
-            this.nonpaidpayment.CheckedState.Parent = this.nonpaidpayment;
-            this.nonpaidpayment.CustomImages.Parent = this.nonpaidpayment;
-            this.nonpaidpayment.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.nonpaidpayment.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.nonpaidpayment.ForeColor = System.Drawing.Color.White;
-            this.nonpaidpayment.HoverState.Parent = this.nonpaidpayment;
-            this.nonpaidpayment.Location = new System.Drawing.Point(926, 556);
-            this.nonpaidpayment.Name = "nonpaidpayment";
-            this.nonpaidpayment.ShadowDecoration.Parent = this.nonpaidpayment;
-            this.nonpaidpayment.Size = new System.Drawing.Size(199, 45);
-            this.nonpaidpayment.TabIndex = 236;
-            this.nonpaidpayment.Text = "Non-Paid Payments";
-            this.nonpaidpayment.Click += new System.EventHandler(this.nonpaidpayment_Click);
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -1081,13 +1072,32 @@
             this.panel3.TabIndex = 237;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.BorderRadius = 21;
+            this.guna2Button1.CausesValidation = false;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(920, 589);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(199, 45);
+            this.guna2Button1.TabIndex = 241;
+            this.guna2Button1.Text = "Back To Payments";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // defaultlabel
             // 
             this.defaultlabel.AutoSize = true;
             this.defaultlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.defaultlabel.Location = new System.Drawing.Point(38, 595);
             this.defaultlabel.Name = "defaultlabel";
-            this.defaultlabel.Size = new System.Drawing.Size(128, 39);
+            this.defaultlabel.Size = new System.Drawing.Size(121, 38);
             this.defaultlabel.TabIndex = 240;
             this.defaultlabel.Text = "label18";
             // 
@@ -1202,25 +1212,6 @@
             this.amountdefaultdgv.ReadOnly = true;
             this.amountdefaultdgv.Visible = false;
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 21;
-            this.guna2Button1.CausesValidation = false;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(920, 589);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(199, 45);
-            this.guna2Button1.TabIndex = 241;
-            this.guna2Button1.Text = "Back To Payments";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1293,7 +1284,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage3;
         private Guna.UI2.WinForms.Guna2HtmlLabel totalvalues;
         private System.Windows.Forms.DateTimePicker startdate;

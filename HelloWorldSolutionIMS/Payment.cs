@@ -159,6 +159,7 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+            total();
         }
         private void SearchPayments(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn no, DataGridViewColumn pay, DataGridViewColumn first, DataGridViewColumn family, DataGridViewColumn amount, DataGridViewColumn amountpro, DataGridViewColumn promopercent, DataGridViewColumn date)
         {
@@ -299,18 +300,18 @@ namespace HelloWorldSolutionIMS
                         SqlCommand cmd = new SqlCommand("INSERT INTO Payment (FileNo, FirstName, FamilyName, Gender, Age, MobileNo, PaymentName, Amount, Startdate, Enddate, AmountAfterPromotion, PromotionPercentage, PromotionCode, PromotionName, PromotionDetails) " +
       "VALUES (@FileNo, @FirstName, @FamilyName, @Gender, @Age, @MobileNo, @PaymentName, @Amount, @Startdate, @Enddate, @AmountAfterPromotion, @PromotionPercentage, @PromotionCode, @PromotionName, @PromotionDetails)", MainClass.con);
 
-                        cmd.Parameters.AddWithValue("@FileNo", Convert.ToInt32(fileno.Text));
+                        cmd.Parameters.AddWithValue("@FileNo", fileno.Text);
                         cmd.Parameters.AddWithValue("@FirstName", firstname.Text);
                         cmd.Parameters.AddWithValue("@FamilyName", familyname.Text);
                         cmd.Parameters.AddWithValue("@Gender", gender.Text);
-                        cmd.Parameters.AddWithValue("@Age", Convert.ToInt32(age.Text));
+                        cmd.Parameters.AddWithValue("@Age", age.Text);
                         cmd.Parameters.AddWithValue("@MobileNo", mobileno.Text);
                         cmd.Parameters.AddWithValue("@PaymentName", paymentname.Text);
-                        cmd.Parameters.AddWithValue("@Amount", Convert.ToDouble(amount.Text));
+                        cmd.Parameters.AddWithValue("@Amount", amount.Text);
                         cmd.Parameters.AddWithValue("@Startdate", DateTime.Parse(startdate.Text));
                         cmd.Parameters.AddWithValue("@Enddate", DateTime.Parse(enddate.Text));
-                        cmd.Parameters.AddWithValue("@AmountAfterPromotion", Convert.ToDouble(amountafterpromotion.Text));
-                        cmd.Parameters.AddWithValue("@PromotionPercentage", Convert.ToDouble(promotionpercentage.Text));
+                        cmd.Parameters.AddWithValue("@AmountAfterPromotion", amountafterpromotion.Text);
+                        cmd.Parameters.AddWithValue("@PromotionPercentage", promotionpercentage.Text);
                         cmd.Parameters.AddWithValue("@PromotionCode", promotioncode.Text);
                         cmd.Parameters.AddWithValue("@PromotionName", promotionname.SelectedValue);
                         cmd.Parameters.AddWithValue("@PromotionDetails", promotiondetails.Text);
@@ -372,18 +373,18 @@ namespace HelloWorldSolutionIMS
                         SqlCommand cmd = new SqlCommand("UPDATE Payment SET FirstName = @FirstName, FamilyName = @FamilyName, Gender = @Gender, Age = @Age, MobileNo = @MobileNo, PaymentName = @PaymentName, Amount = @Amount, Startdate = @StartDate, Enddate = @EndDate, AmountAfterPromotion = @AmountAfterPromotion, PromotionPercentage = @PromotionPercentage, PromotionCode = @PromotionCode, PromotionName = @PromotionName, PromotionDetails = @PromotionDetails WHERE ID = @ID AND FileNo = @FileNo", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@ID", PaymentIDToEdit);
-                        cmd.Parameters.AddWithValue("@FileNo", Convert.ToInt32(fileno.Text));
+                        cmd.Parameters.AddWithValue("@FileNo", fileno.Text);
                         cmd.Parameters.AddWithValue("@FirstName", firstname.Text);
                         cmd.Parameters.AddWithValue("@FamilyName", familyname.Text);
                         cmd.Parameters.AddWithValue("@Gender", gender.Text);
-                        cmd.Parameters.AddWithValue("@Age", Convert.ToInt32(age.Text));
+                        cmd.Parameters.AddWithValue("@Age", age.Text);
                         cmd.Parameters.AddWithValue("@MobileNo", mobileno.Text);
                         cmd.Parameters.AddWithValue("@PaymentName", paymentname.Text);
-                        cmd.Parameters.AddWithValue("@Amount", Convert.ToDouble(amount.Text));
+                        cmd.Parameters.AddWithValue("@Amount", amount.Text);
                         cmd.Parameters.AddWithValue("@StartDate", DateTime.Parse(startdate.Text));
                         cmd.Parameters.AddWithValue("@EndDate", DateTime.Parse(enddate.Text));
-                        cmd.Parameters.AddWithValue("@AmountAfterPromotion", Convert.ToDouble(amountafterpromotion.Text));
-                        cmd.Parameters.AddWithValue("@PromotionPercentage", Convert.ToDouble(promotionpercentage.Text));
+                        cmd.Parameters.AddWithValue("@AmountAfterPromotion", amountafterpromotion.Text);
+                        cmd.Parameters.AddWithValue("@PromotionPercentage", promotionpercentage.Text);
                         cmd.Parameters.AddWithValue("@PromotionCode", promotioncode.Text);
                         cmd.Parameters.AddWithValue("@PromotionName", promotionname.SelectedValue);
                         cmd.Parameters.AddWithValue("@PromotionDetails", promotiondetails.Text);
