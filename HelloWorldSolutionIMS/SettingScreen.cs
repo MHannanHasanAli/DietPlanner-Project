@@ -1,24 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Guna.UI2.WinForms;
-using static HelloWorldSolutionIMS.MealAction;
-using Svg;
-using Win32Interop.Enums;
-using System.Runtime.ConstrainedExecution;
-using Win32Interop.Structs;
-using System.IO;
-using System.Net.Http.Headers;
-using System.Net.Http;
-using System.Net;
+﻿using Guna.UI2.WinForms;
 using OfficeOpenXml;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 
 namespace HelloWorldSolutionIMS
 {
@@ -47,7 +35,7 @@ namespace HelloWorldSolutionIMS
             {
                 // Replace this path with the path of your Excel file
                 var pth = AppDomain.CurrentDomain.BaseDirectory;
-                string sourceFilePath = pth+filename;
+                string sourceFilePath = pth + filename;
                 string destinationFilePath = saveFileDialog1.FileName;
 
                 try
@@ -62,7 +50,7 @@ namespace HelloWorldSolutionIMS
             }
         }
 
-      
+
 
         private void UpdateNutritionist()
         {
@@ -100,7 +88,7 @@ namespace HelloWorldSolutionIMS
                     string Name = row.Field<string>("Name");
 
 
-                    NutritionistInfo Temp = new NutritionistInfo { ID = Id, Name = Name};
+                    NutritionistInfo Temp = new NutritionistInfo { ID = Id, Name = Name };
                     Room1.Add(Temp);
                     Room2.Add(Temp);
                     Room3.Add(Temp);
@@ -217,7 +205,7 @@ namespace HelloWorldSolutionIMS
                     bold.Text = dr["Bold"].ToString();
                     itallic.Text = dr["Italic"].ToString();
                     underline.Text = dr["Underline"].ToString();
-                    textsize.Text = dr["Size"].ToString();                  
+                    textsize.Text = dr["Size"].ToString();
                 }
 
                 dr.Close();
@@ -235,14 +223,20 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+                    guna2TextBox9.Text = red.ToString();
+                    guna2TextBox8.Text = green.ToString();
+                    guna2TextBox7.Text = blue.ToString();
+                    Color color = Color.FromArgb(red, green, blue);
+                    panel13.BackColor = color;
 
                     foreach (Control control in panel9.Controls)
                     {
@@ -350,14 +344,20 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+                    guna2TextBox6.Text = red.ToString();
+                    guna2TextBox5.Text = green.ToString();
+                    guna2TextBox4.Text = blue.ToString();
+                    Color color = Color.FromArgb(red, green, blue);
+                    panel12.BackColor = color;
 
                     foreach (Control control in panel9.Controls)
                     {
@@ -592,10 +592,49 @@ namespace HelloWorldSolutionIMS
             }
             //ShowUsers(Datagridview1, NameGV, UsernameGV, PasswordGV, RoleGV);
             //cboRole.SelectedIndex = 0;
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM SideBarColor", MainClass.con);
+
+                // Execute the select query
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                // Check if there is a color record in the table
+                if (reader.Read())
+                {
+                    // Read color components from the database
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+                    guna2TextBox1.Text = red.ToString();
+                    guna2TextBox2.Text = green.ToString();
+                    guna2TextBox3.Text = blue.ToString();
+                    selectedpanel.BackColor = Color.FromArgb(red, green, blue);
+
+                    // Create Color object from the read components
+
+
+                    // Set the `loginpanel` background color
+
+                }
+
+
+                // Close the data reader and database connection
+                reader.Close();
+                MainClass.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
             Start();
             MainClass.HideAllTabsOnTabControl(tabControl1);
             tabControl1.SelectedIndex = 2;
-            
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -638,7 +677,7 @@ namespace HelloWorldSolutionIMS
             }
             else
             {
-                if(edit == 1)
+                if (edit == 1)
                 {
                     if (txtPassword.Text != txtConfirmPassword.Text)
                     {
@@ -649,7 +688,7 @@ namespace HelloWorldSolutionIMS
                         try
                         {
                             MainClass.con.Open();
-                            SqlCommand cmd = new SqlCommand("update Users set Name = @Name, @Password = @Password, Role = @Role where Username = @Username" ,MainClass.con);
+                            SqlCommand cmd = new SqlCommand("update Users set Name = @Name, @Password = @Password, Role = @Role where Username = @Username", MainClass.con);
                             cmd.Parameters.AddWithValue("@Name", txtName.Text);
                             cmd.Parameters.AddWithValue("@Username", txtUsername.Text);
                             cmd.Parameters.AddWithValue("@Password", txtConfirmPassword.Text);
@@ -668,7 +707,7 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
-           
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -693,11 +732,11 @@ namespace HelloWorldSolutionIMS
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(Datagridview1 != null)
+            if (Datagridview1 != null)
             {
-                if(Datagridview1.Rows.Count > 0)
+                if (Datagridview1.Rows.Count > 0)
                 {
-                    if(Datagridview1.SelectedRows.Count == 1)
+                    if (Datagridview1.SelectedRows.Count == 1)
                     {
                         try
                         {
@@ -821,7 +860,7 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Open();
                     if (txtBackup.Text == "")
                     {
-                        MessageBox.Show("Please Locate The Backup File", "Error",MessageBoxButtons.OK);
+                        MessageBox.Show("Please Locate The Backup File", "Error", MessageBoxButtons.OK);
                         return;
                     }
                     else
@@ -911,7 +950,7 @@ namespace HelloWorldSolutionIMS
                 //pobox.Text = "";
                 //trade.Text = "";
                 //welcomewords.Text = "";
-               
+
                 MainClass.con.Close();
 
             }
@@ -924,19 +963,19 @@ namespace HelloWorldSolutionIMS
 
         private void Attach_Click(object sender, EventArgs e)
         {
-           
+
             try
             {
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All Files(*.*)|*.*";
 
-                if(dialog.ShowDialog() == DialogResult.OK) 
+                if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     logolocation = dialog.FileName;
-                     pictureBox1.ImageLocation = logolocation;
+                    pictureBox1.ImageLocation = logolocation;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -944,7 +983,7 @@ namespace HelloWorldSolutionIMS
 
         private void back_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 2; 
+            tabControl1.SelectedIndex = 2;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -987,7 +1026,7 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
 
                     nutriname.Text = "";
-                  
+
 
                     tabControl1.SelectedIndex = 2;
                     UpdateNutritionist();
@@ -1134,7 +1173,7 @@ namespace HelloWorldSolutionIMS
 
                 no.DataPropertyName = dt.Columns["ID"].ToString();
                 Username.DataPropertyName = dt.Columns["Username"].ToString();
-                
+
                 dgv.DataSource = dt;
                 MainClass.con.Close();
             }
@@ -1208,34 +1247,34 @@ namespace HelloWorldSolutionIMS
                         try
                         {
 
-                        // Get the Ingredient ID to display in the confirmation message
-                        string groupid = guna2DataGridView1.SelectedRows[0].Cells[0].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
+                            // Get the Ingredient ID to display in the confirmation message
+                            string groupid = guna2DataGridView1.SelectedRows[0].Cells[0].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
 
-                        // Ask for confirmation
+                            // Ask for confirmation
 
-                        SqlCommand cmd;
-                        MainClass.con.Open();
+                            SqlCommand cmd;
+                            MainClass.con.Open();
 
-                        cmd = new SqlCommand("SELECT ID,Username,Passkey FROM Users WHERE ID = @ID", MainClass.con);
-                        cmd.Parameters.AddWithValue("@ID", groupid);
-                        SqlDataReader dr = cmd.ExecuteReader();
+                            cmd = new SqlCommand("SELECT ID,Username,Passkey FROM Users WHERE ID = @ID", MainClass.con);
+                            cmd.Parameters.AddWithValue("@ID", groupid);
+                            SqlDataReader dr = cmd.ExecuteReader();
 
-                        if (dr.Read())
+                            if (dr.Read())
+                            {
+                                userid = dr["ID"].ToString();
+                                usernameedit.Text = dr["Username"].ToString();
+                                passwordedit.Text = dr["Passkey"].ToString();
+                            }
+
+                            dr.Close();
+                            MainClass.con.Close();
+                        }
+                        catch (Exception ex)
                         {
-                            userid = dr["ID"].ToString();
-                            usernameedit.Text = dr["Username"].ToString();
-                            passwordedit.Text = dr["Passkey"].ToString();                          
+                            MainClass.con.Close();
+                            MessageBox.Show(ex.Message);
                         }
 
-                        dr.Close();
-                        MainClass.con.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MainClass.con.Close();
-                        MessageBox.Show(ex.Message);
-                    }
-                        
 
                     }
                 }
@@ -1278,26 +1317,8 @@ namespace HelloWorldSolutionIMS
 
         }
 
-        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
-        {
-            Bitmap pixelData = (Bitmap)pictureBox2.Image;
-            Color clr = pixelData.GetPixel(e.X, e.Y);
-            showpanel.BackColor = clr;
-        }
 
-        static Color color;
-        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
-        {
-            Bitmap pixelData = (Bitmap)pictureBox2.Image;
-            Color clr = pixelData.GetPixel(e.X, e.Y);
-            selectedpanel.BackColor = clr;
-            color = clr;
-        }
 
-        private void pictureBox2_MouseLeave(object sender, EventArgs e)
-        {
-            showpanel.BackColor = Color.White;
-        }
 
         private void Apply_Click(object sender, EventArgs e)
         {
@@ -1308,7 +1329,7 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd = new SqlCommand("UPDATE SideBarColor SET Color = @color WHERE Id = @colorId", MainClass.con);
 
                 cmd.Parameters.AddWithValue("@colorId", 1);
-                cmd.Parameters.AddWithValue("@color", ColorTranslator.ToHtml(color));
+                //cmd.Parameters.AddWithValue("@color", ColorTranslator.ToHtml(color));
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Color theme updated successfully");
@@ -1368,25 +1389,6 @@ namespace HelloWorldSolutionIMS
             SaveFileAsExcel("\\DemoMealsImport.xlsx");
         }
 
-        private void pictureBox3_MouseMove(object sender, MouseEventArgs e)
-        {
-            Bitmap pixelData = (Bitmap)pictureBox2.Image;
-            Color clr = pixelData.GetPixel(e.X, e.Y);
-            showbuttonpanel.BackColor = clr;
-        }
-
-        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
-        {
-            Bitmap pixelData = (Bitmap)pictureBox2.Image;
-            Color clr = pixelData.GetPixel(e.X, e.Y);
-            selectedbuttonpanel.BackColor = clr;
-            color = clr;
-        }
-
-        private void pictureBox3_MouseLeave(object sender, EventArgs e)
-        {
-            showbuttonpanel.BackColor = Color.White;
-        }
 
         private void gapplybutton_Click(object sender, EventArgs e)
         {
@@ -1396,7 +1398,7 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd = new SqlCommand("UPDATE buttoncolor  SET Color = @color WHERE Id = @colorId", MainClass.con);
 
                 cmd.Parameters.AddWithValue("@colorId", 1);
-                cmd.Parameters.AddWithValue("@color", ColorTranslator.ToHtml(color));
+                //cmd.Parameters.AddWithValue("@color", ColorTranslator.ToHtml(color));
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Button color updated successfully");
@@ -1416,25 +1418,6 @@ namespace HelloWorldSolutionIMS
             tabControl1.SelectedIndex = 9;
         }
 
-        private void pictureBox4_MouseDown(object sender, MouseEventArgs e)
-        {
-            Bitmap pixelData = (Bitmap)pictureBox2.Image;
-            Color clr = pixelData.GetPixel(e.X, e.Y);
-            textselectpanel.BackColor = clr;
-            color = clr;
-        }
-
-        private void pictureBox4_MouseMove(object sender, MouseEventArgs e)
-        {
-            Bitmap pixelData = (Bitmap)pictureBox2.Image;
-            Color clr = pixelData.GetPixel(e.X, e.Y);
-            textshowpanel.BackColor = clr;
-        }
-
-        private void pictureBox4_MouseLeave(object sender, EventArgs e)
-        {
-            textshowpanel.BackColor = Color.White;
-        }
 
         private void ApplyText_Click(object sender, EventArgs e)
         {
@@ -1444,7 +1427,7 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd = new SqlCommand("UPDATE textcolor SET Color = @color WHERE Id = @colorId", MainClass.con);
 
                 cmd.Parameters.AddWithValue("@colorId", 1);
-                cmd.Parameters.AddWithValue("@color", ColorTranslator.ToHtml(color));
+                //cmd.Parameters.AddWithValue("@color", ColorTranslator.ToHtml(color));
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Button text theme updated successfully");
@@ -1480,7 +1463,7 @@ namespace HelloWorldSolutionIMS
                         string CompanyName = worksheet.Cells[row, 1].Value?.ToString();
                         string Branch = worksheet.Cells[row, 2].Value?.ToString();
 
-                      
+
 
                         string landline = worksheet.Cells[row, 3].Value?.ToString();
                         string mobile = worksheet.Cells[row, 4].Value?.ToString();
@@ -1526,9 +1509,9 @@ namespace HelloWorldSolutionIMS
 
                     MainClass.con.Close();
 
-                    Start();                    
+                    Start();
                     MessageBox.Show("Data imported successfully!");
-                  
+
                 }
             }
             catch (Exception ex)
@@ -1578,7 +1561,7 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd = new SqlCommand("UPDATE text SET bold = @bold, italic = @itallic, underline = @underline, Size = @size WHERE Id = @Id", MainClass.con);
 
                 cmd.Parameters.AddWithValue("@Id", 1);
-                cmd.Parameters.AddWithValue("@bold",bold.Text);
+                cmd.Parameters.AddWithValue("@bold", bold.Text);
                 cmd.Parameters.AddWithValue("@itallic", itallic.Text);
                 cmd.Parameters.AddWithValue("@underline", underline.Text);
                 cmd.Parameters.AddWithValue("@size", textsize.Text);
@@ -1592,8 +1575,300 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE SideBarColor SET Red = @red, Green = @green, Blue = @blue WHERE Id = @id", MainClass.con);
 
+                // Set the command parameters
+                cmd.Parameters.AddWithValue("@id", 1);
+                cmd.Parameters.AddWithValue("@red", guna2TextBox1.Text);
+                cmd.Parameters.AddWithValue("@green", guna2TextBox2.Text);
+                cmd.Parameters.AddWithValue("@blue", guna2TextBox3.Text);
+
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE buttoncolor SET Red = @red, Green = @green, Blue = @blue WHERE Id = @id", MainClass.con);
+
+                // Set the command parameters
+                cmd.Parameters.AddWithValue("@id", 1);
+                cmd.Parameters.AddWithValue("@red", guna2TextBox6.Text);
+                cmd.Parameters.AddWithValue("@green", guna2TextBox5.Text);
+                cmd.Parameters.AddWithValue("@blue", guna2TextBox4.Text);
+
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE textcolor SET Red = @red, Green = @green, Blue = @blue WHERE Id = @id", MainClass.con);
+
+                // Set the command parameters
+                cmd.Parameters.AddWithValue("@id", 1);
+                cmd.Parameters.AddWithValue("@red", guna2TextBox9.Text);
+                cmd.Parameters.AddWithValue("@green", guna2TextBox8.Text);
+                cmd.Parameters.AddWithValue("@blue", guna2TextBox7.Text);
+
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
             Application.Restart();
+        }
+
+        private void IntLock(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignore the keypress if it's not a number or a control character
+            }
+        }
+        private void guna2TrackBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            selectedpanel.BackColor = Color.FromArgb(guna2TrackBar1.Value, guna2TrackBar2.Value, guna2TrackBar3.Value);
+            guna2TextBox1.Text = guna2TrackBar1.Value.ToString();
+            guna2TextBox2.Text = guna2TrackBar2.Value.ToString();
+            guna2TextBox3.Text = guna2TrackBar3.Value.ToString();
+        }
+
+        private void guna2TrackBar2_Scroll(object sender, ScrollEventArgs e)
+        {
+            selectedpanel.BackColor = Color.FromArgb(guna2TrackBar1.Value, guna2TrackBar2.Value, guna2TrackBar3.Value);
+            guna2TextBox1.Text = guna2TrackBar1.Value.ToString();
+            guna2TextBox2.Text = guna2TrackBar2.Value.ToString();
+            guna2TextBox3.Text = guna2TrackBar3.Value.ToString();
+        }
+
+        private void guna2TrackBar3_Scroll(object sender, ScrollEventArgs e)
+        {
+            selectedpanel.BackColor = Color.FromArgb(guna2TrackBar1.Value, guna2TrackBar2.Value, guna2TrackBar3.Value);
+            guna2TextBox1.Text = guna2TrackBar1.Value.ToString();
+            guna2TextBox2.Text = guna2TrackBar2.Value.ToString();
+            guna2TextBox3.Text = guna2TrackBar3.Value.ToString();
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox1.Text != "")
+            {
+                int value = int.Parse(guna2TextBox1.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar1.Value = value;
+                    selectedpanel.BackColor = Color.FromArgb(guna2TrackBar1.Value, guna2TrackBar2.Value, guna2TrackBar3.Value);
+
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox2.Text != "")
+            {
+                int value = int.Parse(guna2TextBox2.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar2.Value = value;
+                    selectedpanel.BackColor = Color.FromArgb(guna2TrackBar1.Value, guna2TrackBar2.Value, guna2TrackBar3.Value);
+
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox3.Text != "")
+            {
+                int value = int.Parse(guna2TextBox3.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar3.Value = value;
+                    selectedpanel.BackColor = Color.FromArgb(guna2TrackBar1.Value, guna2TrackBar2.Value, guna2TrackBar3.Value);
+
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TrackBar6_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel12.BackColor = Color.FromArgb(guna2TrackBar6.Value, guna2TrackBar5.Value, guna2TrackBar4.Value);
+            guna2TextBox6.Text = guna2TrackBar6.Value.ToString();
+            guna2TextBox5.Text = guna2TrackBar5.Value.ToString();
+            guna2TextBox4.Text = guna2TrackBar4.Value.ToString();
+        }
+
+        private void guna2TrackBar5_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel12.BackColor = Color.FromArgb(guna2TrackBar6.Value, guna2TrackBar5.Value, guna2TrackBar4.Value);
+            guna2TextBox6.Text = guna2TrackBar6.Value.ToString();
+            guna2TextBox5.Text = guna2TrackBar5.Value.ToString();
+            guna2TextBox4.Text = guna2TrackBar4.Value.ToString();
+        }
+
+        private void guna2TrackBar4_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel12.BackColor = Color.FromArgb(guna2TrackBar6.Value, guna2TrackBar5.Value, guna2TrackBar4.Value);
+            guna2TextBox6.Text = guna2TrackBar6.Value.ToString();
+            guna2TextBox5.Text = guna2TrackBar5.Value.ToString();
+            guna2TextBox4.Text = guna2TrackBar4.Value.ToString();
+        }
+
+        private void guna2TextBox6_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox6.Text != "")
+            {
+                int value = int.Parse(guna2TextBox6.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar6.Value = value;
+                    panel12.BackColor = Color.FromArgb(guna2TrackBar6.Value, guna2TrackBar5.Value, guna2TrackBar4.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TextBox5_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox5.Text != "")
+            {
+                int value = int.Parse(guna2TextBox5.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar5.Value = value;
+                    panel12.BackColor = Color.FromArgb(guna2TrackBar6.Value, guna2TrackBar5.Value, guna2TrackBar4.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox4.Text != "")
+            {
+                int value = int.Parse(guna2TextBox4.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar4.Value = value;
+                    panel12.BackColor = Color.FromArgb(guna2TrackBar6.Value, guna2TrackBar5.Value, guna2TrackBar4.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TrackBar9_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel13.BackColor = Color.FromArgb(guna2TrackBar9.Value, guna2TrackBar8.Value, guna2TrackBar7.Value);
+            guna2TextBox9.Text = guna2TrackBar9.Value.ToString();
+            guna2TextBox8.Text = guna2TrackBar8.Value.ToString();
+            guna2TextBox7.Text = guna2TrackBar7.Value.ToString();
+        }
+
+        private void guna2TrackBar8_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel13.BackColor = Color.FromArgb(guna2TrackBar9.Value, guna2TrackBar8.Value, guna2TrackBar7.Value);
+            guna2TextBox9.Text = guna2TrackBar9.Value.ToString();
+            guna2TextBox8.Text = guna2TrackBar8.Value.ToString();
+            guna2TextBox7.Text = guna2TrackBar7.Value.ToString();
+        }
+
+        private void guna2TrackBar7_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel13.BackColor = Color.FromArgb(guna2TrackBar9.Value, guna2TrackBar8.Value, guna2TrackBar7.Value);
+            guna2TextBox9.Text = guna2TrackBar9.Value.ToString();
+            guna2TextBox8.Text = guna2TrackBar8.Value.ToString();
+            guna2TextBox7.Text = guna2TrackBar7.Value.ToString();
+        }
+
+        private void guna2TextBox9_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox9.Text != "")
+            {
+                int value = int.Parse(guna2TextBox9.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar9.Value = value;
+                    panel13.BackColor = Color.FromArgb(guna2TrackBar9.Value, guna2TrackBar8.Value, guna2TrackBar7.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TextBox8_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox8.Text != "")
+            {
+                int value = int.Parse(guna2TextBox8.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar8.Value = value;
+                    panel13.BackColor = Color.FromArgb(guna2TrackBar9.Value, guna2TrackBar8.Value, guna2TrackBar7.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TextBox7_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox7.Text != "")
+            {
+                int value = int.Parse(guna2TextBox7.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar7.Value = value;
+                    panel13.BackColor = Color.FromArgb(guna2TrackBar9.Value, guna2TrackBar8.Value, guna2TrackBar7.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
         }
     }
 }

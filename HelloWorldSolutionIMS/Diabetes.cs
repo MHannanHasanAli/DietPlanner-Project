@@ -1,16 +1,9 @@
 ﻿using Guna.UI2.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace HelloWorldSolutionIMS
 {
@@ -24,14 +17,14 @@ namespace HelloWorldSolutionIMS
             weight.TextChanged += weight_TextChanged;
 
         }
-        static int valueid=0;
+        static int valueid = 0;
         public Diabetes(int id)
         {
             InitializeComponent();
             weight.KeyPress += weight_KeyPress;
             weight.TextChanged += weight_TextChanged;
             coderunner = id;
-           
+
 
         }
         static int total;
@@ -44,13 +37,13 @@ namespace HelloWorldSolutionIMS
         }
         private void updatetotal()
         {
-            if(guna2DataGridView1.Rows[4].Cells[1].Value != "")
+            if (guna2DataGridView1.Rows[4].Cells[1].Value != "")
             {
                 int totalval = int.Parse(guna2DataGridView1.Rows[4].Cells[1].Value.ToString());
                 totalval = total;
                 guna2DataGridView1.Rows[4].Cells[1].Value = totalval;
             }
-           
+
         }
         private void AddFiveRowsToTablecarbs()
         {
@@ -86,11 +79,12 @@ namespace HelloWorldSolutionIMS
         }
         private void AddFiveRowsToTable()
         {
-                for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)
+            {
+                // Add a new row to the DataGridView
+                int rowIndex = guna2DataGridView1.Rows.Add();
+                if (rowIndex == 0)
                 {
-                    // Add a new row to the DataGridView
-                    int rowIndex = guna2DataGridView1.Rows.Add();
-                if(rowIndex == 0) {
                     guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "BREAKFAST"; // Add text to cell 2 (index 1)
                 }
                 else if (rowIndex == 1)
@@ -112,11 +106,11 @@ namespace HelloWorldSolutionIMS
                 }
                 // Add specific text to the second and third cells of each row
             }
-            
+
         }
         private void weight_TextChanged(object sender, EventArgs e)
         {
-            if(weight.Text != "")
+            if (weight.Text != "")
             {
                 float w = float.Parse(weight.Text);
 
@@ -138,7 +132,7 @@ namespace HelloWorldSolutionIMS
                 //guna2DataGridView2.Rows[4].Cells[2].Value = total;
                 updatetotal();
             }
-           
+
 
         }
         private void weight_KeyPress(object sender, KeyPressEventArgs e)
@@ -175,7 +169,7 @@ namespace HelloWorldSolutionIMS
         static double table_total2;
         private void Diabetes_Load(object sender, EventArgs e)
         {
-            
+
             table_total = 0;
             AddFiveRowsToTable();
             AddFiveRowsToTablecarbs();
@@ -185,7 +179,7 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView1.Visible = false;
             guna2DataGridView2.Visible = false;
 
-            if(coderunner!=0)
+            if (coderunner != 0)
             {
                 fileno.Text = coderunner.ToString();
                 coderunner = 0;
@@ -193,14 +187,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -212,7 +210,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                   
+
 
 
                 }
@@ -230,14 +228,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -249,7 +251,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                   
+
 
 
                 }
@@ -296,7 +298,7 @@ namespace HelloWorldSolutionIMS
 
                     int fontSize = int.Parse(size);
 
-                 
+
                     foreach (System.Windows.Forms.Control control in panel1.Controls)
                     {
                         if (control is Label)
@@ -307,7 +309,7 @@ namespace HelloWorldSolutionIMS
                             label.Font = font;
                         }
                     }
-                  
+
 
                 }
 
@@ -336,51 +338,51 @@ namespace HelloWorldSolutionIMS
         static int counter = 0;
         private void guna2DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             if (e.ColumnIndex == 1 && e.RowIndex != 4 && e.RowIndex >= 0)// Change this to the index of the column to monitor
             {
-                
-                    string changedValue = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
-                    table_total += double.Parse(changedValue);
-                    if (table_total <= total*2)
+                string changedValue = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+                table_total += double.Parse(changedValue);
+                if (table_total <= total * 2)
+                {
+                    double cellvalue = double.Parse(changedValue) * insulincharbcalc;
+
+                    guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = cellvalue;
+                    string val = guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value?.ToString();
+                    double new_value = 0;
+
+                    if (val == null)
                     {
-                        double cellvalue = double.Parse(changedValue) * insulincharbcalc;
-
-                        guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = cellvalue;
-                        string val = guna2DataGridView1.Rows[4].Cells[e.ColumnIndex+1].Value?.ToString();
-                        double new_value = 0;
-                       
-                        if (val == null)
-                        {                       
-                            guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value = cellvalue;
-                        }
-                        else
-                        {
-
-                            if(rowflag == 0)
-                            {
-                                
-                                rowflag = 1;
-                            }
-                            else
-                            {
-                                new_value = double.Parse(val) + cellvalue / 2;
-                                guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value = new_value;
-                            }
-                               
-                        }
-                    
+                        guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value = cellvalue;
                     }
                     else
                     {
-                        MessageBox.Show("Total number of insulin exceeded!");
+
+                        if (rowflag == 0)
+                        {
+
+                            rowflag = 1;
+                        }
+                        else
+                        {
+                            new_value = double.Parse(val) + cellvalue / 2;
+                            guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value = new_value;
+                        }
+
                     }
 
+                }
+                else
+                {
+                    MessageBox.Show("Total number of insulin exceeded!");
+                }
+
             }
-            
+
         }
-        
+
         static int full = 0;
         static int shots = 0;
         private void guna2DataGridView2_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -388,24 +390,24 @@ namespace HelloWorldSolutionIMS
             if (e.ColumnIndex == 1 && e.RowIndex != 4 && e.RowIndex >= 0)// Change this to the index of the column to monitor
             {
 
-                    string changedValue = guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                string changedValue = guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
 
-                    table_total2 += double.Parse(changedValue);
-                
-                    double cellvalue = double.Parse(changedValue) / insulincharbcalc;
-                    double round = RoundNumber(cellvalue,0);
+                table_total2 += double.Parse(changedValue);
 
-                    guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = int.Parse(round.ToString());
-                    shots = shots + int.Parse(round.ToString());
-                    string val = guna2DataGridView2.Rows[4].Cells[e.ColumnIndex + 1].Value?.ToString();
+                double cellvalue = double.Parse(changedValue) / insulincharbcalc;
+                double round = RoundNumber(cellvalue, 0);
 
-                    guna2DataGridView2.Rows[4].Cells[2].Value = shots/2;
-                    guna2DataGridView2.Rows[4].Cells[1].Value = table_total2 / 2;
+                guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = int.Parse(round.ToString());
+                shots = shots + int.Parse(round.ToString());
+                string val = guna2DataGridView2.Rows[4].Cells[e.ColumnIndex + 1].Value?.ToString();
 
-                    if (val == null)
-                    {
-                        guna2DataGridView2.Rows[4].Cells[e.ColumnIndex + 1].Value = cellvalue;
-                    }
+                guna2DataGridView2.Rows[4].Cells[2].Value = shots / 2;
+                guna2DataGridView2.Rows[4].Cells[1].Value = table_total2 / 2;
+
+                if (val == null)
+                {
+                    guna2DataGridView2.Rows[4].Cells[e.ColumnIndex + 1].Value = cellvalue;
+                }
 
             }
         }
@@ -560,42 +562,42 @@ namespace HelloWorldSolutionIMS
                 //}
                 //else
                 //{
-                    try
+                try
+                {
+                    if (MainClass.con.State != ConnectionState.Open)
                     {
-                        if (MainClass.con.State != ConnectionState.Open)
-                        {
-                            MainClass.con.Open();
-                            conn = 1;
-                        }
-
-                        SqlCommand cmd2 = new SqlCommand("SELECT WEIGHT FROM BODYCOMPOSITION " +
-                            "WHERE CustomerID = @fileno", MainClass.con);
-
-                        cmd2.Parameters.AddWithValue("@fileno", value.ToString());
-                        SqlDataReader reader2 = cmd2.ExecuteReader();
-                        if (reader2.Read())
-                        {
-                            // Assign values from the reader to the respective text boxes
-                            weight.Text = reader2["WEIGHT"].ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No customer with this file no exist!");
-                        }
-                        if (conn == 1)
-                        {
-                            MainClass.con.Close();
-                            conn = 0;
-                        }
-                        reader2.Close();
+                        MainClass.con.Open();
+                        conn = 1;
                     }
-                    catch (Exception ex)
+
+                    SqlCommand cmd2 = new SqlCommand("SELECT WEIGHT FROM BODYCOMPOSITION " +
+                        "WHERE CustomerID = @fileno", MainClass.con);
+
+                    cmd2.Parameters.AddWithValue("@fileno", value.ToString());
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+                    if (reader2.Read())
+                    {
+                        // Assign values from the reader to the respective text boxes
+                        weight.Text = reader2["WEIGHT"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No customer with this file no exist!");
+                    }
+                    if (conn == 1)
                     {
                         MainClass.con.Close();
-                        MessageBox.Show(ex.Message);
+                        conn = 0;
                     }
+                    reader2.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
                 //}
-                
+
             }
             else
             {

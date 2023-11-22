@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Guna.UI2.WinForms;
+using OfficeOpenXml;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms.DataVisualization.Charting;
-using System.Windows.Forms;
-using OfficeOpenXml;
 using System.IO;
-using Guna.UI2.WinForms;
-using static HelloWorldSolutionIMS.MealAction;
-using Win32Interop.Enums;
+using System.Linq;
+using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace HelloWorldSolutionIMS
 {
@@ -43,17 +37,17 @@ namespace HelloWorldSolutionIMS
             //}
             if (fats.Text != "")
             {
-                dt.Rows.Add("Fats", double.Parse(fats.Text)*9);
+                dt.Rows.Add("Fats", double.Parse(fats.Text) * 9);
 
             }
             if (protein.Text != "")
             {
-                dt.Rows.Add("Protein", double.Parse(protein.Text)*4);
+                dt.Rows.Add("Protein", double.Parse(protein.Text) * 4);
 
             }
             if (carbohydrates.Text != "")
             {
-                dt.Rows.Add("Carbohydrates", double.Parse(carbohydrates.Text)*4);
+                dt.Rows.Add("Carbohydrates", double.Parse(carbohydrates.Text) * 4);
             }
 
             if (titlecheck != 1)
@@ -261,7 +255,7 @@ namespace HelloWorldSolutionIMS
                     "WHERE CATEGORY LIKE @Category", MainClass.con);
 
                 cmd.Parameters.AddWithValue("@Category", "%" + category + "%");
-               
+
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -292,19 +286,23 @@ namespace HelloWorldSolutionIMS
         }
         private void Ingredient_Load(object sender, EventArgs e)
         {
-           
+
 
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -333,14 +331,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -352,7 +354,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                   
+
 
 
 
@@ -398,7 +400,7 @@ namespace HelloWorldSolutionIMS
                     }
 
                     int fontSize = int.Parse(size);
-                 
+
                     foreach (System.Windows.Forms.Control control in panel1.Controls)
                     {
                         if (control is Label)
@@ -409,7 +411,7 @@ namespace HelloWorldSolutionIMS
                             label.Font = font;
                         }
                     }
-                   
+
 
 
 
@@ -516,7 +518,7 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                       
+
                         MainClass.con.Open();
                         SqlCommand cmd = new SqlCommand("UPDATE Ingredient SET INGREDIENT_AR = @INGREDIENT_AR, INGREDIENT_EN = @INGREDIENT_EN, GROUP_AR = @GROUP_AR, GROUP_EN = @GROUP_EN, CLASSIFICATION = @CLASSIFICATION, CALORIES = @CALORIES, FATS = @FATS, FIBERS = @FIBERS, POTASSIUM = @POTASSIUM, WATER = @WATER, SUGAR = @SUGAR, CALCIUM = @CALCIUM, A = @A, PROTEIN = @PROTEIN, CARBOHYDRATES = @CARBOHYDRATES, SODIUM = @SODIUM, PHOSPHOR = @PHOSPHOR, MAGNESIUM = @MAGNESIUM, IRON = @IRON, IODINE = @IODINE, B = @B, Category = @Category WHERE ID = @ID", MainClass.con);
 
@@ -990,39 +992,39 @@ namespace HelloWorldSolutionIMS
         private void importall_Click(object sender, EventArgs e)
         {
 
-                ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
+            ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
 
         }
         private void importff_Click(object sender, EventArgs e)
         {
 
-                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Foundation Foods");
+            ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Foundation Foods");
 
         }
         private void importsr_Click(object sender, EventArgs e)
         {
 
-                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "SR Legacy");
+            ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "SR Legacy");
 
         }
         private void importfndds_Click(object sender, EventArgs e)
         {
 
-                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "FNDDS");
+            ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "FNDDS");
 
         }
-        
+
         private void importbranded_Click(object sender, EventArgs e)
         {
 
-                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Branded");
+            ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Branded");
 
         }
-        
+
         private void importlocal_Click(object sender, EventArgs e)
         {
-           
-                ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Local");
+
+            ShowIngredientsWithFilter(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv, "Local");
 
         }
 

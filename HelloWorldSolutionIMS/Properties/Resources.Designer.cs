@@ -673,6 +673,16 @@ namespace HelloWorldSolutionIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap spectrum_chart {
+            get {
+                object obj = ResourceManager.GetObject("spectrum_chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sugar_cube {
             get {
                 object obj = ResourceManager.GetObject("sugar-cube", resourceCulture);

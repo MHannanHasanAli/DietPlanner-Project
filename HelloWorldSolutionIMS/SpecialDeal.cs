@@ -1,17 +1,10 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Win32Interop.Enums;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace HelloWorldSolutionIMS
 {
@@ -389,14 +382,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -435,14 +432,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {

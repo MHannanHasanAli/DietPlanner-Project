@@ -1,25 +1,13 @@
-﻿using Fizzler;
-using Guna.UI2.WinForms;
-using iTextSharp.text.pdf.codec.wmf;
-using Org.BouncyCastle.Utilities.Encoders;
-using RestSharp.Extensions;
+﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Security.Policy;
 using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using Win32Interop.Enums;
-using static HelloWorldSolutionIMS.MealAction;
-using static HelloWorldSolutionIMS.Payment;
-using static HelloWorldSolutionIMS.Registration;
 
 namespace HelloWorldSolutionIMS
 {
@@ -849,7 +837,7 @@ namespace HelloWorldSolutionIMS
             MainClass.con.Open();
             for (int i = 0; i < breakfastitemids.Count; i++)
             {
-                
+
                 string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID AND Category = 'Breakfast'";
 
                 SqlCommand cmd2 = new SqlCommand(query, MainClass.con);
@@ -904,7 +892,7 @@ namespace HelloWorldSolutionIMS
                     if (one != "")
                     {
                         EditMap1.Row = i;
-                       
+
                         EditMap1.ChartName = "guna2DataGridView2";
                         EditMap1.Col = 2;
                         EditMap1.ID = int.Parse(one);
@@ -915,7 +903,7 @@ namespace HelloWorldSolutionIMS
                     if (two != "")
                     {
                         EditMap2.Row = i;
-                        
+
                         EditMap2.ChartName = "guna2DataGridView2";
                         EditMap2.Col = 3;
                         EditMap2.ID = int.Parse(two);
@@ -925,10 +913,10 @@ namespace HelloWorldSolutionIMS
                     if (three != "")
                     {
                         EditMap3.Row = i;
-                       
+
                         EditMap3.ChartName = "guna2DataGridView2";
                         EditMap3.Col = 4;
-                        
+
                         EditMap3.ID = int.Parse(three);
                         Mapping.Add(EditMap3);
                     }
@@ -936,10 +924,10 @@ namespace HelloWorldSolutionIMS
                     if (Four != "")
                     {
                         EditMap4.Row = i;
-                      
+
                         EditMap4.ChartName = "guna2DataGridView2";
                         EditMap4.Col = 5;
-                       
+
                         EditMap4.ID = int.Parse(Four);
                         Mapping.Add(EditMap4);
                     }
@@ -947,10 +935,10 @@ namespace HelloWorldSolutionIMS
                     if (Five != "")
                     {
                         EditMap5.Row = i;
-                       
+
                         EditMap5.ChartName = "guna2DataGridView2";
                         EditMap5.Col = 6;
-                        
+
                         EditMap5.ID = int.Parse(Five);
                         Mapping.Add(EditMap5);
 
@@ -959,10 +947,10 @@ namespace HelloWorldSolutionIMS
                     if (Six != "")
                     {
                         EditMap6.Row = i;
-                        
+
                         EditMap6.ChartName = "guna2DataGridView2";
                         EditMap6.Col = 7;
-                       
+
                         EditMap6.ID = int.Parse(Six);
                         Mapping.Add(EditMap6);
                     }
@@ -972,7 +960,7 @@ namespace HelloWorldSolutionIMS
                         EditMap7.Row = i;
                         EditMap7.ChartName = "guna2DataGridView2";
                         EditMap7.Col = 8;
-                        
+
                         EditMap7.ID = int.Parse(Seven);
                         Mapping.Add(EditMap7);
                     }
@@ -986,8 +974,8 @@ namespace HelloWorldSolutionIMS
 
             }
             for (int i = 0; i < lunchtitemids.Count; i++)
-            {             
-                
+            {
+
                 string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID AND Category = 'Lunch'";
 
                 SqlCommand cmd2 = new SqlCommand(query, MainClass.con);
@@ -1042,10 +1030,10 @@ namespace HelloWorldSolutionIMS
                     if (one != "")
                     {
                         EditMap8.Row = i;
-                       
+
                         EditMap8.ChartName = "guna2DataGridView4";
                         EditMap8.Col = 2;
-                       
+
                         EditMap8.ID = int.Parse(one);
                         Mapping.Add(EditMap8);
                     }
@@ -1053,10 +1041,10 @@ namespace HelloWorldSolutionIMS
                     if (two != "")
                     {
                         EditMap9.Row = i;
-                      
+
                         EditMap9.ChartName = "guna2DataGridView4";
                         EditMap9.Col = 3;
-                       
+
                         EditMap9.ID = int.Parse(two);
                         Mapping.Add(EditMap9);
                     }
@@ -1064,10 +1052,10 @@ namespace HelloWorldSolutionIMS
                     if (three != "")
                     {
                         EditMap10.Row = i;
-                        
+
                         EditMap10.ChartName = "guna2DataGridView4";
                         EditMap10.Col = 4;
-                       
+
                         EditMap10.ID = int.Parse(three);
                         Mapping.Add(EditMap10);
                     }
@@ -1075,10 +1063,10 @@ namespace HelloWorldSolutionIMS
                     if (Four != "")
                     {
                         EditMap11.Row = i;
-                       
+
                         EditMap11.ChartName = "guna2DataGridView4";
                         EditMap11.Col = 5;
-                      
+
                         EditMap11.ID = int.Parse(Four);
                         Mapping.Add(EditMap11);
                     }
@@ -1086,10 +1074,10 @@ namespace HelloWorldSolutionIMS
                     if (Five != "")
                     {
                         EditMap12.Row = i;
-                       
+
                         EditMap12.ChartName = "guna2DataGridView4";
                         EditMap12.Col = 6;
-                       
+
                         EditMap12.ID = int.Parse(Five);
                         Mapping.Add(EditMap12);
                     }
@@ -1097,10 +1085,10 @@ namespace HelloWorldSolutionIMS
                     if (Six != "")
                     {
                         EditMap13.Row = i;
-                       
+
                         EditMap13.ChartName = "guna2DataGridView4";
                         EditMap13.Col = 7;
-                        
+
                         EditMap13.ID = int.Parse(Six);
                         Mapping.Add(EditMap13);
                     }
@@ -1110,7 +1098,7 @@ namespace HelloWorldSolutionIMS
                         EditMap14.Row = i;
                         EditMap14.ChartName = "guna2DataGridView4";
                         EditMap14.Col = 8;
-                   
+
                         EditMap14.ID = int.Parse(Seven);
                         Mapping.Add(EditMap14);
                     }
@@ -1126,7 +1114,7 @@ namespace HelloWorldSolutionIMS
             }
             for (int i = 0; i < dinnertitemids.Count; i++)
             {
-               
+
 
                 string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID AND Category = 'Dinner'";
 
@@ -1182,10 +1170,10 @@ namespace HelloWorldSolutionIMS
                     if (one != "")
                     {
                         EditMap15.Row = i;
-                        
+
                         EditMap15.ChartName = "guna2DataGridView5";
                         EditMap15.Col = 2;
-                       
+
                         EditMap15.ID = int.Parse(one);
                         Mapping.Add(EditMap15);
                     }
@@ -1193,10 +1181,10 @@ namespace HelloWorldSolutionIMS
                     if (two != "")
                     {
                         EditMap16.Row = i;
-                        
+
                         EditMap16.ChartName = "guna2DataGridView5";
                         EditMap16.Col = 3;
-                       
+
                         EditMap16.ID = int.Parse(two);
                         Mapping.Add(EditMap16);
                     }
@@ -1204,10 +1192,10 @@ namespace HelloWorldSolutionIMS
                     if (three != "")
                     {
                         EditMap17.Row = i;
-                        
+
                         EditMap17.ChartName = "guna2DataGridView5";
                         EditMap17.Col = 4;
-                       
+
                         EditMap17.ID = int.Parse(three);
                         Mapping.Add(EditMap17);
                     }
@@ -1215,10 +1203,10 @@ namespace HelloWorldSolutionIMS
                     if (Four != "")
                     {
                         EditMap18.Row = i;
-                        
+
                         EditMap18.ChartName = "guna2DataGridView5";
                         EditMap18.Col = 5;
-                       
+
                         EditMap18.ID = int.Parse(Four);
                         Mapping.Add(EditMap18);
                     }
@@ -1226,10 +1214,10 @@ namespace HelloWorldSolutionIMS
                     if (Five != "")
                     {
                         EditMap19.Row = i;
-                        
+
                         EditMap19.ChartName = "guna2DataGridView5";
                         EditMap19.Col = 6;
-                       
+
                         EditMap19.ID = int.Parse(Five);
                         Mapping.Add(EditMap19);
                     }
@@ -1237,10 +1225,10 @@ namespace HelloWorldSolutionIMS
                     if (Six != "")
                     {
                         EditMap20.Row = i;
-                        
+
                         EditMap20.ChartName = "guna2DataGridView5";
                         EditMap20.Col = 7;
-                       
+
                         EditMap20.ID = int.Parse(Six);
                         Mapping.Add(EditMap20);
                     }
@@ -1250,7 +1238,7 @@ namespace HelloWorldSolutionIMS
                         EditMap21.Row = i;
                         EditMap21.ChartName = "guna2DataGridView5";
                         EditMap21.Col = 8;
-                       
+
                         EditMap21.ID = int.Parse(Seven);
                         Mapping.Add(EditMap21);
                     }
@@ -1266,7 +1254,7 @@ namespace HelloWorldSolutionIMS
             }
             for (int i = 0; i < snacktitemids.Count; i++)
             {
-               
+
 
                 string query = "SELECT category, one, two, three, Four, Five, Six, Seven FROM DietPlanAction WHERE ID = @DietPlanID AND Category = 'Snack'";
 
@@ -1322,11 +1310,11 @@ namespace HelloWorldSolutionIMS
                     if (one != "")
                     {
                         EditMap22.Row = i;
-                    
+
                         EditMap22.ChartName = "guna2DataGridView6";
-                     
+
                         EditMap22.Col = 2;
-                        
+
                         EditMap22.ID = int.Parse(one);
                         Mapping.Add(EditMap22);
                     }
@@ -1334,25 +1322,25 @@ namespace HelloWorldSolutionIMS
                     if (two != "")
                     {
                         EditMap23.Row = i;
-                   
+
                         EditMap23.ChartName = "guna2DataGridView6";
 
                         EditMap23.Col = 3;
-                       
+
                         EditMap23.ID = int.Parse(two);
                         Mapping.Add(EditMap23);
                     }
 
                     if (three != "")
                     {
-                        
+
                         EditMap24.Row = i;
-                       
+
 
                         EditMap24.ChartName = "guna2DataGridView6";
 
                         EditMap24.Col = 4;
-                        
+
                         EditMap24.ID = int.Parse(three);
                         Mapping.Add(EditMap24);
                     }
@@ -1360,12 +1348,12 @@ namespace HelloWorldSolutionIMS
                     if (Four != "")
                     {
                         EditMap25.Row = i;
-                       
+
 
                         EditMap25.ChartName = "guna2DataGridView6";
 
                         EditMap25.Col = 5;
-                       
+
                         EditMap25.ID = int.Parse(Four);
                         Mapping.Add(EditMap25);
 
@@ -1374,11 +1362,11 @@ namespace HelloWorldSolutionIMS
                     if (Five != "")
                     {
                         EditMap26.Row = i;
-                       
+
                         EditMap26.ChartName = "guna2DataGridView6";
 
                         EditMap26.Col = 6;
-                       
+
                         EditMap26.ID = int.Parse(Five);
                         Mapping.Add(EditMap26);
                     }
@@ -1386,11 +1374,11 @@ namespace HelloWorldSolutionIMS
                     if (Six != "")
                     {
                         EditMap27.Row = i;
-                       
+
                         EditMap27.ChartName = "guna2DataGridView6";
 
                         EditMap27.Col = 7;
-                     
+
                         EditMap27.ID = int.Parse(Six);
                         Mapping.Add(EditMap27);
                     }
@@ -1400,7 +1388,7 @@ namespace HelloWorldSolutionIMS
                         EditMap28.Row = i;
                         EditMap28.ChartName = "guna2DataGridView6";
                         EditMap28.Col = 8;
-                       
+
                         EditMap28.ID = int.Parse(Seven);
                         Mapping.Add(EditMap28);
                     }
@@ -1431,7 +1419,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(one))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[2] = comboCell;
-                
+
             }
             else
             {
@@ -1458,7 +1446,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(two))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[3] = comboCell;
-               
+
             }
             else
             {
@@ -1485,7 +1473,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(three))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[4] = comboCell;
-               
+
             }
             else
             {
@@ -1512,7 +1500,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Four))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[5] = comboCell;
-                
+
             }
             else
             {
@@ -1539,7 +1527,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Five))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[6] = comboCell;
-               
+
             }
             else
             {
@@ -1566,7 +1554,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Six))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[7] = comboCell;
-              
+
             }
             else
             {
@@ -1593,7 +1581,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Seven))[0].ID;
                 guna2DataGridView2.Rows[i].Cells[8] = comboCell;
-                
+
             }
             else
             {
@@ -1626,7 +1614,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(one))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[2] = comboCell;
-                
+
             }
             else
             {
@@ -1653,7 +1641,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(two))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[3] = comboCell;
-                
+
             }
             else
             {
@@ -1680,7 +1668,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(three))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[4] = comboCell;
-               
+
             }
             else
             {
@@ -1707,7 +1695,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Four))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[5] = comboCell;
-                
+
             }
             else
             {
@@ -1734,7 +1722,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Five))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[6] = comboCell;
-             
+
             }
             else
             {
@@ -1761,7 +1749,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Six))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[7] = comboCell;
-                
+
             }
             else
             {
@@ -1788,7 +1776,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Seven))[0].ID;
                 guna2DataGridView4.Rows[i].Cells[8] = comboCell;
-              
+
             }
             else
             {
@@ -1821,7 +1809,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(one))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[2] = comboCell;
-                
+
             }
             else
             {
@@ -1848,7 +1836,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(two))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[3] = comboCell;
-              
+
             }
             else
             {
@@ -1875,7 +1863,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(three))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[4] = comboCell;
-                
+
             }
             else
             {
@@ -1902,7 +1890,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Four))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[5] = comboCell;
-                
+
             }
             else
             {
@@ -1929,7 +1917,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Five))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[6] = comboCell;
-                
+
             }
             else
             {
@@ -1956,7 +1944,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Six))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[7] = comboCell;
-                
+
             }
             else
             {
@@ -1983,7 +1971,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Seven))[0].ID;
                 guna2DataGridView5.Rows[i].Cells[8] = comboCell;
-                
+
             }
             else
             {
@@ -2016,7 +2004,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(one))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[2] = comboCell;
-                
+
             }
             else
             {
@@ -2043,7 +2031,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(two))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[3] = comboCell;
-               
+
             }
             else
             {
@@ -2070,7 +2058,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(three))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[4] = comboCell;
-              
+
             }
             else
             {
@@ -2097,7 +2085,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Four))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[5] = comboCell;
-               
+
             }
             else
             {
@@ -2124,7 +2112,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Five))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[6] = comboCell;
-               
+
             }
             else
             {
@@ -2151,7 +2139,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Six))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[7] = comboCell;
-              
+
             }
             else
             {
@@ -2178,7 +2166,7 @@ namespace HelloWorldSolutionIMS
                 comboCell.ValueMember = "ID";
                 comboCell.Value = GetMeals(int.Parse(Seven))[0].ID;
                 guna2DataGridView6.Rows[i].Cells[8] = comboCell;
-              
+
             }
             else
             {
@@ -2329,7 +2317,7 @@ namespace HelloWorldSolutionIMS
                 {
                     int id = Convert.ToInt32(reader65["ID"]);
 
-                   
+
 
                     string ingredientAr = reader65["MealAr"].ToString();
                     Mealslist.Add(new MealsDropdown { ID = id, Name = ingredientAr });
@@ -2663,14 +2651,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (System.Windows.Forms.Control control in panel2.Controls)
                     {
@@ -2727,14 +2719,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (System.Windows.Forms.Control control in panel3.Controls)
                     {
@@ -2916,20 +2912,20 @@ namespace HelloWorldSolutionIMS
             updatepreviousdietplan();
             UpdateInstruction();
 
-            if(coderunner!=0)
+            if (coderunner != 0)
             {
                 fileno.Text = coderunner.ToString();
-                LoadData(coderunner);               
+                LoadData(coderunner);
             }
 
-            if(coderunner == 0)
+            if (coderunner == 0)
             {
                 RowsFiller();
             }
         }
         private void AddIngredient_Click(object sender, EventArgs e)
         {
-            if(guna2DataGridView2.RowCount<6)
+            if (guna2DataGridView2.RowCount < 6)
             {
                 // Create a single row for your DataGridView.
                 DataGridViewRow row = new DataGridViewRow();
@@ -2993,7 +2989,7 @@ namespace HelloWorldSolutionIMS
             {
                 MessageBox.Show("Cannot add more than 6 meals in Breakfast!");
             }
-           
+
 
         }
         private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -3002,7 +2998,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in Mapping)
                 {
-                    if(item.Row == e.RowIndex && item.ChartName == "guna2DataGridView2")
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView2")
                     {
                         ChartMinus(item.ID);
                     }
@@ -3018,19 +3014,19 @@ namespace HelloWorldSolutionIMS
                 foreach (var item in Mapping)
                 {
                     if (item.ChartName == "guna2DataGridView2")
-                    {                       
-                            if (item.Row > e.RowIndex)
-                            {
-                                ArtificialMapping NewIndex = new ArtificialMapping();
-                                NewIndex.ID = item.ID;
-                                NewIndex.Row = item.Row - 1;
-                                NewIndex.Col = item.Col;
-                                NewIndex.ChartName = item.ChartName;
+                    {
+                        if (item.Row > e.RowIndex)
+                        {
+                            ArtificialMapping NewIndex = new ArtificialMapping();
+                            NewIndex.ID = item.ID;
+                            NewIndex.Row = item.Row - 1;
+                            NewIndex.Col = item.Col;
+                            NewIndex.ChartName = item.ChartName;
 
-                                itemsToAdd.Add(NewIndex);
+                            itemsToAdd.Add(NewIndex);
 
-                                itemsToRemove.Add(item);
-                            }                        
+                            itemsToRemove.Add(item);
+                        }
                     }
                 }
 
@@ -4405,10 +4401,10 @@ namespace HelloWorldSolutionIMS
             if (e.Control is ComboBox comboBox)
             {
 
-                
-                          
+
+
                 comboBox.SelectionChangeCommitted -= ComboBox_SelectionChangeCommitted; // Ensure it's detached first
-                comboBox.SelectionChangeCommitted += (s, args) => ComboBox_SelectionChangeCommitted(s, args, guna2DataGridView2.Name);               
+                comboBox.SelectionChangeCommitted += (s, args) => ComboBox_SelectionChangeCommitted(s, args, guna2DataGridView2.Name);
             }
             //CalculateChart(guna2DataGridView2);
 
@@ -4421,7 +4417,7 @@ namespace HelloWorldSolutionIMS
             if (sender is ComboBox comboBox)
             {
                 // Get the selected value
-               
+
                 // Do something with the selected value
                 ChartNewFunction(comboBox, guna2DataGridView2.Name);
             }
@@ -4540,22 +4536,22 @@ namespace HelloWorldSolutionIMS
 
                             if (calories.Text != "")
                             {
-                               // float = calories.Text;
-                               //float = fats.Text;
-                               // float = fibers.Text;
-                               // float = potassium.Text;
-                               //float = water.Text;
-                               // float = sugar.Text;
-                               // float = calcium.Text;
-                               // float = abox.Text;
-                               // float = protein.Text;
-                               // float = carbohydrates.Text;
-                               // float = sodium.Text;
-                               // float = phosphor.Text;
-                               // float = magnesium.Text;
-                               // float = iron.Text;
-                               // float = iodine.Text;
-                               // float = bbox.Text;
+                                // float = calories.Text;
+                                //float = fats.Text;
+                                // float = fibers.Text;
+                                // float = potassium.Text;
+                                //float = water.Text;
+                                // float = sugar.Text;
+                                // float = calcium.Text;
+                                // float = abox.Text;
+                                // float = protein.Text;
+                                // float = carbohydrates.Text;
+                                // float = sodium.Text;
+                                // float = phosphor.Text;
+                                // float = magnesium.Text;
+                                // float = iron.Text;
+                                // float = iodine.Text;
+                                // float = bbox.Text;
                             }
                             else
                             {
@@ -4645,7 +4641,7 @@ namespace HelloWorldSolutionIMS
         }
 
         List<ArtificialMapping> Mapping = new List<ArtificialMapping>();
-        static int chartcounter =0;
+        static int chartcounter = 0;
         private void ChartMinus(int id)
         {
             try
@@ -5009,7 +5005,7 @@ namespace HelloWorldSolutionIMS
                     data.Row = guna2DataGridView2.CurrentRow.Index;
                     data.Col = guna2DataGridView2.CurrentCell.ColumnIndex;
                     data.ChartName = name;
-                    
+
                     foreach (var item in Mapping)
                     {
                         chartcounter = 1;
@@ -5019,7 +5015,7 @@ namespace HelloWorldSolutionIMS
                             ChartMinus(data.ID);
                             break;
                         }
-                        else if(item.ChartName == name && item.Row == data.Row && item.Col == data.Col)
+                        else if (item.ChartName == name && item.Row == data.Row && item.Col == data.Col)
                         {
                             int previousid = item.ID;
                             ChartMinus(previousid);
@@ -5030,7 +5026,7 @@ namespace HelloWorldSolutionIMS
                             chartcounter = 0;
                         }
 
-                        
+
                     }
 
                     Mapping.RemoveAll(item =>
@@ -5039,13 +5035,13 @@ namespace HelloWorldSolutionIMS
                     item.ChartName == name
                     );
 
-                    if(chartcounter == 0)
+                    if (chartcounter == 0)
                     {
                         Mapping.Add(data);
                         ChartPlus(data.ID);
                         chartcounter = 1;
-                    }                   
-                    
+                    }
+
                 }
                 else if (name == "guna2DataGridView4")
                 {
@@ -5785,7 +5781,7 @@ namespace HelloWorldSolutionIMS
             {
                 MessageBox.Show("Cannot add more than 6 meals in Lunch!");
             }
-            
+
         }
 
         private void guna2DataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -5917,7 +5913,7 @@ namespace HelloWorldSolutionIMS
             {
                 MessageBox.Show("Cannot add more than 6 meals in Dinner!");
             }
-           
+
         }
 
         private void SnackAdd_Click(object sender, EventArgs e)
@@ -5985,7 +5981,7 @@ namespace HelloWorldSolutionIMS
             {
                 MessageBox.Show("Cannot add more than 6 meals in Snacks!");
             }
-            
+
         }
 
         private void guna2DataGridView5_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
@@ -6120,7 +6116,7 @@ namespace HelloWorldSolutionIMS
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-          
+
             save.Enabled = true;
             AddMealrow.Enabled = true;
             AddLunch.Enabled = true;
@@ -6438,7 +6434,7 @@ namespace HelloWorldSolutionIMS
                 {
                     string customerIDToEdit = dietPlanIDToEdit;
                     string customerFilenoToEdit = dietPlanIDToEdit;
-                   
+
                     MainClass.con.Open();
                     SqlCommand cmd = new SqlCommand("SELECT * FROM MedicalHistory WHERE FILENO = @CustomerID", MainClass.con);
                     cmd.Parameters.AddWithValue("@CustomerID", customerIDToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
@@ -6453,8 +6449,8 @@ namespace HelloWorldSolutionIMS
                             string dbstatus = reader["Status"].ToString();
                             string dbSmoking = reader["Smoking"].ToString();
                             string dbblood = reader["BloodType"].ToString();
-                           
-                            if(dbstatus == "Pregnant" || dbstatus== "Breast Feeding")
+
+                            if (dbstatus == "Pregnant" || dbstatus == "Breast Feeding")
                             {
                                 stringBuilder.Append(dbstatus);
                                 stringBuilder.AppendLine();
@@ -6480,8 +6476,8 @@ namespace HelloWorldSolutionIMS
                         {
                             // Set the retrieved data into input boxes
 
-                            stringBuilder.Append(reader2["Data"].ToString()+", ");
-                            
+                            stringBuilder.Append(reader2["Data"].ToString() + ", ");
+
 
                         }
                         stringBuilder.Remove(stringBuilder.Length - 1, 1);
@@ -6506,8 +6502,8 @@ namespace HelloWorldSolutionIMS
                         {
                             // Set the retrieved data into input boxes
 
-                            stringBuilder.Append(reader3["Data"].ToString()+ ", ");
-                           
+                            stringBuilder.Append(reader3["Data"].ToString() + ", ");
+
 
                         }
                         stringBuilder.Remove(stringBuilder.Length - 1, 1);
@@ -6520,7 +6516,7 @@ namespace HelloWorldSolutionIMS
                     reader3.Close();
                     MainClass.con.Close();
 
-                   
+
 
                     MainClass.con.Open();
                     SqlCommand cmd5 = new SqlCommand("SELECT * FROM Medication WHERE FILENO = @CustomerID", MainClass.con);
@@ -6535,8 +6531,8 @@ namespace HelloWorldSolutionIMS
                         {
                             // Set the retrieved data into input boxes
 
-                            stringBuilder.Append(reader5["Data"].ToString()+", ");
-                            
+                            stringBuilder.Append(reader5["Data"].ToString() + ", ");
+
 
                         }
                         stringBuilder.Remove(stringBuilder.Length - 1, 1);
@@ -6562,8 +6558,8 @@ namespace HelloWorldSolutionIMS
                         {
                             // Set the retrieved data into input boxes
 
-                            stringBuilder.Append(reader6["Data"].ToString()+", ");
-                           
+                            stringBuilder.Append(reader6["Data"].ToString() + ", ");
+
 
 
                         }
@@ -6602,40 +6598,40 @@ namespace HelloWorldSolutionIMS
                             {
 
                                 stringBuilder.Append("Harmonal Discease, ");
-                                                          
+
 
                             }
-                           
+
 
                             if (cans == "Yes")
                             {
                                 stringBuilder.Append("Cancer, ");
                             }
-                            
+
 
                             if (hians == "Yes")
                             {
                                 stringBuilder.Append("Immunity Disease, ");
                             }
-                           
+
 
                             if (hedans == "Yes")
                             {
                                 stringBuilder.Append("Hereditary Disease, ");
                             }
-                            
+
 
                             if (pdans == "Yes")
                             {
                                 stringBuilder.Append("Pancreatic Disease, ");
                             }
-                           
+
 
                             if (odans == "Yes")
                             {
                                 stringBuilder.Append("Other Disease. ");
                             }
-                           
+
 
                         }
 
@@ -6742,9 +6738,9 @@ namespace HelloWorldSolutionIMS
             string selectedValue = Calculation.Text;
             if (selectedValue == "1st Day")
             {
-                foreach(var item in Mapping)
+                foreach (var item in Mapping)
                 {
-                    if(item.Col == 2)
+                    if (item.Col == 2)
                     {
                         ChartPlusForFilter(item.ID);
                     }
@@ -6814,7 +6810,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in Mapping)
                 {
-                    ChartPlusForFilter(item.ID);                 
+                    ChartPlusForFilter(item.ID);
                 }
             }
 

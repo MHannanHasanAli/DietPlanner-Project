@@ -1,21 +1,14 @@
 ﻿using Guna.UI2.WinForms;
-using iTextSharp.text.pdf.codec.wmf;
 using OfficeOpenXml;
-using RestSharp.Extensions;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using static HelloWorldSolutionIMS.DietPlan;
-using static HelloWorldSolutionIMS.MealAction;
 
 namespace HelloWorldSolutionIMS
 {
@@ -30,7 +23,7 @@ namespace HelloWorldSolutionIMS
             protein.TextChanged += UpdateChart;
             //fibers.TextChanged += UpdateChart;
 
-           
+
 
         }
 
@@ -53,7 +46,7 @@ namespace HelloWorldSolutionIMS
                 using (SqlCommand cmdtwo = new SqlCommand(query, MainClass.con))
                 {
                     cmdtwo.Parameters.AddWithValue("@MealID", itemids[i]);
-                    
+
                     SqlDataReader reader5 = cmdtwo.ExecuteReader();
 
                     if (reader5.Read())
@@ -308,7 +301,7 @@ namespace HelloWorldSolutionIMS
                     abox.Text = totala.ToString();
                     bbox.Text = totalb.ToString();
 
-                    
+
                 }
 
             }
@@ -428,7 +421,7 @@ namespace HelloWorldSolutionIMS
                 foreach (DataRow row in dt.Rows)
                 {
                     int Id = row.Field<int>("ID");
-                    string Namear= row.Field<string>("Namear");
+                    string Namear = row.Field<string>("Namear");
                     string Nameen = row.Field<string>("Nameen");
 
                     GroupnarContent Temp = new GroupnarContent { ID = Id, NameAR = Namear, NameEN = Nameen };
@@ -471,7 +464,7 @@ namespace HelloWorldSolutionIMS
                 no.DataPropertyName = dt.Columns["ID"].ToString();
                 namear.DataPropertyName = dt.Columns["Namear"].ToString();
                 nameen.DataPropertyName = dt.Columns["Nameen"].ToString();
-               
+
 
                 dgv.DataSource = dt;
                 MainClass.con.Close();
@@ -668,7 +661,7 @@ namespace HelloWorldSolutionIMS
 
             }
         }
-        private void SearchMealsWithFilter(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealarfunc, DataGridViewColumn mealenfunc, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium,string category)
+        private void SearchMealsWithFilter(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealarfunc, DataGridViewColumn mealenfunc, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium, string category)
         {
             try
             {
@@ -769,14 +762,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -854,14 +851,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -1047,7 +1048,7 @@ namespace HelloWorldSolutionIMS
             chart1.Series.Clear();
             MainClass.HideAllTabsOnTabControl(tabControl1);
             save.Visible = false;
-            
+
             ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView1.GridColor = Color.Black;
@@ -1152,7 +1153,7 @@ namespace HelloWorldSolutionIMS
                 cmdfour.Parameters.AddWithValue("@id", id_ar);
                 SqlDataReader reader3 = cmdfour.ExecuteReader();
                 ingredientsList.Clear();
-              
+
                 while (reader3.Read())
                 {
                     int id = Convert.ToInt32(reader3["ID"]);
@@ -1169,7 +1170,7 @@ namespace HelloWorldSolutionIMS
                 while (reader2.Read())
                 {
                     int id = Convert.ToInt32(reader2["ID"]);
-                    if(id == id_ar)
+                    if (id == id_ar)
                     {
                         continue;
                     }
@@ -1235,7 +1236,7 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
             return ingredientsList;
-         }
+        }
         private void AddIngredient_Click(object sender, EventArgs e)
         {
             save.Visible = true;
@@ -1260,7 +1261,7 @@ namespace HelloWorldSolutionIMS
                 {
                     if (args.RowIndex >= 0 && args.ColumnIndex == guna2DataGridView1.Columns["RemoveColumn"].Index)
                     {
-                        if(guna2DataGridView1.Rows[args.RowIndex].Cells[4].Value == "" || guna2DataGridView1.Rows[args.RowIndex].Cells[4].Value == null)
+                        if (guna2DataGridView1.Rows[args.RowIndex].Cells[4].Value == "" || guna2DataGridView1.Rows[args.RowIndex].Cells[4].Value == null)
                         {
                             guna2DataGridView1.Rows.RemoveAt(args.RowIndex);
 
@@ -1346,7 +1347,7 @@ namespace HelloWorldSolutionIMS
                                 save.Visible = true;
                             }
                         }
-                        
+
                     }
                 };
             }
@@ -1402,10 +1403,10 @@ namespace HelloWorldSolutionIMS
                     if (reader.Read())
                     {
                         // Calculate the values for other cells in the row based on the fetched data and the new quantity.
-                        double calories = (Convert.ToDouble(reader["CALORIES"]) * newQuantity)/ 100;
-                        double fats = (Convert.ToDouble(reader["FATS"]) * newQuantity)/100;
-                        double carbohydrates = (Convert.ToDouble(reader["CARBOHYDRATES"]) * newQuantity)/ 100;
-                        double fibers = (Convert.ToDouble(reader["FIBERS"]) * newQuantity)/ 100;
+                        double calories = (Convert.ToDouble(reader["CALORIES"]) * newQuantity) / 100;
+                        double fats = (Convert.ToDouble(reader["FATS"]) * newQuantity) / 100;
+                        double carbohydrates = (Convert.ToDouble(reader["CARBOHYDRATES"]) * newQuantity) / 100;
+                        double fibers = (Convert.ToDouble(reader["FIBERS"]) * newQuantity) / 100;
                         double Protein = (Convert.ToDouble(reader["PROTEIN"]) * newQuantity) / 100;
                         double calcium = (Convert.ToDouble(reader["CALCIUM"]) * newQuantity) / 100;
                         double sodium = (Convert.ToDouble(reader["SODIUM"]) * newQuantity) / 100;
@@ -1493,7 +1494,7 @@ namespace HelloWorldSolutionIMS
                     calcium.Text = totalCalcium.ToString();
                     fibers.Text = totalFibers.ToString();
                     sodium.Text = totalSodium.ToString();
-                    potassium.Text = totalPotassium.ToString(); 
+                    potassium.Text = totalPotassium.ToString();
                     phosphor.Text = totalPhosphor.ToString();
                     water.Text = totalWater.ToString();
                     magnesium.Text = totalMagnesium.ToString();
@@ -1516,20 +1517,20 @@ namespace HelloWorldSolutionIMS
 
             // Create a SQL command to retrieve the last meal
             using (SqlCommand command = new SqlCommand("SELECT TOP 1 * FROM Meal ORDER BY ID DESC", MainClass.con))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    if (reader.Read())
                     {
-                        if (reader.Read())
-                        {
-                            // Create a Meal object and populate it with data from the database
+                        // Create a Meal object and populate it with data from the database
 
-                            ID = reader.GetInt32(reader.GetOrdinal("ID"));
-                                // Retrieve other columns as needed
-                            
-                        }
+                        ID = reader.GetInt32(reader.GetOrdinal("ID"));
+                        // Retrieve other columns as needed
+
                     }
                 }
-           
+            }
+
 
             return ID;
         }
@@ -1769,7 +1770,7 @@ namespace HelloWorldSolutionIMS
 
 
                     }
-                     
+
                     catch (Exception ex)
                     {
                         MainClass.con.Close();
@@ -2022,7 +2023,7 @@ namespace HelloWorldSolutionIMS
                     //ShowIngredients(guna2DataGridView1, unitdgv, ingredientardgv, ingredientendgv,quantitydgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, potassiumdgv, phosphordgv,waterdgv,magnesiumdgv,sugerdgv,irondgv,iodinedgv,adgv,bdgv);
                     MainClass.con.Close();
                     extrafunc();
-                    
+
                     tabControl1.SelectedIndex = 2;
                 }
                 else
@@ -2055,7 +2056,7 @@ namespace HelloWorldSolutionIMS
             // Check if a single click should be treated as a double click
             if (simulateDoubleClick)
             {
-                
+
                 simulateDoubleClick = false;
             }
             else
@@ -2183,7 +2184,7 @@ namespace HelloWorldSolutionIMS
                         notes.Text = reader["Notes"].ToString();
                         preparation.Text = reader["Preparation"].ToString();
                         classification.Text = reader["CLASSIFICATION"].ToString();
-                       Catgry = reader["Category"].ToString();
+                        Catgry = reader["Category"].ToString();
                     }
                     reader.Close(); // Close the first DataReader
 
@@ -2664,7 +2665,7 @@ namespace HelloWorldSolutionIMS
                 {
                     if (guna2DataGridView3.SelectedRows.Count == 1)
                     {
-                       
+
                         // Get the Ingredient ID to display in the confirmation message
                         string groupid = guna2DataGridView3.SelectedRows[0].Cells[0].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
 
@@ -2775,7 +2776,7 @@ namespace HelloWorldSolutionIMS
                                 //tabControl1.SelectedIndex = 2;
                                 ShowGroupC(guna2DataGridView4, gcid, gcnar, gcnen);
                                 UpdateGroupsC();
-                                
+
                             }
                             catch (Exception ex)
                             {
@@ -2799,7 +2800,7 @@ namespace HelloWorldSolutionIMS
 
         public void ImportExcelToDatabase(string excelFilePath)
         {
-            
+
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             try
             {
@@ -2830,7 +2831,7 @@ namespace HelloWorldSolutionIMS
                         string groupNAr = worksheet.Cells[row, 3].Value?.ToString();
                         string groupNEn = worksheet.Cells[row, 4].Value?.ToString();
 
-                        if(groupNAr != null && groupNEn != null)
+                        if (groupNAr != null && groupNEn != null)
                         {
                             try
                             {
@@ -2878,7 +2879,7 @@ namespace HelloWorldSolutionIMS
                                         }
 
                                         UpdateGroupsN();
-                                        
+
                                     }
                                     catch (Exception ex)
                                     {
@@ -2904,9 +2905,9 @@ namespace HelloWorldSolutionIMS
                             }
 
 
-                            
+
                         }
-                        else if(groupNAr != null && groupNEn == null)
+                        else if (groupNAr != null && groupNEn == null)
                         {
                             try
                             {
@@ -2919,7 +2920,7 @@ namespace HelloWorldSolutionIMS
                                     "WHERE Namear = @Namear", MainClass.con);
 
                                 cmd.Parameters.AddWithValue("@Namear", groupNAr);
- 
+
 
                                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -3317,7 +3318,7 @@ namespace HelloWorldSolutionIMS
                         }
 
                         string source;
-                        if(worksheet.Cells[row, 25].Value == null)
+                        if (worksheet.Cells[row, 25].Value == null)
                         {
                             source = "All";
                         }
@@ -3325,7 +3326,7 @@ namespace HelloWorldSolutionIMS
                         {
                             source = worksheet.Cells[row, 25].Value.ToString();
                         }
-                       
+
                         string query = "INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, " +
                                 "CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, " +
                                 "PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Category, Notes, Preparation) " +
@@ -3333,38 +3334,38 @@ namespace HelloWorldSolutionIMS
                                 "@Classification, @Calories, @Fats, @Fibers, @Potassium, @Water, @Sugar, @Calcium, @A, " +
                                 "@Protein, @Carbohydrates, @Sodium, @Phosphor, @Magnesium, @Iron, @Iodine, @B, @Category, @Notes, @Preparation)";
 
-                            using (SqlCommand command = new SqlCommand(query, MainClass.con))
-                            {
-                                command.Parameters.AddWithValue("@MealAr", mealAr);
-                                command.Parameters.AddWithValue("@MealEn", mealEn);
-                                command.Parameters.AddWithValue("@GroupNAr", groupNAr);
-                                command.Parameters.AddWithValue("@GroupNEn", groupNEn);
-                                command.Parameters.AddWithValue("@GroupCAr", groupCAr);
-                                command.Parameters.AddWithValue("@GroupCEn", groupCEn);
-                                command.Parameters.AddWithValue("@Classification", "Per 100 gram");
-                                command.Parameters.AddWithValue("@Calories", calories);
-                                command.Parameters.AddWithValue("@Fats", fats);
-                                command.Parameters.AddWithValue("@Fibers", fibers);
-                                command.Parameters.AddWithValue("@Potassium", potassium);
-                                command.Parameters.AddWithValue("@Water", water);
-                                command.Parameters.AddWithValue("@Sugar", sugar);
-                                command.Parameters.AddWithValue("@Calcium", calcium);
-                                command.Parameters.AddWithValue("@A", a);
-                                command.Parameters.AddWithValue("@Protein", protein);
-                                command.Parameters.AddWithValue("@Carbohydrates", carbohydrates);
-                                command.Parameters.AddWithValue("@Sodium", sodium);
-                                command.Parameters.AddWithValue("@Phosphor", phosphor);
-                                command.Parameters.AddWithValue("@Magnesium", magnesium);
-                                command.Parameters.AddWithValue("@Iron", iron);
-                                command.Parameters.AddWithValue("@Iodine", iodine);
-                                command.Parameters.AddWithValue("@B", b);
-                                command.Parameters.AddWithValue("@Category", source);
-                                command.Parameters.AddWithValue("@Notes", notes);
-                                command.Parameters.AddWithValue("@Preparation", preparation);
+                        using (SqlCommand command = new SqlCommand(query, MainClass.con))
+                        {
+                            command.Parameters.AddWithValue("@MealAr", mealAr);
+                            command.Parameters.AddWithValue("@MealEn", mealEn);
+                            command.Parameters.AddWithValue("@GroupNAr", groupNAr);
+                            command.Parameters.AddWithValue("@GroupNEn", groupNEn);
+                            command.Parameters.AddWithValue("@GroupCAr", groupCAr);
+                            command.Parameters.AddWithValue("@GroupCEn", groupCEn);
+                            command.Parameters.AddWithValue("@Classification", "Per 100 gram");
+                            command.Parameters.AddWithValue("@Calories", calories);
+                            command.Parameters.AddWithValue("@Fats", fats);
+                            command.Parameters.AddWithValue("@Fibers", fibers);
+                            command.Parameters.AddWithValue("@Potassium", potassium);
+                            command.Parameters.AddWithValue("@Water", water);
+                            command.Parameters.AddWithValue("@Sugar", sugar);
+                            command.Parameters.AddWithValue("@Calcium", calcium);
+                            command.Parameters.AddWithValue("@A", a);
+                            command.Parameters.AddWithValue("@Protein", protein);
+                            command.Parameters.AddWithValue("@Carbohydrates", carbohydrates);
+                            command.Parameters.AddWithValue("@Sodium", sodium);
+                            command.Parameters.AddWithValue("@Phosphor", phosphor);
+                            command.Parameters.AddWithValue("@Magnesium", magnesium);
+                            command.Parameters.AddWithValue("@Iron", iron);
+                            command.Parameters.AddWithValue("@Iodine", iodine);
+                            command.Parameters.AddWithValue("@B", b);
+                            command.Parameters.AddWithValue("@Category", source);
+                            command.Parameters.AddWithValue("@Notes", notes);
+                            command.Parameters.AddWithValue("@Preparation", preparation);
 
-                                command.ExecuteNonQuery();
-                            }
-                        
+                            command.ExecuteNonQuery();
+                        }
+
                     }
 
                     if (MainClass.con.State == ConnectionState.Open)
@@ -3390,44 +3391,44 @@ namespace HelloWorldSolutionIMS
         private void All_Click(object sender, EventArgs e)
         {
 
-                ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
+            ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
 
         }
 
         private void Breakfast_Click(object sender, EventArgs e)
         {
-    
-                SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Breakfast");
- 
+
+            SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Breakfast");
+
         }
 
         private void lunch_Click(object sender, EventArgs e)
         {
-            
-                SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Lunch");
- 
+
+            SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Lunch");
+
         }
 
         private void dinner_Click(object sender, EventArgs e)
         {
-            
-                SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Dinner");
+
+            SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Dinner");
 
         }
 
         private void snack_Click(object sender, EventArgs e)
         {
-            
-                SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Snack");
-  
+
+            SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Snack");
+
         }
 
         private void ff_Click(object sender, EventArgs e)
         {
 
-            
-                SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Functional Food");
-           
+
+            SearchMealsWithFilter(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, "Functional Food");
+
         }
 
         private void ImportMeal_Click(object sender, EventArgs e)

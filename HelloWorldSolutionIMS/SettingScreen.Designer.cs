@@ -30,18 +30,18 @@ namespace HelloWorldSolutionIMS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle109 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle110 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle111 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle112 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle113 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle114 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle115 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle116 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDatabaseSettings = new System.Windows.Forms.Button();
             this.btnUserSettings = new System.Windows.Forms.Button();
@@ -166,6 +166,16 @@ namespace HelloWorldSolutionIMS
             this.downloadingredient = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.guna2TrackBar3 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar2 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.label16 = new System.Windows.Forms.Label();
             this.SaveSettings = new Guna.UI2.WinForms.Guna2Button();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -178,22 +188,30 @@ namespace HelloWorldSolutionIMS
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Attach = new Guna.UI2.WinForms.Guna2Button();
             this.ColorClose = new Guna.UI2.WinForms.Guna2Button();
-            this.textselectpanel = new System.Windows.Forms.Panel();
-            this.ApplyText = new Guna.UI2.WinForms.Guna2Button();
-            this.textshowpanel = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.selectedbuttonpanel = new System.Windows.Forms.Panel();
-            this.gapplybutton = new Guna.UI2.WinForms.Guna2Button();
-            this.showbuttonpanel = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.selectedpanel = new System.Windows.Forms.Panel();
-            this.Apply = new Guna.UI2.WinForms.Guna2Button();
-            this.showpanel = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.guna2TrackBar4 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar5 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar6 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.guna2TrackBar7 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar8 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar9 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagridview1)).BeginInit();
@@ -222,9 +240,6 @@ namespace HelloWorldSolutionIMS
             this.tabPage8.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -297,22 +312,22 @@ namespace HelloWorldSolutionIMS
             // 
             this.Datagridview1.AllowUserToAddRows = false;
             this.Datagridview1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            this.Datagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle109.BackColor = System.Drawing.Color.White;
+            this.Datagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle109;
             this.Datagridview1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Datagridview1.BackgroundColor = System.Drawing.Color.White;
             this.Datagridview1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Datagridview1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Datagridview1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Datagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle110.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle110.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle110.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle110.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle110.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle110.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Datagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle110;
             this.Datagridview1.ColumnHeadersHeight = 30;
             this.Datagridview1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameGV,
@@ -320,14 +335,14 @@ namespace HelloWorldSolutionIMS
             this.PasswordGV,
             this.RoleGV});
             this.Datagridview1.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Datagridview1.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle111.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle111.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle111.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle111.ForeColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle111.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle111.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle111.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Datagridview1.DefaultCellStyle = dataGridViewCellStyle111;
             this.Datagridview1.EnableHeadersVisualStyles = false;
             this.Datagridview1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Datagridview1.Location = new System.Drawing.Point(28, 400);
@@ -336,8 +351,8 @@ namespace HelloWorldSolutionIMS
             this.Datagridview1.ReadOnly = true;
             this.Datagridview1.RowHeadersVisible = false;
             this.Datagridview1.RowHeadersWidth = 51;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Datagridview1.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Datagridview1.RowsDefaultCellStyle = dataGridViewCellStyle112;
             this.Datagridview1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Datagridview1.Size = new System.Drawing.Size(1013, 220);
             this.Datagridview1.TabIndex = 7;
@@ -1567,33 +1582,33 @@ namespace HelloWorldSolutionIMS
             // 
             this.guna2DataGridView4.AllowUserToAddRows = false;
             this.guna2DataGridView4.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle101.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle101;
             this.guna2DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView4.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView4.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle102.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle102.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle102.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle102.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle102.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle102.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle102;
             this.guna2DataGridView4.ColumnHeadersHeight = 27;
             this.guna2DataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddgv,
             this.namedgv});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView4.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle103.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle103.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle103.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle103.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle103.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle103.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView4.DefaultCellStyle = dataGridViewCellStyle103;
             this.guna2DataGridView4.EnableHeadersVisualStyles = false;
             this.guna2DataGridView4.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView4.Location = new System.Drawing.Point(45, 120);
@@ -1601,11 +1616,11 @@ namespace HelloWorldSolutionIMS
             this.guna2DataGridView4.ReadOnly = true;
             this.guna2DataGridView4.RowHeadersVisible = false;
             this.guna2DataGridView4.RowHeadersWidth = 51;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle104.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle104.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle104.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle104.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle104;
             this.guna2DataGridView4.RowTemplate.Height = 24;
             this.guna2DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView4.Size = new System.Drawing.Size(968, 400);
@@ -1884,33 +1899,33 @@ namespace HelloWorldSolutionIMS
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle113.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle113;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle114.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle114.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle114.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle114.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle114.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle114.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle114.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle114;
             this.guna2DataGridView1.ColumnHeadersHeight = 27;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.useriddgv,
             this.usernamedgv});
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle115.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle115.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle115.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle115.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle115.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle115.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle115.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle115;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.Location = new System.Drawing.Point(49, 131);
@@ -1918,11 +1933,11 @@ namespace HelloWorldSolutionIMS
             this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle116.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle116.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle116.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle116.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle116;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView1.Size = new System.Drawing.Size(968, 400);
@@ -2219,6 +2234,35 @@ namespace HelloWorldSolutionIMS
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Controls.Add(this.guna2TextBox7);
+            this.panel11.Controls.Add(this.guna2TextBox4);
+            this.panel11.Controls.Add(this.guna2TextBox8);
+            this.panel11.Controls.Add(this.guna2TextBox5);
+            this.panel11.Controls.Add(this.guna2TextBox9);
+            this.panel11.Controls.Add(this.guna2TextBox6);
+            this.panel11.Controls.Add(this.label44);
+            this.panel11.Controls.Add(this.label41);
+            this.panel11.Controls.Add(this.label45);
+            this.panel11.Controls.Add(this.label42);
+            this.panel11.Controls.Add(this.label46);
+            this.panel11.Controls.Add(this.label43);
+            this.panel11.Controls.Add(this.guna2TrackBar7);
+            this.panel11.Controls.Add(this.guna2TrackBar4);
+            this.panel11.Controls.Add(this.guna2TrackBar8);
+            this.panel11.Controls.Add(this.guna2TrackBar5);
+            this.panel11.Controls.Add(this.guna2TrackBar9);
+            this.panel11.Controls.Add(this.guna2TrackBar6);
+            this.panel11.Controls.Add(this.panel13);
+            this.panel11.Controls.Add(this.panel12);
+            this.panel11.Controls.Add(this.guna2TextBox3);
+            this.panel11.Controls.Add(this.guna2TextBox2);
+            this.panel11.Controls.Add(this.guna2TextBox1);
+            this.panel11.Controls.Add(this.label40);
+            this.panel11.Controls.Add(this.label38);
+            this.panel11.Controls.Add(this.label36);
+            this.panel11.Controls.Add(this.guna2TrackBar3);
+            this.panel11.Controls.Add(this.guna2TrackBar2);
+            this.panel11.Controls.Add(this.guna2TrackBar1);
             this.panel11.Controls.Add(this.label16);
             this.panel11.Controls.Add(this.SaveSettings);
             this.panel11.Controls.Add(this.label34);
@@ -2232,26 +2276,169 @@ namespace HelloWorldSolutionIMS
             this.panel11.Controls.Add(this.pictureBox1);
             this.panel11.Controls.Add(this.Attach);
             this.panel11.Controls.Add(this.ColorClose);
-            this.panel11.Controls.Add(this.textselectpanel);
-            this.panel11.Controls.Add(this.ApplyText);
-            this.panel11.Controls.Add(this.textshowpanel);
             this.panel11.Controls.Add(this.label30);
-            this.panel11.Controls.Add(this.pictureBox4);
-            this.panel11.Controls.Add(this.selectedbuttonpanel);
-            this.panel11.Controls.Add(this.gapplybutton);
-            this.panel11.Controls.Add(this.showbuttonpanel);
             this.panel11.Controls.Add(this.label29);
-            this.panel11.Controls.Add(this.pictureBox3);
             this.panel11.Controls.Add(this.selectedpanel);
-            this.panel11.Controls.Add(this.Apply);
-            this.panel11.Controls.Add(this.showpanel);
             this.panel11.Controls.Add(this.label28);
-            this.panel11.Controls.Add(this.pictureBox2);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(3, 3);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1065, 760);
             this.panel11.TabIndex = 0;
+            // 
+            // guna2TextBox3
+            // 
+            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox3.DefaultText = "";
+            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 6F);
+            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.Location = new System.Drawing.Point(272, 229);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox3.Name = "guna2TextBox3";
+            this.guna2TextBox3.PasswordChar = '\0';
+            this.guna2TextBox3.PlaceholderText = "";
+            this.guna2TextBox3.SelectedText = "";
+            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.Size = new System.Drawing.Size(41, 19);
+            this.guna2TextBox3.TabIndex = 312;
+            this.guna2TextBox3.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
+            this.guna2TextBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intlock);
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 6F);
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Location = new System.Drawing.Point(272, 192);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Size = new System.Drawing.Size(41, 19);
+            this.guna2TextBox2.TabIndex = 311;
+            this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
+            this.guna2TextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intlock);
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 6F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(272, 156);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(41, 19);
+            this.guna2TextBox1.TabIndex = 310;
+            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.guna2TextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intlock);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(3, 233);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(16, 16);
+            this.label40.TabIndex = 309;
+            this.label40.Text = "B";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(3, 197);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(17, 16);
+            this.label38.TabIndex = 308;
+            this.label38.Text = "G";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(3, 157);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(17, 16);
+            this.label36.TabIndex = 307;
+            this.label36.Text = "R";
+            // 
+            // guna2TrackBar3
+            // 
+            this.guna2TrackBar3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar3.HoverState.Parent = this.guna2TrackBar3;
+            this.guna2TrackBar3.Location = new System.Drawing.Point(41, 229);
+            this.guna2TrackBar3.Maximum = 255;
+            this.guna2TrackBar3.Name = "guna2TrackBar3";
+            this.guna2TrackBar3.Size = new System.Drawing.Size(208, 23);
+            this.guna2TrackBar3.TabIndex = 306;
+            this.guna2TrackBar3.ThumbColor = System.Drawing.Color.Blue;
+            this.guna2TrackBar3.Value = 0;
+            this.guna2TrackBar3.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar3_Scroll);
+            // 
+            // guna2TrackBar2
+            // 
+            this.guna2TrackBar2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar2.HoverState.Parent = this.guna2TrackBar2;
+            this.guna2TrackBar2.Location = new System.Drawing.Point(41, 190);
+            this.guna2TrackBar2.Maximum = 255;
+            this.guna2TrackBar2.Name = "guna2TrackBar2";
+            this.guna2TrackBar2.Size = new System.Drawing.Size(208, 23);
+            this.guna2TrackBar2.TabIndex = 305;
+            this.guna2TrackBar2.ThumbColor = System.Drawing.Color.Lime;
+            this.guna2TrackBar2.Value = 0;
+            this.guna2TrackBar2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar2_Scroll);
+            // 
+            // guna2TrackBar1
+            // 
+            this.guna2TrackBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar1.HoverState.Parent = this.guna2TrackBar1;
+            this.guna2TrackBar1.Location = new System.Drawing.Point(41, 152);
+            this.guna2TrackBar1.Maximum = 255;
+            this.guna2TrackBar1.Name = "guna2TrackBar1";
+            this.guna2TrackBar1.Size = new System.Drawing.Size(208, 23);
+            this.guna2TrackBar1.TabIndex = 304;
+            this.guna2TrackBar1.ThumbColor = System.Drawing.Color.Red;
+            this.guna2TrackBar1.Value = 0;
+            this.guna2TrackBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar1_Scroll);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label16.Location = new System.Drawing.Point(27, 380);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(139, 24);
+            this.label16.TabIndex = 303;
+            this.label16.Text = "Company Logo";
             // 
             // SaveSettings
             // 
@@ -2461,39 +2648,6 @@ namespace HelloWorldSolutionIMS
             this.ColorClose.Text = "Close";
             this.ColorClose.Click += new System.EventHandler(this.ColorClose_Click);
             // 
-            // textselectpanel
-            // 
-            this.textselectpanel.Location = new System.Drawing.Point(909, 258);
-            this.textselectpanel.Name = "textselectpanel";
-            this.textselectpanel.Size = new System.Drawing.Size(101, 66);
-            this.textselectpanel.TabIndex = 144;
-            // 
-            // ApplyText
-            // 
-            this.ApplyText.AutoRoundedCorners = true;
-            this.ApplyText.BorderRadius = 21;
-            this.ApplyText.CausesValidation = false;
-            this.ApplyText.CheckedState.Parent = this.ApplyText;
-            this.ApplyText.CustomImages.Parent = this.ApplyText;
-            this.ApplyText.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.ApplyText.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.ApplyText.ForeColor = System.Drawing.Color.White;
-            this.ApplyText.HoverState.Parent = this.ApplyText;
-            this.ApplyText.Location = new System.Drawing.Point(743, 279);
-            this.ApplyText.Name = "ApplyText";
-            this.ApplyText.ShadowDecoration.Parent = this.ApplyText;
-            this.ApplyText.Size = new System.Drawing.Size(160, 45);
-            this.ApplyText.TabIndex = 145;
-            this.ApplyText.Text = "Apply";
-            this.ApplyText.Click += new System.EventHandler(this.ApplyText_Click);
-            // 
-            // textshowpanel
-            // 
-            this.textshowpanel.Location = new System.Drawing.Point(1016, 77);
-            this.textshowpanel.Name = "textshowpanel";
-            this.textshowpanel.Size = new System.Drawing.Size(37, 39);
-            this.textshowpanel.TabIndex = 143;
-            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -2503,52 +2657,6 @@ namespace HelloWorldSolutionIMS
             this.label30.Size = new System.Drawing.Size(227, 24);
             this.label30.TabIndex = 142;
             this.label30.Text = "Change Button Text Color";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::HelloWorldSolutionIMS.Properties.Resources.rgbSpectrum;
-            this.pictureBox4.Location = new System.Drawing.Point(743, 69);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(267, 183);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 141;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseDown);
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
-            this.pictureBox4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseMove);
-            // 
-            // selectedbuttonpanel
-            // 
-            this.selectedbuttonpanel.Location = new System.Drawing.Point(559, 258);
-            this.selectedbuttonpanel.Name = "selectedbuttonpanel";
-            this.selectedbuttonpanel.Size = new System.Drawing.Size(101, 66);
-            this.selectedbuttonpanel.TabIndex = 139;
-            // 
-            // gapplybutton
-            // 
-            this.gapplybutton.AutoRoundedCorners = true;
-            this.gapplybutton.BorderRadius = 21;
-            this.gapplybutton.CausesValidation = false;
-            this.gapplybutton.CheckedState.Parent = this.gapplybutton;
-            this.gapplybutton.CustomImages.Parent = this.gapplybutton;
-            this.gapplybutton.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.gapplybutton.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.gapplybutton.ForeColor = System.Drawing.Color.White;
-            this.gapplybutton.HoverState.Parent = this.gapplybutton;
-            this.gapplybutton.Location = new System.Drawing.Point(393, 279);
-            this.gapplybutton.Name = "gapplybutton";
-            this.gapplybutton.ShadowDecoration.Parent = this.gapplybutton;
-            this.gapplybutton.Size = new System.Drawing.Size(160, 45);
-            this.gapplybutton.TabIndex = 140;
-            this.gapplybutton.Text = "Apply";
-            this.gapplybutton.Click += new System.EventHandler(this.gapplybutton_Click);
-            // 
-            // showbuttonpanel
-            // 
-            this.showbuttonpanel.Location = new System.Drawing.Point(666, 77);
-            this.showbuttonpanel.Name = "showbuttonpanel";
-            this.showbuttonpanel.Size = new System.Drawing.Size(37, 39);
-            this.showbuttonpanel.TabIndex = 138;
             // 
             // label29
             // 
@@ -2560,51 +2668,12 @@ namespace HelloWorldSolutionIMS
             this.label29.TabIndex = 137;
             this.label29.Text = "Change Button Color";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::HelloWorldSolutionIMS.Properties.Resources.rgbSpectrum;
-            this.pictureBox3.Location = new System.Drawing.Point(393, 69);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(267, 183);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 136;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseMove);
-            // 
             // selectedpanel
             // 
-            this.selectedpanel.Location = new System.Drawing.Point(187, 258);
+            this.selectedpanel.Location = new System.Drawing.Point(21, 55);
             this.selectedpanel.Name = "selectedpanel";
-            this.selectedpanel.Size = new System.Drawing.Size(101, 66);
+            this.selectedpanel.Size = new System.Drawing.Size(298, 94);
             this.selectedpanel.TabIndex = 134;
-            // 
-            // Apply
-            // 
-            this.Apply.AutoRoundedCorners = true;
-            this.Apply.BorderRadius = 21;
-            this.Apply.CausesValidation = false;
-            this.Apply.CheckedState.Parent = this.Apply;
-            this.Apply.CustomImages.Parent = this.Apply;
-            this.Apply.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.Apply.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.Apply.ForeColor = System.Drawing.Color.White;
-            this.Apply.HoverState.Parent = this.Apply;
-            this.Apply.Location = new System.Drawing.Point(21, 279);
-            this.Apply.Name = "Apply";
-            this.Apply.ShadowDecoration.Parent = this.Apply;
-            this.Apply.Size = new System.Drawing.Size(160, 45);
-            this.Apply.TabIndex = 135;
-            this.Apply.Text = "Apply";
-            this.Apply.Click += new System.EventHandler(this.Apply_Click);
-            // 
-            // showpanel
-            // 
-            this.showpanel.Location = new System.Drawing.Point(294, 77);
-            this.showpanel.Name = "showpanel";
-            this.showpanel.Size = new System.Drawing.Size(37, 39);
-            this.showpanel.TabIndex = 133;
             // 
             // label28
             // 
@@ -2616,28 +2685,301 @@ namespace HelloWorldSolutionIMS
             this.label28.TabIndex = 132;
             this.label28.Text = "Change Sidebar Color";
             // 
-            // pictureBox2
+            // guna2TextBox4
             // 
-            this.pictureBox2.Image = global::HelloWorldSolutionIMS.Properties.Resources.rgbSpectrum;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 69);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(267, 183);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 131;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
+            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox4.DefaultText = "";
+            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 6F);
+            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.Location = new System.Drawing.Point(644, 229);
+            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox4.Name = "guna2TextBox4";
+            this.guna2TextBox4.PasswordChar = '\0';
+            this.guna2TextBox4.PlaceholderText = "";
+            this.guna2TextBox4.SelectedText = "";
+            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.Size = new System.Drawing.Size(41, 19);
+            this.guna2TextBox4.TabIndex = 322;
+            this.guna2TextBox4.TextChanged += new System.EventHandler(this.guna2TextBox4_TextChanged);
             // 
-            // label16
+            // guna2TextBox5
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label16.Location = new System.Drawing.Point(27, 380);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(139, 24);
-            this.label16.TabIndex = 303;
-            this.label16.Text = "Company Logo";
+            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox5.DefaultText = "";
+            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox5.DisabledState.Parent = this.guna2TextBox5;
+            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox5.FocusedState.Parent = this.guna2TextBox5;
+            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 6F);
+            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox5.HoverState.Parent = this.guna2TextBox5;
+            this.guna2TextBox5.Location = new System.Drawing.Point(644, 192);
+            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox5.Name = "guna2TextBox5";
+            this.guna2TextBox5.PasswordChar = '\0';
+            this.guna2TextBox5.PlaceholderText = "";
+            this.guna2TextBox5.SelectedText = "";
+            this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
+            this.guna2TextBox5.Size = new System.Drawing.Size(41, 19);
+            this.guna2TextBox5.TabIndex = 321;
+            this.guna2TextBox5.TextChanged += new System.EventHandler(this.guna2TextBox5_TextChanged);
+            // 
+            // guna2TextBox6
+            // 
+            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox6.DefaultText = "";
+            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox6.DisabledState.Parent = this.guna2TextBox6;
+            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox6.FocusedState.Parent = this.guna2TextBox6;
+            this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 6F);
+            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox6.HoverState.Parent = this.guna2TextBox6;
+            this.guna2TextBox6.Location = new System.Drawing.Point(644, 156);
+            this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox6.Name = "guna2TextBox6";
+            this.guna2TextBox6.PasswordChar = '\0';
+            this.guna2TextBox6.PlaceholderText = "";
+            this.guna2TextBox6.SelectedText = "";
+            this.guna2TextBox6.ShadowDecoration.Parent = this.guna2TextBox6;
+            this.guna2TextBox6.Size = new System.Drawing.Size(41, 19);
+            this.guna2TextBox6.TabIndex = 320;
+            this.guna2TextBox6.TextChanged += new System.EventHandler(this.guna2TextBox6_TextChanged);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(375, 233);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(16, 16);
+            this.label41.TabIndex = 319;
+            this.label41.Text = "B";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(375, 197);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(17, 16);
+            this.label42.TabIndex = 318;
+            this.label42.Text = "G";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(375, 157);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(17, 16);
+            this.label43.TabIndex = 317;
+            this.label43.Text = "R";
+            // 
+            // guna2TrackBar4
+            // 
+            this.guna2TrackBar4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar4.HoverState.Parent = this.guna2TrackBar4;
+            this.guna2TrackBar4.Location = new System.Drawing.Point(413, 229);
+            this.guna2TrackBar4.Maximum = 255;
+            this.guna2TrackBar4.Name = "guna2TrackBar4";
+            this.guna2TrackBar4.Size = new System.Drawing.Size(208, 23);
+            this.guna2TrackBar4.TabIndex = 316;
+            this.guna2TrackBar4.ThumbColor = System.Drawing.Color.Blue;
+            this.guna2TrackBar4.Value = 0;
+            this.guna2TrackBar4.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar4_Scroll);
+            // 
+            // guna2TrackBar5
+            // 
+            this.guna2TrackBar5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar5.HoverState.Parent = this.guna2TrackBar5;
+            this.guna2TrackBar5.Location = new System.Drawing.Point(413, 190);
+            this.guna2TrackBar5.Maximum = 255;
+            this.guna2TrackBar5.Name = "guna2TrackBar5";
+            this.guna2TrackBar5.Size = new System.Drawing.Size(208, 23);
+            this.guna2TrackBar5.TabIndex = 315;
+            this.guna2TrackBar5.ThumbColor = System.Drawing.Color.Lime;
+            this.guna2TrackBar5.Value = 0;
+            this.guna2TrackBar5.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar5_Scroll);
+            // 
+            // guna2TrackBar6
+            // 
+            this.guna2TrackBar6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar6.HoverState.Parent = this.guna2TrackBar6;
+            this.guna2TrackBar6.Location = new System.Drawing.Point(413, 152);
+            this.guna2TrackBar6.Maximum = 255;
+            this.guna2TrackBar6.Name = "guna2TrackBar6";
+            this.guna2TrackBar6.Size = new System.Drawing.Size(208, 23);
+            this.guna2TrackBar6.TabIndex = 314;
+            this.guna2TrackBar6.ThumbColor = System.Drawing.Color.Red;
+            this.guna2TrackBar6.Value = 0;
+            this.guna2TrackBar6.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar6_Scroll);
+            // 
+            // panel12
+            // 
+            this.panel12.Location = new System.Drawing.Point(393, 55);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(298, 94);
+            this.panel12.TabIndex = 313;
+            // 
+            // guna2TextBox7
+            // 
+            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox7.DefaultText = "";
+            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox7.DisabledState.Parent = this.guna2TextBox7;
+            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox7.FocusedState.Parent = this.guna2TextBox7;
+            this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI", 6F);
+            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox7.HoverState.Parent = this.guna2TextBox7;
+            this.guna2TextBox7.Location = new System.Drawing.Point(994, 229);
+            this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox7.Name = "guna2TextBox7";
+            this.guna2TextBox7.PasswordChar = '\0';
+            this.guna2TextBox7.PlaceholderText = "";
+            this.guna2TextBox7.SelectedText = "";
+            this.guna2TextBox7.ShadowDecoration.Parent = this.guna2TextBox7;
+            this.guna2TextBox7.Size = new System.Drawing.Size(41, 19);
+            this.guna2TextBox7.TabIndex = 332;
+            this.guna2TextBox7.TextChanged += new System.EventHandler(this.guna2TextBox7_TextChanged);
+            // 
+            // guna2TextBox8
+            // 
+            this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox8.DefaultText = "";
+            this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox8.DisabledState.Parent = this.guna2TextBox8;
+            this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox8.FocusedState.Parent = this.guna2TextBox8;
+            this.guna2TextBox8.Font = new System.Drawing.Font("Segoe UI", 6F);
+            this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox8.HoverState.Parent = this.guna2TextBox8;
+            this.guna2TextBox8.Location = new System.Drawing.Point(994, 192);
+            this.guna2TextBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox8.Name = "guna2TextBox8";
+            this.guna2TextBox8.PasswordChar = '\0';
+            this.guna2TextBox8.PlaceholderText = "";
+            this.guna2TextBox8.SelectedText = "";
+            this.guna2TextBox8.ShadowDecoration.Parent = this.guna2TextBox8;
+            this.guna2TextBox8.Size = new System.Drawing.Size(41, 19);
+            this.guna2TextBox8.TabIndex = 331;
+            this.guna2TextBox8.TextChanged += new System.EventHandler(this.guna2TextBox8_TextChanged);
+            // 
+            // guna2TextBox9
+            // 
+            this.guna2TextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox9.DefaultText = "";
+            this.guna2TextBox9.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox9.DisabledState.Parent = this.guna2TextBox9;
+            this.guna2TextBox9.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox9.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox9.FocusedState.Parent = this.guna2TextBox9;
+            this.guna2TextBox9.Font = new System.Drawing.Font("Segoe UI", 6F);
+            this.guna2TextBox9.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox9.HoverState.Parent = this.guna2TextBox9;
+            this.guna2TextBox9.Location = new System.Drawing.Point(994, 156);
+            this.guna2TextBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox9.Name = "guna2TextBox9";
+            this.guna2TextBox9.PasswordChar = '\0';
+            this.guna2TextBox9.PlaceholderText = "";
+            this.guna2TextBox9.SelectedText = "";
+            this.guna2TextBox9.ShadowDecoration.Parent = this.guna2TextBox9;
+            this.guna2TextBox9.Size = new System.Drawing.Size(41, 19);
+            this.guna2TextBox9.TabIndex = 330;
+            this.guna2TextBox9.TextChanged += new System.EventHandler(this.guna2TextBox9_TextChanged);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(725, 233);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(16, 16);
+            this.label44.TabIndex = 329;
+            this.label44.Text = "B";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(725, 197);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(17, 16);
+            this.label45.TabIndex = 328;
+            this.label45.Text = "G";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(725, 157);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(17, 16);
+            this.label46.TabIndex = 327;
+            this.label46.Text = "R";
+            // 
+            // guna2TrackBar7
+            // 
+            this.guna2TrackBar7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar7.HoverState.Parent = this.guna2TrackBar7;
+            this.guna2TrackBar7.Location = new System.Drawing.Point(763, 229);
+            this.guna2TrackBar7.Maximum = 255;
+            this.guna2TrackBar7.Name = "guna2TrackBar7";
+            this.guna2TrackBar7.Size = new System.Drawing.Size(208, 23);
+            this.guna2TrackBar7.TabIndex = 326;
+            this.guna2TrackBar7.ThumbColor = System.Drawing.Color.Blue;
+            this.guna2TrackBar7.Value = 0;
+            this.guna2TrackBar7.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar7_Scroll);
+            // 
+            // guna2TrackBar8
+            // 
+            this.guna2TrackBar8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar8.HoverState.Parent = this.guna2TrackBar8;
+            this.guna2TrackBar8.Location = new System.Drawing.Point(763, 190);
+            this.guna2TrackBar8.Maximum = 255;
+            this.guna2TrackBar8.Name = "guna2TrackBar8";
+            this.guna2TrackBar8.Size = new System.Drawing.Size(208, 23);
+            this.guna2TrackBar8.TabIndex = 325;
+            this.guna2TrackBar8.ThumbColor = System.Drawing.Color.Lime;
+            this.guna2TrackBar8.Value = 0;
+            this.guna2TrackBar8.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar8_Scroll);
+            // 
+            // guna2TrackBar9
+            // 
+            this.guna2TrackBar9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar9.HoverState.Parent = this.guna2TrackBar9;
+            this.guna2TrackBar9.Location = new System.Drawing.Point(763, 152);
+            this.guna2TrackBar9.Maximum = 255;
+            this.guna2TrackBar9.Name = "guna2TrackBar9";
+            this.guna2TrackBar9.Size = new System.Drawing.Size(208, 23);
+            this.guna2TrackBar9.TabIndex = 324;
+            this.guna2TrackBar9.ThumbColor = System.Drawing.Color.Red;
+            this.guna2TrackBar9.Value = 0;
+            this.guna2TrackBar9.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar9_Scroll);
+            // 
+            // panel13
+            // 
+            this.panel13.Location = new System.Drawing.Point(743, 55);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(298, 94);
+            this.panel13.TabIndex = 323;
             // 
             // SettingScreen
             // 
@@ -2690,9 +3032,6 @@ namespace HelloWorldSolutionIMS
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2821,21 +3160,10 @@ namespace HelloWorldSolutionIMS
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel selectedpanel;
-        private Guna.UI2.WinForms.Guna2Button Apply;
-        private System.Windows.Forms.Panel showpanel;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel selectedbuttonpanel;
-        private Guna.UI2.WinForms.Guna2Button gapplybutton;
-        private System.Windows.Forms.Panel showbuttonpanel;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Button Colorsetting;
-        private System.Windows.Forms.Panel textselectpanel;
-        private Guna.UI2.WinForms.Guna2Button ApplyText;
-        private System.Windows.Forms.Panel textshowpanel;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2Button ColorClose;
         private Guna.UI2.WinForms.Guna2Button importsettings;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
@@ -2851,5 +3179,34 @@ namespace HelloWorldSolutionIMS
         private Guna.UI2.WinForms.Guna2ComboBox bold;
         private Guna.UI2.WinForms.Guna2Button SaveSettings;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label36;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar3;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar2;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label38;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox9;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label43;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar7;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar4;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar8;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar5;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar9;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar6;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
     }
 }

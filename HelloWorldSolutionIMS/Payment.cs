@@ -1,20 +1,11 @@
 ﻿using Guna.UI2.WinForms;
-using Svg;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static HelloWorldSolutionIMS.MealAction;
-using Win32Interop.Enums;
-using System.Drawing.Printing;
-using Fizzler;
-using System.Collections;
 
 namespace HelloWorldSolutionIMS
 {
@@ -73,9 +64,9 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
         }
-            static int edit = 0;
+        static int edit = 0;
         static string PaymentIDToEdit;
-       
+
         public class Deal
         {
             public int ID { get; set; }
@@ -157,7 +148,7 @@ namespace HelloWorldSolutionIMS
                 amountpro.DataPropertyName = dt.Columns["AMOUNTAFTERPROMOTION"].ToString();
                 promopercent.DataPropertyName = dt.Columns["PROMOTIONPERCENTAGE"].ToString();
                 date.DataPropertyName = dt.Columns["STARTDATE"].ToString();
-               
+
 
 
                 dgv.DataSource = dt;
@@ -236,7 +227,7 @@ namespace HelloWorldSolutionIMS
                     amountpro.DataPropertyName = dt.Columns["AMOUNTAFTERPROMOTION"].ToString();
                     promopercent.DataPropertyName = dt.Columns["PROMOTIONPERCENTAGE"].ToString();
                     date.DataPropertyName = dt.Columns["STARTDATE"].ToString();
-                 
+
 
 
 
@@ -288,7 +279,7 @@ namespace HelloWorldSolutionIMS
             }
             else
             {
-                ShowPayments(guna2DataGridView1,iddgv, filenodgv, paymentnamedgv, firstnamedgv, familynamedgv, amountdgv, amountaftrpromotiondgv, promotionpercentagedgv, datedgv);
+                ShowPayments(guna2DataGridView1, iddgv, filenodgv, paymentnamedgv, firstnamedgv, familynamedgv, amountdgv, amountaftrpromotiondgv, promotionpercentagedgv, datedgv);
                 MessageBox.Show("Fill File No or First Name");
             }
         }
@@ -447,14 +438,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -502,14 +497,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -734,20 +733,20 @@ namespace HelloWorldSolutionIMS
 
                 updatepromotions();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Payment WHERE ID = @paymentID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@paymentID", PaymentIDToEdit);
+                cmd.Parameters.AddWithValue("@paymentID", PaymentIDToEdit);
                 MainClass.con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-                
+
                 if (reader.HasRows)
-                         {
-                             while (reader.Read())
-                             {
-                                 fileno.Text = reader["FileNo"].ToString();
-                                 paymentname.Text = reader["PaymentName"].ToString();
-                                 amount.Text = reader["Amount"].ToString();
-                                 enddate.Text = reader["Startdate"].ToString();
-                                 startdate.Text = reader["Enddate"].ToString();                       
-                                 promotioncode.Text = reader["PromotionCode"].ToString();
+                {
+                    while (reader.Read())
+                    {
+                        fileno.Text = reader["FileNo"].ToString();
+                        paymentname.Text = reader["PaymentName"].ToString();
+                        amount.Text = reader["Amount"].ToString();
+                        enddate.Text = reader["Startdate"].ToString();
+                        startdate.Text = reader["Enddate"].ToString();
+                        promotioncode.Text = reader["PromotionCode"].ToString();
                         promotiondetails.Text = reader["PromotionDetails"].ToString();
                         amountafterpromotion.Text = reader["AmountAfterPromotion"].ToString();
                         promotionName = reader["PromotionName"].ToString();
@@ -759,12 +758,12 @@ namespace HelloWorldSolutionIMS
                         //promotiondetails.Text = reader["PromotionDetails"].ToString();
 
                         tabControl1.SelectedIndex = 1;
-                             }
+                    }
                 }
-                        else
-                        {
-                            MessageBox.Show("Payment data not found with ID: " + PaymentIDToEdit);
-                        }
+                else
+                {
+                    MessageBox.Show("Payment data not found with ID: " + PaymentIDToEdit);
+                }
                 reader.Close();
                 updatewithfile();
                 promotionname.SelectedValue = int.Parse(promotionName);
@@ -823,7 +822,7 @@ namespace HelloWorldSolutionIMS
         }
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void fileno_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -891,7 +890,7 @@ namespace HelloWorldSolutionIMS
         }
         private void fileno_TextChanged(object sender, EventArgs e)
         {
-            if(check == 1)
+            if (check == 1)
             {
                 if (fileno.Text != "")
                 {
@@ -946,7 +945,7 @@ namespace HelloWorldSolutionIMS
                 }
                 check = 0;
             }
-           
+
 
         }
         private void promotionname_SelectedIndexChanged(object sender, EventArgs e)
@@ -956,7 +955,7 @@ namespace HelloWorldSolutionIMS
                 Deal selectedDeal = (Deal)promotionname.SelectedItem;
                 int selectedID = selectedDeal.ID;
 
-                if(selectedID == 0)
+                if (selectedID == 0)
                 {
                     promotioncode.Text = "";
                     promotionpercentage.Text = "";
@@ -1000,7 +999,7 @@ namespace HelloWorldSolutionIMS
                         MessageBox.Show(ex.Message);
                     }
                 }
-                
+
             }
         }
         private void promotionpercentage_TextChanged(object sender, EventArgs e)
@@ -1093,11 +1092,11 @@ namespace HelloWorldSolutionIMS
                     filenos.Add(int.Parse(reader["FILENO"].ToString()));
                 }
             }
-            
+
             reader.Close();
             MainClass.con.Close();
-            
-           
+
+
             MainClass.con.Open();
 
             foreach (var item in filenos)
@@ -1108,7 +1107,7 @@ namespace HelloWorldSolutionIMS
 
                 if (reader2.HasRows)
                 {
-                    
+
                 }
                 else
                 {
@@ -1148,10 +1147,10 @@ namespace HelloWorldSolutionIMS
             MainClass.con.Close();
 
 
-            ShowDefaulter(guna2DataGridView2,iddefaultdgv,filenodefaultdgv,defaulterdgv,familynamedefaultdgv,Defaulters);
-            
+            ShowDefaulter(guna2DataGridView2, iddefaultdgv, filenodefaultdgv, defaulterdgv, familynamedefaultdgv, Defaulters);
+
         }
-        private void ShowDefaulter(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn name, DataGridViewColumn fname,List<int> defaultCustomers)
+        private void ShowDefaulter(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn name, DataGridViewColumn fname, List<int> defaultCustomers)
         {
             SqlCommand cmd;
             try
@@ -1217,7 +1216,7 @@ namespace HelloWorldSolutionIMS
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex= 0;
+            tabControl1.SelectedIndex = 0;
         }
     }
 }

@@ -1,24 +1,10 @@
 ﻿using Guna.UI2.WinForms;
-using Guna.UI2.WinForms.Suite;
-using Svg;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.IdentityModel.Claims;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Win32Interop.Enums;
-using static HelloWorldSolutionIMS.Appointment;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace HelloWorldSolutionIMS
 {
@@ -138,7 +124,7 @@ namespace HelloWorldSolutionIMS
 
                 if (dr.Read())
                 {
-                   
+
                     room1label.Text = dr["Room1"].ToString();
                     room2label.Text = dr["Room2"].ToString();
                     room3label.Text = dr["Room3"].ToString();
@@ -260,13 +246,13 @@ namespace HelloWorldSolutionIMS
             }
             else
             {
-                ShowAppointments(guna2DataGridView1, iddgv, filenodgv, firstnamedgv, familynamedgv,mobilenodgv, roomdgv, slotdgv, datedgv);
+                ShowAppointments(guna2DataGridView1, iddgv, filenodgv, firstnamedgv, familynamedgv, mobilenodgv, roomdgv, slotdgv, datedgv);
                 MessageBox.Show("Fill File No or First Name");
             }
         }
         private void InsertColumnsAndRowsToRoom1(Guna2DataGridView Room1)
         {
-           
+
             // Insert 4 columns without headers
             for (int i = 1; i <= 4; i++)
             {
@@ -288,13 +274,13 @@ namespace HelloWorldSolutionIMS
             {
                 for (int i = 0; i < 4; i++)
                 {
-                    
-                    if(startTime <= endTime)
+
+                    if (startTime <= endTime)
                     {
                         Room1.Rows[j].Cells[i].Value = startTime.ToString("HH:mm");
                         startTime = startTime.AddMinutes(15);
                     }
-                   
+
                 }
             }
 
@@ -406,7 +392,7 @@ namespace HelloWorldSolutionIMS
             Room4.ClearSelection();
             Room4.CurrentCell = null;
         }
-        private (int RowIndex, int ColumnIndex,int RoomNo, string time) GetSelectedCellIndexes(Guna2DataGridView Room)
+        private (int RowIndex, int ColumnIndex, int RoomNo, string time) GetSelectedCellIndexes(Guna2DataGridView Room)
         {
             int rowIndex = -1;
             int columnIndex = -1;
@@ -429,7 +415,7 @@ namespace HelloWorldSolutionIMS
             {
                 roomno = 1;
             }
-            else if(Room.Name == "Room2")
+            else if (Room.Name == "Room2")
             {
                 roomno = 2;
             }
@@ -441,7 +427,7 @@ namespace HelloWorldSolutionIMS
             {
                 roomno = 4;
             }
-            return (rowIndex, columnIndex,roomno,timeselected);
+            return (rowIndex, columnIndex, roomno, timeselected);
         }
         private void ChangeCellColor(Guna2DataGridView Room, int rowIndex, int columnIndex)
         {
@@ -455,14 +441,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -487,7 +477,7 @@ namespace HelloWorldSolutionIMS
 
 
                 }
-               
+
                 reader.Close();
                 MainClass.con.Close();
             }
@@ -501,14 +491,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -530,11 +524,11 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                   
+
 
 
                 }
-               
+
                 reader.Close();
                 MainClass.con.Close();
             }
@@ -597,7 +591,7 @@ namespace HelloWorldSolutionIMS
                             label.Font = font;
                         }
                     }
-                  
+
 
 
 
@@ -613,7 +607,7 @@ namespace HelloWorldSolutionIMS
 
             }
             MainClass.HideAllTabsOnTabControl(tabControl1);
-            if(coderunner==0)
+            if (coderunner == 0)
             {
                 InsertColumnsAndRowsToRoom1(Room1);
                 InsertColumnsAndRowsToRoom2(Room2);
@@ -631,7 +625,7 @@ namespace HelloWorldSolutionIMS
         private void Save_Click(object sender, EventArgs e)
         {
             int intersection = checkselection();
-            if(intersection == 0)
+            if (intersection == 0)
             {
                 int totalValidSelections = 0;
 
@@ -677,7 +671,7 @@ namespace HelloWorldSolutionIMS
 
                                         cmd.ExecuteNonQuery();
                                     }
-                                   
+
                                     MessageBox.Show("Appointment added successfully");
                                     MainClass.con.Close();
 
@@ -841,7 +835,7 @@ namespace HelloWorldSolutionIMS
                     }
                     else
                     {
-                       
+
                         if (firstname.Text != "" || familyname.Text != "" || mobileno.Text != "")
                         {
                             if (selectedCellIndexesRoom1.RowIndex != -1)
@@ -1114,7 +1108,7 @@ namespace HelloWorldSolutionIMS
         }
         private void fileno_TextChanged(object sender, EventArgs e)
         {
-            if(stopper == 0)
+            if (stopper == 0)
             {
                 if (fileno.Text != "")
                 {
@@ -1165,7 +1159,7 @@ namespace HelloWorldSolutionIMS
                     date.SetDate(DateTime.Today);
                 }
             }
-            
+
             stopper = 0;
         }
         private int checkselection()
@@ -1174,12 +1168,12 @@ namespace HelloWorldSolutionIMS
             var selectedCellIndexesRoom2 = GetSelectedCellIndexes(Room2);
             var selectedCellIndexesRoom3 = GetSelectedCellIndexes(Room3);
             var selectedCellIndexesRoom4 = GetSelectedCellIndexes(Room4);
-           
+
             int modifier = 0;
 
             if (selectedCellIndexesRoom1.RowIndex != -1)
             {
-               
+
                 SqlCommand cmdforRoom1;
 
                 try
@@ -1204,7 +1198,7 @@ namespace HelloWorldSolutionIMS
                         int row = int.Parse(reader["RowIndex"].ToString());
                         int column = int.Parse(reader["ColumnIndex"].ToString());
 
-                        if(selectedCellIndexesRoom1.RoomNo == roomNo && selectedCellIndexesRoom1.RowIndex == row && selectedCellIndexesRoom1.ColumnIndex == column) 
+                        if (selectedCellIndexesRoom1.RoomNo == roomNo && selectedCellIndexesRoom1.RowIndex == row && selectedCellIndexesRoom1.ColumnIndex == column)
                         {
                             modifier++;
                         }
@@ -1223,7 +1217,7 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     MessageBox.Show(ex.Message);
                 }
-            }            
+            }
             if (selectedCellIndexesRoom2.RowIndex != -1)
             {
                 SqlCommand cmdforRoom2;
@@ -1395,37 +1389,37 @@ namespace HelloWorldSolutionIMS
                 cmd.Parameters.AddWithValue("@SelectedDate", selectedDate);
 
                 SqlDataReader reader = cmd.ExecuteReader();
-                
-                    while (reader.Read())
-                    {
-                       
-                            int roomNo = int.Parse(reader["Room"].ToString());
-                            int row = int.Parse(reader["RowIndex"].ToString());
-                            int column = int.Parse(reader["ColumnIndex"].ToString());
 
-                            if (roomNo == 1)
-                            {
-                                ChangeCellColor(Room1, row, column);
-                                empty++;
-                            }
-                            else if (roomNo == 2)
-                            {
-                                ChangeCellColor(Room2, row, column);
-                                 empty++;
-                            }
-                            else if (roomNo == 3)
-                            {
-                                ChangeCellColor(Room3, row, column);
-                                empty++;
-                            }
-                            else if(roomNo == 4)
-                            {
-                                ChangeCellColor(Room4, row, column);
-                                empty++;
-                            }
-                        
+                while (reader.Read())
+                {
+
+                    int roomNo = int.Parse(reader["Room"].ToString());
+                    int row = int.Parse(reader["RowIndex"].ToString());
+                    int column = int.Parse(reader["ColumnIndex"].ToString());
+
+                    if (roomNo == 1)
+                    {
+                        ChangeCellColor(Room1, row, column);
+                        empty++;
                     }
-                
+                    else if (roomNo == 2)
+                    {
+                        ChangeCellColor(Room2, row, column);
+                        empty++;
+                    }
+                    else if (roomNo == 3)
+                    {
+                        ChangeCellColor(Room3, row, column);
+                        empty++;
+                    }
+                    else if (roomNo == 4)
+                    {
+                        ChangeCellColor(Room4, row, column);
+                        empty++;
+                    }
+
+                }
+
 
                 if (conn == 1)
                 {
@@ -1479,9 +1473,9 @@ namespace HelloWorldSolutionIMS
                         // Clear the text boxes
                         fileno.Text = "";
                         firstname.Text = "";
-                        familyname.Text = "";                      
+                        familyname.Text = "";
                         mobileno.Text = "";
-                       
+
 
                         string appointmentIDToDelete = guna2DataGridView1.CurrentRow.Cells["iddgv"].Value.ToString(); // Assuming the Appointment ID is in a column named "Id"
 
@@ -1528,7 +1522,7 @@ namespace HelloWorldSolutionIMS
             DateTime datefiller = DateTime.Now;
             try
             {
-               
+
                 slot.Visible = true;
                 slotlabel.Visible = true;
                 AppointmentIDToEdit = int.Parse(guna2DataGridView1.CurrentRow.Cells["Iddgv"].Value.ToString()); // Assuming the ID is in a column named "Id"
@@ -1547,7 +1541,7 @@ namespace HelloWorldSolutionIMS
                         familyname.Text = reader["FAMILYNAME"].ToString();
                         mobileno.Text = reader["MOBILENO"].ToString();
                         datefiller = Convert.ToDateTime(reader["DATE"]);
-                       slot.Text = reader["SLOT"].ToString();
+                        slot.Text = reader["SLOT"].ToString();
 
                         tabControl1.SelectedIndex = 1; // Switch to the desired tab
                     }
@@ -1731,7 +1725,7 @@ namespace HelloWorldSolutionIMS
         }
         List<Index> ForRoom1 = new List<Index>();
         List<Index> ForRoom2 = new List<Index>();
-        List<Index> ForRoom3= new List<Index>();
+        List<Index> ForRoom3 = new List<Index>();
         List<Index> ForRoom4 = new List<Index>();
         private void Room1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -2073,45 +2067,45 @@ namespace HelloWorldSolutionIMS
         private void SearchAppointmentsWithDate(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn firstname, DataGridViewColumn familyname, DataGridViewColumn mobile, DataGridViewColumn room, DataGridViewColumn slot, DataGridViewColumn date)
         {
             var SelectedDate = CalendarFilter.SelectionStart;
-            
-                try
-                {
-                    MainClass.con.Open();
 
-                    SqlCommand cmd = new SqlCommand("SELECT ID, FileNo, FirstName, FamilyName, Date, Room, Slot, MOBILENO FROM Appointment WHERE CONVERT(date, Date) = @SelectedDate", MainClass.con);
+            try
+            {
+                MainClass.con.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT ID, FileNo, FirstName, FamilyName, Date, Room, Slot, MOBILENO FROM Appointment WHERE CONVERT(date, Date) = @SelectedDate", MainClass.con);
 
                 cmd.Parameters.AddWithValue("@SelectedDate", SelectedDate);
 
 
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    id.DataPropertyName = dt.Columns["ID"].ToString();
-                    fileno.DataPropertyName = dt.Columns["FileNo"].ToString();
-                    firstname.DataPropertyName = dt.Columns["FirstName"].ToString();
-                    familyname.DataPropertyName = dt.Columns["FamilyName"].ToString();
-                    room.DataPropertyName = dt.Columns["Room"].ToString();
-                    slot.DataPropertyName = dt.Columns["Slot"].ToString();
-                    date.DataPropertyName = dt.Columns["Date"].ToString();
-                    mobile.DataPropertyName = dt.Columns["MOBILENO"].ColumnName;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                id.DataPropertyName = dt.Columns["ID"].ToString();
+                fileno.DataPropertyName = dt.Columns["FileNo"].ToString();
+                firstname.DataPropertyName = dt.Columns["FirstName"].ToString();
+                familyname.DataPropertyName = dt.Columns["FamilyName"].ToString();
+                room.DataPropertyName = dt.Columns["Room"].ToString();
+                slot.DataPropertyName = dt.Columns["Slot"].ToString();
+                date.DataPropertyName = dt.Columns["Date"].ToString();
+                mobile.DataPropertyName = dt.Columns["MOBILENO"].ColumnName;
 
 
-                    dgv.DataSource = dt;
-                    MainClass.con.Close();
-                }
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+            }
 
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
         }
-            private void CalendarFilter_DateChanged(object sender, DateRangeEventArgs e)
+        private void CalendarFilter_DateChanged(object sender, DateRangeEventArgs e)
         {
-            
+
             SearchAppointmentsWithDate(guna2DataGridView1, iddgv, filenodgv, firstnamedgv, familynamedgv, mobilenodgv, roomdgv, slotdgv, datedgv);
-            
+
         }
     }
 }

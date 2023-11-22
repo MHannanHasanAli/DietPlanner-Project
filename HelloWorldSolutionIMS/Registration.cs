@@ -838,14 +838,19 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
+
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -926,14 +931,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (Control control in panel1.Controls)
                     {
@@ -1998,7 +2007,9 @@ namespace HelloWorldSolutionIMS
             mobilenomh.Text = "";
             nutritionistmh.Text = "";
             gendermh.SelectedItem = null;
+
             ShowMedicalHistoryAll(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
+            guna2DataGridView17.ClearSelection();
         }
 
         private void guna2DataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -3283,431 +3294,439 @@ namespace HelloWorldSolutionIMS
 
         private void EditMedicalHistory_Click(object sender, EventArgs e)
         {
-            edit = 0;
-            coordinates.Clear();
-            Medicationcoordinates.Clear();
-            Allegiescoordinates.Clear();
-            Dietcoordinates.Clear();
-            Deficiencycoordinates.Clear();
-            Questions.Clear();
-            //int id = int.Parse(guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString());
-            try
+            if (guna2DataGridView17.SelectedRows.Count > 0)
             {
-                string customerIDToEdit = guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString();
-                string customerFilenoToEdit = guna2DataGridView17.SelectedRows[0].Cells[1].Value.ToString();
-                filenomh.Text = customerFilenoToEdit;
-                MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM MedicalHistory WHERE ID = @CustomerID", MainClass.con);
-                cmd.Parameters.AddWithValue("@CustomerID", customerIDToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
+                edit = 0;
+                coordinates.Clear();
+                Medicationcoordinates.Clear();
+                Allegiescoordinates.Clear();
+                Dietcoordinates.Clear();
+                Deficiencycoordinates.Clear();
+                Questions.Clear();
+                //int id = int.Parse(guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString());
+                try
                 {
-                    while (reader.Read())
-                    {
-                        // Set the retrieved data into input boxes
+                    string customerIDToEdit = guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString();
+                    string customerFilenoToEdit = guna2DataGridView17.SelectedRows[0].Cells[1].Value.ToString();
+                    filenomh.Text = customerFilenoToEdit;
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM MedicalHistory WHERE ID = @CustomerID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@CustomerID", customerIDToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
 
-                        string dbstatus = reader["Status"].ToString();
-                        string dbSmoking = reader["Smoking"].ToString();
-                        string dbblood = reader["BloodType"].ToString();
-                        status = dbstatus;
-                        smoking = dbSmoking;
-                        bloodtype = dbblood;
-                        foreach (DataGridViewRow row in guna2DataGridView3.Rows)
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
                         {
-                            foreach (DataGridViewCell cell in row.Cells)
+                            // Set the retrieved data into input boxes
+
+                            string dbstatus = reader["Status"].ToString();
+                            string dbSmoking = reader["Smoking"].ToString();
+                            string dbblood = reader["BloodType"].ToString();
+                            status = dbstatus;
+                            smoking = dbSmoking;
+                            bloodtype = dbblood;
+                            foreach (DataGridViewRow row in guna2DataGridView3.Rows)
                             {
-                                if (cell.Value.ToString().Equals(dbstatus))
+                                foreach (DataGridViewCell cell in row.Cells)
                                 {
-                                    cell.Selected = true;
-                                    break; // Stop iterating through the cells once the matching cell is found
+                                    if (cell.Value.ToString().Equals(dbstatus))
+                                    {
+                                        cell.Selected = true;
+                                        break; // Stop iterating through the cells once the matching cell is found
+                                    }
                                 }
                             }
-                        }
-                        foreach (DataGridViewRow row in guna2DataGridView4.Rows)
-                        {
-                            foreach (DataGridViewCell cell in row.Cells)
+                            foreach (DataGridViewRow row in guna2DataGridView4.Rows)
                             {
-                                if (cell.Value.ToString().Equals(dbSmoking))
+                                foreach (DataGridViewCell cell in row.Cells)
                                 {
-                                    cell.Selected = true;
-                                    break; // Stop iterating through the cells once the matching cell is found
+                                    if (cell.Value.ToString().Equals(dbSmoking))
+                                    {
+                                        cell.Selected = true;
+                                        break; // Stop iterating through the cells once the matching cell is found
+                                    }
                                 }
                             }
-                        }
-                        foreach (DataGridViewRow row in guna2DataGridView5.Rows)
-                        {
-                            foreach (DataGridViewCell cell in row.Cells)
+                            foreach (DataGridViewRow row in guna2DataGridView5.Rows)
                             {
-                                if (cell.Value.ToString().Equals(dbblood))
+                                foreach (DataGridViewCell cell in row.Cells)
                                 {
-                                    cell.Selected = true;
-                                    break; // Stop iterating through the cells once the matching cell is found
-                                }
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
-                }
-                reader.Close();
-                MainClass.con.Close();
-
-                MainClass.con.Open();
-                SqlCommand cmd2 = new SqlCommand("SELECT * FROM DiseaseHistory WHERE FILENO = @CustomerID", MainClass.con);
-                cmd2.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
-                List<string> datas = new List<string>();
-                SqlDataReader reader2 = cmd2.ExecuteReader();
-                if (reader2.HasRows)
-                {
-                    while (reader2.Read())
-                    {
-                        // Set the retrieved data into input boxes
-
-                        datas.Add(reader2["Data"].ToString());
-                        Indexing SavedDisease = new Indexing();
-                        SavedDisease.row = int.Parse(reader2["rowindex"].ToString());
-                        SavedDisease.col = int.Parse(reader2["colindex"].ToString());
-                        SavedDisease.value = reader2["Data"].ToString();
-                        coordinates.Add(SavedDisease);
-
-                    }
-                    foreach (var item in datas)
-                    {
-                        foreach (DataGridViewRow row in guna2DataGridView6.Rows)
-                        {
-                            foreach (DataGridViewCell cell in row.Cells)
-                            {
-                                if (cell.Value.ToString().Equals(item))
-                                {
-                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
-                                    cell.Style.ForeColor = Color.Black;
+                                    if (cell.Value.ToString().Equals(dbblood))
+                                    {
+                                        cell.Selected = true;
+                                        break; // Stop iterating through the cells once the matching cell is found
+                                    }
                                 }
                             }
                         }
                     }
-                }
-
-                reader2.Close();
-                MainClass.con.Close();
-
-                MainClass.con.Open();
-                SqlCommand cmd3 = new SqlCommand("SELECT * FROM FoodAllergies WHERE FILENO = @CustomerID", MainClass.con);
-                cmd3.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
-                List<string> Alergies = new List<string>();
-                SqlDataReader reader3 = cmd3.ExecuteReader();
-                if (reader3.HasRows)
-                {
-                    while (reader3.Read())
+                    else
                     {
-                        // Set the retrieved data into input boxes
-
-                        Alergies.Add(reader3["Data"].ToString());
-                        Indexing SavedDisease = new Indexing();
-                        SavedDisease.row = int.Parse(reader3["rowindex"].ToString());
-                        SavedDisease.col = int.Parse(reader3["colindex"].ToString());
-                        SavedDisease.value = reader3["Data"].ToString();
-                        Allegiescoordinates.Add(SavedDisease);
-
+                        MessageBox.Show("Medical History not found for Customer with FILE NO : " + customerFilenoToEdit);
                     }
-                    foreach (var item in Alergies)
+                    reader.Close();
+                    MainClass.con.Close();
+
+                    MainClass.con.Open();
+                    SqlCommand cmd2 = new SqlCommand("SELECT * FROM DiseaseHistory WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd2.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    List<string> datas = new List<string>();
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+                    if (reader2.HasRows)
                     {
-                        foreach (DataGridViewRow row in guna2DataGridView13.Rows)
+                        while (reader2.Read())
                         {
-                            foreach (DataGridViewCell cell in row.Cells)
+                            // Set the retrieved data into input boxes
+
+                            datas.Add(reader2["Data"].ToString());
+                            Indexing SavedDisease = new Indexing();
+                            SavedDisease.row = int.Parse(reader2["rowindex"].ToString());
+                            SavedDisease.col = int.Parse(reader2["colindex"].ToString());
+                            SavedDisease.value = reader2["Data"].ToString();
+                            coordinates.Add(SavedDisease);
+
+                        }
+                        foreach (var item in datas)
+                        {
+                            foreach (DataGridViewRow row in guna2DataGridView6.Rows)
                             {
-                                if (cell.Value.ToString().Equals(item))
+                                foreach (DataGridViewCell cell in row.Cells)
                                 {
-                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
-                                    cell.Style.ForeColor = Color.Black;
+                                    if (cell.Value.ToString().Equals(item))
+                                    {
+                                        cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                        cell.Style.ForeColor = Color.Black;
+                                    }
                                 }
                             }
                         }
                     }
-                }
 
-                reader3.Close();
-                MainClass.con.Close();
+                    reader2.Close();
+                    MainClass.con.Close();
 
-                MainClass.con.Open();
-                SqlCommand cmd4 = new SqlCommand("SELECT * FROM Deficiency WHERE FILENO = @CustomerID", MainClass.con);
-                cmd4.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
-                List<string> nutrients = new List<string>();
-                SqlDataReader reader4 = cmd4.ExecuteReader();
-                if (reader4.HasRows)
-                {
-                    while (reader4.Read())
+                    MainClass.con.Open();
+                    SqlCommand cmd3 = new SqlCommand("SELECT * FROM FoodAllergies WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd3.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    List<string> Alergies = new List<string>();
+                    SqlDataReader reader3 = cmd3.ExecuteReader();
+                    if (reader3.HasRows)
                     {
-                        // Set the retrieved data into input boxes
-
-                        nutrients.Add(reader4["Data"].ToString());
-                        Indexing SavedDisease = new Indexing();
-                        SavedDisease.row = int.Parse(reader4["rowindex"].ToString());
-                        SavedDisease.col = int.Parse(reader4["colindex"].ToString());
-                        SavedDisease.value = reader4["Data"].ToString();
-                        Deficiencycoordinates.Add(SavedDisease);
-
-
-                    }
-                    foreach (var item in nutrients)
-                    {
-                        foreach (DataGridViewRow row in guna2DataGridView14.Rows)
+                        while (reader3.Read())
                         {
-                            foreach (DataGridViewCell cell in row.Cells)
+                            // Set the retrieved data into input boxes
+
+                            Alergies.Add(reader3["Data"].ToString());
+                            Indexing SavedDisease = new Indexing();
+                            SavedDisease.row = int.Parse(reader3["rowindex"].ToString());
+                            SavedDisease.col = int.Parse(reader3["colindex"].ToString());
+                            SavedDisease.value = reader3["Data"].ToString();
+                            Allegiescoordinates.Add(SavedDisease);
+
+                        }
+                        foreach (var item in Alergies)
+                        {
+                            foreach (DataGridViewRow row in guna2DataGridView13.Rows)
                             {
-                                if (cell.Value.ToString().Equals(item))
+                                foreach (DataGridViewCell cell in row.Cells)
                                 {
-                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
-                                    cell.Style.ForeColor = Color.Black;
+                                    if (cell.Value.ToString().Equals(item))
+                                    {
+                                        cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                        cell.Style.ForeColor = Color.Black;
+                                    }
                                 }
                             }
                         }
                     }
-                }
 
-                reader4.Close();
-                MainClass.con.Close();
+                    reader3.Close();
+                    MainClass.con.Close();
 
-                MainClass.con.Open();
-                SqlCommand cmd5 = new SqlCommand("SELECT * FROM Medication WHERE FILENO = @CustomerID", MainClass.con);
-                cmd5.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
-                List<string> medicines = new List<string>();
-                SqlDataReader reader5 = cmd5.ExecuteReader();
-                if (reader5.HasRows)
-                {
-                    while (reader5.Read())
+                    MainClass.con.Open();
+                    SqlCommand cmd4 = new SqlCommand("SELECT * FROM Deficiency WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd4.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    List<string> nutrients = new List<string>();
+                    SqlDataReader reader4 = cmd4.ExecuteReader();
+                    if (reader4.HasRows)
                     {
-                        // Set the retrieved data into input boxes
-
-                        medicines.Add(reader5["Data"].ToString());
-                        Indexing SavedDisease = new Indexing();
-                        SavedDisease.row = int.Parse(reader5["rowindex"].ToString());
-                        SavedDisease.col = int.Parse(reader5["colindex"].ToString());
-                        SavedDisease.value = reader5["Data"].ToString();
-                        Medicationcoordinates.Add(SavedDisease);
-
-
-                    }
-                    foreach (var item in medicines)
-                    {
-                        foreach (DataGridViewRow row in guna2DataGridView15.Rows)
+                        while (reader4.Read())
                         {
-                            foreach (DataGridViewCell cell in row.Cells)
+                            // Set the retrieved data into input boxes
+
+                            nutrients.Add(reader4["Data"].ToString());
+                            Indexing SavedDisease = new Indexing();
+                            SavedDisease.row = int.Parse(reader4["rowindex"].ToString());
+                            SavedDisease.col = int.Parse(reader4["colindex"].ToString());
+                            SavedDisease.value = reader4["Data"].ToString();
+                            Deficiencycoordinates.Add(SavedDisease);
+
+
+                        }
+                        foreach (var item in nutrients)
+                        {
+                            foreach (DataGridViewRow row in guna2DataGridView14.Rows)
                             {
-                                if (cell.Value.ToString().Equals(item))
+                                foreach (DataGridViewCell cell in row.Cells)
                                 {
-                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
-                                    cell.Style.ForeColor = Color.Black;
+                                    if (cell.Value.ToString().Equals(item))
+                                    {
+                                        cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                        cell.Style.ForeColor = Color.Black;
+                                    }
                                 }
                             }
                         }
                     }
-                }
 
-                reader5.Close();
-                MainClass.con.Close();
+                    reader4.Close();
+                    MainClass.con.Close();
 
-                MainClass.con.Open();
-                SqlCommand cmd6 = new SqlCommand("SELECT * FROM Diet WHERE FILENO = @CustomerID", MainClass.con);
-                cmd6.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
-                List<string> dietavoid = new List<string>();
-                SqlDataReader reader6 = cmd6.ExecuteReader();
-                if (reader6.HasRows)
-                {
-                    while (reader6.Read())
+                    MainClass.con.Open();
+                    SqlCommand cmd5 = new SqlCommand("SELECT * FROM Medication WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd5.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    List<string> medicines = new List<string>();
+                    SqlDataReader reader5 = cmd5.ExecuteReader();
+                    if (reader5.HasRows)
                     {
-                        // Set the retrieved data into input boxes
-
-                        dietavoid.Add(reader6["Data"].ToString());
-                        Indexing SavedDisease = new Indexing();
-                        SavedDisease.row = int.Parse(reader6["rowindex"].ToString());
-                        SavedDisease.col = int.Parse(reader6["colindex"].ToString());
-                        SavedDisease.value = reader6["Data"].ToString();
-                        Dietcoordinates.Add(SavedDisease);
-
-
-                    }
-                    foreach (var item in dietavoid)
-                    {
-                        foreach (DataGridViewRow row in guna2DataGridView16.Rows)
+                        while (reader5.Read())
                         {
-                            foreach (DataGridViewCell cell in row.Cells)
+                            // Set the retrieved data into input boxes
+
+                            medicines.Add(reader5["Data"].ToString());
+                            Indexing SavedDisease = new Indexing();
+                            SavedDisease.row = int.Parse(reader5["rowindex"].ToString());
+                            SavedDisease.col = int.Parse(reader5["colindex"].ToString());
+                            SavedDisease.value = reader5["Data"].ToString();
+                            Medicationcoordinates.Add(SavedDisease);
+
+
+                        }
+                        foreach (var item in medicines)
+                        {
+                            foreach (DataGridViewRow row in guna2DataGridView15.Rows)
                             {
-                                if (cell.Value.ToString().Equals(item))
+                                foreach (DataGridViewCell cell in row.Cells)
                                 {
-                                    cell.Style.BackColor = Color.FromArgb(128, 255, 128);
-                                    cell.Style.ForeColor = Color.Black;
+                                    if (cell.Value.ToString().Equals(item))
+                                    {
+                                        cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                        cell.Style.ForeColor = Color.Black;
+                                    }
                                 }
                             }
                         }
                     }
-                }
 
-                reader6.Close();
-                MainClass.con.Close();
+                    reader5.Close();
+                    MainClass.con.Close();
 
-                MainClass.con.Open();
-                SqlCommand cmd7 = new SqlCommand("SELECT * FROM Questions WHERE FILENO = @CustomerID", MainClass.con);
-                cmd7.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
-                SqlDataReader reader7 = cmd7.ExecuteReader();
-                if (reader7.HasRows)
-                {
-                    while (reader7.Read())
+                    MainClass.con.Open();
+                    SqlCommand cmd6 = new SqlCommand("SELECT * FROM Diet WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd6.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    List<string> dietavoid = new List<string>();
+                    SqlDataReader reader6 = cmd6.ExecuteReader();
+                    if (reader6.HasRows)
                     {
-                        // Set the retrieved data into input boxes
-
-                        string hdans = reader7["hormonalDisease"].ToString();
-                        string cans = reader7["cancer"].ToString();
-                        string hians = reader7["immuneDisease"].ToString();
-                        string hedans = reader7["hereditaryDisease"].ToString();
-                        string pdans = reader7["pancreaticDisease"].ToString();
-                        string odans = reader7["otherDisease"].ToString();
-
-                        if (hdans == "Yes")
+                        while (reader6.Read())
                         {
-                            hd.Visible = true;
-                            hd.Text = reader7["hormonalDiseaseText"].ToString();
-                            guna2DataGridView7.Rows[0].Cells[1].Selected = true;
+                            // Set the retrieved data into input boxes
 
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView7";
-                            newitem.value = "Yes";
-                            Questions.Add(newitem);
+                            dietavoid.Add(reader6["Data"].ToString());
+                            Indexing SavedDisease = new Indexing();
+                            SavedDisease.row = int.Parse(reader6["rowindex"].ToString());
+                            SavedDisease.col = int.Parse(reader6["colindex"].ToString());
+                            SavedDisease.value = reader6["Data"].ToString();
+                            Dietcoordinates.Add(SavedDisease);
+
 
                         }
-                        else if (hdans == "No")
+                        foreach (var item in dietavoid)
                         {
-                            hd.Visible = false;
-
-                            guna2DataGridView7.Rows[0].Cells[0].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView7";
-                            newitem.value = "No";
-                            Questions.Add(newitem);
-
+                            foreach (DataGridViewRow row in guna2DataGridView16.Rows)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    if (cell.Value.ToString().Equals(item))
+                                    {
+                                        cell.Style.BackColor = Color.FromArgb(128, 255, 128);
+                                        cell.Style.ForeColor = Color.Black;
+                                    }
+                                }
+                            }
                         }
+                    }
 
-                        if (cans == "Yes")
-                        {
-                            c.Visible = true;
-                            c.Text = reader7["cancerText"].ToString();
-                            guna2DataGridView8.Rows[0].Cells[1].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView8";
-                            newitem.value = "Yes";
-                            Questions.Add(newitem);
-                        }
-                        else if (cans == "No")
-                        {
-                            c.Visible = false;
+                    reader6.Close();
+                    MainClass.con.Close();
 
-                            guna2DataGridView8.Rows[0].Cells[0].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView8";
-                            newitem.value = "No";
-                            Questions.Add(newitem);
-                        }
-
-                        if (hians == "Yes")
+                    MainClass.con.Open();
+                    SqlCommand cmd7 = new SqlCommand("SELECT * FROM Questions WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd7.Parameters.AddWithValue("@CustomerID", customerFilenoToEdit); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    SqlDataReader reader7 = cmd7.ExecuteReader();
+                    if (reader7.HasRows)
+                    {
+                        while (reader7.Read())
                         {
-                            idbox.Visible = true;
-                            idbox.Text = reader7["immuneDiseaseText"].ToString();
-                            guna2DataGridView9.Rows[0].Cells[1].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView9";
-                            newitem.value = "Yes";
-                            Questions.Add(newitem);
-                        }
-                        else if (hians == "No")
-                        {
-                            idbox.Visible = false;
+                            // Set the retrieved data into input boxes
 
-                            guna2DataGridView9.Rows[0].Cells[0].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView9";
-                            newitem.value = "No";
-                            Questions.Add(newitem);
-                        }
+                            string hdans = reader7["hormonalDisease"].ToString();
+                            string cans = reader7["cancer"].ToString();
+                            string hians = reader7["immuneDisease"].ToString();
+                            string hedans = reader7["hereditaryDisease"].ToString();
+                            string pdans = reader7["pancreaticDisease"].ToString();
+                            string odans = reader7["otherDisease"].ToString();
 
-                        if (hedans == "Yes")
-                        {
-                            hed.Visible = true;
-                            hed.Text = reader7["hereditaryDiseaseText"].ToString();
-                            guna2DataGridView10.Rows[0].Cells[1].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView10";
-                            newitem.value = "Yes";
-                            Questions.Add(newitem);
-                        }
-                        else if (hedans == "No")
-                        {
-                            hed.Visible = false;
+                            if (hdans == "Yes")
+                            {
+                                hd.Visible = true;
+                                hd.Text = reader7["hormonalDiseaseText"].ToString();
+                                guna2DataGridView7.Rows[0].Cells[1].Selected = true;
 
-                            guna2DataGridView10.Rows[0].Cells[0].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView10";
-                            newitem.value = "No";
-                            Questions.Add(newitem);
-                        }
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView7";
+                                newitem.value = "Yes";
+                                Questions.Add(newitem);
 
-                        if (pdans == "Yes")
-                        {
-                            pd.Visible = true;
-                            pd.Text = reader7["pancreaticDiseaseText"].ToString();
-                            guna2DataGridView11.Rows[0].Cells[1].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView11";
-                            newitem.value = "Yes";
-                            Questions.Add(newitem);
-                        }
-                        else if (pdans == "No")
-                        {
-                            pd.Visible = false;
+                            }
+                            else if (hdans == "No")
+                            {
+                                hd.Visible = false;
 
-                            guna2DataGridView11.Rows[0].Cells[0].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView11";
-                            newitem.value = "No";
-                            Questions.Add(newitem);
-                        }
+                                guna2DataGridView7.Rows[0].Cells[0].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView7";
+                                newitem.value = "No";
+                                Questions.Add(newitem);
 
-                        if (odans == "Yes")
-                        {
-                            od.Visible = true;
-                            od.Text = reader7["otherDiseaseText"].ToString();
-                            guna2DataGridView12.Rows[0].Cells[1].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView12";
-                            newitem.value = "Yes";
-                            Questions.Add(newitem);
-                        }
-                        else if (odans == "No")
-                        {
-                            od.Visible = false;
+                            }
 
-                            guna2DataGridView12.Rows[0].Cells[0].Selected = true;
-                            IndexingQuestions newitem = new IndexingQuestions();
-                            newitem.TableName = "guna2DataGridView12";
-                            newitem.value = "No";
-                            Questions.Add(newitem);
+                            if (cans == "Yes")
+                            {
+                                c.Visible = true;
+                                c.Text = reader7["cancerText"].ToString();
+                                guna2DataGridView8.Rows[0].Cells[1].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView8";
+                                newitem.value = "Yes";
+                                Questions.Add(newitem);
+                            }
+                            else if (cans == "No")
+                            {
+                                c.Visible = false;
+
+                                guna2DataGridView8.Rows[0].Cells[0].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView8";
+                                newitem.value = "No";
+                                Questions.Add(newitem);
+                            }
+
+                            if (hians == "Yes")
+                            {
+                                idbox.Visible = true;
+                                idbox.Text = reader7["immuneDiseaseText"].ToString();
+                                guna2DataGridView9.Rows[0].Cells[1].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView9";
+                                newitem.value = "Yes";
+                                Questions.Add(newitem);
+                            }
+                            else if (hians == "No")
+                            {
+                                idbox.Visible = false;
+
+                                guna2DataGridView9.Rows[0].Cells[0].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView9";
+                                newitem.value = "No";
+                                Questions.Add(newitem);
+                            }
+
+                            if (hedans == "Yes")
+                            {
+                                hed.Visible = true;
+                                hed.Text = reader7["hereditaryDiseaseText"].ToString();
+                                guna2DataGridView10.Rows[0].Cells[1].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView10";
+                                newitem.value = "Yes";
+                                Questions.Add(newitem);
+                            }
+                            else if (hedans == "No")
+                            {
+                                hed.Visible = false;
+
+                                guna2DataGridView10.Rows[0].Cells[0].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView10";
+                                newitem.value = "No";
+                                Questions.Add(newitem);
+                            }
+
+                            if (pdans == "Yes")
+                            {
+                                pd.Visible = true;
+                                pd.Text = reader7["pancreaticDiseaseText"].ToString();
+                                guna2DataGridView11.Rows[0].Cells[1].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView11";
+                                newitem.value = "Yes";
+                                Questions.Add(newitem);
+                            }
+                            else if (pdans == "No")
+                            {
+                                pd.Visible = false;
+
+                                guna2DataGridView11.Rows[0].Cells[0].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView11";
+                                newitem.value = "No";
+                                Questions.Add(newitem);
+                            }
+
+                            if (odans == "Yes")
+                            {
+                                od.Visible = true;
+                                od.Text = reader7["otherDiseaseText"].ToString();
+                                guna2DataGridView12.Rows[0].Cells[1].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView12";
+                                newitem.value = "Yes";
+                                Questions.Add(newitem);
+                            }
+                            else if (odans == "No")
+                            {
+                                od.Visible = false;
+
+                                guna2DataGridView12.Rows[0].Cells[0].Selected = true;
+                                IndexingQuestions newitem = new IndexingQuestions();
+                                newitem.TableName = "guna2DataGridView12";
+                                newitem.value = "No";
+                                Questions.Add(newitem);
+                            }
+
                         }
 
                     }
 
+                    reader7.Close();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
                 }
 
-                reader7.Close();
-                MainClass.con.Close();
+                tabControl1.SelectedIndex = 3;
             }
-            catch (Exception ex)
+            else
             {
-                MainClass.con.Close();
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Please select a row in the table.");
             }
 
-            tabControl1.SelectedIndex = 3;
         }
     }
 }

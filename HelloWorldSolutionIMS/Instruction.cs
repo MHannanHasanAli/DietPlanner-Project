@@ -1,24 +1,10 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
-using Win32Interop.Structs;
-using Microsoft.VisualBasic.ApplicationServices;
-using Org.BouncyCastle.Asn1.Crmf;
-using System.Web.UI;
-using Win32Interop.Enums;
-using Guna.UI2.WinForms;
-using System.Globalization;
-using System.Threading;
 
 namespace HelloWorldSolutionIMS
 {
@@ -26,7 +12,7 @@ namespace HelloWorldSolutionIMS
     {
         public Instruction()
         {
-            
+
             InitializeComponent();
 
         }
@@ -46,7 +32,7 @@ namespace HelloWorldSolutionIMS
                 instruction.DataPropertyName = dt.Columns["InstructionName"].ToString();
                 nutritionist.DataPropertyName = dt.Columns["NutritionistName"].ToString();
                 date.DataPropertyName = dt.Columns["InstructionDate"].ToString();
-        
+
                 dgv.DataSource = dt;
                 MainClass.con.Close();
             }
@@ -119,8 +105,8 @@ namespace HelloWorldSolutionIMS
         private void SearchInstructions(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn instruction, DataGridViewColumn nutritionist, DataGridViewColumn date)
         {
             string instructionName = instructionname.Text;
-            
-           if(instructionName != "")
+
+            if (instructionName != "")
             {
                 try
                 {
@@ -162,14 +148,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (System.Windows.Forms.Control control in panel1.Controls)
                     {
@@ -181,7 +171,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                    
+
 
 
                 }
@@ -199,14 +189,18 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
                     foreach (System.Windows.Forms.Control control in panel1.Controls)
                     {
@@ -219,7 +213,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
 
-                  
+
 
 
                 }
@@ -414,7 +408,7 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
-           
+
 
         }
 
@@ -465,6 +459,11 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

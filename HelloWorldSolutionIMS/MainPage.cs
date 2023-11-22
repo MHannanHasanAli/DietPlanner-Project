@@ -1,19 +1,10 @@
-﻿using Guna.UI2.HtmlRenderer.Adapters.Entities;
-using Guna.UI2.WinForms;
+﻿using Guna.UI2.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media;
-using Win32Interop.Enums;
 using Color = System.Drawing.Color;
 
 namespace HelloWorldSolutionIMS
@@ -40,7 +31,7 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
         }
-       
+
 
         static System.Drawing.Color selectedColor = System.Drawing.Color.White;
         private void MainPage_Load(object sender, EventArgs e)
@@ -48,24 +39,32 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM SideBarColor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM SideBarColor", MainClass.con);
 
+                // Execute the select query
                 SqlDataReader reader = cmd.ExecuteReader();
-                // Read color value from the database
-               if(reader.Read())
-                {
-                    string colorString = reader["Color"].ToString();
-                    System.Drawing.Color color = ColorTranslator.FromHtml(colorString);
-                    sidebar.BackColor = color;
 
+                // Check if there is a color record in the table
+                if (reader.Read())
+                {
+                    // Read color components from the database
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
+
+                    // Set the `loginpanel` background color
+                    sidebar.BackColor = color;
                 }
                 else
                 {
-                    sidebar.BackColor = System.Drawing.Color.White;
-                  
+                    // Set the `loginpanel` background color to default white
+                    sidebar.BackColor = Color.White;
                 }
-                
-                // Convert color from string to Color
+
+                // Close the data reader and database connection
                 reader.Close();
                 MainClass.con.Close();
 
@@ -77,7 +76,7 @@ namespace HelloWorldSolutionIMS
 
             }
 
-           
+
 
             int w = 1200;
             int h = 737;
@@ -92,21 +91,26 @@ namespace HelloWorldSolutionIMS
         }
         public void loadform(object Form)
         {
-             if(this.mainpanel.Controls.Count > 0 )
+            if (this.mainpanel.Controls.Count > 0)
                 this.mainpanel.Controls.RemoveAt(0);
             System.Drawing.Color color = Color.Orange;
             System.Drawing.Color textcolor = Color.White;
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM buttoncolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                   color = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color btncolor = Color.FromArgb(red, green, blue);
+                    color = btncolor;
 
                 }
 
@@ -122,14 +126,19 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Color FROM textcolor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 // Read color value from the database
                 if (reader.Read())
                 {
-                    string colorString = reader["Color"].ToString();
-                    textcolor = ColorTranslator.FromHtml(colorString);
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color txtcolor = Color.FromArgb(red, green, blue);
+                    textcolor = txtcolor;
 
                 }
 
@@ -219,7 +228,7 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
 
-            if (client_id!=0)
+            if (client_id != 0)
             {
                 loadform(new Registration(client_id));
             }
@@ -230,38 +239,38 @@ namespace HelloWorldSolutionIMS
 
             client_id = 0;
         }
-        
+
         private void guna2TileButton6_Click(object sender, EventArgs e)
         {
             SqlCommand cmd2;
             try
-            {              
+            {
                 MainClass.con.Open();
-                  
+
                 cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
-               
+
                 SqlDataReader reader2 = cmd2.ExecuteReader();
 
                 while (reader2.Read())
                 {
-                   
+
                     client_id = int.Parse(reader2["ClientID"].ToString());
-   
+
                 }
 
-              
-              
-                    MainClass.con.Close();
-                
+
+
+                MainClass.con.Close();
+
             }
             catch (Exception ex)
             {
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
-            
-            
-            if(client_id != 0)
+
+
+            if (client_id != 0)
             {
                 loadform(new Appointment(client_id));
             }
@@ -407,7 +416,7 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
-            if(client_id!=0)
+            if (client_id != 0)
             {
                 loadform(new Diabetes(client_id));
 
