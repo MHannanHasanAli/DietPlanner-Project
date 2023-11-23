@@ -6861,11 +6861,26 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView9.ClearSelection();
             guna2DataGridView10.ClearSelection();
         }
+        public class ArtificialMapping
+        {
+            public int ID { get; set; }
+            public int Row { get; set; }
+            public int Col { get; set; }
+            public string ChartName { get; set; }
+        }
+
+        List<ArtificialMapping> artificialMappings = new List<ArtificialMapping>();
+        static int selectedRow;
+        static int selectedColumn;
+        static string selectedchart;
         private void guna2DataGridView7_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             guna2DataGridView8.ClearSelection();
             guna2DataGridView9.ClearSelection();
             guna2DataGridView10.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView7";
         }
 
         private void guna2DataGridView10_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -6873,6 +6888,9 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView8.ClearSelection();
             guna2DataGridView9.ClearSelection();
             guna2DataGridView7.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView10";
         }
 
         private void guna2DataGridView9_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -6880,6 +6898,9 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView8.ClearSelection();
             guna2DataGridView10.ClearSelection();
             guna2DataGridView7.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView9";
         }
 
         private void guna2DataGridView8_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -6887,6 +6908,9 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView10.ClearSelection();
             guna2DataGridView9.ClearSelection();
             guna2DataGridView7.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView8";
         }
 
         private void guna2DataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -6976,18 +7000,7 @@ namespace HelloWorldSolutionIMS
             }
         }
 
-        public class ArtificialMapping
-        {
-            public int ID { get; set; }
-            public int Row { get; set; }
-            public int Col { get; set; }
-            public string ChartName { get; set; }
-        }
 
-        List<ArtificialMapping> artificialMappings = new List<ArtificialMapping>();
-        static int selectedRow;
-        static int selectedColumn;
-        static string selectedchart;
 
         private void ShowMeals(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealar, DataGridViewColumn mealen, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
         {
@@ -7026,9 +7039,6 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView7.SelectedCells.Count == 1)
             {
-                selectedRow = guna2DataGridView7.SelectedRows[0].Index;
-                selectedColumn = guna2DataGridView7.SelectedCells[0].ColumnIndex;
-                selectedchart = "guna2DataGridView7";
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
             }
@@ -7039,9 +7049,6 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView10.SelectedCells.Count == 1)
             {
-                selectedRow = guna2DataGridView10.SelectedRows[0].Index;
-                selectedColumn = guna2DataGridView10.SelectedCells[0].ColumnIndex;
-                selectedchart = "guna2DataGridView10";
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
             }
@@ -7051,9 +7058,7 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView9.SelectedCells.Count == 1)
             {
-                selectedRow = guna2DataGridView9.SelectedRows[0].Index;
-                selectedColumn = guna2DataGridView9.SelectedCells[0].ColumnIndex;
-                selectedchart = "guna2DataGridView9";
+
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
             }
@@ -7063,9 +7068,6 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView8.SelectedCells.Count == 1)
             {
-                selectedRow = guna2DataGridView8.SelectedRows[0].Index;
-                selectedColumn = guna2DataGridView8.SelectedCells[0].ColumnIndex;
-                selectedchart = "guna2DataGridView8";
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
             }
@@ -7076,6 +7078,12 @@ namespace HelloWorldSolutionIMS
             selectedRow = -1;
             selectedColumn = -1;
             selectedchart = "";
+
+            guna2DataGridView8.ClearSelection();
+            guna2DataGridView10.ClearSelection();
+            guna2DataGridView7.ClearSelection();
+            guna2DataGridView9.ClearSelection();
+
             tabControl1.SelectedIndex = 5;
         }
 
