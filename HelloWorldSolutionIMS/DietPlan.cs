@@ -4636,13 +4636,7 @@ namespace HelloWorldSolutionIMS
             }
         }
 
-        public class ArtificialMapping
-        {
-            public int ID { get; set; }
-            public int Row { get; set; }
-            public int Col { get; set; }
-            public string ChartName { get; set; }
-        }
+
 
         List<ArtificialMapping> Mapping = new List<ArtificialMapping>();
         static int chartcounter = 0;
@@ -6826,7 +6820,7 @@ namespace HelloWorldSolutionIMS
 
         }
 
-
+        //New Coding//
         private void NewTabRowsFill()
         {
             guna2DataGridView7.CellBorderStyle = DataGridViewCellBorderStyle.Single;
@@ -6848,6 +6842,11 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView10.GridColor = Color.Black;
             guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView10.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView10.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView12.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView12.GridColor = Color.Black;
+            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView12.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView12.RowTemplate.DefaultCellStyle.ForeColor;
 
             for (int i = 0; i < 3; i++)
             {
@@ -6976,6 +6975,111 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView8.Rows.Add(row);
             }
         }
+
+        public class ArtificialMapping
+        {
+            public int ID { get; set; }
+            public int Row { get; set; }
+            public int Col { get; set; }
+            public string ChartName { get; set; }
+        }
+
+        List<ArtificialMapping> artificialMappings = new List<ArtificialMapping>();
+        static int selectedRow;
+        static int selectedColumn;
+        static string selectedchart;
+
+        private void ShowMeals(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealar, DataGridViewColumn mealen, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
+        {
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT ID, MealAr, MealEn,PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                no.DataPropertyName = dt.Columns["ID"].ToString();
+                mealar.DataPropertyName = dt.Columns["MealAr"].ToString();
+                mealen.DataPropertyName = dt.Columns["MealEn"].ToString();
+                calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView7.SelectedCells.Count == 1)
+            {
+                selectedRow = guna2DataGridView7.SelectedRows[0].Index;
+                selectedColumn = guna2DataGridView7.SelectedCells[0].ColumnIndex;
+                selectedchart = "guna2DataGridView7";
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+            }
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView10.SelectedCells.Count == 1)
+            {
+                selectedRow = guna2DataGridView10.SelectedRows[0].Index;
+                selectedColumn = guna2DataGridView10.SelectedCells[0].ColumnIndex;
+                selectedchart = "guna2DataGridView10";
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+            }
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView9.SelectedCells.Count == 1)
+            {
+                selectedRow = guna2DataGridView9.SelectedRows[0].Index;
+                selectedColumn = guna2DataGridView9.SelectedCells[0].ColumnIndex;
+                selectedchart = "guna2DataGridView9";
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+            }
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView8.SelectedCells.Count == 1)
+            {
+                selectedRow = guna2DataGridView8.SelectedRows[0].Index;
+                selectedColumn = guna2DataGridView8.SelectedCells[0].ColumnIndex;
+                selectedchart = "guna2DataGridView8";
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+            }
+        }
+
+        private void Meals_Click_1(object sender, EventArgs e)
+        {
+            selectedRow = -1;
+            selectedColumn = -1;
+            selectedchart = "";
+            tabControl1.SelectedIndex = 5;
+        }
+
+
     }
 }
 
