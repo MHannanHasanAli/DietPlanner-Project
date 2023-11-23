@@ -2872,57 +2872,61 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
-            chart1.Series.Clear();
+            //chart1.Series.Clear();
             MainClass.HideAllTabsOnTabControl(tabControl1);
             //ShowDietPlans(guna2DataGridView1, filenodgv, namedgv, agedgv, dietnamedgv);
-            guna2DataGridView2.EditingControlShowing += guna2DataGridView2_EditingControlShowing;
-            guna2DataGridView4.EditingControlShowing += guna2DataGridView4_EditingControlShowing;
-            guna2DataGridView5.EditingControlShowing += guna2DataGridView5_EditingControlShowing;
-            guna2DataGridView6.EditingControlShowing += guna2DataGridView6_EditingControlShowing;
-            tabControl1.SelectedIndex = 1;
-            firstname.Text = "";
-            familyname.Text = "";
-            dietplantemplatename.Text = "";
-            dietplantemplate.SelectedItem = null;
-            dietplandays.Text = "";
-            instruction.Text = "";
-            gender.Text = "";
-            age.Text = "";
-            mobileno.Text = "";
-            previousdietplan.Text = "";
-            calories.Text = "";
-            fats.Text = "";
-            fibers.Text = "";
-            potassium.Text = "";
-            water.Text = "";
-            sugar.Text = "";
-            calcium.Text = "";
-            abox.Text = "";
-            protein.Text = "";
-            carbohydrates.Text = "";
-            sodium.Text = "";
-            phosphor.Text = "";
-            magnesium.Text = "";
-            iron.Text = "";
-            iodine.Text = "";
-            bbox.Text = "";
-            MedicalHistory.Text = "";
-            edit = 0;
-            UpdateDietPlanTemplate();
-            updatepreviousdietplan();
-            UpdateInstruction();
+            //guna2DataGridView2.EditingControlShowing += guna2DataGridView2_EditingControlShowing;
+            //guna2DataGridView4.EditingControlShowing += guna2DataGridView4_EditingControlShowing;
+            //guna2DataGridView5.EditingControlShowing += guna2DataGridView5_EditingControlShowing;
+            //guna2DataGridView6.EditingControlShowing += guna2DataGridView6_EditingControlShowing;
+            //tabControl1.SelectedIndex = 1;
+            //firstname.Text = "";
+            //familyname.Text = "";
+            //dietplantemplatename.Text = "";
+            //dietplantemplate.SelectedItem = null;
+            //dietplandays.Text = "";
+            //instruction.Text = "";
+            //gender.Text = "";
+            //age.Text = "";
+            //mobileno.Text = "";
+            //previousdietplan.Text = "";
+            //calories.Text = "";
+            //fats.Text = "";
+            //fibers.Text = "";
+            //potassium.Text = "";
+            //water.Text = "";
+            //sugar.Text = "";
+            //calcium.Text = "";
+            //abox.Text = "";
+            //protein.Text = "";
+            //carbohydrates.Text = "";
+            //sodium.Text = "";
+            //phosphor.Text = "";
+            //magnesium.Text = "";
+            //iron.Text = "";
+            //iodine.Text = "";
+            //bbox.Text = "";
+            //MedicalHistory.Text = "";
+            //edit = 0;
+            //UpdateDietPlanTemplate();
+            //updatepreviousdietplan();
+            //UpdateInstruction();
 
-            if (coderunner != 0)
-            {
-                fileno.Text = coderunner.ToString();
-                LoadData(coderunner);
-            }
+            //if (coderunner != 0)
+            //{
+            //    fileno.Text = coderunner.ToString();
+            //    LoadData(coderunner);
+            //}
 
-            if (coderunner == 0)
-            {
-                RowsFiller();
-            }
+            //if (coderunner == 0)
+            //{
+            //    RowsFiller();
+            //}
+
+            NewTabRowsFill();
+            tabControl1.SelectedIndex = 5;
         }
+
         private void AddIngredient_Click(object sender, EventArgs e)
         {
             if (guna2DataGridView2.RowCount < 6)
@@ -6820,6 +6824,157 @@ namespace HelloWorldSolutionIMS
         private void guna2DataGridView2_CellValueChanged_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+
+        private void NewTabRowsFill()
+        {
+            guna2DataGridView7.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView7.GridColor = Color.Black;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView8.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView8.GridColor = Color.Black;
+            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView8.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView8.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView9.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView9.GridColor = Color.Black;
+            guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView9.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView9.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView10.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView10.GridColor = Color.Black;
+            guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView10.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView10.RowTemplate.DefaultCellStyle.ForeColor;
+
+            for (int i = 0; i < 3; i++)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView7.Rows.Add(row);
+                guna2DataGridView8.Rows.Add(row);
+                guna2DataGridView9.Rows.Add(row);
+                guna2DataGridView10.Rows.Add(row);
+            }
+            guna2DataGridView7.ClearSelection();
+            guna2DataGridView8.ClearSelection();
+            guna2DataGridView9.ClearSelection();
+            guna2DataGridView10.ClearSelection();
+        }
+        private void guna2DataGridView7_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView8.ClearSelection();
+            guna2DataGridView9.ClearSelection();
+            guna2DataGridView10.ClearSelection();
+        }
+
+        private void guna2DataGridView10_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView8.ClearSelection();
+            guna2DataGridView9.ClearSelection();
+            guna2DataGridView7.ClearSelection();
+        }
+
+        private void guna2DataGridView9_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView8.ClearSelection();
+            guna2DataGridView10.ClearSelection();
+            guna2DataGridView7.ClearSelection();
+        }
+
+        private void guna2DataGridView8_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView10.ClearSelection();
+            guna2DataGridView9.ClearSelection();
+            guna2DataGridView7.ClearSelection();
+        }
+
+        private void guna2DataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView7.Rows.RemoveAt(e.RowIndex);
+            CheckRows(guna2DataGridView7);
+        }
+
+        private void guna2DataGridView10_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView10.Rows.RemoveAt(e.RowIndex);
+            CheckRows(guna2DataGridView10);
+        }
+
+        private void guna2DataGridView9_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView9.Rows.RemoveAt(e.RowIndex);
+            CheckRows(guna2DataGridView9);
+        }
+
+        private void guna2DataGridView8_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView8.Rows.RemoveAt(e.RowIndex);
+            CheckRows(guna2DataGridView8);
+        }
+
+        private void CheckRows(Guna2DataGridView table)
+        {
+            while (table.RowCount < 3)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                table.Rows.Add(row);
+            }
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView7.RowCount == 6)
+            {
+                MessageBox.Show("Cannot exceed more than 6 meals in breakfast");
+            }
+            else
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView7.Rows.Add(row);
+            }
+
+
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView10.RowCount == 6)
+            {
+                MessageBox.Show("Cannot exceed more than 6 meals in lunch");
+            }
+            else
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView10.Rows.Add(row);
+            }
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView9.RowCount == 6)
+            {
+                MessageBox.Show("Cannot exceed more than 6 meals in dinner");
+            }
+            else
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView9.Rows.Add(row);
+            }
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView8.RowCount == 6)
+            {
+                MessageBox.Show("Cannot exceed more than 6 meals in snack");
+            }
+            else
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView8.Rows.Add(row);
+            }
         }
     }
 }
