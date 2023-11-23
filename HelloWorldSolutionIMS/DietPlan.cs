@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using static HelloWorldSolutionIMS.MealAction;
 
 namespace HelloWorldSolutionIMS
 {
@@ -17,18 +18,18 @@ namespace HelloWorldSolutionIMS
         {
             InitializeComponent();
             //calories.TextChanged += UpdateChart;
-            fats.TextChanged += UpdateChart;
-            protein.TextChanged += UpdateChart;
-            carbohydrates.TextChanged += UpdateChart;
+            fatsm.TextChanged += UpdateChart;
+            proteinm.TextChanged += UpdateChart;
+            carbsm.TextChanged += UpdateChart;
         }
         static int coderunner = 0;
         public DietPlan(int id)
         {
             InitializeComponent();
             //calories.TextChanged += UpdateChart;
-            fats.TextChanged += UpdateChart;
-            protein.TextChanged += UpdateChart;
-            carbohydrates.TextChanged += UpdateChart;
+            fatsm.TextChanged += UpdateChart;
+            proteinm.TextChanged += UpdateChart;
+            carbsm.TextChanged += UpdateChart;
             coderunner = id;
         }
         private void LoadData(int id)
@@ -2417,20 +2418,21 @@ namespace HelloWorldSolutionIMS
             //    dt.Rows.Add("Calories", double.Parse(calories.Text));
 
             //}
-            if (fats.Text != "")
+            if (fatsm.Text != "" && double.TryParse(fatsm.Text, out double fatsValue))
             {
-                dt.Rows.Add("Fats", double.Parse(fats.Text) * 9);
+                dt.Rows.Add("Fats", fatsValue * 9);
+            }
 
-            }
-            if (protein.Text != "")
+            if (proteinm.Text != "" && double.TryParse(proteinm.Text, out double proteinValue))
             {
-                dt.Rows.Add("Protein", double.Parse(protein.Text) * 4);
+                dt.Rows.Add("Protein", proteinValue * 4);
+            }
 
-            }
-            if (carbohydrates.Text != "")
+            if (carbsm.Text != "" && double.TryParse(carbsm.Text, out double carbsValue))
             {
-                dt.Rows.Add("Carbohydrates", double.Parse(carbohydrates.Text) * 4);
+                dt.Rows.Add("Carbohydrates", carbsValue * 4);
             }
+
 
             if (titlecheck != 1)
             {
@@ -6873,6 +6875,7 @@ namespace HelloWorldSolutionIMS
         static int selectedRow;
         static int selectedColumn;
         static string selectedchart;
+        static string MealID;
         private void guna2DataGridView7_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             guna2DataGridView8.ClearSelection();
@@ -7039,6 +7042,7 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView7.SelectedCells.Count == 1)
             {
+                guna2DataGridView12.ClearSelection();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
             }
@@ -7049,6 +7053,7 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView10.SelectedCells.Count == 1)
             {
+                guna2DataGridView12.ClearSelection();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
             }
@@ -7058,7 +7063,7 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView9.SelectedCells.Count == 1)
             {
-
+                guna2DataGridView12.ClearSelection();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
             }
@@ -7068,6 +7073,7 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView8.SelectedCells.Count == 1)
             {
+                guna2DataGridView12.ClearSelection();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
             }
@@ -7087,7 +7093,197 @@ namespace HelloWorldSolutionIMS
             tabControl1.SelectedIndex = 5;
         }
 
+        private void guna2DataGridView12_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            UpdateGroupsC();
+            UpdateGroupsN();
+            MealID = guna2DataGridView12.Rows[e.RowIndex].Cells[0].Value.ToString();
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                cmd.Parameters.AddWithValue("@MealID", MealID);
 
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        // Set the retrieved data into input controls
+                        mealar.Text = reader["MealAr"].ToString();
+                        mealen.Text = reader["MealEn"].ToString();
+                        groupnar.Text = reader["GroupNAr"].ToString();
+                        groupnen.Text = reader["GroupNEn"].ToString();
+                        groupcar.Text = reader["GroupCAr"].ToString();
+                        groupcen.Text = reader["GroupCEn"].ToString();
+                        caloriesm.Text = reader["CALORIES"].ToString();
+                        fatsm.Text = reader["FATS"].ToString();
+                        fibersm.Text = reader["FIBERS"].ToString();
+                        potassiumm.Text = reader["POTASSIUM"].ToString();
+                        waterm.Text = reader["WATER"].ToString();
+                        sugerm.Text = reader["SUGAR"].ToString();
+                        calciumm.Text = reader["CALCIUM"].ToString();
+                        am.Text = reader["A"].ToString();
+                        proteinm.Text = reader["PROTEIN"].ToString();
+                        carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                        sodiumm.Text = reader["SODIUM"].ToString();
+                        phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                        magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                        ironm.Text = reader["IRON"].ToString();
+                        iodinem.Text = reader["IODINE"].ToString();
+                        bm.Text = reader["B"].ToString();
+                        //category.Text = reader["Category"].ToString();
+                        notes.Text = reader["Notes"].ToString();
+                        preparation.Text = reader["Preparation"].ToString();
+                        classification.Text = reader["CLASSIFICATION"].ToString();
+                        //Catgry = reader["Category"].ToString();
+                    }
+                    reader.Close(); // Close the first DataReader
+
+                    //ShowIngredients(guna2DataGridView1, unitdgv, ingredientardgv, ingredientendgv,quantitydgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, potassiumdgv, phosphordgv,waterdgv,magnesiumdgv,sugerdgv,irondgv,iodinedgv,adgv,bdgv);
+                    MainClass.con.Close();
+                    //extrafunc();
+
+                    //tabControl1.SelectedIndex = 2;
+                }
+                else
+                {
+                    MessageBox.Show("Meal not found with ID: " + MealID);
+                }
+
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void UpdateGroupsC()
+        {
+            SqlCommand cmd;
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
+
+                cmd = new SqlCommand("SELECT ID, Namear, Nameen FROM GROUPC", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Clear the dropdown items before adding new ones
+                groupcar.DataSource = null;
+                groupcen.DataSource = null;
+                // Clear the items (if DataSource is not being set)
+                groupcar.Items.Clear();
+                groupcen.Items.Clear();
+                List<GroupnarContent> GroupCAR = new List<GroupnarContent>();
+
+                // Add the default 'Null' option
+                GroupCAR.Add(new GroupnarContent { ID = 0, NameAR = "Null", NameEN = "Null" });
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    int Id = row.Field<int>("ID");
+                    string Namear = row.Field<string>("Namear");
+                    string Nameen = row.Field<string>("Nameen");
+
+                    GroupnarContent Temp = new GroupnarContent { ID = Id, NameAR = Namear, NameEN = Nameen };
+                    GroupCAR.Add(Temp);
+                }
+
+                groupcar.DataSource = GroupCAR;
+                groupcar.DisplayMember = "NameAR"; // Display Member is Name
+                groupcar.ValueMember = "ID"; // Value Member is ID
+
+                groupcen.DataSource = GroupCAR;
+                groupcen.DisplayMember = "NameEN"; // Display Member is Name
+                groupcen.ValueMember = "ID"; // Value Member is ID
+
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void UpdateGroupsN()
+        {
+            SqlCommand cmd;
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
+
+                cmd = new SqlCommand("SELECT ID, Namear, Nameen FROM GROUPN", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Clear the dropdown items before adding new ones
+                groupnar.DataSource = null;
+                groupnen.DataSource = null;
+
+                // Clear the items (if DataSource is not being set)
+                groupnar.Items.Clear();
+                groupnen.Items.Clear();
+                List<GroupnarContent> GroupNAR = new List<GroupnarContent>();
+
+                // Add the default 'Null' option
+                GroupNAR.Add(new GroupnarContent { ID = 0, NameAR = "Null", NameEN = "Null" });
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    int Id = row.Field<int>("ID");
+                    string Namear = row.Field<string>("Namear");
+                    string Nameen = row.Field<string>("Nameen");
+
+                    GroupnarContent Temp = new GroupnarContent { ID = Id, NameAR = Namear, NameEN = Nameen };
+                    GroupNAR.Add(Temp);
+                }
+
+                groupnar.DataSource = GroupNAR;
+                groupnar.DisplayMember = "NameAR"; // Display Member is Name
+                groupnar.ValueMember = "ID"; // Value Member is ID
+
+                groupnen.DataSource = GroupNAR;
+                groupnen.DisplayMember = "NameEN"; // Display Member is Name
+                groupnen.ValueMember = "ID"; // Value Member is ID
+
+
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+        //ArtificialMapping data = new ArtificialMapping();
+        //data.ID = int.Parse(MealID);
+        //data.Row = selectedRow;
+        //    data.Col = selectedColumn;
+        //    data.ChartName = selectedchart;
+
+        //}
     }
 }
 
