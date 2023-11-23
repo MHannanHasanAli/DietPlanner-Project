@@ -7042,9 +7042,10 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView7.SelectedCells.Count == 1)
             {
-                guna2DataGridView12.ClearSelection();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+
             }
 
         }
@@ -7053,9 +7054,10 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView10.SelectedCells.Count == 1)
             {
-                guna2DataGridView12.ClearSelection();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+
             }
         }
 
@@ -7063,9 +7065,10 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView9.SelectedCells.Count == 1)
             {
-                guna2DataGridView12.ClearSelection();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+
                 tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
             }
         }
 
@@ -7073,9 +7076,10 @@ namespace HelloWorldSolutionIMS
         {
             if (guna2DataGridView8.SelectedCells.Count == 1)
             {
-                guna2DataGridView12.ClearSelection();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
                 tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+
             }
         }
 
