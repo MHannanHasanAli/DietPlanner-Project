@@ -21,9 +21,9 @@ namespace HelloWorldSolutionIMS
             fatsm.TextChanged += UpdateChart;
             proteinm.TextChanged += UpdateChart;
             carbsm.TextChanged += UpdateChart;
-            fatsd.TextChanged += UpdateChart2;
-            proteind.TextChanged += UpdateChart2;
-            carbsd.TextChanged += UpdateChart2;
+            fatsd.TextChanged += UpdateChart3;
+            proteind.TextChanged += UpdateChart3;
+            carbsd.TextChanged += UpdateChart3;
         }
         static int coderunner = 0;
         public DietPlan(int id)
@@ -33,9 +33,9 @@ namespace HelloWorldSolutionIMS
             fatsm.TextChanged += UpdateChart;
             proteinm.TextChanged += UpdateChart;
             carbsm.TextChanged += UpdateChart;
-            fatsd.TextChanged += UpdateChart2;
-            proteind.TextChanged += UpdateChart2;
-            carbsd.TextChanged += UpdateChart2;
+            fatsd.TextChanged += UpdateChart3;
+            proteind.TextChanged += UpdateChart3;
+            carbsd.TextChanged += UpdateChart3;
             coderunner = id;
         }
         private void LoadData(int id)
@@ -5641,9 +5641,9 @@ namespace HelloWorldSolutionIMS
         }
         private void dietplantemplatename_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (dietplantemplatename.SelectedItem != null)
+            if (dietplantemplatenamenew.SelectedItem != null)
             {
-                DietTemplates selectedTemplate = (DietTemplates)dietplantemplatename.SelectedItem;
+                DietTemplates selectedTemplate = (DietTemplates)dietplantemplatenamenew.SelectedItem;
                 int selectedID = selectedTemplate.ID;
 
                 if (selectedID == 0)
@@ -7134,6 +7134,7 @@ namespace HelloWorldSolutionIMS
 
         private void Meals_Click_1(object sender, EventArgs e)
         {
+            editmeal = 0;
             selectedRow = -1;
             selectedColumn = -1;
             selectedchart = "";
@@ -7333,64 +7334,131 @@ namespace HelloWorldSolutionIMS
 
         private void ChooseBtn_Click(object sender, EventArgs e)
         {
-            ArtificialMapping data = new ArtificialMapping();
-            data.ID = int.Parse(MealID);
-            data.Row = selectedRow;
-            data.Col = selectedColumn;
-            data.ChartName = selectedchart;
-
-            artificialMappings.Add(data);
-            try
+            if (editmeal == 1)
             {
-                MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
-                cmd.Parameters.AddWithValue("@MealID", MealID);
+                ChartSubtract(selectedid.ToString());
+                var itemToUpdate = artificialMappings.Where(item => item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == selectedchart).FirstOrDefault();
 
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
+                if (itemToUpdate != null)
                 {
-                    while (reader.Read())
+                    itemToUpdate.ID = int.Parse(MealID);
+                }
+
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
                     {
-                        if (selectedchart == "guna2DataGridView7")
+                        while (reader.Read())
                         {
-                            guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                        }
-                        else if (selectedchart == "guna2DataGridView8")
-                        {
-                            guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                            if (selectedchart == "guna2DataGridView7")
+                            {
+                                guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                            }
+                            else if (selectedchart == "guna2DataGridView8")
+                            {
+                                guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+                            else if (selectedchart == "guna2DataGridView9")
+                            {
+                                guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+                            else if (selectedchart == "guna2DataGridView10")
+                            {
+                                guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+
+
 
                         }
-                        else if (selectedchart == "guna2DataGridView9")
-                        {
-                            guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                        }
-                        else if (selectedchart == "guna2DataGridView10")
-                        {
-                            guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                        }
-
-
-
+                        reader.Close();
+                        MainClass.con.Close();
                     }
-                    reader.Close();
+                    else
+                    {
+                        MessageBox.Show("Meal not found with ID: " + MealID);
+                    }
+
                     MainClass.con.Close();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Meal not found with ID: " + MealID);
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
                 }
-
-                MainClass.con.Close();
+                ChartAdd(MealID);
+                tabControl1.SelectedIndex = 5;
+                editmeal = 0;
             }
-            catch (Exception ex)
+            else
             {
-                MainClass.con.Close();
-                MessageBox.Show(ex.Message);
+                ArtificialMapping data = new ArtificialMapping();
+                data.ID = int.Parse(MealID);
+                data.Row = selectedRow;
+                data.Col = selectedColumn;
+                data.ChartName = selectedchart;
+
+                artificialMappings.Add(data);
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            if (selectedchart == "guna2DataGridView7")
+                            {
+                                guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                            }
+                            else if (selectedchart == "guna2DataGridView8")
+                            {
+                                guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+                            else if (selectedchart == "guna2DataGridView9")
+                            {
+                                guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+                            else if (selectedchart == "guna2DataGridView10")
+                            {
+                                guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+
+
+
+                        }
+                        reader.Close();
+                        MainClass.con.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Meal not found with ID: " + MealID);
+                    }
+
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+                ChartAdd(MealID);
+                tabControl1.SelectedIndex = 5;
             }
-            ChartAdd(MealID);
-            tabControl1.SelectedIndex = 5;
+
         }
 
         private void ChartAdd(string id)
@@ -7559,7 +7627,7 @@ namespace HelloWorldSolutionIMS
             {
                 MainClass.con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
-                cmd.Parameters.AddWithValue("@MealID", MealID);
+                cmd.Parameters.AddWithValue("@MealID", id);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
@@ -7661,6 +7729,59 @@ namespace HelloWorldSolutionIMS
         }
 
         static int titlecheck2 = 0;
+        static int titlecheck3 = 0;
+        private void UpdateChart3(object sender, EventArgs e)
+        {
+            // Create a sample DataTable with data (replace this with your data source).
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Nutrient", typeof(string));
+            dt.Columns.Add("Value", typeof(double));
+
+
+            if (fatsd.Text != "" && double.TryParse(fatsd.Text, out double fatsdValue))
+            {
+                dt.Rows.Add("Fats", fatsdValue * 9);
+            }
+
+            if (proteind.Text != "" && double.TryParse(proteind.Text, out double proteindValue))
+            {
+                dt.Rows.Add("Protein", proteindValue * 4);
+            }
+
+            if (carbsd.Text != "" && double.TryParse(carbsd.Text, out double carbsdValue))
+            {
+                dt.Rows.Add("Carbohydrates", carbsdValue * 4);
+            }
+
+
+            if (titlecheck3 == 0)
+            {
+                chart1.Titles.Add("Nutrient Chart");
+                chart1.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
+
+                // Your existing code for chart settings
+                chart1.Legends[0].Enabled = true; // Enable the legend.
+                chart1.Legends[0].Alignment = StringAlignment.Center; // Align the legend to the center.
+                chart1.Legends[0].Docking = Docking.Bottom; // Dock the legend at the bottom.
+
+                // Your existing code for chart settings
+                chart1.Series.Clear();
+                chart1.Palette = ChartColorPalette.Pastel;
+
+                Series series = new Series("Series1");
+                series.Points.DataBind(dt.AsEnumerable(), "Nutrient", "Value", "");
+
+                series.ChartType = SeriesChartType.Pie;
+                chart1.Series.Add(series);
+                chart1.Series[0].Label = "#PERCENT{P0}";
+                chart1.Series[0].LegendText = "#VALX";
+
+                titlecheck3 = 1;
+            }
+
+            // Refresh the chart.
+            chart1.Refresh();
+        }
         private void UpdateChart2(object sender, EventArgs e)
         {
             // Create a sample DataTable with data (replace this with your data source).
@@ -7685,35 +7806,33 @@ namespace HelloWorldSolutionIMS
             }
 
 
-            if (titlecheck2 != 1)
+            if (titlecheck2 == 0)
             {
                 chart2.Titles.Add("Nutrient Chart");
+                chart2.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
+
+                // Your existing code for chart settings
+                chart2.Legends[0].Enabled = true; // Enable the legend.
+                chart2.Legends[0].Alignment = StringAlignment.Center; // Align the legend to the center.
+                chart2.Legends[0].Docking = Docking.Bottom; // Dock the legend at the bottom.
+
+                // Your existing code for chart settings
+                chart2.Series.Clear();
+                chart2.Palette = ChartColorPalette.Pastel;
+
+                Series series = new Series("Series1");
+                series.Points.DataBind(dt.AsEnumerable(), "Nutrient", "Value", "");
+
+                series.ChartType = SeriesChartType.Pie;
+                chart2.Series.Add(series);
+                chart2.Series[0].Label = "#PERCENT{P0}";
+                chart2.Series[0].LegendText = "#VALX";
+
                 titlecheck2 = 1;
             }
-            chart2.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
-
-            // Your existing code for chart settings
-            chart2.Legends[0].Enabled = true; // Enable the legend.
-            chart2.Legends[0].Alignment = StringAlignment.Center; // Align the legend to the center.
-            chart2.Legends[0].Docking = Docking.Bottom; // Dock the legend at the bottom.
-
-            // Your existing code for chart settings
-            chart2.Series.Clear();
-            chart2.Palette = ChartColorPalette.Pastel;
-
-            Series series = new Series("Series1");
-            series.Points.DataBind(dt.AsEnumerable(), "Nutrient", "Value", "");
-
-            series.ChartType = SeriesChartType.Pie;
-            chart2.Series.Add(series);
-            chart2.Series[0].Label = "#PERCENT{P0}";
-            chart2.Series[0].LegendText = "#VALX";
 
             // Refresh the chart.
             chart2.Refresh();
-
-
-
 
         }
 
@@ -8721,14 +8840,8 @@ namespace HelloWorldSolutionIMS
 
                                 string category = "", one = "", two = "", three = "", four = "", five = "", six = "", seven = "";
 
-                                //if (row10.Cells[1] == null)
-                                //{
-                                //    MessageBox.Show("The category is empty!");
-                                //}
-                                //if (row10.Cells[1].Value != null)
-                                //{
                                 category = "Snack";
-                                //}
+
 
                                 if (row10.Cells[2].Value != null)
                                 {
@@ -8808,6 +8921,145 @@ namespace HelloWorldSolutionIMS
                 }
                 edit = 0;
             }
+        }
+
+        private void dietplantemplatenew_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dietplantemplatenamenew.SelectedItem != null)
+            {
+                DietTemplates selectedTemplate = (DietTemplates)dietplantemplatenamenew.SelectedItem;
+                int selectedID = selectedTemplate.ID;
+
+                if (selectedID == 0)
+                {
+                    dietplandaysnew.Text = "";
+                    dietplantemplatenew.SelectedItem = null;
+                    instructionnew.Text = "";
+                }
+                else
+                {
+                    try
+                    {
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
+
+                        SqlCommand cmd = new SqlCommand("SELECT DIETPLANTEMPLATE, DIETPLANDAYS, INSTRUCTIONS FROM DIETPLANTEMPLATE WHERE ID = @SelectedID", MainClass.con);
+                        cmd.Parameters.AddWithValue("@SelectedID", selectedID);
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            string dietplanTemplate = reader["DIETPLANTEMPLATE"].ToString();
+                            string dietplanDays = reader["DIETPLANDAYS"].ToString();
+                            string Instruct = reader["INSTRUCTIONS"].ToString();
+
+                            dietplantemplatenew.Text = dietplanTemplate;
+                            dietplandaysnew.Text = dietplanDays;
+                            instructionnew.Text = Instruct;
+                        }
+                        reader.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+            }
+        }
+        static int selectedid = 0;
+        static int editmeal = 0;
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView7")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Meal not found with ID: " + MealID);
+                    }
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+
+
         }
     }
 }
