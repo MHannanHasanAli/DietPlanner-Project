@@ -18,9 +18,9 @@ namespace HelloWorldSolutionIMS
         {
             InitializeComponent();
             //calories.TextChanged += UpdateChart;
-            fatsm.TextChanged += UpdateChart;
-            proteinm.TextChanged += UpdateChart;
-            carbsm.TextChanged += UpdateChart;
+            fatsm.TextChanged += UpdateChart2;
+            proteinm.TextChanged += UpdateChart2;
+            carbsm.TextChanged += UpdateChart2;
             fatsd.TextChanged += UpdateChart3;
             proteind.TextChanged += UpdateChart3;
             carbsd.TextChanged += UpdateChart3;
@@ -30,9 +30,9 @@ namespace HelloWorldSolutionIMS
         {
             InitializeComponent();
             //calories.TextChanged += UpdateChart;
-            fatsm.TextChanged += UpdateChart;
-            proteinm.TextChanged += UpdateChart;
-            carbsm.TextChanged += UpdateChart;
+            fatsm.TextChanged += UpdateChart2;
+            proteinm.TextChanged += UpdateChart2;
+            carbsm.TextChanged += UpdateChart2;
             fatsd.TextChanged += UpdateChart3;
             proteind.TextChanged += UpdateChart3;
             carbsd.TextChanged += UpdateChart3;
@@ -743,9 +743,9 @@ namespace HelloWorldSolutionIMS
                 da.Fill(dt);
 
                 // Clear the dropdown items before adding new ones
-                dietplantemplatename.DataSource = null;
+                dietplantemplatenamenew.DataSource = null;
                 // Clear the items (if DataSource is not being set)
-                dietplantemplatename.Items.Clear();
+                dietplantemplatenamenew.Items.Clear();
                 List<DietTemplates> Template = new List<DietTemplates>();
 
                 // Add the default 'Null' option
@@ -760,9 +760,9 @@ namespace HelloWorldSolutionIMS
                     Template.Add(Temp);
                 }
 
-                dietplantemplatename.DataSource = Template;
-                dietplantemplatename.DisplayMember = "Name"; // Display Member is Name
-                dietplantemplatename.ValueMember = "ID"; // Value Member is ID
+                dietplantemplatenamenew.DataSource = Template;
+                dietplantemplatenamenew.DisplayMember = "Name"; // Display Member is Name
+                dietplantemplatenamenew.ValueMember = "ID"; // Value Member is ID
 
 
                 if (conn == 1)
@@ -795,9 +795,9 @@ namespace HelloWorldSolutionIMS
                 da.Fill(dt);
 
                 // Clear the dropdown items before adding new ones
-                instruction.DataSource = null;
+                instructionnew.DataSource = null;
                 // Clear the items (if DataSource is not being set)
-                instruction.Items.Clear();
+                instructionnew.Items.Clear();
                 List<Instruction> Template = new List<Instruction>();
 
                 // Add the default 'Null' option
@@ -812,9 +812,9 @@ namespace HelloWorldSolutionIMS
                     Template.Add(Temp);
                 }
 
-                instruction.DataSource = Template;
-                instruction.DisplayMember = "Name"; // Display Member is Name
-                instruction.ValueMember = "ID"; // Value Member is ID
+                instructionnew.DataSource = Template;
+                instructionnew.DisplayMember = "Name"; // Display Member is Name
+                instructionnew.ValueMember = "ID"; // Value Member is ID
 
 
                 if (conn == 1)
@@ -2656,6 +2656,9 @@ namespace HelloWorldSolutionIMS
         }
         private void DietPlan_Load(object sender, EventArgs e)
         {
+            chart1.Series.Clear();
+            chart2.Series.Clear();
+            UpdateInstruction();
             try
             {
                 MainClass.con.Open();
@@ -7091,6 +7094,7 @@ namespace HelloWorldSolutionIMS
             {
                 ClearMeals();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
                 tabControl1.SelectedIndex = 6;
                 guna2DataGridView12.ClearSelection();
 
@@ -7104,6 +7108,7 @@ namespace HelloWorldSolutionIMS
             {
                 ClearMeals();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
                 tabControl1.SelectedIndex = 6;
                 guna2DataGridView12.ClearSelection();
             }
@@ -7115,6 +7120,7 @@ namespace HelloWorldSolutionIMS
             {
                 ClearMeals();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
                 tabControl1.SelectedIndex = 6;
                 guna2DataGridView12.ClearSelection();
             }
@@ -7126,6 +7132,7 @@ namespace HelloWorldSolutionIMS
             {
                 ClearMeals();
                 ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
                 tabControl1.SelectedIndex = 6;
                 guna2DataGridView12.ClearSelection();
 
@@ -7732,6 +7739,7 @@ namespace HelloWorldSolutionIMS
         static int titlecheck3 = 0;
         private void UpdateChart3(object sender, EventArgs e)
         {
+            chart2.Titles.Clear();
             // Create a sample DataTable with data (replace this with your data source).
             DataTable dt = new DataTable();
             dt.Columns.Add("Nutrient", typeof(string));
@@ -7756,51 +7764,52 @@ namespace HelloWorldSolutionIMS
 
             if (titlecheck3 == 0)
             {
-                chart1.Titles.Add("Nutrient Chart");
-                chart1.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
-
-                // Your existing code for chart settings
-                chart1.Legends[0].Enabled = true; // Enable the legend.
-                chart1.Legends[0].Alignment = StringAlignment.Center; // Align the legend to the center.
-                chart1.Legends[0].Docking = Docking.Bottom; // Dock the legend at the bottom.
-
-                // Your existing code for chart settings
-                chart1.Series.Clear();
-                chart1.Palette = ChartColorPalette.Pastel;
-
-                Series series = new Series("Series1");
-                series.Points.DataBind(dt.AsEnumerable(), "Nutrient", "Value", "");
-
-                series.ChartType = SeriesChartType.Pie;
-                chart1.Series.Add(series);
-                chart1.Series[0].Label = "#PERCENT{P0}";
-                chart1.Series[0].LegendText = "#VALX";
 
                 titlecheck3 = 1;
             }
+            chart2.Titles.Add("Nutrient Chart");
+            chart2.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
+
+            // Your existing code for chart settings
+            chart2.Legends[0].Enabled = true; // Enable the legend.
+            chart2.Legends[0].Alignment = StringAlignment.Center; // Align the legend to the center.
+            chart2.Legends[0].Docking = Docking.Bottom; // Dock the legend at the bottom.
+
+            // Your existing code for chart settings
+            chart2.Series.Clear();
+            chart2.Palette = ChartColorPalette.Pastel;
+
+            Series series = new Series("Series1");
+            series.Points.DataBind(dt.AsEnumerable(), "Nutrient", "Value", "");
+
+            series.ChartType = SeriesChartType.Pie;
+            chart2.Series.Add(series);
+            chart2.Series[0].Label = "#PERCENT{P0}";
+            chart2.Series[0].LegendText = "#VALX";
 
             // Refresh the chart.
-            chart1.Refresh();
+            chart2.Refresh();
         }
         private void UpdateChart2(object sender, EventArgs e)
         {
-            // Create a sample DataTable with data (replace this with your data source).
+            chart1.Titles.Clear();
+
             DataTable dt = new DataTable();
             dt.Columns.Add("Nutrient", typeof(string));
             dt.Columns.Add("Value", typeof(double));
 
 
-            if (fatsd.Text != "" && double.TryParse(fatsd.Text, out double fatsdValue))
+            if (fatsm.Text != "" && double.TryParse(fatsm.Text, out double fatsdValue))
             {
                 dt.Rows.Add("Fats", fatsdValue * 9);
             }
 
-            if (proteind.Text != "" && double.TryParse(proteind.Text, out double proteindValue))
+            if (proteinm.Text != "" && double.TryParse(proteinm.Text, out double proteindValue))
             {
                 dt.Rows.Add("Protein", proteindValue * 4);
             }
 
-            if (carbsd.Text != "" && double.TryParse(carbsd.Text, out double carbsdValue))
+            if (carbsm.Text != "" && double.TryParse(carbsm.Text, out double carbsdValue))
             {
                 dt.Rows.Add("Carbohydrates", carbsdValue * 4);
             }
@@ -7808,31 +7817,31 @@ namespace HelloWorldSolutionIMS
 
             if (titlecheck2 == 0)
             {
-                chart2.Titles.Add("Nutrient Chart");
-                chart2.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
 
-                // Your existing code for chart settings
-                chart2.Legends[0].Enabled = true; // Enable the legend.
-                chart2.Legends[0].Alignment = StringAlignment.Center; // Align the legend to the center.
-                chart2.Legends[0].Docking = Docking.Bottom; // Dock the legend at the bottom.
-
-                // Your existing code for chart settings
-                chart2.Series.Clear();
-                chart2.Palette = ChartColorPalette.Pastel;
-
-                Series series = new Series("Series1");
-                series.Points.DataBind(dt.AsEnumerable(), "Nutrient", "Value", "");
-
-                series.ChartType = SeriesChartType.Pie;
-                chart2.Series.Add(series);
-                chart2.Series[0].Label = "#PERCENT{P0}";
-                chart2.Series[0].LegendText = "#VALX";
 
                 titlecheck2 = 1;
             }
+            chart1.Titles.Add("Nutrient Chart");
+            chart1.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
 
+            // Your existing code for chart settings
+            chart1.Legends[0].Enabled = true; // Enable the legend.
+            chart1.Legends[0].Alignment = StringAlignment.Center; // Align the legend to the center.
+            chart1.Legends[0].Docking = Docking.Bottom; // Dock the legend at the bottom.
+
+            // Your existing code for chart settings
+            chart1.Series.Clear();
+            chart1.Palette = ChartColorPalette.Pastel;
+
+            Series series = new Series("Series1");
+            series.Points.DataBind(dt.AsEnumerable(), "Nutrient", "Value", "");
+
+            series.ChartType = SeriesChartType.Pie;
+            chart1.Series.Add(series);
+            chart1.Series[0].Label = "#PERCENT{P0}";
+            chart1.Series[0].LegendText = "#VALX";
             // Refresh the chart.
-            chart2.Refresh();
+            chart1.Refresh();
 
         }
 
@@ -9060,6 +9069,537 @@ namespace HelloWorldSolutionIMS
             }
 
 
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView10")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Meal not found with ID: " + MealID);
+                    }
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView9")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Meal not found with ID: " + MealID);
+                    }
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+
+        }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView8")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Meal not found with ID: " + MealID);
+                    }
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+
+        }
+
+        private void filenon_TextChanged(object sender, EventArgs e)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            int stringappendcheck = 0;
+            if (filenon.Text != "")
+            {
+                int value = int.Parse(filenon.Text);
+
+                try
+                {
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
+
+                    SqlCommand cmd2 = new SqlCommand("SELECT  FIRSTNAME, FAMILYNAME, MOBILENO, GENDER, AGE FROM CUSTOMER " +
+                        "WHERE FILENO = @fileno", MainClass.con);
+
+                    cmd2.Parameters.AddWithValue("@fileno", value);
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+                    if (reader2.Read())
+                    {
+                        // Assign values from the reader to the respective text boxes
+                        firstnamen.Text = reader2["FIRSTNAME"].ToString();
+                        familynamen.Text = reader2["FAMILYNAME"].ToString();
+                        mobilenon.Text = reader2["MOBILENO"].ToString();
+                        gendern.Text = reader2["GENDER"].ToString();
+                        agen.Text = reader2["AGE"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No customer with this file no exist!");
+                    }
+                    reader2.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+
+                try
+                {
+                    string customerIDToEdit = dietPlanIDToEdit;
+                    string customerFilenoToEdit = dietPlanIDToEdit;
+
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM MedicalHistory WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@CustomerID", value); // Replace 'customerIdToFind' with the actual ID you want to find.
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            string dbstatus = reader["Status"].ToString();
+                            string dbSmoking = reader["Smoking"].ToString();
+                            string dbblood = reader["BloodType"].ToString();
+
+                            if (dbstatus == "Pregnant" || dbstatus == "Breast Feeding")
+                            {
+                                stringappendcheck++;
+                                stringBuilder.Append(dbstatus);
+                                stringBuilder.AppendLine();
+                            }
+                        }
+                    }
+
+                    reader.Close();
+                    MainClass.con.Close();
+
+                    MainClass.con.Open();
+                    SqlCommand cmd2 = new SqlCommand("SELECT * FROM DiseaseHistory WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd2.Parameters.AddWithValue("@CustomerID", value); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+                    if (reader2.HasRows)
+                    {
+                        stringBuilder.Append("Diseases:");
+                        stringBuilder.AppendLine();
+                        while (reader2.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            stringBuilder.Append(reader2["Data"].ToString() + ", ");
+
+
+                        }
+                        stringappendcheck++;
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Append(".");
+                        stringBuilder.AppendLine();
+                        stringBuilder.AppendLine();
+                    }
+
+                    reader2.Close();
+                    MainClass.con.Close();
+
+                    MainClass.con.Open();
+                    SqlCommand cmd3 = new SqlCommand("SELECT * FROM FoodAllergies WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd3.Parameters.AddWithValue("@CustomerID", value); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    SqlDataReader reader3 = cmd3.ExecuteReader();
+                    if (reader3.HasRows)
+                    {
+                        stringBuilder.Append("Food Allergies:");
+                        stringBuilder.AppendLine();
+                        while (reader3.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            stringBuilder.Append(reader3["Data"].ToString() + ", ");
+
+
+                        }
+                        stringappendcheck++;
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Append(".");
+                        stringBuilder.AppendLine();
+                        stringBuilder.AppendLine();
+                    }
+
+                    reader3.Close();
+                    MainClass.con.Close();
+
+
+
+                    MainClass.con.Open();
+                    SqlCommand cmd5 = new SqlCommand("SELECT * FROM Medication WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd5.Parameters.AddWithValue("@CustomerID", value); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    List<string> medicines = new List<string>();
+                    SqlDataReader reader5 = cmd5.ExecuteReader();
+                    if (reader5.HasRows)
+                    {
+                        stringBuilder.Append("Medications:");
+                        stringBuilder.AppendLine();
+                        while (reader5.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            stringBuilder.Append(reader5["Data"].ToString() + ", ");
+
+
+                        }
+                        stringappendcheck++;
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Append(".");
+                        stringBuilder.AppendLine();
+                        stringBuilder.AppendLine();
+
+                    }
+
+                    reader5.Close();
+                    MainClass.con.Close();
+
+                    MainClass.con.Open();
+                    SqlCommand cmd6 = new SqlCommand("SELECT * FROM Diet WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd6.Parameters.AddWithValue("@CustomerID", value); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    SqlDataReader reader6 = cmd6.ExecuteReader();
+                    if (reader6.HasRows)
+                    {
+                        stringBuilder.Append("Diet Avoidance:");
+                        stringBuilder.AppendLine();
+                        while (reader6.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            stringBuilder.Append(reader6["Data"].ToString() + ", ");
+
+
+
+                        }
+                        stringappendcheck++;
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Append(".");
+                        //stringBuilder.RemoveLast();
+                        stringBuilder.AppendLine();
+                        stringBuilder.AppendLine();
+
+                    }
+
+                    reader6.Close();
+                    MainClass.con.Close();
+
+                    MainClass.con.Open();
+                    SqlCommand cmd7 = new SqlCommand("SELECT * FROM Questions WHERE FILENO = @CustomerID", MainClass.con);
+                    cmd7.Parameters.AddWithValue("@CustomerID", value); // Replace 'customerIdToFind' with the actual ID you want to find.
+                    SqlDataReader reader7 = cmd7.ExecuteReader();
+                    if (reader7.HasRows)
+                    {
+                        stringappendcheck++;
+                        stringBuilder.Append("Other Problems: ");
+                        stringBuilder.AppendLine();
+                        while (reader7.Read())
+                        {
+                            // Set the retrieved data into input boxes
+
+                            string hdans = reader7["hormonalDisease"].ToString();
+                            string cans = reader7["cancer"].ToString();
+                            string hians = reader7["immuneDisease"].ToString();
+                            string hedans = reader7["hereditaryDisease"].ToString();
+                            string pdans = reader7["pancreaticDisease"].ToString();
+                            string odans = reader7["otherDisease"].ToString();
+
+                            if (hdans == "Yes")
+                            {
+
+                                stringBuilder.Append("Harmonal Discease, ");
+
+
+                            }
+
+
+                            if (cans == "Yes")
+                            {
+                                stringBuilder.Append("Cancer, ");
+                            }
+
+
+                            if (hians == "Yes")
+                            {
+                                stringBuilder.Append("Immunity Disease, ");
+                            }
+
+
+                            if (hedans == "Yes")
+                            {
+                                stringBuilder.Append("Hereditary Disease, ");
+                            }
+
+
+                            if (pdans == "Yes")
+                            {
+                                stringBuilder.Append("Pancreatic Disease, ");
+                            }
+
+
+                            if (odans == "Yes")
+                            {
+                                stringBuilder.Append("Other Disease. ");
+                            }
+
+
+                        }
+
+                    }
+                    if (stringappendcheck != 0)
+                    {
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Remove(stringBuilder.Length - 1, 1);
+                        stringBuilder.Append(".");
+                        medicalhistoryn.Text = stringBuilder.ToString();
+                    }
+
+                    reader7.Close();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                firstnamen.Text = "";
+                familynamen.Text = "";
+                mobilenon.Text = "";
+                gendern.SelectedItem = null;
+                medicalhistoryn.Text = "";
+                agen.Text = "";
+
+            }
         }
     }
 }
