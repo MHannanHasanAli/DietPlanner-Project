@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using OfficeOpenXml;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -8,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using static HelloWorldSolutionIMS.MealAction;
 
 namespace HelloWorldSolutionIMS
 {
@@ -426,14 +428,15 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
-            //categorylabel.Visible = false;
-            //categorybox.Visible = false;
+            MainClass.HideAllTabsOnTabControl(tabControl1);
+            tabControl1.SelectedIndex = 0;
             ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView1.GridColor = Color.Black;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
             chart1.Series.Clear();
+            UpdateGroups();
         }
         private void New_Click(object sender, EventArgs e)
         {
@@ -1051,6 +1054,194 @@ namespace HelloWorldSolutionIMS
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void SaveGroupn_Click(object sender, EventArgs e)
+        {
+            if (agnar.Text != "" && agnen.Text != "")
+            {
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("INSERT INTO GroupIngredients (Namear, Nameen) " +
+                        "VALUES (@Namear, @Nameen)", MainClass.con);
+
+                    cmd.Parameters.AddWithValue("@Namear", agnar.Text);
+                    cmd.Parameters.AddWithValue("@Nameen", agnen.Text);
+
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Added successfully");
+                    MainClass.con.Close();
+
+                    agnar.Text = "";
+                    agnen.Text = "";
+
+                    ShowGroupIngredients(guna2DataGridView3, idgn, gnnar, gnnen);
+                    tabControl1.SelectedIndex = 2;
+
+                    UpdateGroups();
+
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Fill both names!.");
+            }
+        }
+
+        private void Closebtn_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
+
+        private void agn_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void CLoseDGN_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
+        private void ShowGroupIngredients(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn namear, DataGridViewColumn nameen)
+        {
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT ID, Namear, Nameen FROM GroupIngredients", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                no.DataPropertyName = dt.Columns["ID"].ToString();
+                namear.DataPropertyName = dt.Columns["Namear"].ToString();
+                nameen.DataPropertyName = dt.Columns["Nameen"].ToString();
+
+
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void UpdateGroups()
+        {
+            SqlCommand cmd;
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
+
+                cmd = new SqlCommand("SELECT ID, Namear, Nameen FROM GroupIngredients", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Clear the dropdown items before adding new ones
+                groupar.DataSource = null;
+                groupen.DataSource = null;
+
+                // Clear the items (if DataSource is not being set)
+                groupar.Items.Clear();
+                groupen.Items.Clear();
+                List<GroupnarContent> GroupNAR = new List<GroupnarContent>();
+
+                // Add the default 'Null' option
+                GroupNAR.Add(new GroupnarContent { ID = 0, NameAR = "Null", NameEN = "Null" });
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    int Id = row.Field<int>("ID");
+                    string Namear = row.Field<string>("Namear");
+                    string Nameen = row.Field<string>("Nameen");
+
+                    GroupnarContent Temp = new GroupnarContent { ID = Id, NameAR = Namear, NameEN = Nameen };
+                    GroupNAR.Add(Temp);
+                }
+
+                groupar.DataSource = GroupNAR;
+                groupar.DisplayMember = "NameAR"; // Display Member is Name
+                groupar.ValueMember = "ID"; // Value Member is ID
+
+                groupen.DataSource = GroupNAR;
+                groupen.DisplayMember = "NameEN"; // Display Member is Name
+                groupen.ValueMember = "ID"; // Value Member is ID
+
+
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void Deletegn_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView3 != null)
+            {
+                if (guna2DataGridView3.Rows.Count > 0)
+                {
+                    if (guna2DataGridView3.SelectedRows.Count == 1)
+                    {
+
+                        // Get the Ingredient ID to display in the confirmation message
+                        string groupid = guna2DataGridView3.SelectedRows[0].Cells[0].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
+
+                        // Ask for confirmation
+                        DialogResult result = MessageBox.Show("Are you sure you want to delete Group N : " + groupid + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("DELETE FROM GroupIngredients WHERE ID = @ID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@ID", groupid); // Assuming the Ingredient ID is in the first cell of the selected row.
+                                cmd.ExecuteNonQuery();
+                                MainClass.con.Close();
+
+                                //tabControl1.SelectedIndex = 2;
+                                ShowGroupIngredients(guna2DataGridView3, idgn, gnnar, gnnen);
+                                UpdateGroups();
+
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void dgn_Click(object sender, EventArgs e)
+        {
+            ShowGroupIngredients(guna2DataGridView3, idgn, gnnar, gnnen);
+            tabControl1.SelectedIndex = 2;
         }
     }
 }
