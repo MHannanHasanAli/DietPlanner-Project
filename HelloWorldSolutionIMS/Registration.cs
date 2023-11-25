@@ -3728,5 +3728,39 @@ namespace HelloWorldSolutionIMS
             }
 
         }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            firstname.Text = "";
+            familyname.Text = "";
+            gender.SelectedItem = null;
+            dob.Value = DateTime.Now; // Reset the date of birth to the current date or your default value.
+            age.Text = "";
+            mobileno.Text = "";
+            landline.Text = "";
+            email.Text = "";
+            subscriptionstatus.Text = "";
+            startdate.Value = DateTime.Now; // Reset the subscription start date to the current date or your default value.
+            enddate.Value = DateTime.Now; // Reset the subscription end date to the current date or your default value.
+            branch.Text = "";
+            lastvisitdate.Value = DateTime.Now; // Reset the last visit date to the current date or your default value.
+            nutritionistname.SelectedItem = null;
+
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE LoadData SET ClientID = @FileNoE WHERE ID = @id", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@id", 1); // Replace fileNoValue with the actual file number.
+                cmd.Parameters.AddWithValue("@FileNoE", 0);
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

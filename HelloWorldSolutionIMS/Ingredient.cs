@@ -124,7 +124,7 @@ namespace HelloWorldSolutionIMS
         private void SearchIngredients(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn fdc, DataGridViewColumn classification, DataGridViewColumn ingredientAr, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
         {
             string ingredientName = ingredientar.Text;
-            string groupArName = groupar.Text;
+            string groupArName = ingredienten.Text;
 
             if (ingredientName != "" && groupArName != "")
             {
@@ -133,7 +133,7 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Open();
 
                     SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
-                        "WHERE (INGREDIENT_AR LIKE @IngredientName) AND (GROUP_AR LIKE @GroupArName)", MainClass.con);
+                        "WHERE (INGREDIENT_AR LIKE @IngredientName) AND (INGREDIENT_EN LIKE @GroupArName)", MainClass.con);
 
                     cmd.Parameters.AddWithValue("@IngredientName", "%" + ingredientName + "%");
                     cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
@@ -172,7 +172,7 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Open();
 
                     SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
-                        "WHERE GROUP_AR LIKE @GroupArName", MainClass.con);
+                        "WHERE INGREDIENT_EN LIKE @GroupArName", MainClass.con);
 
                     cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
 
@@ -316,7 +316,26 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-
+                    foreach (Control control in panel2.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (Control control in panel5.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
 
                 }
 
@@ -356,7 +375,26 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-
+                    foreach (Control control in panel2.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (Control control in panel5.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
 
 
 
@@ -413,7 +451,26 @@ namespace HelloWorldSolutionIMS
                             label.Font = font;
                         }
                     }
+                    foreach (System.Windows.Forms.Control control in panel2.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
 
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel5.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
 
 
 

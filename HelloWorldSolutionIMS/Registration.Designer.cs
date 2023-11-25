@@ -312,6 +312,7 @@
             this.firstnamemh = new Guna.UI2.WinForms.Guna2TextBox();
             this.filenomh = new Guna.UI2.WinForms.Guna2TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Reset = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -370,6 +371,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.Reset);
             this.panel1.Controls.Add(this.label32);
             this.panel1.Controls.Add(this.AddClient);
             this.panel1.Controls.Add(this.nutritionistname);
@@ -4215,6 +4217,25 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
+            // Reset
+            // 
+            this.Reset.AutoRoundedCorners = true;
+            this.Reset.BorderRadius = 21;
+            this.Reset.CausesValidation = false;
+            this.Reset.CheckedState.Parent = this.Reset;
+            this.Reset.CustomImages.Parent = this.Reset;
+            this.Reset.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.Reset.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.Reset.ForeColor = System.Drawing.Color.White;
+            this.Reset.HoverState.Parent = this.Reset;
+            this.Reset.Location = new System.Drawing.Point(902, 420);
+            this.Reset.Name = "Reset";
+            this.Reset.ShadowDecoration.Parent = this.Reset;
+            this.Reset.Size = new System.Drawing.Size(214, 45);
+            this.Reset.TabIndex = 72;
+            this.Reset.Text = "Reset Pages";
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -4478,5 +4499,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button SaveMedicalHistory;
         private Guna.UI2.WinForms.Guna2Button MedicalHistoryDelete;
+        private Guna.UI2.WinForms.Guna2Button Reset;
     }
 }

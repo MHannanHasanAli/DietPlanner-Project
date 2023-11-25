@@ -405,16 +405,6 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.ChooseBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView12 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.mealiddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealardgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealendgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caloriesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proteinmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatsmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carbohydratesmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calciummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fibermaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodiummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupcen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupcar = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupnen = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -469,6 +459,16 @@
             this.label97 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
             this.label99 = new System.Windows.Forms.Label();
+            this.mealiddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealardgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealendgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caloriesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proteinmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatsmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carbohydratesmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calciummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fibermaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodiummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -5071,9 +5071,9 @@
             this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.Location = new System.Drawing.Point(567, 273);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(105, 18);
+            this.label64.Size = new System.Drawing.Size(48, 18);
             this.label64.TabIndex = 279;
-            this.label64.Text = "Carbohydrates";
+            this.label64.Text = "Carbs";
             // 
             // label65
             // 
@@ -5371,9 +5371,9 @@
             this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.Location = new System.Drawing.Point(47, 242);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(63, 18);
+            this.label74.Size = new System.Drawing.Size(37, 18);
             this.label74.TabIndex = 261;
-            this.label74.Text = "Calories";
+            this.label74.Text = "Kcal";
             // 
             // potassiumd
             // 
@@ -5648,81 +5648,6 @@
             this.guna2DataGridView12.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView12.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView12.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView12_CellClick);
-            // 
-            // mealiddgv
-            // 
-            this.mealiddgv.HeaderText = "NO";
-            this.mealiddgv.MinimumWidth = 6;
-            this.mealiddgv.Name = "mealiddgv";
-            this.mealiddgv.ReadOnly = true;
-            // 
-            // mealardgv
-            // 
-            this.mealardgv.FillWeight = 180F;
-            this.mealardgv.HeaderText = "MEAL (AR)";
-            this.mealardgv.MinimumWidth = 6;
-            this.mealardgv.Name = "mealardgv";
-            this.mealardgv.ReadOnly = true;
-            // 
-            // mealendgv
-            // 
-            this.mealendgv.FillWeight = 480F;
-            this.mealendgv.HeaderText = "MEAL (EN)";
-            this.mealendgv.MinimumWidth = 6;
-            this.mealendgv.Name = "mealendgv";
-            this.mealendgv.ReadOnly = true;
-            // 
-            // caloriesdgv
-            // 
-            this.caloriesdgv.HeaderText = "CALORIES";
-            this.caloriesdgv.MinimumWidth = 6;
-            this.caloriesdgv.Name = "caloriesdgv";
-            this.caloriesdgv.ReadOnly = true;
-            // 
-            // proteinmaindgv
-            // 
-            this.proteinmaindgv.HeaderText = "PROTEIN";
-            this.proteinmaindgv.MinimumWidth = 6;
-            this.proteinmaindgv.Name = "proteinmaindgv";
-            this.proteinmaindgv.ReadOnly = true;
-            // 
-            // fatsmaindgv
-            // 
-            this.fatsmaindgv.HeaderText = "FATS";
-            this.fatsmaindgv.MinimumWidth = 6;
-            this.fatsmaindgv.Name = "fatsmaindgv";
-            this.fatsmaindgv.ReadOnly = true;
-            // 
-            // carbohydratesmaindgv
-            // 
-            this.carbohydratesmaindgv.HeaderText = "CARBOHYDRATES";
-            this.carbohydratesmaindgv.MinimumWidth = 6;
-            this.carbohydratesmaindgv.Name = "carbohydratesmaindgv";
-            this.carbohydratesmaindgv.ReadOnly = true;
-            // 
-            // calciummaindgv
-            // 
-            this.calciummaindgv.HeaderText = "CALCIUM";
-            this.calciummaindgv.MinimumWidth = 6;
-            this.calciummaindgv.Name = "calciummaindgv";
-            this.calciummaindgv.ReadOnly = true;
-            this.calciummaindgv.Visible = false;
-            // 
-            // fibermaindgv
-            // 
-            this.fibermaindgv.HeaderText = "FIBER";
-            this.fibermaindgv.MinimumWidth = 6;
-            this.fibermaindgv.Name = "fibermaindgv";
-            this.fibermaindgv.ReadOnly = true;
-            this.fibermaindgv.Visible = false;
-            // 
-            // sodiummaindgv
-            // 
-            this.sodiummaindgv.HeaderText = "SODIUM";
-            this.sodiummaindgv.MinimumWidth = 6;
-            this.sodiummaindgv.Name = "sodiummaindgv";
-            this.sodiummaindgv.ReadOnly = true;
-            this.sodiummaindgv.Visible = false;
             // 
             // groupcen
             // 
@@ -6305,9 +6230,9 @@
             this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label89.Location = new System.Drawing.Point(235, 380);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(78, 24);
+            this.label89.Size = new System.Drawing.Size(46, 24);
             this.label89.TabIndex = 226;
-            this.label89.Text = "Calories";
+            this.label89.Text = "Kcal";
             // 
             // label90
             // 
@@ -6315,9 +6240,9 @@
             this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label90.Location = new System.Drawing.Point(425, 421);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(132, 24);
+            this.label90.Size = new System.Drawing.Size(59, 24);
             this.label90.TabIndex = 244;
-            this.label90.Text = "Carbohydrates";
+            this.label90.Text = "Carbs";
             // 
             // label91
             // 
@@ -6608,6 +6533,81 @@
             this.label99.Size = new System.Drawing.Size(78, 24);
             this.label99.TabIndex = 235;
             this.label99.Text = "Calcium";
+            // 
+            // mealiddgv
+            // 
+            this.mealiddgv.HeaderText = "NO";
+            this.mealiddgv.MinimumWidth = 6;
+            this.mealiddgv.Name = "mealiddgv";
+            this.mealiddgv.ReadOnly = true;
+            // 
+            // mealardgv
+            // 
+            this.mealardgv.FillWeight = 180F;
+            this.mealardgv.HeaderText = "MEAL (AR)";
+            this.mealardgv.MinimumWidth = 6;
+            this.mealardgv.Name = "mealardgv";
+            this.mealardgv.ReadOnly = true;
+            // 
+            // mealendgv
+            // 
+            this.mealendgv.FillWeight = 480F;
+            this.mealendgv.HeaderText = "MEAL (EN)";
+            this.mealendgv.MinimumWidth = 6;
+            this.mealendgv.Name = "mealendgv";
+            this.mealendgv.ReadOnly = true;
+            // 
+            // caloriesdgv
+            // 
+            this.caloriesdgv.HeaderText = "KCAL";
+            this.caloriesdgv.MinimumWidth = 6;
+            this.caloriesdgv.Name = "caloriesdgv";
+            this.caloriesdgv.ReadOnly = true;
+            // 
+            // proteinmaindgv
+            // 
+            this.proteinmaindgv.HeaderText = "PROTEIN";
+            this.proteinmaindgv.MinimumWidth = 6;
+            this.proteinmaindgv.Name = "proteinmaindgv";
+            this.proteinmaindgv.ReadOnly = true;
+            // 
+            // fatsmaindgv
+            // 
+            this.fatsmaindgv.HeaderText = "FATS";
+            this.fatsmaindgv.MinimumWidth = 6;
+            this.fatsmaindgv.Name = "fatsmaindgv";
+            this.fatsmaindgv.ReadOnly = true;
+            // 
+            // carbohydratesmaindgv
+            // 
+            this.carbohydratesmaindgv.HeaderText = "CARBS";
+            this.carbohydratesmaindgv.MinimumWidth = 6;
+            this.carbohydratesmaindgv.Name = "carbohydratesmaindgv";
+            this.carbohydratesmaindgv.ReadOnly = true;
+            // 
+            // calciummaindgv
+            // 
+            this.calciummaindgv.HeaderText = "CALCIUM";
+            this.calciummaindgv.MinimumWidth = 6;
+            this.calciummaindgv.Name = "calciummaindgv";
+            this.calciummaindgv.ReadOnly = true;
+            this.calciummaindgv.Visible = false;
+            // 
+            // fibermaindgv
+            // 
+            this.fibermaindgv.HeaderText = "FIBER";
+            this.fibermaindgv.MinimumWidth = 6;
+            this.fibermaindgv.Name = "fibermaindgv";
+            this.fibermaindgv.ReadOnly = true;
+            this.fibermaindgv.Visible = false;
+            // 
+            // sodiummaindgv
+            // 
+            this.sodiummaindgv.HeaderText = "SODIUM";
+            this.sodiummaindgv.MinimumWidth = 6;
+            this.sodiummaindgv.Name = "sodiummaindgv";
+            this.sodiummaindgv.ReadOnly = true;
+            this.sodiummaindgv.Visible = false;
             // 
             // DietPlan
             // 
@@ -7021,16 +7021,6 @@
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Label label99;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealiddgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealardgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealendgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn caloriesdgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proteinmaindgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fatsmaindgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn carbohydratesmaindgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calciummaindgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fibermaindgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sodiummaindgv;
         private Guna.UI2.WinForms.Guna2Button ChooseBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Extra;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn26;
@@ -7068,5 +7058,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn55;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn56;
         private System.Windows.Forms.DataGridViewButtonColumn Lunchaction;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mealiddgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mealardgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mealendgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caloriesdgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proteinmaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fatsmaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carbohydratesmaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calciummaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fibermaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sodiummaindgv;
     }
 }

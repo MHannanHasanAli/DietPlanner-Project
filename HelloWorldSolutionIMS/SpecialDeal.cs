@@ -304,11 +304,11 @@ namespace HelloWorldSolutionIMS
                         startdate.Text = "";
                         enddate.Text = "";
                         nutritionist.Text = "null";
-                        UpdateBranch();
+
                         promotiondetails.Text = "";
 
                         MainClass.con.Close();
-
+                        UpdateBranch();
                         // Refresh the DataGridView to display the updated data.
                         // Replace the arguments with your actual DataGridView and column names.
                         ShowSpecialDeals(guna2DataGridView1, iddgv, promotionnamedgv, promotioncodedgv, promotionpercentagedgv, startdatedgv, enddatedgv, nutritionistdgv, branchdgv);
