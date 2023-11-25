@@ -1124,7 +1124,7 @@ namespace HelloWorldSolutionIMS
 
             foreach (var item in Defaulters)
             {
-                SqlCommand cmd3 = new SqlCommand("SELECT TOP 1 Amount FROM PAYMENT WHERE FILENO = @FILENO ORDER BY ID DESC", MainClass.con);
+                SqlCommand cmd3 = new SqlCommand("SELECT TOP 1 AmountAfterPromotion FROM PAYMENT WHERE FILENO = @FILENO ORDER BY ID DESC", MainClass.con);
                 cmd3.Parameters.AddWithValue("@FILENO", item.ToString());
 
                 using (SqlDataReader reader3 = cmd3.ExecuteReader())
@@ -1133,11 +1133,12 @@ namespace HelloWorldSolutionIMS
                     {
                         reader3.Read(); // Read the first row
 
-                        // Check if "Amount" column exists before accessing it
-                        int amountOrdinal = reader3.GetOrdinal("Amount");
-                        if (!reader3.IsDBNull(amountOrdinal))
+                        string amountString = reader3["AmountAfterPromotion"].ToString();
+                        float amount;
+
+                        // Try to parse the value as a float
+                        if (float.TryParse(amountString, out amount))
                         {
-                            float amount = float.Parse(reader3["Amount"].ToString());
                             defaultamount += amount;
                         }
                     }
