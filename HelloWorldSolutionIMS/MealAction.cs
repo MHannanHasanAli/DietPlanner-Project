@@ -26,7 +26,64 @@ namespace HelloWorldSolutionIMS
 
 
         }
+        public void IngredientFiller()
+        {
+            SqlCommand cmd;
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
 
+                cmd = new SqlCommand("SELECT ID, INGREDIENT_EN, INGREDIENT_AR FROM Ingredient", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Clear the dropdown items before adding new ones
+                ingredienten.DataSource = null;
+                ingredientar.DataSource = null;
+                // Clear the items (if DataSource is not being set)
+                ingredienten.Items.Clear();
+                ingredientar.Items.Clear();
+                List<IngredientList> ingredients = new List<IngredientList>();
+
+                // Add the default 'Null' option
+                ingredients.Add(new IngredientList { ID = 0, NameEn = "Null", NameAr = "Null" });
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    int Id = row.Field<int>("ID");
+                    string Nameen = row.Field<string>("INGREDIENT_EN");
+                    string Namear = row.Field<string>("INGREDIENT_AR");
+
+                    IngredientList Temp = new IngredientList { ID = Id, NameEn = Nameen, NameAr = Namear };
+                    ingredients.Add(Temp);
+                }
+
+                ingredienten.DataSource = ingredients;
+                ingredienten.DisplayMember = "NameEn"; // Display Member is Name
+                ingredienten.ValueMember = "ID"; // Value Member is ID
+
+                ingredientar.DataSource = ingredients;
+                ingredientar.DisplayMember = "NameAr"; // Display Member is Name
+                ingredientar.ValueMember = "ID"; // Value Member is ID
+
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
         public void extrafunc()
         {
             List<int> itemids = GetIngredientsForMeal();
@@ -80,7 +137,7 @@ namespace HelloWorldSolutionIMS
                             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
                             buttonColumn.Name = "RemoveColumn";
                             buttonColumn.HeaderText = "Action";
-                            buttonColumn.Text = "Remove";
+                            buttonColumn.Text = "X";
                             buttonColumn.UseColumnTextForButtonValue = true;
                             guna2DataGridView1.Columns.Add(buttonColumn);
                             removeflag = 1;
@@ -312,6 +369,12 @@ namespace HelloWorldSolutionIMS
         {
             public int ID { get; set; }
             public string Name { get; set; }
+        }
+        public class IngredientList
+        {
+            public int ID { get; set; }
+            public string NameEn { get; set; }
+            public string NameAr { get; set; }
         }
         List<Ingredients> ingredientsList = new List<Ingredients>();
         List<Ingredients> ingredientsListen = new List<Ingredients>();
@@ -1048,7 +1111,7 @@ namespace HelloWorldSolutionIMS
             chart1.Series.Clear();
             MainClass.HideAllTabsOnTabControl(tabControl1);
             save.Visible = false;
-
+            IngredientFiller();
             ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView1.GridColor = Color.Black;
@@ -1246,15 +1309,11 @@ namespace HelloWorldSolutionIMS
                 DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
                 buttonColumn.Name = "RemoveColumn";
                 buttonColumn.HeaderText = "Action";
-                buttonColumn.Text = "Remove";
+                buttonColumn.Text = "X";
                 buttonColumn.UseColumnTextForButtonValue = true;
                 guna2DataGridView1.Columns.Add(buttonColumn);
                 removeflag = 1;
 
-                // Set the custom cell style for the button cells
-                DataGridViewCellStyle cellStyle = new DataGridViewCellStyle();
-                cellStyle.BackColor = Color.Red; // Set the background color to red
-                buttonColumn.DefaultCellStyle = cellStyle;
 
                 // Handle the click event for the "Remove" button
                 guna2DataGridView1.CellContentClick += (s, args) =>
