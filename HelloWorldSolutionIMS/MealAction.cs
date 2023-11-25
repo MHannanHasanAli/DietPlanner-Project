@@ -26,6 +26,7 @@ namespace HelloWorldSolutionIMS
 
 
         }
+        static int conn2 = 0;
         public void IngredientFiller()
         {
             SqlCommand cmd;
@@ -34,7 +35,7 @@ namespace HelloWorldSolutionIMS
                 if (MainClass.con.State != ConnectionState.Open)
                 {
                     MainClass.con.Open();
-                    conn = 1;
+                    conn2 = 1;
                 }
 
                 cmd = new SqlCommand("SELECT ID, INGREDIENT_EN, INGREDIENT_AR FROM Ingredient", MainClass.con);
@@ -72,10 +73,10 @@ namespace HelloWorldSolutionIMS
                 ingredientar.DisplayMember = "NameAr"; // Display Member is Name
                 ingredientar.ValueMember = "ID"; // Value Member is ID
 
-                if (conn == 1)
+                if (conn2 == 1)
                 {
                     MainClass.con.Close();
-                    conn = 0;
+                    conn2 = 0;
                 }
             }
             catch (Exception ex)
@@ -413,10 +414,13 @@ namespace HelloWorldSolutionIMS
                 // Clear the dropdown items before adding new ones
                 groupnar.DataSource = null;
                 groupnen.DataSource = null;
-
+                groupnars.DataSource = null;
+                groupnens.DataSource = null;
                 // Clear the items (if DataSource is not being set)
                 groupnar.Items.Clear();
                 groupnen.Items.Clear();
+                groupnars.Items.Clear();
+                groupnens.Items.Clear();
                 List<GroupnarContent> GroupNAR = new List<GroupnarContent>();
 
                 // Add the default 'Null' option
@@ -446,6 +450,14 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     conn = 0;
                 }
+                groupnars.DataSource = GroupNAR;
+                groupnars.DisplayMember = "NameAR"; // Display Member is Name
+                groupnars.ValueMember = "ID"; // Value Member is ID
+
+                groupnens.DataSource = GroupNAR;
+                groupnens.DisplayMember = "NameEN"; // Display Member is Name
+                groupnens.ValueMember = "ID"; // Value Member is ID
+
             }
             catch (Exception ex)
             {
@@ -473,9 +485,13 @@ namespace HelloWorldSolutionIMS
                 // Clear the dropdown items before adding new ones
                 groupcar.DataSource = null;
                 groupcen.DataSource = null;
+                groupcars.DataSource = null;
+                groupcens.DataSource = null;
                 // Clear the items (if DataSource is not being set)
                 groupcar.Items.Clear();
                 groupcen.Items.Clear();
+                groupcars.Items.Clear();
+                groupcens.Items.Clear();
                 List<GroupnarContent> GroupCAR = new List<GroupnarContent>();
 
                 // Add the default 'Null' option
@@ -499,11 +515,20 @@ namespace HelloWorldSolutionIMS
                 groupcen.DisplayMember = "NameEN"; // Display Member is Name
                 groupcen.ValueMember = "ID"; // Value Member is ID
 
+
+
                 if (conn == 1)
                 {
                     MainClass.con.Close();
                     conn = 0;
                 }
+                groupcars.DataSource = GroupCAR;
+                groupcars.DisplayMember = "NameAR"; // Display Member is Name
+                groupcars.ValueMember = "ID"; // Value Member is ID
+
+                groupcens.DataSource = GroupCAR;
+                groupcens.DisplayMember = "NameEN"; // Display Member is Name
+                groupcens.ValueMember = "ID"; // Value Member is ID
             }
             catch (Exception ex)
             {
@@ -601,7 +626,7 @@ namespace HelloWorldSolutionIMS
         private void SearchMeals(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealarfunc, DataGridViewColumn mealenfunc, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
         {
             string mealName = mealarsearch.Text;
-            string groupArName = groupnarsearch.Text;
+            string groupArName = mealensearch.Text;
 
             if (mealName != "" && groupArName != "")
             {
@@ -610,7 +635,7 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Open();
 
                     SqlCommand cmd = new SqlCommand("SELECT ID, MealAr,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
-                        " WHERE (MealAr LIKE @MealName) AND (GroupNAr LIKE @GroupArName)", MainClass.con);
+                        " WHERE (MealAr LIKE @MealName) AND (MealEn LIKE @GroupArName)", MainClass.con);
 
                     cmd.Parameters.AddWithValue("@MealName", "%" + mealName + "%");
                     cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
@@ -649,7 +674,7 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Open();
 
                     SqlCommand cmd = new SqlCommand("SELECT ID, MealAr,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal" +
-                        " WHERE GroupNAr LIKE @GroupArName", MainClass.con);
+                        " WHERE MealEn LIKE @GroupArName", MainClass.con);
 
                     cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
 
@@ -1112,7 +1137,6 @@ namespace HelloWorldSolutionIMS
             MainClass.HideAllTabsOnTabControl(tabControl1);
             save.Visible = false;
             IngredientFiller();
-            ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView1.GridColor = Color.Black;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
@@ -1134,6 +1158,10 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView4.GridColor = Color.Black;
             guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView4.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView4.RowTemplate.DefaultCellStyle.ForeColor;
+
+            UpdateGroupsN();
+            UpdateGroupsC();
+            ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
 
         }
         List<int> idlist = new List<int>();
@@ -3517,6 +3545,92 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FilterMeals(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealarfunc, DataGridViewColumn mealenfunc, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
+        {
+            string value1 = groupnars.Text;
+
+            if (value1 != "Null")
+            {
+                try
+                {
+                    MainClass.con.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT ID, MealAr,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
+                        " WHERE (GroupNAr LIKE @GroupArName)", MainClass.con);
+
+                    cmd.Parameters.AddWithValue("@GroupArName", "%" + value1 + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    // Modify the column names to match your data grid view
+                    no.DataPropertyName = dt.Columns["ID"].ToString();
+                    mealarfunc.DataPropertyName = dt.Columns["MealAr"].ToString();
+                    mealenfunc.DataPropertyName = dt.Columns["MealEn"].ToString();
+                    calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                    fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                    carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                    fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                    calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                    sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+
+
+                    dgv.DataSource = dt;
+                    MainClass.con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                SqlCommand cmd;
+                try
+                {
+                    MainClass.con.Open();
+
+                    cmd = new SqlCommand("SELECT ID, MealAr, MealEn,PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal", MainClass.con);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    no.DataPropertyName = dt.Columns["ID"].ToString();
+                    mealarfunc.DataPropertyName = dt.Columns["MealAr"].ToString();
+                    mealenfunc.DataPropertyName = dt.Columns["MealEn"].ToString();
+                    calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                    fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                    carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                    fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                    calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                    sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+                    dgv.DataSource = dt;
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+
+        }
+        private void groupnars_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            FilterMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
+
         }
     }
 
