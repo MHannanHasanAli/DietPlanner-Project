@@ -37,94 +37,74 @@ namespace HelloWorldSolutionIMS
             proteind.TextChanged += UpdateChart3;
             carbsd.TextChanged += UpdateChart3;
             coderunner = id;
+            filenon.Text = id.ToString();
+            LoadData(id);
         }
         private void LoadData(int id)
         {
-            if (fileno.Text != "")
+            string template = null;
+            string PreviousPlan = null;
+            try
             {
-                string template = null;
-                string PreviousPlan = null;
-                try
+
+                dietPlanIDToEdit = filenon.Text.ToString();
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM DietPlan WHERE FILENO = @DietPlanID", MainClass.con);
+                cmd.Parameters.AddWithValue("@DietPlanID", dietPlanIDToEdit);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
                 {
-
-                    dietPlanIDToEdit = fileno.Text.ToString();
-                    MainClass.con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM DietPlan WHERE FILENO = @DietPlanID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@DietPlanID", dietPlanIDToEdit);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
+                    while (reader.Read())
                     {
-                        while (reader.Read())
-                        {
-
-
-                            template = reader["DietPlanTemplateName"].ToString();
-                            dietplantemplate.Text = reader["DietPlanTemplate"].ToString();
-                            DietPlanDate.Value = Convert.ToDateTime(reader["DIETPLANDATE"]);
-                            dietplandays.Text = reader["DietPlanDays"].ToString();
-                            instruction.Text = reader["Instructions"].ToString();
-                            PreviousPlan = reader["PreviousDiePlan"].ToString();
-                            calories.Text = reader["CALORIES"].ToString();
-                            fats.Text = reader["FATS"].ToString();
-                            fibers.Text = reader["FIBERS"].ToString();
-                            potassium.Text = reader["POTASSIUM"].ToString();
-                            water.Text = reader["WATER"].ToString();
-                            sugar.Text = reader["SUGAR"].ToString();
-                            calcium.Text = reader["CALCIUM"].ToString();
-                            abox.Text = reader["A"].ToString();
-                            protein.Text = reader["PROTEIN"].ToString();
-                            carbohydrates.Text = reader["CARBOHYDRATES"].ToString();
-                            sodium.Text = reader["SODIUM"].ToString();
-                            phosphor.Text = reader["PHOSPHOR"].ToString();
-                            magnesium.Text = reader["MAGNESIUM"].ToString();
-                            iron.Text = reader["IRON"].ToString();
-                            iodine.Text = reader["IODINE"].ToString();
-                            bbox.Text = reader["B"].ToString();
-                        }
-                        reader.Close();
-                        MainClass.con.Close();
-                        dietplantemplatename.Text = template;
-                        previousdietplan.Text = PreviousPlan;
-                        extrafunc();
-                        save.Enabled = false;
-                        AddMealrow.Enabled = false;
-                        AddLunch.Enabled = false;
-                        DinnerAdd.Enabled = false;
-                        SnackAdd.Enabled = false;
-                        //tabControl1.SelectedIndex = 1;
+                        dietplanID = int.Parse(reader["ID"].ToString());
+                        template = reader["DietPlanTemplateName"].ToString();
+                        dietplantemplatenew.Text = reader["DietPlanTemplate"].ToString();
+                        dietplandaten.Value = Convert.ToDateTime(reader["DIETPLANDATE"]);
+                        dietplandaysnew.Text = reader["DietPlanDays"].ToString();
+                        instructionnew.Text = reader["Instructions"].ToString();
+                        PreviousPlan = reader["PreviousDiePlan"].ToString();
+                        caloried.Text = reader["CALORIES"].ToString();
+                        fatsd.Text = reader["FATS"].ToString();
+                        fibersd.Text = reader["FIBERS"].ToString();
+                        potassiumd.Text = reader["POTASSIUM"].ToString();
+                        waterd.Text = reader["WATER"].ToString();
+                        sugerd.Text = reader["SUGAR"].ToString();
+                        calciumd.Text = reader["CALCIUM"].ToString();
+                        ad.Text = reader["A"].ToString();
+                        proteind.Text = reader["PROTEIN"].ToString();
+                        carbsd.Text = reader["CARBOHYDRATES"].ToString();
+                        sodiumd.Text = reader["SODIUM"].ToString();
+                        phosphorusd.Text = reader["PHOSPHOR"].ToString();
+                        magnesiumd.Text = reader["MAGNESIUM"].ToString();
+                        irond.Text = reader["IRON"].ToString();
+                        iodined.Text = reader["IODINE"].ToString();
+                        bd.Text = reader["B"].ToString();
                     }
-                    else
-                    {
-                        reader.Close();
-                        MainClass.con.Close();
-                        save.Enabled = true;
-                        AddMealrow.Enabled = true;
-                        AddLunch.Enabled = true;
-                        DinnerAdd.Enabled = true;
-                        SnackAdd.Enabled = true;
-                        RowsFiller();
-                        //MessageBox.Show("No Diet Plan found for file no :" + fileno.Text);
-                    }
-
-
-                }
-                catch (Exception ex)
-                {
+                    reader.Close();
                     MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
+                    dietplantemplatenamenew.Text = template;
+                    previousdietplannew.Text = PreviousPlan;
+                    MealsFetcher();
+                    NewSave.Enabled = true;
+                    breakfastrow.Enabled = true;
+                    lunchrow.Enabled = true;
+                    dinnerrow.Enabled = true;
+                    snackrow.Enabled = true;
+                    edit = 1;
+                    NewSave.Text = "Update Plan";
+                    //tabControl1.SelectedIndex = 1;
+                    //RowsChecker();
                 }
+
+
+
             }
-            else
+            catch (Exception ex)
             {
-                save.Enabled = true;
-                AddMealrow.Enabled = true;
-                AddLunch.Enabled = true;
-                DinnerAdd.Enabled = true;
-                SnackAdd.Enabled = true;
-                MessageBox.Show("Enter File no!");
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
             }
-            edit = 0;
 
         }
         private void RowsFiller()
@@ -2675,7 +2655,7 @@ namespace HelloWorldSolutionIMS
                     // Create Color object from the read components
                     Color color = Color.FromArgb(red, green, blue);
 
-                    foreach (System.Windows.Forms.Control control in panel2.Controls)
+                    foreach (System.Windows.Forms.Control control in panel11.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -2685,7 +2665,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                    foreach (System.Windows.Forms.Control control in panel3.Controls)
+                    foreach (System.Windows.Forms.Control control in panel17.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -2695,7 +2675,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                    foreach (System.Windows.Forms.Control control in panel9.Controls)
+                    foreach (System.Windows.Forms.Control control in panel18.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -2743,7 +2723,7 @@ namespace HelloWorldSolutionIMS
                     // Create Color object from the read components
                     Color color = Color.FromArgb(red, green, blue);
 
-                    foreach (System.Windows.Forms.Control control in panel3.Controls)
+                    foreach (System.Windows.Forms.Control control in panel11.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -2753,7 +2733,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                    foreach (System.Windows.Forms.Control control in panel2.Controls)
+                    foreach (System.Windows.Forms.Control control in panel17.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -2763,7 +2743,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                    foreach (System.Windows.Forms.Control control in panel9.Controls)
+                    foreach (System.Windows.Forms.Control control in panel18.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -2828,7 +2808,7 @@ namespace HelloWorldSolutionIMS
 
                     int fontSize = int.Parse(size);
 
-                    foreach (System.Windows.Forms.Control control in panel3.Controls)
+                    foreach (System.Windows.Forms.Control control in panel11.Controls)
                     {
                         if (control is Label)
                         {
@@ -2838,7 +2818,7 @@ namespace HelloWorldSolutionIMS
                             label.Font = font;
                         }
                     }
-                    foreach (System.Windows.Forms.Control control in panel2.Controls)
+                    foreach (System.Windows.Forms.Control control in panel17.Controls)
                     {
                         if (control is Label)
                         {
@@ -2848,7 +2828,7 @@ namespace HelloWorldSolutionIMS
                             label.Font = font;
                         }
                     }
-                    foreach (System.Windows.Forms.Control control in panel9.Controls)
+                    foreach (System.Windows.Forms.Control control in panel18.Controls)
                     {
                         if (control is Label)
                         {
@@ -6864,14 +6844,33 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
 
-            for (int i = 0; i < 3; i++)
+            while (guna2DataGridView7.Rows.Count < 3)
             {
                 Guna2DataGridView row = new Guna2DataGridView();
                 guna2DataGridView7.Rows.Add(row);
-                guna2DataGridView8.Rows.Add(row);
-                guna2DataGridView9.Rows.Add(row);
-                guna2DataGridView10.Rows.Add(row);
             }
+
+            while (guna2DataGridView8.Rows.Count < 3)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView8.Rows.Add(row);
+
+            }
+
+            while (guna2DataGridView9.Rows.Count < 3)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView9.Rows.Add(row);
+
+            }
+
+            while (guna2DataGridView10.Rows.Count < 3)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView10.Rows.Add(row);
+
+            }
+
             guna2DataGridView7.ClearSelection();
             guna2DataGridView8.ClearSelection();
             guna2DataGridView9.ClearSelection();
@@ -8141,7 +8140,7 @@ namespace HelloWorldSolutionIMS
                         familynamen.Text = "";
                         dietplantemplatenamenew.Text = "";
                         dietplantemplatenew.SelectedItem = null;
-                        dietplandaysnew.SelectedItem = null;
+                        dietplandaysnew.SelectedIndex = 6;
                         instructionnew.Text = "";
                         gendern.SelectedItem = null;
                         agen.Text = "";
@@ -8268,9 +8267,9 @@ namespace HelloWorldSolutionIMS
 
                         firstnamen.Text = "";
                         familynamen.Text = "";
-                        dietplantemplatenamenew.Text = "";
+                        dietplantemplatenamenew.SelectedItem = null;
                         dietplantemplatenew.SelectedItem = null;
-                        dietplandaysnew.SelectedItem = null;
+                        dietplandaysnew.SelectedIndex = 6;
                         instructionnew.SelectedItem = null;
                         gendern.SelectedItem = null;
                         agen.Text = "";
@@ -8400,7 +8399,7 @@ namespace HelloWorldSolutionIMS
 
                 if (selectedID == 0)
                 {
-                    dietplandaysnew.SelectedItem = null;
+                    dietplandaysnew.SelectedIndex = 6;
                     dietplantemplatenew.SelectedItem = null;
                     instructionnew.Text = "";
                 }
@@ -9200,8 +9199,6 @@ namespace HelloWorldSolutionIMS
 
                 foreach (var item in artificialMappings)
                 {
-                    int breakfastcount = guna2DataGridView7.Rows.Count;
-
 
                     if (item.ChartName == "guna2DataGridView7")
                     {
@@ -9330,7 +9327,176 @@ namespace HelloWorldSolutionIMS
 
             }
         }
+        private void MealsFetcher2()
+        {
+            artificialMappings.Clear();
 
+            guna2DataGridView7.Rows.Clear();
+            guna2DataGridView10.Rows.Clear();
+            guna2DataGridView9.Rows.Clear();
+            guna2DataGridView8.Rows.Clear();
+
+
+            NutrientsClear();
+
+            MainClass.con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM DietPlanAction WHERE DIetPlanID = @DietPlanID", MainClass.con);
+            cmd.Parameters.AddWithValue("@DietPlanID", dietplanID);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+
+                    ArtificialMapping data = new ArtificialMapping();
+
+                    data.Row = int.Parse(reader["Row"].ToString());
+                    data.Col = int.Parse(reader["Col"].ToString());
+                    data.ChartName = reader["ChartName"].ToString();
+                    data.ID = int.Parse(reader["MealID"].ToString());
+
+                    artificialMappings.Add(data);
+                }
+                reader.Close();
+                MainClass.con.Close();
+
+                int bfh = 0;
+                int lh = 0;
+                int dh = 0;
+                int sh = 0;
+
+                foreach (var item in artificialMappings)
+                {
+
+                    if (item.ChartName == "guna2DataGridView7")
+                    {
+                        if (item.Row > bfh)
+                        {
+                            bfh = item.Row;
+                        }
+                    }
+                    else if (item.ChartName == "guna2DataGridView10")
+                    {
+                        if (item.Row > lh)
+                        {
+                            lh = item.Row;
+                        }
+                    }
+                    else if (item.ChartName == "guna2DataGridView9")
+                    {
+                        if (item.Row > dh)
+                        {
+                            dh = item.Row;
+                        }
+                    }
+                    else if (item.ChartName == "guna2DataGridView8")
+                    {
+                        if (item.Row > sh)
+                        {
+                            sh = item.Row;
+                        }
+                    }
+                }
+
+                while (guna2DataGridView7.Rows.Count <= bfh)
+                {
+                    Guna2DataGridView row = new Guna2DataGridView();
+                    guna2DataGridView7.Rows.Add(row);
+
+                }
+                while (guna2DataGridView10.Rows.Count <= lh)
+                {
+                    Guna2DataGridView row = new Guna2DataGridView();
+                    guna2DataGridView10.Rows.Add(row);
+
+                }
+                while (guna2DataGridView9.Rows.Count <= dh)
+                {
+                    Guna2DataGridView row = new Guna2DataGridView();
+                    guna2DataGridView9.Rows.Add(row);
+
+                }
+                while (guna2DataGridView8.Rows.Count <= sh)
+                {
+                    Guna2DataGridView row = new Guna2DataGridView();
+                    guna2DataGridView8.Rows.Add(row);
+
+                }
+
+                foreach (var item in artificialMappings)
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+                        SqlCommand cmd2 = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
+                        cmd2.Parameters.AddWithValue("@MealID", item.ID);
+
+                        SqlDataReader reader2 = cmd2.ExecuteReader();
+                        if (reader2.HasRows)
+                        {
+                            while (reader2.Read())
+                            {
+                                if (item.ChartName == "guna2DataGridView7")
+                                {
+                                    guna2DataGridView7.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                }
+                                else if (item.ChartName == "guna2DataGridView8")
+                                {
+                                    guna2DataGridView8.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                }
+                                else if (item.ChartName == "guna2DataGridView9")
+                                {
+                                    guna2DataGridView9.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                }
+                                else if (item.ChartName == "guna2DataGridView10")
+                                {
+                                    guna2DataGridView10.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                }
+
+
+
+                            }
+                            reader2.Close();
+                            MainClass.con.Close();
+                        }
+
+
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                    MealID = item.ID.ToString();
+                    ChartAdd(item.ID.ToString());
+                }
+
+
+                NewSave.Enabled = false;
+                breakfastrow.Enabled = false;
+                lunchrow.Enabled = false;
+                dinnerrow.Enabled = false;
+                snackrow.Enabled = false;
+
+            }
+            else
+            {
+                reader.Close();
+                MainClass.con.Close();
+                NewSave.Enabled = true;
+                breakfastrow.Enabled = true;
+                lunchrow.Enabled = true;
+                dinnerrow.Enabled = true;
+                snackrow.Enabled = true;
+
+            }
+        }
         private void EditBTnNew_Click(object sender, EventArgs e)
         {
             NewSave.Enabled = true;
@@ -9350,7 +9516,7 @@ namespace HelloWorldSolutionIMS
             familynamen.Text = "";
             dietplantemplatenamenew.Text = "";
             dietplantemplatenew.SelectedItem = null;
-            dietplandaysnew.SelectedItem = null;
+            dietplandaysnew.SelectedIndex = 6;
             instructionnew.SelectedItem = null;
             gendern.SelectedItem = null;
             agen.Text = "";
@@ -9490,7 +9656,7 @@ namespace HelloWorldSolutionIMS
             familynamen.Text = "";
             dietplantemplatenamenew.Text = "";
             dietplantemplatenew.SelectedItem = null;
-            dietplandaysnew.SelectedItem = null;
+            dietplandaysnew.SelectedIndex = 6;
             instructionnew.SelectedItem = null;
             gendern.SelectedItem = null;
             agen.Text = "";
