@@ -259,7 +259,7 @@
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.label44 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.SearchDIetPlan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
@@ -344,10 +344,10 @@
             this.label45 = new System.Windows.Forms.Label();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dietplandaten = new System.Windows.Forms.DateTimePicker();
             this.label47 = new System.Windows.Forms.Label();
             this.instructionnew = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.previousdietplannew = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dietplantemplatenamenew = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label48 = new System.Windows.Forms.Label();
             this.filenon = new Guna.UI2.WinForms.Guna2TextBox();
@@ -405,6 +405,16 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.ChooseBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView12 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.mealiddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealardgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealendgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caloriesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proteinmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatsmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carbohydratesmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calciummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fibermaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodiummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupcen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupcar = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupnen = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -459,16 +469,6 @@
             this.label97 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
             this.label99 = new System.Windows.Forms.Label();
-            this.mealiddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealardgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealendgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caloriesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proteinmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatsmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carbohydratesmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calciummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fibermaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodiummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -3135,7 +3135,7 @@
             this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.Controls.Add(this.panel16);
             this.panel11.Controls.Add(this.guna2Button1);
-            this.panel11.Controls.Add(this.guna2Button2);
+            this.panel11.Controls.Add(this.SearchDIetPlan);
             this.panel11.Controls.Add(this.guna2Button3);
             this.panel11.Controls.Add(this.guna2Button4);
             this.panel11.Controls.Add(this.guna2Button5);
@@ -3153,10 +3153,10 @@
             this.panel11.Controls.Add(this.label45);
             this.panel11.Controls.Add(this.guna2ComboBox1);
             this.panel11.Controls.Add(this.label46);
-            this.panel11.Controls.Add(this.dateTimePicker1);
+            this.panel11.Controls.Add(this.dietplandaten);
             this.panel11.Controls.Add(this.label47);
             this.panel11.Controls.Add(this.instructionnew);
-            this.panel11.Controls.Add(this.guna2ComboBox3);
+            this.panel11.Controls.Add(this.previousdietplannew);
             this.panel11.Controls.Add(this.dietplantemplatenamenew);
             this.panel11.Controls.Add(this.label48);
             this.panel11.Controls.Add(this.filenon);
@@ -3275,23 +3275,24 @@
             this.guna2Button1.TabIndex = 340;
             this.guna2Button1.Text = "New Plan";
             // 
-            // guna2Button2
+            // SearchDIetPlan
             // 
-            this.guna2Button2.AutoRoundedCorners = true;
-            this.guna2Button2.BorderRadius = 21;
-            this.guna2Button2.CausesValidation = false;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(26, 378);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(171, 45);
-            this.guna2Button2.TabIndex = 339;
-            this.guna2Button2.Text = "Searchh";
+            this.SearchDIetPlan.AutoRoundedCorners = true;
+            this.SearchDIetPlan.BorderRadius = 21;
+            this.SearchDIetPlan.CausesValidation = false;
+            this.SearchDIetPlan.CheckedState.Parent = this.SearchDIetPlan;
+            this.SearchDIetPlan.CustomImages.Parent = this.SearchDIetPlan;
+            this.SearchDIetPlan.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.SearchDIetPlan.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.SearchDIetPlan.ForeColor = System.Drawing.Color.White;
+            this.SearchDIetPlan.HoverState.Parent = this.SearchDIetPlan;
+            this.SearchDIetPlan.Location = new System.Drawing.Point(26, 378);
+            this.SearchDIetPlan.Name = "SearchDIetPlan";
+            this.SearchDIetPlan.ShadowDecoration.Parent = this.SearchDIetPlan;
+            this.SearchDIetPlan.Size = new System.Drawing.Size(171, 45);
+            this.SearchDIetPlan.TabIndex = 339;
+            this.SearchDIetPlan.Text = "Searchh";
+            this.SearchDIetPlan.Click += new System.EventHandler(this.SearchDIetPlan_Click);
             // 
             // guna2Button3
             // 
@@ -4516,13 +4517,13 @@
             this.label46.TabIndex = 323;
             this.label46.Text = "Calculation";
             // 
-            // dateTimePicker1
+            // dietplandaten
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(707, 82);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(123, 22);
-            this.dateTimePicker1.TabIndex = 321;
+            this.dietplandaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dietplandaten.Location = new System.Drawing.Point(707, 82);
+            this.dietplandaten.Name = "dietplandaten";
+            this.dietplandaten.Size = new System.Drawing.Size(123, 22);
+            this.dietplandaten.TabIndex = 321;
             // 
             // label47
             // 
@@ -4553,24 +4554,24 @@
             this.instructionnew.Size = new System.Drawing.Size(259, 36);
             this.instructionnew.TabIndex = 318;
             // 
-            // guna2ComboBox3
+            // previousdietplannew
             // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox3.FocusedState.Parent = this.guna2ComboBox3;
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox3.FormattingEnabled = true;
-            this.guna2ComboBox3.HoverState.Parent = this.guna2ComboBox3;
-            this.guna2ComboBox3.ItemHeight = 20;
-            this.guna2ComboBox3.ItemsAppearance.Parent = this.guna2ComboBox3;
-            this.guna2ComboBox3.Location = new System.Drawing.Point(707, 19);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.ShadowDecoration.Parent = this.guna2ComboBox3;
-            this.guna2ComboBox3.Size = new System.Drawing.Size(123, 26);
-            this.guna2ComboBox3.TabIndex = 317;
+            this.previousdietplannew.BackColor = System.Drawing.Color.Transparent;
+            this.previousdietplannew.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.previousdietplannew.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.previousdietplannew.FocusedColor = System.Drawing.Color.Empty;
+            this.previousdietplannew.FocusedState.Parent = this.previousdietplannew;
+            this.previousdietplannew.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.previousdietplannew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.previousdietplannew.FormattingEnabled = true;
+            this.previousdietplannew.HoverState.Parent = this.previousdietplannew;
+            this.previousdietplannew.ItemHeight = 20;
+            this.previousdietplannew.ItemsAppearance.Parent = this.previousdietplannew;
+            this.previousdietplannew.Location = new System.Drawing.Point(707, 19);
+            this.previousdietplannew.Name = "previousdietplannew";
+            this.previousdietplannew.ShadowDecoration.Parent = this.previousdietplannew;
+            this.previousdietplannew.Size = new System.Drawing.Size(123, 26);
+            this.previousdietplannew.TabIndex = 317;
             // 
             // dietplantemplatenamenew
             // 
@@ -5649,6 +5650,81 @@
             this.guna2DataGridView12.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView12.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView12_CellClick);
             // 
+            // mealiddgv
+            // 
+            this.mealiddgv.HeaderText = "NO";
+            this.mealiddgv.MinimumWidth = 6;
+            this.mealiddgv.Name = "mealiddgv";
+            this.mealiddgv.ReadOnly = true;
+            // 
+            // mealardgv
+            // 
+            this.mealardgv.FillWeight = 180F;
+            this.mealardgv.HeaderText = "MEAL (AR)";
+            this.mealardgv.MinimumWidth = 6;
+            this.mealardgv.Name = "mealardgv";
+            this.mealardgv.ReadOnly = true;
+            // 
+            // mealendgv
+            // 
+            this.mealendgv.FillWeight = 480F;
+            this.mealendgv.HeaderText = "MEAL (EN)";
+            this.mealendgv.MinimumWidth = 6;
+            this.mealendgv.Name = "mealendgv";
+            this.mealendgv.ReadOnly = true;
+            // 
+            // caloriesdgv
+            // 
+            this.caloriesdgv.HeaderText = "KCAL";
+            this.caloriesdgv.MinimumWidth = 6;
+            this.caloriesdgv.Name = "caloriesdgv";
+            this.caloriesdgv.ReadOnly = true;
+            // 
+            // proteinmaindgv
+            // 
+            this.proteinmaindgv.HeaderText = "PROTEIN";
+            this.proteinmaindgv.MinimumWidth = 6;
+            this.proteinmaindgv.Name = "proteinmaindgv";
+            this.proteinmaindgv.ReadOnly = true;
+            // 
+            // fatsmaindgv
+            // 
+            this.fatsmaindgv.HeaderText = "FATS";
+            this.fatsmaindgv.MinimumWidth = 6;
+            this.fatsmaindgv.Name = "fatsmaindgv";
+            this.fatsmaindgv.ReadOnly = true;
+            // 
+            // carbohydratesmaindgv
+            // 
+            this.carbohydratesmaindgv.HeaderText = "CARBS";
+            this.carbohydratesmaindgv.MinimumWidth = 6;
+            this.carbohydratesmaindgv.Name = "carbohydratesmaindgv";
+            this.carbohydratesmaindgv.ReadOnly = true;
+            // 
+            // calciummaindgv
+            // 
+            this.calciummaindgv.HeaderText = "CALCIUM";
+            this.calciummaindgv.MinimumWidth = 6;
+            this.calciummaindgv.Name = "calciummaindgv";
+            this.calciummaindgv.ReadOnly = true;
+            this.calciummaindgv.Visible = false;
+            // 
+            // fibermaindgv
+            // 
+            this.fibermaindgv.HeaderText = "FIBER";
+            this.fibermaindgv.MinimumWidth = 6;
+            this.fibermaindgv.Name = "fibermaindgv";
+            this.fibermaindgv.ReadOnly = true;
+            this.fibermaindgv.Visible = false;
+            // 
+            // sodiummaindgv
+            // 
+            this.sodiummaindgv.HeaderText = "SODIUM";
+            this.sodiummaindgv.MinimumWidth = 6;
+            this.sodiummaindgv.Name = "sodiummaindgv";
+            this.sodiummaindgv.ReadOnly = true;
+            this.sodiummaindgv.Visible = false;
+            // 
             // groupcen
             // 
             this.groupcen.BackColor = System.Drawing.Color.Transparent;
@@ -6534,81 +6610,6 @@
             this.label99.TabIndex = 235;
             this.label99.Text = "Calcium";
             // 
-            // mealiddgv
-            // 
-            this.mealiddgv.HeaderText = "NO";
-            this.mealiddgv.MinimumWidth = 6;
-            this.mealiddgv.Name = "mealiddgv";
-            this.mealiddgv.ReadOnly = true;
-            // 
-            // mealardgv
-            // 
-            this.mealardgv.FillWeight = 180F;
-            this.mealardgv.HeaderText = "MEAL (AR)";
-            this.mealardgv.MinimumWidth = 6;
-            this.mealardgv.Name = "mealardgv";
-            this.mealardgv.ReadOnly = true;
-            // 
-            // mealendgv
-            // 
-            this.mealendgv.FillWeight = 480F;
-            this.mealendgv.HeaderText = "MEAL (EN)";
-            this.mealendgv.MinimumWidth = 6;
-            this.mealendgv.Name = "mealendgv";
-            this.mealendgv.ReadOnly = true;
-            // 
-            // caloriesdgv
-            // 
-            this.caloriesdgv.HeaderText = "KCAL";
-            this.caloriesdgv.MinimumWidth = 6;
-            this.caloriesdgv.Name = "caloriesdgv";
-            this.caloriesdgv.ReadOnly = true;
-            // 
-            // proteinmaindgv
-            // 
-            this.proteinmaindgv.HeaderText = "PROTEIN";
-            this.proteinmaindgv.MinimumWidth = 6;
-            this.proteinmaindgv.Name = "proteinmaindgv";
-            this.proteinmaindgv.ReadOnly = true;
-            // 
-            // fatsmaindgv
-            // 
-            this.fatsmaindgv.HeaderText = "FATS";
-            this.fatsmaindgv.MinimumWidth = 6;
-            this.fatsmaindgv.Name = "fatsmaindgv";
-            this.fatsmaindgv.ReadOnly = true;
-            // 
-            // carbohydratesmaindgv
-            // 
-            this.carbohydratesmaindgv.HeaderText = "CARBS";
-            this.carbohydratesmaindgv.MinimumWidth = 6;
-            this.carbohydratesmaindgv.Name = "carbohydratesmaindgv";
-            this.carbohydratesmaindgv.ReadOnly = true;
-            // 
-            // calciummaindgv
-            // 
-            this.calciummaindgv.HeaderText = "CALCIUM";
-            this.calciummaindgv.MinimumWidth = 6;
-            this.calciummaindgv.Name = "calciummaindgv";
-            this.calciummaindgv.ReadOnly = true;
-            this.calciummaindgv.Visible = false;
-            // 
-            // fibermaindgv
-            // 
-            this.fibermaindgv.HeaderText = "FIBER";
-            this.fibermaindgv.MinimumWidth = 6;
-            this.fibermaindgv.Name = "fibermaindgv";
-            this.fibermaindgv.ReadOnly = true;
-            this.fibermaindgv.Visible = false;
-            // 
-            // sodiummaindgv
-            // 
-            this.sodiummaindgv.HeaderText = "SODIUM";
-            this.sodiummaindgv.MinimumWidth = 6;
-            this.sodiummaindgv.Name = "sodiummaindgv";
-            this.sodiummaindgv.ReadOnly = true;
-            this.sodiummaindgv.Visible = false;
-            // 
             // DietPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -6855,7 +6856,7 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Panel panel11;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button SearchDIetPlan;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
@@ -6891,10 +6892,10 @@
         private System.Windows.Forms.Label label45;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dietplandaten;
         private System.Windows.Forms.Label label47;
         private Guna.UI2.WinForms.Guna2ComboBox instructionnew;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox previousdietplannew;
         private Guna.UI2.WinForms.Guna2ComboBox dietplantemplatenamenew;
         private System.Windows.Forms.Label label48;
         private Guna.UI2.WinForms.Guna2TextBox filenon;
