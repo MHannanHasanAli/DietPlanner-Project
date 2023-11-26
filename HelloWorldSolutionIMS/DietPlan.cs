@@ -6859,6 +6859,11 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView12.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView12.RowTemplate.DefaultCellStyle.ForeColor;
 
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
+
             for (int i = 0; i < 3; i++)
             {
                 Guna2DataGridView row = new Guna2DataGridView();
@@ -7994,7 +7999,7 @@ namespace HelloWorldSolutionIMS
                         familynamen.Text = "";
                         dietplantemplatenamenew.Text = "";
                         dietplantemplatenew.SelectedItem = null;
-                        dietplandaysnew.Text = "";
+                        dietplandaysnew.SelectedItem = null;
                         instructionnew.Text = "";
                         gendern.SelectedItem = null;
                         agen.Text = "";
@@ -8059,6 +8064,14 @@ namespace HelloWorldSolutionIMS
                     filenon.Text = "";
                     MessageBox.Show("Diet Plan added Successfully!");
 
+                    guna2DataGridView7.Rows.Clear();
+                    guna2DataGridView10.Rows.Clear();
+                    guna2DataGridView9.Rows.Clear();
+                    guna2DataGridView8.Rows.Clear();
+
+                    artificialMappings.Clear();
+
+                    NewTabRowsFill();
 
                 }
                 else
@@ -8115,7 +8128,7 @@ namespace HelloWorldSolutionIMS
                         familynamen.Text = "";
                         dietplantemplatenamenew.Text = "";
                         dietplantemplatenew.SelectedItem = null;
-                        dietplandaysnew.Text = "";
+                        dietplandaysnew.SelectedItem = null;
                         instructionnew.SelectedItem = null;
                         gendern.SelectedItem = null;
                         agen.Text = "";
@@ -8243,7 +8256,7 @@ namespace HelloWorldSolutionIMS
 
                 if (selectedID == 0)
                 {
-                    dietplandaysnew.Text = "";
+                    dietplandaysnew.SelectedItem = null;
                     dietplantemplatenew.SelectedItem = null;
                     instructionnew.Text = "";
                 }
@@ -9193,7 +9206,7 @@ namespace HelloWorldSolutionIMS
             familynamen.Text = "";
             dietplantemplatenamenew.Text = "";
             dietplantemplatenew.SelectedItem = null;
-            dietplandaysnew.Text = "";
+            dietplandaysnew.SelectedItem = null;
             instructionnew.SelectedItem = null;
             gendern.SelectedItem = null;
             agen.Text = "";
@@ -9282,6 +9295,744 @@ namespace HelloWorldSolutionIMS
             edit = 0;
 
 
+        }
+        private void ShowDietPlans(DataGridView dgv, DataGridViewColumn iddgv, DataGridViewColumn no, DataGridViewColumn name, DataGridViewColumn age, DataGridViewColumn date, string id)
+        {
+
+            try
+            {
+                MainClass.con.Open();
+
+                SqlCommand cmd = new SqlCommand("SELECT ID,FILENO, FIRSTNAME,AGE, DIETPLANDATE FROM DietPlan " +
+                    " WHERE FILENO = @dietplan", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@dietplan", id);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Modify the column names to match your data grid view
+                iddgv.DataPropertyName = dt.Columns["ID"].ToString();
+                no.DataPropertyName = dt.Columns["FILENO"].ToString();
+                name.DataPropertyName = dt.Columns["FIRSTNAME"].ToString();
+                age.DataPropertyName = dt.Columns["AGE"].ToString();
+                date.DataPropertyName = dt.Columns["DIETPLANDATE"].ToString();
+
+
+
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void NewDietPlan_Click(object sender, EventArgs e)
+        {
+            NewSave.Enabled = true;
+            breakfastrow.Enabled = true;
+            lunchrow.Enabled = true;
+            dinnerrow.Enabled = true;
+            snackrow.Enabled = true;
+            NewSave.Text = "Save Plan";
+            edit = 0;
+            artificialMappings.Clear();
+
+            filenon.Text = "";
+            firstnamen.Text = "";
+            familynamen.Text = "";
+            dietplantemplatenamenew.Text = "";
+            dietplantemplatenew.SelectedItem = null;
+            dietplandaysnew.SelectedItem = null;
+            instructionnew.SelectedItem = null;
+            gendern.SelectedItem = null;
+            agen.Text = "";
+            mobilenon.Text = "";
+            previousdietplannew.Text = "";
+            caloried.Text = "";
+            fatsd.Text = "";
+            fibersd.Text = "";
+            potassiumd.Text = "";
+            waterd.Text = "";
+            sugerd.Text = "";
+            calciumd.Text = "";
+            ad.Text = "";
+            proteind.Text = "";
+            carbsd.Text = "";
+            sodiumd.Text = "";
+            phosphorusd.Text = "";
+            magnesiumd.Text = "";
+            irond.Text = "";
+            iodined.Text = "";
+            bd.Text = "";
+            medicalhistoryn.Text = "";
+
+
+            guna2DataGridView7.Rows.Clear();
+            guna2DataGridView10.Rows.Clear();
+            guna2DataGridView9.Rows.Clear();
+            guna2DataGridView8.Rows.Clear();
+
+            NewTabRowsFill();
+        }
+
+        static int filenoforhistory = 0;
+        private void History_Click(object sender, EventArgs e)
+        {
+            if (filenon.Text != "")
+            {
+                guna2DataGridView1.Visible = true;
+                ShowDietPlans(guna2DataGridView1, dpiddgv, filenodgv, namedgv, agedgv, dietnamedgv, filenon.Text);
+                filenoforhistory = int.Parse(filenon.Text);
+                guna2DataGridView1.ClearSelection();
+                tabControl1.SelectedIndex = 7;
+            }
+            else
+            {
+                MessageBox.Show("Enter Fileno First!");
+            }
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 5;
+        }
+
+        private void deletehistory_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView1 != null)
+            {
+                if (guna2DataGridView1.Rows.Count > 0)
+                {
+                    if (guna2DataGridView1.SelectedRows.Count == 1) // Changed from SelectedRows to SelectedCells
+                    {
+
+
+
+                        string appointmentIDToDelete = guna2DataGridView1.CurrentRow.Cells["dpiddgv"].Value.ToString(); // Assuming the Appointment ID is in a column named "Id"
+
+                        DialogResult result = MessageBox.Show("Are you sure you want to delete diet plan?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("DELETE FROM DietPlan WHERE Id = @ID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@ID", appointmentIDToDelete); // Assuming the Appointment ID is in a column named "Id"
+                                cmd.ExecuteNonQuery();
+                                //MessageBox.Show("Appointment removed successfully");
+                                MainClass.con.Close();
+                                // Refresh the data grid view with the updated data
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("DELETE FROM DietPlanAction WHERE DietPlanID = @ID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@ID", appointmentIDToDelete); // Assuming the Appointment ID is in a column named "Id"
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("removed suuccessfully!");
+                                MainClass.con.Close();
+                                // Refresh the data grid view with the updated data
+                                ShowDietPlans(guna2DataGridView1, dpiddgv, filenodgv, namedgv, agedgv, dietnamedgv, filenoforhistory.ToString());
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        private void VIew_Click(object sender, EventArgs e)
+        {
+            string template = null;
+            string PreviousPlan = null;
+            try
+            {
+
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM DietPlan WHERE ID = @DietPlanID", MainClass.con);
+                cmd.Parameters.AddWithValue("@DietPlanID", guna2DataGridView1.CurrentRow.Cells["dpiddgv"].Value.ToString());
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        dietplanID = int.Parse(reader["ID"].ToString());
+                        template = reader["DietPlanTemplateName"].ToString();
+                        dietplantemplatenew.Text = reader["DietPlanTemplate"].ToString();
+                        dietplandaten.Value = Convert.ToDateTime(reader["DIETPLANDATE"]);
+                        dietplandaysnew.Text = reader["DietPlanDays"].ToString();
+                        instructionnew.Text = reader["Instructions"].ToString();
+                        PreviousPlan = reader["PreviousDiePlan"].ToString();
+                        caloried.Text = reader["CALORIES"].ToString();
+                        fatsd.Text = reader["FATS"].ToString();
+                        fibersd.Text = reader["FIBERS"].ToString();
+                        potassiumd.Text = reader["POTASSIUM"].ToString();
+                        waterd.Text = reader["WATER"].ToString();
+                        sugerd.Text = reader["SUGAR"].ToString();
+                        calciumd.Text = reader["CALCIUM"].ToString();
+                        ad.Text = reader["A"].ToString();
+                        proteind.Text = reader["PROTEIN"].ToString();
+                        carbsd.Text = reader["CARBOHYDRATES"].ToString();
+                        sodiumd.Text = reader["SODIUM"].ToString();
+                        phosphorusd.Text = reader["PHOSPHOR"].ToString();
+                        magnesiumd.Text = reader["MAGNESIUM"].ToString();
+                        irond.Text = reader["IRON"].ToString();
+                        iodined.Text = reader["IODINE"].ToString();
+                        bd.Text = reader["B"].ToString();
+                    }
+                    reader.Close();
+                    MainClass.con.Close();
+                    dietplantemplatenamenew.Text = template;
+                    previousdietplannew.Text = PreviousPlan;
+                    MealsFetcher();
+
+                    //tabControl1.SelectedIndex = 1;
+                    //RowsChecker();
+                }
+                else
+                {
+                    reader.Close();
+                    MainClass.con.Close();
+                    NewSave.Enabled = true;
+                    breakfastrow.Enabled = true;
+                    lunchrow.Enabled = true;
+                    dinnerrow.Enabled = true;
+                    snackrow.Enabled = true;
+                    MessageBox.Show("No Diet Plan found for file no :" + fileno.Text);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+            NewSave.Visible = false;
+            SearchDIetPlan.Visible = false;
+            EditBTnNew.Visible = false;
+            guna2Button4.Visible = false;
+            NewDietPlan.Visible = false;
+            History.Visible = false;
+            breakfastrow.Visible = false;
+            lunchrow.Visible = false;
+            dinnerrow.Visible = false;
+            snackrow.Visible = false;
+            viewclose.Visible = true;
+            tabControl1.SelectedIndex = 5;
+
+        }
+
+        private void viewclose_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 7;
+            NewSave.Visible = true;
+            SearchDIetPlan.Visible = true;
+            EditBTnNew.Visible = true;
+            guna2Button4.Visible = true;
+            NewDietPlan.Visible = true;
+            History.Visible = true;
+            breakfastrow.Visible = true;
+            lunchrow.Visible = true;
+            dinnerrow.Visible = true;
+            snackrow.Visible = true;
+            viewclose.Visible = false;
+            NewSave.Enabled = true;
+            breakfastrow.Enabled = true;
+            lunchrow.Enabled = true;
+            dinnerrow.Enabled = true;
+            snackrow.Enabled = true;
+            guna2DataGridView7.Rows.Clear();
+            guna2DataGridView10.Rows.Clear();
+            guna2DataGridView9.Rows.Clear();
+            guna2DataGridView8.Rows.Clear();
+            NutrientsClear();
+            NewTabRowsFill();
+        }
+
+        private void SearchMeals(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealarfunc, DataGridViewColumn mealenfunc, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
+        {
+            string mealName = mealar.Text;
+            string groupArName = mealen.Text;
+
+            if (mealName != "" && groupArName != "")
+            {
+                try
+                {
+                    MainClass.con.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT ID, MealAr,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
+                        " WHERE (MealAr LIKE @MealName) AND (MealEn LIKE @GroupArName)", MainClass.con);
+
+                    cmd.Parameters.AddWithValue("@MealName", "%" + mealName + "%");
+                    cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    // Modify the column names to match your data grid view
+                    no.DataPropertyName = dt.Columns["ID"].ToString();
+                    mealarfunc.DataPropertyName = dt.Columns["MealAr"].ToString();
+                    mealenfunc.DataPropertyName = dt.Columns["MealEn"].ToString();
+                    calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                    fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                    carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                    fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                    calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                    sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+
+
+                    dgv.DataSource = dt;
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else if (mealName == "" && groupArName != "")
+            {
+                try
+                {
+                    MainClass.con.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT ID, MealAr,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal" +
+                        " WHERE MealEn LIKE @GroupArName", MainClass.con);
+
+                    cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    // Modify the column names to match your data grid view
+                    no.DataPropertyName = dt.Columns["ID"].ToString();
+                    mealarfunc.DataPropertyName = dt.Columns["MealAr"].ToString();
+                    mealenfunc.DataPropertyName = dt.Columns["MealEn"].ToString();
+                    calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                    fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                    carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                    fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                    calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                    sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+
+
+                    dgv.DataSource = dt;
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else if (mealName != "" && groupArName == "")
+            {
+                try
+                {
+                    MainClass.con.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT ID, MealAr,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
+                        " WHERE MealAr LIKE @IngredientName", MainClass.con);
+
+                    cmd.Parameters.AddWithValue("@IngredientName", "%" + mealName + "%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    // Modify the column names to match your data grid view
+                    no.DataPropertyName = dt.Columns["ID"].ToString();
+                    mealarfunc.DataPropertyName = dt.Columns["MealAr"].ToString();
+                    mealenfunc.DataPropertyName = dt.Columns["MealEn"].ToString();
+                    calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                    fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                    carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                    fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                    calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                    sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+
+                    dgv.DataSource = dt;
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Fill Meal Ar or Meal En");
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+
+            }
+        }
+
+        private void MealSearch_Click(object sender, EventArgs e)
+        {
+            SearchMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+        }
+
+        private void calculationnew_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NutrientsClear();
+            string selectedValue = calculationnew.Text;
+            if (selectedValue == "1st Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Col == 1)
+                    {
+                        ChartAdd(item.ID.ToString());
+                    }
+                }
+            }
+            else if (selectedValue == "2nd Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Col == 2)
+                    {
+                        ChartAdd(item.ID.ToString());
+                    }
+                }
+            }
+            else if (selectedValue == "3rd Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Col == 3)
+                    {
+                        ChartAdd(item.ID.ToString());
+                    }
+                }
+            }
+            else if (selectedValue == "4th Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Col == 4)
+                    {
+                        ChartAdd(item.ID.ToString());
+                    }
+                }
+            }
+            else if (selectedValue == "5th Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Col == 5)
+                    {
+                        ChartAdd(item.ID.ToString());
+                    }
+                }
+            }
+            else if (selectedValue == "6th Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Col == 6)
+                    {
+                        ChartAdd(item.ID.ToString());
+                    }
+                }
+            }
+            else if (selectedValue == "7th Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Col == 7)
+                    {
+                        ChartAdd(item.ID.ToString());
+                    }
+                }
+            }
+            else if (selectedValue == "All")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    ChartAdd(item.ID.ToString());
+                }
+            }
+        }
+
+        private void dietplandaysnew_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedValue = dietplandaysnew.Text;
+            if (selectedValue == "1")
+            {
+                guna2DataGridView7.Columns[1].Visible = false;
+                guna2DataGridView8.Columns[1].Visible = false;
+                guna2DataGridView9.Columns[1].Visible = false;
+                guna2DataGridView10.Columns[1].Visible = false;
+                guna2DataGridView11.Columns[1].Visible = false;
+
+                guna2DataGridView7.Columns[2].Visible = false;
+                guna2DataGridView8.Columns[2].Visible = false;
+                guna2DataGridView9.Columns[2].Visible = false;
+                guna2DataGridView10.Columns[2].Visible = false;
+                guna2DataGridView11.Columns[2].Visible = false;
+
+                guna2DataGridView7.Columns[3].Visible = false;
+                guna2DataGridView8.Columns[3].Visible = false;
+                guna2DataGridView9.Columns[3].Visible = false;
+                guna2DataGridView10.Columns[3].Visible = false;
+                guna2DataGridView11.Columns[3].Visible = false;
+
+                guna2DataGridView7.Columns[4].Visible = false;
+                guna2DataGridView8.Columns[4].Visible = false;
+                guna2DataGridView9.Columns[4].Visible = false;
+                guna2DataGridView10.Columns[4].Visible = false;
+                guna2DataGridView11.Columns[4].Visible = false;
+
+                guna2DataGridView7.Columns[5].Visible = false;
+                guna2DataGridView8.Columns[5].Visible = false;
+                guna2DataGridView9.Columns[5].Visible = false;
+                guna2DataGridView10.Columns[5].Visible = false;
+                guna2DataGridView11.Columns[5].Visible = false;
+
+                guna2DataGridView7.Columns[6].Visible = false;
+                guna2DataGridView8.Columns[6].Visible = false;
+                guna2DataGridView9.Columns[6].Visible = false;
+                guna2DataGridView10.Columns[6].Visible = false;
+                guna2DataGridView11.Columns[6].Visible = false;
+            }
+            else if (selectedValue == "2")
+            {
+                guna2DataGridView7.Columns[1].Visible = true;
+                guna2DataGridView8.Columns[1].Visible = true;
+                guna2DataGridView9.Columns[1].Visible = true;
+                guna2DataGridView10.Columns[1].Visible = true;
+                guna2DataGridView11.Columns[1].Visible = true;
+
+                guna2DataGridView7.Columns[2].Visible = false;
+                guna2DataGridView8.Columns[2].Visible = false;
+                guna2DataGridView9.Columns[2].Visible = false;
+                guna2DataGridView10.Columns[2].Visible = false;
+                guna2DataGridView11.Columns[2].Visible = false;
+
+                guna2DataGridView7.Columns[3].Visible = false;
+                guna2DataGridView8.Columns[3].Visible = false;
+                guna2DataGridView9.Columns[3].Visible = false;
+                guna2DataGridView10.Columns[3].Visible = false;
+                guna2DataGridView11.Columns[3].Visible = false;
+
+                guna2DataGridView7.Columns[4].Visible = false;
+                guna2DataGridView8.Columns[4].Visible = false;
+                guna2DataGridView9.Columns[4].Visible = false;
+                guna2DataGridView10.Columns[4].Visible = false;
+                guna2DataGridView11.Columns[4].Visible = false;
+
+                guna2DataGridView7.Columns[5].Visible = false;
+                guna2DataGridView8.Columns[5].Visible = false;
+                guna2DataGridView9.Columns[5].Visible = false;
+                guna2DataGridView10.Columns[5].Visible = false;
+                guna2DataGridView11.Columns[5].Visible = false;
+
+                guna2DataGridView7.Columns[6].Visible = false;
+                guna2DataGridView8.Columns[6].Visible = false;
+                guna2DataGridView9.Columns[6].Visible = false;
+                guna2DataGridView10.Columns[6].Visible = false;
+                guna2DataGridView11.Columns[6].Visible = false;
+            }
+            else if (selectedValue == "3")
+            {
+                guna2DataGridView7.Columns[1].Visible = true;
+                guna2DataGridView8.Columns[1].Visible = true;
+                guna2DataGridView9.Columns[1].Visible = true;
+                guna2DataGridView10.Columns[1].Visible = true;
+                guna2DataGridView11.Columns[1].Visible = true;
+
+                guna2DataGridView7.Columns[2].Visible = true;
+                guna2DataGridView8.Columns[2].Visible = true;
+                guna2DataGridView9.Columns[2].Visible = true;
+                guna2DataGridView10.Columns[2].Visible = true;
+                guna2DataGridView11.Columns[2].Visible = true;
+
+                guna2DataGridView7.Columns[3].Visible = false;
+                guna2DataGridView8.Columns[3].Visible = false;
+                guna2DataGridView9.Columns[3].Visible = false;
+                guna2DataGridView10.Columns[3].Visible = false;
+                guna2DataGridView11.Columns[3].Visible = false;
+
+                guna2DataGridView7.Columns[4].Visible = false;
+                guna2DataGridView8.Columns[4].Visible = false;
+                guna2DataGridView9.Columns[4].Visible = false;
+                guna2DataGridView10.Columns[4].Visible = false;
+                guna2DataGridView11.Columns[4].Visible = false;
+
+                guna2DataGridView7.Columns[5].Visible = false;
+                guna2DataGridView8.Columns[5].Visible = false;
+                guna2DataGridView9.Columns[5].Visible = false;
+                guna2DataGridView10.Columns[5].Visible = false;
+                guna2DataGridView11.Columns[5].Visible = false;
+
+                guna2DataGridView7.Columns[6].Visible = false;
+                guna2DataGridView8.Columns[6].Visible = false;
+                guna2DataGridView9.Columns[6].Visible = false;
+                guna2DataGridView10.Columns[6].Visible = false;
+                guna2DataGridView11.Columns[6].Visible = false;
+            }
+            else if (selectedValue == "4")
+            {
+                guna2DataGridView7.Columns[1].Visible = true;
+                guna2DataGridView8.Columns[1].Visible = true;
+                guna2DataGridView9.Columns[1].Visible = true;
+                guna2DataGridView10.Columns[1].Visible = true;
+                guna2DataGridView11.Columns[1].Visible = true;
+
+                guna2DataGridView7.Columns[2].Visible = true;
+                guna2DataGridView8.Columns[2].Visible = true;
+                guna2DataGridView9.Columns[2].Visible = true;
+                guna2DataGridView10.Columns[2].Visible = true;
+                guna2DataGridView11.Columns[2].Visible = true;
+
+                guna2DataGridView7.Columns[3].Visible = true;
+                guna2DataGridView8.Columns[3].Visible = true;
+                guna2DataGridView9.Columns[3].Visible = true;
+                guna2DataGridView10.Columns[3].Visible = true;
+                guna2DataGridView11.Columns[3].Visible = true;
+
+
+                guna2DataGridView7.Columns[4].Visible = false;
+                guna2DataGridView8.Columns[4].Visible = false;
+                guna2DataGridView9.Columns[4].Visible = false;
+                guna2DataGridView10.Columns[4].Visible = false;
+                guna2DataGridView11.Columns[4].Visible = false;
+
+                guna2DataGridView7.Columns[5].Visible = false;
+                guna2DataGridView8.Columns[5].Visible = false;
+                guna2DataGridView9.Columns[5].Visible = false;
+                guna2DataGridView10.Columns[5].Visible = false;
+                guna2DataGridView11.Columns[5].Visible = false;
+
+                guna2DataGridView7.Columns[6].Visible = false;
+                guna2DataGridView8.Columns[6].Visible = false;
+                guna2DataGridView9.Columns[6].Visible = false;
+                guna2DataGridView10.Columns[6].Visible = false;
+                guna2DataGridView11.Columns[6].Visible = false;
+            }
+            else if (selectedValue == "5")
+            {
+                guna2DataGridView7.Columns[1].Visible = true;
+                guna2DataGridView8.Columns[1].Visible = true;
+                guna2DataGridView9.Columns[1].Visible = true;
+                guna2DataGridView10.Columns[1].Visible = true;
+                guna2DataGridView11.Columns[1].Visible = true;
+
+                guna2DataGridView7.Columns[2].Visible = true;
+                guna2DataGridView8.Columns[2].Visible = true;
+                guna2DataGridView9.Columns[2].Visible = true;
+                guna2DataGridView10.Columns[2].Visible = true;
+                guna2DataGridView11.Columns[2].Visible = true;
+
+                guna2DataGridView7.Columns[3].Visible = true;
+                guna2DataGridView8.Columns[3].Visible = true;
+                guna2DataGridView9.Columns[3].Visible = true;
+                guna2DataGridView10.Columns[3].Visible = true;
+                guna2DataGridView11.Columns[3].Visible = true;
+
+                guna2DataGridView7.Columns[4].Visible = true;
+                guna2DataGridView8.Columns[4].Visible = true;
+                guna2DataGridView9.Columns[4].Visible = true;
+                guna2DataGridView10.Columns[4].Visible = true;
+                guna2DataGridView11.Columns[4].Visible = true;
+
+                guna2DataGridView7.Columns[5].Visible = false;
+                guna2DataGridView8.Columns[5].Visible = false;
+                guna2DataGridView9.Columns[5].Visible = false;
+                guna2DataGridView10.Columns[5].Visible = false;
+                guna2DataGridView11.Columns[5].Visible = false;
+
+                guna2DataGridView7.Columns[6].Visible = false;
+                guna2DataGridView8.Columns[6].Visible = false;
+                guna2DataGridView9.Columns[6].Visible = false;
+                guna2DataGridView10.Columns[6].Visible = false;
+                guna2DataGridView11.Columns[6].Visible = false;
+            }
+            else if (selectedValue == "6")
+            {
+                guna2DataGridView7.Columns[1].Visible = true;
+                guna2DataGridView8.Columns[1].Visible = true;
+                guna2DataGridView9.Columns[1].Visible = true;
+                guna2DataGridView10.Columns[1].Visible = true;
+                guna2DataGridView11.Columns[1].Visible = true;
+
+                guna2DataGridView7.Columns[2].Visible = true;
+                guna2DataGridView8.Columns[2].Visible = true;
+                guna2DataGridView9.Columns[2].Visible = true;
+                guna2DataGridView10.Columns[2].Visible = true;
+                guna2DataGridView11.Columns[2].Visible = true;
+
+                guna2DataGridView7.Columns[3].Visible = true;
+                guna2DataGridView8.Columns[3].Visible = true;
+                guna2DataGridView9.Columns[3].Visible = true;
+                guna2DataGridView10.Columns[3].Visible = true;
+                guna2DataGridView11.Columns[3].Visible = true;
+
+                guna2DataGridView7.Columns[4].Visible = true;
+                guna2DataGridView8.Columns[4].Visible = true;
+                guna2DataGridView9.Columns[4].Visible = true;
+                guna2DataGridView10.Columns[4].Visible = true;
+                guna2DataGridView11.Columns[4].Visible = true;
+
+                guna2DataGridView7.Columns[5].Visible = true;
+                guna2DataGridView8.Columns[5].Visible = true;
+                guna2DataGridView9.Columns[5].Visible = true;
+                guna2DataGridView10.Columns[5].Visible = true;
+                guna2DataGridView11.Columns[5].Visible = true;
+
+                guna2DataGridView7.Columns[6].Visible = false;
+                guna2DataGridView8.Columns[6].Visible = false;
+                guna2DataGridView9.Columns[6].Visible = false;
+                guna2DataGridView10.Columns[6].Visible = false;
+                guna2DataGridView11.Columns[6].Visible = false;
+            }
+            else if (selectedValue == "7th Day")
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    guna2DataGridView7.Columns[i].Visible = true;
+                    guna2DataGridView8.Columns[i].Visible = true;
+                    guna2DataGridView9.Columns[i].Visible = true;
+                    guna2DataGridView10.Columns[i].Visible = true;
+                    guna2DataGridView11.Columns[i].Visible = true;
+                }
+            }
+            else if (selectedValue == "All")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    ChartAdd(item.ID.ToString());
+                }
+            }
         }
     }
 }
