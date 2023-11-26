@@ -6934,6 +6934,42 @@ namespace HelloWorldSolutionIMS
         {
             if (e.ColumnIndex == guna2DataGridView7.Columns["Breakfastaction"].Index && e.RowIndex >= 0)
             {
+
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView7")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView7")
+                        {
+                            guna2DataGridView7.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
                 guna2DataGridView7.Rows.RemoveAt(e.RowIndex);
                 CheckRows(guna2DataGridView7);
             }
@@ -6943,6 +6979,41 @@ namespace HelloWorldSolutionIMS
         {
             if (e.ColumnIndex == guna2DataGridView10.Columns["Lunchaction"].Index && e.RowIndex >= 0)
             {
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView10")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView10")
+                        {
+                            guna2DataGridView10.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
                 guna2DataGridView10.Rows.RemoveAt(e.RowIndex);
                 CheckRows(guna2DataGridView10);
             }
@@ -6952,6 +7023,42 @@ namespace HelloWorldSolutionIMS
         {
             if (e.ColumnIndex == guna2DataGridView9.Columns["Dinneraction"].Index && e.RowIndex >= 0)
             {
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView9")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView9")
+                        {
+                            guna2DataGridView9.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
+
                 guna2DataGridView9.Rows.RemoveAt(e.RowIndex);
                 CheckRows(guna2DataGridView9);
             }
@@ -6961,6 +7068,41 @@ namespace HelloWorldSolutionIMS
         {
             if (e.ColumnIndex == guna2DataGridView8.Columns["Snackaction"].Index && e.RowIndex >= 0)
             {
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView8")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView8")
+                        {
+                            guna2DataGridView8.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
                 guna2DataGridView8.Rows.RemoveAt(e.RowIndex);
                 CheckRows(guna2DataGridView8);
             }
@@ -8223,6 +8365,8 @@ namespace HelloWorldSolutionIMS
                     artificialMappings.Clear();
 
                     NewTabRowsFill();
+
+                    NewSave.Text = "Save Plan";
                 }
                 else
                 {
@@ -9786,45 +9930,61 @@ namespace HelloWorldSolutionIMS
         private void dietplandaysnew_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedValue = dietplandaysnew.Text;
-            if (selectedValue == "1")
+
+
+
+            List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+            int call = -1;
+            foreach (var item in artificialMappings)
             {
-                guna2DataGridView7.Columns[1].Visible = false;
-                guna2DataGridView8.Columns[1].Visible = false;
-                guna2DataGridView9.Columns[1].Visible = false;
-                guna2DataGridView10.Columns[1].Visible = false;
-                guna2DataGridView11.Columns[1].Visible = false;
-
-                guna2DataGridView7.Columns[2].Visible = false;
-                guna2DataGridView8.Columns[2].Visible = false;
-                guna2DataGridView9.Columns[2].Visible = false;
-                guna2DataGridView10.Columns[2].Visible = false;
-                guna2DataGridView11.Columns[2].Visible = false;
-
-                guna2DataGridView7.Columns[3].Visible = false;
-                guna2DataGridView8.Columns[3].Visible = false;
-                guna2DataGridView9.Columns[3].Visible = false;
-                guna2DataGridView10.Columns[3].Visible = false;
-                guna2DataGridView11.Columns[3].Visible = false;
-
-                guna2DataGridView7.Columns[4].Visible = false;
-                guna2DataGridView8.Columns[4].Visible = false;
-                guna2DataGridView9.Columns[4].Visible = false;
-                guna2DataGridView10.Columns[4].Visible = false;
-                guna2DataGridView11.Columns[4].Visible = false;
-
-                guna2DataGridView7.Columns[5].Visible = false;
-                guna2DataGridView8.Columns[5].Visible = false;
-                guna2DataGridView9.Columns[5].Visible = false;
-                guna2DataGridView10.Columns[5].Visible = false;
-                guna2DataGridView11.Columns[5].Visible = false;
-
-                guna2DataGridView7.Columns[6].Visible = false;
-                guna2DataGridView8.Columns[6].Visible = false;
-                guna2DataGridView9.Columns[6].Visible = false;
-                guna2DataGridView10.Columns[6].Visible = false;
-                guna2DataGridView11.Columns[6].Visible = false;
+                if (item.Col > int.Parse(selectedValue))
+                {
+                    ChartSubtract(item.ID.ToString());
+                    ArtificialMapping deleteitem = new ArtificialMapping();
+                    deleteitem.Row = item.Row;
+                    deleteitem.Col = item.Col;
+                    deleteitem.ChartName = item.ChartName;
+                    deleteitem.ID = item.ID;
+                    removelist.Add(deleteitem);
+                    call = 1;
+                }
             }
-            else if (selectedValue == "2")
+            if (call == 1)
+            {
+
+                foreach (var item in removelist)
+                {
+                    if (item.ChartName == "guna2DataGridView7")
+                    {
+                        guna2DataGridView7.Rows[item.Row].Cells[item.Col].Value = "";
+
+
+                    }
+                    else if (item.ChartName == "guna2DataGridView8")
+                    {
+                        guna2DataGridView8.Rows[item.Row].Cells[item.Col].Value = "";
+
+                    }
+                    else if (item.ChartName == "guna2DataGridView9")
+                    {
+                        guna2DataGridView9.Rows[item.Row].Cells[item.Col].Value = "";
+
+                    }
+                    else if (item.ChartName == "guna2DataGridView10")
+                    {
+                        guna2DataGridView10.Rows[item.Row].Cells[item.Col].Value = "";
+
+                    }
+                    artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                }
+                removelist.Clear();
+
+            }
+
+            if (selectedValue == "1")
             {
                 guna2DataGridView7.Columns[1].Visible = true;
                 guna2DataGridView8.Columns[1].Visible = true;
@@ -9861,8 +10021,14 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView9.Columns[6].Visible = false;
                 guna2DataGridView10.Columns[6].Visible = false;
                 guna2DataGridView11.Columns[6].Visible = false;
+
+                guna2DataGridView7.Columns[7].Visible = false;
+                guna2DataGridView8.Columns[7].Visible = false;
+                guna2DataGridView9.Columns[7].Visible = false;
+                guna2DataGridView10.Columns[7].Visible = false;
+                guna2DataGridView11.Columns[7].Visible = false;
             }
-            else if (selectedValue == "3")
+            else if (selectedValue == "2")
             {
                 guna2DataGridView7.Columns[1].Visible = true;
                 guna2DataGridView8.Columns[1].Visible = true;
@@ -9899,6 +10065,56 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView9.Columns[6].Visible = false;
                 guna2DataGridView10.Columns[6].Visible = false;
                 guna2DataGridView11.Columns[6].Visible = false;
+
+                guna2DataGridView7.Columns[7].Visible = false;
+                guna2DataGridView8.Columns[7].Visible = false;
+                guna2DataGridView9.Columns[7].Visible = false;
+                guna2DataGridView10.Columns[7].Visible = false;
+                guna2DataGridView11.Columns[7].Visible = false;
+            }
+            else if (selectedValue == "3")
+            {
+                guna2DataGridView7.Columns[1].Visible = true;
+                guna2DataGridView8.Columns[1].Visible = true;
+                guna2DataGridView9.Columns[1].Visible = true;
+                guna2DataGridView10.Columns[1].Visible = true;
+                guna2DataGridView11.Columns[1].Visible = true;
+
+                guna2DataGridView7.Columns[2].Visible = true;
+                guna2DataGridView8.Columns[2].Visible = true;
+                guna2DataGridView9.Columns[2].Visible = true;
+                guna2DataGridView10.Columns[2].Visible = true;
+                guna2DataGridView11.Columns[2].Visible = true;
+
+                guna2DataGridView7.Columns[3].Visible = true;
+                guna2DataGridView8.Columns[3].Visible = true;
+                guna2DataGridView9.Columns[3].Visible = true;
+                guna2DataGridView10.Columns[3].Visible = true;
+                guna2DataGridView11.Columns[3].Visible = true;
+
+                guna2DataGridView7.Columns[4].Visible = false;
+                guna2DataGridView8.Columns[4].Visible = false;
+                guna2DataGridView9.Columns[4].Visible = false;
+                guna2DataGridView10.Columns[4].Visible = false;
+                guna2DataGridView11.Columns[4].Visible = false;
+
+                guna2DataGridView7.Columns[5].Visible = false;
+                guna2DataGridView8.Columns[5].Visible = false;
+                guna2DataGridView9.Columns[5].Visible = false;
+                guna2DataGridView10.Columns[5].Visible = false;
+                guna2DataGridView11.Columns[5].Visible = false;
+
+                guna2DataGridView7.Columns[6].Visible = false;
+                guna2DataGridView8.Columns[6].Visible = false;
+                guna2DataGridView9.Columns[6].Visible = false;
+                guna2DataGridView10.Columns[6].Visible = false;
+                guna2DataGridView11.Columns[6].Visible = false;
+
+                guna2DataGridView7.Columns[7].Visible = false;
+                guna2DataGridView8.Columns[7].Visible = false;
+                guna2DataGridView9.Columns[7].Visible = false;
+                guna2DataGridView10.Columns[7].Visible = false;
+                guna2DataGridView11.Columns[7].Visible = false;
             }
             else if (selectedValue == "4")
             {
@@ -9921,44 +10137,6 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView11.Columns[3].Visible = true;
 
 
-                guna2DataGridView7.Columns[4].Visible = false;
-                guna2DataGridView8.Columns[4].Visible = false;
-                guna2DataGridView9.Columns[4].Visible = false;
-                guna2DataGridView10.Columns[4].Visible = false;
-                guna2DataGridView11.Columns[4].Visible = false;
-
-                guna2DataGridView7.Columns[5].Visible = false;
-                guna2DataGridView8.Columns[5].Visible = false;
-                guna2DataGridView9.Columns[5].Visible = false;
-                guna2DataGridView10.Columns[5].Visible = false;
-                guna2DataGridView11.Columns[5].Visible = false;
-
-                guna2DataGridView7.Columns[6].Visible = false;
-                guna2DataGridView8.Columns[6].Visible = false;
-                guna2DataGridView9.Columns[6].Visible = false;
-                guna2DataGridView10.Columns[6].Visible = false;
-                guna2DataGridView11.Columns[6].Visible = false;
-            }
-            else if (selectedValue == "5")
-            {
-                guna2DataGridView7.Columns[1].Visible = true;
-                guna2DataGridView8.Columns[1].Visible = true;
-                guna2DataGridView9.Columns[1].Visible = true;
-                guna2DataGridView10.Columns[1].Visible = true;
-                guna2DataGridView11.Columns[1].Visible = true;
-
-                guna2DataGridView7.Columns[2].Visible = true;
-                guna2DataGridView8.Columns[2].Visible = true;
-                guna2DataGridView9.Columns[2].Visible = true;
-                guna2DataGridView10.Columns[2].Visible = true;
-                guna2DataGridView11.Columns[2].Visible = true;
-
-                guna2DataGridView7.Columns[3].Visible = true;
-                guna2DataGridView8.Columns[3].Visible = true;
-                guna2DataGridView9.Columns[3].Visible = true;
-                guna2DataGridView10.Columns[3].Visible = true;
-                guna2DataGridView11.Columns[3].Visible = true;
-
                 guna2DataGridView7.Columns[4].Visible = true;
                 guna2DataGridView8.Columns[4].Visible = true;
                 guna2DataGridView9.Columns[4].Visible = true;
@@ -9976,8 +10154,14 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView9.Columns[6].Visible = false;
                 guna2DataGridView10.Columns[6].Visible = false;
                 guna2DataGridView11.Columns[6].Visible = false;
+
+                guna2DataGridView7.Columns[7].Visible = false;
+                guna2DataGridView8.Columns[7].Visible = false;
+                guna2DataGridView9.Columns[7].Visible = false;
+                guna2DataGridView10.Columns[7].Visible = false;
+                guna2DataGridView11.Columns[7].Visible = false;
             }
-            else if (selectedValue == "6")
+            else if (selectedValue == "5")
             {
                 guna2DataGridView7.Columns[1].Visible = true;
                 guna2DataGridView8.Columns[1].Visible = true;
@@ -10014,10 +10198,60 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView9.Columns[6].Visible = false;
                 guna2DataGridView10.Columns[6].Visible = false;
                 guna2DataGridView11.Columns[6].Visible = false;
+
+                guna2DataGridView7.Columns[7].Visible = false;
+                guna2DataGridView8.Columns[7].Visible = false;
+                guna2DataGridView9.Columns[7].Visible = false;
+                guna2DataGridView10.Columns[7].Visible = false;
+                guna2DataGridView11.Columns[7].Visible = false;
             }
-            else if (selectedValue == "7th Day")
+            else if (selectedValue == "6")
             {
-                for (int i = 0; i < 7; i++)
+                guna2DataGridView7.Columns[1].Visible = true;
+                guna2DataGridView8.Columns[1].Visible = true;
+                guna2DataGridView9.Columns[1].Visible = true;
+                guna2DataGridView10.Columns[1].Visible = true;
+                guna2DataGridView11.Columns[1].Visible = true;
+
+                guna2DataGridView7.Columns[2].Visible = true;
+                guna2DataGridView8.Columns[2].Visible = true;
+                guna2DataGridView9.Columns[2].Visible = true;
+                guna2DataGridView10.Columns[2].Visible = true;
+                guna2DataGridView11.Columns[2].Visible = true;
+
+                guna2DataGridView7.Columns[3].Visible = true;
+                guna2DataGridView8.Columns[3].Visible = true;
+                guna2DataGridView9.Columns[3].Visible = true;
+                guna2DataGridView10.Columns[3].Visible = true;
+                guna2DataGridView11.Columns[3].Visible = true;
+
+                guna2DataGridView7.Columns[4].Visible = true;
+                guna2DataGridView8.Columns[4].Visible = true;
+                guna2DataGridView9.Columns[4].Visible = true;
+                guna2DataGridView10.Columns[4].Visible = true;
+                guna2DataGridView11.Columns[4].Visible = true;
+
+                guna2DataGridView7.Columns[5].Visible = true;
+                guna2DataGridView8.Columns[5].Visible = true;
+                guna2DataGridView9.Columns[5].Visible = true;
+                guna2DataGridView10.Columns[5].Visible = true;
+                guna2DataGridView11.Columns[5].Visible = true;
+
+                guna2DataGridView7.Columns[6].Visible = true;
+                guna2DataGridView8.Columns[6].Visible = true;
+                guna2DataGridView9.Columns[6].Visible = true;
+                guna2DataGridView10.Columns[6].Visible = true;
+                guna2DataGridView11.Columns[6].Visible = true;
+
+                guna2DataGridView7.Columns[7].Visible = false;
+                guna2DataGridView8.Columns[7].Visible = false;
+                guna2DataGridView9.Columns[7].Visible = false;
+                guna2DataGridView10.Columns[7].Visible = false;
+                guna2DataGridView11.Columns[7].Visible = false;
+            }
+            else
+            {
+                for (int i = 1; i < 8; i++)
                 {
                     guna2DataGridView7.Columns[i].Visible = true;
                     guna2DataGridView8.Columns[i].Visible = true;
@@ -10026,13 +10260,7 @@ namespace HelloWorldSolutionIMS
                     guna2DataGridView11.Columns[i].Visible = true;
                 }
             }
-            else if (selectedValue == "All")
-            {
-                foreach (var item in artificialMappings)
-                {
-                    ChartAdd(item.ID.ToString());
-                }
-            }
+
         }
     }
 }
