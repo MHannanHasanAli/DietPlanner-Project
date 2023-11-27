@@ -156,32 +156,44 @@ namespace HelloWorldSolutionIMS
                 {
                     var value = fastingglucose / cofactor;
                     guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before breakfast"; // Add text to cell 2 (index 1)
+                    cfb = RoundNumber(value, 0);
                     guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
                 }
                 else if (rowIndex == 2)
                 {
                     var value = beforelunch / cofactor;
                     guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before lunch"; // Add text to cell 2 (index 1)
+                    cfl = RoundNumber(value, 0);
                     guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
                 }
                 else if (rowIndex == 3)
                 {
                     var value = beforedinner / cofactor;
                     guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before dinner"; // Add text to cell 2 (index 1)
+                    cfd = RoundNumber(value, 0);
                     guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
                 }
                 else if (rowIndex == 4)
                 {
                     var value = bedtime / cofactor;
                     guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before bed"; // Add text to cell 2 (index 1)
+                    cfs = RoundNumber(value, 0);
                     guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
                 }
                 // Add specific text to the second and third cells of each row
             }
             guna2DataGridView4.ClearSelection();
         }
+        static double cfb;
+        static double cfl;
+        static double cfd;
+        static double cfs;
         private void AddRowsToCorrection()
         {
+            int one = 0;
+            int two = 0;
+            int three = 0;
+            int four = 0;
             for (int i = 0; i < 5; i++)
             {
                 // Add a new row to the DataGridView
@@ -189,32 +201,35 @@ namespace HelloWorldSolutionIMS
                 if (rowIndex == 0)
                 {
                     guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "BREAKFAST"; // Add text to cell 2 (index 1)                   
-
-                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = cofactor;
+                    one = (int)(cfb + ib);
+                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(one, 0);
                 }
                 else if (rowIndex == 1)
                 {
                     guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "LUNCH"; // Add text to cell 2 (index 1)
-                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = "d";
+                    two = (int)(cfl + il);
+                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(two, 0);
                 }
                 else if (rowIndex == 2)
                 {
                     guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "DINNER"; // Add text to cell 2 (index 1)
-                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = fastingglucose * cofactor;
+                    three = (int)(cfd + id);
+                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(three, 0);
                 }
                 else if (rowIndex == 3)
                 {
                     guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "SNACKS"; // Add text to cell 2 (index 1)
-                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = fastingglucose * cofactor;
+                    four = (int)(cfs + iss);
+                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(four, 0);
                 }
                 else if (rowIndex == 4)
                 {
                     guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "TOTAL"; // Add text to cell 2 (index 1)
-                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = "150";
+                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = one + two + three + four;
                 }
                 // Add specific text to the second and third cells of each row
             }
-            guna2DataGridView4.ClearSelection();
+            guna2DataGridView6.ClearSelection();
         }
 
         static float bv;
@@ -468,9 +483,19 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.ForeColor;
 
+            guna2DataGridView7.Visible = false;
+
+            guna2DataGridView6.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView6.GridColor = Color.Black;
+            guna2DataGridView6.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView6.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView6.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView6.RowTemplate.DefaultCellStyle.ForeColor;
         }
 
         static int counter = 0;
+        static double ib;
+        static double il;
+        static double id;
+        static double iss;
         private void guna2DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -478,7 +503,7 @@ namespace HelloWorldSolutionIMS
             {
 
                 string changedValue = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-
+                guna2DataGridView7.Visible = true;
                 table_total += double.Parse(changedValue);
                 if (table_total <= total * 2)
                 {
@@ -514,6 +539,47 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show("Total number of insulin exceeded!");
                 }
 
+                if (totalinsulin.Text != "")
+                {
+                    if (guna2DataGridView1.Rows[0].Selected)
+                    {
+                        ib = double.Parse(guna2DataGridView1.Rows[0].Cells[1].Value.ToString());
+
+                        guna2DataGridView5.Rows.Clear();
+                        AddRowsToCorrectionFactor();
+                        guna2DataGridView6.Rows.Clear();
+                        AddRowsToCorrection();
+
+
+                    }
+                    else if (guna2DataGridView1.Rows[1].Selected)
+                    {
+                        il = double.Parse(guna2DataGridView1.Rows[1].Cells[1].Value.ToString());
+
+                        guna2DataGridView5.Rows.Clear();
+                        AddRowsToCorrectionFactor();
+                        guna2DataGridView6.Rows.Clear();
+                        AddRowsToCorrection();
+                    }
+                    else if (guna2DataGridView1.Rows[2].Selected)
+                    {
+                        id = double.Parse(guna2DataGridView1.Rows[2].Cells[1].Value.ToString());
+
+                        guna2DataGridView5.Rows.Clear();
+                        AddRowsToCorrectionFactor();
+                        guna2DataGridView6.Rows.Clear();
+                        AddRowsToCorrection();
+                    }
+                    else if (guna2DataGridView1.Rows[3].Selected)
+                    {
+                        iss = double.Parse(guna2DataGridView1.Rows[3].Cells[1].Value.ToString());
+
+                        guna2DataGridView5.Rows.Clear();
+                        AddRowsToCorrectionFactor();
+                        guna2DataGridView6.Rows.Clear();
+                        AddRowsToCorrection();
+                    }
+                }
             }
 
         }
@@ -522,11 +588,12 @@ namespace HelloWorldSolutionIMS
         static int shots = 0;
         private void guna2DataGridView2_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.ColumnIndex == 1 && e.RowIndex != 4 && e.RowIndex >= 0)// Change this to the index of the column to monitor
             {
 
                 string changedValue = guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-
+                guna2DataGridView7.Visible = true;
                 table_total2 += double.Parse(changedValue);
 
                 double cellvalue = double.Parse(changedValue) / insulincharbcalc;
@@ -542,6 +609,48 @@ namespace HelloWorldSolutionIMS
                 if (val == null)
                 {
                     guna2DataGridView2.Rows[4].Cells[e.ColumnIndex + 1].Value = cellvalue;
+                }
+
+                if (totalinsulin.Text != "")
+                {
+                    if (guna2DataGridView2.Rows[0].Selected)
+                    {
+                        ib = double.Parse(guna2DataGridView2.Rows[0].Cells[2].Value.ToString());
+
+                        guna2DataGridView5.Rows.Clear();
+                        AddRowsToCorrectionFactor();
+                        guna2DataGridView6.Rows.Clear();
+                        AddRowsToCorrection();
+
+
+                    }
+                    else if (guna2DataGridView2.Rows[1].Selected)
+                    {
+                        il = double.Parse(guna2DataGridView2.Rows[1].Cells[2].Value.ToString());
+
+                        guna2DataGridView5.Rows.Clear();
+                        AddRowsToCorrectionFactor();
+                        guna2DataGridView6.Rows.Clear();
+                        AddRowsToCorrection();
+                    }
+                    else if (guna2DataGridView2.Rows[2].Selected)
+                    {
+                        id = double.Parse(guna2DataGridView2.Rows[2].Cells[2].Value.ToString());
+
+                        guna2DataGridView5.Rows.Clear();
+                        AddRowsToCorrectionFactor();
+                        guna2DataGridView6.Rows.Clear();
+                        AddRowsToCorrection();
+                    }
+                    else if (guna2DataGridView2.Rows[3].Selected)
+                    {
+                        iss = double.Parse(guna2DataGridView2.Rows[3].Cells[2].Value.ToString());
+
+                        guna2DataGridView5.Rows.Clear();
+                        AddRowsToCorrectionFactor();
+                        guna2DataGridView6.Rows.Clear();
+                        AddRowsToCorrection();
+                    }
                 }
 
             }
@@ -770,6 +879,8 @@ namespace HelloWorldSolutionIMS
                     fastingglucose = fastingglucose - 130;
                     guna2DataGridView5.Rows.Clear();
                     AddRowsToCorrectionFactor();
+                    guna2DataGridView6.Rows.Clear();
+                    AddRowsToCorrection();
                 }
                 else if (guna2DataGridView4.Rows[1].Selected)
                 {
@@ -777,6 +888,8 @@ namespace HelloWorldSolutionIMS
                     beforelunch = beforelunch - 180;
                     guna2DataGridView5.Rows.Clear();
                     AddRowsToCorrectionFactor();
+                    guna2DataGridView6.Rows.Clear();
+                    AddRowsToCorrection();
                 }
                 else if (guna2DataGridView4.Rows[2].Selected)
                 {
@@ -784,6 +897,8 @@ namespace HelloWorldSolutionIMS
                     beforedinner = beforedinner - 180;
                     guna2DataGridView5.Rows.Clear();
                     AddRowsToCorrectionFactor();
+                    guna2DataGridView6.Rows.Clear();
+                    AddRowsToCorrection();
                 }
                 else if (guna2DataGridView4.Rows[3].Selected)
                 {
@@ -791,6 +906,8 @@ namespace HelloWorldSolutionIMS
                     bedtime = bedtime - 150;
                     guna2DataGridView5.Rows.Clear();
                     AddRowsToCorrectionFactor();
+                    guna2DataGridView6.Rows.Clear();
+                    AddRowsToCorrection();
                 }
             }
             counterfor4--;
