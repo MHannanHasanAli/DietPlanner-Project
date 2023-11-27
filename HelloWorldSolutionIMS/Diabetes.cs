@@ -108,6 +108,117 @@ namespace HelloWorldSolutionIMS
             }
 
         }
+        private void AddRowsToBloodSuger()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                // Add a new row to the DataGridView
+                int rowIndex = guna2DataGridView4.Rows.Add();
+                if (rowIndex == 0)
+                {
+                    guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "FASTING GLUCOSE"; // Add text to cell 2 (index 1)
+                    guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "130";
+                }
+                else if (rowIndex == 1)
+                {
+                    guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "BEFORE LUNCH"; // Add text to cell 2 (index 1)
+                    guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "180";
+                }
+                else if (rowIndex == 2)
+                {
+                    guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "BEFORE DINNER"; // Add text to cell 2 (index 1)
+                    guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "180";
+                }
+                else if (rowIndex == 3)
+                {
+                    guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "BED TIME"; // Add text to cell 2 (index 1)
+                    guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "150";
+                }
+
+                // Add specific text to the second and third cells of each row
+            }
+            guna2DataGridView4.ClearSelection();
+        }
+        private void AddRowsToCorrectionFactor()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                // Add a new row to the DataGridView
+                int rowIndex = guna2DataGridView5.Rows.Add();
+                if (rowIndex == 0)
+                {
+                    guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Correction Factor"; // Add text to cell 2 (index 1)                   
+                    cofactor = 1800 / totalinsulinperday;
+                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = cofactor;
+                }
+                else if (rowIndex == 1)
+                {
+                    guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before breakfast"; // Add text to cell 2 (index 1)
+                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = fastingglucose * cofactor;
+                }
+                else if (rowIndex == 2)
+                {
+                    guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before lunch"; // Add text to cell 2 (index 1)
+                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = beforelunch * cofactor;
+                }
+                else if (rowIndex == 3)
+                {
+                    guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before dinner"; // Add text to cell 2 (index 1)
+                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = beforedinner * cofactor;
+                }
+                else if (rowIndex == 4)
+                {
+                    guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before bed"; // Add text to cell 2 (index 1)
+                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = bedtime * cofactor;
+                }
+                // Add specific text to the second and third cells of each row
+            }
+            guna2DataGridView4.ClearSelection();
+        }
+        private void AddRowsToCorrection()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                // Add a new row to the DataGridView
+                int rowIndex = guna2DataGridView6.Rows.Add();
+                if (rowIndex == 0)
+                {
+                    guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "BREAKFAST"; // Add text to cell 2 (index 1)                   
+
+                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = cofactor;
+                }
+                else if (rowIndex == 1)
+                {
+                    guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "LUNCH"; // Add text to cell 2 (index 1)
+                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = "d";
+                }
+                else if (rowIndex == 2)
+                {
+                    guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "DINNER"; // Add text to cell 2 (index 1)
+                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = fastingglucose * cofactor;
+                }
+                else if (rowIndex == 3)
+                {
+                    guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "SNACKS"; // Add text to cell 2 (index 1)
+                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = fastingglucose * cofactor;
+                }
+                else if (rowIndex == 4)
+                {
+                    guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "TOTAL"; // Add text to cell 2 (index 1)
+                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = "150";
+                }
+                // Add specific text to the second and third cells of each row
+            }
+            guna2DataGridView4.ClearSelection();
+        }
+
+        static float bv;
+        static float lv;
+        static float dv;
+        static float sv;
+        static float tv;
+
+        static double totalinsulinperday;
         private void weight_TextChanged(object sender, EventArgs e)
         {
             if (weight.Text != "")
@@ -117,6 +228,7 @@ namespace HelloWorldSolutionIMS
                 var totalinsulinvar = w * 0.55;
                 double rounded = RoundNumber(totalinsulinvar, 0);
                 totalinsulinvar = RoundNumber(totalinsulinvar, 2);
+                totalinsulinperday = totalinsulinvar;
                 int baseline = (int)(rounded / 2);
                 int bolus = baseline;
                 total = baseline;
@@ -171,8 +283,11 @@ namespace HelloWorldSolutionIMS
         {
 
             table_total = 0;
+
             AddFiveRowsToTable();
             AddFiveRowsToTablecarbs();
+            AddRowsToBloodSuger();
+
             guna2DataGridView1.CellValueChanged += guna2DataGridView1_CellValueChanged;
             guna2DataGridView2.CellValueChanged += guna2DataGridView2_CellValueChanged;
 
@@ -332,6 +447,21 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView2.GridColor = Color.Black;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView4.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView4.GridColor = Color.Black;
+            guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView4.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView4.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView5.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView5.GridColor = Color.Black;
+            guna2DataGridView5.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView5.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView5.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView5.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView7.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView7.GridColor = Color.Black;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.ForeColor;
 
         }
 
@@ -611,6 +741,46 @@ namespace HelloWorldSolutionIMS
                 bolusinsulin.Text = "";
 
             }
+        }
+
+        private void totalinsulin_TextChanged(object sender, EventArgs e)
+        {
+            guna2DataGridView5.Rows.Clear();
+            AddRowsToCorrectionFactor();
+        }
+
+        static double fastingglucose;
+        static double beforelunch;
+        static double beforedinner;
+        static double bedtime;
+        static double cofactor;
+        int counterfor4 = 11;
+        private void guna2DataGridView4_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (counterfor4 <= 0)
+            {
+                if (guna2DataGridView4.Rows[0].Selected)
+                {
+                    fastingglucose = double.Parse(guna2DataGridView4.Rows[0].Cells[2].Value.ToString());
+                    fastingglucose = fastingglucose - 130;
+                }
+                else if (guna2DataGridView4.Rows[1].Selected)
+                {
+                    beforelunch = double.Parse(guna2DataGridView4.Rows[1].Cells[2].Value.ToString());
+                    beforelunch = beforelunch - 180;
+                }
+                else if (guna2DataGridView4.Rows[2].Selected)
+                {
+                    beforedinner = double.Parse(guna2DataGridView4.Rows[2].Cells[2].Value.ToString());
+                    beforedinner = beforedinner - 180;
+                }
+                else if (guna2DataGridView4.Rows[3].Selected)
+                {
+                    bedtime = double.Parse(guna2DataGridView4.Rows[3].Cells[2].Value.ToString());
+                    bedtime = bedtime - 150;
+                }
+            }
+            counterfor4--;
         }
     }
 }
