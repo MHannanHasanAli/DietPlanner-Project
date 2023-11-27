@@ -301,6 +301,19 @@ namespace HelloWorldSolutionIMS
         static double table_total2;
         private void Diabetes_Load(object sender, EventArgs e)
         {
+            fastingglucose = 0;
+            beforelunch = 0;
+            beforedinner = 0;
+            bedtime = 0;
+            cofactor = 0;
+            ib = 0;
+            il = 0;
+            id = 0;
+            iss = 0;
+            cfb = 0;
+            cfl = 0;
+            cfd = 0;
+            cfs = 0;
 
             table_total = 0;
 
@@ -489,6 +502,8 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView6.GridColor = Color.Black;
             guna2DataGridView6.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView6.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView6.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView6.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView6.Rows.Clear();
         }
 
         static int counter = 0;
