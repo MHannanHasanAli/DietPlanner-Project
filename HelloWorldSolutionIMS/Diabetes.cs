@@ -149,27 +149,32 @@ namespace HelloWorldSolutionIMS
                 {
                     guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Correction Factor"; // Add text to cell 2 (index 1)                   
                     cofactor = 1800 / totalinsulinperday;
+                    cofactor = Math.Round(cofactor, 2);
                     guna2DataGridView5.Rows[rowIndex].Cells[1].Value = cofactor;
                 }
                 else if (rowIndex == 1)
                 {
+                    var value = fastingglucose / cofactor;
                     guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before breakfast"; // Add text to cell 2 (index 1)
-                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = fastingglucose * cofactor;
+                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
                 }
                 else if (rowIndex == 2)
                 {
+                    var value = beforelunch / cofactor;
                     guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before lunch"; // Add text to cell 2 (index 1)
-                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = beforelunch * cofactor;
+                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
                 }
                 else if (rowIndex == 3)
                 {
+                    var value = beforedinner / cofactor;
                     guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before dinner"; // Add text to cell 2 (index 1)
-                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = beforedinner * cofactor;
+                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
                 }
                 else if (rowIndex == 4)
                 {
+                    var value = bedtime / cofactor;
                     guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before bed"; // Add text to cell 2 (index 1)
-                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = bedtime * cofactor;
+                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
                 }
                 // Add specific text to the second and third cells of each row
             }
@@ -757,27 +762,35 @@ namespace HelloWorldSolutionIMS
         int counterfor4 = 11;
         private void guna2DataGridView4_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (counterfor4 <= 0)
+            if (totalinsulin.Text != "")
             {
                 if (guna2DataGridView4.Rows[0].Selected)
                 {
                     fastingglucose = double.Parse(guna2DataGridView4.Rows[0].Cells[2].Value.ToString());
                     fastingglucose = fastingglucose - 130;
+                    guna2DataGridView5.Rows.Clear();
+                    AddRowsToCorrectionFactor();
                 }
                 else if (guna2DataGridView4.Rows[1].Selected)
                 {
                     beforelunch = double.Parse(guna2DataGridView4.Rows[1].Cells[2].Value.ToString());
                     beforelunch = beforelunch - 180;
+                    guna2DataGridView5.Rows.Clear();
+                    AddRowsToCorrectionFactor();
                 }
                 else if (guna2DataGridView4.Rows[2].Selected)
                 {
                     beforedinner = double.Parse(guna2DataGridView4.Rows[2].Cells[2].Value.ToString());
                     beforedinner = beforedinner - 180;
+                    guna2DataGridView5.Rows.Clear();
+                    AddRowsToCorrectionFactor();
                 }
                 else if (guna2DataGridView4.Rows[3].Selected)
                 {
                     bedtime = double.Parse(guna2DataGridView4.Rows[3].Cells[2].Value.ToString());
                     bedtime = bedtime - 150;
+                    guna2DataGridView5.Rows.Clear();
+                    AddRowsToCorrectionFactor();
                 }
             }
             counterfor4--;

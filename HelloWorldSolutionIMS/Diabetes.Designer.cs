@@ -264,7 +264,7 @@
             this.guna2DataGridView6.DefaultCellStyle = dataGridViewCellStyle7;
             this.guna2DataGridView6.EnableHeadersVisualStyles = false;
             this.guna2DataGridView6.GridColor = System.Drawing.Color.Black;
-            this.guna2DataGridView6.Location = new System.Drawing.Point(575, 698);
+            this.guna2DataGridView6.Location = new System.Drawing.Point(575, 700);
             this.guna2DataGridView6.Name = "guna2DataGridView6";
             this.guna2DataGridView6.RowHeadersVisible = false;
             this.guna2DataGridView6.RowHeadersWidth = 51;
