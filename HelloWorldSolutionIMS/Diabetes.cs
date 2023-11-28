@@ -516,84 +516,103 @@ namespace HelloWorldSolutionIMS
 
             if (e.ColumnIndex == 1 && e.RowIndex != 4 && e.RowIndex >= 0)// Change this to the index of the column to monitor          
             {
-
-                string changedValue = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                guna2DataGridView7.Visible = true;
-                table_total += double.Parse(changedValue);
-                if (table_total <= total * 2)
+                if (guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-                    double cellvalue = double.Parse(changedValue) * insulincharbcalc;
-
-                    guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = cellvalue;
-                    string val = guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value?.ToString();
-                    double new_value = 0;
-
-                    if (val == null)
+                    table_total = 0;
+                    string changedValue = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    guna2DataGridView7.Visible = true;
+                    for (int i = 0; i < 4; i++)
                     {
-                        guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value = cellvalue;
-                        rowflag = 0;
-                    }
-                    else
-                    {
-
-                        if (rowflag == 0)
+                        if (guna2DataGridView1.Rows[0 + i].Cells[e.ColumnIndex].Value != null)
                         {
+                            table_total += double.Parse(guna2DataGridView1.Rows[0 + i].Cells[e.ColumnIndex].Value.ToString());
+                        }
+                    }
+                    //table_total += double.Parse(changedValue);
+                    if (table_total <= total)
+                    {
+                        double cellvalue = double.Parse(changedValue) * insulincharbcalc;
 
-                            rowflag = 1;
+                        guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = cellvalue;
+                        string val = guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value?.ToString();
+                        double new_value = 0;
+
+                        if (val == null)
+                        {
+                            guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value = cellvalue;
+                            rowflag = 0;
                         }
                         else
                         {
-                            new_value = double.Parse(val) + cellvalue / 2;
-                            guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value = new_value;
+
+                            if (rowflag == 0)
+                            {
+
+                                rowflag = 1;
+                            }
+                            else
+                            {
+                                float finalval = 0;
+                                new_value = double.Parse(val) + cellvalue / 2;
+                                for (int i = 0; i < 4; i++)
+                                {
+                                    if (guna2DataGridView1.Rows[i].Cells[e.ColumnIndex + 1].Value != null)
+                                    {
+                                        finalval += float.Parse(guna2DataGridView1.Rows[i].Cells[e.ColumnIndex + 1].Value.ToString());
+
+                                    }
+                                }
+                                guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value = finalval;
+                            }
+
                         }
 
                     }
-
-                }
-                else
-                {
-                    MessageBox.Show("Total number of insulin exceeded!");
-                }
-
-                if (totalinsulin.Text != "")
-                {
-                    if (guna2DataGridView1.Rows[0].Selected)
+                    else
                     {
-                        ib = double.Parse(guna2DataGridView1.Rows[0].Cells[1].Value.ToString());
-
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
-
-
+                        MessageBox.Show("Total number of insulin exceeded!");
                     }
-                    else if (guna2DataGridView1.Rows[1].Selected)
-                    {
-                        il = double.Parse(guna2DataGridView1.Rows[1].Cells[1].Value.ToString());
 
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
-                    }
-                    else if (guna2DataGridView1.Rows[2].Selected)
+                    if (totalinsulin.Text != "")
                     {
-                        id = double.Parse(guna2DataGridView1.Rows[2].Cells[1].Value.ToString());
+                        if (guna2DataGridView1.Rows[0].Selected)
+                        {
+                            ib = double.Parse(guna2DataGridView1.Rows[0].Cells[1].Value.ToString());
 
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
-                    }
-                    else if (guna2DataGridView1.Rows[3].Selected)
-                    {
-                        iss = double.Parse(guna2DataGridView1.Rows[3].Cells[1].Value.ToString());
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
 
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
+
+                        }
+                        else if (guna2DataGridView1.Rows[1].Selected)
+                        {
+                            il = double.Parse(guna2DataGridView1.Rows[1].Cells[1].Value.ToString());
+
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+                        }
+                        else if (guna2DataGridView1.Rows[2].Selected)
+                        {
+                            id = double.Parse(guna2DataGridView1.Rows[2].Cells[1].Value.ToString());
+
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+                        }
+                        else if (guna2DataGridView1.Rows[3].Selected)
+                        {
+                            iss = double.Parse(guna2DataGridView1.Rows[3].Cells[1].Value.ToString());
+
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+                        }
                     }
                 }
             }
@@ -607,65 +626,83 @@ namespace HelloWorldSolutionIMS
 
             if (e.ColumnIndex == 1 && e.RowIndex != 4 && e.RowIndex >= 0)// Change this to the index of the column to monitor
             {
-
-                string changedValue = guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                guna2DataGridView7.Visible = true;
-                table_total2 += double.Parse(changedValue);
-
-                double cellvalue = double.Parse(changedValue) / insulincharbcalc;
-                double round = RoundNumber(cellvalue, 0);
-
-                guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = int.Parse(round.ToString());
-                shots = shots + int.Parse(round.ToString());
-                string val = guna2DataGridView2.Rows[4].Cells[e.ColumnIndex + 1].Value?.ToString();
-
-                guna2DataGridView2.Rows[4].Cells[2].Value = shots / 2;
-                guna2DataGridView2.Rows[4].Cells[1].Value = table_total2 / 2;
-
-                if (val == null)
+                if (guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-                    guna2DataGridView2.Rows[4].Cells[e.ColumnIndex + 1].Value = cellvalue;
-                }
-
-                if (totalinsulin.Text != "")
-                {
-                    if (guna2DataGridView2.Rows[0].Selected)
+                    table_total2 = 0;
+                    shots = 0;
+                    string changedValue = guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    guna2DataGridView7.Visible = true;
+                    for (int i = 0; i < 4; i++)
                     {
-                        ib = double.Parse(guna2DataGridView2.Rows[0].Cells[2].Value.ToString());
-
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
-
-
+                        if (guna2DataGridView2.Rows[0 + i].Cells[e.ColumnIndex].Value != null)
+                        {
+                            table_total2 += double.Parse(guna2DataGridView2.Rows[0 + i].Cells[e.ColumnIndex].Value.ToString());
+                        }
                     }
-                    else if (guna2DataGridView2.Rows[1].Selected)
-                    {
-                        il = double.Parse(guna2DataGridView2.Rows[1].Cells[2].Value.ToString());
+                    //table_total2 += double.Parse(changedValue);
 
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
+                    double cellvalue = double.Parse(changedValue) / insulincharbcalc;
+                    double round = RoundNumber(cellvalue, 0);
+
+                    guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex + 1].Value = int.Parse(round.ToString());
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (guna2DataGridView2.Rows[0 + i].Cells[e.ColumnIndex + 1].Value != null)
+                        {
+                            shots += int.Parse(guna2DataGridView2.Rows[0 + i].Cells[e.ColumnIndex + 1].Value.ToString());
+                        }
                     }
-                    else if (guna2DataGridView2.Rows[2].Selected)
-                    {
-                        id = double.Parse(guna2DataGridView2.Rows[2].Cells[2].Value.ToString());
+                    //shots = shots + int.Parse(round.ToString());
+                    string val = guna2DataGridView2.Rows[4].Cells[e.ColumnIndex + 1].Value?.ToString();
 
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
+                    guna2DataGridView2.Rows[4].Cells[2].Value = shots;
+                    guna2DataGridView2.Rows[4].Cells[1].Value = table_total2;
+
+                    if (val == null)
+                    {
+                        guna2DataGridView2.Rows[4].Cells[e.ColumnIndex + 1].Value = cellvalue;
                     }
-                    else if (guna2DataGridView2.Rows[3].Selected)
-                    {
-                        iss = double.Parse(guna2DataGridView2.Rows[3].Cells[2].Value.ToString());
 
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
+                    if (totalinsulin.Text != "")
+                    {
+                        if (guna2DataGridView2.Rows[0].Selected)
+                        {
+                            ib = double.Parse(guna2DataGridView2.Rows[0].Cells[2].Value.ToString());
+
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+
+
+                        }
+                        else if (guna2DataGridView2.Rows[1].Selected)
+                        {
+                            il = double.Parse(guna2DataGridView2.Rows[1].Cells[2].Value.ToString());
+
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+                        }
+                        else if (guna2DataGridView2.Rows[2].Selected)
+                        {
+                            id = double.Parse(guna2DataGridView2.Rows[2].Cells[2].Value.ToString());
+
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+                        }
+                        else if (guna2DataGridView2.Rows[3].Selected)
+                        {
+                            iss = double.Parse(guna2DataGridView2.Rows[3].Cells[2].Value.ToString());
+
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+                        }
                     }
                 }
 
