@@ -1144,6 +1144,7 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
+            colmn = 0;
             chart1.Series.Clear();
             MainClass.HideAllTabsOnTabControl(tabControl1);
             save.Visible = false;
@@ -1172,8 +1173,9 @@ namespace HelloWorldSolutionIMS
 
             UpdateGroupsN();
             UpdateGroupsC();
-            ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
 
+            ShowMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+            colmn = 1;
         }
         List<int> idlist = new List<int>();
         private List<int> GetIngredientsForMeal()
@@ -3558,10 +3560,11 @@ namespace HelloWorldSolutionIMS
             }
         }
 
+        static int colmn = 0;
         private void FilterMeals(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealarfunc, DataGridViewColumn mealenfunc, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
         {
             string value1 = groupnars.Text;
-
+            //guna2DataGridView2.Rows.Clear();
             if (value1 != "Null")
             {
                 try
@@ -3718,15 +3721,20 @@ namespace HelloWorldSolutionIMS
         }
         private void groupnars_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (colmn != 0)
+            {
+                FilterMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
 
-            FilterMeals(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
+            }
 
         }
 
         private void groupcars_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FilterMeals2(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
-
+            if (colmn != 0)
+            {
+                FilterMeals2(guna2DataGridView2, iddgv, mealardgv, mealendgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
+            }
         }
     }
 

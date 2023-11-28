@@ -514,7 +514,7 @@ namespace HelloWorldSolutionIMS
         private void guna2DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (e.ColumnIndex == 1 && e.RowIndex != 4 && e.RowIndex >= 0)// Change this to the index of the column to monitor
+            if (e.ColumnIndex == 1 && e.RowIndex != 4 && e.RowIndex >= 0)// Change this to the index of the column to monitor          
             {
 
                 string changedValue = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
@@ -531,6 +531,7 @@ namespace HelloWorldSolutionIMS
                     if (val == null)
                     {
                         guna2DataGridView1.Rows[4].Cells[e.ColumnIndex + 1].Value = cellvalue;
+                        rowflag = 0;
                     }
                     else
                     {
