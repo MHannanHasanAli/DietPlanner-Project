@@ -39,7 +39,7 @@ namespace HelloWorldSolutionIMS
             this.liscense = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.languagebox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.trade = new System.Windows.Forms.Label();
@@ -219,7 +219,7 @@ namespace HelloWorldSolutionIMS
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.txtUsername, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtPassword, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.guna2ComboBox1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.languagebox, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(564, 356);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -229,28 +229,28 @@ namespace HelloWorldSolutionIMS
             this.tableLayoutPanel1.Size = new System.Drawing.Size(456, 131);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
-            // guna2ComboBox1
+            // languagebox
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.languagebox.BackColor = System.Drawing.Color.Transparent;
+            this.languagebox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.languagebox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.languagebox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.languagebox.FocusedColor = System.Drawing.Color.Empty;
+            this.languagebox.FocusedState.Parent = this.languagebox;
+            this.languagebox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.languagebox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.languagebox.FormattingEnabled = true;
+            this.languagebox.HoverState.Parent = this.languagebox;
+            this.languagebox.ItemHeight = 30;
+            this.languagebox.Items.AddRange(new object[] {
             "English",
             "Arabic"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(3, 89);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(450, 36);
-            this.guna2ComboBox1.TabIndex = 16;
+            this.languagebox.ItemsAppearance.Parent = this.languagebox;
+            this.languagebox.Location = new System.Drawing.Point(3, 89);
+            this.languagebox.Name = "languagebox";
+            this.languagebox.ShadowDecoration.Parent = this.languagebox;
+            this.languagebox.Size = new System.Drawing.Size(450, 36);
+            this.languagebox.TabIndex = 16;
             // 
             // label11
             // 
@@ -409,7 +409,7 @@ namespace HelloWorldSolutionIMS
         private System.Windows.Forms.Label companyname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox languagebox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label liscense;
         private System.Windows.Forms.Label label2;

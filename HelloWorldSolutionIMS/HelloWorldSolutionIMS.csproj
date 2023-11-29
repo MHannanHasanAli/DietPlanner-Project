@@ -726,6 +726,9 @@
     <EmbeddedResource Include="PurchaseReportForm.resx">
       <DependentUpon>PurchaseReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registration.ar-AE.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace HelloWorldSolutionIMS
@@ -12,11 +14,15 @@ namespace HelloWorldSolutionIMS
     {
         public Registration()
         {
+            LanguageInfo();
+            if (languagestatus == 1)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
+            }
             InitializeComponent();
         }
         public Registration(int id)
         {
-
             InitializeComponent();
             loaddata(id);
         }
@@ -122,6 +128,33 @@ namespace HelloWorldSolutionIMS
         {
             public int ID { get; set; }
             public string Name { get; set; }
+        }
+
+        static int languagestatus;
+        private void LanguageInfo()
+        {
+            MainClass.con.Open();
+
+            // Create a SqlCommand to fetch the row with ID 1 from the Language table
+            SqlCommand fetchCmd = new SqlCommand("SELECT * FROM Language WHERE ID = 1", MainClass.con);
+
+            // Execute the fetch command to get the data
+            using (SqlDataReader reader = fetchCmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    // Retrieve values from the reader and store them in variables
+                    int id = Convert.ToInt32(reader["ID"]);
+                    languagestatus = Convert.ToInt32(reader["Status"]);
+
+                    // Now, you can use the 'id' and 'status' variables as needed
+                    // For example, display them in a MessageBox
+                }
+
+            }
+
+            MainClass.con.Close();
+
         }
         private void UpdateBranch()
         {
@@ -1138,6 +1171,80 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView17.GridColor = Color.Black;
             guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.ForeColor;
+
+
+            if (languagestatus == 1)
+            {
+                foreach (Control control in panel1.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel2.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel5.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+            }
+
         }
         static int conn = 0;
         private void editToolStripMenuItem_Click(object sender, EventArgs e)

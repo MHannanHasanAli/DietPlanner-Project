@@ -231,6 +231,8 @@ namespace HelloWorldSolutionIMS
             }
 
             Start();
+
+            languagebox.SelectedIndex = 0;
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             if (!File.Exists(path + "\\myconnect"))
             {
@@ -352,6 +354,33 @@ namespace HelloWorldSolutionIMS
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
+            if (languagebox.Text == "Arabic")
+            {
+                MainClass.con.Open();
+
+                SqlCommand cmd = new SqlCommand("UPDATE Language SET Status = @Status WHERE ID = @ID", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@Status", 1); // Replace updatedLanguageStatusValue with the new status value.
+                cmd.Parameters.AddWithValue("@ID", 1); // Replace languageIDValue with the ID of the language you want to update.
+
+                cmd.ExecuteNonQuery();
+
+                MainClass.con.Close();
+
+            }
+            else
+            {
+                MainClass.con.Open();
+
+                SqlCommand cmd = new SqlCommand("UPDATE Language SET Status = @Status WHERE ID = @ID", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@Status", 0); // Replace updatedLanguageStatusValue with the new status value.
+                cmd.Parameters.AddWithValue("@ID", 1); // Replace languageIDValue with the ID of the language you want to update.
+
+                cmd.ExecuteNonQuery();
+
+                MainClass.con.Close();
+            }
             MainPage obj = new MainPage();
             this.Hide();
             obj.Show();

@@ -32,10 +32,36 @@ namespace HelloWorldSolutionIMS
             }
         }
 
+        static int languagestatus;
+        private void LanguageInfo()
+        {
+            MainClass.con.Open();
 
+            // Create a SqlCommand to fetch the row with ID 1 from the Language table
+            SqlCommand fetchCmd = new SqlCommand("SELECT * FROM Language WHERE ID = 1", MainClass.con);
+
+            // Execute the fetch command to get the data
+            using (SqlDataReader reader = fetchCmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    // Retrieve values from the reader and store them in variables
+                    int id = Convert.ToInt32(reader["ID"]);
+                    languagestatus = Convert.ToInt32(reader["Status"]);
+
+                    // Now, you can use the 'id' and 'status' variables as needed
+                    // For example, display them in a MessageBox
+                }
+
+            }
+
+            MainClass.con.Close();
+
+        }
         static System.Drawing.Color selectedColor = System.Drawing.Color.White;
         private void MainPage_Load(object sender, EventArgs e)
         {
+            LanguageInfo();
             try
             {
                 MainClass.con.Open();
@@ -201,40 +227,82 @@ namespace HelloWorldSolutionIMS
         }
         private void guna2TileButton9_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd2;
-            try
+            if (languagestatus == 0)
             {
-                MainClass.con.Open();
-
-                cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
-
-                SqlDataReader reader2 = cmd2.ExecuteReader();
-
-                while (reader2.Read())
+                SqlCommand cmd2;
+                try
                 {
+                    MainClass.con.Open();
 
-                    client_id = int.Parse(reader2["ClientID"].ToString());
+                    cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
+
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                    while (reader2.Read())
+                    {
+
+                        client_id = int.Parse(reader2["ClientID"].ToString());
+
+                    }
+
+
+
+                    MainClass.con.Close();
 
                 }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
 
-
-
-                MainClass.con.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MainClass.con.Close();
-                MessageBox.Show(ex.Message);
-            }
-
-            if (client_id != 0)
-            {
-                loadform(new Registration(client_id));
+                if (client_id != 0)
+                {
+                    loadform(new Registration(client_id));
+                }
+                else
+                {
+                    loadform(new Registration());
+                }
             }
             else
             {
-                loadform(new Registration());
+                SqlCommand cmd2;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
+                try
+                {
+                    MainClass.con.Open();
+
+                    cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
+
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                    while (reader2.Read())
+                    {
+
+                        client_id = int.Parse(reader2["ClientID"].ToString());
+
+                    }
+
+
+
+                    MainClass.con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+
+                if (client_id != 0)
+                {
+                    loadform(new Registration(client_id));
+                }
+                else
+                {
+                    loadform(new Registration());
+                }
             }
 
             client_id = 0;
