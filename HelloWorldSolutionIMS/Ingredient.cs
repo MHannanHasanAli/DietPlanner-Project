@@ -54,7 +54,14 @@ namespace HelloWorldSolutionIMS
 
             if (titlecheck != 1)
             {
-                chart1.Titles.Add("Nutrient Chart");
+                if (languagestatus == 1)
+                {
+                    chart1.Titles.Add("القيمة الغذائية");
+                }
+                else
+                {
+                    chart1.Titles.Add("Nutrient Chart");
+                }
                 titlecheck = 1;
             }
 

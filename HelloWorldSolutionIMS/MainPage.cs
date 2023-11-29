@@ -227,9 +227,12 @@ namespace HelloWorldSolutionIMS
         }
         private void guna2TileButton9_Click(object sender, EventArgs e)
         {
+            LanguageInfo();
             if (languagestatus == 0)
             {
                 SqlCommand cmd2;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+
                 try
                 {
                     MainClass.con.Open();
@@ -396,7 +399,7 @@ namespace HelloWorldSolutionIMS
 
         private void guna2TileButton2_Click(object sender, EventArgs e)
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
+            //Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
 
             loadform(new Instruction());
 

@@ -155,6 +155,7 @@ namespace HelloWorldSolutionIMS
             cboRole.SelectedIndex = 0;
         }
 
+        static int languagestatus;
         private void Start()
         {
             UpdateNutritionist();
@@ -590,8 +591,7 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
-            //ShowUsers(Datagridview1, NameGV, UsernameGV, PasswordGV, RoleGV);
-            //cboRole.SelectedIndex = 0;
+
             try
             {
                 MainClass.con.Open();
@@ -631,10 +631,51 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
+
+            try
+            {
+                MainClass.con.Open();
+
+                // Create a SqlCommand to fetch the row with ID 1 from the Language table
+                SqlCommand fetchCmd = new SqlCommand("SELECT * FROM Language WHERE ID = 1", MainClass.con);
+
+                // Execute the fetch command to get the data
+                using (SqlDataReader reader = fetchCmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        // Retrieve values from the reader and store them in variables
+                        int id = Convert.ToInt32(reader["ID"]);
+                        languagestatus = Convert.ToInt32(reader["Status"]);
+
+                        // Now, you can use the 'id' and 'status' variables as needed
+                        // For example, display them in a MessageBox
+                    }
+
+                }
+
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+
             Start();
+
             MainClass.HideAllTabsOnTabControl(tabControl1);
             tabControl1.SelectedIndex = 2;
 
+            if (languagestatus == 1)
+            {
+                language.SelectedIndex = 1;
+            }
+            else
+            {
+                language.SelectedIndex = 0;
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -1868,6 +1909,37 @@ namespace HelloWorldSolutionIMS
                 {
                     MessageBox.Show("Vaue should be between 0 to 255");
                 }
+            }
+        }
+
+        private void language_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (language.Text == "Arabic")
+            {
+                MainClass.con.Open();
+
+                SqlCommand cmd = new SqlCommand("UPDATE Language SET Status = @Status WHERE ID = @ID", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@Status", 1); // Replace updatedLanguageStatusValue with the new status value.
+                cmd.Parameters.AddWithValue("@ID", 1); // Replace languageIDValue with the ID of the language you want to update.
+
+                cmd.ExecuteNonQuery();
+
+                MainClass.con.Close();
+
+            }
+            else
+            {
+                MainClass.con.Open();
+
+                SqlCommand cmd = new SqlCommand("UPDATE Language SET Status = @Status WHERE ID = @ID", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@Status", 0); // Replace updatedLanguageStatusValue with the new status value.
+                cmd.Parameters.AddWithValue("@ID", 1); // Replace languageIDValue with the ID of the language you want to update.
+
+                cmd.ExecuteNonQuery();
+
+                MainClass.con.Close();
             }
         }
     }

@@ -665,6 +665,9 @@
     <EmbeddedResource Include="Ingredient.resx">
       <DependentUpon>Ingredient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Instruction.ar-AE.resx">
+      <DependentUpon>Instruction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Instruction.ar-SA.resx">
       <DependentUpon>Instruction.cs</DependentUpon>
     </EmbeddedResource>
