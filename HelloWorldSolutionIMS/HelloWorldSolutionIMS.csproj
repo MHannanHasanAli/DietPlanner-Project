@@ -659,6 +659,9 @@
     <EmbeddedResource Include="Expenses.resx">
       <DependentUpon>Expenses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ingredient.ar-AE.resx">
+      <DependentUpon>Ingredient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ingredient.resx">
       <DependentUpon>Ingredient.cs</DependentUpon>
     </EmbeddedResource>

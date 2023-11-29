@@ -123,6 +123,7 @@ namespace HelloWorldSolutionIMS
 
         private void SearchIngredients(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn fdc, DataGridViewColumn classification, DataGridViewColumn ingredientAr, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
         {
+
             string ingredientName = ingredientar.Text;
             string groupArName = ingredienten.Text;
 
@@ -286,9 +287,35 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
         }
+        static int languagestatus;
+        private void LanguageInfo()
+        {
+            MainClass.con.Open();
+
+            // Create a SqlCommand to fetch the row with ID 1 from the Language table
+            SqlCommand fetchCmd = new SqlCommand("SELECT * FROM Language WHERE ID = 1", MainClass.con);
+
+            // Execute the fetch command to get the data
+            using (SqlDataReader reader = fetchCmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    // Retrieve values from the reader and store them in variables
+                    int id = Convert.ToInt32(reader["ID"]);
+                    languagestatus = Convert.ToInt32(reader["Status"]);
+
+                    // Now, you can use the 'id' and 'status' variables as needed
+                    // For example, display them in a MessageBox
+                }
+
+            }
+
+            MainClass.con.Close();
+
+        }
         private void Ingredient_Load(object sender, EventArgs e)
         {
-
+            LanguageInfo();
 
             try
             {
@@ -494,6 +521,78 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
             chart1.Series.Clear();
             UpdateGroups();
+
+            if (languagestatus == 1)
+            {
+                foreach (Control control in panel1.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel2.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel5.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+            }
         }
         private void New_Click(object sender, EventArgs e)
         {
@@ -1299,6 +1398,11 @@ namespace HelloWorldSolutionIMS
         {
             ShowGroupIngredients(guna2DataGridView3, idgn, gnnar, gnnen);
             tabControl1.SelectedIndex = 2;
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
