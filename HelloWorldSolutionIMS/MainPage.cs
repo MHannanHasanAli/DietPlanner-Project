@@ -310,42 +310,87 @@ namespace HelloWorldSolutionIMS
 
         private void guna2TileButton6_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd2;
-            try
+            if (languagestatus == 1)
             {
-                MainClass.con.Open();
+                SqlCommand cmd2;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
 
-                cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
-
-                SqlDataReader reader2 = cmd2.ExecuteReader();
-
-                while (reader2.Read())
+                try
                 {
+                    MainClass.con.Open();
 
-                    client_id = int.Parse(reader2["ClientID"].ToString());
+                    cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
 
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                    while (reader2.Read())
+                    {
+
+                        client_id = int.Parse(reader2["ClientID"].ToString());
+
+                    }
+
+
+
+                    MainClass.con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
                 }
 
 
-
-                MainClass.con.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MainClass.con.Close();
-                MessageBox.Show(ex.Message);
-            }
-
-
-            if (client_id != 0)
-            {
-                loadform(new Appointment(client_id));
+                if (client_id != 0)
+                {
+                    loadform(new Appointment(client_id));
+                }
+                else
+                {
+                    loadform(new Appointment());
+                }
             }
             else
             {
-                loadform(new Appointment());
+                SqlCommand cmd2;
+                try
+                {
+                    MainClass.con.Open();
+
+                    cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
+
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                    while (reader2.Read())
+                    {
+
+                        client_id = int.Parse(reader2["ClientID"].ToString());
+
+                    }
+
+
+
+                    MainClass.con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+
+
+                if (client_id != 0)
+                {
+                    loadform(new Appointment(client_id));
+                }
+                else
+                {
+                    loadform(new Appointment());
+                }
             }
+
             client_id = 0;
         }
 

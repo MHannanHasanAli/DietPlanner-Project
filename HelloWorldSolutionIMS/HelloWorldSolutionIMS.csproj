@@ -620,6 +620,9 @@
     <EmbeddedResource Include="AllReports.resx">
       <DependentUpon>AllReports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Appointment.ar-AE.resx">
+      <DependentUpon>Appointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Appointment.resx">
       <DependentUpon>Appointment.cs</DependentUpon>
     </EmbeddedResource>

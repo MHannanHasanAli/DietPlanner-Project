@@ -148,6 +148,15 @@
   <data name="bodycomp.Text" xml:space="preserve">
     <value>تحليل مكونات الجسم</value>
   </data>
+  <data name="subscriptionstatus.Items" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="subscriptionstatus.Items1" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="subscriptionstatus.Items2" xml:space="preserve">
+    <value>مجمدة</value>
+  </data>
   <data name="Search.Text" xml:space="preserve">
     <value>البحث عن عميل</value>
   </data>
