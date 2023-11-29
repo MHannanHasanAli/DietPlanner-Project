@@ -313,6 +313,7 @@ namespace HelloWorldSolutionIMS
 
         private void guna2TileButton6_Click(object sender, EventArgs e)
         {
+            LanguageInfo();
             if (languagestatus == 1)
             {
                 SqlCommand cmd2;
@@ -356,6 +357,7 @@ namespace HelloWorldSolutionIMS
             }
             else
             {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
                 SqlCommand cmd2;
                 try
                 {
@@ -400,18 +402,46 @@ namespace HelloWorldSolutionIMS
         private void guna2TileButton2_Click(object sender, EventArgs e)
         {
             //Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
+            LanguageInfo();
+            if (languagestatus == 0)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
 
+            }
             loadform(new Instruction());
 
         }
 
         private void guna2TileButton12_Click(object sender, EventArgs e)
         {
+            LanguageInfo();
+            if (languagestatus == 0)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
+
+            }
             loadform(new Ingredient());
         }
 
         private void guna2TileButton8_Click(object sender, EventArgs e)
         {
+            LanguageInfo();
+            if (languagestatus == 0)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
+            }
             loadform(new MealAction());
         }
 

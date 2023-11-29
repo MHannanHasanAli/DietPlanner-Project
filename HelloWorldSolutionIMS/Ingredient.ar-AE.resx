@@ -224,7 +224,7 @@
     <value>سعرات</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 170</value>
+    <value>5, 170</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 24</value>
@@ -233,7 +233,7 @@
     <value>المجموعة (انجليزي)</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 87</value>
+    <value>5, 84</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 24</value>
@@ -248,7 +248,7 @@
     <value>غرام</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 212</value>
+    <value>5, 212</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 24</value>
@@ -257,7 +257,7 @@
     <value>التصنيف</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 128</value>
+    <value>5, 125</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 24</value>
@@ -266,7 +266,7 @@
     <value>المجموعة (عربي)</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 46</value>
+    <value>5, 43</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 24</value>
