@@ -280,6 +280,18 @@
   <data name="SaveGroupn.Text" xml:space="preserve">
     <value>حفظ</value>
   </data>
+  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 54</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>جروب</value>
+  </data>
+  <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 54</value>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>جروب</value>
+  </data>
   <data name="CLoseDGN.Text" xml:space="preserve">
     <value>خلف</value>
   </data>

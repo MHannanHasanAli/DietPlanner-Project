@@ -692,6 +692,9 @@
     <EmbeddedResource Include="Meal.resx">
       <DependentUpon>Meal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MealAction.ar-AE.resx">
+      <DependentUpon>MealAction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MealAction.resx">
       <DependentUpon>MealAction.cs</DependentUpon>
     </EmbeddedResource>
