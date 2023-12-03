@@ -59,6 +59,19 @@ namespace HelloWorldSolutionIMS
 
         }
         static System.Drawing.Color selectedColor = System.Drawing.Color.White;
+
+        public void DisposeAllForms()
+        {
+            // Iterate through all open forms and dispose them
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form != null && !form.IsDisposed)
+                {
+                    form.Dispose();
+                }
+            }
+        }
+
         private void MainPage_Load(object sender, EventArgs e)
         {
             LanguageInfo();
@@ -117,6 +130,7 @@ namespace HelloWorldSolutionIMS
         }
         public void loadform(object Form)
         {
+
             if (this.mainpanel.Controls.Count > 0)
                 this.mainpanel.Controls.RemoveAt(0);
             System.Drawing.Color color = Color.Orange;

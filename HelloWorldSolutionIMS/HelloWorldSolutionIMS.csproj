@@ -768,6 +768,9 @@
     <EmbeddedResource Include="ShopInventory.resx">
       <DependentUpon>ShopInventory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SpecialDeal.ar-AE.resx">
+      <DependentUpon>SpecialDeal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SpecialDeal.resx">
       <DependentUpon>SpecialDeal.cs</DependentUpon>
     </EmbeddedResource>
