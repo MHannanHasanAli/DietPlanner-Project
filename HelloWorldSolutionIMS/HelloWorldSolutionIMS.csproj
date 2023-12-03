@@ -759,6 +759,9 @@
     <EmbeddedResource Include="Setting.resx">
       <DependentUpon>Setting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingScreen.ar-AE.resx">
+      <DependentUpon>SettingScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SettingScreen.resx">
       <DependentUpon>SettingScreen.cs</DependentUpon>
     </EmbeddedResource>

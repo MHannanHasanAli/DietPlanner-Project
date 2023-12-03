@@ -117,13 +117,4711 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="NameGV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="&gt;&gt;email.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="deleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 24</value>
+  </data>
+  <data name="txtRestore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 265</value>
+  </data>
+  <data name="modifyuser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 64</value>
+  </data>
+  <data name="textsize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>833, 415</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar3.Name" xml:space="preserve">
+    <value>guna2TrackBar3</value>
+  </data>
+  <data name="&gt;&gt;username.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;companyname.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPage6.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 24</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 122</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="textsize.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="password.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
+  </data>
+  <data name="&gt;&gt;usernameedit.Name" xml:space="preserve">
+    <value>usernameedit</value>
+  </data>
+  <data name="&gt;&gt;label35.Name" xml:space="preserve">
+    <value>label35</value>
+  </data>
+  <data name="&gt;&gt;label47.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 170</value>
+  </data>
+  <data name="&gt;&gt;PasswordGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtRestore.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnBackupBrowse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="guna2Button5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 537</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;edituser.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 24</value>
+  </data>
+  <data name="guna2TextBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>994, 229</value>
+  </data>
+  <data name="&gt;&gt;guna2Button4.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;label31.Name" xml:space="preserve">
+    <value>label31</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 760</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;UserSettings.Name" xml:space="preserve">
+    <value>UserSettings</value>
+  </data>
+  <data name="guna2TextBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 192</value>
+  </data>
+  <data name="&gt;&gt;txtName.Name" xml:space="preserve">
+    <value>txtName</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 92</value>
+  </data>
+  <data name="itallic.Items" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="btnRestoreBrowse.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>Change Button Color</value>
+  </data>
+  <data name="label4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;password.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;downloadingredient.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;underline.Name" xml:space="preserve">
+    <value>underline</value>
+  </data>
+  <data name="&gt;&gt;companyname.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="room2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 36</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;guna2Button3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="guna2Button1.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="label32.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;ColorClose.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;room2.Name" xml:space="preserve">
+    <value>room2</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Attach.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="Adduser.TabIndex" type="System.Int32, mscorlib">
+    <value>287</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="usermanagement.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 24</value>
+  </data>
+  <data name="label46.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;deleteToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel9.Name" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="btnUserSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 144</value>
+  </data>
+  <data name="language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 36</value>
+  </data>
+  <data name="&gt;&gt;label39.Name" xml:space="preserve">
+    <value>label39</value>
+  </data>
+  <data name="tabPage7.Text" xml:space="preserve">
+    <value>tabPage7</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label26.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;guna2Button6.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="guna2Button4.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TrackBar8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>763, 190</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar9.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="room1.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;room2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="DatabaseSettingPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.Parent" xml:space="preserve">
+    <value>DatabaseSettingPanel</value>
+  </data>
+  <data name="guna2TextBox5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="mobile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPage8.Text" xml:space="preserve">
+    <value>tabPage8</value>
+  </data>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 24</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Colorsetting.TabIndex" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="panel8.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label26.Name" xml:space="preserve">
+    <value>label26</value>
+  </data>
+  <data name="&gt;&gt;guna2Button2.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>Itallic</value>
+  </data>
+  <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 760</value>
+  </data>
+  <data name="btnClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;guna2Button8.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar6.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="label16.TabIndex" type="System.Int32, mscorlib">
+    <value>303</value>
+  </data>
+  <data name="label46.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 356</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 47</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar1.Name" xml:space="preserve">
+    <value>guna2TrackBar1</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;ColorClose.Name" xml:space="preserve">
+    <value>ColorClose</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView1.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="guna2Button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar7.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="RoleGV.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 133</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label37.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;itallic.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;label42.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar1.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="guna2DataGridView1.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;guna2Button7.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="btnCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="importsettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="&gt;&gt;panel13.Name" xml:space="preserve">
+    <value>panel13</value>
+  </data>
+  <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 28</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 380</value>
+  </data>
+  <data name="room4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 36</value>
+  </data>
+  <data name="&gt;&gt;iddgv.Name" xml:space="preserve">
+    <value>iddgv</value>
+  </data>
+  <data name="&gt;&gt;guna2Button7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="label1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 45</value>
+  </data>
+  <data name="welcomewords.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 24</value>
+  </data>
+  <data name="label17.TabIndex" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="label47.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="&gt;&gt;guna2Button4.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label41.TabIndex" type="System.Int32, mscorlib">
+    <value>319</value>
+  </data>
+  <data name="guna2TrackBar6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="panel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="btnRestoreBrowse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1071, 766</value>
+  </data>
+  <data name="&gt;&gt;back.Parent" xml:space="preserve">
+    <value>DatabaseSettingPanel</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 407</value>
+  </data>
+  <data name="importmeals.TabIndex" type="System.Int32, mscorlib">
+    <value>291</value>
+  </data>
+  <data name="DeleteUser.TabIndex" type="System.Int32, mscorlib">
+    <value>281</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>G</value>
+  </data>
+  <data name="guna2TrackBar6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>413, 152</value>
+  </data>
+  <data name="&gt;&gt;ColorClose.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 26</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="modifyuser.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="importmeals.Text" xml:space="preserve">
+    <value>Download Meals Demo Import File</value>
+  </data>
+  <data name="label32.TabIndex" type="System.Int32, mscorlib">
+    <value>299</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 18</value>
+  </data>
+  <data name="&gt;&gt;guna2Button5.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;itallic.Name" xml:space="preserve">
+    <value>itallic</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox3.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;ADD.Name" xml:space="preserve">
+    <value>ADD</value>
+  </data>
+  <data name="DatabaseSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1071, 766</value>
+  </data>
+  <data name="guna2Button7.TabIndex" type="System.Int32, mscorlib">
+    <value>288</value>
+  </data>
+  <data name="Attach.TabIndex" type="System.Int32, mscorlib">
+    <value>292</value>
+  </data>
+  <data name="panel11.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;label35.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="tabPage5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="btnSave.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtBackup.Parent" xml:space="preserve">
+    <value>DatabaseSettingPanel</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPage5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;room1.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;nutriname.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="usermanagement.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 34</value>
+  </data>
+  <data name="btnRestoreBrowse.Text" xml:space="preserve">
+    <value>BROWSE</value>
+  </data>
+  <data name="&gt;&gt;selectedpanel.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="label29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;label45.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="AddNutri.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 114</value>
+  </data>
+  <data name="label39.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 11</value>
+  </data>
+  <data name="guna2TrackBar7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>763, 229</value>
+  </data>
+  <data name="guna2TrackBar4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>413, 229</value>
+  </data>
+  <data name="&gt;&gt;tabPage6.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Welcome Words</value>
+  </data>
+  <data name="importmeals.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 104</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;DeleteUser.Name" xml:space="preserve">
+    <value>DeleteUser</value>
+  </data>
+  <data name="&gt;&gt;panel11.Parent" xml:space="preserve">
+    <value>tabPage8</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar9.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="landline.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 31</value>
+  </data>
+  <data name="&gt;&gt;Deletegc.Name" xml:space="preserve">
+    <value>Deletegc</value>
+  </data>
+  <data name="guna2DataGridView4.TabIndex" type="System.Int32, mscorlib">
+    <value>276</value>
+  </data>
+  <data name="underline.Items1" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="&gt;&gt;password.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="txtUsername.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 24</value>
+  </data>
+  <data name="DeleteUser.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="saveuser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 183</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Company Logo</value>
+  </data>
+  <data name="&gt;&gt;email.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="btnRestore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 69</value>
+  </data>
+  <data name="label42.Location" type="System.Drawing.Point, System.Drawing">
+    <value>375, 197</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 24</value>
+  </data>
+  <data name="&gt;&gt;welcomewords.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;AddNutri.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label47.Location" type="System.Drawing.Point, System.Drawing">
+    <value>566, 407</value>
+  </data>
+  <data name="&gt;&gt;companyname.Name" xml:space="preserve">
+    <value>companyname</value>
+  </data>
+  <data name="guna2TextBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>312</value>
+  </data>
+  <data name="landline.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 115</value>
+  </data>
+  <data name="tabPage7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="cboRole.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="guna2TrackBar2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 190</value>
+  </data>
+  <data name="usermanagement.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="btnRestoreBrowse.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 54</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 175</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;username.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="btnDatabaseSettings.Text" xml:space="preserve">
+    <value>Database Settings</value>
+  </data>
+  <data name="pobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 31</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="guna2TextBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="&gt;&gt;label39.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Colorsetting.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label46.TabIndex" type="System.Int32, mscorlib">
+    <value>327</value>
+  </data>
+  <data name="&gt;&gt;itallic.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;Adduser.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 88</value>
+  </data>
+  <data name="useriddgv.HeaderText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="&gt;&gt;label36.Name" xml:space="preserve">
+    <value>label36</value>
+  </data>
+  <data name="Datagridview1.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="panel10.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;label46.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel7.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox6.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.Name" xml:space="preserve">
+    <value>btnRestore</value>
+  </data>
+  <data name="&gt;&gt;trade.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;label45.Name" xml:space="preserve">
+    <value>label45</value>
+  </data>
+  <data name="guna2TextBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>311</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 135</value>
+  </data>
+  <data name="ADD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>685, 191</value>
+  </data>
+  <data name="Deletegc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>846, 526</value>
+  </data>
+  <data name="&gt;&gt;panel12.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="companyname.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="txtName.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TextBox6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 6pt</value>
+  </data>
+  <data name="&gt;&gt;label32.Name" xml:space="preserve">
+    <value>label32</value>
+  </data>
+  <data name="modifyuser.Text" xml:space="preserve">
+    <value>Modify User</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="label47.TabIndex" type="System.Int32, mscorlib">
+    <value>135</value>
+  </data>
+  <data name="&gt;&gt;label41.Name" xml:space="preserve">
+    <value>label41</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox2.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="btnDatabaseSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 69</value>
+  </data>
+  <data name="txtName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 24</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 760</value>
+  </data>
+  <data name="label44.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="companyname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 31</value>
+  </data>
+  <data name="&gt;&gt;btnBackup.Parent" xml:space="preserve">
+    <value>DatabaseSettingPanel</value>
+  </data>
+  <data name="&gt;&gt;mobile.Name" xml:space="preserve">
+    <value>mobile</value>
+  </data>
+  <data name="AddNutri.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 34</value>
+  </data>
+  <data name="&gt;&gt;email.Name" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="btnBackup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 69</value>
+  </data>
+  <data name="&gt;&gt;editToolStripMenuItem.Name" xml:space="preserve">
+    <value>editToolStripMenuItem</value>
+  </data>
+  <data name="DatabaseSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="guna2TextBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 6pt</value>
+  </data>
+  <data name="label22.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="label28.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage7.Name" xml:space="preserve">
+    <value>tabPage7</value>
+  </data>
+  <data name="guna2DataGridView1.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="importsettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>848, 699</value>
+  </data>
+  <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="txtBackup.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;username.Name" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="saveuser.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="&gt;&gt;Save.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ADD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="panel12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>393, 55</value>
+  </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="mobile.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="label47.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Dbsetting.Name" xml:space="preserve">
+    <value>Dbsetting</value>
+  </data>
+  <data name="cboRole.Items" xml:space="preserve">
+    <value>---Select---</value>
+  </data>
+  <data name="&gt;&gt;guna2Button1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="trade.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="&gt;&gt;importsettings.Name" xml:space="preserve">
+    <value>importsettings</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 321</value>
+  </data>
+  <data name="&gt;&gt;passwordedit.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="guna2TrackBar9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar9.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TrackBar, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;tabPage6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TextBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>320</value>
+  </data>
+  <data name="usernamedgv.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="txtUsername.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar8.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="panel1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;usermanagement.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>SAVE</value>
+  </data>
+  <data name="guna2TextBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 229</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;underline.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="label37.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 24</value>
+  </data>
+  <data name="&gt;&gt;Datagridview1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 24</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox1.Name" xml:space="preserve">
+    <value>guna2TextBox1</value>
+  </data>
+  <data name="label6.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;guna2Button3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="modifyuser.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="welcomewords.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar6.Name" xml:space="preserve">
+    <value>guna2TrackBar6</value>
+  </data>
+  <data name="txtConfirmPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cboRole.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="guna2TextBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="namedgv.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnUserSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;btnBackupBrowse.Name" xml:space="preserve">
+    <value>btnBackupBrowse</value>
+  </data>
+  <data name="&gt;&gt;btnUserSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;guna2Button5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="usernameedit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox5.Name" xml:space="preserve">
+    <value>guna2TextBox5</value>
+  </data>
+  <data name="btnRestoreBrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 32</value>
+  </data>
+  <data name="&gt;&gt;room3.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="room4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 179</value>
+  </data>
+  <data name="Save.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="useriddgv.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="guna2TrackBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>304</value>
+  </data>
+  <data name="mobile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 163</value>
+  </data>
+  <data name="guna2Button8.Text" xml:space="preserve">
+    <value>Download Settings Demo Import File</value>
+  </data>
+  <data name="&gt;&gt;btnDatabaseSettings.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;room4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Datagridview1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;modifyuser.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox9.Name" xml:space="preserve">
+    <value>guna2TextBox9</value>
+  </data>
+  <data name="DatabaseSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>Change Button Text Color</value>
+  </data>
+  <data name="label43.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="underline.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 36</value>
+  </data>
+  <data name="pobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 259</value>
+  </data>
+  <data name="panel9.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label22.TabIndex" type="System.Int32, mscorlib">
+    <value>285</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textsize.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;panel11.Name" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;btnBackupBrowse.Parent" xml:space="preserve">
+    <value>DatabaseSettingPanel</value>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 47</value>
+  </data>
+  <data name="landline.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label40.Text" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="label31.Location" type="System.Drawing.Point, System.Drawing">
+    <value>739, 415</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Name" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;btnDatabaseSettings.Name" xml:space="preserve">
+    <value>btnDatabaseSettings</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 266</value>
+  </data>
+  <data name="companyname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 18</value>
+  </data>
+  <data name="&gt;&gt;label44.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PasswordGV.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Datagridview1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label34.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="txtName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>664, 133</value>
+  </data>
+  <data name="&gt;&gt;nutriname.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="back.Location" type="System.Drawing.Point, System.Drawing">
+    <value>839, 620</value>
+  </data>
+  <data name="&gt;&gt;Save.Name" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="label44.Text" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="language.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 404</value>
+  </data>
+  <data name="label21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 28.2pt, style=Bold, Underline</value>
+  </data>
+  <data name="&gt;&gt;label40.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label44.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="email.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="companyname.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;label34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="itallic.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 124</value>
+  </data>
+  <data name="btnBackup.Text" xml:space="preserve">
+    <value>BACKUP</value>
+  </data>
+  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TextBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>321</value>
+  </data>
+  <data name="label25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;namedgv.Name" xml:space="preserve">
+    <value>namedgv</value>
+  </data>
+  <data name="&gt;&gt;panel10.Parent" xml:space="preserve">
+    <value>tabPage7</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="&gt;&gt;label47.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="guna2Button5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="&gt;&gt;guna2Button2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="guna2TextBox9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 6pt</value>
+  </data>
+  <data name="&gt;&gt;usernamedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TextBox8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="room1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 36</value>
+  </data>
+  <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="&gt;&gt;downloadingredient.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;label30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TrackBar3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="txtConfirmPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 221</value>
+  </data>
+  <data name="guna2Button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>DATABASE SETTINGS</value>
+  </data>
+  <data name="textsize.TabIndex" type="System.Int32, mscorlib">
+    <value>294</value>
+  </data>
+  <data name="guna2DataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 131</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar4.Name" xml:space="preserve">
+    <value>guna2TrackBar4</value>
+  </data>
+  <data name="back.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="guna2TextBox3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="guna2TrackBar8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="guna2DataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>280</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="nutriname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 132</value>
+  </data>
+  <data name="password.Location" type="System.Drawing.Point, System.Drawing">
+    <value>777, 124</value>
+  </data>
+  <data name="&gt;&gt;room1.Name" xml:space="preserve">
+    <value>room1</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label26.TabIndex" type="System.Int32, mscorlib">
+    <value>286</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 29</value>
+  </data>
+  <data name="&gt;&gt;tabPage7.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;cboRole.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="email.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="label36.TabIndex" type="System.Int32, mscorlib">
+    <value>307</value>
+  </data>
+  <data name="guna2TextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="underline.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 534</value>
+  </data>
+  <data name="textsize.Items11" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="guna2Button5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="&gt;&gt;panel13.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;label41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 24</value>
+  </data>
+  <data name="&gt;&gt;welcomewords.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="room2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 256</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1044, 4</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label35.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="importmeals.Size" type="System.Drawing.Size, System.Drawing">
+    <value>383, 45</value>
+  </data>
+  <data name="cboRole.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label46.Name" xml:space="preserve">
+    <value>label46</value>
+  </data>
+  <data name="&gt;&gt;guna2Button3.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="guna2TextBox6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="label27.TabIndex" type="System.Int32, mscorlib">
+    <value>285</value>
+  </data>
+  <data name="panel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 760</value>
+  </data>
+  <data name="&gt;&gt;label33.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TrackBar5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>413, 190</value>
+  </data>
+  <data name="label40.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 233</value>
+  </data>
+  <data name="btnBackup.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="label37.TabIndex" type="System.Int32, mscorlib">
+    <value>278</value>
+  </data>
+  <data name="&gt;&gt;companyname.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label47.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 24</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="guna2Button7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="&gt;&gt;nutriname.Name" xml:space="preserve">
+    <value>nutriname</value>
+  </data>
+  <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
+    <value>725, 197</value>
+  </data>
+  <data name="edituser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 73</value>
+  </data>
+  <data name="txtConfirmPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 54</value>
+  </data>
+  <data name="&gt;&gt;label42.Name" xml:space="preserve">
+    <value>label42</value>
+  </data>
+  <data name="trade.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="itallic.Items1" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="room1.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="label36.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 157</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="&gt;&gt;edituser.Name" xml:space="preserve">
+    <value>edituser</value>
+  </data>
+  <data name="guna2TextBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>994, 156</value>
+  </data>
+  <data name="SaveSettings.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="label39.Text" xml:space="preserve">
+    <value>DELETE NUTRITIONIST</value>
+  </data>
+  <data name="&gt;&gt;guna2Button5.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;room4.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label45.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1820, 831</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DatabaseSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="label33.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 24</value>
+  </data>
+  <data name="&gt;&gt;label37.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="language.TabIndex" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
+  <data name="branch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 66</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label23.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="cboRole.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 268</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox8.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label29.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="guna2Button1.TabIndex" type="System.Int32, mscorlib">
+    <value>283</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;username.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar4.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="btnClose.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSettings.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;deleteToolStripMenuItem.Name" xml:space="preserve">
+    <value>deleteToolStripMenuItem</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="&gt;&gt;label46.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox3.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox4.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="label37.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtRestore.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label37.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 141</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 24</value>
+  </data>
+  <data name="&gt;&gt;DeleteUser.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="txtUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;usermanagement.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;guna2Button7.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label27.Name" xml:space="preserve">
+    <value>label27</value>
+  </data>
+  <data name="&gt;&gt;label28.Name" xml:space="preserve">
+    <value>label28</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Trade Liscense No.</value>
+  </data>
+  <data name="textsize.Items12" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;Dbsetting.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 31</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox5.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="UserSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1071, 766</value>
+  </data>
+  <data name="&gt;&gt;usermanagement.Name" xml:space="preserve">
+    <value>usermanagement</value>
+  </data>
+  <data name="&gt;&gt;guna2Button8.Name" xml:space="preserve">
+    <value>guna2Button8</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="txtName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>302, 131</value>
+  </data>
+  <data name="&gt;&gt;SaveSettings.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="importsettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 45</value>
+  </data>
+  <data name="cboRole.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;guna2Button2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;saveuser.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Room 1</value>
+  </data>
+  <data name="username.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
+  </data>
+  <data name="&gt;&gt;label23.Name" xml:space="preserve">
+    <value>label23</value>
+  </data>
+  <data name="&gt;&gt;importsettings.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="guna2TrackBar6.TabIndex" type="System.Int32, mscorlib">
+    <value>314</value>
+  </data>
+  <data name="&gt;&gt;Attach.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="btnUserSettings.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="room4.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;tabPage6.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2Button7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>877, 183</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="label34.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;importsettings.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label45.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tabPage6.Text" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="underline.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar6.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TrackBar, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="passwordedit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>777, 124</value>
+  </data>
+  <data name="&gt;&gt;landline.Name" xml:space="preserve">
+    <value>landline</value>
+  </data>
+  <data name="label44.TabIndex" type="System.Int32, mscorlib">
+    <value>329</value>
+  </data>
+  <data name="&gt;&gt;language.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;underline.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="DeleteUser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>850, 537</value>
+  </data>
+  <data name="guna2TrackBar4.TabIndex" type="System.Int32, mscorlib">
+    <value>316</value>
+  </data>
+  <data name="guna2TextBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 156</value>
+  </data>
+  <data name="&gt;&gt;landline.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;edituser.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="btnDatabaseSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 231</value>
+  </data>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;panel8.Name" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;panel9.Parent" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="&gt;&gt;Delete.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="btnClose.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;selectedpanel.Name" xml:space="preserve">
+    <value>selectedpanel</value>
+  </data>
+  <data name="itallic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 475</value>
+  </data>
+  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
+  </data>
+  <data name="downloadingredient.TabIndex" type="System.Int32, mscorlib">
+    <value>289</value>
+  </data>
+  <data name="Save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="bold.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="Dbsetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="&gt;&gt;tabPage7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel12.Name" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 18</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Delete.TabIndex" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="guna2TextBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="guna2TextBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="textsize.Items10" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="textsize.Items1" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textsize.Items2" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="textsize.Items3" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="textsize.Items4" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="textsize.Items5" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="textsize.Items6" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="textsize.Items7" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar1.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="guna2TextBox4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;label29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;modifyuser.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtName.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="edituser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>677, 537</value>
+  </data>
+  <data name="Datagridview1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 400</value>
+  </data>
+  <data name="guna2Button5.TabIndex" type="System.Int32, mscorlib">
+    <value>282</value>
+  </data>
+  <data name="room4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 353</value>
+  </data>
+  <data name="label34.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
+  </data>
+  <data name="btnDatabaseSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cboRole.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox5.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;landline.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="pobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="bold.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox3.Name" xml:space="preserve">
+    <value>guna2TextBox3</value>
+  </data>
+  <data name="namedgv.HeaderText" xml:space="preserve">
+    <value>Name (AR)</value>
+  </data>
+  <data name="guna2TextBox5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 6pt</value>
+  </data>
+  <data name="&gt;&gt;txtBackup.Name" xml:space="preserve">
+    <value>txtBackup</value>
+  </data>
+  <data name="&gt;&gt;UsernameGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NameGV.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;back.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 18</value>
+  </data>
+  <data name="btnRestore.Text" xml:space="preserve">
+    <value>RESTORE</value>
+  </data>
+  <data name="username.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;trade.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="guna2TextBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 6pt</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtConfirmPassword.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="panel12.TabIndex" type="System.Int32, mscorlib">
+    <value>313</value>
+  </data>
+  <data name="&gt;&gt;mobile.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="textsize.Items13" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 25</value>
+  </data>
+  <data name="&gt;&gt;panel13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="back.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 47</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;welcomewords.Name" xml:space="preserve">
+    <value>welcomewords</value>
+  </data>
+  <data name="&gt;&gt;txtConfirmPassword.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="guna2Button8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 104</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 24</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 47</value>
+  </data>
+  <data name="RoleGV.HeaderText" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="guna2Button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;guna2Button2.Name" xml:space="preserve">
+    <value>guna2Button2</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="&gt;&gt;label37.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;iddgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mobile.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="txtName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label40.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label39.Size" type="System.Drawing.Size, System.Drawing">
+    <value>566, 54</value>
+  </data>
+  <data name="panel13.TabIndex" type="System.Int32, mscorlib">
+    <value>323</value>
+  </data>
+  <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 20</value>
+  </data>
+  <data name="guna2Button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 600</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar7.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TrackBar, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label44.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="guna2TrackBar9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>763, 152</value>
+  </data>
+  <data name="&gt;&gt;password.Name" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 363</value>
+  </data>
+  <data name="txtUsername.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSettingPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 210</value>
+  </data>
+  <data name="&gt;&gt;ColorClose.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 225</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar9.Name" xml:space="preserve">
+    <value>guna2TrackBar9</value>
+  </data>
+  <data name="guna2TrackBar7.TabIndex" type="System.Int32, mscorlib">
+    <value>326</value>
+  </data>
+  <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1071, 766</value>
+  </data>
+  <data name="&gt;&gt;label37.Name" xml:space="preserve">
+    <value>label37</value>
+  </data>
+  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="guna2Button8.TabIndex" type="System.Int32, mscorlib">
+    <value>292</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView4.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;PasswordGV.Name" xml:space="preserve">
+    <value>PasswordGV</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="guna2Button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>877, 183</value>
+  </data>
+  <data name="&gt;&gt;guna2Button4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="UserSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;btnRestoreBrowse.Name" xml:space="preserve">
+    <value>btnRestoreBrowse</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox4.Name" xml:space="preserve">
+    <value>guna2TextBox4</value>
+  </data>
+  <data name="btnBackupBrowse.Text" xml:space="preserve">
+    <value>BROWSE</value>
+  </data>
+  <data name="guna2TextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 156</value>
+  </data>
+  <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;saveuser.Name" xml:space="preserve">
+    <value>saveuser</value>
+  </data>
+  <data name="textsize.Items15" xml:space="preserve">
+    <value>72</value>
+  </data>
+  <data name="branch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="password.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;label33.Name" xml:space="preserve">
+    <value>label33</value>
+  </data>
+  <data name="&gt;&gt;language.Name" xml:space="preserve">
+    <value>language</value>
+  </data>
+  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="edituser.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="underline.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 831</value>
+  </data>
+  <data name="guna2TextBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="label21.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox8.Name" xml:space="preserve">
+    <value>guna2TextBox8</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar5.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="saveuser.Text" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>Text Size</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Save.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="label45.TabIndex" type="System.Int32, mscorlib">
+    <value>328</value>
+  </data>
+  <data name="DeleteUser.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Dbsetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 699</value>
+  </data>
+  <data name="Delete.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="label30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="textsize.Items14" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;Delete.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="&gt;&gt;AddNutri.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="mobile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 31</value>
+  </data>
+  <data name="label35.Text" xml:space="preserve">
+    <value>ADD NUTRITIONIST</value>
+  </data>
+  <data name="&gt;&gt;Datagridview1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1810, 831</value>
+  </data>
+  <data name="label41.Text" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox9.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPage7.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="Dbsetting.Text" xml:space="preserve">
+    <value>Database Setting</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 259</value>
+  </data>
+  <data name="SaveSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>850, 466</value>
+  </data>
+  <data name="nutriname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
+  </data>
+  <data name="&gt;&gt;label45.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label34.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="guna2TrackBar8.TabIndex" type="System.Int32, mscorlib">
+    <value>325</value>
+  </data>
+  <data name="&gt;&gt;AddNutri.Name" xml:space="preserve">
+    <value>AddNutri</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox9.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;usernameedit.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="Delete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 34</value>
+  </data>
+  <data name="&gt;&gt;label43.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;btnUserSettings.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="label34.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 534</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="btnDatabaseSettings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;label35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PasswordGV.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label43.Location" type="System.Drawing.Point, System.Drawing">
+    <value>375, 157</value>
+  </data>
+  <data name="tabPage8.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="guna2TextBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>332</value>
+  </data>
+  <data name="&gt;&gt;guna2Button6.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;useriddgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 20</value>
+  </data>
+  <data name="label44.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="&gt;&gt;Attach.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="welcomewords.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 356</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textsize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 36</value>
+  </data>
+  <data name="&gt;&gt;label31.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Deletegc.TabIndex" type="System.Int32, mscorlib">
+    <value>277</value>
+  </data>
+  <data name="&gt;&gt;cboRole.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label42.TabIndex" type="System.Int32, mscorlib">
+    <value>318</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>EDIT USER</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 24</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar2.Name" xml:space="preserve">
+    <value>guna2TrackBar2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="label26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 28.2pt, style=Bold, Underline</value>
+  </data>
+  <data name="&gt;&gt;Save.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label24.TabIndex" type="System.Int32, mscorlib">
+    <value>283</value>
+  </data>
+  <data name="&gt;&gt;pobox.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;bold.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView4.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="passwordedit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="bold.Items" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="DatabaseSettingPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="Adduser.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="UserSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1063, 758</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="room4.TabIndex" type="System.Int32, mscorlib">
+    <value>123</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panel12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label27.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnBackupBrowse.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;txtRestore.Parent" xml:space="preserve">
+    <value>DatabaseSettingPanel</value>
+  </data>
+  <data name="&gt;&gt;btnBackupBrowse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Landline</value>
+  </data>
+  <data name="&gt;&gt;panel8.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="label43.TabIndex" type="System.Int32, mscorlib">
+    <value>317</value>
+  </data>
+  <data name="guna2Button3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 526</value>
+  </data>
+  <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="label25.TabIndex" type="System.Int32, mscorlib">
+    <value>290</value>
+  </data>
+  <data name="btnBackupBrowse.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="DatabaseSettingPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="Deletegc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="textsize.Items8" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="label35.TabIndex" type="System.Int32, mscorlib">
+    <value>280</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>P.O. Box</value>
+  </data>
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="usernameedit.TabIndex" type="System.Int32, mscorlib">
+    <value>284</value>
+  </data>
+  <data name="guna2TrackBar3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 229</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar3.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1079, 795</value>
+  </data>
+  <data name="&gt;&gt;cboRole.Name" xml:space="preserve">
+    <value>cboRole</value>
+  </data>
+  <data name="&gt;&gt;room3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SettingScreen</value>
+  </data>
+  <data name="room2.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="tabPage6.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnCancel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SaveSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>302</value>
+  </data>
+  <data name="&gt;&gt;branch.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="label2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>743, 55</value>
+  </data>
+  <data name="&gt;&gt;DeleteUser.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textsize.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;guna2Button1.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="btnUserSettings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="guna2TrackBar2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="&gt;&gt;Delete.Name" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;txtName.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="txtPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cboRole.Items1" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="welcomewords.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 105</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="guna2Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>873, 191</value>
+  </data>
+  <data name="label42.Text" xml:space="preserve">
+    <value>G</value>
+  </data>
+  <data name="&gt;&gt;bold.Name" xml:space="preserve">
+    <value>bold</value>
+  </data>
+  <data name="&gt;&gt;pobox.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSettings.Name" xml:space="preserve">
+    <value>DatabaseSettings</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="btnBackupBrowse.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TrackBar, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="txtConfirmPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnRestore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 297</value>
+  </data>
+  <data name="ADD.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnDatabaseSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;room4.Name" xml:space="preserve">
+    <value>room4</value>
+  </data>
+  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 24</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar2.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TrackBar, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="ColorClose.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSettingPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cboRole.Items2" xml:space="preserve">
+    <value>Counter</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>USERS SETTINGS</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>407, 33</value>
+  </data>
+  <data name="room1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 207</value>
+  </data>
+  <data name="btnRestoreBrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 260</value>
+  </data>
+  <data name="label32.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SaveSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 45</value>
+  </data>
+  <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 760</value>
+  </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label38.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtConfirmPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 24</value>
+  </data>
+  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;NameGV.Name" xml:space="preserve">
+    <value>NameGV</value>
+  </data>
+  <data name="&gt;&gt;label34.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 0</value>
+  </data>
+  <data name="&gt;&gt;importmeals.Name" xml:space="preserve">
+    <value>importmeals</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1071, 766</value>
+  </data>
+  <data name="btnBackupBrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>581, 95</value>
+  </data>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
+  </data>
+  <data name="guna2Button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="&gt;&gt;password.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label31.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;label39.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label47.Name" xml:space="preserve">
+    <value>label47</value>
+  </data>
+  <data name="panel12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 94</value>
+  </data>
+  <data name="room2.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;room3.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;saveuser.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;UsernameGV.Name" xml:space="preserve">
+    <value>UsernameGV</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="downloadingredient.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="downloadingredient.Text" xml:space="preserve">
+    <value>Download Ingredient Demo Import File</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;label41.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 24</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="label42.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;panel9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label43.Name" xml:space="preserve">
+    <value>label43</value>
+  </data>
+  <data name="&gt;&gt;usermanagement.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="guna2Button3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Re-Password</value>
+  </data>
+  <data name="panel8.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnUserSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtBackup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TrackBar5.TabIndex" type="System.Int32, mscorlib">
+    <value>315</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage7.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;passwordedit.Name" xml:space="preserve">
+    <value>passwordedit</value>
+  </data>
+  <data name="back.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Room 3</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;Adduser.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label36.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 218</value>
+  </data>
+  <data name="guna2Button7.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;guna2Button3.Name" xml:space="preserve">
+    <value>guna2Button3</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox1.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSettingPanel.Parent" xml:space="preserve">
+    <value>DatabaseSettings</value>
+  </data>
+  <data name="&gt;&gt;trade.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="label39.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 28.2pt, style=Bold, Underline</value>
+  </data>
+  <data name="textsize.Items" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="passwordedit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
+  </data>
+  <data name="&gt;&gt;panel8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;btnBackupBrowse.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="AddNutri.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="guna2TextBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 229</value>
+  </data>
+  <data name="guna2TextBox2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;btnBackup.Name" xml:space="preserve">
+    <value>btnBackup</value>
+  </data>
+  <data name="guna2TrackBar5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="&gt;&gt;label32.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;tabPage8.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;txtConfirmPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Adduser.Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="btnRestore.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="trade.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 308</value>
+  </data>
+  <data name="&gt;&gt;btnDatabaseSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="Datagridview1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1013, 220</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="underline.Items" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="importmeals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="Colorsetting.Text" xml:space="preserve">
+    <value>Color &amp; Text Settings</value>
+  </data>
+  <data name="&gt;&gt;nutriname.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="panel10.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="guna2TextBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>322</value>
+  </data>
+  <data name="guna2DataGridView4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 120</value>
+  </data>
+  <data name="&gt;&gt;Delete.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;underline.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="txtPassword.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox4.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;downloadingredient.Name" xml:space="preserve">
+    <value>downloadingredient</value>
+  </data>
+  <data name="label35.Size" type="System.Drawing.Size, System.Drawing">
+    <value>480, 54</value>
+  </data>
+  <data name="AddNutri.Text" xml:space="preserve">
+    <value>Add Nutritionist</value>
+  </data>
+  <data name="&gt;&gt;label27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar3.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="language.Items" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2Button4.Name" xml:space="preserve">
+    <value>guna2Button4</value>
+  </data>
+  <data name="UserSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label45.Text" xml:space="preserve">
+    <value>G</value>
+  </data>
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="landline.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;btnDatabaseSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;selectedpanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="guna2Button3.TabIndex" type="System.Int32, mscorlib">
+    <value>278</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox6.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="guna2TextBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSettingPanel.Name" xml:space="preserve">
+    <value>DatabaseSettingPanel</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="tabPage4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="txtBackup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>549, 22</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="UsernameGV.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="&gt;&gt;modifyuser.Name" xml:space="preserve">
+    <value>modifyuser</value>
+  </data>
+  <data name="itallic.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="trade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 31</value>
+  </data>
+  <data name="&gt;&gt;label46.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label19.TabIndex" type="System.Int32, mscorlib">
+    <value>122</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="ColorClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>843, 599</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="label23.TabIndex" type="System.Int32, mscorlib">
+    <value>290</value>
+  </data>
+  <data name="underline.TabIndex" type="System.Int32, mscorlib">
+    <value>298</value>
+  </data>
+  <data name="Colorsetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="guna2Button6.Text" xml:space="preserve">
+    <value>Demo Import</value>
+  </data>
+  <data name="btnBackup.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="label33.TabIndex" type="System.Int32, mscorlib">
+    <value>300</value>
+  </data>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox7.Name" xml:space="preserve">
+    <value>guna2TextBox7</value>
+  </data>
+  <data name="&gt;&gt;label42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtConfirmPassword.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label41.Location" type="System.Drawing.Point, System.Drawing">
+    <value>375, 233</value>
+  </data>
+  <data name="&gt;&gt;label36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar7.Name" xml:space="preserve">
+    <value>guna2TrackBar7</value>
+  </data>
+  <data name="Adduser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 183</value>
+  </data>
+  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 29</value>
+  </data>
+  <data name="&gt;&gt;tabPage8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 54</value>
+  </data>
+  <data name="guna2Button8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 167</value>
+  </data>
+  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="guna2TextBox9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;Colorsetting.Name" xml:space="preserve">
+    <value>Colorsetting</value>
+  </data>
+  <data name="label32.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 415</value>
+  </data>
+  <data name="UserSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DatabaseSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="saveuser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="&gt;&gt;label32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar5.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TrackBar, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label34.Name" xml:space="preserve">
+    <value>label34</value>
+  </data>
+  <data name="guna2TextBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>994, 192</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Colorsetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>643, 699</value>
+  </data>
+  <data name="&gt;&gt;language.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;btnRestoreBrowse.Parent" xml:space="preserve">
+    <value>DatabaseSettingPanel</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="DatabaseSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pobox.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;bold.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="usermanagement.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="&gt;&gt;guna2Button1.Name" xml:space="preserve">
+    <value>guna2Button1</value>
+  </data>
+  <data name="label47.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="bold.TabIndex" type="System.Int32, mscorlib">
+    <value>296</value>
+  </data>
+  <data name="&gt;&gt;btnRestoreBrowse.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;mobile.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="guna2TextBox4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 6pt</value>
+  </data>
+  <data name="&gt;&gt;ADD.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;importmeals.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="guna2Button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnRestore.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="edituser.TabIndex" type="System.Int32, mscorlib">
+    <value>284</value>
+  </data>
+  <data name="selectedpanel.TabIndex" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
+  <data name="guna2Button2.TabIndex" type="System.Int32, mscorlib">
+    <value>288</value>
+  </data>
+  <data name="ColorClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="&gt;&gt;Colorsetting.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="room3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="&gt;&gt;ADD.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="btnBackup.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>DatabaseSettingPanel</value>
+  </data>
+  <data name="nutriname.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;Save.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="iddgv.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;landline.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="label30.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="guna2Button7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="&gt;&gt;downloadingredient.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="language.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;importsettings.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="cboRole.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 24</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;room2.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="tabPage7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1071, 766</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox7.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="txtRestore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>549, 22</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;guna2Button8.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2Button6.Name" xml:space="preserve">
+    <value>guna2Button6</value>
+  </data>
+  <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 29</value>
+  </data>
+  <data name="&gt;&gt;label38.Name" xml:space="preserve">
+    <value>label38</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;branch.Name" xml:space="preserve">
+    <value>branch</value>
+  </data>
+  <data name="NameGV.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label38.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 197</value>
+  </data>
+  <data name="&gt;&gt;Colorsetting.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="textsize.Items9" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;btnUserSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="guna2TextBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="itallic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 36</value>
+  </data>
+  <data name="btnUserSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="btnBackupBrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 32</value>
+  </data>
+  <data name="guna2TrackBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 152</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar8.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TrackBar, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 760</value>
+  </data>
+  <data name="&gt;&gt;back.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="&gt;&gt;btnUserSettings.Name" xml:space="preserve">
+    <value>btnUserSettings</value>
+  </data>
+  <data name="guna2DataGridView4.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="label33.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;guna2Button8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 52</value>
+  </data>
+  <data name="label27.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="label39.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1071, 766</value>
+  </data>
+  <data name="label40.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
+    <value>txtPassword</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView1.Name" xml:space="preserve">
+    <value>guna2DataGridView1</value>
+  </data>
+  <data name="label40.TabIndex" type="System.Int32, mscorlib">
+    <value>309</value>
+  </data>
+  <data name="label37.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="guna2Button2.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar5.Name" xml:space="preserve">
+    <value>guna2TrackBar5</value>
+  </data>
+  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;label38.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="tabPage8.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="txtUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 24</value>
+  </data>
+  <data name="label46.Location" type="System.Drawing.Point, System.Drawing">
+    <value>725, 157</value>
+  </data>
+  <data name="nutriname.TabIndex" type="System.Int32, mscorlib">
+    <value>276</value>
+  </data>
+  <data name="iddgv.HeaderText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="DatabaseSettingPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1063, 758</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="saveuser.TabIndex" type="System.Int32, mscorlib">
+    <value>287</value>
+  </data>
+  <data name="branch.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="&gt;&gt;namedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label45.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="&gt;&gt;panel10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="language.Items1" xml:space="preserve">
+    <value>Arabic</value>
+  </data>
+  <data name="&gt;&gt;label40.Name" xml:space="preserve">
+    <value>label40</value>
+  </data>
+  <data name="&gt;&gt;label40.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;SaveSettings.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="DeleteUser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="tabPage8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1071, 766</value>
+  </data>
+  <data name="PasswordGV.HeaderText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="selectedpanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 94</value>
+  </data>
+  <data name="&gt;&gt;tabPage8.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="DatabaseSettings.Text" xml:space="preserve">
+    <value>Database Settings</value>
+  </data>
+  <data name="guna2Button3.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label43.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;UserSettings.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="usernameedit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 124</value>
+  </data>
+  <data name="&gt;&gt;label30.Name" xml:space="preserve">
+    <value>label30</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="bold.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 36</value>
+  </data>
+  <data name="&gt;&gt;txtRestore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TextBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 6pt</value>
+  </data>
+  <data name="downloadingredient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 40</value>
+  </data>
+  <data name="label31.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>Change Sidebar Color</value>
+  </data>
+  <data name="label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="&gt;&gt;passwordedit.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;DeleteUser.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="ADD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>293</value>
+  </data>
+  <data name="label17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;selectedpanel.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox1.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;Attach.Name" xml:space="preserve">
+    <value>Attach</value>
+  </data>
+  <data name="label43.Text" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="&gt;&gt;usernameedit.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="importsettings.TabIndex" type="System.Int32, mscorlib">
+    <value>133</value>
+  </data>
+  <data name="guna2TrackBar2.TabIndex" type="System.Int32, mscorlib">
+    <value>305</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>CANCEL</value>
+  </data>
+  <data name="btnRestoreBrowse.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="guna2Button8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>383, 45</value>
+  </data>
+  <data name="label35.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 28.2pt, style=Bold, Underline</value>
+  </data>
+  <data name="guna2Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 133</value>
+  </data>
+  <data name="&gt;&gt;useriddgv.Name" xml:space="preserve">
+    <value>useriddgv</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>ADD USER</value>
+  </data>
+  <data name="&gt;&gt;guna2Button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ADD.TabIndex" type="System.Int32, mscorlib">
+    <value>281</value>
+  </data>
+  <data name="txtRestore.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="guna2TrackBar7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="btnRestore.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 24</value>
+  </data>
+  <data name="importsettings.Text" xml:space="preserve">
+    <value>Import Settings</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox8.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="Attach.Text" xml:space="preserve">
+    <value>Attach</value>
+  </data>
+  <data name="btnRestore.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;label25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnUserSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 69</value>
+  </data>
+  <data name="Attach.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="branch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 31</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="Delete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 154</value>
+  </data>
+  <data name="guna2TrackBar9.TabIndex" type="System.Int32, mscorlib">
+    <value>324</value>
+  </data>
+  <data name="label34.TabIndex" type="System.Int32, mscorlib">
+    <value>301</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar5.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;saveuser.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2Button5.Name" xml:space="preserve">
+    <value>guna2Button5</value>
+  </data>
+  <data name="label22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;ADD.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnSave.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 760</value>
+  </data>
+  <data name="guna2Button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="label23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="UsernameGV.HeaderText" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="&gt;&gt;Dbsetting.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;room2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="Save.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 699</value>
+  </data>
+  <data name="label28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;textsize.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="room3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 36</value>
+  </data>
+  <data name="Adduser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="label36.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;guna2Button6.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Datagridview1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 315</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar6.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="Dbsetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 45</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar2.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;importmeals.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Deletegc.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="itallic.TabIndex" type="System.Int32, mscorlib">
+    <value>297</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="usermanagement.Text" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="label36.Text" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="guna2TextBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 192</value>
+  </data>
+  <data name="&gt;&gt;btnBackup.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="selectedpanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 55</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;room3.Name" xml:space="preserve">
+    <value>room3</value>
+  </data>
+  <data name="&gt;&gt;importmeals.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="usernameedit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
+  </data>
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label46.Text" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="txtBackup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 100</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox8.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="bold.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 415</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.Name" xml:space="preserve">
+    <value>txtUsername</value>
+  </data>
+  <data name="&gt;&gt;Datagridview1.Name" xml:space="preserve">
+    <value>Datagridview1</value>
+  </data>
+  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;panel13.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRestoreBrowse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;language.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="AddNutri.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox7.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label44.Name" xml:space="preserve">
+    <value>label44</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2DataGridView4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>968, 400</value>
+  </data>
+  <data name="&gt;&gt;itallic.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;email.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="Dbsetting.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 94</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TrackBar, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="btnSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="UserSettings.Text" xml:space="preserve">
+    <value>User Settings</value>
+  </data>
+  <data name="guna2TextBox7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 6pt</value>
+  </data>
+  <data name="username.TabIndex" type="System.Int32, mscorlib">
+    <value>284</value>
+  </data>
+  <data name="Datagridview1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;welcomewords.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;branch.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 308</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 24</value>
+  </data>
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;back.Name" xml:space="preserve">
+    <value>back</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="label3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnDatabaseSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="Deletegc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 24</value>
+  </data>
+  <data name="&gt;&gt;btnBackup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>739, 28</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="modifyuser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 34</value>
+  </data>
+  <data name="&gt;&gt;label41.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label35.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 33</value>
+  </data>
+  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 28.2pt, style=Bold, Underline</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 18</value>
+  </data>
+  <data name="panel11.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textsize.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 133</value>
+  </data>
+  <data name="&gt;&gt;txtRestore.Name" xml:space="preserve">
+    <value>txtRestore</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="guna2DataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>968, 400</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TrackBar3.TabIndex" type="System.Int32, mscorlib">
+    <value>306</value>
+  </data>
+  <data name="guna2Button5.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label25.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;usernamedgv.Name" xml:space="preserve">
+    <value>usernamedgv</value>
+  </data>
+  <data name="&gt;&gt;room1.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="SaveSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="Attach.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 34</value>
+  </data>
+  <data name="label38.TabIndex" type="System.Int32, mscorlib">
+    <value>308</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="password.TabIndex" type="System.Int32, mscorlib">
+    <value>289</value>
+  </data>
+  <data name="Deletegc.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="guna2Button6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>438, 699</value>
+  </data>
+  <data name="guna2TextBox9.TabIndex" type="System.Int32, mscorlib">
+    <value>330</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;passwordedit.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="label22.Text" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>547, 321</value>
+  </data>
+  <data name="label20.TabIndex" type="System.Int32, mscorlib">
+    <value>124</value>
+  </data>
+  <data name="label30.TabIndex" type="System.Int32, mscorlib">
+    <value>142</value>
+  </data>
+  <data name="&gt;&gt;RoleGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TextBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>310</value>
+  </data>
+  <data name="btnBackup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 132</value>
+  </data>
+  <data name="language.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="&gt;&gt;label25.Name" xml:space="preserve">
+    <value>label25</value>
+  </data>
+  <data name="&gt;&gt;Adduser.Name" xml:space="preserve">
+    <value>Adduser</value>
+  </data>
+  <data name="&gt;&gt;edituser.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="room3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>696, 305</value>
+  </data>
+  <data name="label29.TabIndex" type="System.Int32, mscorlib">
+    <value>137</value>
+  </data>
+  <data name="&gt;&gt;UserSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="passwordedit.TabIndex" type="System.Int32, mscorlib">
+    <value>289</value>
+  </data>
+  <data name="&gt;&gt;room4.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="usernamedgv.HeaderText" xml:space="preserve">
+    <value>USERNAME</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox9.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox2.Name" xml:space="preserve">
+    <value>guna2TextBox2</value>
+  </data>
+  <data name="guna2Button6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 45</value>
+  </data>
+  <data name="&gt;&gt;tabPage7.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label39.TabIndex" type="System.Int32, mscorlib">
+    <value>279</value>
+  </data>
+  <data name="room3.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="label41.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Colorsetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 45</value>
+  </data>
+  <data name="&gt;&gt;label47.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="guna2TextBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>331</value>
+  </data>
+  <data name="pobox.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;panel12.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="label21.TabIndex" type="System.Int32, mscorlib">
+    <value>286</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="&gt;&gt;guna2Button7.Name" xml:space="preserve">
+    <value>guna2Button7</value>
+  </data>
+  <data name="guna2Button6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 24</value>
+  </data>
+  <data name="label31.TabIndex" type="System.Int32, mscorlib">
+    <value>295</value>
+  </data>
+  <data name="&gt;&gt;NameGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2TextBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>UserSettings</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox6.Name" xml:space="preserve">
+    <value>guna2TextBox6</value>
+  </data>
+  <data name="&gt;&gt;label43.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label31.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ColorClose.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="room3.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <data name="&gt;&gt;label37.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label36.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="guna2TrackBar4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="&gt;&gt;bold.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 28</value>
+  </data>
+  <data name="&gt;&gt;pobox.Name" xml:space="preserve">
+    <value>pobox</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Room 4</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1071, 766</value>
+  </data>
+  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 24</value>
+  </data>
+  <data name="guna2TextBox7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;tabPage8.Name" xml:space="preserve">
+    <value>tabPage8</value>
+  </data>
+  <data name="btnCancel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;AddNutri.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="Attach.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 529</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>MODIFY USER</value>
+  </data>
+  <data name="btnClose.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;label29.Name" xml:space="preserve">
+    <value>label29</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="room1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="&gt;&gt;txtConfirmPassword.Name" xml:space="preserve">
+    <value>txtConfirmPassword</value>
+  </data>
+  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 24</value>
+  </data>
+  <data name="&gt;&gt;label40.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;panel10.Name" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;trade.Name" xml:space="preserve">
+    <value>trade</value>
+  </data>
+  <data name="Datagridview1.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;SaveSettings.Name" xml:space="preserve">
+    <value>SaveSettings</value>
+  </data>
+  <data name="&gt;&gt;guna2TextBox2.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;Deletegc.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;panel11.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;usernameedit.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 760</value>
+  </data>
+  <data name="room2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel9.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar7.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label36.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1071, 766</value>
+  </data>
+  <data name="guna2TrackBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 23</value>
+  </data>
+  <data name="email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 211</value>
+  </data>
+  <data name="&gt;&gt;branch.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="txtBackup.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="DatabaseSettingPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="guna2DataGridView4.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="guna2Button4.TabIndex" type="System.Int32, mscorlib">
+    <value>290</value>
+  </data>
+  <data name="btnBackup.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="guna2TextBox8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 6pt</value>
+  </data>
+  <data name="edituser.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="&gt;&gt;UserSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Room 2</value>
+  </data>
+  <data name="guna2TextBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 19</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar4.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;label33.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;Dbsetting.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="&gt;&gt;textsize.Name" xml:space="preserve">
+    <value>textsize</value>
+  </data>
+  <data name="downloadingredient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>383, 45</value>
+  </data>
+  <data name="&gt;&gt;RoleGV.Name" xml:space="preserve">
+    <value>RoleGV</value>
+  </data>
+  <data name="label28.TabIndex" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar4.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TrackBar, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="bold.Items1" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="&gt;&gt;editToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;room1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label44.Location" type="System.Drawing.Point, System.Drawing">
+    <value>725, 233</value>
+  </data>
+  <data name="Delete.Text" xml:space="preserve">
+    <value>Delete Nutritionist</value>
+  </data>
+  <data name="&gt;&gt;Adduser.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView4.Name" xml:space="preserve">
+    <value>guna2DataGridView4</value>
+  </data>
+  <data name="ColorClose.TabIndex" type="System.Int32, mscorlib">
+    <value>291</value>
+  </data>
+  <data name="tabPage8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="txtPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar8.Name" xml:space="preserve">
+    <value>guna2TrackBar8</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;Deletegc.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;modifyuser.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="label33.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 475</value>
+  </data>
+  <data name="&gt;&gt;txtBackup.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;SaveSettings.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;tabPage6.Name" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="label24.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 16</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 271</value>
+  </data>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="back.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 45</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="guna2Button6.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
+  </data>
+  <data name="&gt;&gt;guna2TrackBar8.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="tabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnUserSettings.Text" xml:space="preserve">
+    <value>User Settings</value>
+  </data>
+  <metadata name="usernamedgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <metadata name="PasswordGV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="UsernameGV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="PasswordGV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="iddgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="NameGV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>ar-AE</value>
+  </metadata>
+  <metadata name="useriddgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="RoleGV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -132,19 +4830,7 @@
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="iddgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="namedgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="useriddgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="usernamedgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
   </metadata>
 </root>

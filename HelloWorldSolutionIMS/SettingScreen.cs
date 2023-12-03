@@ -221,6 +221,15 @@ namespace HelloWorldSolutionIMS
         }
         private void SettingScreen_Load(object sender, EventArgs e)
         {
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView4.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView4.GridColor = Color.Black;
+            guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView4.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView4.RowTemplate.DefaultCellStyle.ForeColor;
+
             try
             {
                 MainClass.con.Open();
@@ -675,6 +684,193 @@ namespace HelloWorldSolutionIMS
             else
             {
                 language.SelectedIndex = 0;
+            }
+
+            if (languagestatus == 1)
+            {
+                foreach (Control control in panel4.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel4.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel5.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel5.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel6.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel6.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel7.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel7.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel8.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel8.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel9.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel9.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel10.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel10.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel11.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel11.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
             }
         }
 
