@@ -63,6 +63,8 @@ namespace HelloWorldSolutionIMS
             {
                 MessageBox.Show(ex.Message);
             }
+
+
         }
         static int edit = 0;
         static string PaymentIDToEdit;
@@ -633,7 +635,7 @@ namespace HelloWorldSolutionIMS
             }
             MainClass.HideAllTabsOnTabControl(tabControl1);
             ShowPayments(guna2DataGridView1, iddgv, filenodgv, paymentnamedgv, firstnamedgv, familynamedgv, amountdgv, amountaftrpromotiondgv, promotionpercentagedgv, datedgv);
-            total();
+
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView1.GridColor = Color.Black;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
@@ -642,6 +644,108 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView2.GridColor = Color.Black;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.ForeColor;
+
+            LanguageInfo();
+            if (languagestatus == 1)
+            {
+
+                foreach (Control control in panel1.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel2.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel2.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel3.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel3.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+            }
+
+            total();
+        }
+        static int languagestatus;
+        private void LanguageInfo()
+        {
+            MainClass.con.Open();
+
+            // Create a SqlCommand to fetch the row with ID 1 from the Language table
+            SqlCommand fetchCmd = new SqlCommand("SELECT * FROM Language WHERE ID = 1", MainClass.con);
+
+            // Execute the fetch command to get the data
+            using (SqlDataReader reader = fetchCmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    // Retrieve values from the reader and store them in variables
+                    int id = Convert.ToInt32(reader["ID"]);
+                    languagestatus = Convert.ToInt32(reader["Status"]);
+
+                    // Now, you can use the 'id' and 'status' variables as needed
+                    // For example, display them in a MessageBox
+                }
+
+            }
+
+            MainClass.con.Close();
 
         }
         private void total()
@@ -666,10 +770,15 @@ namespace HelloWorldSolutionIMS
                 }
             }
 
-            // "sum" now contains the sum of values in the specified column
+            if (languagestatus == 1)
+            {
+                totalvalues.Text = +sum + "/- " + "مجموع المبالغ";
+            }
+            else
+            {
+                totalvalues.Text = "Amount Sum: " + sum + "/-";
+            }
 
-            // Assuming "sumLabel" is the name of your label control
-            totalvalues.Text = "Amount Sum: " + sum + "/-";
         }
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1145,7 +1254,17 @@ namespace HelloWorldSolutionIMS
                 }
             }
 
-            defaultlabel.Text = "Total Defaulted Amount: " + defaultamount;
+            if (languagestatus == 1)
+            {
+
+                defaultlabel.Text = +defaultamount + "/- " + "مجموع المبالغ";
+
+            }
+            else
+            {
+                defaultlabel.Text = "Total Defaulted Amount: " + defaultamount;
+
+            }
             MainClass.con.Close();
 
 

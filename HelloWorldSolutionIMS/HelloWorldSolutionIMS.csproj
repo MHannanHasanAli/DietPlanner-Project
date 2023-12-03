@@ -713,6 +713,9 @@
     <EmbeddedResource Include="OpeniningExport.resx">
       <DependentUpon>OpeniningExport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payment.ar-AE.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
