@@ -598,5 +598,10 @@ namespace HelloWorldSolutionIMS
         {
             loadform(new DietPlanTemplate());
         }
+
+        private void guna2TileButton5_Click(object sender, EventArgs e)
+        {
+            loadform(new Evaluation());
+        }
     }
 }

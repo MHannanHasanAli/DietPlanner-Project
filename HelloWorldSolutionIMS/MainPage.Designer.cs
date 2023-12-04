@@ -137,6 +137,7 @@
             this.guna2TileButton5.TabIndex = 4;
             this.guna2TileButton5.Text = "Evaluation";
             this.guna2TileButton5.TextOffset = new System.Drawing.Point(0, -15);
+            this.guna2TileButton5.Click += new System.EventHandler(this.guna2TileButton5_Click);
             // 
             // guna2TileButton11
             // 
