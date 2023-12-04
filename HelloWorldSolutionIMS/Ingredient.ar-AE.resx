@@ -301,6 +301,12 @@
   <data name="Closebtn.Text" xml:space="preserve">
     <value>خلف</value>
   </data>
+  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 36</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>اضف مجموعة</value>
+  </data>
   <data name="SaveGroupn.Text" xml:space="preserve">
     <value>حفظ</value>
   </data>
@@ -309,6 +315,12 @@
   </data>
   <data name="label30.Text" xml:space="preserve">
     <value>جروب</value>
+  </data>
+  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 36</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>احذف مجموعة </value>
   </data>
   <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 54</value>

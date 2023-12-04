@@ -155,10 +155,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 24</value>
+    <value>82, 24</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>الاسم</value>
+    <value>الاسم الاول </value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 24</value>
@@ -171,18 +171,6 @@
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1202, 820</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 20</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>متاح</value>
-  </data>
-  <data name="Reserved.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
-  </data>
-  <data name="Reserved.Text" xml:space="preserve">
-    <value>محجوز</value>
   </data>
   <data name="slotlabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 24</value>
@@ -221,19 +209,19 @@
     <value>421, 83</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 24</value>
+    <value>82, 24</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
-    <value>الاسم</value>
+    <value>الاسم الاول </value>
   </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
     <value>421, 143</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 24</value>
+    <value>75, 24</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
-    <value>العائلة</value>
+    <value>اسم العائلة </value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>1196, 814</value>
@@ -243,5 +231,17 @@
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1210, 849</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 20</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>متاح</value>
+  </data>
+  <data name="Reserved.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="Reserved.Text" xml:space="preserve">
+    <value>محجوز</value>
   </data>
 </root>

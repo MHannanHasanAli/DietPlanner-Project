@@ -196,10 +196,6 @@
   <data name="mealardgv.HeaderText" xml:space="preserve">
     <value>الوجبة (عربي)</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="mealardgv.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="caloriesdgv.HeaderText" xml:space="preserve">
     <value>سعرات </value>
   </data>
@@ -230,6 +226,12 @@
   <data name="Closebtn.Text" xml:space="preserve">
     <value>خلف</value>
   </data>
+  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 36</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>اضف مجموعة</value>
+  </data>
   <data name="SaveGroupn.Text" xml:space="preserve">
     <value>حفظ</value>
   </data>
@@ -242,6 +244,18 @@
   <data name="label30.Text" xml:space="preserve">
     <value>جروب ن</value>
   </data>
+  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 24</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>Name (انجليزي)</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 24</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>Name (عربي)</value>
+  </data>
   <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 24</value>
   </data>
@@ -253,6 +267,30 @@
   </data>
   <data name="label40.Text" xml:space="preserve">
     <value>المكون (انجليزي)</value>
+  </data>
+  <data name="agc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8pt</value>
+  </data>
+  <data name="agc.Text" xml:space="preserve">
+    <value>اضف مجموعة</value>
+  </data>
+  <data name="dgc.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8pt</value>
+  </data>
+  <data name="dgc.Text" xml:space="preserve">
+    <value>احذف مجموعة </value>
+  </data>
+  <data name="dgn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8pt</value>
+  </data>
+  <data name="dgn.Text" xml:space="preserve">
+    <value>احذف مجموعة </value>
+  </data>
+  <data name="agn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8pt</value>
+  </data>
+  <data name="agn.Text" xml:space="preserve">
+    <value>اضف مجموعة</value>
   </data>
   <data name="SaveBTN.Text" xml:space="preserve">
     <value>حفظ</value>
@@ -386,6 +424,12 @@
   <data name="label11.Text" xml:space="preserve">
     <value>كالسيوم</value>
   </data>
+  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 36</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>احذف مجموعة </value>
+  </data>
   <data name="label33.Location" type="System.Drawing.Point, System.Drawing">
     <value>455, 11</value>
   </data>
@@ -404,6 +448,12 @@
   <data name="guna2Button1.Text" xml:space="preserve">
     <value>خلف</value>
   </data>
+  <data name="label34.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 36</value>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>اضف مجموعة</value>
+  </data>
   <data name="savegc.Text" xml:space="preserve">
     <value>حفظ</value>
   </data>
@@ -415,6 +465,24 @@
   </data>
   <data name="label35.Text" xml:space="preserve">
     <value>جروب سي </value>
+  </data>
+  <data name="label36.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 24</value>
+  </data>
+  <data name="label36.Text" xml:space="preserve">
+    <value>Name (انجليزي)</value>
+  </data>
+  <data name="label37.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 24</value>
+  </data>
+  <data name="label37.Text" xml:space="preserve">
+    <value>Name (عربي)</value>
+  </data>
+  <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 36</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>احذف مجموعة </value>
   </data>
   <data name="label39.Location" type="System.Drawing.Point, System.Drawing">
     <value>469, 14</value>

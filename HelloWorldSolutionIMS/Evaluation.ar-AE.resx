@@ -117,65 +117,86 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Save.Text" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 24</value>
+  <data name="label55.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 17</value>
   </data>
-  <data name="editToolStripMenuItem.Text" xml:space="preserve">
-    <value>تعديل</value>
+  <data name="label55.Text" xml:space="preserve">
+    <value>اسم العائلة </value>
   </data>
-  <data name="deleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 24</value>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
   </data>
-  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
-    <value>حذف </value>
+  <data name="label16.Text" xml:space="preserve">
+    <value>الاسم الاول</value>
   </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 80</value>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 17</value>
   </data>
-  <data name="Search.Text" xml:space="preserve">
-    <value>بحث</value>
+  <data name="label15.Text" xml:space="preserve">
+    <value>رقم الملف</value>
   </data>
-  <data name="New.Text" xml:space="preserve">
-    <value>اضافة </value>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 16</value>
   </data>
-  <data name="nodgv.HeaderText" xml:space="preserve">
-    <value>ر قم</value>
+  <data name="label14.Text" xml:space="preserve">
+    <value>.10هل لديك افكار تطويرية على البرامج الغذائية والاساليب المتبعة او على نظام الشركة او تطوير الاخصائيين</value>
   </data>
-  <data name="instructionnamedgv.HeaderText" xml:space="preserve">
-    <value>اسم الارشادات </value>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 16</value>
   </data>
-  <data name="nutritionistnamedgv.HeaderText" xml:space="preserve">
-    <value>اسم الاخصائي</value>
+  <data name="label13.Text" xml:space="preserve">
+    <value>9كيف علمت عن المركز </value>
   </data>
-  <data name="datedgv.HeaderText" xml:space="preserve">
-    <value>التاريخ </value>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 16</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 130</value>
+  <data name="label12.Text" xml:space="preserve">
+    <value>8بشكل عام كيف تقيم الخدمة والمركز ؟ </value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 24</value>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 16</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>التعليمات</value>
+  <data name="label11.Text" xml:space="preserve">
+    <value>7هل الوجبات والاطعمة متنوعة وغير مملة؟ </value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 16</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>6هل الانظمة الغذائية المتبعة تناسب نمط حياتك ؟ </value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 16</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>5هل تتناسب الوجبات والاطعمة المدرجة في الحمية مع رغباتك الشخصية؟</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 24</value>
+    <value>213, 16</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>التاريخ</value>
+    <value>4هل تلقيت شرحا كافيا عن النظام الغذائي ؟</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 24</value>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>377, 16</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>الاخصائي</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>3هل كان الوقت الذي اعطيته كافيا لك لفهم كل ما تريد فهمه عن النظام الغذائي؟</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 24</value>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 16</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>التعليمات</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>2كيف تقيم سرعة ولباقة الاخصائي وتجاوبه لعمل برنامج غذائي</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 16</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>1كيف تقيم معرفة الاخصائي بمعلومات التغذية وعمل البرامج الغذائية</value>
   </data>
 </root>

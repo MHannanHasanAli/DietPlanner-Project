@@ -665,6 +665,9 @@
     <EmbeddedResource Include="DietPlanTemplate.resx">
       <DependentUpon>DietPlanTemplate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Evaluation.ar-AE.resx">
+      <DependentUpon>Evaluation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Evaluation.resx">
       <DependentUpon>Evaluation.cs</DependentUpon>
     </EmbeddedResource>

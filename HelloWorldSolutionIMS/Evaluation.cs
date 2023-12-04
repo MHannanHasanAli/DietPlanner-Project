@@ -15,11 +15,210 @@ namespace HelloWorldSolutionIMS
         }
 
         static int conn = 0;
+
+        static int languagestatus;
+        private void LanguageInfo()
+        {
+            MainClass.con.Open();
+
+            // Create a SqlCommand to fetch the row with ID 1 from the Language table
+            SqlCommand fetchCmd = new SqlCommand("SELECT * FROM Language WHERE ID = 1", MainClass.con);
+
+            // Execute the fetch command to get the data
+            using (SqlDataReader reader = fetchCmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    // Retrieve values from the reader and store them in variables
+                    int id = Convert.ToInt32(reader["ID"]);
+                    languagestatus = Convert.ToInt32(reader["Status"]);
+
+                    // Now, you can use the 'id' and 'status' variables as needed
+                    // For example, display them in a MessageBox
+                }
+
+            }
+
+            MainClass.con.Close();
+
+        }
         private void Evaluation_Load(object sender, EventArgs e)
         {
             MainClass.HideAllTabsOnTabControl(tabControl1);
             TableStyle();
-            PrepareMCQsEnglish();
+            ClearForm();
+
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
+
+                    foreach (Control control in panel2.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
+
+                    foreach (Control control in panel2.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+
+
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Text", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    string bold = reader["Bold"].ToString();
+                    string italic = reader["italic"].ToString();
+                    string underline = reader["underline"].ToString();
+                    string size = reader["size"].ToString();
+                    FontStyle fontStyle = FontStyle.Regular;
+
+                    if (bold.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Bold;
+                    }
+
+                    if (italic.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Italic;
+                    }
+
+                    if (underline.ToLower() == "on")
+                    {
+                        fontStyle |= FontStyle.Underline;
+                    }
+
+                    int fontSize = int.Parse(size);
+
+                    foreach (System.Windows.Forms.Control control in panel2.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+
+
+
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+            LanguageInfo();
+            if (languagestatus == 1)
+            {
+                PrepareMCQsArabic();
+
+                foreach (Control control in panel2.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel2.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+            }
+            else
+            {
+                PrepareMCQsEnglish();
+            }
             ClearForm();
         }
 
@@ -27,7 +226,7 @@ namespace HelloWorldSolutionIMS
         {
             fileno.Text = "";
             firstname.Text = "";
-            label55.Text = "";
+            familyname.Text = "";
 
             guna2DataGridView5.ClearSelection();
             guna2DataGridView6.ClearSelection();
@@ -40,6 +239,28 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView13.ClearSelection();
 
             question10.Text = "";
+
+            others.Visible = false;
+        }
+        private void ClearFormWihtoutFIleNo()
+        {
+
+            firstname.Text = "";
+            familyname.Text = "";
+
+            guna2DataGridView5.ClearSelection();
+            guna2DataGridView6.ClearSelection();
+            guna2DataGridView7.ClearSelection();
+            guna2DataGridView8.ClearSelection();
+            guna2DataGridView9.ClearSelection();
+            guna2DataGridView10.ClearSelection();
+            guna2DataGridView11.ClearSelection();
+            guna2DataGridView12.ClearSelection();
+            guna2DataGridView13.ClearSelection();
+
+            question10.Text = "";
+
+            others.Visible = false;
         }
 
         private void TableStyle()
@@ -137,7 +358,53 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView13.Rows[0].Cells[2].Value = "Tik Tok Program";
             guna2DataGridView13.Rows[0].Cells[3].Value = "Others";
         }
+        private void PrepareMCQsArabic()
+        {
 
+            guna2DataGridView5.Rows.Add();
+            guna2DataGridView6.Rows.Add();
+            guna2DataGridView7.Rows.Add();
+            guna2DataGridView8.Rows.Add();
+            guna2DataGridView9.Rows.Add();
+            guna2DataGridView10.Rows.Add();
+            guna2DataGridView11.Rows.Add();
+            guna2DataGridView12.Rows.Add();
+            guna2DataGridView13.Rows.Add();
+
+            guna2DataGridView8.Rows[0].Cells[0].Value = "على دراية كاملة بالمعلومات والاساليب";
+            guna2DataGridView8.Rows[0].Cells[1].Value = "على دراية متوسطة بالمعلومات والاساليب";
+            guna2DataGridView8.Rows[0].Cells[2].Value = "على دراية بالمعلومات الاساسية فقط";
+            guna2DataGridView8.Rows[0].Cells[3].Value = "لا تمتلك معلومات ولا اساليب كافية لعمل برنامج غذائي";
+
+            guna2DataGridView7.Rows[0].Cells[0].Value = "سريع ولبق في التعامل";
+            guna2DataGridView7.Rows[0].Cells[1].Value = "سرعة متوسطة وغير لبق في التعامل";
+            guna2DataGridView7.Rows[0].Cells[2].Value = "سرعة متوسطة ولبق في التعامل";
+            guna2DataGridView7.Rows[0].Cells[3].Value = "بطيء جدا وغير لبق في التعامل";
+
+            guna2DataGridView6.Rows[0].Cells[0].Value = "نعم ";
+            guna2DataGridView6.Rows[0].Cells[1].Value = "لا";
+
+            guna2DataGridView5.Rows[0].Cells[0].Value = "نعم ";
+            guna2DataGridView5.Rows[0].Cells[1].Value = "لا";
+
+            guna2DataGridView9.Rows[0].Cells[0].Value = "نعم ";
+            guna2DataGridView9.Rows[0].Cells[1].Value = "لا";
+
+            guna2DataGridView10.Rows[0].Cells[0].Value = "نعم ";
+            guna2DataGridView10.Rows[0].Cells[1].Value = "لا";
+
+            guna2DataGridView11.Rows[0].Cells[0].Value = "نعم ";
+            guna2DataGridView11.Rows[0].Cells[1].Value = "لا";
+
+            guna2DataGridView12.Rows[0].Cells[0].Value = "ممتاز ";
+            guna2DataGridView12.Rows[0].Cells[1].Value = "جيد جدا ";
+            guna2DataGridView12.Rows[0].Cells[2].Value = "Not Good";
+
+            guna2DataGridView13.Rows[0].Cells[0].Value = "من صديق";
+            guna2DataGridView13.Rows[0].Cells[1].Value = "من موقع الجوجل";
+            guna2DataGridView13.Rows[0].Cells[2].Value = "برنامج التيك توك ";
+            guna2DataGridView13.Rows[0].Cells[3].Value = "غيرها ";
+        }
         private void Reset_Click(object sender, EventArgs e)
         {
             ClearForm();
@@ -203,7 +470,7 @@ namespace HelloWorldSolutionIMS
 
                 cmd.Parameters.AddWithValue("@Fileno", Convert.ToInt32(fileno.Text)); // Replace with the actual input control for Fileno.
                 cmd.Parameters.AddWithValue("@Firstname", firstname.Text); // Replace with the actual input control for Firstname.
-                cmd.Parameters.AddWithValue("@Lastname", label55.Text); // Replace with the actual input control for Lastname.
+                cmd.Parameters.AddWithValue("@Lastname", familyname.Text); // Replace with the actual input control for Lastname.
                 cmd.Parameters.AddWithValue("@Tablename", table.Name);
                 cmd.Parameters.AddWithValue("@Col", table.SelectedCells[0].ColumnIndex); // Replace with the actual input control for Col.
                 cmd.Parameters.AddWithValue("@Others", others.Text); // Replace with the actual input control for Others.
@@ -223,7 +490,7 @@ namespace HelloWorldSolutionIMS
         }
         private void fileno_TextChanged(object sender, EventArgs e)
         {
-
+            ClearFormWihtoutFIleNo();
             if (fileno.Text != "")
             {
                 int value = int.Parse(fileno.Text);
@@ -245,7 +512,7 @@ namespace HelloWorldSolutionIMS
                     {
                         // Assign values from the reader to the respective text boxes
                         firstname.Text = reader2["FIRSTNAME"].ToString();
-                        label55.Text = reader2["FAMILYNAME"].ToString();
+                        familyname.Text = reader2["FAMILYNAME"].ToString();
 
                     }
                     else
@@ -264,11 +531,96 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     MessageBox.Show(ex.Message);
                 }
+
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Evaluation WHERE FILENO = @FILENO", MainClass.con);
+
+                    cmd.Parameters.AddWithValue("@FILENO", Convert.ToInt32(fileno.Text)); // Replace with the actual input control for FILENO.
+
+                    // Assuming you have a SqlDataReader to read the data, replace "reader" with your SqlDataReader variable
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+                            firstname.Text = reader["Firstname"].ToString();
+                            familyname.Text = reader["Lastname"].ToString();
+                            string tablename = reader["Tablename"].ToString();
+                            string col = reader["Col"].ToString();
+                            string other = reader["Others"].ToString();
+                            question10.Text = reader["Question10"].ToString();
+                            if (other == "" || other == "Mention here")
+                            {
+                                others.Visible = false;
+                                others.Text = "Mention here";
+                            }
+                            else
+                            {
+                                others.Visible = true;
+                                others.Text = other;
+                            }
+
+                            if (col != "")
+                            {
+
+
+                                if (tablename == "guna2DataGridView5")
+                                {
+                                    guna2DataGridView5.Rows[0].Cells[int.Parse(col)].Selected = true;
+                                }
+                                else if (tablename == "guna2DataGridView6")
+                                {
+                                    guna2DataGridView6.Rows[0].Cells[int.Parse(col)].Selected = true;
+                                }
+                                else if (tablename == "guna2DataGridView7")
+                                {
+                                    guna2DataGridView7.Rows[0].Cells[int.Parse(col)].Selected = true;
+                                }
+                                else if (tablename == "guna2DataGridView8")
+                                {
+                                    guna2DataGridView8.Rows[0].Cells[int.Parse(col)].Selected = true;
+                                }
+                                else if (tablename == "guna2DataGridView9")
+                                {
+                                    guna2DataGridView9.Rows[0].Cells[int.Parse(col)].Selected = true;
+                                }
+                                else if (tablename == "guna2DataGridView10")
+                                {
+                                    guna2DataGridView10.Rows[0].Cells[int.Parse(col)].Selected = true;
+                                }
+                                else if (tablename == "guna2DataGridView11")
+                                {
+                                    guna2DataGridView11.Rows[0].Cells[int.Parse(col)].Selected = true;
+                                }
+                                else if (tablename == "guna2DataGridView12")
+                                {
+                                    guna2DataGridView12.Rows[0].Cells[int.Parse(col)].Selected = true;
+                                }
+                                else if (tablename == "guna2DataGridView13")
+                                {
+                                    guna2DataGridView13.Rows[0].Cells[int.Parse(col)].Selected = true;
+                                }
+                            }
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error retrieving data: {ex.Message}");
+                }
+                finally
+                {
+                    MainClass.con.Close();
+                }
+
             }
             else
             {
                 firstname.Text = "";
-                label55.Text = "";
+                familyname.Text = "";
             }
 
 
