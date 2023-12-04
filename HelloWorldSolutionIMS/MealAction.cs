@@ -1691,27 +1691,55 @@ namespace HelloWorldSolutionIMS
         }
         private List<Ingredients> GetIngredients()
         {
-            try
+            if (languagestatus == 1)
             {
-                MainClass.con.Open();
-                ingredientsList.Clear();
-                SqlCommand cmd = new SqlCommand("SELECT ID, INGREDIENT_AR FROM Ingredient", MainClass.con);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    int id = Convert.ToInt32(reader["ID"]);
-                    string ingredientAr = reader["INGREDIENT_AR"].ToString();
-                    ingredientsList.Add(new Ingredients { ID = id, Name = ingredientAr });
-                }
+                    MainClass.con.Open();
+                    ingredientsList.Clear();
+                    SqlCommand cmd = new SqlCommand("SELECT ID, INGREDIENT_AR FROM Ingredient", MainClass.con);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                MainClass.con.Close();
+                    while (reader.Read())
+                    {
+                        int id = Convert.ToInt32(reader["ID"]);
+                        string ingredientAr = reader["INGREDIENT_AR"].ToString();
+                        ingredientsList.Add(new Ingredients { ID = id, Name = ingredientAr });
+                    }
+
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MainClass.con.Close();
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    MainClass.con.Open();
+                    ingredientsList.Clear();
+                    SqlCommand cmd = new SqlCommand("SELECT ID, INGREDIENT_EN FROM Ingredient", MainClass.con);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        int id = Convert.ToInt32(reader["ID"]);
+                        string ingredientAr = reader["INGREDIENT_EN"].ToString();
+                        ingredientsList.Add(new Ingredients { ID = id, Name = ingredientAr });
+                    }
+
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
             }
+
             return ingredientsList;
         }
         private void AddIngredient_Click(object sender, EventArgs e)
@@ -3351,7 +3379,7 @@ namespace HelloWorldSolutionIMS
                                             conn = 0;
                                         }
 
-                                        UpdateGroupsN();
+
 
                                     }
                                     catch (Exception ex)
@@ -3425,7 +3453,7 @@ namespace HelloWorldSolutionIMS
                                             conn = 0;
                                         }
 
-                                        UpdateGroupsN();
+
 
                                     }
                                     catch (Exception ex)
