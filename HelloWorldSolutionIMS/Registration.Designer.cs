@@ -154,6 +154,20 @@
             this.EditBMI = new Guna.UI2.WinForms.Guna2Button();
             this.AddBMI = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datebc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bcabc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.heightbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agebc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proteinbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.waterbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mineralsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.visceralfatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abdominalfatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bmibc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bmrbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderbmi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -300,20 +314,6 @@
             this.firstnamemh = new Guna.UI2.WinForms.Guna2TextBox();
             this.filenomh = new Guna.UI2.WinForms.Guna2TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.idbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datebc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bcabc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.heightbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agebc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proteinbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.waterbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mineralsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.visceralfatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abdominalfatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bmibc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bmrbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1101,6 +1101,90 @@
             this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // idbc
+            // 
+            resources.ApplyResources(this.idbc, "idbc");
+            this.idbc.Name = "idbc";
+            this.idbc.ReadOnly = true;
+            // 
+            // datebc
+            // 
+            resources.ApplyResources(this.datebc, "datebc");
+            this.datebc.Name = "datebc";
+            this.datebc.ReadOnly = true;
+            // 
+            // bcabc
+            // 
+            resources.ApplyResources(this.bcabc, "bcabc");
+            this.bcabc.Name = "bcabc";
+            this.bcabc.ReadOnly = true;
+            // 
+            // heightbc
+            // 
+            resources.ApplyResources(this.heightbc, "heightbc");
+            this.heightbc.Name = "heightbc";
+            this.heightbc.ReadOnly = true;
+            // 
+            // weightbc
+            // 
+            resources.ApplyResources(this.weightbc, "weightbc");
+            this.weightbc.Name = "weightbc";
+            this.weightbc.ReadOnly = true;
+            // 
+            // agebc
+            // 
+            resources.ApplyResources(this.agebc, "agebc");
+            this.agebc.Name = "agebc";
+            this.agebc.ReadOnly = true;
+            // 
+            // fatsbc
+            // 
+            resources.ApplyResources(this.fatsbc, "fatsbc");
+            this.fatsbc.Name = "fatsbc";
+            this.fatsbc.ReadOnly = true;
+            // 
+            // proteinbc
+            // 
+            resources.ApplyResources(this.proteinbc, "proteinbc");
+            this.proteinbc.Name = "proteinbc";
+            this.proteinbc.ReadOnly = true;
+            // 
+            // waterbc
+            // 
+            resources.ApplyResources(this.waterbc, "waterbc");
+            this.waterbc.Name = "waterbc";
+            this.waterbc.ReadOnly = true;
+            // 
+            // mineralsbc
+            // 
+            resources.ApplyResources(this.mineralsbc, "mineralsbc");
+            this.mineralsbc.Name = "mineralsbc";
+            this.mineralsbc.ReadOnly = true;
+            // 
+            // visceralfatsbc
+            // 
+            resources.ApplyResources(this.visceralfatsbc, "visceralfatsbc");
+            this.visceralfatsbc.Name = "visceralfatsbc";
+            this.visceralfatsbc.ReadOnly = true;
+            // 
+            // abdominalfatsbc
+            // 
+            resources.ApplyResources(this.abdominalfatsbc, "abdominalfatsbc");
+            this.abdominalfatsbc.Name = "abdominalfatsbc";
+            this.abdominalfatsbc.ReadOnly = true;
+            // 
+            // bmibc
+            // 
+            resources.ApplyResources(this.bmibc, "bmibc");
+            this.bmibc.Name = "bmibc";
+            this.bmibc.ReadOnly = true;
+            // 
+            // bmrbc
+            // 
+            resources.ApplyResources(this.bmrbc, "bmrbc");
+            this.bmrbc.Name = "bmrbc";
+            this.bmrbc.ReadOnly = true;
             // 
             // genderbmi
             // 
@@ -3476,90 +3560,6 @@
             resources.ApplyResources(this.contextMenuStrip2, "contextMenuStrip2");
             this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            // 
-            // idbc
-            // 
-            resources.ApplyResources(this.idbc, "idbc");
-            this.idbc.Name = "idbc";
-            this.idbc.ReadOnly = true;
-            // 
-            // datebc
-            // 
-            resources.ApplyResources(this.datebc, "datebc");
-            this.datebc.Name = "datebc";
-            this.datebc.ReadOnly = true;
-            // 
-            // bcabc
-            // 
-            resources.ApplyResources(this.bcabc, "bcabc");
-            this.bcabc.Name = "bcabc";
-            this.bcabc.ReadOnly = true;
-            // 
-            // heightbc
-            // 
-            resources.ApplyResources(this.heightbc, "heightbc");
-            this.heightbc.Name = "heightbc";
-            this.heightbc.ReadOnly = true;
-            // 
-            // weightbc
-            // 
-            resources.ApplyResources(this.weightbc, "weightbc");
-            this.weightbc.Name = "weightbc";
-            this.weightbc.ReadOnly = true;
-            // 
-            // agebc
-            // 
-            resources.ApplyResources(this.agebc, "agebc");
-            this.agebc.Name = "agebc";
-            this.agebc.ReadOnly = true;
-            // 
-            // fatsbc
-            // 
-            resources.ApplyResources(this.fatsbc, "fatsbc");
-            this.fatsbc.Name = "fatsbc";
-            this.fatsbc.ReadOnly = true;
-            // 
-            // proteinbc
-            // 
-            resources.ApplyResources(this.proteinbc, "proteinbc");
-            this.proteinbc.Name = "proteinbc";
-            this.proteinbc.ReadOnly = true;
-            // 
-            // waterbc
-            // 
-            resources.ApplyResources(this.waterbc, "waterbc");
-            this.waterbc.Name = "waterbc";
-            this.waterbc.ReadOnly = true;
-            // 
-            // mineralsbc
-            // 
-            resources.ApplyResources(this.mineralsbc, "mineralsbc");
-            this.mineralsbc.Name = "mineralsbc";
-            this.mineralsbc.ReadOnly = true;
-            // 
-            // visceralfatsbc
-            // 
-            resources.ApplyResources(this.visceralfatsbc, "visceralfatsbc");
-            this.visceralfatsbc.Name = "visceralfatsbc";
-            this.visceralfatsbc.ReadOnly = true;
-            // 
-            // abdominalfatsbc
-            // 
-            resources.ApplyResources(this.abdominalfatsbc, "abdominalfatsbc");
-            this.abdominalfatsbc.Name = "abdominalfatsbc";
-            this.abdominalfatsbc.ReadOnly = true;
-            // 
-            // bmibc
-            // 
-            resources.ApplyResources(this.bmibc, "bmibc");
-            this.bmibc.Name = "bmibc";
-            this.bmibc.ReadOnly = true;
-            // 
-            // bmrbc
-            // 
-            resources.ApplyResources(this.bmrbc, "bmrbc");
-            this.bmrbc.Name = "bmrbc";
-            this.bmrbc.ReadOnly = true;
             // 
             // Registration
             // 

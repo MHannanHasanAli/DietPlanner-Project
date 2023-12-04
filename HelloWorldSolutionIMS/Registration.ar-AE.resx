@@ -293,10 +293,10 @@
     <value>37, 120</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 24</value>
+    <value>75, 24</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>العائلة</value>
+    <value>اسم العائلة </value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>37, 72</value>

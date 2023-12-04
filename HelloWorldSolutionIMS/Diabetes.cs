@@ -47,141 +47,295 @@ namespace HelloWorldSolutionIMS
         }
         private void AddFiveRowsToTablecarbs()
         {
-            for (int i = 0; i < 5; i++)
+
+            if (languagestatus == 1)
             {
-                // Add a new row to the DataGridView
-                int rowIndex = guna2DataGridView2.Rows.Add();
-                if (rowIndex == 0)
+                for (int i = 0; i < 5; i++)
                 {
-                    guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "BREAKFAST"; // Add text to cell 2 (index 1)
+                    // Add a new row to the DataGridView
+                    int rowIndex = guna2DataGridView2.Rows.Add();
+                    if (rowIndex == 0)
+                    {
+                        guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "الافطار"; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 1)
+                    {
+                        guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "الغداء"; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 2)
+                    {
+                        guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "العشاء"; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 3)
+                    {
+                        guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "الوجبات الخفيفة"; // Add text to cell 2 (index 1)
+                    }
+                    else
+                    {
+                        guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "المجموع";
+                        //guna2DataGridView2.Rows[rowIndex].Cells[1].Value = total* insulincharbcalc;
+                        //guna2DataGridView2.Rows[rowIndex].Cells[2].Value = total;// Add text to cell 2 (index 1)
+                    }
+                    // Add specific text to the second and third cells of each row
                 }
-                else if (rowIndex == 1)
+
+            }
+            else
+            {
+                for (int i = 0; i < 5; i++)
                 {
-                    guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "LUNCH"; // Add text to cell 2 (index 1)
+                    // Add a new row to the DataGridView
+                    int rowIndex = guna2DataGridView2.Rows.Add();
+                    if (rowIndex == 0)
+                    {
+                        guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "BREAKFAST"; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 1)
+                    {
+                        guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "LUNCH"; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 2)
+                    {
+                        guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "DINNER"; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 3)
+                    {
+                        guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "SNACKS"; // Add text to cell 2 (index 1)
+                    }
+                    else
+                    {
+                        guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "TOTAL";
+                        //guna2DataGridView2.Rows[rowIndex].Cells[1].Value = total* insulincharbcalc;
+                        //guna2DataGridView2.Rows[rowIndex].Cells[2].Value = total;// Add text to cell 2 (index 1)
+                    }
+                    // Add specific text to the second and third cells of each row
                 }
-                else if (rowIndex == 2)
-                {
-                    guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "DINNER"; // Add text to cell 2 (index 1)
-                }
-                else if (rowIndex == 3)
-                {
-                    guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "SNACKS"; // Add text to cell 2 (index 1)
-                }
-                else
-                {
-                    guna2DataGridView2.Rows[rowIndex].Cells[0].Value = "TOTAL";
-                    //guna2DataGridView2.Rows[rowIndex].Cells[1].Value = total* insulincharbcalc;
-                    //guna2DataGridView2.Rows[rowIndex].Cells[2].Value = total;// Add text to cell 2 (index 1)
-                }
-                // Add specific text to the second and third cells of each row
             }
 
         }
         private void AddFiveRowsToTable()
         {
-            for (int i = 0; i < 5; i++)
+
+            if (languagestatus == 1)
             {
-                // Add a new row to the DataGridView
-                int rowIndex = guna2DataGridView1.Rows.Add();
-                if (rowIndex == 0)
+                for (int i = 0; i < 5; i++)
                 {
-                    guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "BREAKFAST"; // Add text to cell 2 (index 1)
+                    // Add a new row to the DataGridView
+                    int rowIndex = guna2DataGridView1.Rows.Add();
+                    if (rowIndex == 0)
+                    {
+                        guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "الافطار "; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 1)
+                    {
+                        guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "الغداء"; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 2)
+                    {
+                        guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "العشاء "; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 3)
+                    {
+                        guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "الوجبات الخفيفة "; // Add text to cell 2 (index 1)
+                    }
+                    else
+                    {
+                        guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "المجموع ";
+                        guna2DataGridView1.Rows[rowIndex].Cells[1].Value = total;// Add text to cell 2 (index 1)
+                    }
+                    // Add specific text to the second and third cells of each row
                 }
-                else if (rowIndex == 1)
-                {
-                    guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "LUNCH"; // Add text to cell 2 (index 1)
-                }
-                else if (rowIndex == 2)
-                {
-                    guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "DINNER"; // Add text to cell 2 (index 1)
-                }
-                else if (rowIndex == 3)
-                {
-                    guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "SNACKS"; // Add text to cell 2 (index 1)
-                }
-                else
-                {
-                    guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "TOTAL";
-                    guna2DataGridView1.Rows[rowIndex].Cells[1].Value = total;// Add text to cell 2 (index 1)
-                }
-                // Add specific text to the second and third cells of each row
             }
+            else
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    // Add a new row to the DataGridView
+                    int rowIndex = guna2DataGridView1.Rows.Add();
+                    if (rowIndex == 0)
+                    {
+                        guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "BREAKFAST"; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 1)
+                    {
+                        guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "LUNCH"; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 2)
+                    {
+                        guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "DINNER"; // Add text to cell 2 (index 1)
+                    }
+                    else if (rowIndex == 3)
+                    {
+                        guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "SNACKS"; // Add text to cell 2 (index 1)
+                    }
+                    else
+                    {
+                        guna2DataGridView1.Rows[rowIndex].Cells[0].Value = "TOTAL";
+                        guna2DataGridView1.Rows[rowIndex].Cells[1].Value = total;// Add text to cell 2 (index 1)
+                    }
+                    // Add specific text to the second and third cells of each row
+                }
+            }
+
 
         }
         private void AddRowsToBloodSuger()
         {
-            for (int i = 0; i < 4; i++)
+            if (languagestatus == 1)
             {
-                // Add a new row to the DataGridView
-                int rowIndex = guna2DataGridView4.Rows.Add();
-                if (rowIndex == 0)
+                for (int i = 0; i < 4; i++)
                 {
-                    guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "FASTING GLUCOSE"; // Add text to cell 2 (index 1)
-                    guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "130";
-                }
-                else if (rowIndex == 1)
-                {
-                    guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "BEFORE LUNCH"; // Add text to cell 2 (index 1)
-                    guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "180";
-                }
-                else if (rowIndex == 2)
-                {
-                    guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "BEFORE DINNER"; // Add text to cell 2 (index 1)
-                    guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "180";
-                }
-                else if (rowIndex == 3)
-                {
-                    guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "BED TIME"; // Add text to cell 2 (index 1)
-                    guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "150";
-                }
+                    // Add a new row to the DataGridView
+                    int rowIndex = guna2DataGridView4.Rows.Add();
+                    if (rowIndex == 0)
+                    {
+                        guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "سكر الدم الصيامي"; // Add text to cell 2 (index 1)
+                        guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "130";
+                    }
+                    else if (rowIndex == 1)
+                    {
+                        guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "سكر الدم قبل الغداء "; // Add text to cell 2 (index 1)
+                        guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "180";
+                    }
+                    else if (rowIndex == 2)
+                    {
+                        guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "سكر الدم قبل العشاء "; // Add text to cell 2 (index 1)
+                        guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "180";
+                    }
+                    else if (rowIndex == 3)
+                    {
+                        guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "سكر الدم قبل النوم "; // Add text to cell 2 (index 1)
+                        guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "150";
+                    }
 
-                // Add specific text to the second and third cells of each row
+                    // Add specific text to the second and third cells of each row
+                }
             }
+            else
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    // Add a new row to the DataGridView
+                    int rowIndex = guna2DataGridView4.Rows.Add();
+                    if (rowIndex == 0)
+                    {
+                        guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "FASTING GLUCOSE"; // Add text to cell 2 (index 1)
+                        guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "130";
+                    }
+                    else if (rowIndex == 1)
+                    {
+                        guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "BEFORE LUNCH"; // Add text to cell 2 (index 1)
+                        guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "180";
+                    }
+                    else if (rowIndex == 2)
+                    {
+                        guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "BEFORE DINNER"; // Add text to cell 2 (index 1)
+                        guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "180";
+                    }
+                    else if (rowIndex == 3)
+                    {
+                        guna2DataGridView4.Rows[rowIndex].Cells[0].Value = "BED TIME"; // Add text to cell 2 (index 1)
+                        guna2DataGridView4.Rows[rowIndex].Cells[1].Value = "150";
+                    }
+
+                    // Add specific text to the second and third cells of each row
+                }
+            }
+
             guna2DataGridView4.ClearSelection();
         }
         private void AddRowsToCorrectionFactor()
         {
-            for (int i = 0; i < 5; i++)
+
+            if (languagestatus == 1)
             {
-                // Add a new row to the DataGridView
-                int rowIndex = guna2DataGridView5.Rows.Add();
-                if (rowIndex == 0)
+                for (int i = 0; i < 5; i++)
                 {
-                    guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Correction Factor"; // Add text to cell 2 (index 1)                   
-                    cofactor = 1800 / totalinsulinperday;
-                    cofactor = Math.Round(cofactor, 2);
-                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = cofactor;
+
+                    int rowIndex = guna2DataGridView5.Rows.Add();
+                    if (rowIndex == 0)
+                    {
+                        guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "عامل التصحيح "; // Add text to cell 2 (index 1)                   
+                        cofactor = 1800 / totalinsulinperday;
+                        cofactor = Math.Round(cofactor, 2);
+                        guna2DataGridView5.Rows[rowIndex].Cells[1].Value = cofactor;
+                    }
+                    else if (rowIndex == 1)
+                    {
+                        var value = fastingglucose / cofactor;
+                        guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "وحدات الانسولين قبل الافطار"; // Add text to cell 2 (index 1)
+                        cfb = RoundNumber(value, 0);
+                        guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
+                    }
+                    else if (rowIndex == 2)
+                    {
+                        var value = beforelunch / cofactor;
+                        guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "وحدات الانسولين قبل الغداء"; // Add text to cell 2 (index 1)
+                        cfl = RoundNumber(value, 0);
+                        guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
+                    }
+                    else if (rowIndex == 3)
+                    {
+                        var value = beforedinner / cofactor;
+                        guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "وحدات الانسولين قبل العشاء"; // Add text to cell 2 (index 1)
+                        cfd = RoundNumber(value, 0);
+                        guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
+                    }
+                    else if (rowIndex == 4)
+                    {
+                        var value = bedtime / cofactor;
+                        guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "وحدات الانسولين قبل النوم "; // Add text to cell 2 (index 1)
+                        cfs = RoundNumber(value, 0);
+                        guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
+                    }
+                    // Add specific text to the second and third cells of each row
                 }
-                else if (rowIndex == 1)
-                {
-                    var value = fastingglucose / cofactor;
-                    guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before breakfast"; // Add text to cell 2 (index 1)
-                    cfb = RoundNumber(value, 0);
-                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
-                }
-                else if (rowIndex == 2)
-                {
-                    var value = beforelunch / cofactor;
-                    guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before lunch"; // Add text to cell 2 (index 1)
-                    cfl = RoundNumber(value, 0);
-                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
-                }
-                else if (rowIndex == 3)
-                {
-                    var value = beforedinner / cofactor;
-                    guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before dinner"; // Add text to cell 2 (index 1)
-                    cfd = RoundNumber(value, 0);
-                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
-                }
-                else if (rowIndex == 4)
-                {
-                    var value = bedtime / cofactor;
-                    guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before bed"; // Add text to cell 2 (index 1)
-                    cfs = RoundNumber(value, 0);
-                    guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
-                }
-                // Add specific text to the second and third cells of each row
             }
+            else
+            {
+                for (int i = 0; i < 5; i++)
+                {
+
+                    int rowIndex = guna2DataGridView5.Rows.Add();
+                    if (rowIndex == 0)
+                    {
+                        guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Correction Factor"; // Add text to cell 2 (index 1)                   
+                        cofactor = 1800 / totalinsulinperday;
+                        cofactor = Math.Round(cofactor, 2);
+                        guna2DataGridView5.Rows[rowIndex].Cells[1].Value = cofactor;
+                    }
+                    else if (rowIndex == 1)
+                    {
+                        var value = fastingglucose / cofactor;
+                        guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before breakfast"; // Add text to cell 2 (index 1)
+                        cfb = RoundNumber(value, 0);
+                        guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
+                    }
+                    else if (rowIndex == 2)
+                    {
+                        var value = beforelunch / cofactor;
+                        guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before lunch"; // Add text to cell 2 (index 1)
+                        cfl = RoundNumber(value, 0);
+                        guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
+                    }
+                    else if (rowIndex == 3)
+                    {
+                        var value = beforedinner / cofactor;
+                        guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before dinner"; // Add text to cell 2 (index 1)
+                        cfd = RoundNumber(value, 0);
+                        guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
+                    }
+                    else if (rowIndex == 4)
+                    {
+                        var value = bedtime / cofactor;
+                        guna2DataGridView5.Rows[rowIndex].Cells[0].Value = "Insulin units required before bed"; // Add text to cell 2 (index 1)
+                        cfs = RoundNumber(value, 0);
+                        guna2DataGridView5.Rows[rowIndex].Cells[1].Value = RoundNumber(value, 0);
+                    }
+                    // Add specific text to the second and third cells of each row
+                }
+            }
+
             guna2DataGridView4.ClearSelection();
         }
         static double cfb;
@@ -190,6 +344,7 @@ namespace HelloWorldSolutionIMS
         static double cfs;
         private void AddRowsToCorrection()
         {
+
             int one = 0;
             int two = 0;
             int three = 0;
@@ -382,9 +537,7 @@ namespace HelloWorldSolutionIMS
 
             table_total = 0;
 
-            AddFiveRowsToTable();
-            AddFiveRowsToTablecarbs();
-            AddRowsToBloodSuger();
+
 
             guna2DataGridView1.CellValueChanged += guna2DataGridView1_CellValueChanged;
             guna2DataGridView2.CellValueChanged += guna2DataGridView2_CellValueChanged;
@@ -598,6 +751,10 @@ namespace HelloWorldSolutionIMS
                 }
 
             }
+
+            AddFiveRowsToTable();
+            AddFiveRowsToTablecarbs();
+            AddRowsToBloodSuger();
         }
 
         static int counter = 0;

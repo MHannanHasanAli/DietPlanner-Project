@@ -134,7 +134,7 @@
     <value>161, 22</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 72</value>
+    <value>786, 72</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 24</value>
@@ -143,7 +143,7 @@
     <value>تاريخ الميلاد</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 20</value>
+    <value>786, 20</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 24</value>
@@ -218,7 +218,7 @@
     <value>161, 32</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 124</value>
+    <value>786, 124</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 24</value>
@@ -233,7 +233,7 @@
     <value>161, 32</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 168</value>
+    <value>786, 168</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 24</value>
@@ -248,7 +248,7 @@
     <value>161, 32</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 212</value>
+    <value>786, 212</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 24</value>
@@ -263,7 +263,7 @@
     <value>161, 32</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>820, 256</value>
+    <value>786, 256</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 24</value>

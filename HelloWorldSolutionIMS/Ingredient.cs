@@ -95,63 +95,21 @@ namespace HelloWorldSolutionIMS
         static int edit = 0;
         private void ShowIngredients(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn fdc, DataGridViewColumn classification, DataGridViewColumn ingredientAr, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
         {
-            SqlCommand cmd;
-            try
+            if (languagestatus == 1)
             {
-                MainClass.con.Open();
-
-                cmd = new SqlCommand("SELECT ID, fdc_id, CLASSIFICATION, INGREDIENT_AR, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, PROTEIN FROM Ingredient", MainClass.con);
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                no.DataPropertyName = dt.Columns["ID"].ToString();
-                classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
-                ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_AR"].ToString();
-                calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
-                fats.DataPropertyName = dt.Columns["FATS"].ToString();
-                carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
-                fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
-                calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
-                sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
-                protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
-                fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
-
-                dgv.DataSource = dt;
-                MainClass.con.Close();
-            }
-            catch (Exception ex)
-            {
-                MainClass.con.Close();
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void SearchIngredients(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn fdc, DataGridViewColumn classification, DataGridViewColumn ingredientAr, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
-        {
-
-            string ingredientName = ingredientar.Text;
-            string groupArName = ingredienten.Text;
-
-            if (ingredientName != "" && groupArName != "")
-            {
+                SqlCommand cmd;
                 try
                 {
                     MainClass.con.Open();
 
-                    SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
-                        "WHERE (INGREDIENT_AR LIKE @IngredientName) AND (INGREDIENT_EN LIKE @GroupArName)", MainClass.con);
-
-                    cmd.Parameters.AddWithValue("@IngredientName", "%" + ingredientName + "%");
-                    cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
+                    cmd = new SqlCommand("SELECT ID, fdc_id, CLASSIFICATION, INGREDIENT_AR, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, PROTEIN FROM Ingredient", MainClass.con);
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
-                    // Modify the column names to match your data grid view
                     no.DataPropertyName = dt.Columns["ID"].ToString();
+                    classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
                     ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_AR"].ToString();
                     calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
                     fats.DataPropertyName = dt.Columns["FATS"].ToString();
@@ -159,88 +117,8 @@ namespace HelloWorldSolutionIMS
                     fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
                     calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
                     sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
-                    classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
-                    fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
                     protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
-
-
-
-                    dgv.DataSource = dt;
-                    MainClass.con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else if (ingredientName == "" && groupArName != "")
-            {
-                try
-                {
-                    MainClass.con.Open();
-
-                    SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
-                        "WHERE INGREDIENT_EN LIKE @GroupArName", MainClass.con);
-
-                    cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
-
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    // Modify the column names to match your data grid view
-                    no.DataPropertyName = dt.Columns["ID"].ToString();
-                    ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_AR"].ToString();
-                    calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
-                    fats.DataPropertyName = dt.Columns["FATS"].ToString();
-                    carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
-                    fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
-                    calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
-                    sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
-                    classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
                     fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
-                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
-
-
-
-                    dgv.DataSource = dt;
-                    MainClass.con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else if (ingredientName != "" && groupArName == "")
-            {
-                try
-                {
-                    MainClass.con.Open();
-
-                    SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
-                        "WHERE INGREDIENT_AR LIKE @IngredientName", MainClass.con);
-
-                    cmd.Parameters.AddWithValue("@IngredientName", "%" + ingredientName + "%");
-
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    // Modify the column names to match your data grid view
-                    no.DataPropertyName = dt.Columns["ID"].ToString();
-                    ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_AR"].ToString();
-                    calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
-                    fats.DataPropertyName = dt.Columns["FATS"].ToString();
-                    carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
-                    fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
-                    calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
-                    sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
-                    classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
-                    fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
-                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
-
 
                     dgv.DataSource = dt;
                     MainClass.con.Close();
@@ -253,9 +131,298 @@ namespace HelloWorldSolutionIMS
             }
             else
             {
-                ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
-                MessageBox.Show("Fill Ingredient Ar or Ingredient En");
+                SqlCommand cmd;
+                try
+                {
+                    MainClass.con.Open();
+
+                    cmd = new SqlCommand("SELECT ID, fdc_id, CLASSIFICATION, INGREDIENT_EN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, PROTEIN FROM Ingredient", MainClass.con);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    no.DataPropertyName = dt.Columns["ID"].ToString();
+                    classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
+                    ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_EN"].ToString();
+                    calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                    fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                    carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                    fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                    calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                    sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+                    fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+
+                    dgv.DataSource = dt;
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
             }
+
+        }
+
+        private void SearchIngredients(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn fdc, DataGridViewColumn classification, DataGridViewColumn ingredientAr, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
+        {
+
+            string ingredientName = ingredientar.Text;
+            string groupArName = ingredienten.Text;
+
+            if (languagestatus == 1)
+            {
+                if (ingredientName != "" && groupArName != "")
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
+                            "WHERE (INGREDIENT_AR LIKE @IngredientName) AND (INGREDIENT_EN LIKE @GroupArName)", MainClass.con);
+
+                        cmd.Parameters.AddWithValue("@IngredientName", "%" + ingredientName + "%");
+                        cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
+
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Modify the column names to match your data grid view
+                        no.DataPropertyName = dt.Columns["ID"].ToString();
+                        ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_AR"].ToString();
+                        calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                        fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                        carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                        fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                        calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                        sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                        classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
+                        fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+                        protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+
+
+                        dgv.DataSource = dt;
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else if (ingredientName == "" && groupArName != "")
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
+                            "WHERE INGREDIENT_EN LIKE @GroupArName", MainClass.con);
+
+                        cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
+
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Modify the column names to match your data grid view
+                        no.DataPropertyName = dt.Columns["ID"].ToString();
+                        ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_AR"].ToString();
+                        calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                        fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                        carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                        fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                        calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                        sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                        classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
+                        fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+                        protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+
+
+                        dgv.DataSource = dt;
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else if (ingredientName != "" && groupArName == "")
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
+                            "WHERE INGREDIENT_AR LIKE @IngredientName", MainClass.con);
+
+                        cmd.Parameters.AddWithValue("@IngredientName", "%" + ingredientName + "%");
+
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Modify the column names to match your data grid view
+                        no.DataPropertyName = dt.Columns["ID"].ToString();
+                        ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_AR"].ToString();
+                        calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                        fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                        carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                        fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                        calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                        sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                        classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
+                        fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+                        protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+
+                        dgv.DataSource = dt;
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
+                    MessageBox.Show("Fill Ingredient Ar or Ingredient En");
+                }
+            }
+            else
+            {
+                if (ingredientName != "" && groupArName != "")
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_EN, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
+                            "WHERE (INGREDIENT_AR LIKE @IngredientName) AND (INGREDIENT_EN LIKE @GroupArName)", MainClass.con);
+
+                        cmd.Parameters.AddWithValue("@IngredientName", "%" + ingredientName + "%");
+                        cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
+
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Modify the column names to match your data grid view
+                        no.DataPropertyName = dt.Columns["ID"].ToString();
+                        ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_EN"].ToString();
+                        calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                        fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                        carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                        fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                        calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                        sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                        classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
+                        fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+                        protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+
+
+                        dgv.DataSource = dt;
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else if (ingredientName == "" && groupArName != "")
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_EN, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
+                            "WHERE INGREDIENT_EN LIKE @GroupArName", MainClass.con);
+
+                        cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
+
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Modify the column names to match your data grid view
+                        no.DataPropertyName = dt.Columns["ID"].ToString();
+                        ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_EN"].ToString();
+                        calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                        fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                        carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                        fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                        calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                        sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                        classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
+                        fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+                        protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+
+
+                        dgv.DataSource = dt;
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else if (ingredientName != "" && groupArName == "")
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_EN, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
+                            "WHERE INGREDIENT_AR LIKE @IngredientName", MainClass.con);
+
+                        cmd.Parameters.AddWithValue("@IngredientName", "%" + ingredientName + "%");
+
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Modify the column names to match your data grid view
+                        no.DataPropertyName = dt.Columns["ID"].ToString();
+                        ingredientAr.DataPropertyName = dt.Columns["INGREDIENT_EN"].ToString();
+                        calories.DataPropertyName = dt.Columns["CALORIES"].ToString();
+                        fats.DataPropertyName = dt.Columns["FATS"].ToString();
+                        carbohydrates.DataPropertyName = dt.Columns["CARBOHYDRATES"].ToString();
+                        fibers.DataPropertyName = dt.Columns["FIBERS"].ToString();
+                        calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
+                        sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
+                        classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
+                        fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+                        protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+
+                        dgv.DataSource = dt;
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
+                    MessageBox.Show("Fill Ingredient Ar or Ingredient En");
+                }
+            }
+
         }
 
         private void ShowIngredientsWithFilter(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn fdc, DataGridViewColumn classification, DataGridViewColumn ingredientAr, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium, string category)
@@ -524,7 +691,6 @@ namespace HelloWorldSolutionIMS
             }
             MainClass.HideAllTabsOnTabControl(tabControl1);
             tabControl1.SelectedIndex = 0;
-            ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView1.GridColor = Color.Black;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
@@ -603,6 +769,8 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
+            ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
+
         }
         private void New_Click(object sender, EventArgs e)
         {
