@@ -190,6 +190,28 @@
   <data name="EditBTN.Text" xml:space="preserve">
     <value>تعديل وجبة</value>
   </data>
+  <data name="iddgv.HeaderText" xml:space="preserve">
+    <value>رقم</value>
+  </data>
+  <data name="mealardgv.HeaderText" xml:space="preserve">
+    <value>الوجبة (عربي)</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mealardgv.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="caloriesdgv.HeaderText" xml:space="preserve">
+    <value>سعرات </value>
+  </data>
+  <data name="proteinmaindgv.HeaderText" xml:space="preserve">
+    <value>بروتين </value>
+  </data>
+  <data name="fatsmaindgv.HeaderText" xml:space="preserve">
+    <value>دهون </value>
+  </data>
+  <data name="carbohydratesmaindgv.HeaderText" xml:space="preserve">
+    <value>كربوهيدرات </value>
+  </data>
   <data name="Add.Text" xml:space="preserve">
     <value>اضافة وجبة</value>
   </data>

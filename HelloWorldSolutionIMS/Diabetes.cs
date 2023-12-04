@@ -196,37 +196,73 @@ namespace HelloWorldSolutionIMS
             int four = 0;
             for (int i = 0; i < 5; i++)
             {
-                // Add a new row to the DataGridView
-                int rowIndex = guna2DataGridView6.Rows.Add();
-                if (rowIndex == 0)
+                if (languagestatus == 1)
                 {
-                    guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "BREAKFAST"; // Add text to cell 2 (index 1)                   
-                    one = (int)(cfb + ib);
-                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(one, 0);
+                    int rowIndex = guna2DataGridView6.Rows.Add();
+                    if (rowIndex == 0)
+                    {
+                        guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "الافطار "; // Add text to cell 2 (index 1)                   
+                        one = (int)(cfb + ib);
+                        guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(one, 0);
+                    }
+                    else if (rowIndex == 1)
+                    {
+                        guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "الغداء"; // Add text to cell 2 (index 1)
+                        two = (int)(cfl + il);
+                        guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(two, 0);
+                    }
+                    else if (rowIndex == 2)
+                    {
+                        guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "العشاء "; // Add text to cell 2 (index 1)
+                        three = (int)(cfd + id);
+                        guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(three, 0);
+                    }
+                    else if (rowIndex == 3)
+                    {
+                        guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "الوجبات الخفيفة "; // Add text to cell 2 (index 1)
+                        four = (int)(cfs + iss);
+                        guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(four, 0);
+                    }
+                    else if (rowIndex == 4)
+                    {
+                        guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "المجموع "; // Add text to cell 2 (index 1)
+                        guna2DataGridView6.Rows[rowIndex].Cells[1].Value = one + two + three + four;
+                    }
                 }
-                else if (rowIndex == 1)
+                else
                 {
-                    guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "LUNCH"; // Add text to cell 2 (index 1)
-                    two = (int)(cfl + il);
-                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(two, 0);
+                    int rowIndex = guna2DataGridView6.Rows.Add();
+                    if (rowIndex == 0)
+                    {
+                        guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "BREAKFAST"; // Add text to cell 2 (index 1)                   
+                        one = (int)(cfb + ib);
+                        guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(one, 0);
+                    }
+                    else if (rowIndex == 1)
+                    {
+                        guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "LUNCH"; // Add text to cell 2 (index 1)
+                        two = (int)(cfl + il);
+                        guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(two, 0);
+                    }
+                    else if (rowIndex == 2)
+                    {
+                        guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "DINNER"; // Add text to cell 2 (index 1)
+                        three = (int)(cfd + id);
+                        guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(three, 0);
+                    }
+                    else if (rowIndex == 3)
+                    {
+                        guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "SNACKS"; // Add text to cell 2 (index 1)
+                        four = (int)(cfs + iss);
+                        guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(four, 0);
+                    }
+                    else if (rowIndex == 4)
+                    {
+                        guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "TOTAL"; // Add text to cell 2 (index 1)
+                        guna2DataGridView6.Rows[rowIndex].Cells[1].Value = one + two + three + four;
+                    }
                 }
-                else if (rowIndex == 2)
-                {
-                    guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "DINNER"; // Add text to cell 2 (index 1)
-                    three = (int)(cfd + id);
-                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(three, 0);
-                }
-                else if (rowIndex == 3)
-                {
-                    guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "SNACKS"; // Add text to cell 2 (index 1)
-                    four = (int)(cfs + iss);
-                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = RoundNumber(four, 0);
-                }
-                else if (rowIndex == 4)
-                {
-                    guna2DataGridView6.Rows[rowIndex].Cells[0].Value = "TOTAL"; // Add text to cell 2 (index 1)
-                    guna2DataGridView6.Rows[rowIndex].Cells[1].Value = one + two + three + four;
-                }
+
                 // Add specific text to the second and third cells of each row
             }
             guna2DataGridView6.ClearSelection();
@@ -299,6 +335,33 @@ namespace HelloWorldSolutionIMS
 
         static double table_total;
         static double table_total2;
+
+        static int languagestatus;
+        private void LanguageInfo()
+        {
+            MainClass.con.Open();
+
+            // Create a SqlCommand to fetch the row with ID 1 from the Language table
+            SqlCommand fetchCmd = new SqlCommand("SELECT * FROM Language WHERE ID = 1", MainClass.con);
+
+            // Execute the fetch command to get the data
+            using (SqlDataReader reader = fetchCmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    // Retrieve values from the reader and store them in variables
+                    int id = Convert.ToInt32(reader["ID"]);
+                    languagestatus = Convert.ToInt32(reader["Status"]);
+
+                    // Now, you can use the 'id' and 'status' variables as needed
+                    // For example, display them in a MessageBox
+                }
+
+            }
+
+            MainClass.con.Close();
+
+        }
         private void Diabetes_Load(object sender, EventArgs e)
         {
             fastingglucose = 0;
@@ -306,10 +369,12 @@ namespace HelloWorldSolutionIMS
             beforedinner = 0;
             bedtime = 0;
             cofactor = 0;
+
             ib = 0;
             il = 0;
             id = 0;
             iss = 0;
+
             cfb = 0;
             cfl = 0;
             cfd = 0;
@@ -504,6 +569,35 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView6.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView6.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView6.Rows.Clear();
+
+            LanguageInfo();
+            if (languagestatus == 1)
+            {
+
+                foreach (Control control in panel1.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+            }
         }
 
         static int counter = 0;

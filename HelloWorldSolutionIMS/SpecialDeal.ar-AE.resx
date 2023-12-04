@@ -160,6 +160,21 @@
   <data name="branchdgv.HeaderText" xml:space="preserve">
     <value>الفرع</value>
   </data>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
+  </data>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="deleteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
+  </data>
+  <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
+    <value>حذف </value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 80</value>
+  </data>
   <data name="Backtodeal.Text" xml:space="preserve">
     <value>الغاء </value>
   </data>

@@ -148,6 +148,24 @@
   <data name="bodycomp.Text" xml:space="preserve">
     <value>تحليل مكونات الجسم</value>
   </data>
+  <data name="FILENODGV.HeaderText" xml:space="preserve">
+    <value>رقم الملف</value>
+  </data>
+  <data name="firstnamedgv.HeaderText" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="familynamedgv.HeaderText" xml:space="preserve">
+    <value>العائلة</value>
+  </data>
+  <data name="subscriptionstartdatedgv.HeaderText" xml:space="preserve">
+    <value>بداية الاشتراك</value>
+  </data>
+  <data name="subscriptionenddatedgv.HeaderText" xml:space="preserve">
+    <value>نهاية الاشتراك</value>
+  </data>
+  <data name="nutritionistnamedgv.HeaderText" xml:space="preserve">
+    <value>الاخصائي</value>
+  </data>
   <data name="subscriptionstatus.Items" xml:space="preserve">
     <value>نعم</value>
   </data>
@@ -307,6 +325,48 @@
   <data name="AddBMI.Text" xml:space="preserve">
     <value>يضيف</value>
   </data>
+  <data name="idbc.HeaderText" xml:space="preserve">
+    <value>رقم </value>
+  </data>
+  <data name="datebc.HeaderText" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="bcabc.HeaderText" xml:space="preserve">
+    <value>رقم الفحص </value>
+  </data>
+  <data name="heightbc.HeaderText" xml:space="preserve">
+    <value>الطول </value>
+  </data>
+  <data name="weightbc.HeaderText" xml:space="preserve">
+    <value>الوزن</value>
+  </data>
+  <data name="agebc.HeaderText" xml:space="preserve">
+    <value>العمر </value>
+  </data>
+  <data name="fatsbc.HeaderText" xml:space="preserve">
+    <value>الدهون</value>
+  </data>
+  <data name="proteinbc.HeaderText" xml:space="preserve">
+    <value>البروتين</value>
+  </data>
+  <data name="waterbc.HeaderText" xml:space="preserve">
+    <value>الماء </value>
+  </data>
+  <data name="mineralsbc.HeaderText" xml:space="preserve">
+    <value>الاملاح </value>
+  </data>
+  <data name="visceralfatsbc.HeaderText" xml:space="preserve">
+    <value>الدهون الحشوية </value>
+  </data>
+  <data name="abdominalfatsbc.HeaderText" xml:space="preserve">
+    <value>الدهون محيط البطن </value>
+  </data>
+  <data name="bmibc.HeaderText" xml:space="preserve">
+    <value>مؤشر كتلة الجسم </value>
+  </data>
+  <data name="bmrbc.HeaderText" xml:space="preserve">
+    <value>معدل الحرق </value>
+  </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>607, 125</value>
   </data>
@@ -344,19 +404,19 @@
     <value>64, 125</value>
   </data>
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 24</value>
+    <value>75, 24</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
-    <value>العائلة</value>
+    <value>اسم العائلة </value>
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
     <value>62, 75</value>
   </data>
   <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 24</value>
+    <value>77, 24</value>
   </data>
   <data name="label21.Text" xml:space="preserve">
-    <value>الاسم</value>
+    <value>الاسم الاول</value>
   </data>
   <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 24</value>
@@ -369,6 +429,60 @@
   </data>
   <data name="SaveBMI.Text" xml:space="preserve">
     <value>حفظ</value>
+  </data>
+  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 24</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>الدهون محيط البطن </value>
+  </data>
+  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 24</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>الدهون الحشوية </value>
+  </data>
+  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>الاملاح </value>
+  </data>
+  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 24</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>الماء </value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 24</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>البروتين</value>
+  </data>
+  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 24</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>الدهون</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 24</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>الوزن</value>
+  </data>
+  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 24</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>الطول </value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 24</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>رقم الفحص </value>
   </data>
   <data name="guna2Button4.Text" xml:space="preserve">
     <value>خلف</value>

@@ -44,10 +44,17 @@
             this.promotioncodesearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promotionnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promotioncodedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promotionpercentagedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startdatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enddatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nutritionistdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.branchdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.nutritionist = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -68,14 +75,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.promotionpercentage = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.promotionnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.promotioncodedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.promotionpercentagedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startdatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enddatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nutritionistdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.branchdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -266,14 +265,53 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // iddgv
+            // 
+            resources.ApplyResources(this.iddgv, "iddgv");
+            this.iddgv.Name = "iddgv";
+            // 
+            // promotionnamedgv
+            // 
+            resources.ApplyResources(this.promotionnamedgv, "promotionnamedgv");
+            this.promotionnamedgv.Name = "promotionnamedgv";
+            // 
+            // promotioncodedgv
+            // 
+            resources.ApplyResources(this.promotioncodedgv, "promotioncodedgv");
+            this.promotioncodedgv.Name = "promotioncodedgv";
+            // 
+            // promotionpercentagedgv
+            // 
+            resources.ApplyResources(this.promotionpercentagedgv, "promotionpercentagedgv");
+            this.promotionpercentagedgv.Name = "promotionpercentagedgv";
+            // 
+            // startdatedgv
+            // 
+            resources.ApplyResources(this.startdatedgv, "startdatedgv");
+            this.startdatedgv.Name = "startdatedgv";
+            // 
+            // enddatedgv
+            // 
+            resources.ApplyResources(this.enddatedgv, "enddatedgv");
+            this.enddatedgv.Name = "enddatedgv";
+            // 
+            // nutritionistdgv
+            // 
+            resources.ApplyResources(this.nutritionistdgv, "nutritionistdgv");
+            this.nutritionistdgv.Name = "nutritionistdgv";
+            // 
+            // branchdgv
+            // 
+            resources.ApplyResources(this.branchdgv, "branchdgv");
+            this.branchdgv.Name = "branchdgv";
+            // 
             // contextMenuStrip1
             // 
             resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem,
-            this.printToolStripMenuItem});
+            this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             // 
             // editToolStripMenuItem
@@ -287,12 +325,6 @@
             resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // printToolStripMenuItem
-            // 
-            resources.ApplyResources(this.printToolStripMenuItem, "printToolStripMenuItem");
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // tabPage2
             // 
@@ -528,46 +560,6 @@
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
             // 
-            // iddgv
-            // 
-            resources.ApplyResources(this.iddgv, "iddgv");
-            this.iddgv.Name = "iddgv";
-            // 
-            // promotionnamedgv
-            // 
-            resources.ApplyResources(this.promotionnamedgv, "promotionnamedgv");
-            this.promotionnamedgv.Name = "promotionnamedgv";
-            // 
-            // promotioncodedgv
-            // 
-            resources.ApplyResources(this.promotioncodedgv, "promotioncodedgv");
-            this.promotioncodedgv.Name = "promotioncodedgv";
-            // 
-            // promotionpercentagedgv
-            // 
-            resources.ApplyResources(this.promotionpercentagedgv, "promotionpercentagedgv");
-            this.promotionpercentagedgv.Name = "promotionpercentagedgv";
-            // 
-            // startdatedgv
-            // 
-            resources.ApplyResources(this.startdatedgv, "startdatedgv");
-            this.startdatedgv.Name = "startdatedgv";
-            // 
-            // enddatedgv
-            // 
-            resources.ApplyResources(this.enddatedgv, "enddatedgv");
-            this.enddatedgv.Name = "enddatedgv";
-            // 
-            // nutritionistdgv
-            // 
-            resources.ApplyResources(this.nutritionistdgv, "nutritionistdgv");
-            this.nutritionistdgv.Name = "nutritionistdgv";
-            // 
-            // branchdgv
-            // 
-            resources.ApplyResources(this.branchdgv, "branchdgv");
-            this.branchdgv.Name = "branchdgv";
-            // 
             // SpecialDeal
             // 
             resources.ApplyResources(this, "$this");
@@ -624,7 +616,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2ComboBox nutritionist;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn promotionnamedgv;

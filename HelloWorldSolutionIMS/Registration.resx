@@ -129,6 +129,9 @@
   <data name="&gt;&gt;SaveBMI.Name" xml:space="preserve">
     <value>SaveBMI</value>
   </data>
+  <data name="Search.Text" xml:space="preserve">
+    <value>Search Client</value>
+  </data>
   <data name="&gt;&gt;guna2DataGridView15.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
@@ -1098,6 +1101,9 @@
   <data name="&gt;&gt;guna2Button1.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
+  <data name="&gt;&gt;fileno.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
   <data name="guna2DataGridView12.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
@@ -1749,9 +1755,6 @@
   <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 24</value>
   </data>
-  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>569, 70</value>
-  </data>
   <data name="label51.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 24</value>
   </data>
@@ -1938,9 +1941,6 @@
   <data name="filenomh.Location" type="System.Drawing.Point, System.Drawing">
     <value>174, 23</value>
   </data>
-  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
   <data name="guna2DataGridView16.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
@@ -2063,6 +2063,9 @@
   </data>
   <data name="&gt;&gt;Close.Name" xml:space="preserve">
     <value>Close</value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 24</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 24</value>
@@ -2219,6 +2222,9 @@
   </data>
   <data name="&gt;&gt;filenomhdgv.Name" xml:space="preserve">
     <value>filenomhdgv</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView11.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
   <data name="&gt;&gt;label11.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3120,9 +3126,6 @@
   <data name="dataGridViewTextBoxColumn29.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="EditMedicalHistory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>933, 173</value>
-  </data>
   <data name="&gt;&gt;label9.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
@@ -3276,8 +3279,8 @@
   <data name="&gt;&gt;guna2DataGridView4.ZOrder" xml:space="preserve">
     <value>34</value>
   </data>
-  <data name="&gt;&gt;firstname.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="&gt;&gt;label28.Name" xml:space="preserve">
     <value>label28</value>
@@ -3621,9 +3624,6 @@
   <data name="guna2DataGridView8.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn16.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn16</value>
-  </data>
   <data name="dataGridViewTextBoxColumn7.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -3744,8 +3744,8 @@
   <data name="&gt;&gt;dataGridViewTextBoxColumn22.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn22</value>
   </data>
-  <data name="&gt;&gt;gender.Name" xml:space="preserve">
-    <value>gender</value>
+  <data name="&gt;&gt;firstname.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="guna2DataGridView12.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -3876,8 +3876,8 @@
   <data name="&gt;&gt;label48.Parent" xml:space="preserve">
     <value>panel5</value>
   </data>
-  <data name="&gt;&gt;guna2DataGridView11.Parent" xml:space="preserve">
-    <value>panel4</value>
+  <data name="EditMedicalHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>933, 173</value>
   </data>
   <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -4119,8 +4119,8 @@
   <data name="pd.Size" type="System.Drawing.Size, System.Drawing">
     <value>290, 20</value>
   </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>569, 70</value>
   </data>
   <data name="&gt;&gt;proteinbc.Name" xml:space="preserve">
     <value>proteinbc</value>
@@ -4143,8 +4143,8 @@
   <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Search.Text" xml:space="preserve">
-    <value>Search Client</value>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="guna2DataGridView10.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>27</value>
@@ -4569,8 +4569,8 @@
   <data name="fats.Size" type="System.Drawing.Size, System.Drawing">
     <value>344, 38</value>
   </data>
-  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
+  <data name="&gt;&gt;gender.Name" xml:space="preserve">
+    <value>gender</value>
   </data>
   <data name="label31.TabIndex" type="System.Int32, mscorlib">
     <value>95</value>
@@ -4656,8 +4656,8 @@
   <data name="agemh.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 6, 5, 6</value>
   </data>
-  <data name="&gt;&gt;fileno.ZOrder" xml:space="preserve">
-    <value>38</value>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn16.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn16</value>
   </data>
   <data name="&gt;&gt;EditBTN.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>

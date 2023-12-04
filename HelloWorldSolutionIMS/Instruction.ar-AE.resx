@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Search.Text" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="New.Text" xml:space="preserve">
+    <value>اضافة </value>
+  </data>
+  <data name="nodgv.HeaderText" xml:space="preserve">
+    <value>ر قم</value>
+  </data>
+  <data name="instructionnamedgv.HeaderText" xml:space="preserve">
+    <value>اسم الارشادات </value>
+  </data>
+  <data name="nutritionistnamedgv.HeaderText" xml:space="preserve">
+    <value>اسم الاخصائي</value>
+  </data>
+  <data name="datedgv.HeaderText" xml:space="preserve">
+    <value>التاريخ </value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 130</value>

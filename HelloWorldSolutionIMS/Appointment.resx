@@ -143,14 +143,8 @@
   <data name="room2label.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
-  <data name="room2label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 250</value>
-  </data>
   <data name="familynamedgv.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
-  </data>
-  <data name="&gt;&gt;iddgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;guna2DataGridView1.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -158,14 +152,14 @@
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>452, 76</value>
   </data>
+  <data name="&gt;&gt;Save.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;mobileno.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;room1label.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;date.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -198,6 +192,9 @@
   <data name="CalendarFilter.Location" type="System.Drawing.Point, System.Drawing">
     <value>835, 21</value>
   </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Vacant</value>
+  </data>
   <data name="Reserved.Text" xml:space="preserve">
     <value>Reserved</value>
   </data>
@@ -213,9 +210,6 @@
   <data name="slotlabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;fileno.Name" xml:space="preserve">
-    <value>fileno</value>
-  </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
   </data>
@@ -225,11 +219,14 @@
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 24</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 24</value>
   </data>
   <data name="room3label.Location" type="System.Drawing.Point, System.Drawing">
     <value>572, 250</value>
+  </data>
+  <data name="back.Text" xml:space="preserve">
+    <value>Back To Appointments</value>
   </data>
   <data name="filenosearch.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -278,6 +275,12 @@
   </data>
   <data name="Room1.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="delete.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;Room1.Name" xml:space="preserve">
+    <value>Room1</value>
   </data>
   <data name="Clear.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -363,8 +366,8 @@
   <data name="slot.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
-  <data name="&gt;&gt;room4label.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;Room2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="&gt;&gt;delete.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -450,20 +453,23 @@
   <data name="&gt;&gt;room1label.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="Reserved.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;Room4.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;firstname.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
+  <data name="back.Location" type="System.Drawing.Point, System.Drawing">
+    <value>851, 755</value>
+  </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
   <data name="&gt;&gt;room1label.Name" xml:space="preserve">
     <value>room1label</value>
-  </data>
-  <data name="&gt;&gt;roomdgv.Name" xml:space="preserve">
-    <value>roomdgv</value>
   </data>
   <data name="&gt;&gt;Room1.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -477,17 +483,14 @@
   <data name="label15.Text" xml:space="preserve">
     <value>Mobile No.</value>
   </data>
-  <data name="label13.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
+  <data name="&gt;&gt;room4label.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;label15.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;EditBTN.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 25</value>
   </data>
   <data name="&gt;&gt;New.Name" xml:space="preserve">
     <value>New</value>
@@ -509,6 +512,9 @@
   </data>
   <data name="&gt;&gt;fileno.Parent" xml:space="preserve">
     <value>panel2</value>
+  </data>
+  <data name="EditBTN.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
   </data>
   <data name="&gt;&gt;firstnamesearch.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -540,6 +546,9 @@
   <data name="&gt;&gt;Reserved.Parent" xml:space="preserve">
     <value>panel3</value>
   </data>
+  <data name="&gt;&gt;Room3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -561,17 +570,17 @@
   <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
     <value>tabControl1</value>
   </data>
+  <data name="&gt;&gt;room1label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
     <value>373, 143</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="slotlabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;New.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
   </data>
   <data name="&gt;&gt;date.Type" xml:space="preserve">
     <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -606,11 +615,14 @@
   <data name="Clear.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
+  <data name="&gt;&gt;Save.Name" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="room3label.Text" xml:space="preserve">
     <value>         Room 3         </value>
   </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 28</value>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="mobileno.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 6, 5, 6</value>
@@ -623,6 +635,9 @@
   </data>
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
+  </data>
+  <data name="back.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
   </data>
   <data name="&gt;&gt;familyname.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -645,8 +660,14 @@
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
+  <data name="New.Location" type="System.Drawing.Point, System.Drawing">
+    <value>879, 240</value>
+  </data>
   <data name="firstname.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 38</value>
+  </data>
+  <data name="firstnamesearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 71</value>
   </data>
   <data name="&gt;&gt;familynamedgv.Name" xml:space="preserve">
     <value>familynamedgv</value>
@@ -662,9 +683,6 @@
   </data>
   <data name="&gt;&gt;familyname.ZOrder" xml:space="preserve">
     <value>17</value>
-  </data>
-  <data name="New.Size" type="System.Drawing.Size, System.Drawing">
-    <value>218, 45</value>
   </data>
   <data name="&gt;&gt;slot.Name" xml:space="preserve">
     <value>slot</value>
@@ -702,9 +720,6 @@
   <data name="&gt;&gt;Reserved.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="mobileno.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 38</value>
-  </data>
   <data name="&gt;&gt;label6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -722,9 +737,6 @@
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="familyname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>517, 129</value>
   </data>
   <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
@@ -750,8 +762,8 @@
   <data name="&gt;&gt;datedgv.Name" xml:space="preserve">
     <value>datedgv</value>
   </data>
-  <data name="slot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 38</value>
+  <data name="&gt;&gt;mobileno.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="search.Text" xml:space="preserve">
     <value>Search Appointment</value>
@@ -771,9 +783,6 @@
   <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;CalendarFilter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="EditBTN.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 240</value>
   </data>
@@ -783,8 +792,8 @@
   <data name="&gt;&gt;Room4.Name" xml:space="preserve">
     <value>Room4</value>
   </data>
-  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;mobileno.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="&gt;&gt;firstname.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -813,23 +822,14 @@
   <data name="tabPage2.Text" xml:space="preserve">
     <value>tabPage2</value>
   </data>
-  <data name="iddgv.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="firstnamesearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 6, 5, 6</value>
   </data>
   <data name="delete.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="&gt;&gt;mobileno.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="&gt;&gt;room4label.Name" xml:space="preserve">
     <value>room4label</value>
@@ -840,14 +840,8 @@
   <data name="CalendarFilter.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
   </data>
-  <data name="&gt;&gt;filenosearch.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
   <data name="Room2.Location" type="System.Drawing.Point, System.Drawing">
     <value>296, 275</value>
-  </data>
-  <data name="&gt;&gt;Clear.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -861,6 +855,9 @@
   <data name="&gt;&gt;mobileno.Name" xml:space="preserve">
     <value>mobileno</value>
   </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 24</value>
   </data>
@@ -872,9 +869,6 @@
   </data>
   <data name="familyname.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="search.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 45</value>
   </data>
   <data name="mobilenodgv.HeaderText" xml:space="preserve">
     <value>MOBILE NO</value>
@@ -894,11 +888,14 @@
   <data name="&gt;&gt;filenosearch.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;firstnamedgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>panel3</value>
   </data>
   <data name="EditBTN.Text" xml:space="preserve">
     <value>Edit Appointment</value>
+  </data>
+  <data name="New.Text" xml:space="preserve">
+    <value>New Appointment</value>
   </data>
   <data name="&gt;&gt;search.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -927,14 +924,14 @@
   <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="New.Text" xml:space="preserve">
-    <value>New Appointment</value>
+  <data name="slot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 38</value>
   </data>
   <data name="&gt;&gt;firstname.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="&gt;&gt;Room2.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="&gt;&gt;fileno.Name" xml:space="preserve">
+    <value>fileno</value>
   </data>
   <data name="familyname.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 38</value>
@@ -951,11 +948,17 @@
   <data name="fileno.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 38</value>
   </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>263, 28</value>
+  </data>
   <data name="&gt;&gt;Reserved.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="datedgv.HeaderText" xml:space="preserve">
     <value>DATE</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
   </data>
   <data name="&gt;&gt;mobileno.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -993,14 +996,8 @@
   <data name="&gt;&gt;room2label.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
   <data name="&gt;&gt;filenodgv.Name" xml:space="preserve">
     <value>filenodgv</value>
-  </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>20</value>
   </data>
   <data name="&gt;&gt;Room4.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -1010,9 +1007,6 @@
   </data>
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="firstnamedgv.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
   </data>
   <data name="&gt;&gt;Room3.Name" xml:space="preserve">
     <value>Room3</value>
@@ -1031,9 +1025,6 @@
   </data>
   <data name="Reserved.Location" type="System.Drawing.Point, System.Drawing">
     <value>129, 33</value>
-  </data>
-  <data name="&gt;&gt;delete.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>First Name</value>
@@ -1055,6 +1046,9 @@
   </data>
   <data name="slotdgv.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
     <value>panel2</value>
@@ -1083,6 +1077,9 @@
   <data name="fileno.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
+  <data name="&gt;&gt;date.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
   <data name="&gt;&gt;label13.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1110,11 +1107,11 @@
   <data name="firstnamedgv.HeaderText" xml:space="preserve">
     <value>FIRST NAME</value>
   </data>
-  <data name="Reserved.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;iddgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Vacant</value>
+  <data name="&gt;&gt;CalendarFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>First Name</value>
@@ -1128,8 +1125,8 @@
   <data name="&gt;&gt;label5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;roomdgv.Name" xml:space="preserve">
+    <value>roomdgv</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -1152,11 +1149,11 @@
   <data name="&gt;&gt;search.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="back.Text" xml:space="preserve">
-    <value>Back To Appointments</value>
+  <data name="&gt;&gt;room1label.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
-  <data name="back.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
+  <data name="room2label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 250</value>
   </data>
   <data name="Reserved.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 20</value>
@@ -1164,17 +1161,17 @@
   <data name="&gt;&gt;guna2DataGridView1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="New.Location" type="System.Drawing.Point, System.Drawing">
-    <value>879, 240</value>
+  <data name="&gt;&gt;firstnamedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="slotlabel.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="mobileno.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 38</value>
   </data>
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;Save.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="firstnamedgv.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>1414, 814</value>
@@ -1185,8 +1182,8 @@
   <data name="&gt;&gt;slot.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;date.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="back.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 45</value>
@@ -1194,14 +1191,17 @@
   <data name="Room1.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 450</value>
   </data>
-  <data name="&gt;&gt;room1label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="Room4.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
   </data>
   <data name="&gt;&gt;Reserved.Name" xml:space="preserve">
     <value>Reserved</value>
   </data>
-  <data name="EditBTN.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
+  <data name="&gt;&gt;EditBTN.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;CalendarFilter.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1224,14 +1224,14 @@
   <data name="&gt;&gt;room2label.Name" xml:space="preserve">
     <value>room2label</value>
   </data>
-  <data name="&gt;&gt;Room3.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
   </data>
-  <data name="delete.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 24</value>
+  <data name="&gt;&gt;Clear.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="&gt;&gt;slotdgv.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1239,14 +1239,14 @@
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 24</value>
   </data>
-  <data name="firstnamesearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 71</value>
+  <data name="New.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 45</value>
   </data>
   <data name="Room4.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
-  <data name="back.Location" type="System.Drawing.Point, System.Drawing">
-    <value>851, 755</value>
+  <data name="&gt;&gt;filenosearch.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
@@ -1272,14 +1272,14 @@
   <data name="New.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
   </data>
-  <data name="&gt;&gt;date.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;delete.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="firstnamesearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 38</value>
   </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 25</value>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>20</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1311,8 +1311,8 @@
   <data name="&gt;&gt;Room3.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="Room4.TabIndex" type="System.Int32, mscorlib">
-    <value>55</value>
+  <data name="familyname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>517, 129</value>
   </data>
   <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
@@ -1341,11 +1341,11 @@
   <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
-  <data name="&gt;&gt;Room1.Name" xml:space="preserve">
-    <value>Room1</value>
+  <data name="search.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 45</value>
   </data>
   <data name="iddgv.HeaderText" xml:space="preserve">
     <value>ID</value>
@@ -1359,8 +1359,8 @@
   <data name="Room3.Location" type="System.Drawing.Point, System.Drawing">
     <value>575, 275</value>
   </data>
-  <data name="&gt;&gt;Save.Name" xml:space="preserve">
-    <value>Save</value>
+  <data name="iddgv.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="Clear.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 45</value>
@@ -1377,19 +1377,19 @@
   <metadata name="back.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="firstnamedgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="datedgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="familynamedgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="datedgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>ar-AE</value>
   </metadata>
-  <metadata name="familynamedgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="firstnamedgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="mobilenodgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

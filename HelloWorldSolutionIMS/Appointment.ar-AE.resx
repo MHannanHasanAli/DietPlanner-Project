@@ -126,7 +126,64 @@
   <data name="New.Text" xml:space="preserve">
     <value>موعد جديد</value>
   </data>
+  <data name="filenodgv.HeaderText" xml:space="preserve">
+    <value>رقم الملف</value>
+  </data>
+  <data name="firstnamedgv.HeaderText" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="familynamedgv.HeaderText" xml:space="preserve">
+    <value>العائلة</value>
+  </data>
+  <data name="mobilenodgv.HeaderText" xml:space="preserve">
+    <value>الموبايل</value>
+  </data>
+  <data name="datedgv.HeaderText" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="roomdgv.HeaderText" xml:space="preserve">
+    <value>غرفة</value>
+  </data>
+  <data name="slotdgv.HeaderText" xml:space="preserve">
+    <value>الموعد</value>
+  </data>
+  <data name="delete.Text" xml:space="preserve">
+    <value>حذف موعد</value>
+  </data>
+  <data name="EditBTN.Text" xml:space="preserve">
+    <value>التعديل على موعد</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 24</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 24</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>رقم الملف</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1196, 814</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1202, 820</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 20</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>متاح</value>
+  </data>
+  <data name="Reserved.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="Reserved.Text" xml:space="preserve">
+    <value>محجوز</value>
+  </data>
   <data name="slotlabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 24</value>
   </data>
@@ -186,39 +243,5 @@
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1210, 849</value>
-  </data>
-  <data name="delete.Text" xml:space="preserve">
-    <value>حذف موعد</value>
-  </data>
-  <data name="EditBTN.Text" xml:space="preserve">
-    <value>التعديل على موعد</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 24</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>الاسم</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>رقم الملف</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 20</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>متاح</value>
-  </data>
-  <data name="Reserved.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
-  </data>
-  <data name="Reserved.Text" xml:space="preserve">
-    <value>محجوز</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
 </root>

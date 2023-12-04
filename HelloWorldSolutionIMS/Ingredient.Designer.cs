@@ -60,17 +60,6 @@
             this.Search = new Guna.UI2.WinForms.Guna2Button();
             this.New = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.nodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fdciddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classificationdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ingredientardgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calloriesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proteindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatsdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carbohydratedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calciumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fibersdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -131,6 +120,17 @@
             this.idgn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gnnar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gnnen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fdciddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classificationdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ingredientardgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calloriesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proteindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatsdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carbohydratedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calciumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fibersdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -534,79 +534,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // nodgv
-            // 
-            this.nodgv.FillWeight = 30F;
-            resources.ApplyResources(this.nodgv, "nodgv");
-            this.nodgv.Name = "nodgv";
-            this.nodgv.ReadOnly = true;
-            // 
-            // fdciddgv
-            // 
-            this.fdciddgv.FillWeight = 30F;
-            resources.ApplyResources(this.fdciddgv, "fdciddgv");
-            this.fdciddgv.Name = "fdciddgv";
-            this.fdciddgv.ReadOnly = true;
-            // 
-            // classificationdgv
-            // 
-            resources.ApplyResources(this.classificationdgv, "classificationdgv");
-            this.classificationdgv.Name = "classificationdgv";
-            this.classificationdgv.ReadOnly = true;
-            // 
-            // ingredientardgv
-            // 
-            this.ingredientardgv.FillWeight = 120F;
-            resources.ApplyResources(this.ingredientardgv, "ingredientardgv");
-            this.ingredientardgv.Name = "ingredientardgv";
-            this.ingredientardgv.ReadOnly = true;
-            // 
-            // calloriesdgv
-            // 
-            this.calloriesdgv.FillWeight = 40F;
-            resources.ApplyResources(this.calloriesdgv, "calloriesdgv");
-            this.calloriesdgv.Name = "calloriesdgv";
-            this.calloriesdgv.ReadOnly = true;
-            // 
-            // proteindgv
-            // 
-            this.proteindgv.FillWeight = 40F;
-            resources.ApplyResources(this.proteindgv, "proteindgv");
-            this.proteindgv.Name = "proteindgv";
-            this.proteindgv.ReadOnly = true;
-            // 
-            // fatsdgv
-            // 
-            this.fatsdgv.FillWeight = 40F;
-            resources.ApplyResources(this.fatsdgv, "fatsdgv");
-            this.fatsdgv.Name = "fatsdgv";
-            this.fatsdgv.ReadOnly = true;
-            // 
-            // carbohydratedgv
-            // 
-            this.carbohydratedgv.FillWeight = 40F;
-            resources.ApplyResources(this.carbohydratedgv, "carbohydratedgv");
-            this.carbohydratedgv.Name = "carbohydratedgv";
-            this.carbohydratedgv.ReadOnly = true;
-            // 
-            // calciumdgv
-            // 
-            resources.ApplyResources(this.calciumdgv, "calciumdgv");
-            this.calciumdgv.Name = "calciumdgv";
-            this.calciumdgv.ReadOnly = true;
-            // 
-            // fibersdgv
-            // 
-            resources.ApplyResources(this.fibersdgv, "fibersdgv");
-            this.fibersdgv.Name = "fibersdgv";
-            this.fibersdgv.ReadOnly = true;
-            // 
-            // sodiumdgv
-            // 
-            resources.ApplyResources(this.sodiumdgv, "sodiumdgv");
-            this.sodiumdgv.Name = "sodiumdgv";
-            this.sodiumdgv.ReadOnly = true;
             // 
             // label15
             // 
@@ -1363,6 +1290,79 @@
             resources.ApplyResources(this.gnnen, "gnnen");
             this.gnnen.Name = "gnnen";
             this.gnnen.ReadOnly = true;
+            // 
+            // nodgv
+            // 
+            this.nodgv.FillWeight = 30F;
+            resources.ApplyResources(this.nodgv, "nodgv");
+            this.nodgv.Name = "nodgv";
+            this.nodgv.ReadOnly = true;
+            // 
+            // fdciddgv
+            // 
+            this.fdciddgv.FillWeight = 30F;
+            resources.ApplyResources(this.fdciddgv, "fdciddgv");
+            this.fdciddgv.Name = "fdciddgv";
+            this.fdciddgv.ReadOnly = true;
+            // 
+            // classificationdgv
+            // 
+            resources.ApplyResources(this.classificationdgv, "classificationdgv");
+            this.classificationdgv.Name = "classificationdgv";
+            this.classificationdgv.ReadOnly = true;
+            // 
+            // ingredientardgv
+            // 
+            this.ingredientardgv.FillWeight = 120F;
+            resources.ApplyResources(this.ingredientardgv, "ingredientardgv");
+            this.ingredientardgv.Name = "ingredientardgv";
+            this.ingredientardgv.ReadOnly = true;
+            // 
+            // calloriesdgv
+            // 
+            this.calloriesdgv.FillWeight = 40F;
+            resources.ApplyResources(this.calloriesdgv, "calloriesdgv");
+            this.calloriesdgv.Name = "calloriesdgv";
+            this.calloriesdgv.ReadOnly = true;
+            // 
+            // proteindgv
+            // 
+            this.proteindgv.FillWeight = 40F;
+            resources.ApplyResources(this.proteindgv, "proteindgv");
+            this.proteindgv.Name = "proteindgv";
+            this.proteindgv.ReadOnly = true;
+            // 
+            // fatsdgv
+            // 
+            this.fatsdgv.FillWeight = 40F;
+            resources.ApplyResources(this.fatsdgv, "fatsdgv");
+            this.fatsdgv.Name = "fatsdgv";
+            this.fatsdgv.ReadOnly = true;
+            // 
+            // carbohydratedgv
+            // 
+            this.carbohydratedgv.FillWeight = 40F;
+            resources.ApplyResources(this.carbohydratedgv, "carbohydratedgv");
+            this.carbohydratedgv.Name = "carbohydratedgv";
+            this.carbohydratedgv.ReadOnly = true;
+            // 
+            // calciumdgv
+            // 
+            resources.ApplyResources(this.calciumdgv, "calciumdgv");
+            this.calciumdgv.Name = "calciumdgv";
+            this.calciumdgv.ReadOnly = true;
+            // 
+            // fibersdgv
+            // 
+            resources.ApplyResources(this.fibersdgv, "fibersdgv");
+            this.fibersdgv.Name = "fibersdgv";
+            this.fibersdgv.ReadOnly = true;
+            // 
+            // sodiumdgv
+            // 
+            resources.ApplyResources(this.sodiumdgv, "sodiumdgv");
+            this.sodiumdgv.Name = "sodiumdgv";
+            this.sodiumdgv.ReadOnly = true;
             // 
             // Ingredient
             // 

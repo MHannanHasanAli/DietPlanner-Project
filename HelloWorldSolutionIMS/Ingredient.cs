@@ -140,7 +140,7 @@ namespace HelloWorldSolutionIMS
                 {
                     MainClass.con.Open();
 
-                    SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
+                    SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
                         "WHERE (INGREDIENT_AR LIKE @IngredientName) AND (INGREDIENT_EN LIKE @GroupArName)", MainClass.con);
 
                     cmd.Parameters.AddWithValue("@IngredientName", "%" + ingredientName + "%");
@@ -161,6 +161,7 @@ namespace HelloWorldSolutionIMS
                     sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                     classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
                     fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
 
 
@@ -179,7 +180,7 @@ namespace HelloWorldSolutionIMS
                 {
                     MainClass.con.Open();
 
-                    SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
+                    SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
                         "WHERE INGREDIENT_EN LIKE @GroupArName", MainClass.con);
 
                     cmd.Parameters.AddWithValue("@GroupArName", "%" + groupArName + "%");
@@ -199,6 +200,7 @@ namespace HelloWorldSolutionIMS
                     sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                     classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
                     fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
 
 
@@ -217,7 +219,7 @@ namespace HelloWorldSolutionIMS
                 {
                     MainClass.con.Open();
 
-                    SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
+                    SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, PROTEIN, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
                         "WHERE INGREDIENT_AR LIKE @IngredientName", MainClass.con);
 
                     cmd.Parameters.AddWithValue("@IngredientName", "%" + ingredientName + "%");
@@ -237,6 +239,7 @@ namespace HelloWorldSolutionIMS
                     sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                     classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
                     fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+                    protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
 
                     dgv.DataSource = dt;
@@ -251,7 +254,7 @@ namespace HelloWorldSolutionIMS
             else
             {
                 ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
-                MessageBox.Show("Fill Ingredient Ar or Group Ar");
+                MessageBox.Show("Fill Ingredient Ar or Ingredient En");
             }
         }
 

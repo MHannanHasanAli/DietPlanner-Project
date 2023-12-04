@@ -647,6 +647,9 @@
     <EmbeddedResource Include="DatabaseSettings.resx">
       <DependentUpon>DatabaseSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Diabetes.ar-AE.resx">
+      <DependentUpon>Diabetes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Diabetes.resx">
       <DependentUpon>Diabetes.cs</DependentUpon>
     </EmbeddedResource>

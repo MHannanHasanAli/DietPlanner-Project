@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Instruction));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,10 +42,6 @@
             this.Search = new Guna.UI2.WinForms.Guna2Button();
             this.New = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.nodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.instructionnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nutritionistnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.instructionbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.date = new System.Windows.Forms.DateTimePicker();
@@ -53,6 +49,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.instructionname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.nodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.instructionnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nutritionistnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -145,45 +145,45 @@
             resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nodgv,
             this.instructionnamedgv,
             this.nutritionistnamedgv,
             this.datedgv});
             this.guna2DataGridView1.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
@@ -208,34 +208,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // nodgv
-            // 
-            this.nodgv.FillWeight = 104.2909F;
-            resources.ApplyResources(this.nodgv, "nodgv");
-            this.nodgv.Name = "nodgv";
-            this.nodgv.ReadOnly = true;
-            // 
-            // instructionnamedgv
-            // 
-            this.instructionnamedgv.FillWeight = 95.2524F;
-            resources.ApplyResources(this.instructionnamedgv, "instructionnamedgv");
-            this.instructionnamedgv.Name = "instructionnamedgv";
-            this.instructionnamedgv.ReadOnly = true;
-            // 
-            // nutritionistnamedgv
-            // 
-            this.nutritionistnamedgv.FillWeight = 95.2524F;
-            resources.ApplyResources(this.nutritionistnamedgv, "nutritionistnamedgv");
-            this.nutritionistnamedgv.Name = "nutritionistnamedgv";
-            this.nutritionistnamedgv.ReadOnly = true;
-            // 
-            // datedgv
-            // 
-            this.datedgv.FillWeight = 95.2524F;
-            resources.ApplyResources(this.datedgv, "datedgv");
-            this.datedgv.Name = "datedgv";
-            this.datedgv.ReadOnly = true;
             // 
             // label3
             // 
@@ -305,6 +277,34 @@
             this.instructionname.SelectedText = "";
             this.instructionname.ShadowDecoration.Parent = this.instructionname;
             // 
+            // nodgv
+            // 
+            this.nodgv.FillWeight = 104.2909F;
+            resources.ApplyResources(this.nodgv, "nodgv");
+            this.nodgv.Name = "nodgv";
+            this.nodgv.ReadOnly = true;
+            // 
+            // instructionnamedgv
+            // 
+            this.instructionnamedgv.FillWeight = 95.2524F;
+            resources.ApplyResources(this.instructionnamedgv, "instructionnamedgv");
+            this.instructionnamedgv.Name = "instructionnamedgv";
+            this.instructionnamedgv.ReadOnly = true;
+            // 
+            // nutritionistnamedgv
+            // 
+            this.nutritionistnamedgv.FillWeight = 95.2524F;
+            resources.ApplyResources(this.nutritionistnamedgv, "nutritionistnamedgv");
+            this.nutritionistnamedgv.Name = "nutritionistnamedgv";
+            this.nutritionistnamedgv.ReadOnly = true;
+            // 
+            // datedgv
+            // 
+            this.datedgv.FillWeight = 95.2524F;
+            resources.ApplyResources(this.datedgv, "datedgv");
+            this.datedgv.Name = "datedgv";
+            this.datedgv.ReadOnly = true;
+            // 
             // Instruction
             // 
             resources.ApplyResources(this, "$this");
@@ -330,10 +330,6 @@
         private Guna.UI2.WinForms.Guna2Button Search;
         private Guna.UI2.WinForms.Guna2Button New;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nodgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn instructionnamedgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nutritionistnamedgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datedgv;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox instructionbox;
         private System.Windows.Forms.DateTimePicker date;
@@ -342,5 +338,9 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox instructionname;
         private Guna.UI2.WinForms.Guna2ComboBox nutritionistname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nodgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn instructionnamedgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nutritionistnamedgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datedgv;
     }
 }
