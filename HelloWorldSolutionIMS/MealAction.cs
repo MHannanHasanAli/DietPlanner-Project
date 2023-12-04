@@ -3373,7 +3373,7 @@ namespace HelloWorldSolutionIMS
 
                                         cmd2.ExecuteNonQuery();
 
-                                        if (MainClass.con.State == ConnectionState.Open)
+                                        if (conn == 1)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -3390,7 +3390,7 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (MainClass.con.State == ConnectionState.Open)
+                                if (conn == 1)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
@@ -3447,7 +3447,7 @@ namespace HelloWorldSolutionIMS
                                         groupNEn = groupNAr;
                                         cmd2.ExecuteNonQuery();
 
-                                        if (MainClass.con.State == ConnectionState.Open)
+                                        if (conn == 1)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -3464,7 +3464,7 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (MainClass.con.State == ConnectionState.Open)
+                                if (conn == 1)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
@@ -3517,7 +3517,7 @@ namespace HelloWorldSolutionIMS
                                         groupNAr = groupNEn;
                                         cmd2.ExecuteNonQuery();
 
-                                        if (MainClass.con.State == ConnectionState.Open)
+                                        if (conn == 1)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -3534,7 +3534,7 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (MainClass.con.State == ConnectionState.Open)
+                                if (conn == 1)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
@@ -3595,7 +3595,7 @@ namespace HelloWorldSolutionIMS
 
                                         cmd2.ExecuteNonQuery();
 
-                                        if (MainClass.con.State == ConnectionState.Open)
+                                        if (conn == 1)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -3612,7 +3612,7 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (MainClass.con.State == ConnectionState.Open)
+                                if (conn == 1)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
@@ -3669,7 +3669,7 @@ namespace HelloWorldSolutionIMS
                                         groupCEn = groupCAr;
                                         cmd2.ExecuteNonQuery();
 
-                                        if (MainClass.con.State == ConnectionState.Open)
+                                        if (conn == 1)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -3686,7 +3686,7 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (MainClass.con.State == ConnectionState.Open)
+                                if (conn == 1)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
@@ -3740,7 +3740,7 @@ namespace HelloWorldSolutionIMS
                                         groupCAr = groupCEn;
                                         cmd2.ExecuteNonQuery();
 
-                                        if (MainClass.con.State == ConnectionState.Open)
+                                        if (conn == 1)
                                         {
                                             MainClass.con.Close();
                                             conn = 0;
@@ -3757,7 +3757,7 @@ namespace HelloWorldSolutionIMS
                                 }
 
                                 reader.Close(); // Close the reader
-                                if (MainClass.con.State == ConnectionState.Open)
+                                if (conn == 1)
                                 {
                                     MainClass.con.Close();
                                     conn = 0;
