@@ -6886,19 +6886,7 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView9.ClearSelection();
             guna2DataGridView10.ClearSelection();
         }
-        public class ArtificialMapping
-        {
-            public int ID { get; set; }
-            public int Row { get; set; }
-            public int Col { get; set; }
-            public string ChartName { get; set; }
-        }
 
-        List<ArtificialMapping> artificialMappings = new List<ArtificialMapping>();
-        static int selectedRow;
-        static int selectedColumn;
-        static string selectedchart;
-        static string MealID;
         private void guna2DataGridView7_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             guna2DataGridView8.ClearSelection();
@@ -7244,56 +7232,9 @@ namespace HelloWorldSolutionIMS
             classification.SelectedItem = null;
 
         }
-        private void addToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (guna2DataGridView7.SelectedCells.Count == 1)
-            {
-                ClearMeals();
-                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
-                chart1.Titles.Clear();
-                tabControl1.SelectedIndex = 6;
-                guna2DataGridView12.ClearSelection();
 
-            }
 
-        }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            if (guna2DataGridView10.SelectedCells.Count == 1)
-            {
-                ClearMeals();
-                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
-                chart1.Titles.Clear();
-                tabControl1.SelectedIndex = 6;
-                guna2DataGridView12.ClearSelection();
-            }
-        }
-
-        private void toolStripMenuItem4_Click(object sender, EventArgs e)
-        {
-            if (guna2DataGridView9.SelectedCells.Count == 1)
-            {
-                ClearMeals();
-                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
-                chart1.Titles.Clear();
-                tabControl1.SelectedIndex = 6;
-                guna2DataGridView12.ClearSelection();
-            }
-        }
-
-        private void toolStripMenuItem7_Click(object sender, EventArgs e)
-        {
-            if (guna2DataGridView8.SelectedCells.Count == 1)
-            {
-                ClearMeals();
-                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
-                chart1.Titles.Clear();
-                tabControl1.SelectedIndex = 6;
-                guna2DataGridView12.ClearSelection();
-
-            }
-        }
 
         private void Meals_Click_1(object sender, EventArgs e)
         {
@@ -7518,23 +7459,38 @@ namespace HelloWorldSolutionIMS
                     {
                         while (reader.Read())
                         {
-                            if (selectedchart == "guna2DataGridView7")
+                            if (selectedchart == "guna2DataGridView13")
                             {
-                                guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
                             }
-                            else if (selectedchart == "guna2DataGridView8")
+                            else if (selectedchart == "guna2DataGridView15")
                             {
-                                guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                             }
-                            else if (selectedchart == "guna2DataGridView9")
+                            else if (selectedchart == "guna2DataGridView16")
                             {
-                                guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                             }
-                            else if (selectedchart == "guna2DataGridView10")
+                            else if (selectedchart == "guna2DataGridView17")
                             {
-                                guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+                            else if (selectedchart == "guna2DataGridView18")
+                            {
+                                guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+                            else if (selectedchart == "guna2DataGridView19")
+                            {
+                                guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+                            else if (selectedchart == "guna2DataGridView20")
+                            {
+                                guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                             }
 
@@ -7544,10 +7500,7 @@ namespace HelloWorldSolutionIMS
                         reader.Close();
                         MainClass.con.Close();
                     }
-                    else
-                    {
-                        MessageBox.Show("Meal not found with ID: " + MealID);
-                    }
+
 
                     MainClass.con.Close();
                 }
@@ -7557,7 +7510,7 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show(ex.Message);
                 }
                 ChartAdd(MealID);
-                tabControl1.SelectedIndex = 5;
+                tabControl1.SelectedIndex = 8;
                 editmeal = 0;
             }
             else
@@ -7580,23 +7533,38 @@ namespace HelloWorldSolutionIMS
                     {
                         while (reader.Read())
                         {
-                            if (selectedchart == "guna2DataGridView7")
+                            if (selectedchart == "guna2DataGridView13")
                             {
-                                guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
                             }
-                            else if (selectedchart == "guna2DataGridView8")
+                            else if (selectedchart == "guna2DataGridView15")
                             {
-                                guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                             }
-                            else if (selectedchart == "guna2DataGridView9")
+                            else if (selectedchart == "guna2DataGridView16")
                             {
-                                guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                             }
-                            else if (selectedchart == "guna2DataGridView10")
+                            else if (selectedchart == "guna2DataGridView17")
                             {
-                                guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+                            else if (selectedchart == "guna2DataGridView18")
+                            {
+                                guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+                            else if (selectedchart == "guna2DataGridView19")
+                            {
+                                guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                            }
+                            else if (selectedchart == "guna2DataGridView20")
+                            {
+                                guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                             }
 
@@ -7606,10 +7574,7 @@ namespace HelloWorldSolutionIMS
                         reader.Close();
                         MainClass.con.Close();
                     }
-                    else
-                    {
-                        MessageBox.Show("Meal not found with ID: " + MealID);
-                    }
+
 
                     MainClass.con.Close();
                 }
@@ -7619,7 +7584,7 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show(ex.Message);
                 }
                 ChartAdd(MealID);
-                tabControl1.SelectedIndex = 5;
+                tabControl1.SelectedIndex = 8;
             }
 
         }
@@ -8001,102 +7966,7 @@ namespace HelloWorldSolutionIMS
 
         }
 
-        private void deleteToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            ArtificialMapping deleteitem = new ArtificialMapping();
 
-            int call = -1;
-            foreach (var item in artificialMappings)
-            {
-                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView7")
-                {
-                    ChartSubtract(item.ID.ToString());
-                    deleteitem.Row = item.Row;
-                    deleteitem.Col = item.Col;
-                    deleteitem.ChartName = item.ChartName;
-                    deleteitem.ID = item.ID;
-                    call = 1;
-                }
-            }
-            if (call == 1)
-            {
-                guna2DataGridView7.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
-                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
-            }
-
-        }
-
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            ArtificialMapping deleteitem = new ArtificialMapping();
-
-            int call = -1;
-            foreach (var item in artificialMappings)
-            {
-                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView10")
-                {
-                    ChartSubtract(item.ID.ToString());
-                    deleteitem.Row = item.Row;
-                    deleteitem.Col = item.Col;
-                    deleteitem.ChartName = item.ChartName;
-                    deleteitem.ID = item.ID;
-                    call = 1;
-                }
-            }
-            if (call == 1)
-            {
-                guna2DataGridView10.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
-                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
-            }
-        }
-
-        private void toolStripMenuItem6_Click(object sender, EventArgs e)
-        {
-            ArtificialMapping deleteitem = new ArtificialMapping();
-
-            int call = -1;
-            foreach (var item in artificialMappings)
-            {
-                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView9")
-                {
-                    ChartSubtract(item.ID.ToString());
-                    deleteitem.Row = item.Row;
-                    deleteitem.Col = item.Col;
-                    deleteitem.ChartName = item.ChartName;
-                    deleteitem.ID = item.ID;
-                    call = 1;
-                }
-            }
-            if (call == 1)
-            {
-                guna2DataGridView9.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
-                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
-            }
-        }
-
-        private void toolStripMenuItem9_Click(object sender, EventArgs e)
-        {
-            ArtificialMapping deleteitem = new ArtificialMapping();
-
-            int call = -1;
-            foreach (var item in artificialMappings)
-            {
-                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView8")
-                {
-                    ChartSubtract(item.ID.ToString());
-                    deleteitem.Row = item.Row;
-                    deleteitem.Col = item.Col;
-                    deleteitem.ChartName = item.ChartName;
-                    deleteitem.ID = item.ID;
-                    call = 1;
-                }
-            }
-            if (call == 1)
-            {
-                guna2DataGridView8.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
-                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
-            }
-        }
 
         private void NewSave_Click(object sender, EventArgs e)
         {
@@ -8456,334 +8326,7 @@ namespace HelloWorldSolutionIMS
         }
         static int selectedid = 0;
         static int editmeal = 0;
-        private void editToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            editmeal = 1;
-            foreach (var item in artificialMappings)
-            {
-                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView7")
-                {
-                    selectedid = item.ID; break;
-                }
-            }
 
-            if (selectedid != 0)
-            {
-                UpdateGroupsC();
-                UpdateGroupsN();
-                MealID = selectedid.ToString();
-                try
-                {
-                    MainClass.con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@MealID", MealID);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            mealar.Text = reader["MealAr"].ToString();
-                            mealen.Text = reader["MealEn"].ToString();
-                            groupnar.Text = reader["GroupNAr"].ToString();
-                            groupnen.Text = reader["GroupNEn"].ToString();
-                            groupcar.Text = reader["GroupCAr"].ToString();
-                            groupcen.Text = reader["GroupCEn"].ToString();
-                            caloriesm.Text = reader["CALORIES"].ToString();
-                            fatsm.Text = reader["FATS"].ToString();
-                            fibersm.Text = reader["FIBERS"].ToString();
-                            potassiumm.Text = reader["POTASSIUM"].ToString();
-                            waterm.Text = reader["WATER"].ToString();
-                            sugerm.Text = reader["SUGAR"].ToString();
-                            calciumm.Text = reader["CALCIUM"].ToString();
-                            am.Text = reader["A"].ToString();
-                            proteinm.Text = reader["PROTEIN"].ToString();
-                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
-                            sodiumm.Text = reader["SODIUM"].ToString();
-                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
-                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
-                            ironm.Text = reader["IRON"].ToString();
-                            iodinem.Text = reader["IODINE"].ToString();
-                            bm.Text = reader["B"].ToString();
-                            notes.Text = reader["Notes"].ToString();
-                            preparation.Text = reader["Preparation"].ToString();
-                            classification.Text = reader["CLASSIFICATION"].ToString();
-                        }
-                        reader.Close();
-
-                        MainClass.con.Close();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Meal not found with ID: " + MealID);
-                    }
-                    tabControl1.SelectedIndex = 6;
-                    guna2DataGridView12.ClearSelection();
-                    MainClass.con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                ClearMeals();
-                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
-                tabControl1.SelectedIndex = 6;
-                guna2DataGridView12.ClearSelection();
-            }
-
-
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            editmeal = 1;
-            foreach (var item in artificialMappings)
-            {
-                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView10")
-                {
-                    selectedid = item.ID; break;
-                }
-            }
-
-            if (selectedid != 0)
-            {
-                UpdateGroupsC();
-                UpdateGroupsN();
-                MealID = selectedid.ToString();
-                try
-                {
-                    MainClass.con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@MealID", MealID);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            mealar.Text = reader["MealAr"].ToString();
-                            mealen.Text = reader["MealEn"].ToString();
-                            groupnar.Text = reader["GroupNAr"].ToString();
-                            groupnen.Text = reader["GroupNEn"].ToString();
-                            groupcar.Text = reader["GroupCAr"].ToString();
-                            groupcen.Text = reader["GroupCEn"].ToString();
-                            caloriesm.Text = reader["CALORIES"].ToString();
-                            fatsm.Text = reader["FATS"].ToString();
-                            fibersm.Text = reader["FIBERS"].ToString();
-                            potassiumm.Text = reader["POTASSIUM"].ToString();
-                            waterm.Text = reader["WATER"].ToString();
-                            sugerm.Text = reader["SUGAR"].ToString();
-                            calciumm.Text = reader["CALCIUM"].ToString();
-                            am.Text = reader["A"].ToString();
-                            proteinm.Text = reader["PROTEIN"].ToString();
-                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
-                            sodiumm.Text = reader["SODIUM"].ToString();
-                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
-                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
-                            ironm.Text = reader["IRON"].ToString();
-                            iodinem.Text = reader["IODINE"].ToString();
-                            bm.Text = reader["B"].ToString();
-                            notes.Text = reader["Notes"].ToString();
-                            preparation.Text = reader["Preparation"].ToString();
-                            classification.Text = reader["CLASSIFICATION"].ToString();
-                        }
-                        reader.Close();
-
-                        MainClass.con.Close();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Meal not found with ID: " + MealID);
-                    }
-                    tabControl1.SelectedIndex = 6;
-                    guna2DataGridView12.ClearSelection();
-                    MainClass.con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                ClearMeals();
-                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
-                tabControl1.SelectedIndex = 6;
-                guna2DataGridView12.ClearSelection();
-            }
-
-        }
-
-        private void toolStripMenuItem5_Click(object sender, EventArgs e)
-        {
-            editmeal = 1;
-            foreach (var item in artificialMappings)
-            {
-                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView9")
-                {
-                    selectedid = item.ID; break;
-                }
-            }
-
-            if (selectedid != 0)
-            {
-                UpdateGroupsC();
-                UpdateGroupsN();
-                MealID = selectedid.ToString();
-                try
-                {
-                    MainClass.con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@MealID", MealID);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            mealar.Text = reader["MealAr"].ToString();
-                            mealen.Text = reader["MealEn"].ToString();
-                            groupnar.Text = reader["GroupNAr"].ToString();
-                            groupnen.Text = reader["GroupNEn"].ToString();
-                            groupcar.Text = reader["GroupCAr"].ToString();
-                            groupcen.Text = reader["GroupCEn"].ToString();
-                            caloriesm.Text = reader["CALORIES"].ToString();
-                            fatsm.Text = reader["FATS"].ToString();
-                            fibersm.Text = reader["FIBERS"].ToString();
-                            potassiumm.Text = reader["POTASSIUM"].ToString();
-                            waterm.Text = reader["WATER"].ToString();
-                            sugerm.Text = reader["SUGAR"].ToString();
-                            calciumm.Text = reader["CALCIUM"].ToString();
-                            am.Text = reader["A"].ToString();
-                            proteinm.Text = reader["PROTEIN"].ToString();
-                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
-                            sodiumm.Text = reader["SODIUM"].ToString();
-                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
-                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
-                            ironm.Text = reader["IRON"].ToString();
-                            iodinem.Text = reader["IODINE"].ToString();
-                            bm.Text = reader["B"].ToString();
-                            notes.Text = reader["Notes"].ToString();
-                            preparation.Text = reader["Preparation"].ToString();
-                            classification.Text = reader["CLASSIFICATION"].ToString();
-                        }
-                        reader.Close();
-
-                        MainClass.con.Close();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Meal not found with ID: " + MealID);
-                    }
-                    tabControl1.SelectedIndex = 6;
-                    guna2DataGridView12.ClearSelection();
-                    MainClass.con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                ClearMeals();
-                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
-                tabControl1.SelectedIndex = 6;
-                guna2DataGridView12.ClearSelection();
-            }
-
-        }
-
-        private void toolStripMenuItem8_Click(object sender, EventArgs e)
-        {
-            editmeal = 1;
-            foreach (var item in artificialMappings)
-            {
-                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView8")
-                {
-                    selectedid = item.ID; break;
-                }
-            }
-
-            if (selectedid != 0)
-            {
-                UpdateGroupsC();
-                UpdateGroupsN();
-                MealID = selectedid.ToString();
-                try
-                {
-                    MainClass.con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@MealID", MealID);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            mealar.Text = reader["MealAr"].ToString();
-                            mealen.Text = reader["MealEn"].ToString();
-                            groupnar.Text = reader["GroupNAr"].ToString();
-                            groupnen.Text = reader["GroupNEn"].ToString();
-                            groupcar.Text = reader["GroupCAr"].ToString();
-                            groupcen.Text = reader["GroupCEn"].ToString();
-                            caloriesm.Text = reader["CALORIES"].ToString();
-                            fatsm.Text = reader["FATS"].ToString();
-                            fibersm.Text = reader["FIBERS"].ToString();
-                            potassiumm.Text = reader["POTASSIUM"].ToString();
-                            waterm.Text = reader["WATER"].ToString();
-                            sugerm.Text = reader["SUGAR"].ToString();
-                            calciumm.Text = reader["CALCIUM"].ToString();
-                            am.Text = reader["A"].ToString();
-                            proteinm.Text = reader["PROTEIN"].ToString();
-                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
-                            sodiumm.Text = reader["SODIUM"].ToString();
-                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
-                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
-                            ironm.Text = reader["IRON"].ToString();
-                            iodinem.Text = reader["IODINE"].ToString();
-                            bm.Text = reader["B"].ToString();
-                            notes.Text = reader["Notes"].ToString();
-                            preparation.Text = reader["Preparation"].ToString();
-                            classification.Text = reader["CLASSIFICATION"].ToString();
-                        }
-                        reader.Close();
-
-                        MainClass.con.Close();
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Meal not found with ID: " + MealID);
-                    }
-                    tabControl1.SelectedIndex = 6;
-                    guna2DataGridView12.ClearSelection();
-                    MainClass.con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                ClearMeals();
-                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
-                tabControl1.SelectedIndex = 6;
-                guna2DataGridView12.ClearSelection();
-            }
-
-        }
 
         private void filenon_TextChanged(object sender, EventArgs e)
         {
@@ -10440,6 +9983,20 @@ namespace HelloWorldSolutionIMS
         }
         //finalcoding
 
+        public class ArtificialMapping
+        {
+            public int ID { get; set; }
+            public int Row { get; set; }
+            public int Col { get; set; }
+            public string ChartName { get; set; }
+        }
+
+        List<ArtificialMapping> artificialMappings = new List<ArtificialMapping>();
+        static int selectedRow;
+        static int selectedColumn;
+        static string selectedchart;
+        static string MealID;
+
         private void TableLayoutFill()
         {
 
@@ -10578,6 +10135,893 @@ namespace HelloWorldSolutionIMS
             selectedRow = e.RowIndex;
             selectedColumn = e.ColumnIndex;
             selectedchart = "guna2DataGridView13";
+        }
+
+        private void guna2DataGridView15_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView15";
+        }
+
+        private void guna2DataGridView16_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView16";
+        }
+
+        private void guna2DataGridView17_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView17";
+        }
+
+        private void guna2DataGridView18_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView18";
+        }
+
+        private void guna2DataGridView19_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView19";
+        }
+
+        private void guna2DataGridView20_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView20";
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView13.SelectedCells.Count == 1)
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+
+            }
+
+        }
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView15.SelectedCells.Count == 1)
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView16.SelectedCells.Count == 1)
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView17.SelectedCells.Count == 1)
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+
+            }
+        }
+
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView18.SelectedCells.Count == 1)
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+
+            }
+        }
+
+        private void toolStripMenuItem13_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView19.SelectedCells.Count == 1)
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+
+            }
+        }
+
+        private void toolStripMenuItem16_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView20.SelectedCells.Count == 1)
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                chart1.Titles.Clear();
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+
+            }
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView13")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView15")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView16")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+
+        }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView17")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+
+        }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView18")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+        }
+
+        private void toolStripMenuItem14_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView19")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+        }
+
+        private void toolStripMenuItem17_Click(object sender, EventArgs e)
+        {
+            editmeal = 1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView20")
+                {
+                    selectedid = item.ID; break;
+                }
+            }
+
+            if (selectedid != 0)
+            {
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = selectedid.ToString();
+                try
+                {
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                        }
+                        reader.Close();
+
+                        MainClass.con.Close();
+
+                    }
+
+                    tabControl1.SelectedIndex = 6;
+                    guna2DataGridView12.ClearSelection();
+                    MainClass.con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ClearMeals();
+                ShowMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                tabControl1.SelectedIndex = 6;
+                guna2DataGridView12.ClearSelection();
+            }
+        }
+
+        private void deleteToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ArtificialMapping deleteitem = new ArtificialMapping();
+
+            int call = -1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView13")
+                {
+                    ChartSubtract(item.ID.ToString());
+                    deleteitem.Row = item.Row;
+                    deleteitem.Col = item.Col;
+                    deleteitem.ChartName = item.ChartName;
+                    deleteitem.ID = item.ID;
+                    call = 1;
+                }
+            }
+            if (call == 1)
+            {
+                guna2DataGridView13.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
+            }
+
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            ArtificialMapping deleteitem = new ArtificialMapping();
+
+            int call = -1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView15")
+                {
+                    ChartSubtract(item.ID.ToString());
+                    deleteitem.Row = item.Row;
+                    deleteitem.Col = item.Col;
+                    deleteitem.ChartName = item.ChartName;
+                    deleteitem.ID = item.ID;
+                    call = 1;
+                }
+            }
+            if (call == 1)
+            {
+                guna2DataGridView15.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
+            }
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            ArtificialMapping deleteitem = new ArtificialMapping();
+
+            int call = -1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView16")
+                {
+                    ChartSubtract(item.ID.ToString());
+                    deleteitem.Row = item.Row;
+                    deleteitem.Col = item.Col;
+                    deleteitem.ChartName = item.ChartName;
+                    deleteitem.ID = item.ID;
+                    call = 1;
+                }
+            }
+            if (call == 1)
+            {
+                guna2DataGridView16.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
+            }
+        }
+
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            ArtificialMapping deleteitem = new ArtificialMapping();
+
+            int call = -1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView17")
+                {
+                    ChartSubtract(item.ID.ToString());
+                    deleteitem.Row = item.Row;
+                    deleteitem.Col = item.Col;
+                    deleteitem.ChartName = item.ChartName;
+                    deleteitem.ID = item.ID;
+                    call = 1;
+                }
+            }
+            if (call == 1)
+            {
+                guna2DataGridView17.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
+            }
+        }
+
+        private void toolStripMenuItem12_Click(object sender, EventArgs e)
+        {
+            ArtificialMapping deleteitem = new ArtificialMapping();
+
+            int call = -1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView18")
+                {
+                    ChartSubtract(item.ID.ToString());
+                    deleteitem.Row = item.Row;
+                    deleteitem.Col = item.Col;
+                    deleteitem.ChartName = item.ChartName;
+                    deleteitem.ID = item.ID;
+                    call = 1;
+                }
+            }
+            if (call == 1)
+            {
+                guna2DataGridView18.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
+            }
+        }
+
+        private void toolStripMenuItem15_Click(object sender, EventArgs e)
+        {
+            ArtificialMapping deleteitem = new ArtificialMapping();
+
+            int call = -1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView19")
+                {
+                    ChartSubtract(item.ID.ToString());
+                    deleteitem.Row = item.Row;
+                    deleteitem.Col = item.Col;
+                    deleteitem.ChartName = item.ChartName;
+                    deleteitem.ID = item.ID;
+                    call = 1;
+                }
+            }
+            if (call == 1)
+            {
+                guna2DataGridView19.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
+            }
+        }
+
+        private void toolStripMenuItem18_Click(object sender, EventArgs e)
+        {
+            ArtificialMapping deleteitem = new ArtificialMapping();
+
+            int call = -1;
+            foreach (var item in artificialMappings)
+            {
+                if (item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == "guna2DataGridView20")
+                {
+                    ChartSubtract(item.ID.ToString());
+                    deleteitem.Row = item.Row;
+                    deleteitem.Col = item.Col;
+                    deleteitem.ChartName = item.ChartName;
+                    deleteitem.ID = item.ID;
+                    call = 1;
+                }
+            }
+            if (call == 1)
+            {
+                guna2DataGridView20.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
+            }
         }
     }
 
