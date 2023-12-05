@@ -2914,9 +2914,19 @@ namespace HelloWorldSolutionIMS
             //    RowsFiller();
             //}
 
-            NewTabRowsFill();
+            //NewTabRowsFill();
+
+            TableLayoutFill();
             tabControl1.SelectedIndex = 5;
         }
+
+
+
+
+
+
+
+
 
         private void AddIngredient_Click(object sender, EventArgs e)
         {
@@ -10428,14 +10438,150 @@ namespace HelloWorldSolutionIMS
             }
 
         }
+        //finalcoding
+
+        private void TableLayoutFill()
+        {
+
+            guna2DataGridView13.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView13.GridColor = Color.Black;
+            guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView13.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView13.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView13.Columns[5].Width = 20;
+
+            guna2DataGridView15.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView15.GridColor = Color.Black;
+            guna2DataGridView15.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView15.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView15.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView15.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView15.Columns[5].Width = 20;
+
+            guna2DataGridView16.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView16.GridColor = Color.Black;
+            guna2DataGridView16.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView16.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView16.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView16.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView16.Columns[5].Width = 20;
+
+            guna2DataGridView17.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView17.GridColor = Color.Black;
+            guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView17.Columns[5].Width = 20;
+
+            guna2DataGridView18.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView18.GridColor = Color.Black;
+            guna2DataGridView18.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView18.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView18.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView18.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView18.Columns[5].Width = 20;
+
+            guna2DataGridView19.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView19.GridColor = Color.Black;
+            guna2DataGridView19.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView19.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView19.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView19.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView19.Columns[5].Width = 20;
+
+            guna2DataGridView20.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView20.GridColor = Color.Black;
+            guna2DataGridView20.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView20.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView20.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView20.RowTemplate.DefaultCellStyle.ForeColor;
+            guna2DataGridView20.Columns[5].Width = 20;
+
+            while (guna2DataGridView13.Rows.Count < 5)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView13.Rows.Add(row);
+            }
+
+            while (guna2DataGridView15.Rows.Count < 5)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView15.Rows.Add(row);
+            }
+
+            while (guna2DataGridView16.Rows.Count < 5)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView16.Rows.Add(row);
+            }
+
+            while (guna2DataGridView17.Rows.Count < 5)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView17.Rows.Add(row);
+            }
+
+            while (guna2DataGridView18.Rows.Count < 5)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView18.Rows.Add(row);
+            }
+
+            while (guna2DataGridView19.Rows.Count < 5)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView19.Rows.Add(row);
+            }
+
+            while (guna2DataGridView20.Rows.Count < 5)
+            {
+                Guna2DataGridView row = new Guna2DataGridView();
+                guna2DataGridView20.Rows.Add(row);
+            }
+
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 8;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 5;
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 8;
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 5;
+        }
+
+        private void ClearSelection()
+        {
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+        }
+        private void guna2DataGridView13_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+            selectedRow = e.RowIndex;
+            selectedColumn = e.ColumnIndex;
+            selectedchart = "guna2DataGridView13";
+        }
     }
 
 
-    //finalcoding
 
-    //private void TableLayoutFill()
-    //{
-
-    //}
 }
 
