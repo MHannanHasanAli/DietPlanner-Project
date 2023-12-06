@@ -336,16 +336,6 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.ChooseBtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView12 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.mealiddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealardgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mealendgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caloriesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proteinmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatsmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carbohydratesmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calciummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fibermaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodiummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupcen = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupcar = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupnen = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -406,22 +396,11 @@
             this.VIew = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dpiddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dietnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.panel19 = new System.Windows.Forms.Panel();
             this.day7 = new System.Windows.Forms.Panel();
             this.label107 = new System.Windows.Forms.Label();
             this.guna2DataGridView20 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action7 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.contextMenuStrip7 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
@@ -429,12 +408,6 @@
             this.day6 = new System.Windows.Forms.Panel();
             this.label106 = new System.Windows.Forms.Label();
             this.guna2DataGridView19 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.contextMenuStrip6 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
@@ -442,12 +415,6 @@
             this.day5 = new System.Windows.Forms.Panel();
             this.label105 = new System.Windows.Forms.Label();
             this.guna2DataGridView18 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
@@ -455,12 +422,6 @@
             this.day4 = new System.Windows.Forms.Panel();
             this.label104 = new System.Windows.Forms.Label();
             this.guna2DataGridView17 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action4 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
@@ -470,23 +431,11 @@
             this.day2 = new System.Windows.Forms.Panel();
             this.label102 = new System.Windows.Forms.Label();
             this.guna2DataGridView16 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action3 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2DataGridView15 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -498,12 +447,6 @@
             this.day1 = new System.Windows.Forms.Panel();
             this.label101 = new System.Windows.Forms.Label();
             this.guna2DataGridView13 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.action1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -514,6 +457,63 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action4 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action7 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dpiddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dietnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealiddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealardgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mealendgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caloriesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proteinmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatsmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carbohydratesmaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calciummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fibermaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodiummaindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -3645,68 +3645,6 @@
             this.guna2DataGridView12.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView12.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView12_CellClick);
             // 
-            // mealiddgv
-            // 
-            resources.ApplyResources(this.mealiddgv, "mealiddgv");
-            this.mealiddgv.Name = "mealiddgv";
-            this.mealiddgv.ReadOnly = true;
-            // 
-            // mealardgv
-            // 
-            this.mealardgv.FillWeight = 180F;
-            resources.ApplyResources(this.mealardgv, "mealardgv");
-            this.mealardgv.Name = "mealardgv";
-            this.mealardgv.ReadOnly = true;
-            // 
-            // mealendgv
-            // 
-            this.mealendgv.FillWeight = 480F;
-            resources.ApplyResources(this.mealendgv, "mealendgv");
-            this.mealendgv.Name = "mealendgv";
-            this.mealendgv.ReadOnly = true;
-            // 
-            // caloriesdgv
-            // 
-            resources.ApplyResources(this.caloriesdgv, "caloriesdgv");
-            this.caloriesdgv.Name = "caloriesdgv";
-            this.caloriesdgv.ReadOnly = true;
-            // 
-            // proteinmaindgv
-            // 
-            resources.ApplyResources(this.proteinmaindgv, "proteinmaindgv");
-            this.proteinmaindgv.Name = "proteinmaindgv";
-            this.proteinmaindgv.ReadOnly = true;
-            // 
-            // fatsmaindgv
-            // 
-            resources.ApplyResources(this.fatsmaindgv, "fatsmaindgv");
-            this.fatsmaindgv.Name = "fatsmaindgv";
-            this.fatsmaindgv.ReadOnly = true;
-            // 
-            // carbohydratesmaindgv
-            // 
-            resources.ApplyResources(this.carbohydratesmaindgv, "carbohydratesmaindgv");
-            this.carbohydratesmaindgv.Name = "carbohydratesmaindgv";
-            this.carbohydratesmaindgv.ReadOnly = true;
-            // 
-            // calciummaindgv
-            // 
-            resources.ApplyResources(this.calciummaindgv, "calciummaindgv");
-            this.calciummaindgv.Name = "calciummaindgv";
-            this.calciummaindgv.ReadOnly = true;
-            // 
-            // fibermaindgv
-            // 
-            resources.ApplyResources(this.fibermaindgv, "fibermaindgv");
-            this.fibermaindgv.Name = "fibermaindgv";
-            this.fibermaindgv.ReadOnly = true;
-            // 
-            // sodiummaindgv
-            // 
-            resources.ApplyResources(this.sodiummaindgv, "sodiummaindgv");
-            this.sodiummaindgv.Name = "sodiummaindgv";
-            this.sodiummaindgv.ReadOnly = true;
-            // 
             // groupcen
             // 
             this.groupcen.BackColor = System.Drawing.Color.Transparent;
@@ -4484,36 +4422,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // dpiddgv
-            // 
-            resources.ApplyResources(this.dpiddgv, "dpiddgv");
-            this.dpiddgv.Name = "dpiddgv";
-            this.dpiddgv.ReadOnly = true;
-            // 
-            // filenodgv
-            // 
-            resources.ApplyResources(this.filenodgv, "filenodgv");
-            this.filenodgv.Name = "filenodgv";
-            this.filenodgv.ReadOnly = true;
-            // 
-            // namedgv
-            // 
-            resources.ApplyResources(this.namedgv, "namedgv");
-            this.namedgv.Name = "namedgv";
-            this.namedgv.ReadOnly = true;
-            // 
-            // agedgv
-            // 
-            resources.ApplyResources(this.agedgv, "agedgv");
-            this.agedgv.Name = "agedgv";
-            this.agedgv.ReadOnly = true;
-            // 
-            // dietnamedgv
-            // 
-            resources.ApplyResources(this.dietnamedgv, "dietnamedgv");
-            this.dietnamedgv.Name = "dietnamedgv";
-            this.dietnamedgv.ReadOnly = true;
-            // 
             // tabPage9
             // 
             this.tabPage9.Controls.Add(this.panel19);
@@ -4639,57 +4547,6 @@
             this.guna2DataGridView20.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView20_CellClick);
             this.guna2DataGridView20.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView20_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn43
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn43, "dataGridViewTextBoxColumn43");
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            this.dataGridViewTextBoxColumn43.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            this.dataGridViewTextBoxColumn44.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn44, "dataGridViewTextBoxColumn44");
-            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
-            this.dataGridViewTextBoxColumn44.ReadOnly = true;
-            this.dataGridViewTextBoxColumn44.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn44.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            this.dataGridViewTextBoxColumn45.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
-            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
-            this.dataGridViewTextBoxColumn45.ReadOnly = true;
-            this.dataGridViewTextBoxColumn45.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn45.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn46
-            // 
-            this.dataGridViewTextBoxColumn46.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn46, "dataGridViewTextBoxColumn46");
-            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
-            this.dataGridViewTextBoxColumn46.ReadOnly = true;
-            this.dataGridViewTextBoxColumn46.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn46.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn47
-            // 
-            this.dataGridViewTextBoxColumn47.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn47, "dataGridViewTextBoxColumn47");
-            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
-            this.dataGridViewTextBoxColumn47.ReadOnly = true;
-            this.dataGridViewTextBoxColumn47.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn47.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // action7
-            // 
-            this.action7.FillWeight = 102.5455F;
-            resources.ApplyResources(this.action7, "action7");
-            this.action7.Name = "action7";
-            this.action7.ReadOnly = true;
-            this.action7.Text = "X";
-            this.action7.UseColumnTextForButtonValue = true;
-            // 
             // contextMenuStrip7
             // 
             this.contextMenuStrip7.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -4811,57 +4668,6 @@
             this.guna2DataGridView19.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView19.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView19_CellClick);
             this.guna2DataGridView19.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView19_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn38, "dataGridViewTextBoxColumn38");
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            this.dataGridViewTextBoxColumn38.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn39, "dataGridViewTextBoxColumn39");
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            this.dataGridViewTextBoxColumn39.ReadOnly = true;
-            this.dataGridViewTextBoxColumn39.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn40, "dataGridViewTextBoxColumn40");
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            this.dataGridViewTextBoxColumn40.ReadOnly = true;
-            this.dataGridViewTextBoxColumn40.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn40.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            this.dataGridViewTextBoxColumn41.ReadOnly = true;
-            this.dataGridViewTextBoxColumn41.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn41.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            this.dataGridViewTextBoxColumn42.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn42, "dataGridViewTextBoxColumn42");
-            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
-            this.dataGridViewTextBoxColumn42.ReadOnly = true;
-            this.dataGridViewTextBoxColumn42.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn42.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // action6
-            // 
-            this.action6.FillWeight = 102.5455F;
-            resources.ApplyResources(this.action6, "action6");
-            this.action6.Name = "action6";
-            this.action6.ReadOnly = true;
-            this.action6.Text = "X";
-            this.action6.UseColumnTextForButtonValue = true;
             // 
             // contextMenuStrip6
             // 
@@ -4985,57 +4791,6 @@
             this.guna2DataGridView18.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView18_CellClick);
             this.guna2DataGridView18.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView18_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn33
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn33, "dataGridViewTextBoxColumn33");
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn34, "dataGridViewTextBoxColumn34");
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            this.dataGridViewTextBoxColumn34.ReadOnly = true;
-            this.dataGridViewTextBoxColumn34.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn35, "dataGridViewTextBoxColumn35");
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            this.dataGridViewTextBoxColumn35.ReadOnly = true;
-            this.dataGridViewTextBoxColumn35.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn36, "dataGridViewTextBoxColumn36");
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            this.dataGridViewTextBoxColumn36.ReadOnly = true;
-            this.dataGridViewTextBoxColumn36.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn37, "dataGridViewTextBoxColumn37");
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            this.dataGridViewTextBoxColumn37.ReadOnly = true;
-            this.dataGridViewTextBoxColumn37.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn37.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // action5
-            // 
-            this.action5.FillWeight = 102.5455F;
-            resources.ApplyResources(this.action5, "action5");
-            this.action5.Name = "action5";
-            this.action5.ReadOnly = true;
-            this.action5.Text = "X";
-            this.action5.UseColumnTextForButtonValue = true;
-            // 
             // contextMenuStrip5
             // 
             this.contextMenuStrip5.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -5157,57 +4912,6 @@
             this.guna2DataGridView17.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView17.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView17_CellClick);
             this.guna2DataGridView17.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView17_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn28, "dataGridViewTextBoxColumn28");
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn29, "dataGridViewTextBoxColumn29");
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
-            this.dataGridViewTextBoxColumn29.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn30
-            // 
-            this.dataGridViewTextBoxColumn30.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn30, "dataGridViewTextBoxColumn30");
-            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
-            this.dataGridViewTextBoxColumn30.ReadOnly = true;
-            this.dataGridViewTextBoxColumn30.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this.dataGridViewTextBoxColumn31.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn31, "dataGridViewTextBoxColumn31");
-            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
-            this.dataGridViewTextBoxColumn31.ReadOnly = true;
-            this.dataGridViewTextBoxColumn31.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn31.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this.dataGridViewTextBoxColumn32.FillWeight = 76.36363F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn32, "dataGridViewTextBoxColumn32");
-            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
-            this.dataGridViewTextBoxColumn32.ReadOnly = true;
-            this.dataGridViewTextBoxColumn32.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn32.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // action4
-            // 
-            this.action4.FillWeight = 102.5455F;
-            resources.ApplyResources(this.action4, "action4");
-            this.action4.Name = "action4";
-            this.action4.ReadOnly = true;
-            this.action4.Text = "X";
-            this.action4.UseColumnTextForButtonValue = true;
             // 
             // contextMenuStrip4
             // 
@@ -5345,58 +5049,6 @@
             this.guna2DataGridView16.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView16_CellClick);
             this.guna2DataGridView16.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView16_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.FillWeight = 8F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn23, "dataGridViewTextBoxColumn23");
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.FillWeight = 32.09855F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn24, "dataGridViewTextBoxColumn24");
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
-            this.dataGridViewTextBoxColumn24.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.FillWeight = 32.09855F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn25, "dataGridViewTextBoxColumn25");
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
-            this.dataGridViewTextBoxColumn25.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.FillWeight = 32.09855F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn26, "dataGridViewTextBoxColumn26");
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            this.dataGridViewTextBoxColumn26.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.FillWeight = 32.09855F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn27, "dataGridViewTextBoxColumn27");
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            this.dataGridViewTextBoxColumn27.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // action3
-            // 
-            this.action3.FillWeight = 8F;
-            resources.ApplyResources(this.action3, "action3");
-            this.action3.Name = "action3";
-            this.action3.ReadOnly = true;
-            this.action3.Text = "X";
-            this.action3.UseColumnTextForButtonValue = true;
-            // 
             // contextMenuStrip3
             // 
             this.contextMenuStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -5504,57 +5156,6 @@
             this.guna2DataGridView15.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView15.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView15_CellClick);
             this.guna2DataGridView15.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView15_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.FillWeight = 45.41986F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.FillWeight = 45.41986F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            this.dataGridViewTextBoxColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.FillWeight = 45.41986F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            this.dataGridViewTextBoxColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.FillWeight = 45.41986F;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn22, "dataGridViewTextBoxColumn22");
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            this.dataGridViewTextBoxColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // action2
-            // 
-            this.action2.FillWeight = 8F;
-            resources.ApplyResources(this.action2, "action2");
-            this.action2.Name = "action2";
-            this.action2.ReadOnly = true;
-            this.action2.Text = "X";
-            this.action2.UseColumnTextForButtonValue = true;
             // 
             // contextMenuStrip1
             // 
@@ -5722,57 +5323,6 @@
             this.guna2DataGridView13.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView13_CellClick);
             this.guna2DataGridView13.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView13_CellContentClick);
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewComboBoxColumn33
-            // 
-            this.dataGridViewComboBoxColumn33.FillWeight = 20.61458F;
-            resources.ApplyResources(this.dataGridViewComboBoxColumn33, "dataGridViewComboBoxColumn33");
-            this.dataGridViewComboBoxColumn33.Name = "dataGridViewComboBoxColumn33";
-            this.dataGridViewComboBoxColumn33.ReadOnly = true;
-            this.dataGridViewComboBoxColumn33.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewComboBoxColumn41
-            // 
-            this.dataGridViewComboBoxColumn41.FillWeight = 20.61458F;
-            resources.ApplyResources(this.dataGridViewComboBoxColumn41, "dataGridViewComboBoxColumn41");
-            this.dataGridViewComboBoxColumn41.Name = "dataGridViewComboBoxColumn41";
-            this.dataGridViewComboBoxColumn41.ReadOnly = true;
-            this.dataGridViewComboBoxColumn41.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn41.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewComboBoxColumn49
-            // 
-            this.dataGridViewComboBoxColumn49.FillWeight = 20.61458F;
-            resources.ApplyResources(this.dataGridViewComboBoxColumn49, "dataGridViewComboBoxColumn49");
-            this.dataGridViewComboBoxColumn49.Name = "dataGridViewComboBoxColumn49";
-            this.dataGridViewComboBoxColumn49.ReadOnly = true;
-            this.dataGridViewComboBoxColumn49.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn49.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewComboBoxColumn57
-            // 
-            this.dataGridViewComboBoxColumn57.FillWeight = 20.61458F;
-            resources.ApplyResources(this.dataGridViewComboBoxColumn57, "dataGridViewComboBoxColumn57");
-            this.dataGridViewComboBoxColumn57.Name = "dataGridViewComboBoxColumn57";
-            this.dataGridViewComboBoxColumn57.ReadOnly = true;
-            this.dataGridViewComboBoxColumn57.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn57.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // action1
-            // 
-            this.action1.FillWeight = 8F;
-            resources.ApplyResources(this.action1, "action1");
-            this.action1.Name = "action1";
-            this.action1.ReadOnly = true;
-            this.action1.Text = "X";
-            this.action1.UseColumnTextForButtonValue = true;
-            // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -5905,6 +5455,482 @@
             this.dataGridViewTextBoxColumn20.ReadOnly = true;
             this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewComboBoxColumn33
+            // 
+            this.dataGridViewComboBoxColumn33.FillWeight = 20.61458F;
+            resources.ApplyResources(this.dataGridViewComboBoxColumn33, "dataGridViewComboBoxColumn33");
+            this.dataGridViewComboBoxColumn33.Name = "dataGridViewComboBoxColumn33";
+            this.dataGridViewComboBoxColumn33.ReadOnly = true;
+            this.dataGridViewComboBoxColumn33.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewComboBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewComboBoxColumn41
+            // 
+            this.dataGridViewComboBoxColumn41.FillWeight = 20.61458F;
+            resources.ApplyResources(this.dataGridViewComboBoxColumn41, "dataGridViewComboBoxColumn41");
+            this.dataGridViewComboBoxColumn41.Name = "dataGridViewComboBoxColumn41";
+            this.dataGridViewComboBoxColumn41.ReadOnly = true;
+            this.dataGridViewComboBoxColumn41.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewComboBoxColumn41.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewComboBoxColumn49
+            // 
+            this.dataGridViewComboBoxColumn49.FillWeight = 20.61458F;
+            resources.ApplyResources(this.dataGridViewComboBoxColumn49, "dataGridViewComboBoxColumn49");
+            this.dataGridViewComboBoxColumn49.Name = "dataGridViewComboBoxColumn49";
+            this.dataGridViewComboBoxColumn49.ReadOnly = true;
+            this.dataGridViewComboBoxColumn49.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewComboBoxColumn49.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewComboBoxColumn57
+            // 
+            this.dataGridViewComboBoxColumn57.FillWeight = 20.61458F;
+            resources.ApplyResources(this.dataGridViewComboBoxColumn57, "dataGridViewComboBoxColumn57");
+            this.dataGridViewComboBoxColumn57.Name = "dataGridViewComboBoxColumn57";
+            this.dataGridViewComboBoxColumn57.ReadOnly = true;
+            this.dataGridViewComboBoxColumn57.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewComboBoxColumn57.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // action1
+            // 
+            this.action1.FillWeight = 8F;
+            resources.ApplyResources(this.action1, "action1");
+            this.action1.Name = "action1";
+            this.action1.ReadOnly = true;
+            this.action1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.action1.Text = "X";
+            this.action1.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.FillWeight = 45.41986F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.FillWeight = 45.41986F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.FillWeight = 45.41986F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            this.dataGridViewTextBoxColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.FillWeight = 45.41986F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn22, "dataGridViewTextBoxColumn22");
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // action2
+            // 
+            this.action2.FillWeight = 8F;
+            resources.ApplyResources(this.action2, "action2");
+            this.action2.Name = "action2";
+            this.action2.ReadOnly = true;
+            this.action2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.action2.Text = "X";
+            this.action2.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.FillWeight = 8F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn23, "dataGridViewTextBoxColumn23");
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.dataGridViewTextBoxColumn23.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.FillWeight = 32.09855F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn24, "dataGridViewTextBoxColumn24");
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            this.dataGridViewTextBoxColumn24.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.FillWeight = 32.09855F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn25, "dataGridViewTextBoxColumn25");
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            this.dataGridViewTextBoxColumn25.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.FillWeight = 32.09855F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn26, "dataGridViewTextBoxColumn26");
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            this.dataGridViewTextBoxColumn26.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.FillWeight = 32.09855F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn27, "dataGridViewTextBoxColumn27");
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            this.dataGridViewTextBoxColumn27.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // action3
+            // 
+            this.action3.FillWeight = 8F;
+            resources.ApplyResources(this.action3, "action3");
+            this.action3.Name = "action3";
+            this.action3.ReadOnly = true;
+            this.action3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.action3.Text = "X";
+            this.action3.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn28, "dataGridViewTextBoxColumn28");
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            this.dataGridViewTextBoxColumn28.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn29, "dataGridViewTextBoxColumn29");
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            this.dataGridViewTextBoxColumn29.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn30, "dataGridViewTextBoxColumn30");
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            this.dataGridViewTextBoxColumn30.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn31, "dataGridViewTextBoxColumn31");
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            this.dataGridViewTextBoxColumn31.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn31.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn32, "dataGridViewTextBoxColumn32");
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            this.dataGridViewTextBoxColumn32.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn32.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // action4
+            // 
+            this.action4.FillWeight = 102.5455F;
+            resources.ApplyResources(this.action4, "action4");
+            this.action4.Name = "action4";
+            this.action4.ReadOnly = true;
+            this.action4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.action4.Text = "X";
+            this.action4.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn33, "dataGridViewTextBoxColumn33");
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            this.dataGridViewTextBoxColumn33.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn34, "dataGridViewTextBoxColumn34");
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            this.dataGridViewTextBoxColumn34.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn35, "dataGridViewTextBoxColumn35");
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            this.dataGridViewTextBoxColumn35.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn36, "dataGridViewTextBoxColumn36");
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            this.dataGridViewTextBoxColumn36.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn37, "dataGridViewTextBoxColumn37");
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.ReadOnly = true;
+            this.dataGridViewTextBoxColumn37.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn37.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // action5
+            // 
+            this.action5.FillWeight = 102.5455F;
+            resources.ApplyResources(this.action5, "action5");
+            this.action5.Name = "action5";
+            this.action5.ReadOnly = true;
+            this.action5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.action5.Text = "X";
+            this.action5.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn38, "dataGridViewTextBoxColumn38");
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            this.dataGridViewTextBoxColumn38.ReadOnly = true;
+            this.dataGridViewTextBoxColumn38.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn39, "dataGridViewTextBoxColumn39");
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            this.dataGridViewTextBoxColumn39.ReadOnly = true;
+            this.dataGridViewTextBoxColumn39.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn40, "dataGridViewTextBoxColumn40");
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.ReadOnly = true;
+            this.dataGridViewTextBoxColumn40.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn40.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn41, "dataGridViewTextBoxColumn41");
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            this.dataGridViewTextBoxColumn41.ReadOnly = true;
+            this.dataGridViewTextBoxColumn41.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn41.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn42, "dataGridViewTextBoxColumn42");
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            this.dataGridViewTextBoxColumn42.ReadOnly = true;
+            this.dataGridViewTextBoxColumn42.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn42.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // action6
+            // 
+            this.action6.FillWeight = 102.5455F;
+            resources.ApplyResources(this.action6, "action6");
+            this.action6.Name = "action6";
+            this.action6.ReadOnly = true;
+            this.action6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.action6.Text = "X";
+            this.action6.UseColumnTextForButtonValue = true;
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            resources.ApplyResources(this.dataGridViewTextBoxColumn43, "dataGridViewTextBoxColumn43");
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            this.dataGridViewTextBoxColumn43.ReadOnly = true;
+            this.dataGridViewTextBoxColumn43.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn44, "dataGridViewTextBoxColumn44");
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            this.dataGridViewTextBoxColumn44.ReadOnly = true;
+            this.dataGridViewTextBoxColumn44.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn44.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn45, "dataGridViewTextBoxColumn45");
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            this.dataGridViewTextBoxColumn45.ReadOnly = true;
+            this.dataGridViewTextBoxColumn45.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn45.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn46, "dataGridViewTextBoxColumn46");
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.ReadOnly = true;
+            this.dataGridViewTextBoxColumn46.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn46.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.FillWeight = 76.36363F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn47, "dataGridViewTextBoxColumn47");
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.ReadOnly = true;
+            this.dataGridViewTextBoxColumn47.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn47.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // action7
+            // 
+            this.action7.FillWeight = 102.5455F;
+            resources.ApplyResources(this.action7, "action7");
+            this.action7.Name = "action7";
+            this.action7.ReadOnly = true;
+            this.action7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.action7.Text = "X";
+            this.action7.UseColumnTextForButtonValue = true;
+            // 
+            // dpiddgv
+            // 
+            resources.ApplyResources(this.dpiddgv, "dpiddgv");
+            this.dpiddgv.Name = "dpiddgv";
+            this.dpiddgv.ReadOnly = true;
+            this.dpiddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // filenodgv
+            // 
+            resources.ApplyResources(this.filenodgv, "filenodgv");
+            this.filenodgv.Name = "filenodgv";
+            this.filenodgv.ReadOnly = true;
+            this.filenodgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // namedgv
+            // 
+            resources.ApplyResources(this.namedgv, "namedgv");
+            this.namedgv.Name = "namedgv";
+            this.namedgv.ReadOnly = true;
+            this.namedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // agedgv
+            // 
+            resources.ApplyResources(this.agedgv, "agedgv");
+            this.agedgv.Name = "agedgv";
+            this.agedgv.ReadOnly = true;
+            this.agedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dietnamedgv
+            // 
+            resources.ApplyResources(this.dietnamedgv, "dietnamedgv");
+            this.dietnamedgv.Name = "dietnamedgv";
+            this.dietnamedgv.ReadOnly = true;
+            this.dietnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // mealiddgv
+            // 
+            resources.ApplyResources(this.mealiddgv, "mealiddgv");
+            this.mealiddgv.Name = "mealiddgv";
+            this.mealiddgv.ReadOnly = true;
+            this.mealiddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // mealardgv
+            // 
+            this.mealardgv.FillWeight = 180F;
+            resources.ApplyResources(this.mealardgv, "mealardgv");
+            this.mealardgv.Name = "mealardgv";
+            this.mealardgv.ReadOnly = true;
+            this.mealardgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // mealendgv
+            // 
+            this.mealendgv.FillWeight = 480F;
+            resources.ApplyResources(this.mealendgv, "mealendgv");
+            this.mealendgv.Name = "mealendgv";
+            this.mealendgv.ReadOnly = true;
+            this.mealendgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // caloriesdgv
+            // 
+            resources.ApplyResources(this.caloriesdgv, "caloriesdgv");
+            this.caloriesdgv.Name = "caloriesdgv";
+            this.caloriesdgv.ReadOnly = true;
+            this.caloriesdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // proteinmaindgv
+            // 
+            resources.ApplyResources(this.proteinmaindgv, "proteinmaindgv");
+            this.proteinmaindgv.Name = "proteinmaindgv";
+            this.proteinmaindgv.ReadOnly = true;
+            this.proteinmaindgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // fatsmaindgv
+            // 
+            resources.ApplyResources(this.fatsmaindgv, "fatsmaindgv");
+            this.fatsmaindgv.Name = "fatsmaindgv";
+            this.fatsmaindgv.ReadOnly = true;
+            this.fatsmaindgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // carbohydratesmaindgv
+            // 
+            resources.ApplyResources(this.carbohydratesmaindgv, "carbohydratesmaindgv");
+            this.carbohydratesmaindgv.Name = "carbohydratesmaindgv";
+            this.carbohydratesmaindgv.ReadOnly = true;
+            this.carbohydratesmaindgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // calciummaindgv
+            // 
+            resources.ApplyResources(this.calciummaindgv, "calciummaindgv");
+            this.calciummaindgv.Name = "calciummaindgv";
+            this.calciummaindgv.ReadOnly = true;
+            // 
+            // fibermaindgv
+            // 
+            resources.ApplyResources(this.fibermaindgv, "fibermaindgv");
+            this.fibermaindgv.Name = "fibermaindgv";
+            this.fibermaindgv.ReadOnly = true;
+            // 
+            // sodiummaindgv
+            // 
+            resources.ApplyResources(this.sodiummaindgv, "sodiummaindgv");
+            this.sodiummaindgv.Name = "sodiummaindgv";
+            this.sodiummaindgv.ReadOnly = true;
             // 
             // DietPlan
             // 
@@ -6349,18 +6375,27 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewButtonColumn action2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn49;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn57;
-        private System.Windows.Forms.DataGridViewButtonColumn action1;
+        private System.Windows.Forms.TextBox medicalhistoryn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mealiddgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mealardgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mealendgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caloriesdgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proteinmaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fatsmaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carbohydratesmaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calciummaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fibermaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sodiummaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dpiddgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn filenodgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namedgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn agedgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dietnamedgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
@@ -6391,26 +6426,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.DataGridViewButtonColumn action3;
-        private System.Windows.Forms.TextBox medicalhistoryn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dpiddgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn filenodgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namedgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn agedgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dietnamedgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealiddgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealardgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mealendgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn caloriesdgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn proteinmaindgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fatsmaindgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn carbohydratesmaindgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calciummaindgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fibermaindgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sodiummaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewButtonColumn action2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewComboBoxColumn57;
+        private System.Windows.Forms.DataGridViewButtonColumn action1;
     }
 }
