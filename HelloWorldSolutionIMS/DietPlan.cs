@@ -87,10 +87,10 @@ namespace HelloWorldSolutionIMS
                     previousdietplannew.Text = PreviousPlan;
                     MealsFetcher();
                     NewSave.Enabled = true;
-                    breakfastrow.Enabled = true;
-                    lunchrow.Enabled = true;
-                    dinnerrow.Enabled = true;
-                    snackrow.Enabled = true;
+
+
+
+
                     edit = 1;
                     NewSave.Text = "Update Plan";
                     //tabControl1.SelectedIndex = 1;
@@ -6822,288 +6822,6 @@ namespace HelloWorldSolutionIMS
         }
 
         //New Coding//
-        private void NewTabRowsFill()
-        {
-            guna2DataGridView7.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView7.GridColor = Color.Black;
-            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.BackColor;
-            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.ForeColor;
-
-            guna2DataGridView8.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView8.GridColor = Color.Black;
-            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView8.RowTemplate.DefaultCellStyle.BackColor;
-            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView8.RowTemplate.DefaultCellStyle.ForeColor;
-
-            guna2DataGridView9.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView9.GridColor = Color.Black;
-            guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView9.RowTemplate.DefaultCellStyle.BackColor;
-            guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView9.RowTemplate.DefaultCellStyle.ForeColor;
-
-            guna2DataGridView10.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView10.GridColor = Color.Black;
-            guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView10.RowTemplate.DefaultCellStyle.BackColor;
-            guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView10.RowTemplate.DefaultCellStyle.ForeColor;
-
-            guna2DataGridView12.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView12.GridColor = Color.Black;
-            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView12.RowTemplate.DefaultCellStyle.BackColor;
-            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView12.RowTemplate.DefaultCellStyle.ForeColor;
-
-            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView1.GridColor = Color.Black;
-            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
-            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
-
-            while (guna2DataGridView7.Rows.Count < 3)
-            {
-                Guna2DataGridView row = new Guna2DataGridView();
-                guna2DataGridView7.Rows.Add(row);
-            }
-
-            while (guna2DataGridView8.Rows.Count < 3)
-            {
-                Guna2DataGridView row = new Guna2DataGridView();
-                guna2DataGridView8.Rows.Add(row);
-
-            }
-
-            while (guna2DataGridView9.Rows.Count < 3)
-            {
-                Guna2DataGridView row = new Guna2DataGridView();
-                guna2DataGridView9.Rows.Add(row);
-
-            }
-
-            while (guna2DataGridView10.Rows.Count < 3)
-            {
-                Guna2DataGridView row = new Guna2DataGridView();
-                guna2DataGridView10.Rows.Add(row);
-
-            }
-
-            guna2DataGridView7.ClearSelection();
-            guna2DataGridView8.ClearSelection();
-            guna2DataGridView9.ClearSelection();
-            guna2DataGridView10.ClearSelection();
-        }
-
-        private void guna2DataGridView7_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            guna2DataGridView8.ClearSelection();
-            guna2DataGridView9.ClearSelection();
-            guna2DataGridView10.ClearSelection();
-            selectedRow = e.RowIndex;
-            selectedColumn = e.ColumnIndex;
-            selectedchart = "guna2DataGridView7";
-        }
-
-        private void guna2DataGridView10_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            guna2DataGridView8.ClearSelection();
-            guna2DataGridView9.ClearSelection();
-            guna2DataGridView7.ClearSelection();
-            selectedRow = e.RowIndex;
-            selectedColumn = e.ColumnIndex;
-            selectedchart = "guna2DataGridView10";
-        }
-
-        private void guna2DataGridView9_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            guna2DataGridView8.ClearSelection();
-            guna2DataGridView10.ClearSelection();
-            guna2DataGridView7.ClearSelection();
-            selectedRow = e.RowIndex;
-            selectedColumn = e.ColumnIndex;
-            selectedchart = "guna2DataGridView9";
-        }
-
-        private void guna2DataGridView8_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            guna2DataGridView10.ClearSelection();
-            guna2DataGridView9.ClearSelection();
-            guna2DataGridView7.ClearSelection();
-            selectedRow = e.RowIndex;
-            selectedColumn = e.ColumnIndex;
-            selectedchart = "guna2DataGridView8";
-        }
-
-        private void guna2DataGridView7_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == guna2DataGridView7.Columns["Breakfastaction"].Index && e.RowIndex >= 0)
-            {
-
-                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
-
-                int call = -1;
-                foreach (var item in artificialMappings)
-                {
-                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView7")
-                    {
-                        ChartSubtract(item.ID.ToString());
-                        ArtificialMapping deleteitem = new ArtificialMapping();
-                        deleteitem.Row = item.Row;
-                        deleteitem.Col = item.Col;
-                        deleteitem.ChartName = item.ChartName;
-                        deleteitem.ID = item.ID;
-                        removelist.Add(deleteitem);
-                        call = 1;
-                    }
-                }
-                if (call == 1)
-                {
-
-                    foreach (var item in removelist)
-                    {
-                        if (item.ChartName == "guna2DataGridView7")
-                        {
-                            guna2DataGridView7.Rows[item.Row].Cells[item.Col].Value = "";
-
-                        }
-
-                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
-
-
-                    }
-                    removelist.Clear();
-
-                }
-                guna2DataGridView7.Rows.RemoveAt(e.RowIndex);
-                CheckRows(guna2DataGridView7);
-            }
-        }
-
-        private void guna2DataGridView10_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == guna2DataGridView10.Columns["Lunchaction"].Index && e.RowIndex >= 0)
-            {
-                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
-
-                int call = -1;
-                foreach (var item in artificialMappings)
-                {
-                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView10")
-                    {
-                        ChartSubtract(item.ID.ToString());
-                        ArtificialMapping deleteitem = new ArtificialMapping();
-                        deleteitem.Row = item.Row;
-                        deleteitem.Col = item.Col;
-                        deleteitem.ChartName = item.ChartName;
-                        deleteitem.ID = item.ID;
-                        removelist.Add(deleteitem);
-                        call = 1;
-                    }
-                }
-                if (call == 1)
-                {
-
-                    foreach (var item in removelist)
-                    {
-                        if (item.ChartName == "guna2DataGridView10")
-                        {
-                            guna2DataGridView10.Rows[item.Row].Cells[item.Col].Value = "";
-
-                        }
-
-                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
-
-
-                    }
-                    removelist.Clear();
-
-                }
-                guna2DataGridView10.Rows.RemoveAt(e.RowIndex);
-                CheckRows(guna2DataGridView10);
-            }
-        }
-
-        private void guna2DataGridView9_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == guna2DataGridView9.Columns["Dinneraction"].Index && e.RowIndex >= 0)
-            {
-                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
-
-                int call = -1;
-                foreach (var item in artificialMappings)
-                {
-                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView9")
-                    {
-                        ChartSubtract(item.ID.ToString());
-                        ArtificialMapping deleteitem = new ArtificialMapping();
-                        deleteitem.Row = item.Row;
-                        deleteitem.Col = item.Col;
-                        deleteitem.ChartName = item.ChartName;
-                        deleteitem.ID = item.ID;
-                        removelist.Add(deleteitem);
-                        call = 1;
-                    }
-                }
-                if (call == 1)
-                {
-
-                    foreach (var item in removelist)
-                    {
-                        if (item.ChartName == "guna2DataGridView9")
-                        {
-                            guna2DataGridView9.Rows[item.Row].Cells[item.Col].Value = "";
-
-                        }
-
-                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
-
-
-                    }
-                    removelist.Clear();
-
-                }
-
-                guna2DataGridView9.Rows.RemoveAt(e.RowIndex);
-                CheckRows(guna2DataGridView9);
-            }
-        }
-
-        private void guna2DataGridView8_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == guna2DataGridView8.Columns["Snackaction"].Index && e.RowIndex >= 0)
-            {
-                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
-
-                int call = -1;
-                foreach (var item in artificialMappings)
-                {
-                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView8")
-                    {
-                        ChartSubtract(item.ID.ToString());
-                        ArtificialMapping deleteitem = new ArtificialMapping();
-                        deleteitem.Row = item.Row;
-                        deleteitem.Col = item.Col;
-                        deleteitem.ChartName = item.ChartName;
-                        deleteitem.ID = item.ID;
-                        removelist.Add(deleteitem);
-                        call = 1;
-                    }
-                }
-                if (call == 1)
-                {
-
-                    foreach (var item in removelist)
-                    {
-                        if (item.ChartName == "guna2DataGridView8")
-                        {
-                            guna2DataGridView8.Rows[item.Row].Cells[item.Col].Value = "";
-
-                        }
-
-                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
-
-
-                    }
-                    removelist.Clear();
-
-                }
-                guna2DataGridView8.Rows.RemoveAt(e.RowIndex);
-                CheckRows(guna2DataGridView8);
-            }
-        }
 
         private void CheckRows(Guna2DataGridView table)
         {
@@ -7114,59 +6832,7 @@ namespace HelloWorldSolutionIMS
             }
         }
 
-        private void guna2Button7_Click(object sender, EventArgs e)
-        {
-            if (guna2DataGridView7.RowCount == 6)
-            {
-                MessageBox.Show("Cannot exceed more than 6 meals in breakfast");
-            }
-            else
-            {
-                Guna2DataGridView row = new Guna2DataGridView();
-                guna2DataGridView7.Rows.Add(row);
-            }
 
-
-        }
-
-        private void guna2Button10_Click(object sender, EventArgs e)
-        {
-            if (guna2DataGridView10.RowCount == 6)
-            {
-                MessageBox.Show("Cannot exceed more than 6 meals in lunch");
-            }
-            else
-            {
-                Guna2DataGridView row = new Guna2DataGridView();
-                guna2DataGridView10.Rows.Add(row);
-            }
-        }
-
-        private void guna2Button9_Click(object sender, EventArgs e)
-        {
-            if (guna2DataGridView9.RowCount == 6)
-            {
-                MessageBox.Show("Cannot exceed more than 6 meals in dinner");
-            }
-            else
-            {
-                Guna2DataGridView row = new Guna2DataGridView();
-                guna2DataGridView9.Rows.Add(row);
-            }
-        }
-
-        private void guna2Button8_Click(object sender, EventArgs e)
-        {
-            if (guna2DataGridView8.RowCount == 6)
-            {
-                MessageBox.Show("Cannot exceed more than 6 meals in snack");
-            }
-            else
-            {
-                Guna2DataGridView row = new Guna2DataGridView();
-                guna2DataGridView8.Rows.Add(row);
-            }
-        }
 
 
 
@@ -7243,10 +6909,7 @@ namespace HelloWorldSolutionIMS
             selectedColumn = -1;
             selectedchart = "";
 
-            guna2DataGridView8.ClearSelection();
-            guna2DataGridView10.ClearSelection();
-            guna2DataGridView7.ClearSelection();
-            guna2DataGridView9.ClearSelection();
+            ClearSelection();
 
             tabControl1.SelectedIndex = 5;
         }
@@ -7515,73 +7178,77 @@ namespace HelloWorldSolutionIMS
             }
             else
             {
-                ArtificialMapping data = new ArtificialMapping();
-                data.ID = int.Parse(MealID);
-                data.Row = selectedRow;
-                data.Col = selectedColumn;
-                data.ChartName = selectedchart;
-
-                artificialMappings.Add(data);
-                try
+                if (mealar.Text != "" || mealen.Text != "")
                 {
-                    MainClass.con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@MealID", MealID);
 
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
+                    ArtificialMapping data = new ArtificialMapping();
+                    data.ID = int.Parse(MealID);
+                    data.Row = selectedRow;
+                    data.Col = selectedColumn;
+                    data.ChartName = selectedchart;
+
+                    artificialMappings.Add(data);
+                    try
                     {
-                        while (reader.Read())
+                        MainClass.con.Open();
+                        SqlCommand cmd = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
+                        cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.HasRows)
                         {
-                            if (selectedchart == "guna2DataGridView13")
+                            while (reader.Read())
                             {
-                                guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                            }
-                            else if (selectedchart == "guna2DataGridView15")
-                            {
-                                guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                if (selectedchart == "guna2DataGridView13")
+                                {
+                                    guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                }
+                                else if (selectedchart == "guna2DataGridView15")
+                                {
+                                    guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+                                else if (selectedchart == "guna2DataGridView16")
+                                {
+                                    guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+                                else if (selectedchart == "guna2DataGridView17")
+                                {
+                                    guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+                                else if (selectedchart == "guna2DataGridView18")
+                                {
+                                    guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+                                else if (selectedchart == "guna2DataGridView19")
+                                {
+                                    guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+                                else if (selectedchart == "guna2DataGridView20")
+                                {
+                                    guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+
+
 
                             }
-                            else if (selectedchart == "guna2DataGridView16")
-                            {
-                                guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-                            else if (selectedchart == "guna2DataGridView17")
-                            {
-                                guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-                            else if (selectedchart == "guna2DataGridView18")
-                            {
-                                guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-                            else if (selectedchart == "guna2DataGridView19")
-                            {
-                                guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-                            else if (selectedchart == "guna2DataGridView20")
-                            {
-                                guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-
-
-
+                            reader.Close();
+                            MainClass.con.Close();
                         }
-                        reader.Close();
+
+
                         MainClass.con.Close();
                     }
-
-
-                    MainClass.con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
                 }
                 ChartAdd(MealID);
                 tabControl1.SelectedIndex = 8;
@@ -8085,14 +7752,11 @@ namespace HelloWorldSolutionIMS
                     filenon.Text = "";
                     MessageBox.Show("Diet Plan added Successfully!");
 
-                    guna2DataGridView7.Rows.Clear();
-                    guna2DataGridView10.Rows.Clear();
-                    guna2DataGridView9.Rows.Clear();
-                    guna2DataGridView8.Rows.Clear();
+                    ClearTables();
 
                     artificialMappings.Clear();
 
-                    NewTabRowsFill();
+                    TableLayoutFill();
 
                 }
                 else
@@ -8236,14 +7900,11 @@ namespace HelloWorldSolutionIMS
                         MessageBox.Show(ex.Message);
                     }
 
-                    guna2DataGridView7.Rows.Clear();
-                    guna2DataGridView10.Rows.Clear();
-                    guna2DataGridView9.Rows.Clear();
-                    guna2DataGridView8.Rows.Clear();
+                    ClearTables();
 
                     artificialMappings.Clear();
 
-                    NewTabRowsFill();
+                    TableLayoutFill();
 
                     NewSave.Text = "Save Plan";
                 }
@@ -8661,10 +8322,10 @@ namespace HelloWorldSolutionIMS
                     previousdietplannew.Text = PreviousPlan;
                     MealsFetcher();
                     NewSave.Enabled = false;
-                    breakfastrow.Enabled = false;
-                    lunchrow.Enabled = false;
-                    dinnerrow.Enabled = false;
-                    snackrow.Enabled = false;
+
+
+
+
                     //tabControl1.SelectedIndex = 1;
                     //RowsChecker();
                 }
@@ -8673,10 +8334,10 @@ namespace HelloWorldSolutionIMS
                     reader.Close();
                     MainClass.con.Close();
                     NewSave.Enabled = true;
-                    breakfastrow.Enabled = true;
-                    lunchrow.Enabled = true;
-                    dinnerrow.Enabled = true;
-                    snackrow.Enabled = true;
+
+
+
+
                     MessageBox.Show("No Diet Plan found for file no :" + fileno.Text);
                 }
 
@@ -8713,12 +8374,9 @@ namespace HelloWorldSolutionIMS
         {
             artificialMappings.Clear();
 
-            guna2DataGridView7.Rows.Clear();
-            guna2DataGridView10.Rows.Clear();
-            guna2DataGridView9.Rows.Clear();
-            guna2DataGridView8.Rows.Clear();
+            ClearTables();
 
-            NewTabRowsFill();
+            TableLayoutFill();
 
             NutrientsClear();
 
@@ -8745,68 +8403,7 @@ namespace HelloWorldSolutionIMS
                 reader.Close();
                 MainClass.con.Close();
 
-                int bfh = 0;
-                int lh = 0;
-                int dh = 0;
-                int sh = 0;
 
-                foreach (var item in artificialMappings)
-                {
-
-                    if (item.ChartName == "guna2DataGridView7")
-                    {
-                        if (item.Row > bfh)
-                        {
-                            bfh = item.Row;
-                        }
-                    }
-                    else if (item.ChartName == "guna2DataGridView10")
-                    {
-                        if (item.Row > lh)
-                        {
-                            lh = item.Row;
-                        }
-                    }
-                    else if (item.ChartName == "guna2DataGridView9")
-                    {
-                        if (item.Row > dh)
-                        {
-                            dh = item.Row;
-                        }
-                    }
-                    else if (item.ChartName == "guna2DataGridView8")
-                    {
-                        if (item.Row > sh)
-                        {
-                            sh = item.Row;
-                        }
-                    }
-                }
-
-                while (guna2DataGridView7.Rows.Count <= bfh)
-                {
-                    Guna2DataGridView row = new Guna2DataGridView();
-                    guna2DataGridView7.Rows.Add(row);
-
-                }
-                while (guna2DataGridView10.Rows.Count <= lh)
-                {
-                    Guna2DataGridView row = new Guna2DataGridView();
-                    guna2DataGridView10.Rows.Add(row);
-
-                }
-                while (guna2DataGridView9.Rows.Count <= dh)
-                {
-                    Guna2DataGridView row = new Guna2DataGridView();
-                    guna2DataGridView9.Rows.Add(row);
-
-                }
-                while (guna2DataGridView8.Rows.Count <= sh)
-                {
-                    Guna2DataGridView row = new Guna2DataGridView();
-                    guna2DataGridView8.Rows.Add(row);
-
-                }
 
                 foreach (var item in artificialMappings)
                 {
@@ -8821,23 +8418,38 @@ namespace HelloWorldSolutionIMS
                         {
                             while (reader2.Read())
                             {
-                                if (item.ChartName == "guna2DataGridView7")
+                                if (item.ChartName == "guna2DataGridView13")
                                 {
-                                    guna2DataGridView7.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                    guna2DataGridView13.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
                                 }
-                                else if (item.ChartName == "guna2DataGridView8")
+                                else if (item.ChartName == "guna2DataGridView15")
                                 {
-                                    guna2DataGridView8.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                    guna2DataGridView15.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
 
                                 }
-                                else if (item.ChartName == "guna2DataGridView9")
+                                else if (item.ChartName == "guna2DataGridView16")
                                 {
-                                    guna2DataGridView9.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                    guna2DataGridView16.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
 
                                 }
-                                else if (item.ChartName == "guna2DataGridView10")
+                                else if (item.ChartName == "guna2DataGridView17")
                                 {
-                                    guna2DataGridView10.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                    guna2DataGridView17.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                }
+                                else if (item.ChartName == "guna2DataGridView18")
+                                {
+                                    guna2DataGridView18.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                }
+                                else if (item.ChartName == "guna2DataGridView19")
+                                {
+                                    guna2DataGridView19.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                }
+                                else if (item.ChartName == "guna2DataGridView20")
+                                {
+                                    guna2DataGridView20.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
 
                                 }
 
@@ -8862,10 +8474,8 @@ namespace HelloWorldSolutionIMS
 
 
                 NewSave.Enabled = false;
-                breakfastrow.Enabled = false;
-                lunchrow.Enabled = false;
-                dinnerrow.Enabled = false;
-                snackrow.Enabled = false;
+
+
 
             }
             else
@@ -8873,190 +8483,21 @@ namespace HelloWorldSolutionIMS
                 reader.Close();
                 MainClass.con.Close();
                 NewSave.Enabled = true;
-                breakfastrow.Enabled = true;
-                lunchrow.Enabled = true;
-                dinnerrow.Enabled = true;
-                snackrow.Enabled = true;
+
+
+
+
 
             }
         }
-        private void MealsFetcher2()
-        {
-            artificialMappings.Clear();
 
-            guna2DataGridView7.Rows.Clear();
-            guna2DataGridView10.Rows.Clear();
-            guna2DataGridView9.Rows.Clear();
-            guna2DataGridView8.Rows.Clear();
-
-
-            NutrientsClear();
-
-            MainClass.con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM DietPlanAction WHERE DIetPlanID = @DietPlanID", MainClass.con);
-            cmd.Parameters.AddWithValue("@DietPlanID", dietplanID);
-
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-
-                    ArtificialMapping data = new ArtificialMapping();
-
-                    data.Row = int.Parse(reader["Row"].ToString());
-                    data.Col = int.Parse(reader["Col"].ToString());
-                    data.ChartName = reader["ChartName"].ToString();
-                    data.ID = int.Parse(reader["MealID"].ToString());
-
-                    artificialMappings.Add(data);
-                }
-                reader.Close();
-                MainClass.con.Close();
-
-                int bfh = 0;
-                int lh = 0;
-                int dh = 0;
-                int sh = 0;
-
-                foreach (var item in artificialMappings)
-                {
-
-                    if (item.ChartName == "guna2DataGridView7")
-                    {
-                        if (item.Row > bfh)
-                        {
-                            bfh = item.Row;
-                        }
-                    }
-                    else if (item.ChartName == "guna2DataGridView10")
-                    {
-                        if (item.Row > lh)
-                        {
-                            lh = item.Row;
-                        }
-                    }
-                    else if (item.ChartName == "guna2DataGridView9")
-                    {
-                        if (item.Row > dh)
-                        {
-                            dh = item.Row;
-                        }
-                    }
-                    else if (item.ChartName == "guna2DataGridView8")
-                    {
-                        if (item.Row > sh)
-                        {
-                            sh = item.Row;
-                        }
-                    }
-                }
-
-                while (guna2DataGridView7.Rows.Count <= bfh)
-                {
-                    Guna2DataGridView row = new Guna2DataGridView();
-                    guna2DataGridView7.Rows.Add(row);
-
-                }
-                while (guna2DataGridView10.Rows.Count <= lh)
-                {
-                    Guna2DataGridView row = new Guna2DataGridView();
-                    guna2DataGridView10.Rows.Add(row);
-
-                }
-                while (guna2DataGridView9.Rows.Count <= dh)
-                {
-                    Guna2DataGridView row = new Guna2DataGridView();
-                    guna2DataGridView9.Rows.Add(row);
-
-                }
-                while (guna2DataGridView8.Rows.Count <= sh)
-                {
-                    Guna2DataGridView row = new Guna2DataGridView();
-                    guna2DataGridView8.Rows.Add(row);
-
-                }
-
-                foreach (var item in artificialMappings)
-                {
-                    try
-                    {
-                        MainClass.con.Open();
-                        SqlCommand cmd2 = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
-                        cmd2.Parameters.AddWithValue("@MealID", item.ID);
-
-                        SqlDataReader reader2 = cmd2.ExecuteReader();
-                        if (reader2.HasRows)
-                        {
-                            while (reader2.Read())
-                            {
-                                if (item.ChartName == "guna2DataGridView7")
-                                {
-                                    guna2DataGridView7.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
-                                }
-                                else if (item.ChartName == "guna2DataGridView8")
-                                {
-                                    guna2DataGridView8.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
-
-                                }
-                                else if (item.ChartName == "guna2DataGridView9")
-                                {
-                                    guna2DataGridView9.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
-
-                                }
-                                else if (item.ChartName == "guna2DataGridView10")
-                                {
-                                    guna2DataGridView10.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
-
-                                }
-
-
-
-                            }
-                            reader2.Close();
-                            MainClass.con.Close();
-                        }
-
-
-                        MainClass.con.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MainClass.con.Close();
-                        MessageBox.Show(ex.Message);
-                    }
-                    MealID = item.ID.ToString();
-                    ChartAdd(item.ID.ToString());
-                }
-
-
-                NewSave.Enabled = false;
-                breakfastrow.Enabled = false;
-                lunchrow.Enabled = false;
-                dinnerrow.Enabled = false;
-                snackrow.Enabled = false;
-
-            }
-            else
-            {
-                reader.Close();
-                MainClass.con.Close();
-                NewSave.Enabled = true;
-                breakfastrow.Enabled = true;
-                lunchrow.Enabled = true;
-                dinnerrow.Enabled = true;
-                snackrow.Enabled = true;
-
-            }
-        }
         private void EditBTnNew_Click(object sender, EventArgs e)
         {
             NewSave.Enabled = true;
-            breakfastrow.Enabled = true;
-            lunchrow.Enabled = true;
-            dinnerrow.Enabled = true;
-            snackrow.Enabled = true;
+
+
+
+
             edit = 1;
             NewSave.Text = "Update Plan";
         }
@@ -9094,10 +8535,7 @@ namespace HelloWorldSolutionIMS
             medicalhistoryn.Text = "";
 
 
-            guna2DataGridView7.Rows.Clear();
-            guna2DataGridView10.Rows.Clear();
-            guna2DataGridView9.Rows.Clear();
-            guna2DataGridView8.Rows.Clear();
+            ClearTables();
             NewSave.Text = "Save Plan";
             string ingredientIDToDelete = "0";
 
@@ -9141,7 +8579,7 @@ namespace HelloWorldSolutionIMS
                     }
                 }
                 filenon.Text = "";
-                NewTabRowsFill();
+                TableLayoutFill();
             }
             else
             {
@@ -9149,10 +8587,10 @@ namespace HelloWorldSolutionIMS
             }
 
             NewSave.Enabled = true;
-            breakfastrow.Enabled = true;
-            lunchrow.Enabled = true;
-            dinnerrow.Enabled = true;
-            snackrow.Enabled = true;
+
+
+
+
             edit = 1;
             NewSave.Text = "Save Plan";
             edit = 0;
@@ -9196,10 +8634,10 @@ namespace HelloWorldSolutionIMS
         private void NewDietPlan_Click(object sender, EventArgs e)
         {
             NewSave.Enabled = true;
-            breakfastrow.Enabled = true;
-            lunchrow.Enabled = true;
-            dinnerrow.Enabled = true;
-            snackrow.Enabled = true;
+
+
+
+
             NewSave.Text = "Save Plan";
             edit = 0;
             artificialMappings.Clear();
@@ -9234,12 +8672,9 @@ namespace HelloWorldSolutionIMS
             medicalhistoryn.Text = "";
 
 
-            guna2DataGridView7.Rows.Clear();
-            guna2DataGridView10.Rows.Clear();
-            guna2DataGridView9.Rows.Clear();
-            guna2DataGridView8.Rows.Clear();
+            ClearTables();
 
-            NewTabRowsFill();
+            TableLayoutFill();
         }
 
         static int filenoforhistory = 0;
@@ -9374,10 +8809,10 @@ namespace HelloWorldSolutionIMS
                     reader.Close();
                     MainClass.con.Close();
                     NewSave.Enabled = true;
-                    breakfastrow.Enabled = true;
-                    lunchrow.Enabled = true;
-                    dinnerrow.Enabled = true;
-                    snackrow.Enabled = true;
+
+
+
+
                     MessageBox.Show("No Diet Plan found for file no :" + fileno.Text);
                 }
 
@@ -9395,10 +8830,7 @@ namespace HelloWorldSolutionIMS
             guna2Button4.Visible = false;
             NewDietPlan.Visible = false;
             History.Visible = false;
-            breakfastrow.Visible = false;
-            lunchrow.Visible = false;
-            dinnerrow.Visible = false;
-            snackrow.Visible = false;
+
             viewclose.Visible = true;
             tabControl1.SelectedIndex = 5;
 
@@ -9413,22 +8845,13 @@ namespace HelloWorldSolutionIMS
             guna2Button4.Visible = true;
             NewDietPlan.Visible = true;
             History.Visible = true;
-            breakfastrow.Visible = true;
-            lunchrow.Visible = true;
-            dinnerrow.Visible = true;
-            snackrow.Visible = true;
+
             viewclose.Visible = false;
             NewSave.Enabled = true;
-            breakfastrow.Enabled = true;
-            lunchrow.Enabled = true;
-            dinnerrow.Enabled = true;
-            snackrow.Enabled = true;
-            guna2DataGridView7.Rows.Clear();
-            guna2DataGridView10.Rows.Clear();
-            guna2DataGridView9.Rows.Clear();
-            guna2DataGridView8.Rows.Clear();
+
+
             NutrientsClear();
-            NewTabRowsFill();
+            TableLayoutFill();
         }
 
         private void SearchMeals(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealarfunc, DataGridViewColumn mealenfunc, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
@@ -9571,7 +8994,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in artificialMappings)
                 {
-                    if (item.Col == 1)
+                    if (item.ChartName == "guna2DataGridView13")
                     {
                         ChartAdd(item.ID.ToString());
                     }
@@ -9581,7 +9004,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in artificialMappings)
                 {
-                    if (item.Col == 2)
+                    if (item.ChartName == "guna2DataGridView15")
                     {
                         ChartAdd(item.ID.ToString());
                     }
@@ -9591,7 +9014,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in artificialMappings)
                 {
-                    if (item.Col == 3)
+                    if (item.ChartName == "guna2DataGridView16")
                     {
                         ChartAdd(item.ID.ToString());
                     }
@@ -9601,7 +9024,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in artificialMappings)
                 {
-                    if (item.Col == 4)
+                    if (item.ChartName == "guna2DataGridView17")
                     {
                         ChartAdd(item.ID.ToString());
                     }
@@ -9611,7 +9034,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in artificialMappings)
                 {
-                    if (item.Col == 5)
+                    if (item.ChartName == "guna2DataGridView18")
                     {
                         ChartAdd(item.ID.ToString());
                     }
@@ -9621,7 +9044,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in artificialMappings)
                 {
-                    if (item.Col == 6)
+                    if (item.ChartName == "guna2DataGridView19")
                     {
                         ChartAdd(item.ID.ToString());
                     }
@@ -9631,7 +9054,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in artificialMappings)
                 {
-                    if (item.Col == 7)
+                    if (item.ChartName == "guna2DataGridView20")
                     {
                         ChartAdd(item.ID.ToString());
                     }
@@ -9655,44 +9078,228 @@ namespace HelloWorldSolutionIMS
             List<ArtificialMapping> removelist = new List<ArtificialMapping>();
 
             int call = -1;
-            foreach (var item in artificialMappings)
+
+            if (selectedValue == "1")
             {
-                if (item.Col > int.Parse(selectedValue))
+                foreach (var item in artificialMappings)
                 {
-                    ChartSubtract(item.ID.ToString());
-                    ArtificialMapping deleteitem = new ArtificialMapping();
-                    deleteitem.Row = item.Row;
-                    deleteitem.Col = item.Col;
-                    deleteitem.ChartName = item.ChartName;
-                    deleteitem.ID = item.ID;
-                    removelist.Add(deleteitem);
-                    call = 1;
+                    if (item.ChartName != "guna2DataGridView13")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
                 }
+
+                guna2DataGridView15.Visible = false;
+                guna2DataGridView16.Visible = false;
+                guna2DataGridView17.Visible = false;
+                guna2DataGridView18.Visible = false;
+                guna2DataGridView19.Visible = false;
+                guna2DataGridView20.Visible = false;
+
+                day2.Visible = false;
+                day3.Visible = false;
+                day4.Visible = false;
+                day5.Visible = false;
+                day6.Visible = false;
+                day7.Visible = false;
             }
+            else if (selectedValue == "2")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName != "guna2DataGridView13" &&
+                        item.ChartName != "guna2DataGridView15")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+
+                guna2DataGridView16.Visible = false;
+                guna2DataGridView17.Visible = false;
+                guna2DataGridView18.Visible = false;
+                guna2DataGridView19.Visible = false;
+                guna2DataGridView20.Visible = false;
+
+                day3.Visible = false;
+                day4.Visible = false;
+                day5.Visible = false;
+                day6.Visible = false;
+                day7.Visible = false;
+            }
+            else if (selectedValue == "3")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName != "guna2DataGridView13" &&
+                        item.ChartName != "guna2DataGridView15" &&
+                        item.ChartName != "guna2DataGridView16")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+
+                guna2DataGridView17.Visible = false;
+                guna2DataGridView18.Visible = false;
+                guna2DataGridView19.Visible = false;
+                guna2DataGridView20.Visible = false;
+
+                day4.Visible = false;
+                day5.Visible = false;
+                day6.Visible = false;
+                day7.Visible = false;
+            }
+            else if (selectedValue == "4")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName != "guna2DataGridView13" &&
+                        item.ChartName != "guna2DataGridView15" &&
+                        item.ChartName != "guna2DataGridView16" &&
+                        item.ChartName != "guna2DataGridView17")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+
+                guna2DataGridView18.Visible = false;
+                guna2DataGridView19.Visible = false;
+                guna2DataGridView20.Visible = false;
+
+                day5.Visible = false;
+                day6.Visible = false;
+                day7.Visible = false;
+            }
+            else if (selectedValue == "5")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView19" ||
+                        item.ChartName == "guna2DataGridView20")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+
+                guna2DataGridView19.Visible = false;
+                guna2DataGridView20.Visible = false;
+
+                day6.Visible = false;
+                day7.Visible = false;
+            }
+            else if (selectedValue == "6")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView20")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                guna2DataGridView20.Visible = false;
+
+                day7.Visible = false;
+            }
+            else if (selectedValue == "7")
+            {
+                guna2DataGridView13.Visible = true;
+                guna2DataGridView15.Visible = true;
+                guna2DataGridView16.Visible = true;
+                guna2DataGridView17.Visible = true;
+                guna2DataGridView18.Visible = true;
+                guna2DataGridView19.Visible = true;
+                guna2DataGridView20.Visible = true;
+
+                day1.Visible = false;
+                day2.Visible = false;
+                day3.Visible = false;
+                day4.Visible = false;
+                day5.Visible = false;
+                day6.Visible = false;
+                day7.Visible = false;
+            }
+
+
             if (call == 1)
             {
 
                 foreach (var item in removelist)
                 {
-                    if (item.ChartName == "guna2DataGridView7")
+                    if (item.ChartName == "guna2DataGridView13")
                     {
-                        guna2DataGridView7.Rows[item.Row].Cells[item.Col].Value = "";
+                        guna2DataGridView13.Rows[item.Row].Cells[item.Col].Value = "";
 
 
                     }
-                    else if (item.ChartName == "guna2DataGridView8")
+                    else if (item.ChartName == "guna2DataGridView15")
                     {
-                        guna2DataGridView8.Rows[item.Row].Cells[item.Col].Value = "";
+                        guna2DataGridView15.Rows[item.Row].Cells[item.Col].Value = "";
 
                     }
-                    else if (item.ChartName == "guna2DataGridView9")
+                    else if (item.ChartName == "guna2DataGridView16")
                     {
-                        guna2DataGridView9.Rows[item.Row].Cells[item.Col].Value = "";
+                        guna2DataGridView16.Rows[item.Row].Cells[item.Col].Value = "";
 
                     }
-                    else if (item.ChartName == "guna2DataGridView10")
+                    else if (item.ChartName == "guna2DataGridView17")
                     {
-                        guna2DataGridView10.Rows[item.Row].Cells[item.Col].Value = "";
+                        guna2DataGridView17.Rows[item.Row].Cells[item.Col].Value = "";
+
+                    }
+                    else if (item.ChartName == "guna2DataGridView18")
+                    {
+                        guna2DataGridView18.Rows[item.Row].Cells[item.Col].Value = "";
+
+                    }
+                    else if (item.ChartName == "guna2DataGridView19")
+                    {
+                        guna2DataGridView19.Rows[item.Row].Cells[item.Col].Value = "";
+
+                    }
+                    else if (item.ChartName == "guna2DataGridView20")
+                    {
+                        guna2DataGridView20.Rows[item.Row].Cells[item.Col].Value = "";
 
                     }
                     artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
@@ -9703,282 +9310,282 @@ namespace HelloWorldSolutionIMS
 
             }
 
-            if (selectedValue == "1")
-            {
-                guna2DataGridView7.Columns[1].Visible = true;
-                guna2DataGridView8.Columns[1].Visible = true;
-                guna2DataGridView9.Columns[1].Visible = true;
-                guna2DataGridView10.Columns[1].Visible = true;
-                guna2DataGridView11.Columns[1].Visible = true;
+            //if (selectedValue == "1")
+            //{
+            //    guna2DataGridView7.Columns[1].Visible = true;
+            //    guna2DataGridView8.Columns[1].Visible = true;
+            //    guna2DataGridView9.Columns[1].Visible = true;
+            //    guna2DataGridView10.Columns[1].Visible = true;
+            //    guna2DataGridView11.Columns[1].Visible = true;
 
-                guna2DataGridView7.Columns[2].Visible = false;
-                guna2DataGridView8.Columns[2].Visible = false;
-                guna2DataGridView9.Columns[2].Visible = false;
-                guna2DataGridView10.Columns[2].Visible = false;
-                guna2DataGridView11.Columns[2].Visible = false;
+            //    guna2DataGridView7.Columns[2].Visible = false;
+            //    guna2DataGridView8.Columns[2].Visible = false;
+            //    guna2DataGridView9.Columns[2].Visible = false;
+            //    guna2DataGridView10.Columns[2].Visible = false;
+            //    guna2DataGridView11.Columns[2].Visible = false;
 
-                guna2DataGridView7.Columns[3].Visible = false;
-                guna2DataGridView8.Columns[3].Visible = false;
-                guna2DataGridView9.Columns[3].Visible = false;
-                guna2DataGridView10.Columns[3].Visible = false;
-                guna2DataGridView11.Columns[3].Visible = false;
+            //    guna2DataGridView7.Columns[3].Visible = false;
+            //    guna2DataGridView8.Columns[3].Visible = false;
+            //    guna2DataGridView9.Columns[3].Visible = false;
+            //    guna2DataGridView10.Columns[3].Visible = false;
+            //    guna2DataGridView11.Columns[3].Visible = false;
 
-                guna2DataGridView7.Columns[4].Visible = false;
-                guna2DataGridView8.Columns[4].Visible = false;
-                guna2DataGridView9.Columns[4].Visible = false;
-                guna2DataGridView10.Columns[4].Visible = false;
-                guna2DataGridView11.Columns[4].Visible = false;
+            //    guna2DataGridView7.Columns[4].Visible = false;
+            //    guna2DataGridView8.Columns[4].Visible = false;
+            //    guna2DataGridView9.Columns[4].Visible = false;
+            //    guna2DataGridView10.Columns[4].Visible = false;
+            //    guna2DataGridView11.Columns[4].Visible = false;
 
-                guna2DataGridView7.Columns[5].Visible = false;
-                guna2DataGridView8.Columns[5].Visible = false;
-                guna2DataGridView9.Columns[5].Visible = false;
-                guna2DataGridView10.Columns[5].Visible = false;
-                guna2DataGridView11.Columns[5].Visible = false;
+            //    guna2DataGridView7.Columns[5].Visible = false;
+            //    guna2DataGridView8.Columns[5].Visible = false;
+            //    guna2DataGridView9.Columns[5].Visible = false;
+            //    guna2DataGridView10.Columns[5].Visible = false;
+            //    guna2DataGridView11.Columns[5].Visible = false;
 
-                guna2DataGridView7.Columns[6].Visible = false;
-                guna2DataGridView8.Columns[6].Visible = false;
-                guna2DataGridView9.Columns[6].Visible = false;
-                guna2DataGridView10.Columns[6].Visible = false;
-                guna2DataGridView11.Columns[6].Visible = false;
+            //    guna2DataGridView7.Columns[6].Visible = false;
+            //    guna2DataGridView8.Columns[6].Visible = false;
+            //    guna2DataGridView9.Columns[6].Visible = false;
+            //    guna2DataGridView10.Columns[6].Visible = false;
+            //    guna2DataGridView11.Columns[6].Visible = false;
 
-                guna2DataGridView7.Columns[7].Visible = false;
-                guna2DataGridView8.Columns[7].Visible = false;
-                guna2DataGridView9.Columns[7].Visible = false;
-                guna2DataGridView10.Columns[7].Visible = false;
-                guna2DataGridView11.Columns[7].Visible = false;
-            }
-            else if (selectedValue == "2")
-            {
-                guna2DataGridView7.Columns[1].Visible = true;
-                guna2DataGridView8.Columns[1].Visible = true;
-                guna2DataGridView9.Columns[1].Visible = true;
-                guna2DataGridView10.Columns[1].Visible = true;
-                guna2DataGridView11.Columns[1].Visible = true;
+            //    guna2DataGridView7.Columns[7].Visible = false;
+            //    guna2DataGridView8.Columns[7].Visible = false;
+            //    guna2DataGridView9.Columns[7].Visible = false;
+            //    guna2DataGridView10.Columns[7].Visible = false;
+            //    guna2DataGridView11.Columns[7].Visible = false;
+            //}
+            //else if (selectedValue == "2")
+            //{
+            //    guna2DataGridView7.Columns[1].Visible = true;
+            //    guna2DataGridView8.Columns[1].Visible = true;
+            //    guna2DataGridView9.Columns[1].Visible = true;
+            //    guna2DataGridView10.Columns[1].Visible = true;
+            //    guna2DataGridView11.Columns[1].Visible = true;
 
-                guna2DataGridView7.Columns[2].Visible = true;
-                guna2DataGridView8.Columns[2].Visible = true;
-                guna2DataGridView9.Columns[2].Visible = true;
-                guna2DataGridView10.Columns[2].Visible = true;
-                guna2DataGridView11.Columns[2].Visible = true;
+            //    guna2DataGridView7.Columns[2].Visible = true;
+            //    guna2DataGridView8.Columns[2].Visible = true;
+            //    guna2DataGridView9.Columns[2].Visible = true;
+            //    guna2DataGridView10.Columns[2].Visible = true;
+            //    guna2DataGridView11.Columns[2].Visible = true;
 
-                guna2DataGridView7.Columns[3].Visible = false;
-                guna2DataGridView8.Columns[3].Visible = false;
-                guna2DataGridView9.Columns[3].Visible = false;
-                guna2DataGridView10.Columns[3].Visible = false;
-                guna2DataGridView11.Columns[3].Visible = false;
+            //    guna2DataGridView7.Columns[3].Visible = false;
+            //    guna2DataGridView8.Columns[3].Visible = false;
+            //    guna2DataGridView9.Columns[3].Visible = false;
+            //    guna2DataGridView10.Columns[3].Visible = false;
+            //    guna2DataGridView11.Columns[3].Visible = false;
 
-                guna2DataGridView7.Columns[4].Visible = false;
-                guna2DataGridView8.Columns[4].Visible = false;
-                guna2DataGridView9.Columns[4].Visible = false;
-                guna2DataGridView10.Columns[4].Visible = false;
-                guna2DataGridView11.Columns[4].Visible = false;
+            //    guna2DataGridView7.Columns[4].Visible = false;
+            //    guna2DataGridView8.Columns[4].Visible = false;
+            //    guna2DataGridView9.Columns[4].Visible = false;
+            //    guna2DataGridView10.Columns[4].Visible = false;
+            //    guna2DataGridView11.Columns[4].Visible = false;
 
-                guna2DataGridView7.Columns[5].Visible = false;
-                guna2DataGridView8.Columns[5].Visible = false;
-                guna2DataGridView9.Columns[5].Visible = false;
-                guna2DataGridView10.Columns[5].Visible = false;
-                guna2DataGridView11.Columns[5].Visible = false;
+            //    guna2DataGridView7.Columns[5].Visible = false;
+            //    guna2DataGridView8.Columns[5].Visible = false;
+            //    guna2DataGridView9.Columns[5].Visible = false;
+            //    guna2DataGridView10.Columns[5].Visible = false;
+            //    guna2DataGridView11.Columns[5].Visible = false;
 
-                guna2DataGridView7.Columns[6].Visible = false;
-                guna2DataGridView8.Columns[6].Visible = false;
-                guna2DataGridView9.Columns[6].Visible = false;
-                guna2DataGridView10.Columns[6].Visible = false;
-                guna2DataGridView11.Columns[6].Visible = false;
+            //    guna2DataGridView7.Columns[6].Visible = false;
+            //    guna2DataGridView8.Columns[6].Visible = false;
+            //    guna2DataGridView9.Columns[6].Visible = false;
+            //    guna2DataGridView10.Columns[6].Visible = false;
+            //    guna2DataGridView11.Columns[6].Visible = false;
 
-                guna2DataGridView7.Columns[7].Visible = false;
-                guna2DataGridView8.Columns[7].Visible = false;
-                guna2DataGridView9.Columns[7].Visible = false;
-                guna2DataGridView10.Columns[7].Visible = false;
-                guna2DataGridView11.Columns[7].Visible = false;
-            }
-            else if (selectedValue == "3")
-            {
-                guna2DataGridView7.Columns[1].Visible = true;
-                guna2DataGridView8.Columns[1].Visible = true;
-                guna2DataGridView9.Columns[1].Visible = true;
-                guna2DataGridView10.Columns[1].Visible = true;
-                guna2DataGridView11.Columns[1].Visible = true;
+            //    guna2DataGridView7.Columns[7].Visible = false;
+            //    guna2DataGridView8.Columns[7].Visible = false;
+            //    guna2DataGridView9.Columns[7].Visible = false;
+            //    guna2DataGridView10.Columns[7].Visible = false;
+            //    guna2DataGridView11.Columns[7].Visible = false;
+            //}
+            //else if (selectedValue == "3")
+            //{
+            //    guna2DataGridView7.Columns[1].Visible = true;
+            //    guna2DataGridView8.Columns[1].Visible = true;
+            //    guna2DataGridView9.Columns[1].Visible = true;
+            //    guna2DataGridView10.Columns[1].Visible = true;
+            //    guna2DataGridView11.Columns[1].Visible = true;
 
-                guna2DataGridView7.Columns[2].Visible = true;
-                guna2DataGridView8.Columns[2].Visible = true;
-                guna2DataGridView9.Columns[2].Visible = true;
-                guna2DataGridView10.Columns[2].Visible = true;
-                guna2DataGridView11.Columns[2].Visible = true;
+            //    guna2DataGridView7.Columns[2].Visible = true;
+            //    guna2DataGridView8.Columns[2].Visible = true;
+            //    guna2DataGridView9.Columns[2].Visible = true;
+            //    guna2DataGridView10.Columns[2].Visible = true;
+            //    guna2DataGridView11.Columns[2].Visible = true;
 
-                guna2DataGridView7.Columns[3].Visible = true;
-                guna2DataGridView8.Columns[3].Visible = true;
-                guna2DataGridView9.Columns[3].Visible = true;
-                guna2DataGridView10.Columns[3].Visible = true;
-                guna2DataGridView11.Columns[3].Visible = true;
+            //    guna2DataGridView7.Columns[3].Visible = true;
+            //    guna2DataGridView8.Columns[3].Visible = true;
+            //    guna2DataGridView9.Columns[3].Visible = true;
+            //    guna2DataGridView10.Columns[3].Visible = true;
+            //    guna2DataGridView11.Columns[3].Visible = true;
 
-                guna2DataGridView7.Columns[4].Visible = false;
-                guna2DataGridView8.Columns[4].Visible = false;
-                guna2DataGridView9.Columns[4].Visible = false;
-                guna2DataGridView10.Columns[4].Visible = false;
-                guna2DataGridView11.Columns[4].Visible = false;
+            //    guna2DataGridView7.Columns[4].Visible = false;
+            //    guna2DataGridView8.Columns[4].Visible = false;
+            //    guna2DataGridView9.Columns[4].Visible = false;
+            //    guna2DataGridView10.Columns[4].Visible = false;
+            //    guna2DataGridView11.Columns[4].Visible = false;
 
-                guna2DataGridView7.Columns[5].Visible = false;
-                guna2DataGridView8.Columns[5].Visible = false;
-                guna2DataGridView9.Columns[5].Visible = false;
-                guna2DataGridView10.Columns[5].Visible = false;
-                guna2DataGridView11.Columns[5].Visible = false;
+            //    guna2DataGridView7.Columns[5].Visible = false;
+            //    guna2DataGridView8.Columns[5].Visible = false;
+            //    guna2DataGridView9.Columns[5].Visible = false;
+            //    guna2DataGridView10.Columns[5].Visible = false;
+            //    guna2DataGridView11.Columns[5].Visible = false;
 
-                guna2DataGridView7.Columns[6].Visible = false;
-                guna2DataGridView8.Columns[6].Visible = false;
-                guna2DataGridView9.Columns[6].Visible = false;
-                guna2DataGridView10.Columns[6].Visible = false;
-                guna2DataGridView11.Columns[6].Visible = false;
+            //    guna2DataGridView7.Columns[6].Visible = false;
+            //    guna2DataGridView8.Columns[6].Visible = false;
+            //    guna2DataGridView9.Columns[6].Visible = false;
+            //    guna2DataGridView10.Columns[6].Visible = false;
+            //    guna2DataGridView11.Columns[6].Visible = false;
 
-                guna2DataGridView7.Columns[7].Visible = false;
-                guna2DataGridView8.Columns[7].Visible = false;
-                guna2DataGridView9.Columns[7].Visible = false;
-                guna2DataGridView10.Columns[7].Visible = false;
-                guna2DataGridView11.Columns[7].Visible = false;
-            }
-            else if (selectedValue == "4")
-            {
-                guna2DataGridView7.Columns[1].Visible = true;
-                guna2DataGridView8.Columns[1].Visible = true;
-                guna2DataGridView9.Columns[1].Visible = true;
-                guna2DataGridView10.Columns[1].Visible = true;
-                guna2DataGridView11.Columns[1].Visible = true;
+            //    guna2DataGridView7.Columns[7].Visible = false;
+            //    guna2DataGridView8.Columns[7].Visible = false;
+            //    guna2DataGridView9.Columns[7].Visible = false;
+            //    guna2DataGridView10.Columns[7].Visible = false;
+            //    guna2DataGridView11.Columns[7].Visible = false;
+            //}
+            //else if (selectedValue == "4")
+            //{
+            //    guna2DataGridView7.Columns[1].Visible = true;
+            //    guna2DataGridView8.Columns[1].Visible = true;
+            //    guna2DataGridView9.Columns[1].Visible = true;
+            //    guna2DataGridView10.Columns[1].Visible = true;
+            //    guna2DataGridView11.Columns[1].Visible = true;
 
-                guna2DataGridView7.Columns[2].Visible = true;
-                guna2DataGridView8.Columns[2].Visible = true;
-                guna2DataGridView9.Columns[2].Visible = true;
-                guna2DataGridView10.Columns[2].Visible = true;
-                guna2DataGridView11.Columns[2].Visible = true;
+            //    guna2DataGridView7.Columns[2].Visible = true;
+            //    guna2DataGridView8.Columns[2].Visible = true;
+            //    guna2DataGridView9.Columns[2].Visible = true;
+            //    guna2DataGridView10.Columns[2].Visible = true;
+            //    guna2DataGridView11.Columns[2].Visible = true;
 
-                guna2DataGridView7.Columns[3].Visible = true;
-                guna2DataGridView8.Columns[3].Visible = true;
-                guna2DataGridView9.Columns[3].Visible = true;
-                guna2DataGridView10.Columns[3].Visible = true;
-                guna2DataGridView11.Columns[3].Visible = true;
+            //    guna2DataGridView7.Columns[3].Visible = true;
+            //    guna2DataGridView8.Columns[3].Visible = true;
+            //    guna2DataGridView9.Columns[3].Visible = true;
+            //    guna2DataGridView10.Columns[3].Visible = true;
+            //    guna2DataGridView11.Columns[3].Visible = true;
 
 
-                guna2DataGridView7.Columns[4].Visible = true;
-                guna2DataGridView8.Columns[4].Visible = true;
-                guna2DataGridView9.Columns[4].Visible = true;
-                guna2DataGridView10.Columns[4].Visible = true;
-                guna2DataGridView11.Columns[4].Visible = true;
+            //    guna2DataGridView7.Columns[4].Visible = true;
+            //    guna2DataGridView8.Columns[4].Visible = true;
+            //    guna2DataGridView9.Columns[4].Visible = true;
+            //    guna2DataGridView10.Columns[4].Visible = true;
+            //    guna2DataGridView11.Columns[4].Visible = true;
 
-                guna2DataGridView7.Columns[5].Visible = false;
-                guna2DataGridView8.Columns[5].Visible = false;
-                guna2DataGridView9.Columns[5].Visible = false;
-                guna2DataGridView10.Columns[5].Visible = false;
-                guna2DataGridView11.Columns[5].Visible = false;
+            //    guna2DataGridView7.Columns[5].Visible = false;
+            //    guna2DataGridView8.Columns[5].Visible = false;
+            //    guna2DataGridView9.Columns[5].Visible = false;
+            //    guna2DataGridView10.Columns[5].Visible = false;
+            //    guna2DataGridView11.Columns[5].Visible = false;
 
-                guna2DataGridView7.Columns[6].Visible = false;
-                guna2DataGridView8.Columns[6].Visible = false;
-                guna2DataGridView9.Columns[6].Visible = false;
-                guna2DataGridView10.Columns[6].Visible = false;
-                guna2DataGridView11.Columns[6].Visible = false;
+            //    guna2DataGridView7.Columns[6].Visible = false;
+            //    guna2DataGridView8.Columns[6].Visible = false;
+            //    guna2DataGridView9.Columns[6].Visible = false;
+            //    guna2DataGridView10.Columns[6].Visible = false;
+            //    guna2DataGridView11.Columns[6].Visible = false;
 
-                guna2DataGridView7.Columns[7].Visible = false;
-                guna2DataGridView8.Columns[7].Visible = false;
-                guna2DataGridView9.Columns[7].Visible = false;
-                guna2DataGridView10.Columns[7].Visible = false;
-                guna2DataGridView11.Columns[7].Visible = false;
-            }
-            else if (selectedValue == "5")
-            {
-                guna2DataGridView7.Columns[1].Visible = true;
-                guna2DataGridView8.Columns[1].Visible = true;
-                guna2DataGridView9.Columns[1].Visible = true;
-                guna2DataGridView10.Columns[1].Visible = true;
-                guna2DataGridView11.Columns[1].Visible = true;
+            //    guna2DataGridView7.Columns[7].Visible = false;
+            //    guna2DataGridView8.Columns[7].Visible = false;
+            //    guna2DataGridView9.Columns[7].Visible = false;
+            //    guna2DataGridView10.Columns[7].Visible = false;
+            //    guna2DataGridView11.Columns[7].Visible = false;
+            //}
+            //else if (selectedValue == "5")
+            //{
+            //    guna2DataGridView7.Columns[1].Visible = true;
+            //    guna2DataGridView8.Columns[1].Visible = true;
+            //    guna2DataGridView9.Columns[1].Visible = true;
+            //    guna2DataGridView10.Columns[1].Visible = true;
+            //    guna2DataGridView11.Columns[1].Visible = true;
 
-                guna2DataGridView7.Columns[2].Visible = true;
-                guna2DataGridView8.Columns[2].Visible = true;
-                guna2DataGridView9.Columns[2].Visible = true;
-                guna2DataGridView10.Columns[2].Visible = true;
-                guna2DataGridView11.Columns[2].Visible = true;
+            //    guna2DataGridView7.Columns[2].Visible = true;
+            //    guna2DataGridView8.Columns[2].Visible = true;
+            //    guna2DataGridView9.Columns[2].Visible = true;
+            //    guna2DataGridView10.Columns[2].Visible = true;
+            //    guna2DataGridView11.Columns[2].Visible = true;
 
-                guna2DataGridView7.Columns[3].Visible = true;
-                guna2DataGridView8.Columns[3].Visible = true;
-                guna2DataGridView9.Columns[3].Visible = true;
-                guna2DataGridView10.Columns[3].Visible = true;
-                guna2DataGridView11.Columns[3].Visible = true;
+            //    guna2DataGridView7.Columns[3].Visible = true;
+            //    guna2DataGridView8.Columns[3].Visible = true;
+            //    guna2DataGridView9.Columns[3].Visible = true;
+            //    guna2DataGridView10.Columns[3].Visible = true;
+            //    guna2DataGridView11.Columns[3].Visible = true;
 
-                guna2DataGridView7.Columns[4].Visible = true;
-                guna2DataGridView8.Columns[4].Visible = true;
-                guna2DataGridView9.Columns[4].Visible = true;
-                guna2DataGridView10.Columns[4].Visible = true;
-                guna2DataGridView11.Columns[4].Visible = true;
+            //    guna2DataGridView7.Columns[4].Visible = true;
+            //    guna2DataGridView8.Columns[4].Visible = true;
+            //    guna2DataGridView9.Columns[4].Visible = true;
+            //    guna2DataGridView10.Columns[4].Visible = true;
+            //    guna2DataGridView11.Columns[4].Visible = true;
 
-                guna2DataGridView7.Columns[5].Visible = true;
-                guna2DataGridView8.Columns[5].Visible = true;
-                guna2DataGridView9.Columns[5].Visible = true;
-                guna2DataGridView10.Columns[5].Visible = true;
-                guna2DataGridView11.Columns[5].Visible = true;
+            //    guna2DataGridView7.Columns[5].Visible = true;
+            //    guna2DataGridView8.Columns[5].Visible = true;
+            //    guna2DataGridView9.Columns[5].Visible = true;
+            //    guna2DataGridView10.Columns[5].Visible = true;
+            //    guna2DataGridView11.Columns[5].Visible = true;
 
-                guna2DataGridView7.Columns[6].Visible = false;
-                guna2DataGridView8.Columns[6].Visible = false;
-                guna2DataGridView9.Columns[6].Visible = false;
-                guna2DataGridView10.Columns[6].Visible = false;
-                guna2DataGridView11.Columns[6].Visible = false;
+            //    guna2DataGridView7.Columns[6].Visible = false;
+            //    guna2DataGridView8.Columns[6].Visible = false;
+            //    guna2DataGridView9.Columns[6].Visible = false;
+            //    guna2DataGridView10.Columns[6].Visible = false;
+            //    guna2DataGridView11.Columns[6].Visible = false;
 
-                guna2DataGridView7.Columns[7].Visible = false;
-                guna2DataGridView8.Columns[7].Visible = false;
-                guna2DataGridView9.Columns[7].Visible = false;
-                guna2DataGridView10.Columns[7].Visible = false;
-                guna2DataGridView11.Columns[7].Visible = false;
-            }
-            else if (selectedValue == "6")
-            {
-                guna2DataGridView7.Columns[1].Visible = true;
-                guna2DataGridView8.Columns[1].Visible = true;
-                guna2DataGridView9.Columns[1].Visible = true;
-                guna2DataGridView10.Columns[1].Visible = true;
-                guna2DataGridView11.Columns[1].Visible = true;
+            //    guna2DataGridView7.Columns[7].Visible = false;
+            //    guna2DataGridView8.Columns[7].Visible = false;
+            //    guna2DataGridView9.Columns[7].Visible = false;
+            //    guna2DataGridView10.Columns[7].Visible = false;
+            //    guna2DataGridView11.Columns[7].Visible = false;
+            //}
+            //else if (selectedValue == "6")
+            //{
+            //    guna2DataGridView7.Columns[1].Visible = true;
+            //    guna2DataGridView8.Columns[1].Visible = true;
+            //    guna2DataGridView9.Columns[1].Visible = true;
+            //    guna2DataGridView10.Columns[1].Visible = true;
+            //    guna2DataGridView11.Columns[1].Visible = true;
 
-                guna2DataGridView7.Columns[2].Visible = true;
-                guna2DataGridView8.Columns[2].Visible = true;
-                guna2DataGridView9.Columns[2].Visible = true;
-                guna2DataGridView10.Columns[2].Visible = true;
-                guna2DataGridView11.Columns[2].Visible = true;
+            //    guna2DataGridView7.Columns[2].Visible = true;
+            //    guna2DataGridView8.Columns[2].Visible = true;
+            //    guna2DataGridView9.Columns[2].Visible = true;
+            //    guna2DataGridView10.Columns[2].Visible = true;
+            //    guna2DataGridView11.Columns[2].Visible = true;
 
-                guna2DataGridView7.Columns[3].Visible = true;
-                guna2DataGridView8.Columns[3].Visible = true;
-                guna2DataGridView9.Columns[3].Visible = true;
-                guna2DataGridView10.Columns[3].Visible = true;
-                guna2DataGridView11.Columns[3].Visible = true;
+            //    guna2DataGridView7.Columns[3].Visible = true;
+            //    guna2DataGridView8.Columns[3].Visible = true;
+            //    guna2DataGridView9.Columns[3].Visible = true;
+            //    guna2DataGridView10.Columns[3].Visible = true;
+            //    guna2DataGridView11.Columns[3].Visible = true;
 
-                guna2DataGridView7.Columns[4].Visible = true;
-                guna2DataGridView8.Columns[4].Visible = true;
-                guna2DataGridView9.Columns[4].Visible = true;
-                guna2DataGridView10.Columns[4].Visible = true;
-                guna2DataGridView11.Columns[4].Visible = true;
+            //    guna2DataGridView7.Columns[4].Visible = true;
+            //    guna2DataGridView8.Columns[4].Visible = true;
+            //    guna2DataGridView9.Columns[4].Visible = true;
+            //    guna2DataGridView10.Columns[4].Visible = true;
+            //    guna2DataGridView11.Columns[4].Visible = true;
 
-                guna2DataGridView7.Columns[5].Visible = true;
-                guna2DataGridView8.Columns[5].Visible = true;
-                guna2DataGridView9.Columns[5].Visible = true;
-                guna2DataGridView10.Columns[5].Visible = true;
-                guna2DataGridView11.Columns[5].Visible = true;
+            //    guna2DataGridView7.Columns[5].Visible = true;
+            //    guna2DataGridView8.Columns[5].Visible = true;
+            //    guna2DataGridView9.Columns[5].Visible = true;
+            //    guna2DataGridView10.Columns[5].Visible = true;
+            //    guna2DataGridView11.Columns[5].Visible = true;
 
-                guna2DataGridView7.Columns[6].Visible = true;
-                guna2DataGridView8.Columns[6].Visible = true;
-                guna2DataGridView9.Columns[6].Visible = true;
-                guna2DataGridView10.Columns[6].Visible = true;
-                guna2DataGridView11.Columns[6].Visible = true;
+            //    guna2DataGridView7.Columns[6].Visible = true;
+            //    guna2DataGridView8.Columns[6].Visible = true;
+            //    guna2DataGridView9.Columns[6].Visible = true;
+            //    guna2DataGridView10.Columns[6].Visible = true;
+            //    guna2DataGridView11.Columns[6].Visible = true;
 
-                guna2DataGridView7.Columns[7].Visible = false;
-                guna2DataGridView8.Columns[7].Visible = false;
-                guna2DataGridView9.Columns[7].Visible = false;
-                guna2DataGridView10.Columns[7].Visible = false;
-                guna2DataGridView11.Columns[7].Visible = false;
-            }
-            else
-            {
-                for (int i = 1; i < 8; i++)
-                {
-                    guna2DataGridView7.Columns[i].Visible = true;
-                    guna2DataGridView8.Columns[i].Visible = true;
-                    guna2DataGridView9.Columns[i].Visible = true;
-                    guna2DataGridView10.Columns[i].Visible = true;
-                    guna2DataGridView11.Columns[i].Visible = true;
-                }
-            }
+            //    guna2DataGridView7.Columns[7].Visible = false;
+            //    guna2DataGridView8.Columns[7].Visible = false;
+            //    guna2DataGridView9.Columns[7].Visible = false;
+            //    guna2DataGridView10.Columns[7].Visible = false;
+            //    guna2DataGridView11.Columns[7].Visible = false;
+            //}
+            //else
+            //{
+            //    for (int i = 1; i < 8; i++)
+            //    {
+            //        guna2DataGridView7.Columns[i].Visible = true;
+            //        guna2DataGridView8.Columns[i].Visible = true;
+            //        guna2DataGridView9.Columns[i].Visible = true;
+            //        guna2DataGridView10.Columns[i].Visible = true;
+            //        guna2DataGridView11.Columns[i].Visible = true;
+            //    }
+            //}
 
         }
         //finalcoding
@@ -10124,6 +9731,18 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView19.ClearSelection();
             guna2DataGridView20.ClearSelection();
         }
+
+        private void ClearTables()
+        {
+            guna2DataGridView13.Rows.Clear();
+            guna2DataGridView15.Rows.Clear();
+            guna2DataGridView16.Rows.Clear();
+            guna2DataGridView17.Rows.Clear();
+            guna2DataGridView18.Rows.Clear();
+            guna2DataGridView19.Rows.Clear();
+            guna2DataGridView20.Rows.Clear();
+        }
+
         private void guna2DataGridView13_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             guna2DataGridView15.ClearSelection();
@@ -11021,6 +10640,308 @@ namespace HelloWorldSolutionIMS
             {
                 guna2DataGridView20.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
                 artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
+            }
+        }
+
+        private void guna2DataGridView13_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView13.Columns["action1"].Index && e.RowIndex >= 0)
+            {
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView13")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView13")
+                        {
+                            guna2DataGridView13.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
+                guna2DataGridView13.Rows.RemoveAt(e.RowIndex);
+
+            }
+        }
+
+        private void guna2DataGridView15_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView15.Columns["action2"].Index && e.RowIndex >= 0)
+            {
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView15")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView15")
+                        {
+                            guna2DataGridView15.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
+                guna2DataGridView15.Rows.RemoveAt(e.RowIndex);
+            }
+        }
+
+        private void guna2DataGridView16_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView16.Columns["action3"].Index && e.RowIndex >= 0)
+            {
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView16")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView16")
+                        {
+                            guna2DataGridView16.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
+                guna2DataGridView16.Rows.RemoveAt(e.RowIndex);
+            }
+        }
+
+        private void guna2DataGridView17_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView17.Columns["action4"].Index && e.RowIndex >= 0)
+            {
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView17")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView17")
+                        {
+                            guna2DataGridView17.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
+                guna2DataGridView17.Rows.RemoveAt(e.RowIndex);
+            }
+        }
+
+        private void guna2DataGridView18_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView18.Columns["action5"].Index && e.RowIndex >= 0)
+            {
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView18")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView18")
+                        {
+                            guna2DataGridView18.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
+                guna2DataGridView18.Rows.RemoveAt(e.RowIndex);
+            }
+        }
+
+        private void guna2DataGridView19_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView19.Columns["action6"].Index && e.RowIndex >= 0)
+            {
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView19")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView19")
+                        {
+                            guna2DataGridView19.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
+                guna2DataGridView19.Rows.RemoveAt(e.RowIndex);
+            }
+        }
+
+        private void guna2DataGridView20_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == guna2DataGridView20.Columns["action7"].Index && e.RowIndex >= 0)
+            {
+                List<ArtificialMapping> removelist = new List<ArtificialMapping>();
+
+                int call = -1;
+                foreach (var item in artificialMappings)
+                {
+                    if (item.Row == e.RowIndex && item.ChartName == "guna2DataGridView20")
+                    {
+                        ChartSubtract(item.ID.ToString());
+                        ArtificialMapping deleteitem = new ArtificialMapping();
+                        deleteitem.Row = item.Row;
+                        deleteitem.Col = item.Col;
+                        deleteitem.ChartName = item.ChartName;
+                        deleteitem.ID = item.ID;
+                        removelist.Add(deleteitem);
+                        call = 1;
+                    }
+                }
+                if (call == 1)
+                {
+
+                    foreach (var item in removelist)
+                    {
+                        if (item.ChartName == "guna2DataGridView20")
+                        {
+                            guna2DataGridView20.Rows[item.Row].Cells[item.Col].Value = "";
+
+                        }
+
+                        artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
+
+
+                    }
+                    removelist.Clear();
+
+                }
+                guna2DataGridView20.Rows.RemoveAt(e.RowIndex);
             }
         }
     }
