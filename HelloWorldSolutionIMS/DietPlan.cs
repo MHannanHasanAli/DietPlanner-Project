@@ -6825,7 +6825,7 @@ namespace HelloWorldSolutionIMS
 
         private void CheckRows(Guna2DataGridView table)
         {
-            while (table.RowCount < 3)
+            while (table.RowCount < 5)
             {
                 Guna2DataGridView row = new Guna2DataGridView();
                 table.Rows.Add(row);
@@ -7103,76 +7103,80 @@ namespace HelloWorldSolutionIMS
         {
             if (editmeal == 1)
             {
-                ChartSubtract(selectedid.ToString());
-                var itemToUpdate = artificialMappings.Where(item => item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == selectedchart).FirstOrDefault();
-
-                if (itemToUpdate != null)
+                if (mealar.Text != "" || mealen.Text != "")
                 {
-                    itemToUpdate.ID = int.Parse(MealID);
-                }
+                    ChartSubtract(selectedid.ToString());
+                    var itemToUpdate = artificialMappings.Where(item => item.Row == selectedRow && item.Col == selectedColumn && item.ChartName == selectedchart).FirstOrDefault();
 
-                try
-                {
-                    MainClass.con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@MealID", MealID);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
+                    if (itemToUpdate != null)
                     {
-                        while (reader.Read())
-                        {
-                            if (selectedchart == "guna2DataGridView13")
-                            {
-                                guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                            }
-                            else if (selectedchart == "guna2DataGridView15")
-                            {
-                                guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-                            else if (selectedchart == "guna2DataGridView16")
-                            {
-                                guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-                            else if (selectedchart == "guna2DataGridView17")
-                            {
-                                guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-                            else if (selectedchart == "guna2DataGridView18")
-                            {
-                                guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-                            else if (selectedchart == "guna2DataGridView19")
-                            {
-                                guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-                            else if (selectedchart == "guna2DataGridView20")
-                            {
-                                guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                            }
-
-
-
-                        }
-                        reader.Close();
-                        MainClass.con.Close();
+                        itemToUpdate.ID = int.Parse(MealID);
                     }
 
+                    try
+                    {
+                        MainClass.con.Open();
+                        SqlCommand cmd = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
+                        cmd.Parameters.AddWithValue("@MealID", MealID);
 
-                    MainClass.con.Close();
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                if (selectedchart == "guna2DataGridView13")
+                                {
+                                    guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                }
+                                else if (selectedchart == "guna2DataGridView15")
+                                {
+                                    guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+                                else if (selectedchart == "guna2DataGridView16")
+                                {
+                                    guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+                                else if (selectedchart == "guna2DataGridView17")
+                                {
+                                    guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+                                else if (selectedchart == "guna2DataGridView18")
+                                {
+                                    guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+                                else if (selectedchart == "guna2DataGridView19")
+                                {
+                                    guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+                                else if (selectedchart == "guna2DataGridView20")
+                                {
+                                    guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                }
+
+
+
+                            }
+                            reader.Close();
+                            MainClass.con.Close();
+                        }
+
+
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                    ChartAdd(MealID);
                 }
-                catch (Exception ex)
-                {
-                    MainClass.con.Close();
-                    MessageBox.Show(ex.Message);
-                }
-                ChartAdd(MealID);
+
                 tabControl1.SelectedIndex = 8;
                 editmeal = 0;
             }
@@ -7249,8 +7253,9 @@ namespace HelloWorldSolutionIMS
                         MainClass.con.Close();
                         MessageBox.Show(ex.Message);
                     }
+                    ChartAdd(MealID);
                 }
-                ChartAdd(MealID);
+
                 tabControl1.SelectedIndex = 8;
             }
 
@@ -8851,6 +8856,7 @@ namespace HelloWorldSolutionIMS
 
 
             NutrientsClear();
+            ClearTables();
             TableLayoutFill();
         }
 
@@ -9251,13 +9257,13 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView19.Visible = true;
                 guna2DataGridView20.Visible = true;
 
-                day1.Visible = false;
-                day2.Visible = false;
-                day3.Visible = false;
-                day4.Visible = false;
-                day5.Visible = false;
-                day6.Visible = false;
-                day7.Visible = false;
+                day1.Visible = true;
+                day2.Visible = true;
+                day3.Visible = true;
+                day4.Visible = true;
+                day5.Visible = true;
+                day6.Visible = true;
+                day7.Visible = true;
             }
 
 
@@ -10685,6 +10691,8 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView13.Rows.RemoveAt(e.RowIndex);
 
             }
+
+            CheckRows(guna2DataGridView13);
         }
 
         private void guna2DataGridView15_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -10728,6 +10736,7 @@ namespace HelloWorldSolutionIMS
                 }
                 guna2DataGridView15.Rows.RemoveAt(e.RowIndex);
             }
+            CheckRows(guna2DataGridView15);
         }
 
         private void guna2DataGridView16_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -10771,6 +10780,7 @@ namespace HelloWorldSolutionIMS
                 }
                 guna2DataGridView16.Rows.RemoveAt(e.RowIndex);
             }
+            CheckRows(guna2DataGridView16);
         }
 
         private void guna2DataGridView17_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -10814,6 +10824,7 @@ namespace HelloWorldSolutionIMS
                 }
                 guna2DataGridView17.Rows.RemoveAt(e.RowIndex);
             }
+            CheckRows(guna2DataGridView17);
         }
 
         private void guna2DataGridView18_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -10857,6 +10868,7 @@ namespace HelloWorldSolutionIMS
                 }
                 guna2DataGridView18.Rows.RemoveAt(e.RowIndex);
             }
+            CheckRows(guna2DataGridView18);
         }
 
         private void guna2DataGridView19_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -10900,6 +10912,7 @@ namespace HelloWorldSolutionIMS
                 }
                 guna2DataGridView19.Rows.RemoveAt(e.RowIndex);
             }
+            CheckRows(guna2DataGridView19);
         }
 
         private void guna2DataGridView20_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -10943,6 +10956,7 @@ namespace HelloWorldSolutionIMS
                 }
                 guna2DataGridView20.Rows.RemoveAt(e.RowIndex);
             }
+            CheckRows(guna2DataGridView20);
         }
     }
 
