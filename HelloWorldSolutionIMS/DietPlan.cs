@@ -105,7 +105,7 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
-
+            MainClass.con.Close();
         }
         private void RowsFiller()
         {
@@ -7740,11 +7740,11 @@ namespace HelloWorldSolutionIMS
         private void UpdateChart3(object sender, EventArgs e)
         {
             chart2.Titles.Clear();
+
             // Create a sample DataTable with data (replace this with your data source).
             DataTable dt = new DataTable();
             dt.Columns.Add("Nutrient", typeof(string));
             dt.Columns.Add("Value", typeof(double));
-
 
             if (fatsd.Text != "")
             {
@@ -7761,26 +7761,31 @@ namespace HelloWorldSolutionIMS
                 dt.Rows.Add("Carbohydrates", double.Parse(carbsd.Text) * 4);
             }
 
-
-
-            if (titlecheck != 1)
+            if (chart2.Titles.Count == 0) // Check if there's at least one title
             {
                 if (languagestatus == 1)
                 {
-                    chart1.Titles.Add("القيمة الغذائية");
+                    chart2.Titles.Add("القيمة الغذائية");
                 }
                 else
                 {
-                    chart1.Titles.Add("Nutrient Chart");
+                    chart2.Titles.Add("Nutrient Chart");
                 }
-                titlecheck = 1;
             }
-            chart2.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
+
+            if (chart2.Legends.Count == 0) // Check if there's at least one legend
+            {
+                chart2.Legends.Add("Legend");
+                chart2.Legends[0].Alignment = StringAlignment.Center;
+                chart2.Legends[0].Docking = Docking.Bottom;
+            }
+
+            chart2.Titles[0].Alignment = ContentAlignment.TopCenter;
 
             // Your existing code for chart settings
-            chart2.Legends[0].Enabled = true; // Enable the legend.
-            chart2.Legends[0].Alignment = StringAlignment.Center; // Align the legend to the center.
-            chart2.Legends[0].Docking = Docking.Bottom; // Dock the legend at the bottom.
+            chart2.Legends[0].Enabled = true;
+            chart2.Legends[0].Alignment = StringAlignment.Center;
+            chart2.Legends[0].Docking = Docking.Bottom;
 
             // Your existing code for chart settings
             chart2.Series.Clear();
@@ -7796,6 +7801,7 @@ namespace HelloWorldSolutionIMS
 
             // Refresh the chart.
             chart2.Refresh();
+
         }
         private void UpdateChart2(object sender, EventArgs e)
         {
@@ -7804,7 +7810,6 @@ namespace HelloWorldSolutionIMS
             DataTable dt = new DataTable();
             dt.Columns.Add("Nutrient", typeof(string));
             dt.Columns.Add("Value", typeof(double));
-
 
             if (fatsm.Text != "")
             {
@@ -7821,13 +7826,11 @@ namespace HelloWorldSolutionIMS
                 dt.Rows.Add("Carbohydrates", double.Parse(carbsm.Text) * 4);
             }
 
-
             if (titlecheck2 == 0)
             {
-
-
                 titlecheck2 = 1;
             }
+
             if (titlecheck != 1)
             {
                 if (languagestatus == 1)
@@ -7840,12 +7843,17 @@ namespace HelloWorldSolutionIMS
                 }
                 titlecheck = 1;
             }
-            chart1.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
+
+            // Ensure there is at least one title before modifying it
+            if (chart1.Titles.Count > 0)
+            {
+                chart1.Titles[0].Alignment = ContentAlignment.TopCenter;
+            }
 
             // Your existing code for chart settings
-            chart1.Legends[0].Enabled = true; // Enable the legend.
-            chart1.Legends[0].Alignment = StringAlignment.Center; // Align the legend to the center.
-            chart1.Legends[0].Docking = Docking.Bottom; // Dock the legend at the bottom.
+            chart1.Legends[0].Enabled = true;
+            chart1.Legends[0].Alignment = StringAlignment.Center;
+            chart1.Legends[0].Docking = Docking.Bottom;
 
             // Your existing code for chart settings
             chart1.Series.Clear();
@@ -7858,8 +7866,10 @@ namespace HelloWorldSolutionIMS
             chart1.Series.Add(series);
             chart1.Series[0].Label = "#PERCENT{P0}";
             chart1.Series[0].LegendText = "#VALX";
+
             // Refresh the chart.
             chart1.Refresh();
+
 
         }
 
@@ -8568,7 +8578,7 @@ namespace HelloWorldSolutionIMS
 
 
 
-                    MessageBox.Show("No Diet Plan found for file no :" + fileno.Text);
+                    MessageBox.Show("No Diet Plan found");
                 }
 
 
@@ -8637,69 +8647,138 @@ namespace HelloWorldSolutionIMS
 
                 foreach (var item in artificialMappings)
                 {
-                    try
+                    if (languagestatus == 1)
                     {
-                        MainClass.con.Open();
-                        SqlCommand cmd2 = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
-                        cmd2.Parameters.AddWithValue("@MealID", item.ID);
-
-                        SqlDataReader reader2 = cmd2.ExecuteReader();
-                        if (reader2.HasRows)
+                        try
                         {
-                            while (reader2.Read())
+                            MainClass.con.Open();
+                            SqlCommand cmd2 = new SqlCommand("SELECT MealAr FROM Meal WHERE ID = @MealID", MainClass.con);
+                            cmd2.Parameters.AddWithValue("@MealID", item.ID);
+
+                            SqlDataReader reader2 = cmd2.ExecuteReader();
+                            if (reader2.HasRows)
                             {
-                                if (item.ChartName == "guna2DataGridView13")
+                                while (reader2.Read())
                                 {
-                                    guna2DataGridView13.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
-                                }
-                                else if (item.ChartName == "guna2DataGridView15")
-                                {
-                                    guna2DataGridView15.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                    if (item.ChartName == "guna2DataGridView13")
+                                    {
+                                        guna2DataGridView13.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView15")
+                                    {
+                                        guna2DataGridView15.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView16")
+                                    {
+                                        guna2DataGridView16.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView17")
+                                    {
+                                        guna2DataGridView17.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView18")
+                                    {
+                                        guna2DataGridView18.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView19")
+                                    {
+                                        guna2DataGridView19.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView20")
+                                    {
+                                        guna2DataGridView20.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+
+                                    }
+
+
 
                                 }
-                                else if (item.ChartName == "guna2DataGridView16")
-                                {
-                                    guna2DataGridView16.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
-
-                                }
-                                else if (item.ChartName == "guna2DataGridView17")
-                                {
-                                    guna2DataGridView17.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
-
-                                }
-                                else if (item.ChartName == "guna2DataGridView18")
-                                {
-                                    guna2DataGridView18.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
-
-                                }
-                                else if (item.ChartName == "guna2DataGridView19")
-                                {
-                                    guna2DataGridView19.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
-
-                                }
-                                else if (item.ChartName == "guna2DataGridView20")
-                                {
-                                    guna2DataGridView20.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
-
-                                }
-
-
-
+                                reader2.Close();
+                                MainClass.con.Close();
                             }
-                            reader2.Close();
+
+
                             MainClass.con.Close();
                         }
-
-
-                        MainClass.con.Close();
+                        catch (Exception ex)
+                        {
+                            MainClass.con.Close();
+                            MessageBox.Show(ex.Message);
+                        }
+                        MealID = item.ID.ToString();
+                        ChartAdd(item.ID.ToString());
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MainClass.con.Close();
-                        MessageBox.Show(ex.Message);
+                        try
+                        {
+                            MainClass.con.Open();
+                            SqlCommand cmd2 = new SqlCommand("SELECT MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
+                            cmd2.Parameters.AddWithValue("@MealID", item.ID);
+
+                            SqlDataReader reader2 = cmd2.ExecuteReader();
+                            if (reader2.HasRows)
+                            {
+                                while (reader2.Read())
+                                {
+                                    if (item.ChartName == "guna2DataGridView13")
+                                    {
+                                        guna2DataGridView13.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView15")
+                                    {
+                                        guna2DataGridView15.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView16")
+                                    {
+                                        guna2DataGridView16.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView17")
+                                    {
+                                        guna2DataGridView17.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView18")
+                                    {
+                                        guna2DataGridView18.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView19")
+                                    {
+                                        guna2DataGridView19.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                    }
+                                    else if (item.ChartName == "guna2DataGridView20")
+                                    {
+                                        guna2DataGridView20.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
+                                    }
+
+
+
+                                }
+                                reader2.Close();
+                                MainClass.con.Close();
+                            }
+
+
+                            MainClass.con.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MainClass.con.Close();
+                            MessageBox.Show(ex.Message);
+                        }
+                        MealID = item.ID.ToString();
+                        ChartAdd(item.ID.ToString());
                     }
-                    MealID = item.ID.ToString();
-                    ChartAdd(item.ID.ToString());
                 }
 
 
@@ -8724,9 +8803,6 @@ namespace HelloWorldSolutionIMS
         private void EditBTnNew_Click(object sender, EventArgs e)
         {
             NewSave.Enabled = true;
-
-
-
 
             edit = 1;
             NewSave.Text = "Update Plan";
@@ -9837,6 +9913,15 @@ namespace HelloWorldSolutionIMS
 
         private void TableLayoutFill()
         {
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView12.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView12.GridColor = Color.Black;
+            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView12.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView12.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView13.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView13.GridColor = Color.Black;

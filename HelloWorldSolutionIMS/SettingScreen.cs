@@ -679,11 +679,11 @@ namespace HelloWorldSolutionIMS
 
             if (languagestatus == 1)
             {
-                language.SelectedIndex = 1;
+                //    language.SelectedIndex = 1;
             }
             else
             {
-                language.SelectedIndex = 0;
+                //language.SelectedIndex = 0;
             }
 
             if (languagestatus == 1)
@@ -2110,33 +2110,33 @@ namespace HelloWorldSolutionIMS
 
         private void language_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (language.Text == "Arabic")
-            {
-                MainClass.con.Open();
+            //if (language.Text == "Arabic")
+            //{
+            //    MainClass.con.Open();
 
-                SqlCommand cmd = new SqlCommand("UPDATE Language SET Status = @Status WHERE ID = @ID", MainClass.con);
+            //    SqlCommand cmd = new SqlCommand("UPDATE Language SET Status = @Status WHERE ID = @ID", MainClass.con);
 
-                cmd.Parameters.AddWithValue("@Status", 1); // Replace updatedLanguageStatusValue with the new status value.
-                cmd.Parameters.AddWithValue("@ID", 1); // Replace languageIDValue with the ID of the language you want to update.
+            //    cmd.Parameters.AddWithValue("@Status", 1); // Replace updatedLanguageStatusValue with the new status value.
+            //    cmd.Parameters.AddWithValue("@ID", 1); // Replace languageIDValue with the ID of the language you want to update.
 
-                cmd.ExecuteNonQuery();
+            //    cmd.ExecuteNonQuery();
 
-                MainClass.con.Close();
+            //    MainClass.con.Close();
 
-            }
-            else
-            {
-                MainClass.con.Open();
+            //}
+            //else
+            //{
+            //    MainClass.con.Open();
 
-                SqlCommand cmd = new SqlCommand("UPDATE Language SET Status = @Status WHERE ID = @ID", MainClass.con);
+            //    SqlCommand cmd = new SqlCommand("UPDATE Language SET Status = @Status WHERE ID = @ID", MainClass.con);
 
-                cmd.Parameters.AddWithValue("@Status", 0); // Replace updatedLanguageStatusValue with the new status value.
-                cmd.Parameters.AddWithValue("@ID", 1); // Replace languageIDValue with the ID of the language you want to update.
+            //    cmd.Parameters.AddWithValue("@Status", 0); // Replace updatedLanguageStatusValue with the new status value.
+            //    cmd.Parameters.AddWithValue("@ID", 1); // Replace languageIDValue with the ID of the language you want to update.
 
-                cmd.ExecuteNonQuery();
+            //    cmd.ExecuteNonQuery();
 
-                MainClass.con.Close();
-            }
+            //    MainClass.con.Close();
+            //}
         }
     }
 }

@@ -140,7 +140,7 @@
     <value>6</value>
   </data>
   <data name="&gt;&gt;companyname.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>32</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label5.Visible" type="System.Boolean, mscorlib">
@@ -346,7 +346,7 @@
     <value>True</value>
   </data>
   <data name="&gt;&gt;guna2Button6.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -361,7 +361,7 @@
     <value>763, 190</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>29</value>
   </data>
   <data name="&gt;&gt;guna2TrackBar9.Parent" xml:space="preserve">
     <value>panel11</value>
@@ -370,7 +370,7 @@
     <value>30</value>
   </data>
   <data name="&gt;&gt;room2.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="DatabaseSettingPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -423,8 +423,8 @@
   <data name="&gt;&gt;guna2Button8.Parent" xml:space="preserve">
     <value>panel10</value>
   </data>
-  <data name="&gt;&gt;guna2TrackBar6.Parent" xml:space="preserve">
-    <value>panel11</value>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
     <value>303</value>
@@ -466,7 +466,7 @@
     <value>664, 133</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="label37.Text" xml:space="preserve">
     <value>Name</value>
@@ -539,9 +539,6 @@
   </data>
   <data name="&gt;&gt;guna2Button4.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="label41.TabIndex" type="System.Int32, mscorlib">
-    <value>319</value>
   </data>
   <data name="guna2TrackBar6.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 23</value>
@@ -640,7 +637,7 @@
     <value>DatabaseSettingPanel</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>31</value>
   </data>
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -666,8 +663,8 @@
   <data name="label29.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
   </data>
-  <data name="&gt;&gt;label45.Parent" xml:space="preserve">
-    <value>panel11</value>
+  <data name="welcomewords.Location" type="System.Drawing.Point, System.Drawing">
+    <value>205, 356</value>
   </data>
   <data name="AddNutri.Location" type="System.Drawing.Point, System.Drawing">
     <value>696, 114</value>
@@ -696,8 +693,8 @@
   <data name="&gt;&gt;DeleteUser.Name" xml:space="preserve">
     <value>DeleteUser</value>
   </data>
-  <data name="&gt;&gt;panel11.Parent" xml:space="preserve">
-    <value>tabPage8</value>
+  <data name="&gt;&gt;passwordedit.Parent" xml:space="preserve">
+    <value>panel9</value>
   </data>
   <data name="&gt;&gt;guna2TrackBar9.ZOrder" xml:space="preserve">
     <value>16</value>
@@ -739,7 +736,7 @@
     <value>Company Logo</value>
   </data>
   <data name="&gt;&gt;email.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>24</value>
   </data>
   <data name="btnRestore.Size" type="System.Drawing.Size, System.Drawing">
     <value>337, 69</value>
@@ -757,7 +754,7 @@
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="&gt;&gt;AddNutri.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;guna2TextBox4.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -829,7 +826,7 @@
     <value>4</value>
   </data>
   <data name="&gt;&gt;Colorsetting.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="label46.TabIndex" type="System.Int32, mscorlib">
     <value>327</value>
@@ -871,7 +868,7 @@
     <value>btnRestore</value>
   </data>
   <data name="&gt;&gt;trade.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>20</value>
   </data>
   <data name="&gt;&gt;label45.Name" xml:space="preserve">
     <value>label45</value>
@@ -949,7 +946,7 @@
     <value>475, 24</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>23</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>1065, 760</value>
@@ -1021,7 +1018,7 @@
     <value>Segoe UI, 11pt</value>
   </data>
   <data name="&gt;&gt;Save.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>16</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1073,6 +1070,9 @@
   </data>
   <data name="guna2TextBox6.TabIndex" type="System.Int32, mscorlib">
     <value>320</value>
+  </data>
+  <data name="&gt;&gt;label45.Parent" xml:space="preserve">
+    <value>panel11</value>
   </data>
   <data name="usernamedgv.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1201,19 +1201,22 @@
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;room4.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="Datagridview1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>21</value>
   </data>
   <data name="&gt;&gt;modifyuser.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="&gt;&gt;guna2TextBox9.Name" xml:space="preserve">
     <value>guna2TextBox9</value>
+  </data>
+  <data name="&gt;&gt;panel11.Parent" xml:space="preserve">
+    <value>tabPage8</value>
   </data>
   <data name="DatabaseSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1519,7 +1522,7 @@
     <value>175, 24</value>
   </data>
   <data name="&gt;&gt;welcomewords.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>18</value>
   </data>
   <data name="room2.Location" type="System.Drawing.Point, System.Drawing">
     <value>696, 256</value>
@@ -1587,8 +1590,8 @@
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
     <value>84</value>
   </data>
-  <data name="guna2Button7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;guna2TrackBar6.Parent" xml:space="preserve">
+    <value>panel11</value>
   </data>
   <data name="&gt;&gt;nutriname.Name" xml:space="preserve">
     <value>nutriname</value>
@@ -1783,7 +1786,7 @@
     <value>28</value>
   </data>
   <data name="&gt;&gt;Dbsetting.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="email.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 31</value>
@@ -1793,6 +1796,9 @@
   </data>
   <data name="UserSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>1071, 766</value>
+  </data>
+  <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 28</value>
   </data>
   <data name="&gt;&gt;usermanagement.Name" xml:space="preserve">
     <value>usermanagement</value>
@@ -1831,7 +1837,7 @@
     <value>label23</value>
   </data>
   <data name="&gt;&gt;importsettings.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1846,7 +1852,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;guna2DataGridView1.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -1939,7 +1945,7 @@
     <value>tabPage6</value>
   </data>
   <data name="&gt;&gt;Delete.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="btnClose.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2026,7 +2032,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;modifyuser.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;txtName.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -2206,7 +2212,7 @@
     <value>16, 16</value>
   </data>
   <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="label39.Size" type="System.Drawing.Size, System.Drawing">
     <value>566, 54</value>
@@ -2538,9 +2544,6 @@
   <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="welcomewords.Location" type="System.Drawing.Point, System.Drawing">
-    <value>205, 356</value>
-  </data>
   <data name="&gt;&gt;btnRestore.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -2731,7 +2734,7 @@
     <value>302</value>
   </data>
   <data name="&gt;&gt;branch.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>30</value>
   </data>
   <data name="label2.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2787,8 +2790,11 @@
   <data name="&gt;&gt;bold.Name" xml:space="preserve">
     <value>bold</value>
   </data>
+  <data name="guna2Button7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
   <data name="&gt;&gt;pobox.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>22</value>
   </data>
   <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2932,7 +2938,7 @@
     <value>30</value>
   </data>
   <data name="&gt;&gt;room3.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
     <value>tabControl1</value>
@@ -2983,7 +2989,7 @@
     <value>label43</value>
   </data>
   <data name="&gt;&gt;usermanagement.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="guna2Button3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -3055,7 +3061,7 @@
     <value>panel11</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>17</value>
   </data>
   <data name="&gt;&gt;DatabaseSettingPanel.Parent" xml:space="preserve">
     <value>DatabaseSettings</value>
@@ -3110,9 +3116,6 @@
   </data>
   <data name="&gt;&gt;label32.Parent" xml:space="preserve">
     <value>panel11</value>
-  </data>
-  <data name="&gt;&gt;tabPage8.ZOrder" xml:space="preserve">
-    <value>9</value>
   </data>
   <data name="&gt;&gt;txtConfirmPassword.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -3244,7 +3247,7 @@
     <value>DatabaseSettingPanel</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>25</value>
   </data>
   <data name="tabPage4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -3439,7 +3442,7 @@
     <value>5</value>
   </data>
   <data name="&gt;&gt;mobile.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>26</value>
   </data>
   <data name="guna2TextBox4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 6pt</value>
@@ -3461,9 +3464,6 @@
   </data>
   <data name="btnRestore.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15pt</value>
-  </data>
-  <data name="edituser.TabIndex" type="System.Int32, mscorlib">
-    <value>284</value>
   </data>
   <data name="selectedpanel.TabIndex" type="System.Int32, mscorlib">
     <value>134</value>
@@ -3505,7 +3505,7 @@
     <value>tabPage5</value>
   </data>
   <data name="&gt;&gt;landline.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>28</value>
   </data>
   <data name="label30.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3544,7 +3544,7 @@
     <value>549, 22</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>27</value>
   </data>
   <data name="&gt;&gt;guna2Button8.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -4060,7 +4060,7 @@
     <value>btnClose</value>
   </data>
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete</value>
@@ -4113,8 +4113,8 @@
   <data name="&gt;&gt;panel13.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;tabPage8.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;btnRestoreBrowse.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -4228,7 +4228,7 @@
     <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>19</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
@@ -4300,7 +4300,7 @@
     <value>usernamedgv</value>
   </data>
   <data name="&gt;&gt;room1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="SaveSettings.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -4332,8 +4332,8 @@
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;passwordedit.Parent" xml:space="preserve">
-    <value>panel9</value>
+  <data name="edituser.TabIndex" type="System.Int32, mscorlib">
+    <value>284</value>
   </data>
   <data name="label22.Text" xml:space="preserve">
     <value>Username</value>
@@ -4494,8 +4494,8 @@
   <data name="&gt;&gt;bold.ZOrder" xml:space="preserve">
     <value>36</value>
   </data>
-  <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 28</value>
+  <data name="label41.TabIndex" type="System.Int32, mscorlib">
+    <value>319</value>
   </data>
   <data name="&gt;&gt;pobox.Name" xml:space="preserve">
     <value>pobox</value>
@@ -4817,9 +4817,6 @@
   </metadata>
   <metadata name="NameGV.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ar-AE</value>
   </metadata>
   <metadata name="useriddgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

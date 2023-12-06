@@ -166,43 +166,6 @@
   <data name="btnClose.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label25.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="guna2Button7.Text" xml:space="preserve">
-    <value>اغلاق</value>
-  </data>
-  <data name="saveuser.Text" xml:space="preserve">
-    <value>حفظ</value>
-  </data>
-  <data name="label26.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>410, 22</value>
-  </data>
-  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 54</value>
-  </data>
-  <data name="label26.Text" xml:space="preserve">
-    <value>التعديل مستخدم</value>
-  </data>
-  <data name="label27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label47.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label47.Location" type="System.Drawing.Point, System.Drawing">
-    <value>585, 416</value>
-  </data>
-  <data name="label47.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 24</value>
-  </data>
-  <data name="label47.Text" xml:space="preserve">
-    <value>لغة</value>
-  </data>
   <data name="importsettings.Text" xml:space="preserve">
     <value>استيراد الاعدادات</value>
   </data>
@@ -221,6 +184,7 @@
   <data name="label20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 24</value>
   </data>
@@ -425,6 +389,30 @@
   <data name="DeleteUser.Text" xml:space="preserve">
     <value>حذف</value>
   </data>
+  <data name="label25.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="guna2Button7.Text" xml:space="preserve">
+    <value>اغلاق</value>
+  </data>
+  <data name="saveuser.Text" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="label26.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>410, 22</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 54</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>التعديل مستخدم</value>
+  </data>
+  <data name="label27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="guna2Button4.Text" xml:space="preserve">
     <value>اغلاق</value>
   </data>
@@ -473,6 +461,9 @@
   <data name="label31.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Attach.Text" xml:space="preserve">
     <value>ارفاق</value>
   </data>
@@ -486,12 +477,6 @@
     <value>NoControl</value>
   </data>
   <data name="label28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
 </root>
