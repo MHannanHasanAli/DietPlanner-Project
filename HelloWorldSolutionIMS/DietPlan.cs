@@ -2634,6 +2634,33 @@ namespace HelloWorldSolutionIMS
             updatepreviousdietplan();
             UpdateInstruction();
         }
+        static int languagestatus;
+        private void LanguageInfo()
+        {
+            MainClass.con.Open();
+
+            // Create a SqlCommand to fetch the row with ID 1 from the Language table
+            SqlCommand fetchCmd = new SqlCommand("SELECT * FROM Language WHERE ID = 1", MainClass.con);
+
+            // Execute the fetch command to get the data
+            using (SqlDataReader reader = fetchCmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    // Retrieve values from the reader and store them in variables
+                    int id = Convert.ToInt32(reader["ID"]);
+                    languagestatus = Convert.ToInt32(reader["Status"]);
+
+                    // Now, you can use the 'id' and 'status' variables as needed
+                    // For example, display them in a MessageBox
+                }
+
+            }
+
+            MainClass.con.Close();
+
+        }
+
         private void DietPlan_Load(object sender, EventArgs e)
         {
             chart1.Series.Clear();
@@ -2865,57 +2892,101 @@ namespace HelloWorldSolutionIMS
             }
             //chart1.Series.Clear();
             MainClass.HideAllTabsOnTabControl(tabControl1);
-            //ShowDietPlans(guna2DataGridView1, filenodgv, namedgv, agedgv, dietnamedgv);
-            //guna2DataGridView2.EditingControlShowing += guna2DataGridView2_EditingControlShowing;
-            //guna2DataGridView4.EditingControlShowing += guna2DataGridView4_EditingControlShowing;
-            //guna2DataGridView5.EditingControlShowing += guna2DataGridView5_EditingControlShowing;
-            //guna2DataGridView6.EditingControlShowing += guna2DataGridView6_EditingControlShowing;
-            //tabControl1.SelectedIndex = 1;
-            //firstname.Text = "";
-            //familyname.Text = "";
-            //dietplantemplatename.Text = "";
-            //dietplantemplate.SelectedItem = null;
-            //dietplandays.Text = "";
-            //instruction.Text = "";
-            //gender.Text = "";
-            //age.Text = "";
-            //mobileno.Text = "";
-            //previousdietplan.Text = "";
-            //calories.Text = "";
-            //fats.Text = "";
-            //fibers.Text = "";
-            //potassium.Text = "";
-            //water.Text = "";
-            //sugar.Text = "";
-            //calcium.Text = "";
-            //abox.Text = "";
-            //protein.Text = "";
-            //carbohydrates.Text = "";
-            //sodium.Text = "";
-            //phosphor.Text = "";
-            //magnesium.Text = "";
-            //iron.Text = "";
-            //iodine.Text = "";
-            //bbox.Text = "";
-            //MedicalHistory.Text = "";
-            //edit = 0;
-            //UpdateDietPlanTemplate();
-            //updatepreviousdietplan();
-            //UpdateInstruction();
 
-            //if (coderunner != 0)
-            //{
-            //    fileno.Text = coderunner.ToString();
-            //    LoadData(coderunner);
-            //}
+            LanguageInfo();
+            if (languagestatus == 1)
+            {
+                foreach (Control control in panel11.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
 
-            //if (coderunner == 0)
-            //{
-            //    RowsFiller();
-            //}
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel11.Width - currentLoc.X - control.Width, currentLoc.Y);
 
-            //NewTabRowsFill();
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
 
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel17.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel17.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
+                foreach (Control control in panel18.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel18.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+                foreach (Control control in panel19.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel19.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+            }
             TableLayoutFill();
             tabControl1.SelectedIndex = 5;
         }
@@ -7113,68 +7184,136 @@ namespace HelloWorldSolutionIMS
                         itemToUpdate.ID = int.Parse(MealID);
                     }
 
-                    try
+                    if (languagestatus == 1)
                     {
-                        MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
-                        cmd.Parameters.AddWithValue("@MealID", MealID);
-
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (reader.HasRows)
+                        try
                         {
-                            while (reader.Read())
+                            MainClass.con.Open();
+                            SqlCommand cmd = new SqlCommand("SELECT MealAr FROM Meal WHERE ID = @MealID", MainClass.con);
+                            cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                            SqlDataReader reader = cmd.ExecuteReader();
+                            if (reader.HasRows)
                             {
-                                if (selectedchart == "guna2DataGridView13")
+                                while (reader.Read())
                                 {
-                                    guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                                }
-                                else if (selectedchart == "guna2DataGridView15")
-                                {
-                                    guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                    if (selectedchart == "guna2DataGridView13")
+                                    {
+                                        guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                    }
+                                    else if (selectedchart == "guna2DataGridView15")
+                                    {
+                                        guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView16")
+                                    {
+                                        guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView17")
+                                    {
+                                        guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView18")
+                                    {
+                                        guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView19")
+                                    {
+                                        guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView20")
+                                    {
+                                        guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+
+
 
                                 }
-                                else if (selectedchart == "guna2DataGridView16")
-                                {
-                                    guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                                }
-                                else if (selectedchart == "guna2DataGridView17")
-                                {
-                                    guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                                }
-                                else if (selectedchart == "guna2DataGridView18")
-                                {
-                                    guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                                }
-                                else if (selectedchart == "guna2DataGridView19")
-                                {
-                                    guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                                }
-                                else if (selectedchart == "guna2DataGridView20")
-                                {
-                                    guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                                }
-
-
-
+                                reader.Close();
+                                MainClass.con.Close();
                             }
-                            reader.Close();
+
+
                             MainClass.con.Close();
                         }
-
-
-                        MainClass.con.Close();
+                        catch (Exception ex)
+                        {
+                            MainClass.con.Close();
+                            MessageBox.Show(ex.Message);
+                        }
+                        ChartAdd(MealID);
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MainClass.con.Close();
-                        MessageBox.Show(ex.Message);
+                        try
+                        {
+                            MainClass.con.Open();
+                            SqlCommand cmd = new SqlCommand("SELECT MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
+                            cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                            SqlDataReader reader = cmd.ExecuteReader();
+                            if (reader.HasRows)
+                            {
+                                while (reader.Read())
+                                {
+                                    if (selectedchart == "guna2DataGridView13")
+                                    {
+                                        guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                    }
+                                    else if (selectedchart == "guna2DataGridView15")
+                                    {
+                                        guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView16")
+                                    {
+                                        guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView17")
+                                    {
+                                        guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView18")
+                                    {
+                                        guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView19")
+                                    {
+                                        guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView20")
+                                    {
+                                        guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+
+
+
+                                }
+                                reader.Close();
+                                MainClass.con.Close();
+                            }
+
+
+                            MainClass.con.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MainClass.con.Close();
+                            MessageBox.Show(ex.Message);
+                        }
+                        ChartAdd(MealID);
                     }
-                    ChartAdd(MealID);
                 }
 
                 tabControl1.SelectedIndex = 8;
@@ -7192,68 +7331,136 @@ namespace HelloWorldSolutionIMS
                     data.ChartName = selectedchart;
 
                     artificialMappings.Add(data);
-                    try
+                    if (languagestatus == 1)
                     {
-                        MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("SELECT MealAr,MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
-                        cmd.Parameters.AddWithValue("@MealID", MealID);
-
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (reader.HasRows)
+                        try
                         {
-                            while (reader.Read())
+                            MainClass.con.Open();
+                            SqlCommand cmd = new SqlCommand("SELECT MealAr FROM Meal WHERE ID = @MealID", MainClass.con);
+                            cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                            SqlDataReader reader = cmd.ExecuteReader();
+                            if (reader.HasRows)
                             {
-                                if (selectedchart == "guna2DataGridView13")
+                                while (reader.Read())
                                 {
-                                    guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                                }
-                                else if (selectedchart == "guna2DataGridView15")
-                                {
-                                    guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                    if (selectedchart == "guna2DataGridView13")
+                                    {
+                                        guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                    }
+                                    else if (selectedchart == "guna2DataGridView15")
+                                    {
+                                        guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView16")
+                                    {
+                                        guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView17")
+                                    {
+                                        guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView18")
+                                    {
+                                        guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView19")
+                                    {
+                                        guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView20")
+                                    {
+                                        guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
+                                    }
+
+
 
                                 }
-                                else if (selectedchart == "guna2DataGridView16")
-                                {
-                                    guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                                }
-                                else if (selectedchart == "guna2DataGridView17")
-                                {
-                                    guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                                }
-                                else if (selectedchart == "guna2DataGridView18")
-                                {
-                                    guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                                }
-                                else if (selectedchart == "guna2DataGridView19")
-                                {
-                                    guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                                }
-                                else if (selectedchart == "guna2DataGridView20")
-                                {
-                                    guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-
-                                }
-
-
-
+                                reader.Close();
+                                MainClass.con.Close();
                             }
-                            reader.Close();
+
+
                             MainClass.con.Close();
                         }
-
-
-                        MainClass.con.Close();
+                        catch (Exception ex)
+                        {
+                            MainClass.con.Close();
+                            MessageBox.Show(ex.Message);
+                        }
+                        ChartAdd(MealID);
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MainClass.con.Close();
-                        MessageBox.Show(ex.Message);
+                        try
+                        {
+                            MainClass.con.Open();
+                            SqlCommand cmd = new SqlCommand("SELECT MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
+                            cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                            SqlDataReader reader = cmd.ExecuteReader();
+                            if (reader.HasRows)
+                            {
+                                while (reader.Read())
+                                {
+                                    if (selectedchart == "guna2DataGridView13")
+                                    {
+                                        guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                    }
+                                    else if (selectedchart == "guna2DataGridView15")
+                                    {
+                                        guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView16")
+                                    {
+                                        guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView17")
+                                    {
+                                        guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView18")
+                                    {
+                                        guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView19")
+                                    {
+                                        guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+                                    else if (selectedchart == "guna2DataGridView20")
+                                    {
+                                        guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
+                                    }
+
+
+
+                                }
+                                reader.Close();
+                                MainClass.con.Close();
+                            }
+
+
+                            MainClass.con.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MainClass.con.Close();
+                            MessageBox.Show(ex.Message);
+                        }
+                        ChartAdd(MealID);
                     }
-                    ChartAdd(MealID);
                 }
 
                 tabControl1.SelectedIndex = 8;
@@ -7539,28 +7746,35 @@ namespace HelloWorldSolutionIMS
             dt.Columns.Add("Value", typeof(double));
 
 
-            if (fatsd.Text != "" && double.TryParse(fatsd.Text, out double fatsdValue))
+            if (fatsd.Text != "")
             {
-                dt.Rows.Add("Fats", fatsdValue * 9);
+                dt.Rows.Add("Fats", double.Parse(fatsd.Text) * 9);
             }
 
-            if (proteind.Text != "" && double.TryParse(proteind.Text, out double proteindValue))
+            if (proteind.Text != "")
             {
-                dt.Rows.Add("Protein", proteindValue * 4);
+                dt.Rows.Add("Protein", double.Parse(proteind.Text) * 4);
             }
 
-            if (carbsd.Text != "" && double.TryParse(carbsd.Text, out double carbsdValue))
+            if (carbsd.Text != "")
             {
-                dt.Rows.Add("Carbohydrates", carbsdValue * 4);
+                dt.Rows.Add("Carbohydrates", double.Parse(carbsd.Text) * 4);
             }
 
 
-            if (titlecheck3 == 0)
-            {
 
-                titlecheck3 = 1;
+            if (titlecheck != 1)
+            {
+                if (languagestatus == 1)
+                {
+                    chart1.Titles.Add("القيمة الغذائية");
+                }
+                else
+                {
+                    chart1.Titles.Add("Nutrient Chart");
+                }
+                titlecheck = 1;
             }
-            chart2.Titles.Add("Nutrient Chart");
             chart2.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
 
             // Your existing code for chart settings
@@ -7592,19 +7806,19 @@ namespace HelloWorldSolutionIMS
             dt.Columns.Add("Value", typeof(double));
 
 
-            if (fatsm.Text != "" && double.TryParse(fatsm.Text, out double fatsdValue))
+            if (fatsm.Text != "")
             {
-                dt.Rows.Add("Fats", fatsdValue * 9);
+                dt.Rows.Add("Fats", double.Parse(fatsm.Text) * 9);
             }
 
-            if (proteinm.Text != "" && double.TryParse(proteinm.Text, out double proteindValue))
+            if (proteinm.Text != "")
             {
-                dt.Rows.Add("Protein", proteindValue * 4);
+                dt.Rows.Add("Protein", double.Parse(proteinm.Text) * 4);
             }
 
-            if (carbsm.Text != "" && double.TryParse(carbsm.Text, out double carbsdValue))
+            if (carbsm.Text != "")
             {
-                dt.Rows.Add("Carbohydrates", carbsdValue * 4);
+                dt.Rows.Add("Carbohydrates", double.Parse(carbsm.Text) * 4);
             }
 
 
@@ -7614,7 +7828,18 @@ namespace HelloWorldSolutionIMS
 
                 titlecheck2 = 1;
             }
-            chart1.Titles.Add("Nutrient Chart");
+            if (titlecheck != 1)
+            {
+                if (languagestatus == 1)
+                {
+                    chart1.Titles.Add("القيمة الغذائية");
+                }
+                else
+                {
+                    chart1.Titles.Add("Nutrient Chart");
+                }
+                titlecheck = 1;
+            }
             chart1.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
 
             // Your existing code for chart settings
@@ -8996,7 +9221,7 @@ namespace HelloWorldSolutionIMS
         {
             NutrientsClear();
             string selectedValue = calculationnew.Text;
-            if (selectedValue == "1st Day")
+            if (selectedValue == "1st Day" || selectedValue == "اليوم الاول")
             {
                 foreach (var item in artificialMappings)
                 {
@@ -9006,7 +9231,7 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
-            else if (selectedValue == "2nd Day")
+            else if (selectedValue == "2nd Day" || selectedValue == "اليوم الثاني")
             {
                 foreach (var item in artificialMappings)
                 {
@@ -9016,7 +9241,7 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
-            else if (selectedValue == "3rd Day")
+            else if (selectedValue == "3rd Day" || selectedValue == "اليوم الثالث")
             {
                 foreach (var item in artificialMappings)
                 {
@@ -9026,7 +9251,7 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
-            else if (selectedValue == "4th Day")
+            else if (selectedValue == "4th Day" || selectedValue == "اليوم الرابع ")
             {
                 foreach (var item in artificialMappings)
                 {
@@ -9036,7 +9261,7 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
-            else if (selectedValue == "5th Day")
+            else if (selectedValue == "5th Day" || selectedValue == "اليوم الخامس")
             {
                 foreach (var item in artificialMappings)
                 {
@@ -9046,7 +9271,7 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
-            else if (selectedValue == "6th Day")
+            else if (selectedValue == "6th Day" || selectedValue == "اليوم السادس")
             {
                 foreach (var item in artificialMappings)
                 {
@@ -9056,7 +9281,7 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
-            else if (selectedValue == "7th Day")
+            else if (selectedValue == "7th Day" || selectedValue == "اليوم السابع ")
             {
                 foreach (var item in artificialMappings)
                 {
