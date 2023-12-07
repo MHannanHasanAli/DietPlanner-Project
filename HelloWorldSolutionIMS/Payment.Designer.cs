@@ -44,15 +44,6 @@
             this.nonpaidpayment = new Guna.UI2.WinForms.Guna2Button();
             this.totalvalues = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familynamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountaftrpromotiondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.promotionpercentagedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,6 +92,15 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.defaultlabel = new System.Windows.Forms.Label();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familynamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountaftrpromotiondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promotionpercentagedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iddefaultdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filenodefaultdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.defaulterdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -120,24 +120,23 @@
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.panel1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.nonpaidpayment);
             this.panel1.Controls.Add(this.totalvalues);
@@ -148,18 +147,19 @@
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.firstnamesearch);
             this.panel1.Controls.Add(this.filenosearch);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Name = "panel1";
             // 
             // nonpaidpayment
             // 
-            resources.ApplyResources(this.nonpaidpayment, "nonpaidpayment");
             this.nonpaidpayment.AutoRoundedCorners = true;
             this.nonpaidpayment.BorderRadius = 21;
             this.nonpaidpayment.CausesValidation = false;
             this.nonpaidpayment.CheckedState.Parent = this.nonpaidpayment;
             this.nonpaidpayment.CustomImages.Parent = this.nonpaidpayment;
             this.nonpaidpayment.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.nonpaidpayment, "nonpaidpayment");
             this.nonpaidpayment.ForeColor = System.Drawing.Color.White;
             this.nonpaidpayment.HoverState.Parent = this.nonpaidpayment;
             this.nonpaidpayment.Name = "nonpaidpayment";
@@ -168,14 +168,13 @@
             // 
             // totalvalues
             // 
-            resources.ApplyResources(this.totalvalues, "totalvalues");
             this.totalvalues.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.totalvalues, "totalvalues");
             this.totalvalues.ForeColor = System.Drawing.Color.Black;
             this.totalvalues.Name = "totalvalues";
             // 
             // guna2DataGridView1
             // 
-            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -193,6 +192,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddgv,
             this.filenodgv,
@@ -247,90 +247,36 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // iddgv
-            // 
-            resources.ApplyResources(this.iddgv, "iddgv");
-            this.iddgv.Name = "iddgv";
-            this.iddgv.ReadOnly = true;
-            // 
-            // filenodgv
-            // 
-            resources.ApplyResources(this.filenodgv, "filenodgv");
-            this.filenodgv.Name = "filenodgv";
-            this.filenodgv.ReadOnly = true;
-            // 
-            // paymentnamedgv
-            // 
-            resources.ApplyResources(this.paymentnamedgv, "paymentnamedgv");
-            this.paymentnamedgv.Name = "paymentnamedgv";
-            this.paymentnamedgv.ReadOnly = true;
-            // 
-            // firstnamedgv
-            // 
-            resources.ApplyResources(this.firstnamedgv, "firstnamedgv");
-            this.firstnamedgv.Name = "firstnamedgv";
-            this.firstnamedgv.ReadOnly = true;
-            // 
-            // familynamedgv
-            // 
-            resources.ApplyResources(this.familynamedgv, "familynamedgv");
-            this.familynamedgv.Name = "familynamedgv";
-            this.familynamedgv.ReadOnly = true;
-            // 
-            // amountdgv
-            // 
-            resources.ApplyResources(this.amountdgv, "amountdgv");
-            this.amountdgv.Name = "amountdgv";
-            this.amountdgv.ReadOnly = true;
-            // 
-            // amountaftrpromotiondgv
-            // 
-            resources.ApplyResources(this.amountaftrpromotiondgv, "amountaftrpromotiondgv");
-            this.amountaftrpromotiondgv.Name = "amountaftrpromotiondgv";
-            this.amountaftrpromotiondgv.ReadOnly = true;
-            // 
-            // promotionpercentagedgv
-            // 
-            resources.ApplyResources(this.promotionpercentagedgv, "promotionpercentagedgv");
-            this.promotionpercentagedgv.Name = "promotionpercentagedgv";
-            this.promotionpercentagedgv.ReadOnly = true;
-            // 
-            // datedgv
-            // 
-            resources.ApplyResources(this.datedgv, "datedgv");
-            this.datedgv.Name = "datedgv";
-            this.datedgv.ReadOnly = true;
-            // 
             // contextMenuStrip1
             // 
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // editToolStripMenuItem
             // 
-            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
-            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // Add
             // 
-            resources.ApplyResources(this.Add, "Add");
             this.Add.AutoRoundedCorners = true;
             this.Add.BorderRadius = 21;
             this.Add.CausesValidation = false;
             this.Add.CheckedState.Parent = this.Add;
             this.Add.CustomImages.Parent = this.Add;
             this.Add.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Add, "Add");
             this.Add.ForeColor = System.Drawing.Color.White;
             this.Add.HoverState.Parent = this.Add;
             this.Add.Name = "Add";
@@ -339,13 +285,13 @@
             // 
             // search
             // 
-            resources.ApplyResources(this.search, "search");
             this.search.AutoRoundedCorners = true;
             this.search.BorderRadius = 21;
             this.search.CausesValidation = false;
             this.search.CheckedState.Parent = this.search;
             this.search.CustomImages.Parent = this.search;
             this.search.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.search, "search");
             this.search.ForeColor = System.Drawing.Color.White;
             this.search.HoverState.Parent = this.search;
             this.search.Name = "search";
@@ -366,7 +312,6 @@
             // 
             // firstnamesearch
             // 
-            resources.ApplyResources(this.firstnamesearch, "firstnamesearch");
             this.firstnamesearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.firstnamesearch.DefaultText = "";
             this.firstnamesearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -376,6 +321,7 @@
             this.firstnamesearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.firstnamesearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstnamesearch.FocusedState.Parent = this.firstnamesearch;
+            resources.ApplyResources(this.firstnamesearch, "firstnamesearch");
             this.firstnamesearch.ForeColor = System.Drawing.Color.Black;
             this.firstnamesearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstnamesearch.HoverState.Parent = this.firstnamesearch;
@@ -387,7 +333,6 @@
             // 
             // filenosearch
             // 
-            resources.ApplyResources(this.filenosearch, "filenosearch");
             this.filenosearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.filenosearch.DefaultText = "";
             this.filenosearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -397,6 +342,7 @@
             this.filenosearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.filenosearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.filenosearch.FocusedState.Parent = this.filenosearch;
+            resources.ApplyResources(this.filenosearch, "filenosearch");
             this.filenosearch.ForeColor = System.Drawing.Color.Black;
             this.filenosearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.filenosearch.HoverState.Parent = this.filenosearch;
@@ -408,14 +354,13 @@
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.panel2);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.promotionname);
             this.panel2.Controls.Add(this.startdate);
@@ -449,16 +394,17 @@
             this.panel2.Controls.Add(this.familyname);
             this.panel2.Controls.Add(this.firstname);
             this.panel2.Controls.Add(this.fileno);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // promotionname
             // 
-            resources.ApplyResources(this.promotionname, "promotionname");
             this.promotionname.BackColor = System.Drawing.Color.Transparent;
             this.promotionname.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.promotionname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.promotionname.FocusedColor = System.Drawing.Color.Empty;
             this.promotionname.FocusedState.Parent = this.promotionname;
+            resources.ApplyResources(this.promotionname, "promotionname");
             this.promotionname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.promotionname.FormattingEnabled = true;
             this.promotionname.HoverState.Parent = this.promotionname;
@@ -469,8 +415,8 @@
             // 
             // startdate
             // 
-            resources.ApplyResources(this.startdate, "startdate");
             this.startdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            resources.ApplyResources(this.startdate, "startdate");
             this.startdate.Name = "startdate";
             // 
             // label17
@@ -480,13 +426,13 @@
             // 
             // Backtomeal
             // 
-            resources.ApplyResources(this.Backtomeal, "Backtomeal");
             this.Backtomeal.AutoRoundedCorners = true;
             this.Backtomeal.BorderRadius = 21;
             this.Backtomeal.CausesValidation = false;
             this.Backtomeal.CheckedState.Parent = this.Backtomeal;
             this.Backtomeal.CustomImages.Parent = this.Backtomeal;
             this.Backtomeal.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Backtomeal, "Backtomeal");
             this.Backtomeal.ForeColor = System.Drawing.Color.White;
             this.Backtomeal.HoverState.Parent = this.Backtomeal;
             this.Backtomeal.Name = "Backtomeal";
@@ -495,13 +441,13 @@
             // 
             // save
             // 
-            resources.ApplyResources(this.save, "save");
             this.save.AutoRoundedCorners = true;
             this.save.BorderRadius = 21;
             this.save.CausesValidation = false;
             this.save.CheckedState.Parent = this.save;
             this.save.CustomImages.Parent = this.save;
             this.save.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.save, "save");
             this.save.ForeColor = System.Drawing.Color.White;
             this.save.HoverState.Parent = this.save;
             this.save.Name = "save";
@@ -510,7 +456,6 @@
             // 
             // promotiondetails
             // 
-            resources.ApplyResources(this.promotiondetails, "promotiondetails");
             this.promotiondetails.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.promotiondetails.DefaultText = "";
             this.promotiondetails.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -520,6 +465,7 @@
             this.promotiondetails.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.promotiondetails.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotiondetails.FocusedState.Parent = this.promotiondetails;
+            resources.ApplyResources(this.promotiondetails, "promotiondetails");
             this.promotiondetails.ForeColor = System.Drawing.Color.Black;
             this.promotiondetails.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotiondetails.HoverState.Parent = this.promotiondetails;
@@ -541,7 +487,6 @@
             // 
             // promotioncode
             // 
-            resources.ApplyResources(this.promotioncode, "promotioncode");
             this.promotioncode.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.promotioncode.DefaultText = "";
             this.promotioncode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -551,6 +496,7 @@
             this.promotioncode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.promotioncode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotioncode.FocusedState.Parent = this.promotioncode;
+            resources.ApplyResources(this.promotioncode, "promotioncode");
             this.promotioncode.ForeColor = System.Drawing.Color.Black;
             this.promotioncode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotioncode.HoverState.Parent = this.promotioncode;
@@ -567,7 +513,6 @@
             // 
             // promotionpercentage
             // 
-            resources.ApplyResources(this.promotionpercentage, "promotionpercentage");
             this.promotionpercentage.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.promotionpercentage.DefaultText = "";
             this.promotionpercentage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -577,6 +522,7 @@
             this.promotionpercentage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.promotionpercentage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotionpercentage.FocusedState.Parent = this.promotionpercentage;
+            resources.ApplyResources(this.promotionpercentage, "promotionpercentage");
             this.promotionpercentage.ForeColor = System.Drawing.Color.Black;
             this.promotionpercentage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotionpercentage.HoverState.Parent = this.promotionpercentage;
@@ -596,7 +542,6 @@
             // 
             // amount
             // 
-            resources.ApplyResources(this.amount, "amount");
             this.amount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.amount.DefaultText = "";
             this.amount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -606,6 +551,7 @@
             this.amount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.amount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.amount.FocusedState.Parent = this.amount;
+            resources.ApplyResources(this.amount, "amount");
             this.amount.ForeColor = System.Drawing.Color.Black;
             this.amount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.amount.HoverState.Parent = this.amount;
@@ -623,7 +569,6 @@
             // 
             // amountafterpromotion
             // 
-            resources.ApplyResources(this.amountafterpromotion, "amountafterpromotion");
             this.amountafterpromotion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.amountafterpromotion.DefaultText = "";
             this.amountafterpromotion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -633,6 +578,7 @@
             this.amountafterpromotion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.amountafterpromotion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.amountafterpromotion.FocusedState.Parent = this.amountafterpromotion;
+            resources.ApplyResources(this.amountafterpromotion, "amountafterpromotion");
             this.amountafterpromotion.ForeColor = System.Drawing.Color.Black;
             this.amountafterpromotion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.amountafterpromotion.HoverState.Parent = this.amountafterpromotion;
@@ -650,8 +596,8 @@
             // 
             // enddate
             // 
-            resources.ApplyResources(this.enddate, "enddate");
             this.enddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            resources.ApplyResources(this.enddate, "enddate");
             this.enddate.Name = "enddate";
             // 
             // label14
@@ -661,7 +607,6 @@
             // 
             // paymentname
             // 
-            resources.ApplyResources(this.paymentname, "paymentname");
             this.paymentname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.paymentname.DefaultText = "";
             this.paymentname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -671,6 +616,7 @@
             this.paymentname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.paymentname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.paymentname.FocusedState.Parent = this.paymentname;
+            resources.ApplyResources(this.paymentname, "paymentname");
             this.paymentname.ForeColor = System.Drawing.Color.Black;
             this.paymentname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.paymentname.HoverState.Parent = this.paymentname;
@@ -692,7 +638,6 @@
             // 
             // mobileno
             // 
-            resources.ApplyResources(this.mobileno, "mobileno");
             this.mobileno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.mobileno.DefaultText = "";
             this.mobileno.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -702,6 +647,7 @@
             this.mobileno.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.mobileno.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.mobileno.FocusedState.Parent = this.mobileno;
+            resources.ApplyResources(this.mobileno, "mobileno");
             this.mobileno.ForeColor = System.Drawing.Color.Black;
             this.mobileno.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.mobileno.HoverState.Parent = this.mobileno;
@@ -719,7 +665,6 @@
             // 
             // age
             // 
-            resources.ApplyResources(this.age, "age");
             this.age.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.age.DefaultText = "";
             this.age.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -729,6 +674,7 @@
             this.age.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.age.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.age.FocusedState.Parent = this.age;
+            resources.ApplyResources(this.age, "age");
             this.age.ForeColor = System.Drawing.Color.Black;
             this.age.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.age.HoverState.Parent = this.age;
@@ -741,12 +687,12 @@
             // 
             // gender
             // 
-            resources.ApplyResources(this.gender, "gender");
             this.gender.BackColor = System.Drawing.Color.Transparent;
             this.gender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.gender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gender.FocusedColor = System.Drawing.Color.Empty;
             this.gender.FocusedState.Parent = this.gender;
+            resources.ApplyResources(this.gender, "gender");
             this.gender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.gender.FormattingEnabled = true;
             this.gender.HoverState.Parent = this.gender;
@@ -780,7 +726,6 @@
             // 
             // familyname
             // 
-            resources.ApplyResources(this.familyname, "familyname");
             this.familyname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.familyname.DefaultText = "";
             this.familyname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -790,6 +735,7 @@
             this.familyname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.familyname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.familyname.FocusedState.Parent = this.familyname;
+            resources.ApplyResources(this.familyname, "familyname");
             this.familyname.ForeColor = System.Drawing.Color.Black;
             this.familyname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.familyname.HoverState.Parent = this.familyname;
@@ -801,7 +747,6 @@
             // 
             // firstname
             // 
-            resources.ApplyResources(this.firstname, "firstname");
             this.firstname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.firstname.DefaultText = "";
             this.firstname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -811,6 +756,7 @@
             this.firstname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.firstname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstname.FocusedState.Parent = this.firstname;
+            resources.ApplyResources(this.firstname, "firstname");
             this.firstname.ForeColor = System.Drawing.Color.Black;
             this.firstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstname.HoverState.Parent = this.firstname;
@@ -822,7 +768,6 @@
             // 
             // fileno
             // 
-            resources.ApplyResources(this.fileno, "fileno");
             this.fileno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fileno.DefaultText = "";
             this.fileno.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -832,6 +777,7 @@
             this.fileno.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.fileno.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.fileno.FocusedState.Parent = this.fileno;
+            resources.ApplyResources(this.fileno, "fileno");
             this.fileno.ForeColor = System.Drawing.Color.Black;
             this.fileno.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.fileno.HoverState.Parent = this.fileno;
@@ -845,31 +791,31 @@
             // 
             // tabPage3
             // 
-            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Controls.Add(this.panel3);
+            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.guna2Button1);
             this.panel3.Controls.Add(this.defaultlabel);
             this.panel3.Controls.Add(this.guna2DataGridView2);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // guna2Button1
             // 
-            resources.ApplyResources(this.guna2Button1, "guna2Button1");
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BorderRadius = 21;
             this.guna2Button1.CausesValidation = false;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button1, "guna2Button1");
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Name = "guna2Button1";
@@ -883,7 +829,6 @@
             // 
             // guna2DataGridView2
             // 
-            resources.ApplyResources(this.guna2DataGridView2, "guna2DataGridView2");
             this.guna2DataGridView2.AllowUserToAddRows = false;
             this.guna2DataGridView2.AllowUserToDeleteRows = false;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
@@ -901,6 +846,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            resources.ApplyResources(this.guna2DataGridView2, "guna2DataGridView2");
             this.guna2DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddefaultdgv,
             this.filenodefaultdgv,
@@ -951,29 +897,96 @@
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // iddgv
+            // 
+            resources.ApplyResources(this.iddgv, "iddgv");
+            this.iddgv.Name = "iddgv";
+            this.iddgv.ReadOnly = true;
+            this.iddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // filenodgv
+            // 
+            resources.ApplyResources(this.filenodgv, "filenodgv");
+            this.filenodgv.Name = "filenodgv";
+            this.filenodgv.ReadOnly = true;
+            this.filenodgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // paymentnamedgv
+            // 
+            resources.ApplyResources(this.paymentnamedgv, "paymentnamedgv");
+            this.paymentnamedgv.Name = "paymentnamedgv";
+            this.paymentnamedgv.ReadOnly = true;
+            this.paymentnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // firstnamedgv
+            // 
+            resources.ApplyResources(this.firstnamedgv, "firstnamedgv");
+            this.firstnamedgv.Name = "firstnamedgv";
+            this.firstnamedgv.ReadOnly = true;
+            this.firstnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // familynamedgv
+            // 
+            resources.ApplyResources(this.familynamedgv, "familynamedgv");
+            this.familynamedgv.Name = "familynamedgv";
+            this.familynamedgv.ReadOnly = true;
+            this.familynamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // amountdgv
+            // 
+            resources.ApplyResources(this.amountdgv, "amountdgv");
+            this.amountdgv.Name = "amountdgv";
+            this.amountdgv.ReadOnly = true;
+            this.amountdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // amountaftrpromotiondgv
+            // 
+            resources.ApplyResources(this.amountaftrpromotiondgv, "amountaftrpromotiondgv");
+            this.amountaftrpromotiondgv.Name = "amountaftrpromotiondgv";
+            this.amountaftrpromotiondgv.ReadOnly = true;
+            this.amountaftrpromotiondgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // promotionpercentagedgv
+            // 
+            resources.ApplyResources(this.promotionpercentagedgv, "promotionpercentagedgv");
+            this.promotionpercentagedgv.Name = "promotionpercentagedgv";
+            this.promotionpercentagedgv.ReadOnly = true;
+            this.promotionpercentagedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // datedgv
+            // 
+            resources.ApplyResources(this.datedgv, "datedgv");
+            this.datedgv.Name = "datedgv";
+            this.datedgv.ReadOnly = true;
+            this.datedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // iddefaultdgv
             // 
             resources.ApplyResources(this.iddefaultdgv, "iddefaultdgv");
             this.iddefaultdgv.Name = "iddefaultdgv";
             this.iddefaultdgv.ReadOnly = true;
+            this.iddefaultdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // filenodefaultdgv
             // 
             resources.ApplyResources(this.filenodefaultdgv, "filenodefaultdgv");
             this.filenodefaultdgv.Name = "filenodefaultdgv";
             this.filenodefaultdgv.ReadOnly = true;
+            this.filenodefaultdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // defaulterdgv
             // 
             resources.ApplyResources(this.defaulterdgv, "defaulterdgv");
             this.defaulterdgv.Name = "defaulterdgv";
             this.defaulterdgv.ReadOnly = true;
+            this.defaulterdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // familynamedefaultdgv
             // 
             resources.ApplyResources(this.familynamedefaultdgv, "familynamedefaultdgv");
             this.familynamedefaultdgv.Name = "familynamedefaultdgv";
             this.familynamedefaultdgv.ReadOnly = true;
+            this.familynamedefaultdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // amountdefaultdgv
             // 

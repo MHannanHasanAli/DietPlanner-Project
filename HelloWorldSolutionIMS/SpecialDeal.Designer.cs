@@ -44,14 +44,6 @@
             this.promotioncodesearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.promotionnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.promotioncodedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.promotionpercentagedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startdatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enddatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nutritionistdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.branchdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +67,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.promotionpercentage = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promotionnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promotioncodedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promotionpercentagedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startdatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enddatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nutritionistdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.branchdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -86,22 +86,21 @@
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.panel1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.Add);
             this.panel1.Controls.Add(this.search);
@@ -110,17 +109,18 @@
             this.panel1.Controls.Add(this.promotioncodesearch);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.guna2DataGridView1);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // Add
             // 
-            resources.ApplyResources(this.Add, "Add");
             this.Add.AutoRoundedCorners = true;
             this.Add.BorderRadius = 21;
             this.Add.CausesValidation = false;
             this.Add.CheckedState.Parent = this.Add;
             this.Add.CustomImages.Parent = this.Add;
             this.Add.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Add, "Add");
             this.Add.ForeColor = System.Drawing.Color.White;
             this.Add.HoverState.Parent = this.Add;
             this.Add.Name = "Add";
@@ -129,13 +129,13 @@
             // 
             // search
             // 
-            resources.ApplyResources(this.search, "search");
             this.search.AutoRoundedCorners = true;
             this.search.BorderRadius = 21;
             this.search.CausesValidation = false;
             this.search.CheckedState.Parent = this.search;
             this.search.CustomImages.Parent = this.search;
             this.search.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.search, "search");
             this.search.ForeColor = System.Drawing.Color.White;
             this.search.HoverState.Parent = this.search;
             this.search.Name = "search";
@@ -144,7 +144,6 @@
             // 
             // promotionnamesearch
             // 
-            resources.ApplyResources(this.promotionnamesearch, "promotionnamesearch");
             this.promotionnamesearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.promotionnamesearch.DefaultText = "";
             this.promotionnamesearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -154,6 +153,7 @@
             this.promotionnamesearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.promotionnamesearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotionnamesearch.FocusedState.Parent = this.promotionnamesearch;
+            resources.ApplyResources(this.promotionnamesearch, "promotionnamesearch");
             this.promotionnamesearch.ForeColor = System.Drawing.Color.Black;
             this.promotionnamesearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotionnamesearch.HoverState.Parent = this.promotionnamesearch;
@@ -170,7 +170,6 @@
             // 
             // promotioncodesearch
             // 
-            resources.ApplyResources(this.promotioncodesearch, "promotioncodesearch");
             this.promotioncodesearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.promotioncodesearch.DefaultText = "";
             this.promotioncodesearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -180,6 +179,7 @@
             this.promotioncodesearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.promotioncodesearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotioncodesearch.FocusedState.Parent = this.promotioncodesearch;
+            resources.ApplyResources(this.promotioncodesearch, "promotioncodesearch");
             this.promotioncodesearch.ForeColor = System.Drawing.Color.Black;
             this.promotioncodesearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotioncodesearch.HoverState.Parent = this.promotioncodesearch;
@@ -196,7 +196,6 @@
             // 
             // guna2DataGridView1
             // 
-            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -213,6 +212,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddgv,
             this.promotionnamedgv,
@@ -265,77 +265,36 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // iddgv
-            // 
-            resources.ApplyResources(this.iddgv, "iddgv");
-            this.iddgv.Name = "iddgv";
-            // 
-            // promotionnamedgv
-            // 
-            resources.ApplyResources(this.promotionnamedgv, "promotionnamedgv");
-            this.promotionnamedgv.Name = "promotionnamedgv";
-            // 
-            // promotioncodedgv
-            // 
-            resources.ApplyResources(this.promotioncodedgv, "promotioncodedgv");
-            this.promotioncodedgv.Name = "promotioncodedgv";
-            // 
-            // promotionpercentagedgv
-            // 
-            resources.ApplyResources(this.promotionpercentagedgv, "promotionpercentagedgv");
-            this.promotionpercentagedgv.Name = "promotionpercentagedgv";
-            // 
-            // startdatedgv
-            // 
-            resources.ApplyResources(this.startdatedgv, "startdatedgv");
-            this.startdatedgv.Name = "startdatedgv";
-            // 
-            // enddatedgv
-            // 
-            resources.ApplyResources(this.enddatedgv, "enddatedgv");
-            this.enddatedgv.Name = "enddatedgv";
-            // 
-            // nutritionistdgv
-            // 
-            resources.ApplyResources(this.nutritionistdgv, "nutritionistdgv");
-            this.nutritionistdgv.Name = "nutritionistdgv";
-            // 
-            // branchdgv
-            // 
-            resources.ApplyResources(this.branchdgv, "branchdgv");
-            this.branchdgv.Name = "branchdgv";
-            // 
             // contextMenuStrip1
             // 
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // editToolStripMenuItem
             // 
-            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
-            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.panel2);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.nutritionist);
             this.panel2.Controls.Add(this.Backtodeal);
@@ -355,16 +314,17 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.promotionpercentage);
             this.panel2.Controls.Add(this.label10);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // nutritionist
             // 
-            resources.ApplyResources(this.nutritionist, "nutritionist");
             this.nutritionist.BackColor = System.Drawing.Color.Transparent;
             this.nutritionist.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.nutritionist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nutritionist.FocusedColor = System.Drawing.Color.Empty;
             this.nutritionist.FocusedState.Parent = this.nutritionist;
+            resources.ApplyResources(this.nutritionist, "nutritionist");
             this.nutritionist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.nutritionist.FormattingEnabled = true;
             this.nutritionist.HoverState.Parent = this.nutritionist;
@@ -374,13 +334,13 @@
             // 
             // Backtodeal
             // 
-            resources.ApplyResources(this.Backtodeal, "Backtodeal");
             this.Backtodeal.AutoRoundedCorners = true;
             this.Backtodeal.BorderRadius = 21;
             this.Backtodeal.CausesValidation = false;
             this.Backtodeal.CheckedState.Parent = this.Backtodeal;
             this.Backtodeal.CustomImages.Parent = this.Backtodeal;
             this.Backtodeal.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Backtodeal, "Backtodeal");
             this.Backtodeal.ForeColor = System.Drawing.Color.White;
             this.Backtodeal.HoverState.Parent = this.Backtodeal;
             this.Backtodeal.Name = "Backtodeal";
@@ -389,13 +349,13 @@
             // 
             // save
             // 
-            resources.ApplyResources(this.save, "save");
             this.save.AutoRoundedCorners = true;
             this.save.BorderRadius = 21;
             this.save.CausesValidation = false;
             this.save.CheckedState.Parent = this.save;
             this.save.CustomImages.Parent = this.save;
             this.save.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.save, "save");
             this.save.ForeColor = System.Drawing.Color.White;
             this.save.HoverState.Parent = this.save;
             this.save.Name = "save";
@@ -404,7 +364,6 @@
             // 
             // branch
             // 
-            resources.ApplyResources(this.branch, "branch");
             this.branch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.branch.DefaultText = "";
             this.branch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -414,6 +373,7 @@
             this.branch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.branch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.branch.FocusedState.Parent = this.branch;
+            resources.ApplyResources(this.branch, "branch");
             this.branch.ForeColor = System.Drawing.Color.Black;
             this.branch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.branch.HoverState.Parent = this.branch;
@@ -435,7 +395,6 @@
             // 
             // promotiondetails
             // 
-            resources.ApplyResources(this.promotiondetails, "promotiondetails");
             this.promotiondetails.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.promotiondetails.DefaultText = "";
             this.promotiondetails.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -447,6 +406,7 @@
             this.promotiondetails.FocusedState.Parent = this.promotiondetails;
             this.promotiondetails.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotiondetails.HoverState.Parent = this.promotiondetails;
+            resources.ApplyResources(this.promotiondetails, "promotiondetails");
             this.promotiondetails.Multiline = true;
             this.promotiondetails.Name = "promotiondetails";
             this.promotiondetails.PasswordChar = '\0';
@@ -456,14 +416,14 @@
             // 
             // enddate
             // 
-            resources.ApplyResources(this.enddate, "enddate");
             this.enddate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            resources.ApplyResources(this.enddate, "enddate");
             this.enddate.Name = "enddate";
             // 
             // startdate
             // 
-            resources.ApplyResources(this.startdate, "startdate");
             this.startdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            resources.ApplyResources(this.startdate, "startdate");
             this.startdate.Name = "startdate";
             // 
             // label1
@@ -483,7 +443,6 @@
             // 
             // promotionname
             // 
-            resources.ApplyResources(this.promotionname, "promotionname");
             this.promotionname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.promotionname.DefaultText = "";
             this.promotionname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -493,6 +452,7 @@
             this.promotionname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.promotionname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotionname.FocusedState.Parent = this.promotionname;
+            resources.ApplyResources(this.promotionname, "promotionname");
             this.promotionname.ForeColor = System.Drawing.Color.Black;
             this.promotionname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotionname.HoverState.Parent = this.promotionname;
@@ -509,7 +469,6 @@
             // 
             // promotioncode
             // 
-            resources.ApplyResources(this.promotioncode, "promotioncode");
             this.promotioncode.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.promotioncode.DefaultText = "";
             this.promotioncode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -519,6 +478,7 @@
             this.promotioncode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.promotioncode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotioncode.FocusedState.Parent = this.promotioncode;
+            resources.ApplyResources(this.promotioncode, "promotioncode");
             this.promotioncode.ForeColor = System.Drawing.Color.Black;
             this.promotioncode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotioncode.HoverState.Parent = this.promotioncode;
@@ -535,7 +495,6 @@
             // 
             // promotionpercentage
             // 
-            resources.ApplyResources(this.promotionpercentage, "promotionpercentage");
             this.promotionpercentage.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.promotionpercentage.DefaultText = "";
             this.promotionpercentage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -545,6 +504,7 @@
             this.promotionpercentage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.promotionpercentage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotionpercentage.FocusedState.Parent = this.promotionpercentage;
+            resources.ApplyResources(this.promotionpercentage, "promotionpercentage");
             this.promotionpercentage.ForeColor = System.Drawing.Color.Black;
             this.promotionpercentage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.promotionpercentage.HoverState.Parent = this.promotionpercentage;
@@ -559,6 +519,54 @@
             // 
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
+            // 
+            // iddgv
+            // 
+            resources.ApplyResources(this.iddgv, "iddgv");
+            this.iddgv.Name = "iddgv";
+            this.iddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // promotionnamedgv
+            // 
+            resources.ApplyResources(this.promotionnamedgv, "promotionnamedgv");
+            this.promotionnamedgv.Name = "promotionnamedgv";
+            this.promotionnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // promotioncodedgv
+            // 
+            resources.ApplyResources(this.promotioncodedgv, "promotioncodedgv");
+            this.promotioncodedgv.Name = "promotioncodedgv";
+            this.promotioncodedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // promotionpercentagedgv
+            // 
+            resources.ApplyResources(this.promotionpercentagedgv, "promotionpercentagedgv");
+            this.promotionpercentagedgv.Name = "promotionpercentagedgv";
+            this.promotionpercentagedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // startdatedgv
+            // 
+            resources.ApplyResources(this.startdatedgv, "startdatedgv");
+            this.startdatedgv.Name = "startdatedgv";
+            this.startdatedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // enddatedgv
+            // 
+            resources.ApplyResources(this.enddatedgv, "enddatedgv");
+            this.enddatedgv.Name = "enddatedgv";
+            this.enddatedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nutritionistdgv
+            // 
+            resources.ApplyResources(this.nutritionistdgv, "nutritionistdgv");
+            this.nutritionistdgv.Name = "nutritionistdgv";
+            this.nutritionistdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // branchdgv
+            // 
+            resources.ApplyResources(this.branchdgv, "branchdgv");
+            this.branchdgv.Name = "branchdgv";
+            this.branchdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // SpecialDeal
             // 

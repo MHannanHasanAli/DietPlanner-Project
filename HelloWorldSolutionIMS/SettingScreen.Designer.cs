@@ -31,18 +31,18 @@ namespace HelloWorldSolutionIMS
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingScreen));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDatabaseSettings = new System.Windows.Forms.Button();
             this.btnUserSettings = new System.Windows.Forms.Button();
@@ -130,8 +130,6 @@ namespace HelloWorldSolutionIMS
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.Deletegc = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView4 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
@@ -148,8 +146,6 @@ namespace HelloWorldSolutionIMS
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.useriddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
@@ -213,6 +209,10 @@ namespace HelloWorldSolutionIMS
             this.label29 = new System.Windows.Forms.Label();
             this.selectedpanel = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
+            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.useriddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagridview1)).BeginInit();
@@ -245,10 +245,10 @@ namespace HelloWorldSolutionIMS
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel1.Controls.Add(this.btnDatabaseSettings);
             this.panel1.Controls.Add(this.btnUserSettings);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Name = "panel1";
             // 
@@ -268,7 +268,6 @@ namespace HelloWorldSolutionIMS
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.Datagridview1);
             this.panel2.Controls.Add(this.label6);
@@ -284,51 +283,52 @@ namespace HelloWorldSolutionIMS
             this.panel2.Controls.Add(this.txtName);
             this.panel2.Controls.Add(this.txtPassword);
             this.panel2.Controls.Add(this.txtConfirmPassword);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.Name = "panel2";
             // 
             // Datagridview1
             // 
-            resources.ApplyResources(this.Datagridview1, "Datagridview1");
             this.Datagridview1.AllowUserToAddRows = false;
             this.Datagridview1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.Datagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Datagridview1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Datagridview1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Datagridview1.BackgroundColor = System.Drawing.Color.White;
             this.Datagridview1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Datagridview1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Datagridview1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Datagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Datagridview1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.Datagridview1, "Datagridview1");
             this.Datagridview1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NameGV,
             this.UsernameGV,
             this.PasswordGV,
             this.RoleGV});
             this.Datagridview1.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Datagridview1.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Datagridview1.DefaultCellStyle = dataGridViewCellStyle3;
             this.Datagridview1.EnableHeadersVisualStyles = false;
             this.Datagridview1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Datagridview1.Name = "Datagridview1";
             this.Datagridview1.ReadOnly = true;
             this.Datagridview1.RowHeadersVisible = false;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Datagridview1.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Datagridview1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Datagridview1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Datagridview1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.Datagridview1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -379,23 +379,23 @@ namespace HelloWorldSolutionIMS
             // 
             // contextMenuStrip1
             // 
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // editToolStripMenuItem
             // 
-            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
-            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // label6
@@ -411,9 +411,9 @@ namespace HelloWorldSolutionIMS
             // 
             // btnCancel
             // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.IndianRed;
             this.btnCancel.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -433,9 +433,9 @@ namespace HelloWorldSolutionIMS
             // 
             // btnSave
             // 
-            resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnSave.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Name = "btnSave";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -460,11 +460,11 @@ namespace HelloWorldSolutionIMS
             // 
             // cboRole
             // 
-            resources.ApplyResources(this.cboRole, "cboRole");
             this.cboRole.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cboRole.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboRole.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.cboRole, "cboRole");
             this.cboRole.ForeColor = System.Drawing.Color.White;
             this.cboRole.FormattingEnabled = true;
             this.cboRole.Items.AddRange(new object[] {
@@ -490,7 +490,6 @@ namespace HelloWorldSolutionIMS
             // 
             // DatabaseSettingPanel
             // 
-            resources.ApplyResources(this.DatabaseSettingPanel, "DatabaseSettingPanel");
             this.DatabaseSettingPanel.BackColor = System.Drawing.Color.White;
             this.DatabaseSettingPanel.Controls.Add(this.back);
             this.DatabaseSettingPanel.Controls.Add(this.label8);
@@ -500,17 +499,18 @@ namespace HelloWorldSolutionIMS
             this.DatabaseSettingPanel.Controls.Add(this.btnRestoreBrowse);
             this.DatabaseSettingPanel.Controls.Add(this.btnRestore);
             this.DatabaseSettingPanel.Controls.Add(this.btnBackupBrowse);
+            resources.ApplyResources(this.DatabaseSettingPanel, "DatabaseSettingPanel");
             this.DatabaseSettingPanel.Name = "DatabaseSettingPanel";
             // 
             // back
             // 
-            resources.ApplyResources(this.back, "back");
             this.back.AutoRoundedCorners = true;
             this.back.BorderRadius = 21;
             this.back.CausesValidation = false;
             this.back.CheckedState.Parent = this.back;
             this.back.CustomImages.Parent = this.back;
             this.back.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.back, "back");
             this.back.ForeColor = System.Drawing.Color.White;
             this.back.HoverState.Parent = this.back;
             this.back.Name = "back";
@@ -562,10 +562,10 @@ namespace HelloWorldSolutionIMS
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.btnClose);
             this.panel3.Controls.Add(this.tabControl1);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -581,7 +581,6 @@ namespace HelloWorldSolutionIMS
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.UserSettings);
             this.tabControl1.Controls.Add(this.DatabaseSettings);
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -592,33 +591,33 @@ namespace HelloWorldSolutionIMS
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // UserSettings
             // 
-            resources.ApplyResources(this.UserSettings, "UserSettings");
             this.UserSettings.Controls.Add(this.panel2);
+            resources.ApplyResources(this.UserSettings, "UserSettings");
             this.UserSettings.Name = "UserSettings";
             this.UserSettings.UseVisualStyleBackColor = true;
             // 
             // DatabaseSettings
             // 
-            resources.ApplyResources(this.DatabaseSettings, "DatabaseSettings");
             this.DatabaseSettings.Controls.Add(this.DatabaseSettingPanel);
+            resources.ApplyResources(this.DatabaseSettings, "DatabaseSettings");
             this.DatabaseSettings.Name = "DatabaseSettings";
             this.DatabaseSettings.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.panel4);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.importsettings);
             this.panel4.Controls.Add(this.Colorsetting);
@@ -653,17 +652,18 @@ namespace HelloWorldSolutionIMS
             this.panel4.Controls.Add(this.branch);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.companyname);
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // importsettings
             // 
-            resources.ApplyResources(this.importsettings, "importsettings");
             this.importsettings.AutoRoundedCorners = true;
             this.importsettings.BorderRadius = 21;
             this.importsettings.CausesValidation = false;
             this.importsettings.CheckedState.Parent = this.importsettings;
             this.importsettings.CustomImages.Parent = this.importsettings;
             this.importsettings.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.importsettings, "importsettings");
             this.importsettings.ForeColor = System.Drawing.Color.White;
             this.importsettings.HoverState.Parent = this.importsettings;
             this.importsettings.Name = "importsettings";
@@ -672,13 +672,13 @@ namespace HelloWorldSolutionIMS
             // 
             // Colorsetting
             // 
-            resources.ApplyResources(this.Colorsetting, "Colorsetting");
             this.Colorsetting.AutoRoundedCorners = true;
             this.Colorsetting.BorderRadius = 21;
             this.Colorsetting.CausesValidation = false;
             this.Colorsetting.CheckedState.Parent = this.Colorsetting;
             this.Colorsetting.CustomImages.Parent = this.Colorsetting;
             this.Colorsetting.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Colorsetting, "Colorsetting");
             this.Colorsetting.ForeColor = System.Drawing.Color.White;
             this.Colorsetting.HoverState.Parent = this.Colorsetting;
             this.Colorsetting.Name = "Colorsetting";
@@ -687,13 +687,13 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2Button6
             // 
-            resources.ApplyResources(this.guna2Button6, "guna2Button6");
             this.guna2Button6.AutoRoundedCorners = true;
             this.guna2Button6.BorderRadius = 21;
             this.guna2Button6.CausesValidation = false;
             this.guna2Button6.CheckedState.Parent = this.guna2Button6;
             this.guna2Button6.CustomImages.Parent = this.guna2Button6;
             this.guna2Button6.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button6, "guna2Button6");
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.HoverState.Parent = this.guna2Button6;
             this.guna2Button6.Name = "guna2Button6";
@@ -702,13 +702,13 @@ namespace HelloWorldSolutionIMS
             // 
             // modifyuser
             // 
-            resources.ApplyResources(this.modifyuser, "modifyuser");
             this.modifyuser.AutoRoundedCorners = true;
             this.modifyuser.BorderRadius = 16;
             this.modifyuser.CausesValidation = false;
             this.modifyuser.CheckedState.Parent = this.modifyuser;
             this.modifyuser.CustomImages.Parent = this.modifyuser;
             this.modifyuser.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.modifyuser, "modifyuser");
             this.modifyuser.ForeColor = System.Drawing.Color.White;
             this.modifyuser.HoverState.Parent = this.modifyuser;
             this.modifyuser.Name = "modifyuser";
@@ -717,13 +717,13 @@ namespace HelloWorldSolutionIMS
             // 
             // usermanagement
             // 
-            resources.ApplyResources(this.usermanagement, "usermanagement");
             this.usermanagement.AutoRoundedCorners = true;
             this.usermanagement.BorderRadius = 16;
             this.usermanagement.CausesValidation = false;
             this.usermanagement.CheckedState.Parent = this.usermanagement;
             this.usermanagement.CustomImages.Parent = this.usermanagement;
             this.usermanagement.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.usermanagement, "usermanagement");
             this.usermanagement.ForeColor = System.Drawing.Color.White;
             this.usermanagement.HoverState.Parent = this.usermanagement;
             this.usermanagement.Name = "usermanagement";
@@ -737,12 +737,12 @@ namespace HelloWorldSolutionIMS
             // 
             // room4
             // 
-            resources.ApplyResources(this.room4, "room4");
             this.room4.BackColor = System.Drawing.Color.Transparent;
             this.room4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.room4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.room4.FocusedColor = System.Drawing.Color.Empty;
             this.room4.FocusedState.Parent = this.room4;
+            resources.ApplyResources(this.room4, "room4");
             this.room4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.room4.FormattingEnabled = true;
             this.room4.HoverState.Parent = this.room4;
@@ -757,12 +757,12 @@ namespace HelloWorldSolutionIMS
             // 
             // room3
             // 
-            resources.ApplyResources(this.room3, "room3");
             this.room3.BackColor = System.Drawing.Color.Transparent;
             this.room3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.room3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.room3.FocusedColor = System.Drawing.Color.Empty;
             this.room3.FocusedState.Parent = this.room3;
+            resources.ApplyResources(this.room3, "room3");
             this.room3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.room3.FormattingEnabled = true;
             this.room3.HoverState.Parent = this.room3;
@@ -777,12 +777,12 @@ namespace HelloWorldSolutionIMS
             // 
             // room2
             // 
-            resources.ApplyResources(this.room2, "room2");
             this.room2.BackColor = System.Drawing.Color.Transparent;
             this.room2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.room2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.room2.FocusedColor = System.Drawing.Color.Empty;
             this.room2.FocusedState.Parent = this.room2;
+            resources.ApplyResources(this.room2, "room2");
             this.room2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.room2.FormattingEnabled = true;
             this.room2.HoverState.Parent = this.room2;
@@ -797,12 +797,12 @@ namespace HelloWorldSolutionIMS
             // 
             // room1
             // 
-            resources.ApplyResources(this.room1, "room1");
             this.room1.BackColor = System.Drawing.Color.Transparent;
             this.room1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.room1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.room1.FocusedColor = System.Drawing.Color.Empty;
             this.room1.FocusedState.Parent = this.room1;
+            resources.ApplyResources(this.room1, "room1");
             this.room1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.room1.FormattingEnabled = true;
             this.room1.HoverState.Parent = this.room1;
@@ -812,13 +812,13 @@ namespace HelloWorldSolutionIMS
             // 
             // Delete
             // 
-            resources.ApplyResources(this.Delete, "Delete");
             this.Delete.AutoRoundedCorners = true;
             this.Delete.BorderRadius = 16;
             this.Delete.CausesValidation = false;
             this.Delete.CheckedState.Parent = this.Delete;
             this.Delete.CustomImages.Parent = this.Delete;
             this.Delete.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Delete, "Delete");
             this.Delete.ForeColor = System.Drawing.Color.White;
             this.Delete.HoverState.Parent = this.Delete;
             this.Delete.Name = "Delete";
@@ -827,13 +827,13 @@ namespace HelloWorldSolutionIMS
             // 
             // AddNutri
             // 
-            resources.ApplyResources(this.AddNutri, "AddNutri");
             this.AddNutri.AutoRoundedCorners = true;
             this.AddNutri.BorderRadius = 16;
             this.AddNutri.CausesValidation = false;
             this.AddNutri.CheckedState.Parent = this.AddNutri;
             this.AddNutri.CustomImages.Parent = this.AddNutri;
             this.AddNutri.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.AddNutri, "AddNutri");
             this.AddNutri.ForeColor = System.Drawing.Color.White;
             this.AddNutri.HoverState.Parent = this.AddNutri;
             this.AddNutri.Name = "AddNutri";
@@ -842,13 +842,13 @@ namespace HelloWorldSolutionIMS
             // 
             // Dbsetting
             // 
-            resources.ApplyResources(this.Dbsetting, "Dbsetting");
             this.Dbsetting.AutoRoundedCorners = true;
             this.Dbsetting.BorderRadius = 21;
             this.Dbsetting.CausesValidation = false;
             this.Dbsetting.CheckedState.Parent = this.Dbsetting;
             this.Dbsetting.CustomImages.Parent = this.Dbsetting;
             this.Dbsetting.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Dbsetting, "Dbsetting");
             this.Dbsetting.ForeColor = System.Drawing.Color.White;
             this.Dbsetting.HoverState.Parent = this.Dbsetting;
             this.Dbsetting.Name = "Dbsetting";
@@ -857,13 +857,13 @@ namespace HelloWorldSolutionIMS
             // 
             // Save
             // 
-            resources.ApplyResources(this.Save, "Save");
             this.Save.AutoRoundedCorners = true;
             this.Save.BorderRadius = 21;
             this.Save.CausesValidation = false;
             this.Save.CheckedState.Parent = this.Save;
             this.Save.CustomImages.Parent = this.Save;
             this.Save.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Save, "Save");
             this.Save.ForeColor = System.Drawing.Color.White;
             this.Save.HoverState.Parent = this.Save;
             this.Save.Name = "Save";
@@ -877,7 +877,6 @@ namespace HelloWorldSolutionIMS
             // 
             // welcomewords
             // 
-            resources.ApplyResources(this.welcomewords, "welcomewords");
             this.welcomewords.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.welcomewords.DefaultText = "";
             this.welcomewords.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -889,6 +888,7 @@ namespace HelloWorldSolutionIMS
             this.welcomewords.FocusedState.Parent = this.welcomewords;
             this.welcomewords.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.welcomewords.HoverState.Parent = this.welcomewords;
+            resources.ApplyResources(this.welcomewords, "welcomewords");
             this.welcomewords.Multiline = true;
             this.welcomewords.Name = "welcomewords";
             this.welcomewords.PasswordChar = '\0';
@@ -903,7 +903,6 @@ namespace HelloWorldSolutionIMS
             // 
             // trade
             // 
-            resources.ApplyResources(this.trade, "trade");
             this.trade.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.trade.DefaultText = "";
             this.trade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -915,6 +914,7 @@ namespace HelloWorldSolutionIMS
             this.trade.FocusedState.Parent = this.trade;
             this.trade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.trade.HoverState.Parent = this.trade;
+            resources.ApplyResources(this.trade, "trade");
             this.trade.Name = "trade";
             this.trade.PasswordChar = '\0';
             this.trade.PlaceholderText = "";
@@ -929,7 +929,6 @@ namespace HelloWorldSolutionIMS
             // 
             // pobox
             // 
-            resources.ApplyResources(this.pobox, "pobox");
             this.pobox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pobox.DefaultText = "";
             this.pobox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -941,6 +940,7 @@ namespace HelloWorldSolutionIMS
             this.pobox.FocusedState.Parent = this.pobox;
             this.pobox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.pobox.HoverState.Parent = this.pobox;
+            resources.ApplyResources(this.pobox, "pobox");
             this.pobox.Name = "pobox";
             this.pobox.PasswordChar = '\0';
             this.pobox.PlaceholderText = "";
@@ -955,7 +955,6 @@ namespace HelloWorldSolutionIMS
             // 
             // email
             // 
-            resources.ApplyResources(this.email, "email");
             this.email.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.email.DefaultText = "";
             this.email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -967,6 +966,7 @@ namespace HelloWorldSolutionIMS
             this.email.FocusedState.Parent = this.email;
             this.email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.email.HoverState.Parent = this.email;
+            resources.ApplyResources(this.email, "email");
             this.email.Name = "email";
             this.email.PasswordChar = '\0';
             this.email.PlaceholderText = "";
@@ -980,7 +980,6 @@ namespace HelloWorldSolutionIMS
             // 
             // mobile
             // 
-            resources.ApplyResources(this.mobile, "mobile");
             this.mobile.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.mobile.DefaultText = "";
             this.mobile.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -992,6 +991,7 @@ namespace HelloWorldSolutionIMS
             this.mobile.FocusedState.Parent = this.mobile;
             this.mobile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.mobile.HoverState.Parent = this.mobile;
+            resources.ApplyResources(this.mobile, "mobile");
             this.mobile.Name = "mobile";
             this.mobile.PasswordChar = '\0';
             this.mobile.PlaceholderText = "";
@@ -1006,7 +1006,6 @@ namespace HelloWorldSolutionIMS
             // 
             // landline
             // 
-            resources.ApplyResources(this.landline, "landline");
             this.landline.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.landline.DefaultText = "";
             this.landline.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1018,6 +1017,7 @@ namespace HelloWorldSolutionIMS
             this.landline.FocusedState.Parent = this.landline;
             this.landline.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.landline.HoverState.Parent = this.landline;
+            resources.ApplyResources(this.landline, "landline");
             this.landline.Name = "landline";
             this.landline.PasswordChar = '\0';
             this.landline.PlaceholderText = "";
@@ -1032,7 +1032,6 @@ namespace HelloWorldSolutionIMS
             // 
             // branch
             // 
-            resources.ApplyResources(this.branch, "branch");
             this.branch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.branch.DefaultText = "";
             this.branch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1044,6 +1043,7 @@ namespace HelloWorldSolutionIMS
             this.branch.FocusedState.Parent = this.branch;
             this.branch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.branch.HoverState.Parent = this.branch;
+            resources.ApplyResources(this.branch, "branch");
             this.branch.Name = "branch";
             this.branch.PasswordChar = '\0';
             this.branch.PlaceholderText = "";
@@ -1057,7 +1057,6 @@ namespace HelloWorldSolutionIMS
             // 
             // companyname
             // 
-            resources.ApplyResources(this.companyname, "companyname");
             this.companyname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.companyname.DefaultText = "";
             this.companyname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1069,6 +1068,7 @@ namespace HelloWorldSolutionIMS
             this.companyname.FocusedState.Parent = this.companyname;
             this.companyname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.companyname.HoverState.Parent = this.companyname;
+            resources.ApplyResources(this.companyname, "companyname");
             this.companyname.Name = "companyname";
             this.companyname.PasswordChar = '\0';
             this.companyname.PlaceholderText = "";
@@ -1077,31 +1077,31 @@ namespace HelloWorldSolutionIMS
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.panel5);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.guna2Button1);
             this.panel5.Controls.Add(this.ADD);
             this.panel5.Controls.Add(this.label35);
             this.panel5.Controls.Add(this.label37);
             this.panel5.Controls.Add(this.nutriname);
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // guna2Button1
             // 
-            resources.ApplyResources(this.guna2Button1, "guna2Button1");
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BorderRadius = 21;
             this.guna2Button1.CausesValidation = false;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button1, "guna2Button1");
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Name = "guna2Button1";
@@ -1110,13 +1110,13 @@ namespace HelloWorldSolutionIMS
             // 
             // ADD
             // 
-            resources.ApplyResources(this.ADD, "ADD");
             this.ADD.AutoRoundedCorners = true;
             this.ADD.BorderRadius = 21;
             this.ADD.CausesValidation = false;
             this.ADD.CheckedState.Parent = this.ADD;
             this.ADD.CustomImages.Parent = this.ADD;
             this.ADD.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.ADD, "ADD");
             this.ADD.ForeColor = System.Drawing.Color.White;
             this.ADD.HoverState.Parent = this.ADD;
             this.ADD.Name = "ADD";
@@ -1135,7 +1135,6 @@ namespace HelloWorldSolutionIMS
             // 
             // nutriname
             // 
-            resources.ApplyResources(this.nutriname, "nutriname");
             this.nutriname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nutriname.DefaultText = "";
             this.nutriname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1147,6 +1146,7 @@ namespace HelloWorldSolutionIMS
             this.nutriname.FocusedState.Parent = this.nutriname;
             this.nutriname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nutriname.HoverState.Parent = this.nutriname;
+            resources.ApplyResources(this.nutriname, "nutriname");
             this.nutriname.Name = "nutriname";
             this.nutriname.PasswordChar = '\0';
             this.nutriname.PlaceholderText = "";
@@ -1155,19 +1155,19 @@ namespace HelloWorldSolutionIMS
             // 
             // tabPage3
             // 
-            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Controls.Add(this.panel6);
+            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.label39);
             this.panel6.Controls.Add(this.guna2Button3);
             this.panel6.Controls.Add(this.Deletegc);
             this.panel6.Controls.Add(this.guna2DataGridView4);
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
             // label39
@@ -1177,13 +1177,13 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2Button3
             // 
-            resources.ApplyResources(this.guna2Button3, "guna2Button3");
             this.guna2Button3.AutoRoundedCorners = true;
             this.guna2Button3.BorderRadius = 21;
             this.guna2Button3.CausesValidation = false;
             this.guna2Button3.CheckedState.Parent = this.guna2Button3;
             this.guna2Button3.CustomImages.Parent = this.guna2Button3;
             this.guna2Button3.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button3, "guna2Button3");
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
             this.guna2Button3.Name = "guna2Button3";
@@ -1192,13 +1192,13 @@ namespace HelloWorldSolutionIMS
             // 
             // Deletegc
             // 
-            resources.ApplyResources(this.Deletegc, "Deletegc");
             this.Deletegc.AutoRoundedCorners = true;
             this.Deletegc.BorderRadius = 21;
             this.Deletegc.CausesValidation = false;
             this.Deletegc.CheckedState.Parent = this.Deletegc;
             this.Deletegc.CustomImages.Parent = this.Deletegc;
             this.Deletegc.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Deletegc, "Deletegc");
             this.Deletegc.ForeColor = System.Drawing.Color.White;
             this.Deletegc.HoverState.Parent = this.Deletegc;
             this.Deletegc.Name = "Deletegc";
@@ -1207,45 +1207,45 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2DataGridView4
             // 
-            resources.ApplyResources(this.guna2DataGridView4, "guna2DataGridView4");
             this.guna2DataGridView4.AllowUserToAddRows = false;
             this.guna2DataGridView4.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView4.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView4.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            resources.ApplyResources(this.guna2DataGridView4, "guna2DataGridView4");
             this.guna2DataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddgv,
             this.namedgv});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView4.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView4.DefaultCellStyle = dataGridViewCellStyle7;
             this.guna2DataGridView4.EnableHeadersVisualStyles = false;
             this.guna2DataGridView4.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView4.Name = "guna2DataGridView4";
             this.guna2DataGridView4.ReadOnly = true;
             this.guna2DataGridView4.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.guna2DataGridView4.RowTemplate.Height = 24;
             this.guna2DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView4.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
@@ -1271,28 +1271,15 @@ namespace HelloWorldSolutionIMS
             this.guna2DataGridView4.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView4.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // iddgv
-            // 
-            resources.ApplyResources(this.iddgv, "iddgv");
-            this.iddgv.Name = "iddgv";
-            this.iddgv.ReadOnly = true;
-            // 
-            // namedgv
-            // 
-            resources.ApplyResources(this.namedgv, "namedgv");
-            this.namedgv.Name = "namedgv";
-            this.namedgv.ReadOnly = true;
-            // 
             // tabPage4
             // 
-            resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.Controls.Add(this.panel7);
+            resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // panel7
             // 
-            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.label23);
             this.panel7.Controls.Add(this.password);
@@ -1301,6 +1288,7 @@ namespace HelloWorldSolutionIMS
             this.panel7.Controls.Add(this.label21);
             this.panel7.Controls.Add(this.label22);
             this.panel7.Controls.Add(this.username);
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
             // label23
@@ -1310,7 +1298,6 @@ namespace HelloWorldSolutionIMS
             // 
             // password
             // 
-            resources.ApplyResources(this.password, "password");
             this.password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.password.DefaultText = "";
             this.password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1322,6 +1309,7 @@ namespace HelloWorldSolutionIMS
             this.password.FocusedState.Parent = this.password;
             this.password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.password.HoverState.Parent = this.password;
+            resources.ApplyResources(this.password, "password");
             this.password.Name = "password";
             this.password.PasswordChar = '\0';
             this.password.PlaceholderText = "";
@@ -1330,13 +1318,13 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2Button2
             // 
-            resources.ApplyResources(this.guna2Button2, "guna2Button2");
             this.guna2Button2.AutoRoundedCorners = true;
             this.guna2Button2.BorderRadius = 21;
             this.guna2Button2.CausesValidation = false;
             this.guna2Button2.CheckedState.Parent = this.guna2Button2;
             this.guna2Button2.CustomImages.Parent = this.guna2Button2;
             this.guna2Button2.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button2, "guna2Button2");
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Name = "guna2Button2";
@@ -1345,13 +1333,13 @@ namespace HelloWorldSolutionIMS
             // 
             // Adduser
             // 
-            resources.ApplyResources(this.Adduser, "Adduser");
             this.Adduser.AutoRoundedCorners = true;
             this.Adduser.BorderRadius = 21;
             this.Adduser.CausesValidation = false;
             this.Adduser.CheckedState.Parent = this.Adduser;
             this.Adduser.CustomImages.Parent = this.Adduser;
             this.Adduser.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Adduser, "Adduser");
             this.Adduser.ForeColor = System.Drawing.Color.White;
             this.Adduser.HoverState.Parent = this.Adduser;
             this.Adduser.Name = "Adduser";
@@ -1370,7 +1358,6 @@ namespace HelloWorldSolutionIMS
             // 
             // username
             // 
-            resources.ApplyResources(this.username, "username");
             this.username.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.username.DefaultText = "";
             this.username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1382,6 +1369,7 @@ namespace HelloWorldSolutionIMS
             this.username.FocusedState.Parent = this.username;
             this.username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.username.HoverState.Parent = this.username;
+            resources.ApplyResources(this.username, "username");
             this.username.Name = "username";
             this.username.PasswordChar = '\0';
             this.username.PlaceholderText = "";
@@ -1390,31 +1378,31 @@ namespace HelloWorldSolutionIMS
             // 
             // tabPage5
             // 
-            resources.ApplyResources(this.tabPage5, "tabPage5");
             this.tabPage5.Controls.Add(this.panel8);
+            resources.ApplyResources(this.tabPage5, "tabPage5");
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // panel8
             // 
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.edituser);
             this.panel8.Controls.Add(this.label24);
             this.panel8.Controls.Add(this.guna2Button5);
             this.panel8.Controls.Add(this.DeleteUser);
             this.panel8.Controls.Add(this.guna2DataGridView1);
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // edituser
             // 
-            resources.ApplyResources(this.edituser, "edituser");
             this.edituser.AutoRoundedCorners = true;
             this.edituser.BorderRadius = 21;
             this.edituser.CausesValidation = false;
             this.edituser.CheckedState.Parent = this.edituser;
             this.edituser.CustomImages.Parent = this.edituser;
             this.edituser.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.edituser, "edituser");
             this.edituser.ForeColor = System.Drawing.Color.White;
             this.edituser.HoverState.Parent = this.edituser;
             this.edituser.Name = "edituser";
@@ -1428,13 +1416,13 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2Button5
             // 
-            resources.ApplyResources(this.guna2Button5, "guna2Button5");
             this.guna2Button5.AutoRoundedCorners = true;
             this.guna2Button5.BorderRadius = 21;
             this.guna2Button5.CausesValidation = false;
             this.guna2Button5.CheckedState.Parent = this.guna2Button5;
             this.guna2Button5.CustomImages.Parent = this.guna2Button5;
             this.guna2Button5.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button5, "guna2Button5");
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
             this.guna2Button5.HoverState.Parent = this.guna2Button5;
             this.guna2Button5.Name = "guna2Button5";
@@ -1443,13 +1431,13 @@ namespace HelloWorldSolutionIMS
             // 
             // DeleteUser
             // 
-            resources.ApplyResources(this.DeleteUser, "DeleteUser");
             this.DeleteUser.AutoRoundedCorners = true;
             this.DeleteUser.BorderRadius = 21;
             this.DeleteUser.CausesValidation = false;
             this.DeleteUser.CheckedState.Parent = this.DeleteUser;
             this.DeleteUser.CustomImages.Parent = this.DeleteUser;
             this.DeleteUser.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.DeleteUser, "DeleteUser");
             this.DeleteUser.ForeColor = System.Drawing.Color.White;
             this.DeleteUser.HoverState.Parent = this.DeleteUser;
             this.DeleteUser.Name = "DeleteUser";
@@ -1458,45 +1446,45 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2DataGridView1
             // 
-            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.useriddgv,
             this.usernamedgv});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
             this.guna2DataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
@@ -1522,28 +1510,15 @@ namespace HelloWorldSolutionIMS
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // useriddgv
-            // 
-            resources.ApplyResources(this.useriddgv, "useriddgv");
-            this.useriddgv.Name = "useriddgv";
-            this.useriddgv.ReadOnly = true;
-            // 
-            // usernamedgv
-            // 
-            resources.ApplyResources(this.usernamedgv, "usernamedgv");
-            this.usernamedgv.Name = "usernamedgv";
-            this.usernamedgv.ReadOnly = true;
-            // 
             // tabPage6
             // 
-            resources.ApplyResources(this.tabPage6, "tabPage6");
             this.tabPage6.Controls.Add(this.panel9);
+            resources.ApplyResources(this.tabPage6, "tabPage6");
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // panel9
             // 
-            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Controls.Add(this.label25);
             this.panel9.Controls.Add(this.passwordedit);
@@ -1552,6 +1527,7 @@ namespace HelloWorldSolutionIMS
             this.panel9.Controls.Add(this.label26);
             this.panel9.Controls.Add(this.label27);
             this.panel9.Controls.Add(this.usernameedit);
+            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
             // 
             // label25
@@ -1561,7 +1537,6 @@ namespace HelloWorldSolutionIMS
             // 
             // passwordedit
             // 
-            resources.ApplyResources(this.passwordedit, "passwordedit");
             this.passwordedit.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.passwordedit.DefaultText = "";
             this.passwordedit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1573,6 +1548,7 @@ namespace HelloWorldSolutionIMS
             this.passwordedit.FocusedState.Parent = this.passwordedit;
             this.passwordedit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passwordedit.HoverState.Parent = this.passwordedit;
+            resources.ApplyResources(this.passwordedit, "passwordedit");
             this.passwordedit.Name = "passwordedit";
             this.passwordedit.PasswordChar = '\0';
             this.passwordedit.PlaceholderText = "";
@@ -1581,13 +1557,13 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2Button7
             // 
-            resources.ApplyResources(this.guna2Button7, "guna2Button7");
             this.guna2Button7.AutoRoundedCorners = true;
             this.guna2Button7.BorderRadius = 21;
             this.guna2Button7.CausesValidation = false;
             this.guna2Button7.CheckedState.Parent = this.guna2Button7;
             this.guna2Button7.CustomImages.Parent = this.guna2Button7;
             this.guna2Button7.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button7, "guna2Button7");
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.HoverState.Parent = this.guna2Button7;
             this.guna2Button7.Name = "guna2Button7";
@@ -1596,13 +1572,13 @@ namespace HelloWorldSolutionIMS
             // 
             // saveuser
             // 
-            resources.ApplyResources(this.saveuser, "saveuser");
             this.saveuser.AutoRoundedCorners = true;
             this.saveuser.BorderRadius = 21;
             this.saveuser.CausesValidation = false;
             this.saveuser.CheckedState.Parent = this.saveuser;
             this.saveuser.CustomImages.Parent = this.saveuser;
             this.saveuser.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.saveuser, "saveuser");
             this.saveuser.ForeColor = System.Drawing.Color.White;
             this.saveuser.HoverState.Parent = this.saveuser;
             this.saveuser.Name = "saveuser";
@@ -1621,7 +1597,6 @@ namespace HelloWorldSolutionIMS
             // 
             // usernameedit
             // 
-            resources.ApplyResources(this.usernameedit, "usernameedit");
             this.usernameedit.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.usernameedit.DefaultText = "";
             this.usernameedit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1633,6 +1608,7 @@ namespace HelloWorldSolutionIMS
             this.usernameedit.FocusedState.Parent = this.usernameedit;
             this.usernameedit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.usernameedit.HoverState.Parent = this.usernameedit;
+            resources.ApplyResources(this.usernameedit, "usernameedit");
             this.usernameedit.Name = "usernameedit";
             this.usernameedit.PasswordChar = '\0';
             this.usernameedit.PlaceholderText = "";
@@ -1641,30 +1617,30 @@ namespace HelloWorldSolutionIMS
             // 
             // tabPage7
             // 
-            resources.ApplyResources(this.tabPage7, "tabPage7");
             this.tabPage7.Controls.Add(this.panel10);
+            resources.ApplyResources(this.tabPage7, "tabPage7");
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // panel10
             // 
-            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.guna2Button8);
             this.panel10.Controls.Add(this.importmeals);
             this.panel10.Controls.Add(this.guna2Button4);
             this.panel10.Controls.Add(this.downloadingredient);
+            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Name = "panel10";
             // 
             // guna2Button8
             // 
-            resources.ApplyResources(this.guna2Button8, "guna2Button8");
             this.guna2Button8.AutoRoundedCorners = true;
             this.guna2Button8.BorderRadius = 21;
             this.guna2Button8.CausesValidation = false;
             this.guna2Button8.CheckedState.Parent = this.guna2Button8;
             this.guna2Button8.CustomImages.Parent = this.guna2Button8;
             this.guna2Button8.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button8, "guna2Button8");
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
             this.guna2Button8.HoverState.Parent = this.guna2Button8;
             this.guna2Button8.Name = "guna2Button8";
@@ -1673,13 +1649,13 @@ namespace HelloWorldSolutionIMS
             // 
             // importmeals
             // 
-            resources.ApplyResources(this.importmeals, "importmeals");
             this.importmeals.AutoRoundedCorners = true;
             this.importmeals.BorderRadius = 21;
             this.importmeals.CausesValidation = false;
             this.importmeals.CheckedState.Parent = this.importmeals;
             this.importmeals.CustomImages.Parent = this.importmeals;
             this.importmeals.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.importmeals, "importmeals");
             this.importmeals.ForeColor = System.Drawing.Color.White;
             this.importmeals.HoverState.Parent = this.importmeals;
             this.importmeals.Name = "importmeals";
@@ -1688,13 +1664,13 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2Button4
             // 
-            resources.ApplyResources(this.guna2Button4, "guna2Button4");
             this.guna2Button4.AutoRoundedCorners = true;
             this.guna2Button4.BorderRadius = 21;
             this.guna2Button4.CausesValidation = false;
             this.guna2Button4.CheckedState.Parent = this.guna2Button4;
             this.guna2Button4.CustomImages.Parent = this.guna2Button4;
             this.guna2Button4.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button4, "guna2Button4");
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
             this.guna2Button4.Name = "guna2Button4";
@@ -1703,13 +1679,13 @@ namespace HelloWorldSolutionIMS
             // 
             // downloadingredient
             // 
-            resources.ApplyResources(this.downloadingredient, "downloadingredient");
             this.downloadingredient.AutoRoundedCorners = true;
             this.downloadingredient.BorderRadius = 21;
             this.downloadingredient.CausesValidation = false;
             this.downloadingredient.CheckedState.Parent = this.downloadingredient;
             this.downloadingredient.CustomImages.Parent = this.downloadingredient;
             this.downloadingredient.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.downloadingredient, "downloadingredient");
             this.downloadingredient.ForeColor = System.Drawing.Color.White;
             this.downloadingredient.HoverState.Parent = this.downloadingredient;
             this.downloadingredient.Name = "downloadingredient";
@@ -1718,14 +1694,13 @@ namespace HelloWorldSolutionIMS
             // 
             // tabPage8
             // 
-            resources.ApplyResources(this.tabPage8, "tabPage8");
             this.tabPage8.Controls.Add(this.panel11);
+            resources.ApplyResources(this.tabPage8, "tabPage8");
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // panel11
             // 
-            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.Controls.Add(this.guna2TextBox7);
             this.panel11.Controls.Add(this.guna2TextBox4);
@@ -1773,11 +1748,11 @@ namespace HelloWorldSolutionIMS
             this.panel11.Controls.Add(this.label29);
             this.panel11.Controls.Add(this.selectedpanel);
             this.panel11.Controls.Add(this.label28);
+            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Name = "panel11";
             // 
             // guna2TextBox7
             // 
-            resources.ApplyResources(this.guna2TextBox7, "guna2TextBox7");
             this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox7.DefaultText = "";
             this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1787,6 +1762,7 @@ namespace HelloWorldSolutionIMS
             this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox7.FocusedState.Parent = this.guna2TextBox7;
+            resources.ApplyResources(this.guna2TextBox7, "guna2TextBox7");
             this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox7.HoverState.Parent = this.guna2TextBox7;
             this.guna2TextBox7.Name = "guna2TextBox7";
@@ -1798,7 +1774,6 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TextBox4
             // 
-            resources.ApplyResources(this.guna2TextBox4, "guna2TextBox4");
             this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox4.DefaultText = "";
             this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1808,6 +1783,7 @@ namespace HelloWorldSolutionIMS
             this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
+            resources.ApplyResources(this.guna2TextBox4, "guna2TextBox4");
             this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
             this.guna2TextBox4.Name = "guna2TextBox4";
@@ -1819,7 +1795,6 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TextBox8
             // 
-            resources.ApplyResources(this.guna2TextBox8, "guna2TextBox8");
             this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox8.DefaultText = "";
             this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1829,6 +1804,7 @@ namespace HelloWorldSolutionIMS
             this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox8.FocusedState.Parent = this.guna2TextBox8;
+            resources.ApplyResources(this.guna2TextBox8, "guna2TextBox8");
             this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox8.HoverState.Parent = this.guna2TextBox8;
             this.guna2TextBox8.Name = "guna2TextBox8";
@@ -1840,7 +1816,6 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TextBox5
             // 
-            resources.ApplyResources(this.guna2TextBox5, "guna2TextBox5");
             this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox5.DefaultText = "";
             this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1850,6 +1825,7 @@ namespace HelloWorldSolutionIMS
             this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox5.FocusedState.Parent = this.guna2TextBox5;
+            resources.ApplyResources(this.guna2TextBox5, "guna2TextBox5");
             this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox5.HoverState.Parent = this.guna2TextBox5;
             this.guna2TextBox5.Name = "guna2TextBox5";
@@ -1861,7 +1837,6 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TextBox9
             // 
-            resources.ApplyResources(this.guna2TextBox9, "guna2TextBox9");
             this.guna2TextBox9.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox9.DefaultText = "";
             this.guna2TextBox9.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1871,6 +1846,7 @@ namespace HelloWorldSolutionIMS
             this.guna2TextBox9.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox9.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox9.FocusedState.Parent = this.guna2TextBox9;
+            resources.ApplyResources(this.guna2TextBox9, "guna2TextBox9");
             this.guna2TextBox9.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox9.HoverState.Parent = this.guna2TextBox9;
             this.guna2TextBox9.Name = "guna2TextBox9";
@@ -1882,7 +1858,6 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TextBox6
             // 
-            resources.ApplyResources(this.guna2TextBox6, "guna2TextBox6");
             this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox6.DefaultText = "";
             this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1892,6 +1867,7 @@ namespace HelloWorldSolutionIMS
             this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox6.FocusedState.Parent = this.guna2TextBox6;
+            resources.ApplyResources(this.guna2TextBox6, "guna2TextBox6");
             this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox6.HoverState.Parent = this.guna2TextBox6;
             this.guna2TextBox6.Name = "guna2TextBox6";
@@ -1933,9 +1909,9 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TrackBar7
             // 
-            resources.ApplyResources(this.guna2TrackBar7, "guna2TrackBar7");
             this.guna2TrackBar7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2TrackBar7.HoverState.Parent = this.guna2TrackBar7;
+            resources.ApplyResources(this.guna2TrackBar7, "guna2TrackBar7");
             this.guna2TrackBar7.Maximum = 255;
             this.guna2TrackBar7.Name = "guna2TrackBar7";
             this.guna2TrackBar7.ThumbColor = System.Drawing.Color.Blue;
@@ -1944,9 +1920,9 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TrackBar4
             // 
-            resources.ApplyResources(this.guna2TrackBar4, "guna2TrackBar4");
             this.guna2TrackBar4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2TrackBar4.HoverState.Parent = this.guna2TrackBar4;
+            resources.ApplyResources(this.guna2TrackBar4, "guna2TrackBar4");
             this.guna2TrackBar4.Maximum = 255;
             this.guna2TrackBar4.Name = "guna2TrackBar4";
             this.guna2TrackBar4.ThumbColor = System.Drawing.Color.Blue;
@@ -1955,9 +1931,9 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TrackBar8
             // 
-            resources.ApplyResources(this.guna2TrackBar8, "guna2TrackBar8");
             this.guna2TrackBar8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2TrackBar8.HoverState.Parent = this.guna2TrackBar8;
+            resources.ApplyResources(this.guna2TrackBar8, "guna2TrackBar8");
             this.guna2TrackBar8.Maximum = 255;
             this.guna2TrackBar8.Name = "guna2TrackBar8";
             this.guna2TrackBar8.ThumbColor = System.Drawing.Color.Lime;
@@ -1966,9 +1942,9 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TrackBar5
             // 
-            resources.ApplyResources(this.guna2TrackBar5, "guna2TrackBar5");
             this.guna2TrackBar5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2TrackBar5.HoverState.Parent = this.guna2TrackBar5;
+            resources.ApplyResources(this.guna2TrackBar5, "guna2TrackBar5");
             this.guna2TrackBar5.Maximum = 255;
             this.guna2TrackBar5.Name = "guna2TrackBar5";
             this.guna2TrackBar5.ThumbColor = System.Drawing.Color.Lime;
@@ -1977,9 +1953,9 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TrackBar9
             // 
-            resources.ApplyResources(this.guna2TrackBar9, "guna2TrackBar9");
             this.guna2TrackBar9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2TrackBar9.HoverState.Parent = this.guna2TrackBar9;
+            resources.ApplyResources(this.guna2TrackBar9, "guna2TrackBar9");
             this.guna2TrackBar9.Maximum = 255;
             this.guna2TrackBar9.Name = "guna2TrackBar9";
             this.guna2TrackBar9.ThumbColor = System.Drawing.Color.Red;
@@ -1988,9 +1964,9 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TrackBar6
             // 
-            resources.ApplyResources(this.guna2TrackBar6, "guna2TrackBar6");
             this.guna2TrackBar6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2TrackBar6.HoverState.Parent = this.guna2TrackBar6;
+            resources.ApplyResources(this.guna2TrackBar6, "guna2TrackBar6");
             this.guna2TrackBar6.Maximum = 255;
             this.guna2TrackBar6.Name = "guna2TrackBar6";
             this.guna2TrackBar6.ThumbColor = System.Drawing.Color.Red;
@@ -2009,7 +1985,6 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TextBox3
             // 
-            resources.ApplyResources(this.guna2TextBox3, "guna2TextBox3");
             this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox3.DefaultText = "";
             this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -2019,6 +1994,7 @@ namespace HelloWorldSolutionIMS
             this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
+            resources.ApplyResources(this.guna2TextBox3, "guna2TextBox3");
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
             this.guna2TextBox3.Name = "guna2TextBox3";
@@ -2031,7 +2007,6 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TextBox2
             // 
-            resources.ApplyResources(this.guna2TextBox2, "guna2TextBox2");
             this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox2.DefaultText = "";
             this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -2041,6 +2016,7 @@ namespace HelloWorldSolutionIMS
             this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
+            resources.ApplyResources(this.guna2TextBox2, "guna2TextBox2");
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Name = "guna2TextBox2";
@@ -2053,7 +2029,6 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TextBox1
             // 
-            resources.ApplyResources(this.guna2TextBox1, "guna2TextBox1");
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -2063,6 +2038,7 @@ namespace HelloWorldSolutionIMS
             this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            resources.ApplyResources(this.guna2TextBox1, "guna2TextBox1");
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Name = "guna2TextBox1";
@@ -2090,9 +2066,9 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TrackBar3
             // 
-            resources.ApplyResources(this.guna2TrackBar3, "guna2TrackBar3");
             this.guna2TrackBar3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2TrackBar3.HoverState.Parent = this.guna2TrackBar3;
+            resources.ApplyResources(this.guna2TrackBar3, "guna2TrackBar3");
             this.guna2TrackBar3.Maximum = 255;
             this.guna2TrackBar3.Name = "guna2TrackBar3";
             this.guna2TrackBar3.ThumbColor = System.Drawing.Color.Blue;
@@ -2101,9 +2077,9 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TrackBar2
             // 
-            resources.ApplyResources(this.guna2TrackBar2, "guna2TrackBar2");
             this.guna2TrackBar2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2TrackBar2.HoverState.Parent = this.guna2TrackBar2;
+            resources.ApplyResources(this.guna2TrackBar2, "guna2TrackBar2");
             this.guna2TrackBar2.Maximum = 255;
             this.guna2TrackBar2.Name = "guna2TrackBar2";
             this.guna2TrackBar2.ThumbColor = System.Drawing.Color.Lime;
@@ -2112,9 +2088,9 @@ namespace HelloWorldSolutionIMS
             // 
             // guna2TrackBar1
             // 
-            resources.ApplyResources(this.guna2TrackBar1, "guna2TrackBar1");
             this.guna2TrackBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.guna2TrackBar1.HoverState.Parent = this.guna2TrackBar1;
+            resources.ApplyResources(this.guna2TrackBar1, "guna2TrackBar1");
             this.guna2TrackBar1.Maximum = 255;
             this.guna2TrackBar1.Name = "guna2TrackBar1";
             this.guna2TrackBar1.ThumbColor = System.Drawing.Color.Red;
@@ -2128,13 +2104,13 @@ namespace HelloWorldSolutionIMS
             // 
             // SaveSettings
             // 
-            resources.ApplyResources(this.SaveSettings, "SaveSettings");
             this.SaveSettings.AutoRoundedCorners = true;
             this.SaveSettings.BorderRadius = 21;
             this.SaveSettings.CausesValidation = false;
             this.SaveSettings.CheckedState.Parent = this.SaveSettings;
             this.SaveSettings.CustomImages.Parent = this.SaveSettings;
             this.SaveSettings.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.SaveSettings, "SaveSettings");
             this.SaveSettings.ForeColor = System.Drawing.Color.White;
             this.SaveSettings.HoverState.Parent = this.SaveSettings;
             this.SaveSettings.Name = "SaveSettings";
@@ -2158,12 +2134,12 @@ namespace HelloWorldSolutionIMS
             // 
             // underline
             // 
-            resources.ApplyResources(this.underline, "underline");
             this.underline.BackColor = System.Drawing.Color.Transparent;
             this.underline.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.underline.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.underline.FocusedColor = System.Drawing.Color.Empty;
             this.underline.FocusedState.Parent = this.underline;
+            resources.ApplyResources(this.underline, "underline");
             this.underline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.underline.FormattingEnabled = true;
             this.underline.HoverState.Parent = this.underline;
@@ -2176,12 +2152,12 @@ namespace HelloWorldSolutionIMS
             // 
             // itallic
             // 
-            resources.ApplyResources(this.itallic, "itallic");
             this.itallic.BackColor = System.Drawing.Color.Transparent;
             this.itallic.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.itallic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.itallic.FocusedColor = System.Drawing.Color.Empty;
             this.itallic.FocusedState.Parent = this.itallic;
+            resources.ApplyResources(this.itallic, "itallic");
             this.itallic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.itallic.FormattingEnabled = true;
             this.itallic.HoverState.Parent = this.itallic;
@@ -2194,12 +2170,12 @@ namespace HelloWorldSolutionIMS
             // 
             // bold
             // 
-            resources.ApplyResources(this.bold, "bold");
             this.bold.BackColor = System.Drawing.Color.Transparent;
             this.bold.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.bold.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bold.FocusedColor = System.Drawing.Color.Empty;
             this.bold.FocusedState.Parent = this.bold;
+            resources.ApplyResources(this.bold, "bold");
             this.bold.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.bold.FormattingEnabled = true;
             this.bold.HoverState.Parent = this.bold;
@@ -2217,12 +2193,12 @@ namespace HelloWorldSolutionIMS
             // 
             // textsize
             // 
-            resources.ApplyResources(this.textsize, "textsize");
             this.textsize.BackColor = System.Drawing.Color.Transparent;
             this.textsize.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.textsize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.textsize.FocusedColor = System.Drawing.Color.Empty;
             this.textsize.FocusedState.Parent = this.textsize;
+            resources.ApplyResources(this.textsize, "textsize");
             this.textsize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.textsize.FormattingEnabled = true;
             this.textsize.HoverState.Parent = this.textsize;
@@ -2255,13 +2231,13 @@ namespace HelloWorldSolutionIMS
             // 
             // Attach
             // 
-            resources.ApplyResources(this.Attach, "Attach");
             this.Attach.AutoRoundedCorners = true;
             this.Attach.BorderRadius = 16;
             this.Attach.CausesValidation = false;
             this.Attach.CheckedState.Parent = this.Attach;
             this.Attach.CustomImages.Parent = this.Attach;
             this.Attach.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Attach, "Attach");
             this.Attach.ForeColor = System.Drawing.Color.White;
             this.Attach.HoverState.Parent = this.Attach;
             this.Attach.Name = "Attach";
@@ -2270,13 +2246,13 @@ namespace HelloWorldSolutionIMS
             // 
             // ColorClose
             // 
-            resources.ApplyResources(this.ColorClose, "ColorClose");
             this.ColorClose.AutoRoundedCorners = true;
             this.ColorClose.BorderRadius = 21;
             this.ColorClose.CausesValidation = false;
             this.ColorClose.CheckedState.Parent = this.ColorClose;
             this.ColorClose.CustomImages.Parent = this.ColorClose;
             this.ColorClose.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.ColorClose, "ColorClose");
             this.ColorClose.ForeColor = System.Drawing.Color.White;
             this.ColorClose.HoverState.Parent = this.ColorClose;
             this.ColorClose.Name = "ColorClose";
@@ -2302,6 +2278,34 @@ namespace HelloWorldSolutionIMS
             // 
             resources.ApplyResources(this.label28, "label28");
             this.label28.Name = "label28";
+            // 
+            // iddgv
+            // 
+            resources.ApplyResources(this.iddgv, "iddgv");
+            this.iddgv.Name = "iddgv";
+            this.iddgv.ReadOnly = true;
+            this.iddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // namedgv
+            // 
+            resources.ApplyResources(this.namedgv, "namedgv");
+            this.namedgv.Name = "namedgv";
+            this.namedgv.ReadOnly = true;
+            this.namedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // useriddgv
+            // 
+            resources.ApplyResources(this.useriddgv, "useriddgv");
+            this.useriddgv.Name = "useriddgv";
+            this.useriddgv.ReadOnly = true;
+            this.useriddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // usernamedgv
+            // 
+            resources.ApplyResources(this.usernamedgv, "usernamedgv");
+            this.usernamedgv.Name = "usernamedgv";
+            this.usernamedgv.ReadOnly = true;
+            this.usernamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // SettingScreen
             // 
@@ -2429,8 +2433,6 @@ namespace HelloWorldSolutionIMS
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button Deletegc;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iddgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namedgv;
         private Guna.UI2.WinForms.Guna2Button Delete;
         private Guna.UI2.WinForms.Guna2Button AddNutri;
         private System.Windows.Forms.Label label20;
@@ -2456,8 +2458,6 @@ namespace HelloWorldSolutionIMS
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button DeleteUser;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn useriddgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernamedgv;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label25;
@@ -2527,5 +2527,9 @@ namespace HelloWorldSolutionIMS
         private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar6;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iddgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namedgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn useriddgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernamedgv;
     }
 }

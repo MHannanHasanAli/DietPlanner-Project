@@ -172,6 +172,18 @@
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1202, 820</value>
   </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 20</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>متاح</value>
+  </data>
+  <data name="Reserved.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 20</value>
+  </data>
+  <data name="Reserved.Text" xml:space="preserve">
+    <value>محجوز</value>
+  </data>
   <data name="slotlabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 24</value>
   </data>
@@ -231,17 +243,5 @@
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1210, 849</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 20</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>متاح</value>
-  </data>
-  <data name="Reserved.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
-  </data>
-  <data name="Reserved.Text" xml:space="preserve">
-    <value>محجوز</value>
   </data>
 </root>
