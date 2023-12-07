@@ -2552,28 +2552,9 @@ namespace HelloWorldSolutionIMS
 
         }
         private bool simulateDoubleClick = false;
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Check if a single click should be treated as a double click
-            if (simulateDoubleClick)
-            {
 
-                simulateDoubleClick = false;
-            }
-            else
-            {
-                simulateDoubleClick = true;
 
-                Timer timer = new Timer();
-                timer.Interval = SystemInformation.DoubleClickTime; // Use system-defined double-click time
-                timer.Tick += (s, args) =>
-                {
-                    timer.Stop();
-                    simulateDoubleClick = false;
-                };
-                timer.Start();
-            }
-        }
+
         private void guna2DataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             if (e.Control is ComboBox)
@@ -2643,8 +2624,8 @@ namespace HelloWorldSolutionIMS
         }
         private void EditBTN_Click(object sender, EventArgs e)
         {
-            UpdateGroupsC();
-            UpdateGroupsN();
+            //UpdateGroupsC();
+            //UpdateGroupsN();
             edit = 1;
             try
             {
@@ -2656,15 +2637,19 @@ namespace HelloWorldSolutionIMS
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
+                    string temp1 = "", temp2 = "", temp3 = "", temp4 = "";
                     while (reader.Read())
                     {
+
                         // Set the retrieved data into input controls
                         mealar.Text = reader["MealAr"].ToString();
                         mealen.Text = reader["MealEn"].ToString();
-                        groupnar.Text = reader["GroupNAr"].ToString();
-                        groupnen.Text = reader["GroupNEn"].ToString();
-                        groupcar.Text = reader["GroupCAr"].ToString();
-                        groupcen.Text = reader["GroupCEn"].ToString();
+
+                        temp1 = reader["GroupNAr"].ToString();
+                        temp2 = reader["GroupNEn"].ToString();
+                        temp3 = reader["GroupCAr"].ToString();
+                        temp4 = reader["GroupCEn"].ToString();
+
                         calories.Text = reader["CALORIES"].ToString();
                         fats.Text = reader["FATS"].ToString();
                         fibers.Text = reader["FIBERS"].ToString();
@@ -2691,6 +2676,10 @@ namespace HelloWorldSolutionIMS
 
                     //ShowIngredients(guna2DataGridView1, unitdgv, ingredientardgv, ingredientendgv,quantitydgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, potassiumdgv, phosphordgv,waterdgv,magnesiumdgv,sugerdgv,irondgv,iodinedgv,adgv,bdgv);
                     MainClass.con.Close();
+                    groupnar.Text = temp1;
+                    groupnen.Text = temp2;
+                    groupcar.Text = temp3;
+                    groupcen.Text = temp4;
                     extrafunc();
 
                     tabControl1.SelectedIndex = 2;
