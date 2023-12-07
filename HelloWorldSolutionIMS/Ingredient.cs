@@ -1215,30 +1215,32 @@ namespace HelloWorldSolutionIMS
                         string groupEN = worksheet.Cells[row, 5].Value?.ToString();
                         if (string.IsNullOrEmpty(ingredientAR) && !string.IsNullOrEmpty(ingredientEN))
                         {
-                            ingredientAR = ingredientEN;
+                            ingredientAR = "";
                         }
                         else if (string.IsNullOrEmpty(ingredientAR) && string.IsNullOrEmpty(ingredientEN))
                         {
-                            ingredientAR = "Imported";
+                            ingredientAR = "";
+                            ingredientEN = "";
                         }
 
                         if (string.IsNullOrEmpty(ingredientEN) && !string.IsNullOrEmpty(ingredientAR))
                         {
-                            ingredientEN = ingredientAR;
+                            ingredientEN = "";
                         }
 
                         if (string.IsNullOrEmpty(groupAR) && !string.IsNullOrEmpty(groupEN))
                         {
-                            groupAR = groupEN;
+                            groupAR = "Null";
                         }
                         else if (string.IsNullOrEmpty(groupAR) && string.IsNullOrEmpty(groupEN))
                         {
-                            groupAR = "Imported";
+                            groupAR = "Null";
+                            groupEN = "Null";
                         }
 
                         if (string.IsNullOrEmpty(groupEN) && !string.IsNullOrEmpty(groupAR))
                         {
-                            groupEN = groupAR;
+                            groupEN = "Null";
                         }
 
                         float calories, fats, fibers, potassium, water, sugar, calcium, a, protein, carbohydrates, sodium, phosphor, magnesium, iron, iodine, b;
@@ -1266,7 +1268,13 @@ namespace HelloWorldSolutionIMS
                         // Extracting datatype and category
                         string datatypeString = worksheet.Cells[row, 2].Value?.ToString();
                         if (!string.IsNullOrEmpty(datatypeString))
+                        {
                             datatype = datatypeString;
+                        }
+                        else
+                        {
+                            datatype = "";
+                        }
 
                         // The columns from the Excel file are not null or empty, proceed to insert the record
                         string query = "INSERT INTO Ingredient (INGREDIENT_AR, INGREDIENT_EN, GROUP_AR, GROUP_EN, " +

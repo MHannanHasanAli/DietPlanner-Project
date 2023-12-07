@@ -3317,16 +3317,17 @@ namespace HelloWorldSolutionIMS
 
                         if (string.IsNullOrEmpty(mealAr) && !string.IsNullOrEmpty(mealEn))
                         {
-                            mealAr = mealEn;
+                            mealAr = "";
                         }
                         else if (string.IsNullOrEmpty(mealAr) && string.IsNullOrEmpty(mealEn))
                         {
-                            mealAr = "Imported";
+                            mealAr = "";
+                            mealEn = "";
                         }
 
-                        if (string.IsNullOrEmpty(mealEn) && !string.IsNullOrEmpty(mealAr))
+                        else if (string.IsNullOrEmpty(mealEn) && !string.IsNullOrEmpty(mealAr))
                         {
-                            mealEn = mealAr;
+                            mealEn = "";
                         }
 
                         string groupNAr = worksheet.Cells[row, 3].Value?.ToString();
@@ -3441,10 +3442,11 @@ namespace HelloWorldSolutionIMS
                                             conn = 1;
                                         }
                                         SqlCommand cmd2 = new SqlCommand("INSERT INTO GROUPN (Namear, Nameen) " +
-                                            "VALUES (@Namear, @Namear)", MainClass.con);
+                                            "VALUES (@Namear, @Nameen)", MainClass.con);
 
                                         cmd2.Parameters.AddWithValue("@Namear", groupNAr);
-                                        groupNEn = groupNAr;
+                                        cmd2.Parameters.AddWithValue("@Nameen", "Null");
+                                        groupNEn = "Null";
                                         cmd2.ExecuteNonQuery();
 
                                         if (conn == 1)
@@ -3511,10 +3513,11 @@ namespace HelloWorldSolutionIMS
                                             conn = 1;
                                         }
                                         SqlCommand cmd2 = new SqlCommand("INSERT INTO GROUPN (Namear, Nameen) " +
-                                            "VALUES (@Nameen, @Nameen)", MainClass.con);
+                                            "VALUES (@Namear, @Nameen)", MainClass.con);
 
+                                        cmd2.Parameters.AddWithValue("@Namear", "Null");
                                         cmd2.Parameters.AddWithValue("@Nameen", groupNEn);
-                                        groupNAr = groupNEn;
+                                        groupNAr = "Null";
                                         cmd2.ExecuteNonQuery();
 
                                         if (conn == 1)
@@ -3549,7 +3552,11 @@ namespace HelloWorldSolutionIMS
                                 MessageBox.Show(ex.Message);
                             }
                         }
-
+                        else if (groupNAr == null && groupNEn == null)
+                        {
+                            groupNAr = "Null";
+                            groupNEn = "Null";
+                        }
 
                         string groupCAr = worksheet.Cells[row, 5].Value?.ToString();
                         string groupCEn = worksheet.Cells[row, 6].Value?.ToString();
@@ -3663,10 +3670,11 @@ namespace HelloWorldSolutionIMS
                                             conn = 1;
                                         }
                                         SqlCommand cmd2 = new SqlCommand("INSERT INTO GROUPC (Namear, Nameen) " +
-                                            "VALUES (@Namear, @Namear)", MainClass.con);
+                                            "VALUES (@Namear, @Nameen)", MainClass.con);
 
                                         cmd2.Parameters.AddWithValue("@Namear", groupCAr);
-                                        groupCEn = groupCAr;
+                                        cmd2.Parameters.AddWithValue("@Nameen", "Null");
+                                        groupCEn = "Null";
                                         cmd2.ExecuteNonQuery();
 
                                         if (conn == 1)
@@ -3734,10 +3742,11 @@ namespace HelloWorldSolutionIMS
                                             conn = 1;
                                         }
                                         SqlCommand cmd2 = new SqlCommand("INSERT INTO GROUPC (Namear, Nameen) " +
-                                            "VALUES (@Nameen, @Nameen)", MainClass.con);
+                                            "VALUES (@Namear, @Nameen)", MainClass.con);
 
+                                        cmd2.Parameters.AddWithValue("@Namear", "Null");
                                         cmd2.Parameters.AddWithValue("@Nameen", groupCEn);
-                                        groupCAr = groupCEn;
+                                        groupCAr = "Null";
                                         cmd2.ExecuteNonQuery();
 
                                         if (conn == 1)
@@ -3771,6 +3780,11 @@ namespace HelloWorldSolutionIMS
                                 MainClass.con.Close();
                                 MessageBox.Show(ex.Message);
                             }
+                        }
+                        else if (groupCAr == null && groupCEn == null)
+                        {
+                            groupCAr = "Null";
+                            groupCEn = "Null";
                         }
 
                         if (MainClass.con.State != ConnectionState.Open)
