@@ -2663,9 +2663,11 @@ namespace HelloWorldSolutionIMS
 
         private void DietPlan_Load(object sender, EventArgs e)
         {
+
             chart1.Series.Clear();
             chart2.Series.Clear();
             UpdateInstruction();
+            instructionflag = 1;
             try
             {
                 MainClass.con.Open();
@@ -7740,6 +7742,7 @@ namespace HelloWorldSolutionIMS
         private void UpdateChart3(object sender, EventArgs e)
         {
             chart2.Titles.Clear();
+            chart3.Titles.Clear();
 
             // Create a sample DataTable with data (replace this with your data source).
             DataTable dt = new DataTable();
@@ -7801,6 +7804,47 @@ namespace HelloWorldSolutionIMS
 
             // Refresh the chart.
             chart2.Refresh();
+
+            if (chart3.Titles.Count == 0) // Check if there's at least one title
+            {
+                if (languagestatus == 1)
+                {
+                    chart3.Titles.Add("القيمة الغذائية");
+                }
+                else
+                {
+                    chart3.Titles.Add("Nutrient Chart");
+                }
+            }
+
+            if (chart3.Legends.Count == 0) // Check if there's at least one legend
+            {
+                chart3.Legends.Add("Legend");
+                chart3.Legends[0].Alignment = StringAlignment.Center;
+                chart3.Legends[0].Docking = Docking.Bottom;
+            }
+
+            chart3.Titles[0].Alignment = ContentAlignment.TopCenter;
+
+            // Your existing code for chart settings
+            chart3.Legends[0].Enabled = true;
+            chart3.Legends[0].Alignment = StringAlignment.Center;
+            chart3.Legends[0].Docking = Docking.Bottom;
+
+            // Your existing code for chart settings
+            chart3.Series.Clear();
+            chart3.Palette = ChartColorPalette.Pastel;
+
+            Series series2 = new Series("Series1");
+            series2.Points.DataBind(dt.AsEnumerable(), "Nutrient", "Value", "");
+
+            series2.ChartType = SeriesChartType.Pie;
+            chart3.Series.Add(series2);
+            chart3.Series[0].Label = "#PERCENT{P0}";
+            chart3.Series[0].LegendText = "#VALX";
+
+            // Refresh the chart.
+            chart3.Refresh();
 
         }
         private void UpdateChart2(object sender, EventArgs e)
@@ -11267,6 +11311,303 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView20.Rows.RemoveAt(e.RowIndex);
             }
             CheckRows(guna2DataGridView20);
+        }
+
+        static int instructionflag = 0;
+        private void instructionnew_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (instructionflag == 1)
+            {
+
+
+                string selectedValue = instructionnew.SelectedValue.ToString();
+
+                SqlCommand cmd;
+                try
+                {
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
+
+                    // Retrieve the selected ID from the ComboBox
+                    int selectedInstructionID = Convert.ToInt32(instructionnew.SelectedValue);
+
+                    // Use the selected ID to fetch the corresponding instruction
+                    cmd = new SqlCommand("SELECT InstructionContent FROM INSTRUCTION WHERE ID = @SelectedID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@SelectedID", selectedValue);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    // Check if any rows are returned
+                    if (dt.Rows.Count > 0)
+                    {
+                        // Assuming there's only one row, you can use the first row
+                        string instructionContent = dt.Rows[0].Field<string>("InstructionContent");
+
+                        // Display the instruction content in the TextBox
+                        instructioncontent.Text = instructionContent;
+                    }
+
+
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void NewChartForDailyDataReport(int id)
+        {
+            double fats = 0;
+            double protein = 0;
+            double carbohydrates = 0;
+
+            titlecheck = 0;
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT FATS,CARBOHYDRATES,PROTEIN FROM Meal WHERE ID = @MealID", MainClass.con);
+                cmd.Parameters.AddWithValue("@MealID", id);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+
+                        fats = Convert.ToDouble(reader["FATS"]);
+                        protein = Convert.ToDouble(reader["PROTEIN"]);
+                        carbohydrates = Convert.ToDouble(reader["CARBOHYDRATES"]);
+
+                    }
+                    reader.Close();
+
+                    MainClass.con.Close();
+                    //extrafunc();
+
+                    //tabControl1.SelectedIndex = 2;
+                }
+
+
+                MainClass.con.Close();
+
+
+                if (fatsdaily.Text == "")
+                {
+                    fatsdaily.Text = fats.ToString();
+                    proteindaily.Text = protein.ToString();
+                    carbsdaily.Text = carbohydrates.ToString();
+                }
+                else
+                {
+
+                    double Tfats = Convert.ToDouble(fatsdaily.Text);
+                    double Tprotein = Convert.ToDouble(proteindaily.Text);
+                    double Tcarbohydrates = Convert.ToDouble(carbsdaily.Text);
+
+
+                    Tfats = Tfats + fats;
+                    Tprotein = Tprotein + protein;
+                    Tcarbohydrates = Tcarbohydrates + carbohydrates;
+
+
+                    fatsdaily.Text = Tfats.ToString();
+                    proteindaily.Text = Tprotein.ToString();
+                    carbsdaily.Text = Tcarbohydrates.ToString();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void FillDayByChart(int i)
+        {
+            //fatsdaily.Text = "";
+            //proteindaily.Text = "";
+            //carbsdaily.Text = "";
+
+
+            string selectedValue = i.ToString();
+
+            if (selectedValue == "1" || selectedValue == "اليوم الاول")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView13")
+                    {
+                        NewChartForDailyDataReport(item.ID);
+                        DayByChart(chart7);
+                    }
+                }
+            }
+            else if (selectedValue == "2" || selectedValue == "اليوم الثاني")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView15")
+                    {
+                        NewChartForDailyDataReport(item.ID);
+                        DayByChart(chart4);
+                    }
+                }
+            }
+            else if (selectedValue == "3" || selectedValue == "اليوم الثالث")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView16")
+                    {
+                        NewChartForDailyDataReport(item.ID);
+                        DayByChart(chart5);
+                    }
+                }
+            }
+            else if (selectedValue == "4" || selectedValue == "اليوم الرابع ")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView17")
+                    {
+                        NewChartForDailyDataReport(item.ID);
+                        DayByChart(chart6);
+                    }
+                }
+            }
+            else if (selectedValue == "5" || selectedValue == "اليوم الخامس")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView18")
+                    {
+                        NewChartForDailyDataReport(item.ID);
+                        DayByChart(chart8);
+                    }
+                }
+            }
+            else if (selectedValue == "6" || selectedValue == "اليوم السادس")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView19")
+                    {
+                        NewChartForDailyDataReport(item.ID);
+                        DayByChart(chart9);
+                    }
+                }
+            }
+            else if (selectedValue == "7" || selectedValue == "اليوم السابع ")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView20")
+                    {
+                        NewChartForDailyDataReport(item.ID);
+                        DayByChart(chart10);
+                    }
+                }
+            }
+
+
+        }
+        private void DayByChart(Chart chart)
+        {
+
+            chart.Titles.Clear();
+
+
+            // Create a sample DataTable with data (replace this with your data source).
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Nutrient", typeof(string));
+            dt.Columns.Add("Value", typeof(double));
+
+            if (fatsd.Text != "")
+            {
+                dt.Rows.Add("Fats", double.Parse(fatsd.Text) * 9);
+            }
+
+            if (proteind.Text != "")
+            {
+                dt.Rows.Add("Protein", double.Parse(proteind.Text) * 4);
+            }
+
+            if (carbsd.Text != "")
+            {
+                dt.Rows.Add("Carbohydrates", double.Parse(carbsd.Text) * 4);
+            }
+
+            if (chart.Titles.Count == 0) // Check if there's at least one title
+            {
+                if (languagestatus == 1)
+                {
+                    chart.Titles.Add("القيمة الغذائية");
+                }
+                else
+                {
+                    chart.Titles.Add("Nutrient Chart");
+                }
+            }
+
+            if (chart.Legends.Count == 0) // Check if there's at least one legend
+            {
+                chart.Legends.Add("Legend");
+                chart.Legends[0].Alignment = StringAlignment.Center;
+                chart.Legends[0].Docking = Docking.Bottom;
+            }
+
+            chart.Titles[0].Alignment = ContentAlignment.TopCenter;
+
+            // Your existing code for chart settings
+            chart.Legends[0].Enabled = true;
+            chart.Legends[0].Alignment = StringAlignment.Center;
+            chart.Legends[0].Docking = Docking.Bottom;
+
+            // Your existing code for chart settings
+            chart.Series.Clear();
+            chart.Palette = ChartColorPalette.Pastel;
+
+            Series series = new Series("Series1");
+            series.Points.DataBind(dt.AsEnumerable(), "Nutrient", "Value", "");
+
+            series.ChartType = SeriesChartType.Pie;
+            chart.Series.Add(series);
+            chart.Series[0].Label = "#PERCENT{P0}";
+            chart.Series[0].LegendText = "#VALX";
+
+            // Refresh the chart.
+            chart.Refresh();
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 9;
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 10;
+        }
+
+        private void PrintBTN_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                FillDayByChart(i + 1);
+            }
+
         }
     }
 
