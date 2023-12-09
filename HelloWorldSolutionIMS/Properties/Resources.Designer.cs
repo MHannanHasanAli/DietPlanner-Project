@@ -93,6 +93,16 @@ namespace HelloWorldSolutionIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap age {
+            get {
+                object obj = ResourceManager.GetObject("age", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap area_chart_icon_64 {
             get {
                 object obj = ResourceManager.GetObject("area-chart-icon-64", resourceCulture);
@@ -583,6 +593,16 @@ namespace HelloWorldSolutionIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nutritionist {
+            get {
+                object obj = ResourceManager.GetObject("nutritionist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap padlock {
             get {
                 object obj = ResourceManager.GetObject("padlock", resourceCulture);
@@ -643,6 +663,16 @@ namespace HelloWorldSolutionIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap schedule {
+            get {
+                object obj = ResourceManager.GetObject("schedule", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
@@ -666,6 +696,16 @@ namespace HelloWorldSolutionIMS.Properties {
         internal static System.Drawing.Bitmap settings1 {
             get {
                 object obj = ResourceManager.GetObject("settings1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap smartphone {
+            get {
+                object obj = ResourceManager.GetObject("smartphone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -726,6 +766,16 @@ namespace HelloWorldSolutionIMS.Properties {
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user1 {
+            get {
+                object obj = ResourceManager.GetObject("user1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

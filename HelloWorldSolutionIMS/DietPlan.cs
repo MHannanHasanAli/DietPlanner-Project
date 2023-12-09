@@ -2661,12 +2661,86 @@ namespace HelloWorldSolutionIMS
 
         }
 
+        private void Start()
+        {
+
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT COMPANYNAME,BRANCH,EMAIL,LANDLINE,MOBILE,POBOX,TRADENO,WELCOME,LOGO,Room1,Room2,Room3,Room4 FROM SETTINGS", MainClass.con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    //companyname.Text = dr["COMPANYNAME"].ToString();
+                    //branch.Text = dr["BRANCH"].ToString();
+                    //email.Text = dr["EMAIL"].ToString();
+                    //landline.Text = dr["LANDLINE"].ToString();
+                    //mobile.Text = dr["MOBILE"].ToString();
+                    //pobox.Text = dr["POBOX"].ToString();
+                    //trade.Text = dr["TRADENO"].ToString();
+                    //welcomewords.Text = dr["WELCOME"].ToString();
+                    //pictureBox1.ImageLocation = dr["LOGO"].ToString();
+                    //logolocation = dr["LOGO"].ToString();
+                    //room1.Text = dr["Room1"].ToString();
+                    //room2.Text = dr["Room2"].ToString();
+                    //room3.Text = dr["Room3"].ToString();
+                    //room4.Text = dr["Room4"].ToString();
+                }
+
+                dr.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT * FROM Text", MainClass.con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    //bold.Text = dr["Bold"].ToString();
+                    //itallic.Text = dr["Italic"].ToString();
+                    //underline.Text = dr["Underline"].ToString();
+                    //textsize.Text = dr["Size"].ToString();
+                }
+
+                dr.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
         private void DietPlan_Load(object sender, EventArgs e)
         {
 
             chart1.Series.Clear();
             chart2.Series.Clear();
+            chart3.Series.Clear();
+            chart4.Series.Clear();
+            chart5.Series.Clear();
+            chart6.Series.Clear();
+            chart7.Series.Clear();
+            chart8.Series.Clear();
+            chart9.Series.Clear();
+            chart10.Series.Clear();
+
             UpdateInstruction();
+
             instructionflag = 1;
             try
             {
@@ -5057,7 +5131,7 @@ namespace HelloWorldSolutionIMS
             iron.Text = "";
             iodine.Text = "";
             bbox.Text = "";
-            Calculation.SelectedItem = null;
+            Calculation.SelectedIndex = 7;
             foreach (var item in Mapping)
             {
                 ChartPlusForFilter(item.ID);
@@ -8563,6 +8637,7 @@ namespace HelloWorldSolutionIMS
         {
             string template = null;
             string PreviousPlan = null;
+            string instruction = null;
             try
             {
 
@@ -8581,7 +8656,7 @@ namespace HelloWorldSolutionIMS
                         dietplantemplatenew.Text = reader["DietPlanTemplate"].ToString();
                         dietplandaten.Value = Convert.ToDateTime(reader["DIETPLANDATE"]);
                         dietplandaysnew.Text = reader["DietPlanDays"].ToString();
-                        instructionnew.Text = reader["Instructions"].ToString();
+                        instruction = reader["Instructions"].ToString();
                         PreviousPlan = reader["PreviousDiePlan"].ToString();
                         caloried.Text = reader["CALORIES"].ToString();
                         fatsd.Text = reader["FATS"].ToString();
@@ -8604,6 +8679,7 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     dietplantemplatenamenew.Text = template;
                     previousdietplannew.Text = PreviousPlan;
+                    instructionnew.Text = instruction;
                     MealsFetcher();
                     NewSave.Enabled = false;
 
@@ -11367,11 +11443,13 @@ namespace HelloWorldSolutionIMS
             }
         }
 
+        static double fatsc = 0;
+        static double proteinc = 0;
+        static double carbohydratesc = 0;
+
         private void NewChartForDailyDataReport(int id)
         {
-            double fats = 0;
-            double protein = 0;
-            double carbohydrates = 0;
+
 
             titlecheck = 0;
             try
@@ -11386,9 +11464,9 @@ namespace HelloWorldSolutionIMS
                     while (reader.Read())
                     {
 
-                        fats = Convert.ToDouble(reader["FATS"]);
-                        protein = Convert.ToDouble(reader["PROTEIN"]);
-                        carbohydrates = Convert.ToDouble(reader["CARBOHYDRATES"]);
+                        fatsc = Convert.ToDouble(reader["FATS"]);
+                        proteinc = Convert.ToDouble(reader["PROTEIN"]);
+                        carbohydratesc = Convert.ToDouble(reader["CARBOHYDRATES"]);
 
                     }
                     reader.Close();
@@ -11405,9 +11483,9 @@ namespace HelloWorldSolutionIMS
 
                 if (fatsdaily.Text == "")
                 {
-                    fatsdaily.Text = fats.ToString();
-                    proteindaily.Text = protein.ToString();
-                    carbsdaily.Text = carbohydrates.ToString();
+                    fatsdaily.Text = fatsc.ToString();
+                    proteindaily.Text = proteinc.ToString();
+                    carbsdaily.Text = carbohydratesc.ToString();
                 }
                 else
                 {
@@ -11417,9 +11495,9 @@ namespace HelloWorldSolutionIMS
                     double Tcarbohydrates = Convert.ToDouble(carbsdaily.Text);
 
 
-                    Tfats = Tfats + fats;
-                    Tprotein = Tprotein + protein;
-                    Tcarbohydrates = Tcarbohydrates + carbohydrates;
+                    Tfats = Tfats + fatsc;
+                    Tprotein = Tprotein + proteinc;
+                    Tcarbohydrates = Tcarbohydrates + carbohydratesc;
 
 
                     fatsdaily.Text = Tfats.ToString();
@@ -11434,94 +11512,46 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
             }
         }
-        private void FillDayByChart(int i)
+        private void FillDayByChart()
         {
-            //fatsdaily.Text = "";
-            //proteindaily.Text = "";
-            //carbsdaily.Text = "";
-
-
-            string selectedValue = i.ToString();
-
-            if (selectedValue == "1" || selectedValue == "اليوم الاول")
+            foreach (var item in artificialMappings)
             {
-                foreach (var item in artificialMappings)
+                if (item.ChartName == "guna2DataGridView13")
                 {
-                    if (item.ChartName == "guna2DataGridView13")
-                    {
-                        NewChartForDailyDataReport(item.ID);
-                        DayByChart(chart7);
-                    }
+                    NewChartForDailyDataReport(item.ID);
+                    DayByChart(chart7);
+                }
+                else if (item.ChartName == "guna2DataGridView15")
+                {
+                    NewChartForDailyDataReport(item.ID);
+                    DayByChart(chart4);
+                }
+                else if (item.ChartName == "guna2DataGridView16")
+                {
+                    NewChartForDailyDataReport(item.ID);
+                    DayByChart(chart5);
+                }
+                else if (item.ChartName == "guna2DataGridView17")
+                {
+                    NewChartForDailyDataReport(item.ID);
+                    DayByChart(chart6);
+                }
+                else if (item.ChartName == "guna2DataGridView18")
+                {
+                    NewChartForDailyDataReport(item.ID);
+                    DayByChart(chart8);
+                }
+                else if (item.ChartName == "guna2DataGridView19")
+                {
+                    NewChartForDailyDataReport(item.ID);
+                    DayByChart(chart9);
+                }
+                else if (item.ChartName == "guna2DataGridView20")
+                {
+                    NewChartForDailyDataReport(item.ID);
+                    DayByChart(chart10);
                 }
             }
-            else if (selectedValue == "2" || selectedValue == "اليوم الثاني")
-            {
-                foreach (var item in artificialMappings)
-                {
-                    if (item.ChartName == "guna2DataGridView15")
-                    {
-                        NewChartForDailyDataReport(item.ID);
-                        DayByChart(chart4);
-                    }
-                }
-            }
-            else if (selectedValue == "3" || selectedValue == "اليوم الثالث")
-            {
-                foreach (var item in artificialMappings)
-                {
-                    if (item.ChartName == "guna2DataGridView16")
-                    {
-                        NewChartForDailyDataReport(item.ID);
-                        DayByChart(chart5);
-                    }
-                }
-            }
-            else if (selectedValue == "4" || selectedValue == "اليوم الرابع ")
-            {
-                foreach (var item in artificialMappings)
-                {
-                    if (item.ChartName == "guna2DataGridView17")
-                    {
-                        NewChartForDailyDataReport(item.ID);
-                        DayByChart(chart6);
-                    }
-                }
-            }
-            else if (selectedValue == "5" || selectedValue == "اليوم الخامس")
-            {
-                foreach (var item in artificialMappings)
-                {
-                    if (item.ChartName == "guna2DataGridView18")
-                    {
-                        NewChartForDailyDataReport(item.ID);
-                        DayByChart(chart8);
-                    }
-                }
-            }
-            else if (selectedValue == "6" || selectedValue == "اليوم السادس")
-            {
-                foreach (var item in artificialMappings)
-                {
-                    if (item.ChartName == "guna2DataGridView19")
-                    {
-                        NewChartForDailyDataReport(item.ID);
-                        DayByChart(chart9);
-                    }
-                }
-            }
-            else if (selectedValue == "7" || selectedValue == "اليوم السابع ")
-            {
-                foreach (var item in artificialMappings)
-                {
-                    if (item.ChartName == "guna2DataGridView20")
-                    {
-                        NewChartForDailyDataReport(item.ID);
-                        DayByChart(chart10);
-                    }
-                }
-            }
-
-
         }
         private void DayByChart(Chart chart)
         {
@@ -11534,19 +11564,19 @@ namespace HelloWorldSolutionIMS
             dt.Columns.Add("Nutrient", typeof(string));
             dt.Columns.Add("Value", typeof(double));
 
-            if (fatsd.Text != "")
+            if (fatsdaily.Text != "")
             {
-                dt.Rows.Add("Fats", double.Parse(fatsd.Text) * 9);
+                dt.Rows.Add("Fats", double.Parse(fatsdaily.Text) * 9);
             }
 
-            if (proteind.Text != "")
+            if (proteindaily.Text != "")
             {
-                dt.Rows.Add("Protein", double.Parse(proteind.Text) * 4);
+                dt.Rows.Add("Protein", double.Parse(proteindaily.Text) * 4);
             }
 
-            if (carbsd.Text != "")
+            if (carbsdaily.Text != "")
             {
-                dt.Rows.Add("Carbohydrates", double.Parse(carbsd.Text) * 4);
+                dt.Rows.Add("Carbohydrates", double.Parse(carbsdaily.Text) * 4);
             }
 
             if (chart.Titles.Count == 0) // Check if there's at least one title
@@ -11589,6 +11619,9 @@ namespace HelloWorldSolutionIMS
 
             // Refresh the chart.
             chart.Refresh();
+            fatsdaily.Text = "";
+            proteindaily.Text = "";
+            carbsdaily.Text = "";
         }
 
         private void guna2Button7_Click(object sender, EventArgs e)
@@ -11603,10 +11636,9 @@ namespace HelloWorldSolutionIMS
 
         private void PrintBTN_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 8; i++)
-            {
-                FillDayByChart(i + 1);
-            }
+
+            FillDayByChart();
+
 
         }
     }

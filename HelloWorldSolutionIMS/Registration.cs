@@ -1506,6 +1506,7 @@ namespace HelloWorldSolutionIMS
                         // Assuming you have a customer ID, replace customerIDValue with the actual ID.
                         int customerIDValue = int.Parse(filenobmi.Text); // Get the actual customer ID from your application logic.
 
+                        cmd.Parameters.AddWithValue("@CustomerID", customerIDValue);
                         cmd.Parameters.AddWithValue("@DATE", DateTime.Now); // Assuming the current date is used.
                         cmd.Parameters.AddWithValue("@BCA", bca.Text); // Replace bcaValue with the actual value.
                         cmd.Parameters.AddWithValue("@LENGTH", height.Text); // Replace lengthValue with the actual value.
@@ -1546,7 +1547,7 @@ namespace HelloWorldSolutionIMS
 
                         cmd.Parameters.AddWithValue("@BMI", bmi); // Replace bmiValue with the actual value.
                         cmd.Parameters.AddWithValue("@BMR", bmr); // Replace bmrValue with the actual value.
-                        cmd.Parameters.AddWithValue("@CustomerID", customerIDValue);
+
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Body composition data added successfully");
@@ -1579,6 +1580,7 @@ namespace HelloWorldSolutionIMS
                         int customerIDValue = int.Parse(filenobmi.Text); // Get the actual customer ID from your application logic.
 
                         // Set parameters for the BodyComposition update
+                        cmd.Parameters.AddWithValue("@CustomerID", BMIID);
                         cmd.Parameters.AddWithValue("@DATE", DateTime.Now); // Assuming the current date is used.
                         cmd.Parameters.AddWithValue("@BCA", bca.Text); // Replace bcaValue with the actual value.
                         cmd.Parameters.AddWithValue("@LENGTH", height.Text); // Replace lengthValue with the actual value.
@@ -1619,7 +1621,7 @@ namespace HelloWorldSolutionIMS
 
                         cmd.Parameters.AddWithValue("@BMI", bmi); // Replace bmiValue with the actual value.
                         cmd.Parameters.AddWithValue("@BMR", bmr); // Replace bmrValue with the actual value.
-                        cmd.Parameters.AddWithValue("@CustomerID", BMIID);
+
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Body composition data updated successfully");
@@ -3177,6 +3179,7 @@ namespace HelloWorldSolutionIMS
                         int customerIDValue = int.Parse(filenomh.Text); // Get the actual customer ID from your application logic.
 
                         // Set parameters for the BodyComposition update
+                        cmd.Parameters.AddWithValue("@CustomerID", BMIID);
                         cmd.Parameters.AddWithValue("@DATE", DateTime.Now); // Assuming the current date is used.
                         cmd.Parameters.AddWithValue("@BCA", bca.Text); // Replace bcaValue with the actual value.
                         cmd.Parameters.AddWithValue("@LENGTH", height.Text); // Replace lengthValue with the actual value.
@@ -3217,7 +3220,7 @@ namespace HelloWorldSolutionIMS
 
                         cmd.Parameters.AddWithValue("@BMI", mh); // Replace mhValue with the actual value.
                         cmd.Parameters.AddWithValue("@BMR", bmr); // Replace bmrValue with the actual value.
-                        cmd.Parameters.AddWithValue("@CustomerID", BMIID);
+
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Body composition data updated successfully");

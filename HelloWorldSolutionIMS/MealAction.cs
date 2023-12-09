@@ -1439,7 +1439,7 @@ namespace HelloWorldSolutionIMS
                     var currentLoc = control.Location;
 
                     // Calculate the mirrored location
-                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+                    var mirroredLoc = new Point(panel2.Width - currentLoc.X - control.Width, currentLoc.Y);
 
                     // Set the mirrored location to the control
                     control.Location = mirroredLoc;
@@ -1462,7 +1462,7 @@ namespace HelloWorldSolutionIMS
                     var currentLoc = control.Location;
 
                     // Calculate the mirrored location
-                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+                    var mirroredLoc = new Point(panel5.Width - currentLoc.X - control.Width, currentLoc.Y);
 
                     // Set the mirrored location to the control
                     control.Location = mirroredLoc;
@@ -1485,7 +1485,7 @@ namespace HelloWorldSolutionIMS
                     var currentLoc = control.Location;
 
                     // Calculate the mirrored location
-                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+                    var mirroredLoc = new Point(panel3.Width - currentLoc.X - control.Width, currentLoc.Y);
 
                     // Set the mirrored location to the control
                     control.Location = mirroredLoc;
@@ -1508,7 +1508,7 @@ namespace HelloWorldSolutionIMS
                     var currentLoc = control.Location;
 
                     // Calculate the mirrored location
-                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+                    var mirroredLoc = new Point(panel4.Width - currentLoc.X - control.Width, currentLoc.Y);
 
                     // Set the mirrored location to the control
                     control.Location = mirroredLoc;
@@ -1531,7 +1531,7 @@ namespace HelloWorldSolutionIMS
                     var currentLoc = control.Location;
 
                     // Calculate the mirrored location
-                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+                    var mirroredLoc = new Point(panel6.Width - currentLoc.X - control.Width, currentLoc.Y);
 
                     // Set the mirrored location to the control
                     control.Location = mirroredLoc;

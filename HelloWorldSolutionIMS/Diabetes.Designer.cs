@@ -89,7 +89,6 @@
             this.carbsdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Add = new Guna.UI2.WinForms.Guna2Button();
             this.search = new Guna.UI2.WinForms.Guna2Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.totalinsulin = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -101,8 +100,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.weight = new Guna.UI2.WinForms.Guna2TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.bloodsuger = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.guna2DataGridView4 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.COL1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.COL2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,7 +133,6 @@
             this.panel1.Controls.Add(this.guna2DataGridView1);
             this.panel1.Controls.Add(this.Add);
             this.panel1.Controls.Add(this.search);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.totalinsulin);
             this.panel1.Controls.Add(this.label3);
@@ -148,10 +144,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.weight);
             this.panel1.Controls.Add(this.label28);
-            this.panel1.Controls.Add(this.bloodsuger);
-            this.panel1.Controls.Add(this.label29);
             this.panel1.Controls.Add(this.guna2DataGridView4);
             this.panel1.Name = "panel1";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // guna2DataGridView6
             // 
@@ -770,11 +765,6 @@
             this.search.ShadowDecoration.Parent = this.search;
             this.search.Click += new System.EventHandler(this.search_Click);
             // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
@@ -917,32 +907,6 @@
             resources.ApplyResources(this.label28, "label28");
             this.label28.Name = "label28";
             // 
-            // bloodsuger
-            // 
-            resources.ApplyResources(this.bloodsuger, "bloodsuger");
-            this.bloodsuger.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bloodsuger.DefaultText = "";
-            this.bloodsuger.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.bloodsuger.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.bloodsuger.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bloodsuger.DisabledState.Parent = this.bloodsuger;
-            this.bloodsuger.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.bloodsuger.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bloodsuger.FocusedState.Parent = this.bloodsuger;
-            this.bloodsuger.ForeColor = System.Drawing.Color.Black;
-            this.bloodsuger.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.bloodsuger.HoverState.Parent = this.bloodsuger;
-            this.bloodsuger.Name = "bloodsuger";
-            this.bloodsuger.PasswordChar = '\0';
-            this.bloodsuger.PlaceholderText = "";
-            this.bloodsuger.SelectedText = "";
-            this.bloodsuger.ShadowDecoration.Parent = this.bloodsuger;
-            // 
-            // label29
-            // 
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.Name = "label29";
-            // 
             // guna2DataGridView4
             // 
             resources.ApplyResources(this.guna2DataGridView4, "guna2DataGridView4");
@@ -1067,7 +1031,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2Button Add;
         private Guna.UI2.WinForms.Guna2Button search;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox totalinsulin;
         private System.Windows.Forms.Label label3;
@@ -1079,8 +1042,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox weight;
         private System.Windows.Forms.Label label28;
-        private Guna.UI2.WinForms.Guna2TextBox bloodsuger;
-        private System.Windows.Forms.Label label29;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView3;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView4;
         private System.Windows.Forms.DataGridViewTextBoxColumn COL1;

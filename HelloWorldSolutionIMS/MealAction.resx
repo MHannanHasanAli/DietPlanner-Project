@@ -748,7 +748,7 @@
     <value>51</value>
   </data>
   <data name="guna2DataGridView2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1080, 508</value>
+    <value>1080, 416</value>
   </data>
   <data name="guna2DataGridView2.TabIndex" type="System.Int32, mscorlib">
     <value>241</value>
@@ -876,14 +876,11 @@
   <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="panel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>3, 0</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1406, 906</value>
+    <value>1134, 909</value>
   </data>
   <data name="panel6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4065,6 +4062,60 @@
   <data name="$this.Text" xml:space="preserve">
     <value>MealAction</value>
   </data>
+  <data name="&gt;&gt;iddgv.Name" xml:space="preserve">
+    <value>iddgv</value>
+  </data>
+  <data name="&gt;&gt;iddgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mealardgv.Name" xml:space="preserve">
+    <value>mealardgv</value>
+  </data>
+  <data name="&gt;&gt;mealardgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;caloriesdgv.Name" xml:space="preserve">
+    <value>caloriesdgv</value>
+  </data>
+  <data name="&gt;&gt;caloriesdgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proteinmaindgv.Name" xml:space="preserve">
+    <value>proteinmaindgv</value>
+  </data>
+  <data name="&gt;&gt;proteinmaindgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fatsmaindgv.Name" xml:space="preserve">
+    <value>fatsmaindgv</value>
+  </data>
+  <data name="&gt;&gt;fatsmaindgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;carbohydratesmaindgv.Name" xml:space="preserve">
+    <value>carbohydratesmaindgv</value>
+  </data>
+  <data name="&gt;&gt;carbohydratesmaindgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;calciummaindgv.Name" xml:space="preserve">
+    <value>calciummaindgv</value>
+  </data>
+  <data name="&gt;&gt;calciummaindgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fibermaindgv.Name" xml:space="preserve">
+    <value>fibermaindgv</value>
+  </data>
+  <data name="&gt;&gt;fibermaindgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sodiummaindgv.Name" xml:space="preserve">
+    <value>sodiummaindgv</value>
+  </data>
+  <data name="&gt;&gt;sodiummaindgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;unitdgv.Name" xml:space="preserve">
     <value>unitdgv</value>
   </data>
@@ -4219,60 +4270,6 @@
     <value>gcnen</value>
   </data>
   <data name="&gt;&gt;gcnen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;iddgv.Name" xml:space="preserve">
-    <value>iddgv</value>
-  </data>
-  <data name="&gt;&gt;iddgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mealardgv.Name" xml:space="preserve">
-    <value>mealardgv</value>
-  </data>
-  <data name="&gt;&gt;mealardgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;caloriesdgv.Name" xml:space="preserve">
-    <value>caloriesdgv</value>
-  </data>
-  <data name="&gt;&gt;caloriesdgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;proteinmaindgv.Name" xml:space="preserve">
-    <value>proteinmaindgv</value>
-  </data>
-  <data name="&gt;&gt;proteinmaindgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fatsmaindgv.Name" xml:space="preserve">
-    <value>fatsmaindgv</value>
-  </data>
-  <data name="&gt;&gt;fatsmaindgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;carbohydratesmaindgv.Name" xml:space="preserve">
-    <value>carbohydratesmaindgv</value>
-  </data>
-  <data name="&gt;&gt;carbohydratesmaindgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;calciummaindgv.Name" xml:space="preserve">
-    <value>calciummaindgv</value>
-  </data>
-  <data name="&gt;&gt;calciummaindgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fibermaindgv.Name" xml:space="preserve">
-    <value>fibermaindgv</value>
-  </data>
-  <data name="&gt;&gt;fibermaindgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sodiummaindgv.Name" xml:space="preserve">
-    <value>sodiummaindgv</value>
-  </data>
-  <data name="&gt;&gt;sodiummaindgv.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

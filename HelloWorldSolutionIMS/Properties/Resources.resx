@@ -118,11 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="customer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\customer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="money1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\money1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iftar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iftar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="verify1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\verify1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,6 +154,9 @@
   <data name="settings1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="diet (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diet (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,8 +181,11 @@
   <data name="sugar-cube" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sugar-cube.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ug3pFUfANJYQCtzAbW4YNC-1200-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ug3pFUfANJYQCtzAbW4YNC-1200-80.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diet2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diet2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="calculator1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculator1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,11 +217,8 @@
   <data name="healthy-food1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\healthy-food1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iftar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iftar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="import" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="age" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\age.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warehouse (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warehouse (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -228,6 +234,9 @@
   </data>
   <data name="business-report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\business-report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nutritionist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nutritionist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="money-bag-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\money-bag-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,6 +274,9 @@
   <data name="Ug3pFUfANJYQCtzAbW4YNC-1200-801" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ug3pFUfANJYQCtzAbW4YNC-1200-801.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="smartphone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\smartphone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="expense" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expense.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -283,11 +295,14 @@
   <data name="gear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="booking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\booking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="manual-book" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\manual-book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spectrum_chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spectrum_chart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,8 +319,8 @@
   <data name="icons8-reset-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-reset-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="booking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\booking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="import" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="warehouse2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\warehouse2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,11 +334,11 @@
   <data name="sugar-cube1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sugar-cube1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ug3pFUfANJYQCtzAbW4YNC-1200-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ug3pFUfANJYQCtzAbW4YNC-1200-80.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="diet (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\diet (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="money1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\diet1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,10 +346,10 @@
   <data name="box1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="diet2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\diet2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="spectrum_chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spectrum_chart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="schedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\schedule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

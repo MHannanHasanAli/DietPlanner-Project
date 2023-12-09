@@ -128,13 +128,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dob.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1041, 74</value>
-  </data>
-  <data name="dob.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 22</value>
+    <value>205, 201</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 72</value>
+    <value>49, 199</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 24</value>
@@ -143,7 +140,7 @@
     <value>تاريخ الميلاد</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 20</value>
+    <value>46, 159</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 24</value>
@@ -164,10 +161,10 @@
     <value>رقم الملف</value>
   </data>
   <data name="familyname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1041, 20</value>
+    <value>205, 159</value>
   </data>
   <data name="familyname.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 38</value>
+    <value>232, 33</value>
   </data>
   <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value> </value>
@@ -197,7 +194,7 @@
     <value>334, 45</value>
   </data>
   <data name="Add.Text" xml:space="preserve">
-    <value>توزيع حصص الانسولين عن بالاعتماد على كمية النشويات </value>
+    <value>توزيع حصص الانسولين بالاعتماد على كمية النشويات </value>
   </data>
   <data name="search.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8pt</value>
@@ -209,16 +206,16 @@
     <value>390, 45</value>
   </data>
   <data name="search.Text" xml:space="preserve">
-    <value>توزيع حصص الكربوهيدرات عن بالاعتماد على عدد جرعات  الانسولين </value>
+    <value>توزيع حصص الكربوهيدرات  بالاعتماد على عدد جرعات  الانسولين </value>
   </data>
   <data name="totalinsulin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1041, 124</value>
+    <value>1033, 19</value>
   </data>
   <data name="totalinsulin.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 32</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 124</value>
+    <value>778, 19</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 24</value>
@@ -227,13 +224,13 @@
     <value>عدد جرعات الانسولين الكلية</value>
   </data>
   <data name="baselineinsulin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1041, 168</value>
+    <value>1033, 63</value>
   </data>
   <data name="baselineinsulin.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 32</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 168</value>
+    <value>778, 63</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 24</value>
@@ -242,13 +239,13 @@
     <value>الانسولين القاعدي (طويل المفعول)</value>
   </data>
   <data name="bolusinsulin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1041, 212</value>
+    <value>1033, 107</value>
   </data>
   <data name="bolusinsulin.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 32</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 212</value>
+    <value>778, 107</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 24</value>
@@ -257,13 +254,13 @@
     <value>الانسولين سريع المفعول </value>
   </data>
   <data name="insulincharb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1041, 256</value>
+    <value>1033, 151</value>
   </data>
   <data name="insulincharb.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 32</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>786, 256</value>
+    <value>778, 151</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 24</value>
@@ -276,11 +273,5 @@
   </data>
   <data name="label28.Text" xml:space="preserve">
     <value>الوزن </value>
-  </data>
-  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 24</value>
-  </data>
-  <data name="label29.Text" xml:space="preserve">
-    <value>نسبة السكر في الدم </value>
   </data>
 </root>
