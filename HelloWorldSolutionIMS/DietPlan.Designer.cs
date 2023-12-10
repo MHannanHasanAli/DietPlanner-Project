@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DietPlan));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -45,19 +44,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea21 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend21 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea22 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend22 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -101,6 +100,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -116,15 +124,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea21 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend21 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea22 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend22 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DietPlan));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -443,7 +443,6 @@
             this.dietnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.label41 = new System.Windows.Forms.Label();
             this.day7 = new System.Windows.Forms.Panel();
             this.label107 = new System.Windows.Forms.Label();
             this.guna2DataGridView20 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -546,8 +545,6 @@
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.label40 = new System.Windows.Forms.Label();
-            this.instructioncontent = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.chart10 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -561,23 +558,29 @@
             this.label42 = new System.Windows.Forms.Label();
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.companyname = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.welcomewords = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.welcomewords = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.companyname = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.dietplanreport = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.instructioncontent = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -649,14 +652,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.tabPage12.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
             this.panel16.SuspendLayout();
+            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel22.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1836,16 +1841,16 @@
             // 
             // chart12
             // 
-            chartArea12.Name = "ChartArea1";
-            this.chart12.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.chart12.Legends.Add(legend12);
+            chartArea20.Name = "ChartArea1";
+            this.chart12.ChartAreas.Add(chartArea20);
+            legend20.Name = "Legend1";
+            this.chart12.Legends.Add(legend20);
             resources.ApplyResources(this.chart12, "chart12");
             this.chart12.Name = "chart12";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Series1";
-            this.chart12.Series.Add(series12);
+            series20.ChartArea = "ChartArea1";
+            series20.Legend = "Legend1";
+            series20.Name = "Series1";
+            this.chart12.Series.Add(series20);
             // 
             // label27
             // 
@@ -3087,16 +3092,16 @@
             // 
             // chart2
             // 
-            chartArea13.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea13);
-            legend13.Name = "Legend1";
-            this.chart2.Legends.Add(legend13);
+            chartArea21.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea21);
+            legend21.Name = "Legend1";
+            this.chart2.Legends.Add(legend21);
             resources.ApplyResources(this.chart2, "chart2");
             this.chart2.Name = "chart2";
-            series13.ChartArea = "ChartArea1";
-            series13.Legend = "Legend1";
-            series13.Name = "Series1";
-            this.chart2.Series.Add(series13);
+            series21.ChartArea = "ChartArea1";
+            series21.Legend = "Legend1";
+            series21.Name = "Series1";
+            this.chart2.Series.Add(series21);
             // 
             // label49
             // 
@@ -4030,16 +4035,16 @@
             // 
             // chart1
             // 
-            chartArea14.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea14);
-            legend14.Name = "Legend1";
-            this.chart1.Legends.Add(legend14);
+            chartArea22.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea22);
+            legend22.Name = "Legend1";
+            this.chart1.Legends.Add(legend22);
             resources.ApplyResources(this.chart1, "chart1");
             this.chart1.Name = "chart1";
-            series14.ChartArea = "ChartArea1";
-            series14.Legend = "Legend1";
-            series14.Name = "Series1";
-            this.chart1.Series.Add(series14);
+            series22.ChartArea = "ChartArea1";
+            series22.Legend = "Legend1";
+            series22.Name = "Series1";
+            this.chart1.Series.Add(series22);
             // 
             // mealar
             // 
@@ -4737,7 +4742,7 @@
             // 
             resources.ApplyResources(this.panel19, "panel19");
             this.panel19.BackColor = System.Drawing.Color.White;
-            this.panel19.Controls.Add(this.label41);
+            this.panel19.Controls.Add(this.dietplanreport);
             this.panel19.Controls.Add(this.day7);
             this.panel19.Controls.Add(this.guna2DataGridView20);
             this.panel19.Controls.Add(this.day6);
@@ -4757,11 +4762,6 @@
             this.panel19.Controls.Add(this.guna2DataGridView13);
             this.panel19.Controls.Add(this.guna2DataGridView14);
             this.panel19.Name = "panel19";
-            // 
-            // label41
-            // 
-            resources.ApplyResources(this.label41, "label41");
-            this.label41.Name = "label41";
             // 
             // day7
             // 
@@ -6141,36 +6141,9 @@
             // tabPage10
             // 
             this.tabPage10.BackColor = System.Drawing.Color.White;
-            this.tabPage10.Controls.Add(this.label40);
-            this.tabPage10.Controls.Add(this.instructioncontent);
+            this.tabPage10.Controls.Add(this.panel22);
             resources.ApplyResources(this.tabPage10, "tabPage10");
             this.tabPage10.Name = "tabPage10";
-            // 
-            // label40
-            // 
-            resources.ApplyResources(this.label40, "label40");
-            this.label40.Name = "label40";
-            // 
-            // instructioncontent
-            // 
-            this.instructioncontent.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.instructioncontent.DefaultText = "";
-            this.instructioncontent.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.instructioncontent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.instructioncontent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.instructioncontent.DisabledState.Parent = this.instructioncontent;
-            this.instructioncontent.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.instructioncontent.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.instructioncontent.FocusedState.Parent = this.instructioncontent;
-            this.instructioncontent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.instructioncontent.HoverState.Parent = this.instructioncontent;
-            resources.ApplyResources(this.instructioncontent, "instructioncontent");
-            this.instructioncontent.Multiline = true;
-            this.instructioncontent.Name = "instructioncontent";
-            this.instructioncontent.PasswordChar = '\0';
-            this.instructioncontent.PlaceholderText = "";
-            this.instructioncontent.SelectedText = "";
-            this.instructioncontent.ShadowDecoration.Parent = this.instructioncontent;
             // 
             // tabPage11
             // 
@@ -6182,6 +6155,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.tableLayoutPanel1);
             this.panel12.Controls.Add(this.chart10);
             this.panel12.Controls.Add(this.chart9);
             this.panel12.Controls.Add(this.chart8);
@@ -6196,107 +6170,107 @@
             // 
             // chart10
             // 
-            chartArea15.Name = "ChartArea1";
-            this.chart10.ChartAreas.Add(chartArea15);
-            legend15.Name = "Legend1";
-            this.chart10.Legends.Add(legend15);
+            chartArea12.Name = "ChartArea1";
+            this.chart10.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chart10.Legends.Add(legend12);
             resources.ApplyResources(this.chart10, "chart10");
             this.chart10.Name = "chart10";
-            series15.ChartArea = "ChartArea1";
-            series15.Legend = "Legend1";
-            series15.Name = "Series1";
-            this.chart10.Series.Add(series15);
+            series12.ChartArea = "ChartArea1";
+            series12.Legend = "Legend1";
+            series12.Name = "Series1";
+            this.chart10.Series.Add(series12);
             // 
             // chart9
             // 
-            chartArea16.Name = "ChartArea1";
-            this.chart9.ChartAreas.Add(chartArea16);
-            legend16.Name = "Legend1";
-            this.chart9.Legends.Add(legend16);
+            chartArea13.Name = "ChartArea1";
+            this.chart9.ChartAreas.Add(chartArea13);
+            legend13.Name = "Legend1";
+            this.chart9.Legends.Add(legend13);
             resources.ApplyResources(this.chart9, "chart9");
             this.chart9.Name = "chart9";
-            series16.ChartArea = "ChartArea1";
-            series16.Legend = "Legend1";
-            series16.Name = "Series1";
-            this.chart9.Series.Add(series16);
+            series13.ChartArea = "ChartArea1";
+            series13.Legend = "Legend1";
+            series13.Name = "Series1";
+            this.chart9.Series.Add(series13);
             // 
             // chart8
             // 
-            chartArea17.Name = "ChartArea1";
-            this.chart8.ChartAreas.Add(chartArea17);
-            legend17.Name = "Legend1";
-            this.chart8.Legends.Add(legend17);
+            chartArea14.Name = "ChartArea1";
+            this.chart8.ChartAreas.Add(chartArea14);
+            legend14.Name = "Legend1";
+            this.chart8.Legends.Add(legend14);
             resources.ApplyResources(this.chart8, "chart8");
             this.chart8.Name = "chart8";
-            series17.ChartArea = "ChartArea1";
-            series17.Legend = "Legend1";
-            series17.Name = "Series1";
-            this.chart8.Series.Add(series17);
+            series14.ChartArea = "ChartArea1";
+            series14.Legend = "Legend1";
+            series14.Name = "Series1";
+            this.chart8.Series.Add(series14);
             // 
             // chart7
             // 
-            chartArea18.Name = "ChartArea1";
-            this.chart7.ChartAreas.Add(chartArea18);
-            legend18.Name = "Legend1";
-            this.chart7.Legends.Add(legend18);
+            chartArea15.Name = "ChartArea1";
+            this.chart7.ChartAreas.Add(chartArea15);
+            legend15.Name = "Legend1";
+            this.chart7.Legends.Add(legend15);
             resources.ApplyResources(this.chart7, "chart7");
             this.chart7.Name = "chart7";
-            series18.ChartArea = "ChartArea1";
-            series18.Legend = "Legend1";
-            series18.Name = "Series1";
-            this.chart7.Series.Add(series18);
+            series15.ChartArea = "ChartArea1";
+            series15.Legend = "Legend1";
+            series15.Name = "Series1";
+            this.chart7.Series.Add(series15);
             // 
             // chart6
             // 
-            chartArea19.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea19);
-            legend19.Name = "Legend1";
-            this.chart6.Legends.Add(legend19);
+            chartArea16.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea16);
+            legend16.Name = "Legend1";
+            this.chart6.Legends.Add(legend16);
             resources.ApplyResources(this.chart6, "chart6");
             this.chart6.Name = "chart6";
-            series19.ChartArea = "ChartArea1";
-            series19.Legend = "Legend1";
-            series19.Name = "Series1";
-            this.chart6.Series.Add(series19);
+            series16.ChartArea = "ChartArea1";
+            series16.Legend = "Legend1";
+            series16.Name = "Series1";
+            this.chart6.Series.Add(series16);
             // 
             // chart5
             // 
-            chartArea20.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea20);
-            legend20.Name = "Legend1";
-            this.chart5.Legends.Add(legend20);
+            chartArea17.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea17);
+            legend17.Name = "Legend1";
+            this.chart5.Legends.Add(legend17);
             resources.ApplyResources(this.chart5, "chart5");
             this.chart5.Name = "chart5";
-            series20.ChartArea = "ChartArea1";
-            series20.Legend = "Legend1";
-            series20.Name = "Series1";
-            this.chart5.Series.Add(series20);
+            series17.ChartArea = "ChartArea1";
+            series17.Legend = "Legend1";
+            series17.Name = "Series1";
+            this.chart5.Series.Add(series17);
             // 
             // chart4
             // 
-            chartArea21.Name = "ChartArea1";
-            this.chart4.ChartAreas.Add(chartArea21);
-            legend21.Name = "Legend1";
-            this.chart4.Legends.Add(legend21);
+            chartArea18.Name = "ChartArea1";
+            this.chart4.ChartAreas.Add(chartArea18);
+            legend18.Name = "Legend1";
+            this.chart4.Legends.Add(legend18);
             resources.ApplyResources(this.chart4, "chart4");
             this.chart4.Name = "chart4";
-            series21.ChartArea = "ChartArea1";
-            series21.Legend = "Legend1";
-            series21.Name = "Series1";
-            this.chart4.Series.Add(series21);
+            series18.ChartArea = "ChartArea1";
+            series18.Legend = "Legend1";
+            series18.Name = "Series1";
+            this.chart4.Series.Add(series18);
             // 
             // chart3
             // 
-            chartArea22.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea22);
-            legend22.Name = "Legend1";
-            this.chart3.Legends.Add(legend22);
+            chartArea19.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea19);
+            legend19.Name = "Legend1";
+            this.chart3.Legends.Add(legend19);
             resources.ApplyResources(this.chart3, "chart3");
             this.chart3.Name = "chart3";
-            series22.ChartArea = "ChartArea1";
-            series22.Legend = "Legend1";
-            series22.Name = "Series1";
-            this.chart3.Series.Add(series22);
+            series19.ChartArea = "ChartArea1";
+            series19.Legend = "Legend1";
+            series19.Name = "Series1";
+            this.chart3.Series.Add(series19);
             // 
             // label42
             // 
@@ -6313,10 +6287,24 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.pictureBox7);
             this.panel13.Controls.Add(this.panel16);
             this.panel13.Controls.Add(this.panel14);
             resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
+            // 
+            // panel16
+            // 
+            this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel16.Controls.Add(this.pictureBox1);
+            this.panel16.Controls.Add(this.panel21);
+            resources.ApplyResources(this.panel16, "panel16");
+            this.panel16.Name = "panel16";
+            // 
+            // panel21
+            // 
+            resources.ApplyResources(this.panel21, "panel21");
+            this.panel21.Name = "panel21";
             // 
             // panel14
             // 
@@ -6337,30 +6325,35 @@
             resources.ApplyResources(this.panel14, "panel14");
             this.panel14.Name = "panel14";
             // 
-            // panel15
+            // guna2HtmlLabel5
             // 
-            resources.ApplyResources(this.panel15, "panel15");
-            this.panel15.Name = "panel15";
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel5, "guna2HtmlLabel5");
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             // 
-            // panel16
+            // guna2HtmlLabel4
             // 
-            this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel16.Controls.Add(this.pictureBox1);
-            this.panel16.Controls.Add(this.panel21);
-            resources.ApplyResources(this.panel16, "panel16");
-            this.panel16.Name = "panel16";
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel4, "guna2HtmlLabel4");
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             // 
-            // panel21
+            // guna2HtmlLabel3
             // 
-            resources.ApplyResources(this.panel21, "panel21");
-            this.panel21.Name = "panel21";
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel3, "guna2HtmlLabel3");
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             // 
-            // companyname
+            // guna2HtmlLabel2
             // 
-            this.companyname.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.companyname, "companyname");
-            this.companyname.ForeColor = System.Drawing.Color.Green;
-            this.companyname.Name = "companyname";
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel2, "guna2HtmlLabel2");
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel1, "guna2HtmlLabel1");
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             // 
             // welcomewords
             // 
@@ -6369,35 +6362,24 @@
             this.welcomewords.ForeColor = System.Drawing.Color.Black;
             this.welcomewords.Name = "welcomewords";
             // 
-            // guna2HtmlLabel1
+            // companyname
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2HtmlLabel1, "guna2HtmlLabel1");
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.companyname.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.companyname, "companyname");
+            this.companyname.ForeColor = System.Drawing.Color.Green;
+            this.companyname.Name = "companyname";
             // 
-            // guna2HtmlLabel2
+            // panel15
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2HtmlLabel2, "guna2HtmlLabel2");
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            resources.ApplyResources(this.panel15, "panel15");
+            this.panel15.Name = "panel15";
             // 
-            // guna2HtmlLabel3
+            // pictureBox7
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2HtmlLabel3, "guna2HtmlLabel3");
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2HtmlLabel4, "guna2HtmlLabel4");
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2HtmlLabel5, "guna2HtmlLabel5");
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.pictureBox7.Image = global::HelloWorldSolutionIMS.Properties.Resources.RoadMap_Graphic_01;
+            resources.ApplyResources(this.pictureBox7, "pictureBox7");
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -6439,6 +6421,52 @@
             resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
+            // 
+            // dietplanreport
+            // 
+            this.dietplanreport.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.dietplanreport, "dietplanreport");
+            this.dietplanreport.Name = "dietplanreport";
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.guna2HtmlLabel6);
+            this.panel22.Controls.Add(this.instructioncontent);
+            resources.ApplyResources(this.panel22, "panel22");
+            this.panel22.Name = "panel22";
+            // 
+            // instructioncontent
+            // 
+            this.instructioncontent.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.instructioncontent.DefaultText = "";
+            this.instructioncontent.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.instructioncontent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.instructioncontent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.instructioncontent.DisabledState.Parent = this.instructioncontent;
+            this.instructioncontent.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.instructioncontent.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.instructioncontent.FocusedState.Parent = this.instructioncontent;
+            this.instructioncontent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.instructioncontent.HoverState.Parent = this.instructioncontent;
+            resources.ApplyResources(this.instructioncontent, "instructioncontent");
+            this.instructioncontent.Multiline = true;
+            this.instructioncontent.Name = "instructioncontent";
+            this.instructioncontent.PasswordChar = '\0';
+            this.instructioncontent.PlaceholderText = "";
+            this.instructioncontent.SelectedText = "";
+            this.instructioncontent.ShadowDecoration.Parent = this.instructioncontent;
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel6, "guna2HtmlLabel6");
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Green;
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // DietPlan
             // 
@@ -6529,7 +6557,6 @@
             this.contextMenuStrip2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView14)).EndInit();
             this.tabPage10.ResumeLayout(false);
-            this.tabPage10.PerformLayout();
             this.tabPage11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
@@ -6543,15 +6570,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.tabPage12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6973,9 +7003,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.TabPage tabPage10;
         private Guna.UI2.WinForms.Guna2Button PrintBTN;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private Guna.UI2.WinForms.Guna2TextBox instructioncontent;
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart10;
@@ -7011,5 +7038,11 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel dietplanreport;
+        private System.Windows.Forms.Panel panel22;
+        private Guna.UI2.WinForms.Guna2TextBox instructioncontent;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
