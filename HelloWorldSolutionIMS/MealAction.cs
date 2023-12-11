@@ -4296,44 +4296,76 @@ namespace HelloWorldSolutionIMS
 
         private void export_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Excel Workbook (*.xlsx)|*.xlsx";
-            saveFileDialog.Title = "Save Excel File";
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                ExportToExcel(guna2DataGridView2, saveFileDialog.FileName);
-            }
+            ExportIngredientsToExcel();
         }
 
-        private void ExportToExcel(DataGridView dataGridView, string fileName)
+        private void ExportIngredientsToExcel()
         {
             try
             {
-                // Creating Excel Workbook
-                var workbook = new XLWorkbook();
-                var worksheet = workbook.Worksheets.Add("Sheet1");
+                MainClass.con.Open();
 
-                // Writing Header
-                for (int i = 1; i <= dataGridView.Columns.Count; i++)
-                {
-                    worksheet.Cell(1, i).Value = dataGridView.Columns[i - 1].HeaderText;
-                }
+                // SQL query to select all rows from the Ingredient table
+                string query = "SELECT * FROM Meal;";
 
-                // Writing Rows
-                for (int i = 0; i < dataGridView.Rows.Count; i++)
+                using (SqlCommand command = new SqlCommand(query, MainClass.con))
                 {
-                    for (int j = 0; j < dataGridView.Columns.Count; j++)
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(command))
                     {
-                        worksheet.Cell(i + 2, j + 1).Value = dataGridView.Rows[i].Cells[j].Value.ToString();
+                        // Create a DataTable to hold the data
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        // Call the ExportToExcel function to save the data to Excel
+                        ExportToExcel(dataTable);
                     }
                 }
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error exporting data: {ex.Message}", "Export Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-                // Save the workbook
-                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"{fileName}.xlsx");
-                workbook.SaveAs(filePath);
+        private void ExportToExcel(DataTable dataTable)
+        {
+            try
+            {
+                // Create SaveFileDialog object
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx";
+                saveFileDialog.Title = "Save As Excel File";
+                saveFileDialog.DefaultExt = "xlsx";
 
-                MessageBox.Show($"Data exported to {filePath}", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Show the Save As dialog and check if the user selects a file
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Creating Excel Workbook
+                    var workbook = new XLWorkbook();
+                    var worksheet = workbook.Worksheets.Add("Sheet1");
+
+                    // Writing Header
+                    for (int i = 1; i <= dataTable.Columns.Count; i++)
+                    {
+                        worksheet.Cell(1, i).Value = dataTable.Columns[i - 1].ColumnName;
+                    }
+
+                    // Writing Rows
+                    for (int i = 0; i < dataTable.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataTable.Columns.Count; j++)
+                        {
+                            worksheet.Cell(i + 2, j + 1).Value = dataTable.Rows[i][j].ToString();
+                        }
+                    }
+
+                    // Save the workbook to the user-selected file path
+                    string filePath = saveFileDialog.FileName;
+                    workbook.SaveAs(filePath);
+
+                    MessageBox.Show($"Data exported to {filePath}", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
