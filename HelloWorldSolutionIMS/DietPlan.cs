@@ -1,11 +1,16 @@
 ﻿using Guna.UI2.WinForms;
+using PdfSharp.Drawing;
+using PdfSharp.Fonts;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using static HelloWorldSolutionIMS.MealAction;
@@ -2917,7 +2922,7 @@ namespace HelloWorldSolutionIMS
                         {
                             Label label = (Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -2927,7 +2932,7 @@ namespace HelloWorldSolutionIMS
                         {
                             Label label = (Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -2937,7 +2942,7 @@ namespace HelloWorldSolutionIMS
                         {
                             Label label = (Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -2947,7 +2952,7 @@ namespace HelloWorldSolutionIMS
                         {
                             Label label = (Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -8345,6 +8350,40 @@ namespace HelloWorldSolutionIMS
         }
         static int selectedid = 0;
         static int editmeal = 0;
+        static string companynamefooter = "";
+        static string companynumber = "";
+        static string companyemail = "";
+        private void SettingCoverInfo()
+        {
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT COMPANYNAME,BRANCH,EMAIL,LANDLINE,MOBILE,POBOX,TRADENO,WELCOME,LOGO,Room1,Room2,Room3,Room4 FROM SETTINGS", MainClass.con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    companyname.Text = dr["COMPANYNAME"].ToString();
+                    companynamefooter = companyname.Text;
+                    welcomewords.Text = dr["WELCOME"].ToString();
+                    pictureBox1.ImageLocation = dr["LOGO"].ToString();
+                    companynumber = dr["LANDLINE"].ToString();
+                    companyemail = dr["EMAIL"].ToString();
+                }
+
+                dr.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
 
 
         private void filenon_TextChanged(object sender, EventArgs e)
@@ -8363,7 +8402,7 @@ namespace HelloWorldSolutionIMS
                         conn = 1;
                     }
 
-                    SqlCommand cmd2 = new SqlCommand("SELECT  FIRSTNAME, FAMILYNAME, MOBILENO, GENDER, AGE FROM CUSTOMER " +
+                    SqlCommand cmd2 = new SqlCommand("SELECT  FIRSTNAME, FAMILYNAME, MOBILENO, GENDER, AGE, NutritionistName FROM CUSTOMER " +
                         "WHERE FILENO = @fileno", MainClass.con);
 
                     cmd2.Parameters.AddWithValue("@fileno", value);
@@ -8376,6 +8415,9 @@ namespace HelloWorldSolutionIMS
                         mobilenon.Text = reader2["MOBILENO"].ToString();
                         gendern.Text = reader2["GENDER"].ToString();
                         agen.Text = reader2["AGE"].ToString();
+                        nutritionistcover.Text = reader2["NutritionistName"].ToString();
+
+
                     }
                     else
                     {
@@ -8393,6 +8435,13 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     MessageBox.Show(ex.Message);
                 }
+
+                namecover.Text = firstnamen.Text + " " + familynamen.Text;
+                covername.Text = namecover.Text;
+                agecover.Text = agen.Text;
+                numbercover.Text = mobilenon.Text;
+                currentdatecover.Text = DateTime.Now.ToShortDateString();
+
 
                 try
                 {
@@ -8633,6 +8682,13 @@ namespace HelloWorldSolutionIMS
         }
         static int dietplanID = 0;
         List<int> Meadids = new List<int>();
+
+        static string dater;
+        static string firstnamer;
+        static string lastnamer;
+        static string ager;
+        static string numberr;
+
         private void SearchDIetPlan_Click(object sender, EventArgs e)
         {
             string template = null;
@@ -8912,10 +8968,6 @@ namespace HelloWorldSolutionIMS
                 reader.Close();
                 MainClass.con.Close();
                 NewSave.Enabled = true;
-
-
-
-
 
             }
         }
@@ -11633,17 +11685,295 @@ namespace HelloWorldSolutionIMS
         {
             tabControl1.SelectedIndex = 10;
         }
+        private async Task DelayAsync(int millisecondsDelay)
+        {
+            await Task.Delay(millisecondsDelay);
+        }
+        private async void PrintBTN_Click(object sender, EventArgs e)
+        {
+            FillDayByChart();
+            SettingCoverInfo();
+            //cecover.Text = companyemail;
+            //cmcover.Text = companynumber;
+            //cncover.Text = companynamefooter;
+            tabControl1.SelectedIndex = 11;
+            // Delay for 1 second
+            await DelayAsync(1000);
+            tabControl1.SelectedIndex = 9;
+            tabControl1.SelectedIndex = 10;
+            tabControl1.SelectedIndex = 8;
 
-        private void PrintBTN_Click(object sender, EventArgs e)
+            panel19.Dock = DockStyle.None;
+            panel19.Size = new Size(1000, 1600);
+
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+
+            guna2Button5.Visible = false;
+            guna2Button6.Visible = false;
+            dietplanreport.Visible = true;
+            List<Panel> panelList = new List<Panel> { panel13, panel19, panel22, panel12 };
+            SavePanelsAsPdfWithFooter(panelList, 610, 800);
+
+            panel19.Dock = DockStyle.Fill;
+            guna2Button5.Visible = true;
+            guna2Button6.Visible = true;
+            dietplanreport.Visible = false;
+            //panel19.Size = new Size(1356, 1020);
+            // Create SaveFileDialog object
+            //SaveFileDialog saveFileDialog = new SaveFileDialog();
+            //saveFileDialog.Filter = "PDF Files (*.pdf)|*.pdf";
+            //saveFileDialog.Title = "Save Panels as PDF";
+
+            //// Show the dialog and check if the user selects a file
+            //if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            //{
+            //    string filePath = saveFileDialog.FileName;
+            //    Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
+            //    // Create a new PDF document
+
+            //    List<Panel> panelList = new List<Panel> { panel13, panel22 }; // Add more panels as needed
+
+            //    PdfDocument document = new PdfDocument();
+
+            //    // Iterate through each panel and add a page to the document
+            //    foreach (Panel currentPanel in panelList)
+            //    {
+            //        // Add a page to the document with the specified size
+            //        PdfPage page = document.AddPage();
+            //        page.Width = XUnit.FromPoint(currentPanel.Width);
+            //        page.Height = XUnit.FromPoint(currentPanel.Height);
+
+            //        XGraphics gfx = XGraphics.FromPdfPage(page);
+
+            //        // Capture the panel content as an image
+            //        Bitmap bmp = new Bitmap(currentPanel.Width, currentPanel.Height);
+            //        currentPanel.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, bmp.Width, bmp.Height));
+
+            //        // Convert the GDI image to PDFsharp XImage
+            //        XImage panelImage = XImage.FromGdiPlusImage(bmp);
+
+            //        // Draw the image onto the PDF page
+            //        gfx.DrawImage(panelImage, 0, 0);
+
+            //        // Dispose of resources for this page
+            //        bmp.Dispose();
+            //    }
+
+            //    // Add footer on the last page
+            //    PdfPage lastPage = document.Pages.Last();
+            //    XGraphics lastPageGfx = XGraphics.FromPdfPage(lastPage);
+            //    XTextFormatter tf = new XTextFormatter(lastPageGfx);
+
+            //    XRect rect = new XRect(10, lastPage.Height - 20, lastPage.Width - 20, 20);
+            //    lastPageGfx.DrawRectangle(XBrushes.White, rect);
+
+            //    // Align the footer text to the left
+            //    tf.DrawString($"{companynamefooter} | {companynumber} | {companyemail}", new XFont("Arial", 8), XBrushes.Black, rect, XStringFormats.TopLeft);
+
+            //    // Save the PDF document
+            //    document.Save(filePath);
+
+            //    // Dispose of resources
+            //    document.Close();
+
+            //    MessageBox.Show($"Panels saved as PDF: {filePath}");
+            //}
+        }
+
+        private void SavePanelsAsPdfWithFooter(List<Panel> panels, double width, double height)
+        {
+            // Create SaveFileDialog object
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF Files (*.pdf)|*.pdf";
+            saveFileDialog.Title = "Save Panels as PDF";
+
+            // Show the dialog and check if the user selects a file
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialog.FileName;
+                Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
+                // Create a new PDF document
+                PdfSharp.Pdf.PdfDocument document = new PdfSharp.Pdf.PdfDocument();
+
+                // Iterate through each panel and add a page to the document
+                for (int i = 0; i < panels.Count; i++)
+                {
+                    Panel currentPanel = panels[i];
+
+                    // Add a page to the document with the specified size
+                    PdfSharp.Pdf.PdfPage page = document.AddPage();
+                    page.Width = width;
+                    page.Height = height;
+
+                    XGraphics gfx = XGraphics.FromPdfPage(page);
+
+                    // Capture the panel content as an image
+                    Bitmap bmp = new Bitmap(currentPanel.Width, currentPanel.Height);
+                    Graphics g = Graphics.FromImage(bmp);
+                    currentPanel.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+
+                    // Calculate the scaling factor to fit the panel within the page
+                    float scaleFactor = Math.Min((float)page.Width / (float)bmp.Width, (float)page.Height / (float)bmp.Height);
+
+                    // Adjust the image width and height based on the scaling factor
+                    int scaledWidth = (int)(bmp.Width * scaleFactor);
+                    int scaledHeight = (int)(bmp.Height * scaleFactor);
+
+                    // Adjust the X-coordinate to center if the current panel is panel19
+                    int xCoordinate = (currentPanel == panel19) ? (int)((page.Width - scaledWidth) / 2) : 0;
+
+                    // Adjust the Y-coordinate for top spacing if the current panel is panel19
+                    int topSpacing = (currentPanel == panel19) ? 20 : 0;
+
+                    // Draw the scaled image onto the PDF page with adjusted coordinates
+                    MemoryStream ms = new MemoryStream();
+                    bmp.Save(ms, ImageFormat.Png);
+                    ms.Seek(0, SeekOrigin.Begin);
+                    XImage xImage = XImage.FromStream(ms);
+
+                    // Use XImage object for drawing
+                    gfx.DrawImage(xImage, xCoordinate, topSpacing, scaledWidth, scaledHeight);
+
+                    // Add footer text
+                    DrawFooter(gfx, companynamefooter + " | " + companynumber + " | " + companyemail);
+
+                    // Dispose of resources for this page
+                    ms.Dispose();
+                    g.Dispose();
+                    bmp.Dispose();
+                }
+
+                // Save the PDF document
+                document.Save(filePath);
+
+                // Dispose of resources
+                document.Dispose();
+
+                MessageBox.Show($"Panels saved as PDF with footer: {filePath}");
+            }
+        }
+
+
+        private void DrawFooter(XGraphics gfx, string footerText)
+        {
+            XFont font = new XFont("Arial", 8);
+
+            XRect rect = new XRect(10, gfx.PageSize.Height - 20, gfx.PageSize.Width - 20, 20);
+            gfx.DrawRectangle(XBrushes.White, rect);
+
+            // Align the footer text to the left
+            gfx.DrawString(footerText, font, XBrushes.Black, rect.Left, rect.Top, XStringFormats.TopLeft);
+        }
+
+        private void panel16_Paint(object sender, PaintEventArgs e)
         {
 
-            FillDayByChart();
-
-
         }
+
+        //private void SavePanelsAsPdfWithFooter(List<Panel> panels)
+        //{
+        //    // Create SaveFileDialog object
+        //    SaveFileDialog saveFileDialog = new SaveFileDialog();
+        //    saveFileDialog.Filter = "PDF Files (*.pdf)|*.pdf";
+        //    saveFileDialog.Title = "Save Panels as PDF";
+
+        //    // Show the dialog and check if the user selects a file
+        //    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+        //    {
+        //        string filePath = saveFileDialog.FileName;
+        //        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
+        //        // Create a new PDF document
+        //        PdfDocument document = new PdfDocument();
+
+        //        // Iterate through each panel and add a page to the document
+        //        for (int i = 0; i < panels.Count; i++)
+        //        {
+        //            Panel currentPanel = panels[i];
+
+        //            // Add a page to the document with the size of the current panel
+        //            PdfPage page = document.AddPage();
+        //            XGraphics gfx = XGraphics.FromPdfPage(page);
+
+        //            // Create a bitmap to draw the panel's content
+        //            Bitmap bmp = new Bitmap(currentPanel.Width, currentPanel.Height);
+        //            currentPanel.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+
+        //            // Create an XImage from the bitmap
+        //            XImage xImage = XImage.FromGdiPlusImage(bmp);
+
+        //            // Draw the image onto the PDF page
+        //            gfx.DrawImage(xImage, 0, 0, currentPanel.Width, currentPanel.Height);
+
+        //            // Add footer text
+        //            DrawFooter(gfx, $"Page {i + 1} of {panels.Count}");
+
+        //            // Dispose of resources for this page
+        //            xImage.Dispose();
+        //            bmp.Dispose();
+        //        }
+
+        //        // Save the PDF document
+        //        document.Save(filePath);
+
+        //        // Dispose of resources
+        //        document.Dispose();
+
+        //        MessageBox.Show($"Panels saved as PDF with footer: {filePath}");
+        //    }
+        //}
+
+        //private void DrawFooter(XGraphics gfx, string footerText)
+        //{
+        //    XFont font = new XFont("Arial", 8);
+
+        //    XRect rect = new XRect(10, gfx.PageSize.Height - 20, gfx.PageSize.Width - 20, 20);
+        //    gfx.DrawRectangle(XBrushes.White, rect);
+
+        //    // Align the footer text to the left
+        //    gfx.DrawString(footerText, font, XBrushes.Black, rect.Left, rect.Top, XStringFormats.TopLeft);
+        //}
     }
 
+    public class CustomFontResolver : IFontResolver
+    {
+        public byte[] GetFont(string faceName)
+        {
+            using (var ms = new MemoryStream())
+            {
+                // You may need to adjust the path to the Arial font file on your system
+                string fontPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.ttf");
 
+                if (File.Exists(fontPath))
+                {
+                    using (var fs = new FileStream(fontPath, FileMode.Open, FileAccess.Read))
+                    {
+                        fs.CopyTo(ms);
+                        ms.Seek(0, SeekOrigin.Begin);
+                        return ms.ToArray();
+                    }
+                }
+                else
+                {
+                    throw new FileNotFoundException($"Font file not found: {fontPath}");
+                }
+            }
+        }
+
+        public FontResolverInfo ResolveTypeface(string familyName, bool isBold, bool isItalic)
+        {
+            // For simplicity, we assume Arial is always available
+            return new FontResolverInfo("Arial");
+        }
+    }
 
 }
 

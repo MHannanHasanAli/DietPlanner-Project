@@ -118,6 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="export.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="export.Location" type="System.Drawing.Point, System.Drawing">
+    <value>902, 23</value>
+  </data>
+  <data name="export.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 45</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="export.TabIndex" type="System.Int32, mscorlib">
+    <value>299</value>
+  </data>
+  <data name="export.Text" xml:space="preserve">
+    <value>Export Meals</value>
+  </data>
+  <data name="&gt;&gt;export.Name" xml:space="preserve">
+    <value>export</value>
+  </data>
+  <data name="&gt;&gt;export.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;export.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;export.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="mealensearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
@@ -131,7 +159,6 @@
   <data name="mealensearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>222, 29</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="mealensearch.TabIndex" type="System.Int32, mscorlib">
     <value>297</value>
   </data>
@@ -145,7 +172,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;mealensearch.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label27.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -175,7 +202,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="groupcens.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -202,7 +229,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;groupcens.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="groupcars.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -229,7 +256,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;groupcars.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="groupnens.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -256,7 +283,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;groupnens.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="groupnars.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -283,7 +310,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;groupnars.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label42.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -313,7 +340,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label43.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -343,7 +370,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="label44.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -373,7 +400,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label44.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label45.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -403,7 +430,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label45.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="ImportMeal.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -430,7 +457,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;ImportMeal.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="ff.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -457,7 +484,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;ff.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="All.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -484,7 +511,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;All.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="dinner.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -511,7 +538,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;dinner.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="snack.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -538,7 +565,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;snack.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="lunch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -565,7 +592,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;lunch.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="Breakfast.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -592,7 +619,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;Breakfast.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="Delete.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -619,7 +646,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;Delete.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="EditBTN.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -646,7 +673,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;EditBTN.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="guna2DataGridView2.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>52</value>
@@ -763,7 +790,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;guna2DataGridView2.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="Add.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -790,7 +817,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;Add.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="search.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -817,7 +844,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;search.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="mealarsearch.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -844,7 +871,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;mealarsearch.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="label28.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -874,7 +901,7 @@
     <value>panel6</value>
   </data>
   <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>

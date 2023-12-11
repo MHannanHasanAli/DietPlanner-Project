@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using ClosedXML.Excel;
+using Guna.UI2.WinForms;
 using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
@@ -4290,6 +4291,53 @@ namespace HelloWorldSolutionIMS
             if (colmn != 0)
             {
                 FilterMeals2(guna2DataGridView2, iddgv, mealardgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
+            }
+        }
+
+        private void export_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel Workbook (*.xlsx)|*.xlsx";
+            saveFileDialog.Title = "Save Excel File";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ExportToExcel(guna2DataGridView2, saveFileDialog.FileName);
+            }
+        }
+
+        private void ExportToExcel(DataGridView dataGridView, string fileName)
+        {
+            try
+            {
+                // Creating Excel Workbook
+                var workbook = new XLWorkbook();
+                var worksheet = workbook.Worksheets.Add("Sheet1");
+
+                // Writing Header
+                for (int i = 1; i <= dataGridView.Columns.Count; i++)
+                {
+                    worksheet.Cell(1, i).Value = dataGridView.Columns[i - 1].HeaderText;
+                }
+
+                // Writing Rows
+                for (int i = 0; i < dataGridView.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridView.Columns.Count; j++)
+                    {
+                        worksheet.Cell(i + 2, j + 1).Value = dataGridView.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+
+                // Save the workbook
+                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"{fileName}.xlsx");
+                workbook.SaveAs(filePath);
+
+                MessageBox.Show($"Data exported to {filePath}", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error exporting data: {ex.Message}", "Export Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
