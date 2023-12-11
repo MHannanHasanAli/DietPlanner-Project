@@ -11717,6 +11717,7 @@ namespace HelloWorldSolutionIMS
             guna2Button5.Visible = false;
             guna2Button6.Visible = false;
             dietplanreport.Visible = true;
+
             List<Panel> panelList = new List<Panel> { panel13, panel19, panel22, panel12 };
             SavePanelsAsPdfWithFooter(panelList, 610, 800);
 
@@ -11724,6 +11725,7 @@ namespace HelloWorldSolutionIMS
             guna2Button5.Visible = true;
             guna2Button6.Visible = true;
             dietplanreport.Visible = false;
+
             //panel19.Size = new Size(1356, 1020);
             // Create SaveFileDialog object
             //SaveFileDialog saveFileDialog = new SaveFileDialog();

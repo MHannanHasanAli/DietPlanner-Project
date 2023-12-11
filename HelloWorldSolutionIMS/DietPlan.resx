@@ -9702,8 +9702,416 @@
   <data name="&gt;&gt;tabPage10.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="guna2HtmlLabel8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1108, 1090</value>
+  </data>
+  <data name="guna2HtmlLabel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 33</value>
+  </data>
+  <data name="guna2HtmlLabel8.TabIndex" type="System.Int32, mscorlib">
+    <value>330</value>
+  </data>
+  <data name="guna2HtmlLabel8.Text" xml:space="preserve">
+    <value>7th Day</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel8.Name" xml:space="preserve">
+    <value>guna2HtmlLabel8</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel8.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel8.Parent" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="guna2HtmlLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>593, 1076</value>
+  </data>
+  <data name="guna2HtmlLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 33</value>
+  </data>
+  <data name="guna2HtmlLabel7.TabIndex" type="System.Int32, mscorlib">
+    <value>329</value>
+  </data>
+  <data name="guna2HtmlLabel7.Text" xml:space="preserve">
+    <value>6th Day</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel7.Name" xml:space="preserve">
+    <value>guna2HtmlLabel7</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel7.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel7.Parent" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="guna2HtmlLabel5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 1079</value>
+  </data>
+  <data name="guna2HtmlLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 33</value>
+  </data>
+  <data name="guna2HtmlLabel5.TabIndex" type="System.Int32, mscorlib">
+    <value>328</value>
+  </data>
+  <data name="guna2HtmlLabel5.Text" xml:space="preserve">
+    <value>5th Day</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel5.Name" xml:space="preserve">
+    <value>guna2HtmlLabel5</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel5.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel5.Parent" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="guna2HtmlLabel4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1113, 691</value>
+  </data>
+  <data name="guna2HtmlLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 33</value>
+  </data>
+  <data name="guna2HtmlLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>327</value>
+  </data>
+  <data name="guna2HtmlLabel4.Text" xml:space="preserve">
+    <value>4th Day</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel4.Name" xml:space="preserve">
+    <value>guna2HtmlLabel4</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel4.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel4.Parent" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="guna2HtmlLabel3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>603, 691</value>
+  </data>
+  <data name="guna2HtmlLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 33</value>
+  </data>
+  <data name="guna2HtmlLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>326</value>
+  </data>
+  <data name="guna2HtmlLabel3.Text" xml:space="preserve">
+    <value>3rd Day</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel3.Name" xml:space="preserve">
+    <value>guna2HtmlLabel3</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel3.Parent" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="guna2HtmlLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 691</value>
+  </data>
+  <data name="guna2HtmlLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 33</value>
+  </data>
+  <data name="guna2HtmlLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>325</value>
+  </data>
+  <data name="guna2HtmlLabel2.Text" xml:space="preserve">
+    <value>2nd Day</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel2.Name" xml:space="preserve">
+    <value>guna2HtmlLabel2</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel2.Parent" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="guna2HtmlLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1113, 317</value>
+  </data>
+  <data name="guna2HtmlLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 33</value>
+  </data>
+  <data name="guna2HtmlLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>324</value>
+  </data>
+  <data name="guna2HtmlLabel1.Text" xml:space="preserve">
+    <value>1st Day</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel1.Name" xml:space="preserve">
+    <value>guna2HtmlLabel1</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel1.Parent" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tableLayoutPanel1.CellBorderStyle" type="System.Windows.Forms.TableLayoutPanelCellBorderStyle, System.Windows.Forms">
+    <value>Single</value>
+  </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="guna2HtmlLabel16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="guna2HtmlLabel16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 190</value>
+  </data>
+  <data name="guna2HtmlLabel16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 27</value>
+  </data>
+  <data name="guna2HtmlLabel16.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="guna2HtmlLabel16.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel16.Name" xml:space="preserve">
+    <value>guna2HtmlLabel16</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel16.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel16.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="guna2HtmlLabel15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 190</value>
+  </data>
+  <data name="guna2HtmlLabel15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 33</value>
+  </data>
+  <data name="guna2HtmlLabel15.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="guna2HtmlLabel15.Text" xml:space="preserve">
+    <value>Fats</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel15.Name" xml:space="preserve">
+    <value>guna2HtmlLabel15</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel15.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel15.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel15.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="guna2HtmlLabel14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="guna2HtmlLabel14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 128</value>
+  </data>
+  <data name="guna2HtmlLabel14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 27</value>
+  </data>
+  <data name="guna2HtmlLabel14.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="guna2HtmlLabel14.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel14.Name" xml:space="preserve">
+    <value>guna2HtmlLabel14</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel14.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel14.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel14.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="guna2HtmlLabel13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 128</value>
+  </data>
+  <data name="guna2HtmlLabel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 33</value>
+  </data>
+  <data name="guna2HtmlLabel13.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="guna2HtmlLabel13.Text" xml:space="preserve">
+    <value>Protein</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel13.Name" xml:space="preserve">
+    <value>guna2HtmlLabel13</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel13.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel13.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel13.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="guna2HtmlLabel12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="guna2HtmlLabel12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 66</value>
+  </data>
+  <data name="guna2HtmlLabel12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 27</value>
+  </data>
+  <data name="guna2HtmlLabel12.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="guna2HtmlLabel12.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel12.Name" xml:space="preserve">
+    <value>guna2HtmlLabel12</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel12.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel12.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel12.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="guna2HtmlLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 66</value>
+  </data>
+  <data name="guna2HtmlLabel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 33</value>
+  </data>
+  <data name="guna2HtmlLabel11.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="guna2HtmlLabel11.Text" xml:space="preserve">
+    <value>Carbs</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel11.Name" xml:space="preserve">
+    <value>guna2HtmlLabel11</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel11.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel11.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel11.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="guna2HtmlLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="guna2HtmlLabel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 4</value>
+  </data>
+  <data name="guna2HtmlLabel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 27</value>
+  </data>
+  <data name="guna2HtmlLabel10.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="guna2HtmlLabel10.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel10.Name" xml:space="preserve">
+    <value>guna2HtmlLabel10</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel10.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel10.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel10.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="guna2HtmlLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16pt</value>
+  </data>
+  <data name="guna2HtmlLabel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="guna2HtmlLabel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 33</value>
+  </data>
+  <data name="guna2HtmlLabel9.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="guna2HtmlLabel9.Text" xml:space="preserve">
+    <value>Energy</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel9.Name" xml:space="preserve">
+    <value>guna2HtmlLabel9</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel9.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel9.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;guna2HtmlLabel9.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 55</value>
@@ -9727,13 +10135,13 @@
     <value>panel12</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>7</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="guna2HtmlLabel16" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="guna2HtmlLabel15" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="guna2HtmlLabel14" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="guna2HtmlLabel13" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="guna2HtmlLabel12" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="guna2HtmlLabel11" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="guna2HtmlLabel10" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="guna2HtmlLabel9" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,25,Percent,25,Percent,25,Percent,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="chart10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1004, 765</value>
+    <value>992, 882</value>
   </data>
   <data name="chart10.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 188</value>
@@ -9754,10 +10162,10 @@
     <value>panel12</value>
   </data>
   <data name="&gt;&gt;chart10.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>8</value>
   </data>
   <data name="chart9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 765</value>
+    <value>485, 882</value>
   </data>
   <data name="chart9.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 188</value>
@@ -9778,10 +10186,10 @@
     <value>panel12</value>
   </data>
   <data name="&gt;&gt;chart9.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>9</value>
   </data>
   <data name="chart8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 765</value>
+    <value>21, 882</value>
   </data>
   <data name="chart8.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 188</value>
@@ -9802,10 +10210,10 @@
     <value>panel12</value>
   </data>
   <data name="&gt;&gt;chart8.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>10</value>
   </data>
   <data name="chart7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1004, 75</value>
+    <value>1006, 101</value>
   </data>
   <data name="chart7.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 188</value>
@@ -9826,10 +10234,10 @@
     <value>panel12</value>
   </data>
   <data name="&gt;&gt;chart7.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>11</value>
   </data>
   <data name="chart6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1004, 409</value>
+    <value>992, 478</value>
   </data>
   <data name="chart6.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 188</value>
@@ -9850,10 +10258,10 @@
     <value>panel12</value>
   </data>
   <data name="&gt;&gt;chart6.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>12</value>
   </data>
   <data name="chart5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 422</value>
+    <value>485, 491</value>
   </data>
   <data name="chart5.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 188</value>
@@ -9874,10 +10282,10 @@
     <value>panel12</value>
   </data>
   <data name="&gt;&gt;chart5.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>13</value>
   </data>
   <data name="chart4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 409</value>
+    <value>9, 478</value>
   </data>
   <data name="chart4.Size" type="System.Drawing.Size, System.Drawing">
     <value>303, 188</value>
@@ -9898,13 +10306,13 @@
     <value>panel12</value>
   </data>
   <data name="&gt;&gt;chart4.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>14</value>
   </data>
   <data name="chart3.Location" type="System.Drawing.Point, System.Drawing">
     <value>497, 32</value>
   </data>
   <data name="chart3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>381, 290</value>
+    <value>421, 344</value>
   </data>
   <data name="chart3.TabIndex" type="System.Int32, mscorlib">
     <value>314</value>
@@ -9922,7 +10330,7 @@
     <value>panel12</value>
   </data>
   <data name="&gt;&gt;chart3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>15</value>
   </data>
   <data name="label42.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9955,7 +10363,7 @@
     <value>panel12</value>
   </data>
   <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>16</value>
   </data>
   <data name="panel12.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>

@@ -563,16 +563,18 @@
             this.label42 = new System.Windows.Forms.Label();
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.covername = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.namecover = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.numbercover = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.agecover = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.currentdatecover = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.namecover = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.nutritionistcover = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.currentdatecover = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.welcomewords = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.companyname = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -580,8 +582,21 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.covername = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -644,6 +659,7 @@
             this.panel22.SuspendLayout();
             this.tabPage11.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart8)).BeginInit();
@@ -6199,6 +6215,13 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.guna2HtmlLabel8);
+            this.panel12.Controls.Add(this.guna2HtmlLabel7);
+            this.panel12.Controls.Add(this.guna2HtmlLabel5);
+            this.panel12.Controls.Add(this.guna2HtmlLabel4);
+            this.panel12.Controls.Add(this.guna2HtmlLabel3);
+            this.panel12.Controls.Add(this.guna2HtmlLabel2);
+            this.panel12.Controls.Add(this.guna2HtmlLabel1);
             this.panel12.Controls.Add(this.tableLayoutPanel1);
             this.panel12.Controls.Add(this.chart10);
             this.panel12.Controls.Add(this.chart9);
@@ -6215,6 +6238,14 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel16, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel15, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel14, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel13, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel12, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel11, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel10, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.guna2HtmlLabel9, 0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // chart10
@@ -6344,6 +6375,18 @@
             resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.panel15, "panel15");
+            this.panel15.Name = "panel15";
+            // 
+            // covername
+            // 
+            this.covername.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.covername, "covername");
+            this.covername.Name = "covername";
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::HelloWorldSolutionIMS.Properties.Resources.RoadMap_Graphic_01;
@@ -6389,12 +6432,6 @@
             resources.ApplyResources(this.panel14, "panel14");
             this.panel14.Name = "panel14";
             // 
-            // namecover
-            // 
-            this.namecover.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.namecover, "namecover");
-            this.namecover.Name = "namecover";
-            // 
             // numbercover
             // 
             this.numbercover.BackColor = System.Drawing.Color.Transparent;
@@ -6407,17 +6444,23 @@
             resources.ApplyResources(this.agecover, "agecover");
             this.agecover.Name = "agecover";
             // 
-            // currentdatecover
+            // namecover
             // 
-            this.currentdatecover.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.currentdatecover, "currentdatecover");
-            this.currentdatecover.Name = "currentdatecover";
+            this.namecover.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.namecover, "namecover");
+            this.namecover.Name = "namecover";
             // 
             // nutritionistcover
             // 
             this.nutritionistcover.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.nutritionistcover, "nutritionistcover");
             this.nutritionistcover.Name = "nutritionistcover";
+            // 
+            // currentdatecover
+            // 
+            this.currentdatecover.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.currentdatecover, "currentdatecover");
+            this.currentdatecover.Name = "currentdatecover";
             // 
             // welcomewords
             // 
@@ -6468,17 +6511,103 @@
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             // 
-            // covername
+            // guna2HtmlLabel1
             // 
-            this.covername.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.covername, "covername");
-            this.covername.Name = "covername";
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel1, "guna2HtmlLabel1");
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             // 
-            // panel15
+            // guna2HtmlLabel2
             // 
-            this.panel15.BackColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.panel15, "panel15");
-            this.panel15.Name = "panel15";
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel2, "guna2HtmlLabel2");
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel3, "guna2HtmlLabel3");
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel4, "guna2HtmlLabel4");
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel5, "guna2HtmlLabel5");
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel7, "guna2HtmlLabel7");
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            // 
+            // guna2HtmlLabel8
+            // 
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel8, "guna2HtmlLabel8");
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel9, "guna2HtmlLabel9");
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel10
+            // 
+            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel10, "guna2HtmlLabel10");
+            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            this.guna2HtmlLabel10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel11
+            // 
+            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel11, "guna2HtmlLabel11");
+            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            this.guna2HtmlLabel11.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel12
+            // 
+            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel12, "guna2HtmlLabel12");
+            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
+            this.guna2HtmlLabel12.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel13
+            // 
+            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel13, "guna2HtmlLabel13");
+            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
+            this.guna2HtmlLabel13.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel14
+            // 
+            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel14, "guna2HtmlLabel14");
+            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
+            this.guna2HtmlLabel14.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel15
+            // 
+            this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel15, "guna2HtmlLabel15");
+            this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
+            this.guna2HtmlLabel15.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel16
+            // 
+            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel16, "guna2HtmlLabel16");
+            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
+            this.guna2HtmlLabel16.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DietPlan
             // 
@@ -6574,6 +6703,8 @@
             this.tabPage11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart8)).EndInit();
@@ -7058,5 +7189,20 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel namecover;
         private Guna.UI2.WinForms.Guna2HtmlLabel covername;
         private System.Windows.Forms.Panel panel15;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
     }
 }
