@@ -11691,14 +11691,17 @@ namespace HelloWorldSolutionIMS
         }
         private async void PrintBTN_Click(object sender, EventArgs e)
         {
+
             FillDayByChart();
             SettingCoverInfo();
             //cecover.Text = companyemail;
             //cmcover.Text = companynumber;
             //cncover.Text = companynamefooter;
             tabControl1.SelectedIndex = 11;
+
             // Delay for 1 second
-            await DelayAsync(1000);
+            await DelayAsync(1);
+            preparereport.Visible = true;
             tabControl1.SelectedIndex = 9;
             tabControl1.SelectedIndex = 10;
             tabControl1.SelectedIndex = 8;
@@ -11714,9 +11717,26 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView19.ClearSelection();
             guna2DataGridView20.ClearSelection();
 
+            guna2DataGridView13.Columns[5].Visible = false;
+            guna2DataGridView15.Columns[5].Visible = false;
+            guna2DataGridView16.Columns[5].Visible = false;
+            guna2DataGridView17.Columns[5].Visible = false;
+            guna2DataGridView18.Columns[5].Visible = false;
+            guna2DataGridView19.Columns[5].Visible = false;
+            guna2DataGridView20.Columns[5].Visible = false;
+            guna2DataGridView14.Columns[4].Visible = false;
+
             guna2Button5.Visible = false;
             guna2Button6.Visible = false;
             dietplanreport.Visible = true;
+
+            calculationnew.Text = "All";
+
+            energyvalue.Text = $"{double.Parse(caloried.Text):0.##} kcal";
+            carbsvalue.Text = $"{double.Parse(carbsd.Text):0.##} g";
+            proteinvalue.Text = $"{double.Parse(proteind.Text):0.##} g";
+            fatsvalue.Text = $"{double.Parse(fatsd.Text):0.##} g";
+
 
             List<Panel> panelList = new List<Panel> { panel13, panel19, panel22, panel12 };
             SavePanelsAsPdfWithFooter(panelList, 610, 800);
@@ -11725,6 +11745,17 @@ namespace HelloWorldSolutionIMS
             guna2Button5.Visible = true;
             guna2Button6.Visible = true;
             dietplanreport.Visible = false;
+
+            guna2DataGridView13.Columns[5].Visible = true;
+            guna2DataGridView15.Columns[5].Visible = true;
+            guna2DataGridView16.Columns[5].Visible = true;
+            guna2DataGridView17.Columns[5].Visible = true;
+            guna2DataGridView18.Columns[5].Visible = true;
+            guna2DataGridView19.Columns[5].Visible = true;
+            guna2DataGridView20.Columns[5].Visible = true;
+            guna2DataGridView14.Columns[4].Visible = true;
+
+
 
             //panel19.Size = new Size(1356, 1020);
             // Create SaveFileDialog object
@@ -11858,8 +11889,9 @@ namespace HelloWorldSolutionIMS
 
                 // Dispose of resources
                 document.Dispose();
-
-                MessageBox.Show($"Panels saved as PDF with footer: {filePath}");
+                tabControl1.SelectedIndex = 5;
+                preparereport.Visible = false;
+                MessageBox.Show("Report generated successfully!");
             }
         }
 
