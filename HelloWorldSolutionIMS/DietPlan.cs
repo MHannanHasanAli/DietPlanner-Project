@@ -3070,6 +3070,30 @@ namespace HelloWorldSolutionIMS
             }
             TableLayoutFill();
             tabControl1.SelectedIndex = 5;
+
+            foreach (DataGridViewColumn column in guna2DataGridView13.Columns)
+            {
+                // Replace "FullName" with the actual name of the column you want to modify
+                if (column.Name != "action1")
+                {
+                    // Set AutoSizeMode to AllCells
+                    column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    // Set WrapMode to True for word wrapping
+                    column.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+                    // Optionally, you can set MinimumWidth to prevent the column from becoming too narrow
+
+                    column.MinimumWidth = 225;
+                }
+                else
+                {
+                    column.MinimumWidth = 15;
+                }
+            }
+
+            guna2DataGridView13.Rows.RemoveAt(1);
+            CheckRows(guna2DataGridView13);
         }
 
 

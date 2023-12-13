@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealAction));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,10 +48,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealAction));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.export = new Guna.UI2.WinForms.Guna2Button();
             this.mealensearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.groupcens = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -210,7 +211,6 @@
             this.gcid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.export = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -279,6 +279,21 @@
             this.panel6.Controls.Add(this.label28);
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
+            // 
+            // export
+            // 
+            this.export.AutoRoundedCorners = true;
+            this.export.BorderRadius = 21;
+            this.export.CausesValidation = false;
+            this.export.CheckedState.Parent = this.export;
+            this.export.CustomImages.Parent = this.export;
+            this.export.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.export, "export");
+            this.export.ForeColor = System.Drawing.Color.White;
+            this.export.HoverState.Parent = this.export;
+            this.export.Name = "export";
+            this.export.ShadowDecoration.Parent = this.export;
+            this.export.Click += new System.EventHandler(this.export_Click);
             // 
             // mealensearch
             // 
@@ -2296,21 +2311,6 @@
             this.gcnen.Name = "gcnen";
             this.gcnen.ReadOnly = true;
             this.gcnen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // export
-            // 
-            this.export.AutoRoundedCorners = true;
-            this.export.BorderRadius = 21;
-            this.export.CausesValidation = false;
-            this.export.CheckedState.Parent = this.export;
-            this.export.CustomImages.Parent = this.export;
-            this.export.FillColor = System.Drawing.Color.MediumSeaGreen;
-            resources.ApplyResources(this.export, "export");
-            this.export.ForeColor = System.Drawing.Color.White;
-            this.export.HoverState.Parent = this.export;
-            this.export.Name = "export";
-            this.export.ShadowDecoration.Parent = this.export;
-            this.export.Click += new System.EventHandler(this.export_Click);
             // 
             // MealAction
             // 
