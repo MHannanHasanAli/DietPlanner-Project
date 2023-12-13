@@ -1780,6 +1780,16 @@ namespace HelloWorldSolutionIMS
         {
 
         }
+
+        private void groupar_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (loadcheck == 1)
+            {
+                GroupFilterIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
+
+            }
+
+        }
     }
 
 }
