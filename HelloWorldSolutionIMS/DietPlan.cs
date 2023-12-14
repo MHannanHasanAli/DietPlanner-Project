@@ -8379,6 +8379,11 @@ namespace HelloWorldSolutionIMS
         static string companyemail = "";
         private void SettingCoverInfo()
         {
+            goalstartvalue.Text = goalstart.Text;
+            goalendvalue.Text = goalend.Text;
+            targetvalue.Text = target.Text;
+            achievedvalue.Text = achieved.Text;
+
             SqlCommand cmd;
             try
             {
@@ -10161,6 +10166,11 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView20.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView20.RowTemplate.DefaultCellStyle.ForeColor;
             guna2DataGridView20.Columns[5].Width = 20;
 
+            guna2DataGridView7.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView7.GridColor = Color.Black;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.ForeColor;
+
             while (guna2DataGridView13.Rows.Count < 5)
             {
                 Guna2DataGridView row = new Guna2DataGridView();
@@ -11715,133 +11725,8 @@ namespace HelloWorldSolutionIMS
         }
         private async void PrintBTN_Click(object sender, EventArgs e)
         {
-
-            FillDayByChart();
-            SettingCoverInfo();
-            //cecover.Text = companyemail;
-            //cmcover.Text = companynumber;
-            //cncover.Text = companynamefooter;
-            tabControl1.SelectedIndex = 11;
-
-            // Delay for 1 second
-            await DelayAsync(1);
-            preparereport.Visible = true;
-            tabControl1.SelectedIndex = 9;
-            tabControl1.SelectedIndex = 10;
-            tabControl1.SelectedIndex = 8;
-
-            panel19.Dock = DockStyle.None;
-            panel19.Size = new Size(1000, 1600);
-
-            guna2DataGridView13.ClearSelection();
-            guna2DataGridView15.ClearSelection();
-            guna2DataGridView16.ClearSelection();
-            guna2DataGridView17.ClearSelection();
-            guna2DataGridView18.ClearSelection();
-            guna2DataGridView19.ClearSelection();
-            guna2DataGridView20.ClearSelection();
-
-            guna2DataGridView13.Columns[5].Visible = false;
-            guna2DataGridView15.Columns[5].Visible = false;
-            guna2DataGridView16.Columns[5].Visible = false;
-            guna2DataGridView17.Columns[5].Visible = false;
-            guna2DataGridView18.Columns[5].Visible = false;
-            guna2DataGridView19.Columns[5].Visible = false;
-            guna2DataGridView20.Columns[5].Visible = false;
-            guna2DataGridView14.Columns[4].Visible = false;
-
-            guna2Button5.Visible = false;
-            guna2Button6.Visible = false;
-            dietplanreport.Visible = true;
-
-            calculationnew.Text = "All";
-
-            energyvalue.Text = $"{double.Parse(caloried.Text):0.##} kcal";
-            carbsvalue.Text = $"{double.Parse(carbsd.Text):0.##} g";
-            proteinvalue.Text = $"{double.Parse(proteind.Text):0.##} g";
-            fatsvalue.Text = $"{double.Parse(fatsd.Text):0.##} g";
-
-
-            List<Panel> panelList = new List<Panel> { panel13, panel19, panel22, panel12 };
-            SavePanelsAsPdfWithFooter(panelList, 610, 800);
-
-            panel19.Dock = DockStyle.Fill;
-            guna2Button5.Visible = true;
-            guna2Button6.Visible = true;
-            dietplanreport.Visible = false;
-
-            guna2DataGridView13.Columns[5].Visible = true;
-            guna2DataGridView15.Columns[5].Visible = true;
-            guna2DataGridView16.Columns[5].Visible = true;
-            guna2DataGridView17.Columns[5].Visible = true;
-            guna2DataGridView18.Columns[5].Visible = true;
-            guna2DataGridView19.Columns[5].Visible = true;
-            guna2DataGridView20.Columns[5].Visible = true;
-            guna2DataGridView14.Columns[4].Visible = true;
-
-
-
-            //panel19.Size = new Size(1356, 1020);
-            // Create SaveFileDialog object
-            //SaveFileDialog saveFileDialog = new SaveFileDialog();
-            //saveFileDialog.Filter = "PDF Files (*.pdf)|*.pdf";
-            //saveFileDialog.Title = "Save Panels as PDF";
-
-            //// Show the dialog and check if the user selects a file
-            //if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            //{
-            //    string filePath = saveFileDialog.FileName;
-            //    Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-
-            //    // Create a new PDF document
-
-            //    List<Panel> panelList = new List<Panel> { panel13, panel22 }; // Add more panels as needed
-
-            //    PdfDocument document = new PdfDocument();
-
-            //    // Iterate through each panel and add a page to the document
-            //    foreach (Panel currentPanel in panelList)
-            //    {
-            //        // Add a page to the document with the specified size
-            //        PdfPage page = document.AddPage();
-            //        page.Width = XUnit.FromPoint(currentPanel.Width);
-            //        page.Height = XUnit.FromPoint(currentPanel.Height);
-
-            //        XGraphics gfx = XGraphics.FromPdfPage(page);
-
-            //        // Capture the panel content as an image
-            //        Bitmap bmp = new Bitmap(currentPanel.Width, currentPanel.Height);
-            //        currentPanel.DrawToBitmap(bmp, new System.Drawing.Rectangle(0, 0, bmp.Width, bmp.Height));
-
-            //        // Convert the GDI image to PDFsharp XImage
-            //        XImage panelImage = XImage.FromGdiPlusImage(bmp);
-
-            //        // Draw the image onto the PDF page
-            //        gfx.DrawImage(panelImage, 0, 0);
-
-            //        // Dispose of resources for this page
-            //        bmp.Dispose();
-            //    }
-
-            //    // Add footer on the last page
-            //    PdfPage lastPage = document.Pages.Last();
-            //    XGraphics lastPageGfx = XGraphics.FromPdfPage(lastPage);
-            //    XTextFormatter tf = new XTextFormatter(lastPageGfx);
-
-            //    XRect rect = new XRect(10, lastPage.Height - 20, lastPage.Width - 20, 20);
-            //    lastPageGfx.DrawRectangle(XBrushes.White, rect);
-
-            //    // Align the footer text to the left
-            //    tf.DrawString($"{companynamefooter} | {companynumber} | {companyemail}", new XFont("Arial", 8), XBrushes.Black, rect, XStringFormats.TopLeft);
-
-            //    // Save the PDF document
-            //    document.Save(filePath);
-
-            //    // Dispose of resources
-            //    document.Close();
-
-            //    MessageBox.Show($"Panels saved as PDF: {filePath}");
-            //}
+            tabControl1.SelectedIndex = 13;
+            PrepareNewGridView();
         }
 
         private void SavePanelsAsPdfWithFooter(List<Panel> panels, double width, double height)
@@ -11934,6 +11819,88 @@ namespace HelloWorldSolutionIMS
         private void panel16_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2Button8_Click_1(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 5;
+        }
+
+        private void PrepareNewGridView()
+        {
+            for (int i = 0; i < 42; i++)
+            {
+                guna2DataGridView7.Rows.Add();
+            }
+
+            guna2DataGridView7.ClearSelection();
+        }
+        private async void generatereport_Click(object sender, EventArgs e)
+        {
+
+
+            FillDayByChart();
+            SettingCoverInfo();
+            //cecover.Text = companyemail;
+            //cmcover.Text = companynumber;
+            //cncover.Text = companynamefooter;
+            tabControl1.SelectedIndex = 11;
+
+            // Delay for 1 second
+            await DelayAsync(1);
+            preparereport.Visible = true;
+            tabControl1.SelectedIndex = 9;
+            tabControl1.SelectedIndex = 10;
+            tabControl1.SelectedIndex = 8;
+
+            panel19.Dock = DockStyle.None;
+            panel19.Size = new Size(1000, 1600);
+
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+
+            guna2DataGridView13.Columns[5].Visible = false;
+            guna2DataGridView15.Columns[5].Visible = false;
+            guna2DataGridView16.Columns[5].Visible = false;
+            guna2DataGridView17.Columns[5].Visible = false;
+            guna2DataGridView18.Columns[5].Visible = false;
+            guna2DataGridView19.Columns[5].Visible = false;
+            guna2DataGridView20.Columns[5].Visible = false;
+            guna2DataGridView14.Columns[4].Visible = false;
+
+            guna2Button5.Visible = false;
+            guna2Button6.Visible = false;
+            dietplanreport.Visible = true;
+
+            calculationnew.Text = "All";
+
+            energyvalue.Text = $"{double.Parse(caloried.Text):0.##} kcal";
+            carbsvalue.Text = $"{double.Parse(carbsd.Text):0.##} g";
+            proteinvalue.Text = $"{double.Parse(proteind.Text):0.##} g";
+            fatsvalue.Text = $"{double.Parse(fatsd.Text):0.##} g";
+
+
+            List<Panel> panelList = new List<Panel> { panel13, panel19, panel22, panel12 };
+            SavePanelsAsPdfWithFooter(panelList, 610, 800);
+
+            panel19.Dock = DockStyle.Fill;
+            guna2Button5.Visible = true;
+            guna2Button6.Visible = true;
+            dietplanreport.Visible = false;
+
+            guna2DataGridView13.Columns[5].Visible = true;
+            guna2DataGridView15.Columns[5].Visible = true;
+            guna2DataGridView16.Columns[5].Visible = true;
+            guna2DataGridView17.Columns[5].Visible = true;
+            guna2DataGridView18.Columns[5].Visible = true;
+            guna2DataGridView19.Columns[5].Visible = true;
+            guna2DataGridView20.Columns[5].Visible = true;
+            guna2DataGridView14.Columns[4].Visible = true;
         }
 
         //private void SavePanelsAsPdfWithFooter(List<Panel> panels)

@@ -125,6 +125,10 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -576,6 +580,15 @@
             this.label42 = new System.Windows.Forms.Label();
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.goalstartvalue = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.goalendvalue = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.targetvalue = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.achievedvalue = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.covername = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -595,8 +608,40 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.generatereport = new Guna.UI2.WinForms.Guna2Button();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.goalend = new System.Windows.Forms.DateTimePicker();
+            this.goalstart = new System.Windows.Forms.DateTimePicker();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.target = new Guna.UI2.WinForms.Guna2TextBox();
+            this.achieved = new Guna.UI2.WinForms.Guna2TextBox();
             this.preparereport = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.guna2DataGridView7 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idcol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.breakfastr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lunchr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dinnerr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.snackr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.label108 = new System.Windows.Forms.Label();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.label109 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.label110 = new System.Windows.Forms.Label();
+            this.label111 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.label114 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -670,6 +715,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.tabPage12.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -679,7 +725,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.tabPage13.SuspendLayout();
+            this.panel23.SuspendLayout();
             this.preparereport.SuspendLayout();
+            this.tabPage14.SuspendLayout();
+            this.panel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView7)).BeginInit();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel29.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -696,6 +752,8 @@
             this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Controls.Add(this.tabPage12);
+            this.tabControl1.Controls.Add(this.tabPage13);
+            this.tabControl1.Controls.Add(this.tabPage14);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -6434,6 +6492,11 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.guna2HtmlLabel16);
+            this.panel13.Controls.Add(this.guna2HtmlLabel12);
+            this.panel13.Controls.Add(this.guna2HtmlLabel14);
+            this.panel13.Controls.Add(this.guna2HtmlLabel10);
+            this.panel13.Controls.Add(this.tableLayoutPanel2);
             this.panel13.Controls.Add(this.panel15);
             this.panel13.Controls.Add(this.covername);
             this.panel13.Controls.Add(this.pictureBox7);
@@ -6441,6 +6504,63 @@
             this.panel13.Controls.Add(this.panel14);
             resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
+            // 
+            // guna2HtmlLabel16
+            // 
+            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel16, "guna2HtmlLabel16");
+            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
+            // 
+            // guna2HtmlLabel12
+            // 
+            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel12, "guna2HtmlLabel12");
+            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
+            // 
+            // guna2HtmlLabel14
+            // 
+            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel14, "guna2HtmlLabel14");
+            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
+            // 
+            // guna2HtmlLabel10
+            // 
+            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel10, "guna2HtmlLabel10");
+            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            // 
+            // tableLayoutPanel2
+            // 
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.goalstartvalue, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.goalendvalue, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.targetvalue, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.achievedvalue, 3, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
+            // goalstartvalue
+            // 
+            this.goalstartvalue.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.goalstartvalue, "goalstartvalue");
+            this.goalstartvalue.Name = "goalstartvalue";
+            // 
+            // goalendvalue
+            // 
+            this.goalendvalue.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.goalendvalue, "goalendvalue");
+            this.goalendvalue.Name = "goalendvalue";
+            // 
+            // targetvalue
+            // 
+            this.targetvalue.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.targetvalue, "targetvalue");
+            this.targetvalue.Name = "targetvalue";
+            // 
+            // achievedvalue
+            // 
+            this.achievedvalue.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.achievedvalue, "achievedvalue");
+            this.achievedvalue.Name = "achievedvalue";
             // 
             // panel15
             // 
@@ -6578,6 +6698,133 @@
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             // 
+            // tabPage13
+            // 
+            this.tabPage13.Controls.Add(this.panel23);
+            resources.ApplyResources(this.tabPage13, "tabPage13");
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.UseVisualStyleBackColor = true;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.White;
+            this.panel23.Controls.Add(this.guna2Button8);
+            this.panel23.Controls.Add(this.generatereport);
+            this.panel23.Controls.Add(this.label43);
+            this.panel23.Controls.Add(this.label44);
+            this.panel23.Controls.Add(this.goalend);
+            this.panel23.Controls.Add(this.goalstart);
+            this.panel23.Controls.Add(this.label40);
+            this.panel23.Controls.Add(this.label41);
+            this.panel23.Controls.Add(this.target);
+            this.panel23.Controls.Add(this.achieved);
+            resources.ApplyResources(this.panel23, "panel23");
+            this.panel23.Name = "panel23";
+            // 
+            // guna2Button8
+            // 
+            this.guna2Button8.AutoRoundedCorners = true;
+            this.guna2Button8.BorderRadius = 21;
+            this.guna2Button8.CausesValidation = false;
+            this.guna2Button8.CheckedState.Parent = this.guna2Button8;
+            this.guna2Button8.CustomImages.Parent = this.guna2Button8;
+            this.guna2Button8.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button8, "guna2Button8");
+            this.guna2Button8.ForeColor = System.Drawing.Color.White;
+            this.guna2Button8.HoverState.Parent = this.guna2Button8;
+            this.guna2Button8.Name = "guna2Button8";
+            this.guna2Button8.ShadowDecoration.Parent = this.guna2Button8;
+            this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click_1);
+            // 
+            // generatereport
+            // 
+            this.generatereport.AutoRoundedCorners = true;
+            this.generatereport.BorderRadius = 21;
+            this.generatereport.CausesValidation = false;
+            this.generatereport.CheckedState.Parent = this.generatereport;
+            this.generatereport.CustomImages.Parent = this.generatereport;
+            this.generatereport.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.generatereport, "generatereport");
+            this.generatereport.ForeColor = System.Drawing.Color.White;
+            this.generatereport.HoverState.Parent = this.generatereport;
+            this.generatereport.Name = "generatereport";
+            this.generatereport.ShadowDecoration.Parent = this.generatereport;
+            this.generatereport.Click += new System.EventHandler(this.generatereport_Click);
+            // 
+            // label43
+            // 
+            resources.ApplyResources(this.label43, "label43");
+            this.label43.Name = "label43";
+            // 
+            // label44
+            // 
+            resources.ApplyResources(this.label44, "label44");
+            this.label44.Name = "label44";
+            // 
+            // goalend
+            // 
+            resources.ApplyResources(this.goalend, "goalend");
+            this.goalend.Name = "goalend";
+            // 
+            // goalstart
+            // 
+            resources.ApplyResources(this.goalstart, "goalstart");
+            this.goalstart.Name = "goalstart";
+            // 
+            // label40
+            // 
+            resources.ApplyResources(this.label40, "label40");
+            this.label40.Name = "label40";
+            // 
+            // label41
+            // 
+            resources.ApplyResources(this.label41, "label41");
+            this.label41.Name = "label41";
+            // 
+            // target
+            // 
+            this.target.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.target.DefaultText = "";
+            this.target.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.target.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.target.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.target.DisabledState.Parent = this.target;
+            this.target.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.target.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.target.FocusedState.Parent = this.target;
+            resources.ApplyResources(this.target, "target");
+            this.target.ForeColor = System.Drawing.Color.Black;
+            this.target.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.target.HoverState.Parent = this.target;
+            this.target.Name = "target";
+            this.target.PasswordChar = '\0';
+            this.target.PlaceholderText = "";
+            this.target.SelectedText = "";
+            this.target.ShadowDecoration.Parent = this.target;
+            this.target.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.floatlock);
+            // 
+            // achieved
+            // 
+            this.achieved.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.achieved.DefaultText = "";
+            this.achieved.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.achieved.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.achieved.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.achieved.DisabledState.Parent = this.achieved;
+            this.achieved.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.achieved.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.achieved.FocusedState.Parent = this.achieved;
+            resources.ApplyResources(this.achieved, "achieved");
+            this.achieved.ForeColor = System.Drawing.Color.Black;
+            this.achieved.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.achieved.HoverState.Parent = this.achieved;
+            this.achieved.Name = "achieved";
+            this.achieved.PasswordChar = '\0';
+            this.achieved.PlaceholderText = "";
+            this.achieved.SelectedText = "";
+            this.achieved.ShadowDecoration.Parent = this.achieved;
+            this.achieved.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.floatlock);
+            // 
             // preparereport
             // 
             this.preparereport.Controls.Add(this.guna2HtmlLabel17);
@@ -6589,6 +6836,203 @@
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.guna2HtmlLabel17, "guna2HtmlLabel17");
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
+            // 
+            // tabPage14
+            // 
+            this.tabPage14.Controls.Add(this.panel24);
+            resources.ApplyResources(this.tabPage14, "tabPage14");
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // panel24
+            // 
+            resources.ApplyResources(this.panel24, "panel24");
+            this.panel24.BackColor = System.Drawing.Color.White;
+            this.panel24.Controls.Add(this.panel28);
+            this.panel24.Controls.Add(this.panel27);
+            this.panel24.Controls.Add(this.panel25);
+            this.panel24.Controls.Add(this.panel29);
+            this.panel24.Controls.Add(this.panel26);
+            this.panel24.Controls.Add(this.guna2DataGridView7);
+            this.panel24.Name = "panel24";
+            // 
+            // guna2DataGridView7
+            // 
+            this.guna2DataGridView7.AllowUserToAddRows = false;
+            this.guna2DataGridView7.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle63.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView7.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle63;
+            this.guna2DataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.guna2DataGridView7.BackgroundColor = System.Drawing.Color.White;
+            this.guna2DataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guna2DataGridView7.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle64.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle64.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle64.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle64;
+            this.guna2DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idcol,
+            this.breakfastr,
+            this.lunchr,
+            this.dinnerr,
+            this.snackr});
+            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle65.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle65.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle65.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle65.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle65.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle65.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView7.DefaultCellStyle = dataGridViewCellStyle65;
+            this.guna2DataGridView7.EnableHeadersVisualStyles = false;
+            this.guna2DataGridView7.GridColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.guna2DataGridView7, "guna2DataGridView7");
+            this.guna2DataGridView7.Name = "guna2DataGridView7";
+            this.guna2DataGridView7.ReadOnly = true;
+            this.guna2DataGridView7.RowHeadersVisible = false;
+            dataGridViewCellStyle66.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle66.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView7.RowsDefaultCellStyle = dataGridViewCellStyle66;
+            this.guna2DataGridView7.RowTemplate.Height = 24;
+            this.guna2DataGridView7.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.guna2DataGridView7.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
+            this.guna2DataGridView7.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView7.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView7.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView7.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView7.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView7.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView7.ThemeStyle.GridColor = System.Drawing.Color.Black;
+            this.guna2DataGridView7.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.guna2DataGridView7.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView7.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView7.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView7.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView7.ThemeStyle.HeaderStyle.Height = 27;
+            this.guna2DataGridView7.ThemeStyle.ReadOnly = true;
+            this.guna2DataGridView7.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView7.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView7.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView7.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView7.ThemeStyle.RowsStyle.Height = 24;
+            this.guna2DataGridView7.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.guna2DataGridView7.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // idcol
+            // 
+            resources.ApplyResources(this.idcol, "idcol");
+            this.idcol.Name = "idcol";
+            this.idcol.ReadOnly = true;
+            // 
+            // breakfastr
+            // 
+            resources.ApplyResources(this.breakfastr, "breakfastr");
+            this.breakfastr.Name = "breakfastr";
+            this.breakfastr.ReadOnly = true;
+            // 
+            // lunchr
+            // 
+            resources.ApplyResources(this.lunchr, "lunchr");
+            this.lunchr.Name = "lunchr";
+            this.lunchr.ReadOnly = true;
+            // 
+            // dinnerr
+            // 
+            resources.ApplyResources(this.dinnerr, "dinnerr");
+            this.dinnerr.Name = "dinnerr";
+            this.dinnerr.ReadOnly = true;
+            // 
+            // snackr
+            // 
+            resources.ApplyResources(this.snackr, "snackr");
+            this.snackr.Name = "snackr";
+            this.snackr.ReadOnly = true;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.Silver;
+            this.panel25.Controls.Add(this.label108);
+            resources.ApplyResources(this.panel25, "panel25");
+            this.panel25.Name = "panel25";
+            // 
+            // label108
+            // 
+            resources.ApplyResources(this.label108, "label108");
+            this.label108.ForeColor = System.Drawing.Color.White;
+            this.label108.Name = "label108";
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.Silver;
+            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel26.Controls.Add(this.label109);
+            resources.ApplyResources(this.panel26, "panel26");
+            this.panel26.Name = "panel26";
+            // 
+            // label109
+            // 
+            resources.ApplyResources(this.label109, "label109");
+            this.label109.ForeColor = System.Drawing.Color.Black;
+            this.label109.Name = "label109";
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.Silver;
+            this.panel27.Controls.Add(this.label111);
+            this.panel27.Controls.Add(this.label110);
+            resources.ApplyResources(this.panel27, "panel27");
+            this.panel27.Name = "panel27";
+            // 
+            // label110
+            // 
+            resources.ApplyResources(this.label110, "label110");
+            this.label110.ForeColor = System.Drawing.Color.White;
+            this.label110.Name = "label110";
+            // 
+            // label111
+            // 
+            resources.ApplyResources(this.label111, "label111");
+            this.label111.ForeColor = System.Drawing.Color.Black;
+            this.label111.Name = "label111";
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.Silver;
+            this.panel28.Controls.Add(this.label112);
+            this.panel28.Controls.Add(this.label113);
+            resources.ApplyResources(this.panel28, "panel28");
+            this.panel28.Name = "panel28";
+            // 
+            // label112
+            // 
+            resources.ApplyResources(this.label112, "label112");
+            this.label112.ForeColor = System.Drawing.Color.Black;
+            this.label112.Name = "label112";
+            // 
+            // label113
+            // 
+            resources.ApplyResources(this.label113, "label113");
+            this.label113.ForeColor = System.Drawing.Color.White;
+            this.label113.Name = "label113";
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.Silver;
+            this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel29.Controls.Add(this.label114);
+            resources.ApplyResources(this.panel29, "panel29");
+            this.panel29.Name = "panel29";
+            // 
+            // label114
+            // 
+            resources.ApplyResources(this.label114, "label114");
+            this.label114.ForeColor = System.Drawing.Color.Black;
+            this.label114.Name = "label114";
             // 
             // DietPlan
             // 
@@ -6698,6 +7142,8 @@
             this.tabPage12.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -6708,8 +7154,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.tabPage13.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
             this.preparereport.ResumeLayout(false);
             this.preparereport.PerformLayout();
+            this.tabPage14.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView7)).EndInit();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -7188,5 +7650,46 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel energyvalue;
         private System.Windows.Forms.Panel preparereport;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
+        private System.Windows.Forms.TabPage tabPage13;
+        private System.Windows.Forms.Panel panel23;
+        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button generatereport;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.DateTimePicker goalend;
+        private System.Windows.Forms.DateTimePicker goalstart;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private Guna.UI2.WinForms.Guna2TextBox target;
+        private Guna.UI2.WinForms.Guna2TextBox achieved;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
+        private Guna.UI2.WinForms.Guna2HtmlLabel goalstartvalue;
+        private Guna.UI2.WinForms.Guna2HtmlLabel goalendvalue;
+        private Guna.UI2.WinForms.Guna2HtmlLabel targetvalue;
+        private Guna.UI2.WinForms.Guna2HtmlLabel achievedvalue;
+        private System.Windows.Forms.TabPage tabPage14;
+        private System.Windows.Forms.Panel panel24;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn breakfastr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lunchr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dinnerr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn snackr;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Label label112;
+        private System.Windows.Forms.Label label113;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Label label114;
     }
 }
