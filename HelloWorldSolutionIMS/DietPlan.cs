@@ -2745,7 +2745,7 @@ namespace HelloWorldSolutionIMS
             chart10.Series.Clear();
 
             UpdateInstruction();
-
+            PrepareReportTable();
             instructionflag = 1;
             try
             {
@@ -7305,35 +7305,42 @@ namespace HelloWorldSolutionIMS
                                     if (selectedchart == "guna2DataGridView13")
                                     {
                                         guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView22.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
                                     }
                                     else if (selectedchart == "guna2DataGridView15")
                                     {
                                         guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView21.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView16")
                                     {
                                         guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView11.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView17")
                                     {
                                         guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView18")
                                     {
                                         guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView19")
                                     {
                                         guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView20")
                                     {
                                         guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
 
@@ -7370,35 +7377,43 @@ namespace HelloWorldSolutionIMS
                                     if (selectedchart == "guna2DataGridView13")
                                     {
                                         guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView22.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
                                     }
                                     else if (selectedchart == "guna2DataGridView15")
                                     {
                                         guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView21.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView16")
                                     {
                                         guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView11.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView17")
                                     {
                                         guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView18")
                                     {
                                         guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView19")
                                     {
                                         guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView20")
                                     {
                                         guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
 
@@ -7452,35 +7467,43 @@ namespace HelloWorldSolutionIMS
                                     if (selectedchart == "guna2DataGridView13")
                                     {
                                         guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView22.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+
                                     }
                                     else if (selectedchart == "guna2DataGridView15")
                                     {
                                         guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView21.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView16")
                                     {
                                         guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView11.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView17")
                                     {
                                         guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView18")
                                     {
                                         guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView19")
                                     {
                                         guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView20")
                                     {
                                         guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
 
                                     }
 
@@ -7517,35 +7540,43 @@ namespace HelloWorldSolutionIMS
                                     if (selectedchart == "guna2DataGridView13")
                                     {
                                         guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView22.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+
                                     }
                                     else if (selectedchart == "guna2DataGridView15")
                                     {
                                         guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView21.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView16")
                                     {
                                         guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView11.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView17")
                                     {
                                         guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView18")
                                     {
                                         guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView19")
                                     {
                                         guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView20")
                                     {
                                         guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
+                                        guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
 
@@ -8868,35 +8899,43 @@ namespace HelloWorldSolutionIMS
                                     if (item.ChartName == "guna2DataGridView13")
                                     {
                                         guna2DataGridView13.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+                                        guna2DataGridView22.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+
                                     }
                                     else if (item.ChartName == "guna2DataGridView15")
                                     {
                                         guna2DataGridView15.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+                                        guna2DataGridView21.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
 
                                     }
                                     else if (item.ChartName == "guna2DataGridView16")
                                     {
                                         guna2DataGridView16.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+                                        guna2DataGridView11.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
 
                                     }
                                     else if (item.ChartName == "guna2DataGridView17")
                                     {
                                         guna2DataGridView17.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+                                        guna2DataGridView10.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
 
                                     }
                                     else if (item.ChartName == "guna2DataGridView18")
                                     {
                                         guna2DataGridView18.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+                                        guna2DataGridView9.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
 
                                     }
                                     else if (item.ChartName == "guna2DataGridView19")
                                     {
                                         guna2DataGridView19.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+                                        guna2DataGridView8.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
 
                                     }
                                     else if (item.ChartName == "guna2DataGridView20")
                                     {
                                         guna2DataGridView20.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
+                                        guna2DataGridView7.Rows[item.Row].Cells[item.Col].Value = reader2["MealAr"].ToString();
 
                                     }
 
@@ -8934,35 +8973,43 @@ namespace HelloWorldSolutionIMS
                                     if (item.ChartName == "guna2DataGridView13")
                                     {
                                         guna2DataGridView13.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                        guna2DataGridView22.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+
                                     }
                                     else if (item.ChartName == "guna2DataGridView15")
                                     {
                                         guna2DataGridView15.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                        guna2DataGridView21.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
 
                                     }
                                     else if (item.ChartName == "guna2DataGridView16")
                                     {
                                         guna2DataGridView16.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                        guna2DataGridView11.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
 
                                     }
                                     else if (item.ChartName == "guna2DataGridView17")
                                     {
                                         guna2DataGridView17.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                        guna2DataGridView10.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
 
                                     }
                                     else if (item.ChartName == "guna2DataGridView18")
                                     {
                                         guna2DataGridView18.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                        guna2DataGridView9.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
 
                                     }
                                     else if (item.ChartName == "guna2DataGridView19")
                                     {
                                         guna2DataGridView19.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                        guna2DataGridView8.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
 
                                     }
                                     else if (item.ChartName == "guna2DataGridView20")
                                     {
                                         guna2DataGridView20.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
+                                        guna2DataGridView7.Rows[item.Row].Cells[item.Col].Value = reader2["MealEn"].ToString();
 
                                     }
 
@@ -10114,6 +10161,41 @@ namespace HelloWorldSolutionIMS
 
         private void TableLayoutFill()
         {
+            guna2DataGridView21.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView21.GridColor = Color.Black;
+            guna2DataGridView21.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView21.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView21.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView21.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView22.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView22.GridColor = Color.Black;
+            guna2DataGridView22.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView22.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView22.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView22.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView11.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView11.GridColor = Color.Black;
+            guna2DataGridView11.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView11.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView11.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView11.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView10.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView10.GridColor = Color.Black;
+            guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView10.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView10.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView9.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView9.GridColor = Color.Black;
+            guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView9.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView9.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView8.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView8.GridColor = Color.Black;
+            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView8.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView8.RowTemplate.DefaultCellStyle.ForeColor;
+
+            guna2DataGridView7.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView7.GridColor = Color.Black;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.ForeColor;
+
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView1.GridColor = Color.Black;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
@@ -11966,7 +12048,23 @@ namespace HelloWorldSolutionIMS
         //    // Align the footer text to the left
         //    gfx.DrawString(footerText, font, XBrushes.Black, rect.Left, rect.Top, XStringFormats.TopLeft);
         //}
+        private void PrepareReportTable()
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                guna2DataGridView22.Rows.Add();
+                guna2DataGridView21.Rows.Add();
+                guna2DataGridView11.Rows.Add();
+                guna2DataGridView10.Rows.Add();
+                guna2DataGridView9.Rows.Add();
+                guna2DataGridView8.Rows.Add();
+                guna2DataGridView7.Rows.Add();
+            }
+
+
+        }
     }
+
 
     public class CustomFontResolver : IFontResolver
     {
