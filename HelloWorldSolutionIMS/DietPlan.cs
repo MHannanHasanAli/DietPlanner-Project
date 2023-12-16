@@ -11817,8 +11817,9 @@ namespace HelloWorldSolutionIMS
         private async void PrintBTN_Click(object sender, EventArgs e)
         {
             ReportMealsNotesFiller();
-            tabControl1.SelectedIndex = 13;
+            tabControl1.SelectedIndex = 12;
             PrepareNewGridView();
+
         }
 
         private void SavePanelsAsPdfWithFooter(List<Panel> panels, double width, double height)
@@ -12016,7 +12017,7 @@ namespace HelloWorldSolutionIMS
             fatsvalue.Text = $"{double.Parse(fatsd.Text):0.##} g";
 
 
-            List<Panel> panelList = new List<Panel> { panel13, panel19, panel22, panel12 };
+            List<Panel> panelList = new List<Panel> { panel13, panel24, panel22, panel12 };
             SavePanelsAsPdfWithFooter(panelList, 610, 800);
 
             panel19.Dock = DockStyle.Fill;
