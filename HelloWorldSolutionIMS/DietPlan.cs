@@ -11099,6 +11099,7 @@ namespace HelloWorldSolutionIMS
             if (call == 1)
             {
                 guna2DataGridView13.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                guna2DataGridView22.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
                 artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
             }
 
@@ -11124,6 +11125,7 @@ namespace HelloWorldSolutionIMS
             if (call == 1)
             {
                 guna2DataGridView15.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                guna2DataGridView21.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
                 artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
             }
         }
@@ -11148,6 +11150,7 @@ namespace HelloWorldSolutionIMS
             if (call == 1)
             {
                 guna2DataGridView16.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                guna2DataGridView11.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
                 artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
             }
         }
@@ -11172,6 +11175,7 @@ namespace HelloWorldSolutionIMS
             if (call == 1)
             {
                 guna2DataGridView17.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                guna2DataGridView10.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
                 artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
             }
         }
@@ -11196,6 +11200,7 @@ namespace HelloWorldSolutionIMS
             if (call == 1)
             {
                 guna2DataGridView18.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                guna2DataGridView9.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
                 artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
             }
         }
@@ -11220,6 +11225,7 @@ namespace HelloWorldSolutionIMS
             if (call == 1)
             {
                 guna2DataGridView19.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                guna2DataGridView8.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
                 artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
             }
         }
@@ -11244,6 +11250,7 @@ namespace HelloWorldSolutionIMS
             if (call == 1)
             {
                 guna2DataGridView20.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
+                guna2DataGridView7.Rows[deleteitem.Row].Cells[deleteitem.Col].Value = "";
                 artificialMappings.RemoveAll(x => (x.Row == deleteitem.Row && x.Col == deleteitem.Col && x.ChartName == deleteitem.ChartName && x.ID == deleteitem.ID));
             }
         }
@@ -11277,6 +11284,7 @@ namespace HelloWorldSolutionIMS
                         if (item.ChartName == "guna2DataGridView13")
                         {
                             guna2DataGridView13.Rows[item.Row].Cells[item.Col].Value = "";
+                            guna2DataGridView22.Rows[item.Row].Cells[item.Col].Value = "";
 
                         }
 
@@ -11323,7 +11331,7 @@ namespace HelloWorldSolutionIMS
                         if (item.ChartName == "guna2DataGridView15")
                         {
                             guna2DataGridView15.Rows[item.Row].Cells[item.Col].Value = "";
-
+                            guna2DataGridView21.Rows[item.Row].Cells[item.Col].Value = "";
                         }
 
                         artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
@@ -11367,7 +11375,7 @@ namespace HelloWorldSolutionIMS
                         if (item.ChartName == "guna2DataGridView16")
                         {
                             guna2DataGridView16.Rows[item.Row].Cells[item.Col].Value = "";
-
+                            guna2DataGridView11.Rows[item.Row].Cells[item.Col].Value = "";
                         }
 
                         artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
@@ -11411,7 +11419,7 @@ namespace HelloWorldSolutionIMS
                         if (item.ChartName == "guna2DataGridView17")
                         {
                             guna2DataGridView17.Rows[item.Row].Cells[item.Col].Value = "";
-
+                            guna2DataGridView10.Rows[item.Row].Cells[item.Col].Value = "";
                         }
 
                         artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
@@ -11455,7 +11463,7 @@ namespace HelloWorldSolutionIMS
                         if (item.ChartName == "guna2DataGridView18")
                         {
                             guna2DataGridView18.Rows[item.Row].Cells[item.Col].Value = "";
-
+                            guna2DataGridView9.Rows[item.Row].Cells[item.Col].Value = "";
                         }
 
                         artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
@@ -11499,7 +11507,7 @@ namespace HelloWorldSolutionIMS
                         if (item.ChartName == "guna2DataGridView19")
                         {
                             guna2DataGridView19.Rows[item.Row].Cells[item.Col].Value = "";
-
+                            guna2DataGridView8.Rows[item.Row].Cells[item.Col].Value = "";
                         }
 
                         artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
@@ -11543,7 +11551,7 @@ namespace HelloWorldSolutionIMS
                         if (item.ChartName == "guna2DataGridView20")
                         {
                             guna2DataGridView20.Rows[item.Row].Cells[item.Col].Value = "";
-
+                            guna2DataGridView7.Rows[item.Row].Cells[item.Col].Value = "";
                         }
 
                         artificialMappings.RemoveAll(x => (x.Row == item.Row && x.Col == item.Col && x.ChartName == item.ChartName && x.ID == item.ID));
@@ -12138,6 +12146,17 @@ namespace HelloWorldSolutionIMS
         }
         private void ReportMealsNotesFiller()
         {
+            for (int i = 1; i < 5; i++)
+            {
+                guna2DataGridView22.Rows[5].Cells[i].Value = "";
+                guna2DataGridView21.Rows[5].Cells[i].Value = "";
+                guna2DataGridView11.Rows[5].Cells[i].Value = "";
+                guna2DataGridView10.Rows[5].Cells[i].Value = "";
+                guna2DataGridView9.Rows[5].Cells[i].Value = "";
+                guna2DataGridView8.Rows[5].Cells[i].Value = "";
+                guna2DataGridView7.Rows[5].Cells[i].Value = "";
+            }
+
             foreach (var item in artificialMappings)
             {
                 if (item.ChartName == "guna2DataGridView13" && item.Col == 1)
@@ -12156,6 +12175,318 @@ namespace HelloWorldSolutionIMS
                 {
                     MealsNutrientValuesForReport(item.ID);
                     guna2DataGridView22.Rows[5].Cells[2].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView13" && item.Col == 3)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView22.Rows[5].Cells[3].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView13" && item.Col == 4)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView22.Rows[5].Cells[4].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView15" && item.Col == 1)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView21.Rows[5].Cells[1].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView15" && item.Col == 2)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView21.Rows[5].Cells[2].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView15" && item.Col == 3)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView21.Rows[5].Cells[3].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView15" && item.Col == 4)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView21.Rows[5].Cells[4].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView16" && item.Col == 1)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView11.Rows[5].Cells[1].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView16" && item.Col == 2)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView11.Rows[5].Cells[2].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView16" && item.Col == 3)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView11.Rows[5].Cells[3].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView16" && item.Col == 4)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView11.Rows[5].Cells[4].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView17" && item.Col == 1)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView10.Rows[5].Cells[1].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView17" && item.Col == 2)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView10.Rows[5].Cells[2].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView17" && item.Col == 3)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView10.Rows[5].Cells[3].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView17" && item.Col == 4)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView10.Rows[5].Cells[4].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView18" && item.Col == 1)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView9.Rows[5].Cells[1].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView18" && item.Col == 2)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView9.Rows[5].Cells[2].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView18" && item.Col == 3)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView9.Rows[5].Cells[3].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView18" && item.Col == 4)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView9.Rows[5].Cells[4].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView19" && item.Col == 1)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView8.Rows[5].Cells[1].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView19" && item.Col == 2)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView8.Rows[5].Cells[2].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView19" && item.Col == 3)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView8.Rows[5].Cells[3].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView19" && item.Col == 4)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView8.Rows[5].Cells[4].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView20" && item.Col == 1)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView7.Rows[5].Cells[1].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView20" && item.Col == 2)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView7.Rows[5].Cells[2].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView20" && item.Col == 3)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView7.Rows[5].Cells[3].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView20" && item.Col == 4)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView7.Rows[5].Cells[4].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
                 }
 
             }
