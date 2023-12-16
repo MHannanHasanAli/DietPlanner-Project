@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
@@ -11807,6 +11808,7 @@ namespace HelloWorldSolutionIMS
         }
         private async void PrintBTN_Click(object sender, EventArgs e)
         {
+            ReportMealsNotesFiller();
             tabControl1.SelectedIndex = 13;
             PrepareNewGridView();
         }
@@ -11831,6 +11833,27 @@ namespace HelloWorldSolutionIMS
                 for (int i = 0; i < panels.Count; i++)
                 {
                     Panel currentPanel = panels[i];
+
+                    int resolution = 498; // You can adjust this value based on your needs
+
+                    // Ensure positive width and height
+                    int widthh = Math.Max(currentPanel.Width, 1);
+                    int heighth = Math.Max(currentPanel.Height, 1);
+
+                    Bitmap bmp2 = new Bitmap(widthh * resolution / 96, heighth * resolution / 96);
+
+                    // Set resolution
+                    bmp2.SetResolution(resolution, resolution);
+
+
+                    using (Graphics gg = Graphics.FromImage(bmp2))
+                    {
+                        gg.SmoothingMode = SmoothingMode.HighQuality;
+                        gg.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                        gg.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                        currentPanel.DrawToBitmap(bmp2, new Rectangle(0, 0, bmp2.Width, bmp2.Height));
+                    }
 
                     // Add a page to the document with the specified size
                     PdfSharp.Pdf.PdfPage page = document.AddPage();
@@ -11910,15 +11933,33 @@ namespace HelloWorldSolutionIMS
 
         private void PrepareNewGridView()
         {
-            for (int i = 0; i < 42; i++)
-            {
-                guna2DataGridView7.Rows.Add();
-            }
-
             guna2DataGridView7.ClearSelection();
         }
         private async void generatereport_Click(object sender, EventArgs e)
         {
+            // Assuming tableLayoutPanel2 is your TableLayoutPanel
+            // Assuming tableLayoutPanel2 is your TableLayoutPanel
+            foreach (Control control in tableLayoutPanel2.Controls)
+            {
+                if (control is Guna.UI2.WinForms.Guna2HtmlLabel)
+                {
+                    Guna.UI2.WinForms.Guna2HtmlLabel label = (Guna.UI2.WinForms.Guna2HtmlLabel)control;
+
+                    // Center the label text both vertically and horizontally
+                    label.TextAlignment = ContentAlignment.MiddleCenter;
+                    label.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+
+                    // Disable stretching
+                    label.Anchor = AnchorStyles.None;
+
+                    // Add padding to create spacing between text and image (adjust as needed)
+                    label.Padding = new Padding(0, 0, 10, 0); // You can adjust the right padding to create space
+
+                    // Note: Guna2HtmlLabel does not have a direct equivalent for TextImageRelation
+                    // Adjusting padding can be an alternative to create spacing between text and image.
+                }
+            }
+
 
 
             FillDayByChart();
@@ -12048,6 +12089,79 @@ namespace HelloWorldSolutionIMS
         //    // Align the footer text to the left
         //    gfx.DrawString(footerText, font, XBrushes.Black, rect.Left, rect.Top, XStringFormats.TopLeft);
         //}
+        static double k = 0;
+        static double p = 0;
+        static double c = 0;
+        static double f = 0;
+
+        private void MealsNutrientValuesForReport(int id)
+        {
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd2 = new SqlCommand("SELECT CALORIES, PROTEIN, CARBOHYDRATES, FATS FROM Meal WHERE ID = @MealID", MainClass.con);
+                cmd2.Parameters.AddWithValue("@MealID", id);
+
+                using (SqlDataReader reader2 = cmd2.ExecuteReader())
+                {
+                    if (reader2.Read())
+                    {
+                        k += double.Parse(reader2["CALORIES"].ToString());
+                        p += double.Parse(reader2["PROTEIN"].ToString());
+                        c += double.Parse(reader2["CARBOHYDRATES"].ToString());
+                        f += double.Parse(reader2["FATS"].ToString());
+                    }
+                    else
+                    {
+                        // Handle the case where no rows are returned
+                        MessageBox.Show("No data found for the specified ID.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MainClass.con.Close();
+            }
+
+        }
+
+        private void ClearMealReportVariables()
+        {
+            k = 0;
+            p = 0;
+            c = 0;
+            f = 0;
+        }
+        private void ReportMealsNotesFiller()
+        {
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView13" && item.Col == 1)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView22.Rows[5].Cells[1].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+
+            foreach (var item in artificialMappings)
+            {
+                if (item.ChartName == "guna2DataGridView13" && item.Col == 2)
+                {
+                    MealsNutrientValuesForReport(item.ID);
+                    guna2DataGridView22.Rows[5].Cells[2].Value = string.Format("K:{0:F2}, P:{1:F2}, C:{2:F2}, F:{3:F2}", k, p, c, f);
+                }
+
+            }
+
+            ClearMealReportVariables();
+        }
         private void PrepareReportTable()
         {
             for (int i = 0; i < 6; i++)
@@ -12060,10 +12174,20 @@ namespace HelloWorldSolutionIMS
                 guna2DataGridView8.Rows.Add();
                 guna2DataGridView7.Rows.Add();
             }
+            guna2DataGridView22.ClearSelection();
+            guna2DataGridView21.ClearSelection();
+            guna2DataGridView11.ClearSelection();
+            guna2DataGridView10.ClearSelection();
+            guna2DataGridView9.ClearSelection();
+            guna2DataGridView8.ClearSelection();
+            guna2DataGridView7.ClearSelection();
+
 
 
         }
+
     }
+
 
 
     public class CustomFontResolver : IFontResolver
