@@ -798,9 +798,7 @@ namespace HelloWorldSolutionIMS
                     Template.Add(Temp);
                 }
 
-                instructionnew.DataSource = Template;
-                instructionnew.DisplayMember = "Name"; // Display Member is Name
-                instructionnew.ValueMember = "ID"; // Value Member is ID
+
 
 
                 if (conn == 1)
@@ -808,6 +806,9 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     conn = 0;
                 }
+                instructionnew.DataSource = Template;
+                instructionnew.DisplayMember = "Name"; // Display Member is Name
+                instructionnew.ValueMember = "ID"; // Value Member is ID
             }
             catch (Exception ex)
             {
@@ -2733,7 +2734,8 @@ namespace HelloWorldSolutionIMS
 
         private void DietPlan_Load(object sender, EventArgs e)
         {
-
+            instructionflag = 0;
+            UpdateInstruction();
             chart1.Series.Clear();
             chart2.Series.Clear();
             chart3.Series.Clear();
@@ -2745,7 +2747,7 @@ namespace HelloWorldSolutionIMS
             chart9.Series.Clear();
             chart10.Series.Clear();
 
-            UpdateInstruction();
+
             PrepareReportTable();
             instructionflag = 1;
             try
@@ -10162,6 +10164,11 @@ namespace HelloWorldSolutionIMS
 
         private void TableLayoutFill()
         {
+            guna2DataGridView24.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView24.GridColor = Color.Black;
+            guna2DataGridView24.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView24.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView24.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView24.RowTemplate.DefaultCellStyle.ForeColor;
+
             guna2DataGridView21.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView21.GridColor = Color.Black;
             guna2DataGridView21.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView21.RowTemplate.DefaultCellStyle.BackColor;
@@ -11819,6 +11826,7 @@ namespace HelloWorldSolutionIMS
             ReportMealsNotesFiller();
             tabControl1.SelectedIndex = 12;
             PrepareNewGridView();
+            PrepareNPforReprt();
 
         }
 
@@ -11896,6 +11904,21 @@ namespace HelloWorldSolutionIMS
                         XBrush brush = new XSolidBrush(XColor.FromKnownColor(XKnownColor.Green));
                         XRect rect = new XRect(xCoordinate, topSpacing, scaledWidth, 20);
                         gfx.DrawString("Diet Plan", font, brush, rect, XStringFormats.TopLeft);
+
+                        // Increment topSpacing to leave space for the text
+                        topSpacing += 20;
+                    }
+
+                    if (currentPanel == panel41)
+                    {
+                        xCoordinate = (int)((page.Width - scaledWidth) / 2);
+                        topSpacing = 30;
+
+                        // Draw "Diet Plan" text in green color
+                        XFont font = new XFont("Arial", 14, XFontStyle.Bold);
+                        XBrush brush = new XSolidBrush(XColor.FromKnownColor(XKnownColor.Green));
+                        XRect rect = new XRect(xCoordinate, topSpacing, scaledWidth, 20);
+                        gfx.DrawString("Notes And Preparation", font, brush, rect, XStringFormats.TopLeft);
 
                         // Increment topSpacing to leave space for the text
                         topSpacing += 20;
@@ -12703,6 +12726,47 @@ namespace HelloWorldSolutionIMS
             tabControl1.SelectedIndex = 12;
         }
 
+        private void PrepareNPforReprt()
+        {
+            foreach (var item in artificialMappings)
+            {
+
+                int lastRowIndex = guna2DataGridView24.RowCount;
+                try
+                {
+                    MainClass.con.Open();
+                    // Adjust the SQL query based on your database schema
+                    SqlCommand cmd = new SqlCommand("SELECT MealEn,Notes, Preparation FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", item.ID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        string mealname = reader["MealEn"].ToString();
+                        string notes = reader["Notes"].ToString();
+                        string preparation = reader["Preparation"].ToString();
+
+                        // Assuming your Guna2DataGridView24 has columns named "NotesColumn" and "PreparationColumn"
+                        int rowIndex = guna2DataGridView24.Rows.Add(); // Add a new row
+                        guna2DataGridView24.Rows[lastRowIndex].Cells[0].Value = mealname;
+                        guna2DataGridView24.Rows[lastRowIndex].Cells[1].Value = notes;
+                        guna2DataGridView24.Rows[lastRowIndex].Cells[2].Value = preparation;
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    MainClass.con.Close();
+                }
+
+            }
+        }
         private async void guna2Button7_Click_1(object sender, EventArgs e)
         {
             foreach (Control control in tableLayoutPanel2.Controls)
@@ -12739,9 +12803,12 @@ namespace HelloWorldSolutionIMS
             tabControl1.SelectedIndex = 9;
             tabControl1.SelectedIndex = 10;
             tabControl1.SelectedIndex = 8;
+            tabControl1.SelectedIndex = 15;
 
             panel24.Dock = DockStyle.None;
             panel24.Size = new Size(1000, 1600);
+            panel41.Dock = DockStyle.None;
+            panel41.Size = new Size(1000, 1600);
             tabControl1.SelectedIndex = 13;
             guna2DataGridView13.ClearSelection();
             guna2DataGridView15.ClearSelection();
@@ -12772,10 +12839,11 @@ namespace HelloWorldSolutionIMS
             fatsvalue.Text = $"{double.Parse(fatsd.Text):0.##} g";
 
 
-            List<Panel> panelList = new List<Panel> { panel13, panel24, panel22, panel12 };
+            List<Panel> panelList = new List<Panel> { panel13, panel24, panel41, panel22, panel12 };
             SavePanelsAsPdfWithFooter(panelList, 610, 800);
 
             panel24.Dock = DockStyle.Fill;
+            panel41.Dock = DockStyle.Fill;
             guna2Button5.Visible = true;
             guna2Button6.Visible = true;
             dietplanreport.Visible = false;

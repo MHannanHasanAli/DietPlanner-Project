@@ -164,6 +164,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -744,6 +747,7 @@
             this.dataGridViewButtonColumn8 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.panel40 = new System.Windows.Forms.Panel();
+            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.label126 = new System.Windows.Forms.Label();
@@ -754,11 +758,14 @@
             this.label123 = new System.Windows.Forms.Label();
             this.dayedit = new System.Windows.Forms.ComboBox();
             this.mealedit = new System.Windows.Forms.ComboBox();
-            this.preparereport = new System.Windows.Forms.Panel();
-            this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.panel41 = new System.Windows.Forms.Panel();
+            this.preparereport = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2DataGridView24 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.mealdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preparationdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -871,8 +878,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView23)).BeginInit();
             this.tabPage15.SuspendLayout();
             this.panel40.SuspendLayout();
-            this.preparereport.SuspendLayout();
             this.tabPage16.SuspendLayout();
+            this.panel41.SuspendLayout();
+            this.preparereport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView24)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -8229,6 +8238,21 @@
             resources.ApplyResources(this.panel40, "panel40");
             this.panel40.Name = "panel40";
             // 
+            // guna2Button10
+            // 
+            this.guna2Button10.AutoRoundedCorners = true;
+            this.guna2Button10.BorderRadius = 21;
+            this.guna2Button10.CausesValidation = false;
+            this.guna2Button10.CheckedState.Parent = this.guna2Button10;
+            this.guna2Button10.CustomImages.Parent = this.guna2Button10;
+            this.guna2Button10.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button10, "guna2Button10");
+            this.guna2Button10.ForeColor = System.Drawing.Color.White;
+            this.guna2Button10.HoverState.Parent = this.guna2Button10;
+            this.guna2Button10.Name = "guna2Button10";
+            this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
+            this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
+            // 
             // guna2Button9
             // 
             this.guna2Button9.AutoRoundedCorners = true;
@@ -8344,6 +8368,20 @@
             this.mealedit.Name = "mealedit";
             this.mealedit.SelectedIndexChanged += new System.EventHandler(this.mealedit_SelectedIndexChanged);
             // 
+            // tabPage16
+            // 
+            this.tabPage16.Controls.Add(this.panel41);
+            resources.ApplyResources(this.tabPage16, "tabPage16");
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.Color.White;
+            this.panel41.Controls.Add(this.guna2DataGridView24);
+            resources.ApplyResources(this.panel41, "panel41");
+            this.panel41.Name = "panel41";
+            // 
             // preparereport
             // 
             this.preparereport.Controls.Add(this.guna2HtmlLabel17);
@@ -8356,33 +8394,86 @@
             resources.ApplyResources(this.guna2HtmlLabel17, "guna2HtmlLabel17");
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
             // 
-            // guna2Button10
+            // guna2DataGridView24
             // 
-            this.guna2Button10.AutoRoundedCorners = true;
-            this.guna2Button10.BorderRadius = 21;
-            this.guna2Button10.CausesValidation = false;
-            this.guna2Button10.CheckedState.Parent = this.guna2Button10;
-            this.guna2Button10.CustomImages.Parent = this.guna2Button10;
-            this.guna2Button10.FillColor = System.Drawing.Color.MediumSeaGreen;
-            resources.ApplyResources(this.guna2Button10, "guna2Button10");
-            this.guna2Button10.ForeColor = System.Drawing.Color.White;
-            this.guna2Button10.HoverState.Parent = this.guna2Button10;
-            this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
-            this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
+            this.guna2DataGridView24.AllowUserToAddRows = false;
+            this.guna2DataGridView24.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle102.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView24.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle102;
+            this.guna2DataGridView24.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.guna2DataGridView24.BackgroundColor = System.Drawing.Color.White;
+            this.guna2DataGridView24.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guna2DataGridView24.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView24.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle103.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle103.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle103.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle103.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle103.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle103.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView24.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle103;
+            this.guna2DataGridView24.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView24.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mealdgv,
+            this.notesdgv,
+            this.preparationdgv});
+            dataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle104.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle104.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle104.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle104.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle104.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle104.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView24.DefaultCellStyle = dataGridViewCellStyle104;
+            resources.ApplyResources(this.guna2DataGridView24, "guna2DataGridView24");
+            this.guna2DataGridView24.EnableHeadersVisualStyles = false;
+            this.guna2DataGridView24.GridColor = System.Drawing.Color.Black;
+            this.guna2DataGridView24.Name = "guna2DataGridView24";
+            this.guna2DataGridView24.ReadOnly = true;
+            this.guna2DataGridView24.RowHeadersVisible = false;
+            this.guna2DataGridView24.RowTemplate.Height = 24;
+            this.guna2DataGridView24.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.guna2DataGridView24.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.LightGrid;
+            this.guna2DataGridView24.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView24.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView24.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView24.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView24.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView24.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView24.ThemeStyle.GridColor = System.Drawing.Color.Black;
+            this.guna2DataGridView24.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.guna2DataGridView24.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.guna2DataGridView24.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView24.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView24.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView24.ThemeStyle.HeaderStyle.Height = 29;
+            this.guna2DataGridView24.ThemeStyle.ReadOnly = true;
+            this.guna2DataGridView24.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView24.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView24.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView24.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView24.ThemeStyle.RowsStyle.Height = 24;
+            this.guna2DataGridView24.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.guna2DataGridView24.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // tabPage16
+            // mealdgv
             // 
-            this.tabPage16.Controls.Add(this.panel41);
-            resources.ApplyResources(this.tabPage16, "tabPage16");
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.mealdgv, "mealdgv");
+            this.mealdgv.Name = "mealdgv";
+            this.mealdgv.ReadOnly = true;
             // 
-            // panel41
+            // notesdgv
             // 
-            this.panel41.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.panel41, "panel41");
-            this.panel41.Name = "panel41";
+            resources.ApplyResources(this.notesdgv, "notesdgv");
+            this.notesdgv.Name = "notesdgv";
+            this.notesdgv.ReadOnly = true;
+            // 
+            // preparationdgv
+            // 
+            resources.ApplyResources(this.preparationdgv, "preparationdgv");
+            this.preparationdgv.Name = "preparationdgv";
+            this.preparationdgv.ReadOnly = true;
             // 
             // DietPlan
             // 
@@ -8550,9 +8641,11 @@
             this.tabPage15.ResumeLayout(false);
             this.panel40.ResumeLayout(false);
             this.panel40.PerformLayout();
+            this.tabPage16.ResumeLayout(false);
+            this.panel41.ResumeLayout(false);
             this.preparereport.ResumeLayout(false);
             this.preparereport.PerformLayout();
-            this.tabPage16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView24)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -9154,5 +9247,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
         private System.Windows.Forms.TabPage tabPage16;
         private System.Windows.Forms.Panel panel41;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mealdgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notesdgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preparationdgv;
     }
 }

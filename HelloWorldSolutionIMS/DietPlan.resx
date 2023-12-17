@@ -13467,6 +13467,60 @@
   <data name="&gt;&gt;tabPage15.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <metadata name="mealdgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="mealdgv.HeaderText" xml:space="preserve">
+    <value>Meal</value>
+  </data>
+  <data name="mealdgv.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <metadata name="notesdgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="notesdgv.HeaderText" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="notesdgv.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <metadata name="preparationdgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="preparationdgv.HeaderText" xml:space="preserve">
+    <value>Preparation</value>
+  </data>
+  <data name="preparationdgv.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="guna2DataGridView24.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="guna2DataGridView24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="guna2DataGridView24.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="guna2DataGridView24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1356, 1020</value>
+  </data>
+  <data name="guna2DataGridView24.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView24.Name" xml:space="preserve">
+    <value>guna2DataGridView24</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView24.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView24.Parent" xml:space="preserve">
+    <value>panel41</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView24.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="panel41.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -14630,6 +14684,24 @@
   </data>
   <data name="&gt;&gt;dataGridViewButtonColumn8.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mealdgv.Name" xml:space="preserve">
+    <value>mealdgv</value>
+  </data>
+  <data name="&gt;&gt;mealdgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;notesdgv.Name" xml:space="preserve">
+    <value>notesdgv</value>
+  </data>
+  <data name="&gt;&gt;notesdgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;preparationdgv.Name" xml:space="preserve">
+    <value>preparationdgv</value>
+  </data>
+  <data name="&gt;&gt;preparationdgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>DietPlan</value>
