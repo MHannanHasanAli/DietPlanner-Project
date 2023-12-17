@@ -742,8 +742,23 @@
             this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn8 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.preparationedit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.notesedit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.dayedit = new System.Windows.Forms.ComboBox();
+            this.mealedit = new System.Windows.Forms.ComboBox();
             this.preparereport = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.panel41 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -854,7 +869,10 @@
             this.panel32.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView23)).BeginInit();
+            this.tabPage15.SuspendLayout();
+            this.panel40.SuspendLayout();
             this.preparereport.SuspendLayout();
+            this.tabPage16.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -873,6 +891,8 @@
             this.tabControl1.Controls.Add(this.tabPage12);
             this.tabControl1.Controls.Add(this.tabPage13);
             this.tabControl1.Controls.Add(this.tabPage14);
+            this.tabControl1.Controls.Add(this.tabPage15);
+            this.tabControl1.Controls.Add(this.tabPage16);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -8185,6 +8205,145 @@
             this.dataGridViewButtonColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewButtonColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // tabPage15
+            // 
+            this.tabPage15.Controls.Add(this.panel40);
+            resources.ApplyResources(this.tabPage15, "tabPage15");
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.White;
+            this.panel40.Controls.Add(this.guna2Button10);
+            this.panel40.Controls.Add(this.guna2Button9);
+            this.panel40.Controls.Add(this.guna2Button7);
+            this.panel40.Controls.Add(this.label126);
+            this.panel40.Controls.Add(this.label125);
+            this.panel40.Controls.Add(this.preparationedit);
+            this.panel40.Controls.Add(this.notesedit);
+            this.panel40.Controls.Add(this.label124);
+            this.panel40.Controls.Add(this.label123);
+            this.panel40.Controls.Add(this.dayedit);
+            this.panel40.Controls.Add(this.mealedit);
+            resources.ApplyResources(this.panel40, "panel40");
+            this.panel40.Name = "panel40";
+            // 
+            // guna2Button9
+            // 
+            this.guna2Button9.AutoRoundedCorners = true;
+            this.guna2Button9.BorderRadius = 21;
+            this.guna2Button9.CausesValidation = false;
+            this.guna2Button9.CheckedState.Parent = this.guna2Button9;
+            this.guna2Button9.CustomImages.Parent = this.guna2Button9;
+            this.guna2Button9.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button9, "guna2Button9");
+            this.guna2Button9.ForeColor = System.Drawing.Color.White;
+            this.guna2Button9.HoverState.Parent = this.guna2Button9;
+            this.guna2Button9.Name = "guna2Button9";
+            this.guna2Button9.ShadowDecoration.Parent = this.guna2Button9;
+            this.guna2Button9.Click += new System.EventHandler(this.guna2Button9_Click);
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.AutoRoundedCorners = true;
+            this.guna2Button7.BorderRadius = 21;
+            this.guna2Button7.CausesValidation = false;
+            this.guna2Button7.CheckedState.Parent = this.guna2Button7;
+            this.guna2Button7.CustomImages.Parent = this.guna2Button7;
+            this.guna2Button7.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button7, "guna2Button7");
+            this.guna2Button7.ForeColor = System.Drawing.Color.White;
+            this.guna2Button7.HoverState.Parent = this.guna2Button7;
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
+            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click_1);
+            // 
+            // label126
+            // 
+            resources.ApplyResources(this.label126, "label126");
+            this.label126.Name = "label126";
+            // 
+            // label125
+            // 
+            resources.ApplyResources(this.label125, "label125");
+            this.label125.Name = "label125";
+            // 
+            // preparationedit
+            // 
+            this.preparationedit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.preparationedit.DefaultText = "";
+            this.preparationedit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.preparationedit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.preparationedit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.preparationedit.DisabledState.Parent = this.preparationedit;
+            this.preparationedit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.preparationedit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.preparationedit.FocusedState.Parent = this.preparationedit;
+            this.preparationedit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.preparationedit.HoverState.Parent = this.preparationedit;
+            resources.ApplyResources(this.preparationedit, "preparationedit");
+            this.preparationedit.Multiline = true;
+            this.preparationedit.Name = "preparationedit";
+            this.preparationedit.PasswordChar = '\0';
+            this.preparationedit.PlaceholderText = "";
+            this.preparationedit.SelectedText = "";
+            this.preparationedit.ShadowDecoration.Parent = this.preparationedit;
+            // 
+            // notesedit
+            // 
+            this.notesedit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.notesedit.DefaultText = "";
+            this.notesedit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.notesedit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.notesedit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.notesedit.DisabledState.Parent = this.notesedit;
+            this.notesedit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.notesedit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.notesedit.FocusedState.Parent = this.notesedit;
+            this.notesedit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.notesedit.HoverState.Parent = this.notesedit;
+            resources.ApplyResources(this.notesedit, "notesedit");
+            this.notesedit.Multiline = true;
+            this.notesedit.Name = "notesedit";
+            this.notesedit.PasswordChar = '\0';
+            this.notesedit.PlaceholderText = "";
+            this.notesedit.SelectedText = "";
+            this.notesedit.ShadowDecoration.Parent = this.notesedit;
+            // 
+            // label124
+            // 
+            resources.ApplyResources(this.label124, "label124");
+            this.label124.Name = "label124";
+            // 
+            // label123
+            // 
+            resources.ApplyResources(this.label123, "label123");
+            this.label123.Name = "label123";
+            // 
+            // dayedit
+            // 
+            this.dayedit.FormattingEnabled = true;
+            this.dayedit.Items.AddRange(new object[] {
+            resources.GetString("dayedit.Items"),
+            resources.GetString("dayedit.Items1"),
+            resources.GetString("dayedit.Items2"),
+            resources.GetString("dayedit.Items3"),
+            resources.GetString("dayedit.Items4"),
+            resources.GetString("dayedit.Items5"),
+            resources.GetString("dayedit.Items6"),
+            resources.GetString("dayedit.Items7")});
+            resources.ApplyResources(this.dayedit, "dayedit");
+            this.dayedit.Name = "dayedit";
+            this.dayedit.SelectedIndexChanged += new System.EventHandler(this.dayedit_SelectedIndexChanged);
+            // 
+            // mealedit
+            // 
+            this.mealedit.FormattingEnabled = true;
+            resources.ApplyResources(this.mealedit, "mealedit");
+            this.mealedit.Name = "mealedit";
+            this.mealedit.SelectedIndexChanged += new System.EventHandler(this.mealedit_SelectedIndexChanged);
+            // 
             // preparereport
             // 
             this.preparereport.Controls.Add(this.guna2HtmlLabel17);
@@ -8196,6 +8355,34 @@
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.guna2HtmlLabel17, "guna2HtmlLabel17");
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
+            // 
+            // guna2Button10
+            // 
+            this.guna2Button10.AutoRoundedCorners = true;
+            this.guna2Button10.BorderRadius = 21;
+            this.guna2Button10.CausesValidation = false;
+            this.guna2Button10.CheckedState.Parent = this.guna2Button10;
+            this.guna2Button10.CustomImages.Parent = this.guna2Button10;
+            this.guna2Button10.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button10, "guna2Button10");
+            this.guna2Button10.ForeColor = System.Drawing.Color.White;
+            this.guna2Button10.HoverState.Parent = this.guna2Button10;
+            this.guna2Button10.Name = "guna2Button10";
+            this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
+            this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
+            // 
+            // tabPage16
+            // 
+            this.tabPage16.Controls.Add(this.panel41);
+            resources.ApplyResources(this.tabPage16, "tabPage16");
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.panel41, "panel41");
+            this.panel41.Name = "panel41";
             // 
             // DietPlan
             // 
@@ -8360,8 +8547,12 @@
             this.panel32.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView23)).EndInit();
+            this.tabPage15.ResumeLayout(false);
+            this.panel40.ResumeLayout(false);
+            this.panel40.PerformLayout();
             this.preparereport.ResumeLayout(false);
             this.preparereport.PerformLayout();
+            this.tabPage16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -8948,5 +9139,20 @@
         private System.Windows.Forms.Panel panel39;
         private System.Windows.Forms.Label label122;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
+        private System.Windows.Forms.TabPage tabPage15;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.Label label125;
+        private Guna.UI2.WinForms.Guna2TextBox preparationedit;
+        private Guna.UI2.WinForms.Guna2TextBox notesedit;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.ComboBox dayedit;
+        private System.Windows.Forms.ComboBox mealedit;
+        private Guna.UI2.WinForms.Guna2Button guna2Button9;
+        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button guna2Button10;
+        private System.Windows.Forms.TabPage tabPage16;
+        private System.Windows.Forms.Panel panel41;
     }
 }

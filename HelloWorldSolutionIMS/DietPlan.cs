@@ -11843,7 +11843,7 @@ namespace HelloWorldSolutionIMS
                 {
                     Panel currentPanel = panels[i];
 
-                    int resolution = 498; // You can adjust this value based on your needs
+                    int resolution = 450; // You can adjust this value based on your needs
 
                     // Ensure positive width and height
                     int widthh = Math.Max(currentPanel.Width, 1);
@@ -11883,11 +11883,23 @@ namespace HelloWorldSolutionIMS
                     int scaledWidth = (int)(bmp.Width * scaleFactor);
                     int scaledHeight = (int)(bmp.Height * scaleFactor);
 
-                    // Adjust the X-coordinate to center if the current panel is panel19
-                    int xCoordinate = (currentPanel == panel19) ? (int)((page.Width - scaledWidth) / 2) : 0;
+                    int xCoordinate = 0;  // Default X-coordinate
+                    int topSpacing = 0;   // Default top spacing
 
-                    // Adjust the Y-coordinate for top spacing if the current panel is panel19
-                    int topSpacing = (currentPanel == panel19) ? 20 : 0;
+                    if (currentPanel == panel24)
+                    {
+                        xCoordinate = (int)((page.Width - scaledWidth) / 2);
+                        topSpacing = 30;
+
+                        // Draw "Diet Plan" text in green color
+                        XFont font = new XFont("Arial", 14, XFontStyle.Bold);
+                        XBrush brush = new XSolidBrush(XColor.FromKnownColor(XKnownColor.Green));
+                        XRect rect = new XRect(xCoordinate, topSpacing, scaledWidth, 20);
+                        gfx.DrawString("Diet Plan", font, brush, rect, XStringFormats.TopLeft);
+
+                        // Increment topSpacing to leave space for the text
+                        topSpacing += 20;
+                    }
 
                     // Draw the scaled image onto the PDF page with adjusted coordinates
                     MemoryStream ms = new MemoryStream();
@@ -11946,93 +11958,8 @@ namespace HelloWorldSolutionIMS
         }
         private async void generatereport_Click(object sender, EventArgs e)
         {
-            // Assuming tableLayoutPanel2 is your TableLayoutPanel
-            // Assuming tableLayoutPanel2 is your TableLayoutPanel
-            foreach (Control control in tableLayoutPanel2.Controls)
-            {
-                if (control is Guna.UI2.WinForms.Guna2HtmlLabel)
-                {
-                    Guna.UI2.WinForms.Guna2HtmlLabel label = (Guna.UI2.WinForms.Guna2HtmlLabel)control;
+            tabControl1.SelectedIndex = 14;
 
-                    // Center the label text both vertically and horizontally
-                    label.TextAlignment = ContentAlignment.MiddleCenter;
-                    label.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-
-                    // Disable stretching
-                    label.Anchor = AnchorStyles.None;
-
-                    // Add padding to create spacing between text and image (adjust as needed)
-                    label.Padding = new Padding(0, 0, 10, 0); // You can adjust the right padding to create space
-
-                    // Note: Guna2HtmlLabel does not have a direct equivalent for TextImageRelation
-                    // Adjusting padding can be an alternative to create spacing between text and image.
-                }
-            }
-
-
-
-            FillDayByChart();
-            SettingCoverInfo();
-            //cecover.Text = companyemail;
-            //cmcover.Text = companynumber;
-            //cncover.Text = companynamefooter;
-            tabControl1.SelectedIndex = 11;
-
-            // Delay for 1 second
-            await DelayAsync(1);
-            preparereport.Visible = true;
-            tabControl1.SelectedIndex = 9;
-            tabControl1.SelectedIndex = 10;
-            tabControl1.SelectedIndex = 8;
-
-            panel19.Dock = DockStyle.None;
-            panel19.Size = new Size(1000, 1600);
-
-            guna2DataGridView13.ClearSelection();
-            guna2DataGridView15.ClearSelection();
-            guna2DataGridView16.ClearSelection();
-            guna2DataGridView17.ClearSelection();
-            guna2DataGridView18.ClearSelection();
-            guna2DataGridView19.ClearSelection();
-            guna2DataGridView20.ClearSelection();
-
-            guna2DataGridView13.Columns[5].Visible = false;
-            guna2DataGridView15.Columns[5].Visible = false;
-            guna2DataGridView16.Columns[5].Visible = false;
-            guna2DataGridView17.Columns[5].Visible = false;
-            guna2DataGridView18.Columns[5].Visible = false;
-            guna2DataGridView19.Columns[5].Visible = false;
-            guna2DataGridView20.Columns[5].Visible = false;
-            guna2DataGridView14.Columns[4].Visible = false;
-
-            guna2Button5.Visible = false;
-            guna2Button6.Visible = false;
-            dietplanreport.Visible = true;
-
-            calculationnew.Text = "All";
-
-            energyvalue.Text = $"{double.Parse(caloried.Text):0.##} kcal";
-            carbsvalue.Text = $"{double.Parse(carbsd.Text):0.##} g";
-            proteinvalue.Text = $"{double.Parse(proteind.Text):0.##} g";
-            fatsvalue.Text = $"{double.Parse(fatsd.Text):0.##} g";
-
-
-            List<Panel> panelList = new List<Panel> { panel13, panel24, panel22, panel12 };
-            SavePanelsAsPdfWithFooter(panelList, 610, 800);
-
-            panel19.Dock = DockStyle.Fill;
-            guna2Button5.Visible = true;
-            guna2Button6.Visible = true;
-            dietplanreport.Visible = false;
-
-            guna2DataGridView13.Columns[5].Visible = true;
-            guna2DataGridView15.Columns[5].Visible = true;
-            guna2DataGridView16.Columns[5].Visible = true;
-            guna2DataGridView17.Columns[5].Visible = true;
-            guna2DataGridView18.Columns[5].Visible = true;
-            guna2DataGridView19.Columns[5].Visible = true;
-            guna2DataGridView20.Columns[5].Visible = true;
-            guna2DataGridView14.Columns[4].Visible = true;
         }
 
         //private void SavePanelsAsPdfWithFooter(List<Panel> panels)
@@ -12518,6 +12445,350 @@ namespace HelloWorldSolutionIMS
 
         }
 
+        public class MealEditDropdown
+        {
+            public int ID { get; set; }
+            public string Name { get; set; }
+
+            public override string ToString()
+            {
+                return Name;
+            }
+        }
+        List<MealEditDropdown> MealsPerDay = new List<MealEditDropdown>();
+
+        private MealEditDropdown GetMealById(int mealId)
+        {
+            MealEditDropdown selectedMeal = null;
+
+            try
+            {
+
+
+                SqlCommand cmd = new SqlCommand("SELECT ID, MealEn FROM Meal WHERE ID = @MealID", MainClass.con);
+                cmd.Parameters.AddWithValue("@MealID", mealId);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    int id = Convert.ToInt32(reader["ID"]);
+                    string mealname = reader["MealEn"].ToString();
+                    selectedMeal = new MealEditDropdown { ID = id, Name = mealname };
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+
+            }
+
+            return selectedMeal;
+        }
+
+        private void UpdateComboBoxOptions(int mealId)
+        {
+            try
+            {
+                MainClass.con.Open();
+
+
+                MealEditDropdown selectedMeal = GetMealById(mealId);
+
+                if (selectedMeal != null)
+                {
+                    // Add the fetched meal to the ComboBox
+                    mealedit.Items.Add(selectedMeal);
+
+                    // Set the selected item
+                    mealedit.SelectedItem = selectedMeal;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MainClass.con.Close();
+            }
+        }
+
+        private void dayedit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mealedit.Items.Clear();
+
+            if (dayedit.Text == "1st Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView13")
+                    {
+                        UpdateComboBoxOptions(item.ID);
+                    }
+                }
+            }
+            else if (dayedit.Text == "2nd Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView15")
+                    {
+                        UpdateComboBoxOptions(item.ID);
+                    }
+                }
+            }
+            else if (dayedit.Text == "3rd Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView16")
+                    {
+                        UpdateComboBoxOptions(item.ID);
+                    }
+                }
+            }
+            else if (dayedit.Text == "4th Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView17")
+                    {
+                        UpdateComboBoxOptions(item.ID);
+                    }
+                }
+            }
+            else if (dayedit.Text == "5th Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView18")
+                    {
+                        UpdateComboBoxOptions(item.ID);
+                    }
+                }
+            }
+            else if (dayedit.Text == "6th Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView19")
+                    {
+                        UpdateComboBoxOptions(item.ID);
+                    }
+                }
+            }
+            else if (dayedit.Text == "7th Day")
+            {
+                foreach (var item in artificialMappings)
+                {
+                    if (item.ChartName == "guna2DataGridView20")
+                    {
+                        UpdateComboBoxOptions(item.ID);
+                    }
+                }
+            }
+            else
+            {
+                foreach (var item in artificialMappings)
+                {
+
+                    UpdateComboBoxOptions(item.ID);
+
+                }
+            }
+        }
+
+        private void mealedit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (mealedit.SelectedItem != null)
+            {
+                // Cast the selected item to MealEditDropdown
+                MealEditDropdown selectedMeal = (MealEditDropdown)mealedit.SelectedItem;
+
+                // Access the properties of the selected item
+                int selectedMealId = selectedMeal.ID;
+
+                // Call a method to retrieve notes and preparation based on the selected meal ID
+                GetNotesAndPreparation(selectedMealId);
+            }
+        }
+
+        private void GetNotesAndPreparation(int mealId)
+        {
+            try
+            {
+
+
+                // Adjust the SQL query based on your database schema
+                SqlCommand cmd = new SqlCommand("SELECT Notes, Preparation FROM Meal WHERE ID = @MealID", MainClass.con);
+                cmd.Parameters.AddWithValue("@MealID", mealId);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    string notes = reader["Notes"].ToString();
+                    string preparation = reader["Preparation"].ToString();
+
+                    notesedit.Text = notes;
+                    preparationedit.Text = preparation;
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+
+            }
+        }
+
+        private void UpdateNotesAndPreparation(int mealId)
+        {
+            try
+            {
+                MainClass.con.Open();
+
+                // Assuming you have text boxes named notesTextBox and preparationTextBox for user input
+                string newNotes = notesedit.Text;
+                string newPreparation = preparationedit.Text;
+
+                // Adjust the SQL query based on your database schema
+                SqlCommand cmd = new SqlCommand("UPDATE Meal SET Notes = @Notes, Preparation = @Preparation WHERE ID = @MealID", MainClass.con);
+                cmd.Parameters.AddWithValue("@MealID", mealId);
+                cmd.Parameters.AddWithValue("@Notes", newNotes);
+                cmd.Parameters.AddWithValue("@Preparation", newPreparation);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MainClass.con.Close();
+            }
+        }
+
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+            if (mealedit.SelectedItem != null)
+            {
+                // Cast the selected item to MealEditDropdown
+                MealEditDropdown selectedMeal = (MealEditDropdown)mealedit.SelectedItem;
+
+                // Access the properties of the selected item
+                int selectedMealId = selectedMeal.ID;
+
+                // Call a method to update notes and preparation based on the selected meal ID
+                UpdateNotesAndPreparation(selectedMealId);
+            }
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 12;
+        }
+
+        private async void guna2Button7_Click_1(object sender, EventArgs e)
+        {
+            foreach (Control control in tableLayoutPanel2.Controls)
+            {
+                if (control is Guna.UI2.WinForms.Guna2HtmlLabel)
+                {
+                    Guna.UI2.WinForms.Guna2HtmlLabel label = (Guna.UI2.WinForms.Guna2HtmlLabel)control;
+
+                    // Center the label text both vertically and horizontally
+                    label.TextAlignment = ContentAlignment.MiddleCenter;
+                    label.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+
+                    // Disable stretching
+                    label.Anchor = AnchorStyles.None;
+
+                    // Add padding to create spacing between text and image (adjust as needed)
+                    label.Padding = new Padding(0, 0, 10, 0); // You can adjust the right padding to create space
+
+                    // Note: Guna2HtmlLabel does not have a direct equivalent for TextImageRelation
+                    // Adjusting padding can be an alternative to create spacing between text and image.
+                }
+            }
+
+            FillDayByChart();
+            SettingCoverInfo();
+            //cecover.Text = companyemail;
+            //cmcover.Text = companynumber;
+            //cncover.Text = companynamefooter;
+            tabControl1.SelectedIndex = 11;
+
+            // Delay for 1 second
+            await DelayAsync(1);
+            preparereport.Visible = true;
+            tabControl1.SelectedIndex = 9;
+            tabControl1.SelectedIndex = 10;
+            tabControl1.SelectedIndex = 8;
+
+            panel24.Dock = DockStyle.None;
+            panel24.Size = new Size(1000, 1600);
+            tabControl1.SelectedIndex = 13;
+            guna2DataGridView13.ClearSelection();
+            guna2DataGridView15.ClearSelection();
+            guna2DataGridView16.ClearSelection();
+            guna2DataGridView17.ClearSelection();
+            guna2DataGridView18.ClearSelection();
+            guna2DataGridView19.ClearSelection();
+            guna2DataGridView20.ClearSelection();
+
+            guna2DataGridView13.Columns[5].Visible = false;
+            guna2DataGridView15.Columns[5].Visible = false;
+            guna2DataGridView16.Columns[5].Visible = false;
+            guna2DataGridView17.Columns[5].Visible = false;
+            guna2DataGridView18.Columns[5].Visible = false;
+            guna2DataGridView19.Columns[5].Visible = false;
+            guna2DataGridView20.Columns[5].Visible = false;
+            guna2DataGridView14.Columns[4].Visible = false;
+
+            guna2Button5.Visible = false;
+            guna2Button6.Visible = false;
+            dietplanreport.Visible = true;
+
+            calculationnew.Text = "All";
+
+            energyvalue.Text = $"{double.Parse(caloried.Text):0.##} kcal";
+            carbsvalue.Text = $"{double.Parse(carbsd.Text):0.##} g";
+            proteinvalue.Text = $"{double.Parse(proteind.Text):0.##} g";
+            fatsvalue.Text = $"{double.Parse(fatsd.Text):0.##} g";
+
+
+            List<Panel> panelList = new List<Panel> { panel13, panel24, panel22, panel12 };
+            SavePanelsAsPdfWithFooter(panelList, 610, 800);
+
+            panel24.Dock = DockStyle.Fill;
+            guna2Button5.Visible = true;
+            guna2Button6.Visible = true;
+            dietplanreport.Visible = false;
+
+            guna2DataGridView13.Columns[5].Visible = true;
+            guna2DataGridView15.Columns[5].Visible = true;
+            guna2DataGridView16.Columns[5].Visible = true;
+            guna2DataGridView17.Columns[5].Visible = true;
+            guna2DataGridView18.Columns[5].Visible = true;
+            guna2DataGridView19.Columns[5].Visible = true;
+            guna2DataGridView20.Columns[5].Visible = true;
+            guna2DataGridView14.Columns[4].Visible = true;
+        }
     }
 
 
