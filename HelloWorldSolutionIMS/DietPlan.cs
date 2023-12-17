@@ -12804,13 +12804,16 @@ namespace HelloWorldSolutionIMS
             //cmcover.Text = companynumber;
             //cncover.Text = companynamefooter;
             tabControl1.SelectedIndex = 11;
-
-            // Delay for 1 second
-            await DelayAsync(1);
             preparereport.Visible = true;
+            // Delay for 1 second
+            await DelayAsync(1000);
+
+
             tabControl1.SelectedIndex = 9;
+
             tabControl1.SelectedIndex = 10;
             tabControl1.SelectedIndex = 8;
+            preparereport.Size = new Size(1363, 1051);
             tabControl1.SelectedIndex = 15;
 
             panel24.Dock = DockStyle.None;
