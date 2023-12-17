@@ -12647,7 +12647,11 @@ namespace HelloWorldSolutionIMS
             try
             {
 
-
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 // Adjust the SQL query based on your database schema
                 SqlCommand cmd = new SqlCommand("SELECT Notes, Preparation FROM Meal WHERE ID = @MealID", MainClass.con);
                 cmd.Parameters.AddWithValue("@MealID", mealId);
@@ -12671,7 +12675,11 @@ namespace HelloWorldSolutionIMS
             }
             finally
             {
-
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
             }
         }
 
