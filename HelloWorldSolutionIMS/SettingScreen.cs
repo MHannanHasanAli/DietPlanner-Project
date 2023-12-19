@@ -1804,7 +1804,7 @@ namespace HelloWorldSolutionIMS
                 cmd.Parameters.AddWithValue("@size", textsize.Text);
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Setting updated successfully");
+
                 MainClass.con.Close();
             }
             catch (Exception ex)
@@ -1863,6 +1863,46 @@ namespace HelloWorldSolutionIMS
 
                 cmd.ExecuteNonQuery();
                 MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE Settings SET CompanyName = @CompanyName, Branch = @Branch, Landline = @Landline, Mobile = @Mobile, Email = @Email, POBox = @POBox, TradeNo = @TradeNo, Welcome = @Welcome, Logo = @logo, Room1 = @Room1, Room2 = @Room2, Room3 = @Room3, Room4 = @Room4 WHERE ID = @ID", MainClass.con);
+
+                cmd.Parameters.AddWithValue("@ID", 1); // Replace with the actual input control for ID.
+                cmd.Parameters.AddWithValue("@CompanyName", companyname.Text); // Replace with the actual input control for INGREDIENT_AR.
+                cmd.Parameters.AddWithValue("@Branch", branch.Text); // Replace with the actual input control for INGREDIENT_EN.
+                cmd.Parameters.AddWithValue("@Landline", landline.Text); // Replace with the actual input control for GROUP_AR.
+                cmd.Parameters.AddWithValue("@Mobile", mobile.Text); // Replace with the actual input control for GROUP_EN.
+                cmd.Parameters.AddWithValue("@Email", email.Text); // Replace with the actual input control for CLASSIFICATION.
+                cmd.Parameters.AddWithValue("@POBox", pobox.Text); // Replace with the actual input control for CALORIES.
+                cmd.Parameters.AddWithValue("@TradeNo", trade.Text); // Replace with the actual input control for FATS.
+                cmd.Parameters.AddWithValue("@Welcome", welcomewords.Text); // Replace with the actual input control for FIBERS.
+                cmd.Parameters.AddWithValue("@Logo", logolocation.ToString());
+                cmd.Parameters.AddWithValue("@Room1", room1.Text);
+                cmd.Parameters.AddWithValue("@Room2", room2.Text);
+                cmd.Parameters.AddWithValue("@Room3", room3.Text);
+                cmd.Parameters.AddWithValue("@Room4", room4.Text);
+                cmd.ExecuteNonQuery();
+
+                // Clear the input controls or set them to default values.
+                //companyname.Text = "";
+                //branch.Text = "";
+                //landline.Text = "";
+                //mobile.Text = "";
+                //email.Text = "";
+                //pobox.Text = "";
+                //trade.Text = "";
+                //welcomewords.Text = "";
+
+                MainClass.con.Close();
+                MessageBox.Show("Setting updated successfully");
             }
             catch (Exception ex)
             {

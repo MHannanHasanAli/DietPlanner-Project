@@ -121,6 +121,12 @@ namespace HelloWorldSolutionIMS
                     protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
                     fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
 
+                    // Set formatting for columns
+                    fats.DefaultCellStyle.Format = "N2";
+                    carbohydrates.DefaultCellStyle.Format = "N2";
+                    protein.DefaultCellStyle.Format = "N2";
+                    calories.DefaultCellStyle.Format = "N2";
+
                     dgv.DataSource = dt;
                     MainClass.con.Close();
                 }
@@ -154,6 +160,12 @@ namespace HelloWorldSolutionIMS
                     sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                     protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
                     fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
+
+                    // Set formatting for columns
+                    fats.DefaultCellStyle.Format = "N2";
+                    carbohydrates.DefaultCellStyle.Format = "N2";
+                    protein.DefaultCellStyle.Format = "N2";
+                    calories.DefaultCellStyle.Format = "N2";
 
                     dgv.DataSource = dt;
                     MainClass.con.Close();
@@ -204,7 +216,10 @@ namespace HelloWorldSolutionIMS
                         fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N2";
 
                         dgv.DataSource = dt;
                         MainClass.con.Close();
@@ -243,7 +258,10 @@ namespace HelloWorldSolutionIMS
                         fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N2";
 
                         dgv.DataSource = dt;
                         MainClass.con.Close();
@@ -282,7 +300,10 @@ namespace HelloWorldSolutionIMS
                         fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N2";
                         dgv.DataSource = dt;
                         MainClass.con.Close();
                     }
@@ -329,7 +350,10 @@ namespace HelloWorldSolutionIMS
                         fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N2";
 
                         dgv.DataSource = dt;
                         MainClass.con.Close();
@@ -368,7 +392,10 @@ namespace HelloWorldSolutionIMS
                         fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N2";
 
                         dgv.DataSource = dt;
                         MainClass.con.Close();
@@ -406,6 +433,11 @@ namespace HelloWorldSolutionIMS
                         classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
                         fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N2";
 
 
                         dgv.DataSource = dt;
@@ -454,7 +486,10 @@ namespace HelloWorldSolutionIMS
                 classification.DataPropertyName = dt.Columns["CLASSIFICATION"].ToString();
                 fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
 
-
+                fats.DefaultCellStyle.Format = "N2";
+                carbohydrates.DefaultCellStyle.Format = "N2";
+                protein.DefaultCellStyle.Format = "N2";
+                calories.DefaultCellStyle.Format = "N2";
 
                 dgv.DataSource = dt;
                 MainClass.con.Close();
@@ -770,6 +805,12 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
+
+            guna2DataGridView1.Columns["fatsdgv"].DefaultCellStyle.Format = "N2";
+            guna2DataGridView1.Columns["carbohydratedgv"].DefaultCellStyle.Format = "N2";
+            guna2DataGridView1.Columns["proteindgv"].DefaultCellStyle.Format = "N2";
+            guna2DataGridView1.Columns["calloriesdgv"].DefaultCellStyle.Format = "N2";
+
             ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
 
         }
@@ -1519,6 +1560,12 @@ namespace HelloWorldSolutionIMS
                     GroupNAR.Add(Temp);
                 }
 
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+
                 groupar.DataSource = GroupNAR;
                 groupar.DisplayMember = "NameAR"; // Display Member is Name
                 groupar.ValueMember = "ID"; // Value Member is ID
@@ -1528,11 +1575,7 @@ namespace HelloWorldSolutionIMS
                 groupen.ValueMember = "ID"; // Value Member is ID
 
 
-                if (conn == 1)
-                {
-                    MainClass.con.Close();
-                    conn = 0;
-                }
+
             }
             catch (Exception ex)
             {
@@ -1790,6 +1833,8 @@ namespace HelloWorldSolutionIMS
             }
 
         }
+
+
     }
 
 }
