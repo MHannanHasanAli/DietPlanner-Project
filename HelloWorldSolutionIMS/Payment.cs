@@ -53,9 +53,9 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show("Payment data not found with File no: " + PaymentIDToEdit);
                 }
                 reader.Close();
+                MainClass.con.Close();
                 updatewithfile();
                 promotionname.SelectedValue = int.Parse(promotionName);
-                MainClass.con.Close();
 
 
             }

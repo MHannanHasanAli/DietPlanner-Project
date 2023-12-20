@@ -92,7 +92,11 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView1.Rows.Clear();
             for (int i = 0; i < itemids.Count; i++)
             {
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 //int selectedIngredientID = Convert.ToInt32(guna2DataGridView1.Rows[i].Cells[1].Value);
 
                 //// Get the new quantity value from the "Quantity" cell.
@@ -133,7 +137,11 @@ namespace HelloWorldSolutionIMS
                         string unitd = (reader5["UNIT"]).ToString();
 
 
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                         if (removeflag != 1)
                         {
                             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
@@ -398,7 +406,11 @@ namespace HelloWorldSolutionIMS
         static int languagestatus;
         private void LanguageInfo()
         {
-            MainClass.con.Open();
+            if (MainClass.con.State != ConnectionState.Open)
+            {
+                MainClass.con.Open();
+                conn = 1;
+            }
 
             // Create a SqlCommand to fetch the row with ID 1 from the Language table
             SqlCommand fetchCmd = new SqlCommand("SELECT * FROM Language WHERE ID = 1", MainClass.con);
@@ -418,7 +430,11 @@ namespace HelloWorldSolutionIMS
 
             }
 
-            MainClass.con.Close();
+            if (conn == 1)
+            {
+                MainClass.con.Close();
+                conn = 0;
+            }
 
         }
         private void UpdateGroupsN()
@@ -579,7 +595,11 @@ namespace HelloWorldSolutionIMS
             SqlCommand cmd;
             try
             {
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
 
                 cmd = new SqlCommand("SELECT ID, Namear, Nameen FROM GROUPN", MainClass.con);
 
@@ -593,7 +613,12 @@ namespace HelloWorldSolutionIMS
 
 
                 dgv.DataSource = dt;
-                MainClass.con.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+
             }
             catch (Exception ex)
             {
@@ -606,7 +631,11 @@ namespace HelloWorldSolutionIMS
             SqlCommand cmd;
             try
             {
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
 
                 cmd = new SqlCommand("SELECT ID, Namear, Nameen FROM GROUPC", MainClass.con);
 
@@ -620,7 +649,11 @@ namespace HelloWorldSolutionIMS
 
 
                 dgv.DataSource = dt;
-                MainClass.con.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
             }
             catch (Exception ex)
             {
@@ -635,7 +668,11 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd;
                 try
                 {
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
 
                     cmd = new SqlCommand("SELECT ID, MealAr,PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal", MainClass.con);
 
@@ -654,7 +691,11 @@ namespace HelloWorldSolutionIMS
                     protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
                     dgv.DataSource = dt;
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -667,7 +708,11 @@ namespace HelloWorldSolutionIMS
                 SqlCommand cmd;
                 try
                 {
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
 
                     cmd = new SqlCommand("SELECT ID, MealEn,PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal", MainClass.con);
 
@@ -686,7 +731,11 @@ namespace HelloWorldSolutionIMS
                     protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
                     dgv.DataSource = dt;
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -707,7 +756,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         SqlCommand cmd = new SqlCommand("SELECT ID,MealAr, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
                             " WHERE (MealAr LIKE @MealName) AND (MealEn LIKE @GroupArName)", MainClass.con);
@@ -733,7 +786,11 @@ namespace HelloWorldSolutionIMS
 
 
                         dgv.DataSource = dt;
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -745,7 +802,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         SqlCommand cmd = new SqlCommand("SELECT ID,MealAr, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal" +
                             " WHERE MealEn LIKE @GroupArName", MainClass.con);
@@ -770,7 +831,11 @@ namespace HelloWorldSolutionIMS
 
 
                         dgv.DataSource = dt;
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -782,7 +847,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         SqlCommand cmd = new SqlCommand("SELECT ID,MealAr, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
                             " WHERE MealAr LIKE @IngredientName", MainClass.con);
@@ -806,7 +875,11 @@ namespace HelloWorldSolutionIMS
 
 
                         dgv.DataSource = dt;
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -827,7 +900,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         SqlCommand cmd = new SqlCommand("SELECT ID,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
                             " WHERE (MealAr LIKE @MealName) AND (MealEn LIKE @GroupArName)", MainClass.con);
@@ -853,7 +930,11 @@ namespace HelloWorldSolutionIMS
 
 
                         dgv.DataSource = dt;
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -865,7 +946,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         SqlCommand cmd = new SqlCommand("SELECT ID,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal" +
                             " WHERE MealEn LIKE @GroupArName", MainClass.con);
@@ -890,7 +975,11 @@ namespace HelloWorldSolutionIMS
 
 
                         dgv.DataSource = dt;
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -902,7 +991,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         SqlCommand cmd = new SqlCommand("SELECT ID,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
                             " WHERE MealAr LIKE @IngredientName", MainClass.con);
@@ -926,7 +1019,11 @@ namespace HelloWorldSolutionIMS
 
 
                         dgv.DataSource = dt;
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -949,7 +1046,11 @@ namespace HelloWorldSolutionIMS
             {
                 try
                 {
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
 
                     SqlCommand cmd = new SqlCommand("SELECT ID, MealAr, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
                         " WHERE CATEGORY LIKE @type", MainClass.con);
@@ -974,7 +1075,11 @@ namespace HelloWorldSolutionIMS
 
 
                     dgv.DataSource = dt;
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -986,7 +1091,11 @@ namespace HelloWorldSolutionIMS
             {
                 try
                 {
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
 
                     SqlCommand cmd = new SqlCommand("SELECT ID,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
                         " WHERE CATEGORY LIKE @type", MainClass.con);
@@ -1011,7 +1120,11 @@ namespace HelloWorldSolutionIMS
 
 
                     dgv.DataSource = dt;
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -1092,7 +1205,11 @@ namespace HelloWorldSolutionIMS
             LanguageInfo();
             try
             {
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -1170,7 +1287,11 @@ namespace HelloWorldSolutionIMS
                 }
 
                 reader.Close();
-                MainClass.con.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
             }
             catch (Exception ex)
             {
@@ -1181,7 +1302,11 @@ namespace HelloWorldSolutionIMS
 
             try
             {
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -1261,7 +1386,11 @@ namespace HelloWorldSolutionIMS
                 }
 
                 reader.Close();
-                MainClass.con.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
             }
             catch (Exception ex)
             {
@@ -1271,7 +1400,11 @@ namespace HelloWorldSolutionIMS
             }
             try
             {
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Text", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -1368,7 +1501,11 @@ namespace HelloWorldSolutionIMS
                 }
 
                 reader.Close();
-                MainClass.con.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
             }
             catch (Exception ex)
             {
@@ -1556,7 +1693,11 @@ namespace HelloWorldSolutionIMS
         {
             try
             {
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 ingredientsList.Clear();
                 SqlCommand cmdthree = new SqlCommand("SELECT ID FROM MealIngredients WHERE MealID = @Mealid", MainClass.con);
                 cmdthree.Parameters.AddWithValue("@Mealid", mealIDToEdit);
@@ -1568,7 +1709,11 @@ namespace HelloWorldSolutionIMS
                     idlist.Add(id);
                     counter++;
                 }
-                MainClass.con.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
             }
             catch (Exception ex)
             {
@@ -1581,7 +1726,11 @@ namespace HelloWorldSolutionIMS
         {
             try
             {
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 ingredientsListen.Clear();
                 SqlCommand cmdfour = new SqlCommand("SELECT ID, INGREDIENT_EN FROM Ingredient WHERE ID = @id", MainClass.con);
                 cmdfour.Parameters.AddWithValue("@id", id_ar);
@@ -1595,9 +1744,16 @@ namespace HelloWorldSolutionIMS
                     ingredientsListen.Add(new Ingredients { ID = id, Name = ingredientAr });
                 }
                 reader3.Close();
-                MainClass.con.Close();
-
-                MainClass.con.Open();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 SqlCommand cmdfive = new SqlCommand("SELECT ID, INGREDIENT_EN FROM Ingredient", MainClass.con);
                 SqlDataReader reader2 = cmdfive.ExecuteReader();
 
@@ -1612,7 +1768,11 @@ namespace HelloWorldSolutionIMS
                     ingredientsListen.Add(new Ingredients { ID = id, Name = ingredientAr });
                 }
                 reader2.Close();
-                MainClass.con.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
             }
             catch (Exception ex)
             {
@@ -1625,7 +1785,11 @@ namespace HelloWorldSolutionIMS
         {
             try
             {
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 ingredientsList.Clear();
                 SqlCommand cmdfour = new SqlCommand("SELECT ID, INGREDIENT_AR FROM Ingredient WHERE ID = @id", MainClass.con);
                 cmdfour.Parameters.AddWithValue("@id", id_ar);
@@ -1639,9 +1803,16 @@ namespace HelloWorldSolutionIMS
                     ingredientsList.Add(new Ingredients { ID = id, Name = ingredientAr });
                 }
                 reader3.Close();
-                MainClass.con.Close();
-
-                MainClass.con.Open();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 SqlCommand cmdfive = new SqlCommand("SELECT ID, INGREDIENT_AR FROM Ingredient", MainClass.con);
                 SqlDataReader reader2 = cmdfive.ExecuteReader();
 
@@ -1656,7 +1827,11 @@ namespace HelloWorldSolutionIMS
                     ingredientsList.Add(new Ingredients { ID = id, Name = ingredientAr });
                 }
                 reader2.Close();
-                MainClass.con.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
             }
             catch (Exception ex)
             {
@@ -1671,7 +1846,11 @@ namespace HelloWorldSolutionIMS
             {
                 try
                 {
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
                     ingredientsListen.Clear();
                     SqlCommand cmd = new SqlCommand("SELECT ID, INGREDIENT_AR FROM Ingredient", MainClass.con);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -1683,7 +1862,11 @@ namespace HelloWorldSolutionIMS
                         ingredientsListen.Add(new Ingredients { ID = id, Name = ingredientAr });
                     }
 
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -1695,7 +1878,11 @@ namespace HelloWorldSolutionIMS
             {
                 try
                 {
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
                     ingredientsListen.Clear();
                     SqlCommand cmd = new SqlCommand("SELECT ID, INGREDIENT_EN FROM Ingredient", MainClass.con);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -1707,7 +1894,11 @@ namespace HelloWorldSolutionIMS
                         ingredientsListen.Add(new Ingredients { ID = id, Name = ingredientAr });
                     }
 
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -1724,7 +1915,11 @@ namespace HelloWorldSolutionIMS
             {
                 try
                 {
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
                     ingredientsList.Clear();
                     SqlCommand cmd = new SqlCommand("SELECT ID, INGREDIENT_AR FROM Ingredient", MainClass.con);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -1736,7 +1931,11 @@ namespace HelloWorldSolutionIMS
                         ingredientsList.Add(new Ingredients { ID = id, Name = ingredientAr });
                     }
 
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -1748,7 +1947,11 @@ namespace HelloWorldSolutionIMS
             {
                 try
                 {
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
                     ingredientsList.Clear();
                     SqlCommand cmd = new SqlCommand("SELECT ID, INGREDIENT_EN FROM Ingredient", MainClass.con);
                     SqlDataReader reader = cmd.ExecuteReader();
@@ -1760,7 +1963,11 @@ namespace HelloWorldSolutionIMS
                         ingredientsList.Add(new Ingredients { ID = id, Name = ingredientAr });
                     }
 
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -1927,7 +2134,11 @@ namespace HelloWorldSolutionIMS
                 using (SqlCommand cmd = new SqlCommand(query, MainClass.con))
                 {
                     cmd.Parameters.AddWithValue("@IngredientID", selectedIngredientID);
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
@@ -2034,7 +2245,11 @@ namespace HelloWorldSolutionIMS
                     abox.Text = totala.ToString();
                     bbox.Text = totalb.ToString();
 
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                 }
             }
 
@@ -2072,7 +2287,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
                         SqlCommand cmd = new SqlCommand("INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Notes, Preparation) " +
                             "VALUES (@MealAr, @MealEn, @GroupNAr, @GroupNEn, @GroupCAr, @GroupCEn, @CLASSIFICATION, @CALORIES, @FATS, @FIBERS, @POTASSIUM, @WATER, @SUGAR, @CALCIUM, @A, @PROTEIN, @CARBOHYDRATES, @SODIUM, @PHOSPHOR, @MAGNESIUM, @IRON, @IODINE, @B, @Notes, @Preparation)", MainClass.con);
 
@@ -2105,8 +2324,11 @@ namespace HelloWorldSolutionIMS
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Meal added successfully");
-                        MainClass.con.Close();
-
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                         mealar.Text = "";
                         mealen.Text = "";
                         groupnar.Text = "";
@@ -2178,7 +2400,11 @@ namespace HelloWorldSolutionIMS
                                 double phosphor = Convert.ToDouble(row.Cells["phosphordgv"].Value);
                                 int quantity = int.Parse(row.Cells["quantitydgv"].Value.ToString());
 
-                                MainClass.con.Open();
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
                                 using (SqlCommand command = new SqlCommand(
                                     "INSERT INTO MealIngredients (MealID, IngredientAr, IngredientEn, Unit, Calories, Fats, Carbohydrates, Fibers, Protein, Calcium, Sodium, Potassium, Iodine, A, B, Iron, Water, Suger, Magnesium, Phosphor, Quantity) " +
                                     "VALUES (@MealID, @IngredientAr, @IngredientEn, @Unit, @Calories, @Fats, @Carbohydrates, @Fibers, @Protein, @Calcium, @Sodium, @Potassium, @Iodine, @A, @B, @Iron, @Water, @Suger, @Magnesium, @Phosphor, @Quantity)", MainClass.con))
@@ -2208,7 +2434,11 @@ namespace HelloWorldSolutionIMS
                                     // Execute the SQL command
                                     command.ExecuteNonQuery();
                                 }
-                                MainClass.con.Close();
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
                             }
                         }
                         guna2DataGridView1.Rows.Clear();
@@ -2233,7 +2463,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
                         SqlCommand cmd = new SqlCommand("UPDATE Meal SET MealAr = @MealAr, MealEn = @MealEn, GroupNAr = @GroupNAr, GroupNEn = @GroupNEn, GroupCAr = @GroupCAr, GroupCEn = @GroupCEn, CLASSIFICATION = @CLASSIFICATION, FATS = @FATS, FIBERS = @FIBERS, POTASSIUM = @POTASSIUM, WATER = @WATER, SUGAR = @SUGAR, CALCIUM = @CALCIUM, A = @A, PROTEIN = @PROTEIN, CARBOHYDRATES = @CARBOHYDRATES, SODIUM = @SODIUM, PHOSPHOR = @PHOSPHOR, MAGNESIUM = @MAGNESIUM, IRON = @IRON, IODINE = @IODINE, B = @B, Category = @Category, Notes = @Notes, Preparation = @Preparation WHERE ID = @ID", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@ID", mealIDToEdit);
@@ -2266,7 +2500,11 @@ namespace HelloWorldSolutionIMS
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Meal updated successfully");
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                         ShowMeals(guna2DataGridView2, iddgv, mealardgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
 
                         // Clear the input controls or set them to default values.
@@ -2309,12 +2547,20 @@ namespace HelloWorldSolutionIMS
 
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
                         SqlCommand cmdingredients = new SqlCommand("DELETE FROM MealIngredients WHERE MealID = @MealID", MainClass.con);
                         cmdingredients.Parameters.AddWithValue("@MealID", mealIDToEdit); // Assuming the Ingredient ID is in the first cell of the selected row.
                         cmdingredients.ExecuteNonQuery();
                         //MessageBox.Show("Meal removed successfully");
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                         foreach (DataGridViewRow row in guna2DataGridView1.Rows)
                         {
                             if (!row.IsNewRow) // Skip the last empty row if present.
@@ -2340,7 +2586,11 @@ namespace HelloWorldSolutionIMS
                                 double phosphor = Convert.ToDouble(row.Cells["phosphordgv"].Value);
                                 int quantity = int.Parse(row.Cells["quantitydgv"].Value.ToString());
 
-                                MainClass.con.Open();
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
                                 using (SqlCommand command = new SqlCommand(
                                     "INSERT INTO MealIngredients (MealID, IngredientAr, IngredientEn, Unit, Calories, Fats, Carbohydrates, Fibers, Protein, Calcium, Sodium, Potassium, Iodine, A, B, Iron, Water, Suger, Magnesium, Phosphor, Quantity) " +
                                     "VALUES (@MealID, @IngredientAr, @IngredientEn, @Unit, @Calories, @Fats, @Carbohydrates, @Fibers, @Protein, @Calcium, @Sodium, @Potassium, @Iodine, @A, @B, @Iron, @Water, @Suger, @Magnesium, @Phosphor, @Quantity)", MainClass.con))
@@ -2370,7 +2620,11 @@ namespace HelloWorldSolutionIMS
                                     // Execute the SQL command
                                     command.ExecuteNonQuery();
                                 }
-                                MainClass.con.Close();
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
                             }
                         }
                         guna2DataGridView1.Rows.Clear();
@@ -2480,19 +2734,33 @@ namespace HelloWorldSolutionIMS
                             string id = guna2DataGridView2.CurrentRow.Cells[0].Value.ToString();
                             try
                             {
-                                MainClass.con.Open();
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
                                 SqlCommand cmd = new SqlCommand("DELETE FROM Meal WHERE ID = @MealID", MainClass.con);
                                 cmd.Parameters.AddWithValue("@MealID", guna2DataGridView2.CurrentRow.Cells[0].Value.ToString()); // Assuming the Ingredient ID is in the first cell of the selected row.
                                 cmd.ExecuteNonQuery();
-                                MainClass.con.Close();
-
-                                MainClass.con.Open();
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
                                 SqlCommand cmdingredients = new SqlCommand("DELETE FROM MealIngredients WHERE MealID = @MealID", MainClass.con);
                                 cmdingredients.Parameters.AddWithValue("@MealID", id); // Assuming the Ingredient ID is in the first cell of the selected row.
                                 cmdingredients.ExecuteNonQuery();
                                 MessageBox.Show("Meal removed successfully");
-                                MainClass.con.Close();
-
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
                                 ShowMeals(guna2DataGridView2, iddgv, mealardgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
                             }
                             catch (Exception ex)
@@ -2511,7 +2779,11 @@ namespace HelloWorldSolutionIMS
             try
             {
                 mealIDToEdit = guna2DataGridView2.CurrentRow.Cells[0].Value.ToString();
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
                 cmd.Parameters.AddWithValue("@MealID", mealIDToEdit);
 
@@ -2551,7 +2823,11 @@ namespace HelloWorldSolutionIMS
                     reader.Close(); // Close the first DataReader
 
                     //ShowIngredients(guna2DataGridView1, unitdgv, ingredientardgv, ingredientendgv,quantitydgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, potassiumdgv, phosphordgv,waterdgv,magnesiumdgv,sugerdgv,irondgv,iodinedgv,adgv,bdgv);
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                     extrafunc();
 
                     tabControl1.SelectedIndex = 2;
@@ -2561,7 +2837,11 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show("Meal not found with ID: " + mealIDToEdit);
                 }
 
-                MainClass.con.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
             }
             catch (Exception ex)
             {
@@ -2659,7 +2939,11 @@ namespace HelloWorldSolutionIMS
             try
             {
                 mealIDToEdit = guna2DataGridView2.SelectedRows[0].Cells[0].Value.ToString();
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
                 cmd.Parameters.AddWithValue("@MealID", mealIDToEdit);
 
@@ -2704,7 +2988,11 @@ namespace HelloWorldSolutionIMS
                     reader.Close(); // Close the first DataReader
 
                     //ShowIngredients(guna2DataGridView1, unitdgv, ingredientardgv, ingredientendgv,quantitydgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, potassiumdgv, phosphordgv,waterdgv,magnesiumdgv,sugerdgv,irondgv,iodinedgv,adgv,bdgv);
-                    MainClass.con.Close();
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                     groupnar.Text = temp1;
                     groupnen.Text = temp2;
                     groupcar.Text = temp3;
@@ -2718,7 +3006,11 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show("Meal not found with ID: " + mealIDToEdit);
                 }
 
-                MainClass.con.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
             }
             catch (Exception ex)
             {
@@ -2769,19 +3061,33 @@ namespace HelloWorldSolutionIMS
                             string id = guna2DataGridView2.CurrentRow.Cells[0].Value.ToString();
                             try
                             {
-                                MainClass.con.Open();
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
                                 SqlCommand cmd = new SqlCommand("DELETE FROM Meal WHERE ID = @MealID", MainClass.con);
                                 cmd.Parameters.AddWithValue("@MealID", guna2DataGridView2.CurrentRow.Cells[0].Value.ToString()); // Assuming the Ingredient ID is in the first cell of the selected row.
                                 cmd.ExecuteNonQuery();
-                                MainClass.con.Close();
-
-                                MainClass.con.Open();
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
                                 SqlCommand cmdingredients = new SqlCommand("DELETE FROM MealIngredients WHERE MealID = @MealID", MainClass.con);
                                 cmdingredients.Parameters.AddWithValue("@MealID", id); // Assuming the Ingredient ID is in the first cell of the selected row.
                                 cmdingredients.ExecuteNonQuery();
                                 MessageBox.Show("Meal removed successfully");
-                                MainClass.con.Close();
-
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
                                 ShowMeals(guna2DataGridView2, iddgv, mealardgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
                             }
                             catch (Exception ex)
@@ -2802,7 +3108,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
                         SqlCommand cmd = new SqlCommand("INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Notes, Preparation, Category) " +
                             "VALUES (@MealAr, @MealEn, @GroupNAr, @GroupNEn, @GroupCAr, @GroupCEn, @CLASSIFICATION, @CALORIES, @FATS, @FIBERS, @POTASSIUM, @WATER, @SUGAR, @CALCIUM, @A, @PROTEIN, @CARBOHYDRATES, @SODIUM, @PHOSPHOR, @MAGNESIUM, @IRON, @IODINE, @B, @Notes, @Preparation, @Category)", MainClass.con);
 
@@ -2835,8 +3145,11 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@Category", "All");
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Meal added successfully");
-                        MainClass.con.Close();
-
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                         mealar.Text = "";
                         mealen.Text = "";
                         groupnar.Text = "";
@@ -2909,7 +3222,11 @@ namespace HelloWorldSolutionIMS
                                 double phosphor = Convert.ToDouble(row.Cells["phosphordgv"].Value);
                                 int quantity = int.Parse(row.Cells["quantitydgv"].Value.ToString());
 
-                                MainClass.con.Open();
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
                                 using (SqlCommand command = new SqlCommand(
                                     "INSERT INTO MealIngredients (MealID, IngredientAr, IngredientEn, Unit, Calories, Fats, Carbohydrates, Fibers, Protein, Calcium, Sodium, Potassium, Iodine, A, B, Iron, Water, Suger, Magnesium, Phosphor, Quantity) " +
                                     "VALUES (@MealID, @IngredientAr, @IngredientEn, @Unit, @Calories, @Fats, @Carbohydrates, @Fibers, @Protein, @Calcium, @Sodium, @Potassium, @Iodine, @A, @B, @Iron, @Water, @Suger, @Magnesium, @Phosphor, @Quantity)", MainClass.con))
@@ -2939,7 +3256,11 @@ namespace HelloWorldSolutionIMS
                                     // Execute the SQL command
                                     command.ExecuteNonQuery();
                                 }
-                                MainClass.con.Close();
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
                             }
                         }
                         guna2DataGridView1.Rows.Clear();
@@ -2964,7 +3285,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
                         SqlCommand cmd = new SqlCommand("UPDATE Meal SET MealAr = @MealAr, MealEn = @MealEn, GroupNAr = @GroupNAr, GroupNEn = @GroupNEn, GroupCAr = @GroupCAr, GroupCEn = @GroupCEn, CLASSIFICATION = @CLASSIFICATION, CALORIES = @CALORIES, FATS = @FATS, FIBERS = @FIBERS, POTASSIUM = @POTASSIUM, WATER = @WATER, SUGAR = @SUGAR, CALCIUM = @CALCIUM, A = @A, PROTEIN = @PROTEIN, CARBOHYDRATES = @CARBOHYDRATES, SODIUM = @SODIUM, PHOSPHOR = @PHOSPHOR, MAGNESIUM = @MAGNESIUM, IRON = @IRON, IODINE = @IODINE, B = @B, Notes = @Notes, Preparation = @Preparation, Category = @Category WHERE ID = @ID", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@ID", mealIDToEdit);
@@ -2998,7 +3323,11 @@ namespace HelloWorldSolutionIMS
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Meal updated successfully");
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                         ShowMeals(guna2DataGridView2, iddgv, mealardgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
 
                         // Clear the input controls or set them to default values.
@@ -3041,12 +3370,20 @@ namespace HelloWorldSolutionIMS
 
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
                         SqlCommand cmdingredients = new SqlCommand("DELETE FROM MealIngredients WHERE MealID = @MealID", MainClass.con);
                         cmdingredients.Parameters.AddWithValue("@MealID", mealIDToEdit); // Assuming the Ingredient ID is in the first cell of the selected row.
                         cmdingredients.ExecuteNonQuery();
                         //MessageBox.Show("Meal removed successfully");
-                        MainClass.con.Close();
+                        if (conn == 1)
+                        {
+                            MainClass.con.Close();
+                            conn = 0;
+                        }
                         foreach (DataGridViewRow row in guna2DataGridView1.Rows)
                         {
                             if (!row.IsNewRow) // Skip the last empty row if present.
@@ -3072,7 +3409,11 @@ namespace HelloWorldSolutionIMS
                                 double phosphor = Convert.ToDouble(row.Cells["phosphordgv"].Value);
                                 int quantity = int.Parse(row.Cells["quantitydgv"].Value.ToString());
 
-                                MainClass.con.Open();
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
                                 using (SqlCommand command = new SqlCommand(
                                     "INSERT INTO MealIngredients (MealID, IngredientAr, IngredientEn, Unit, Calories, Fats, Carbohydrates, Fibers, Protein, Calcium, Sodium, Potassium, Iodine, A, B, Iron, Water, Suger, Magnesium, Phosphor, Quantity) " +
                                     "VALUES (@MealID, @IngredientAr, @IngredientEn, @Unit, @Calories, @Fats, @Carbohydrates, @Fibers, @Protein, @Calcium, @Sodium, @Potassium, @Iodine, @A, @B, @Iron, @Water, @Suger, @Magnesium, @Phosphor, @Quantity)", MainClass.con))
@@ -3102,7 +3443,11 @@ namespace HelloWorldSolutionIMS
                                     // Execute the SQL command
                                     command.ExecuteNonQuery();
                                 }
-                                MainClass.con.Close();
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
                             }
                         }
                         guna2DataGridView1.Rows.Clear();
@@ -3129,7 +3474,11 @@ namespace HelloWorldSolutionIMS
             {
                 try
                 {
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
                     SqlCommand cmd = new SqlCommand("INSERT INTO GROUPN (Namear, Nameen) " +
                         "VALUES (@Namear, @Nameen)", MainClass.con);
 
@@ -3139,8 +3488,11 @@ namespace HelloWorldSolutionIMS
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Added successfully");
-                    MainClass.con.Close();
-
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                     agnar.Text = "";
                     agnen.Text = "";
 
@@ -3195,12 +3547,19 @@ namespace HelloWorldSolutionIMS
                         {
                             try
                             {
-                                MainClass.con.Open();
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
                                 SqlCommand cmd = new SqlCommand("DELETE FROM GROUPN WHERE ID = @ID", MainClass.con);
                                 cmd.Parameters.AddWithValue("@ID", groupid); // Assuming the Ingredient ID is in the first cell of the selected row.
                                 cmd.ExecuteNonQuery();
-                                MainClass.con.Close();
-
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
                                 //tabControl1.SelectedIndex = 2;
                                 ShowGroupN(guna2DataGridView3, idgn, gnnar, gnnen);
                                 UpdateGroupsN();
@@ -3232,7 +3591,11 @@ namespace HelloWorldSolutionIMS
             {
                 try
                 {
-                    MainClass.con.Open();
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
                     SqlCommand cmd = new SqlCommand("INSERT INTO GROUPC (Namear, Nameen) " +
                         "VALUES (@Namear, @Nameen)", MainClass.con);
 
@@ -3242,8 +3605,11 @@ namespace HelloWorldSolutionIMS
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Added successfully");
-                    MainClass.con.Close();
-
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
                     gcnamear.Text = "";
                     gcnameen.Text = "";
 
@@ -3286,12 +3652,19 @@ namespace HelloWorldSolutionIMS
                         {
                             try
                             {
-                                MainClass.con.Open();
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
                                 SqlCommand cmd = new SqlCommand("DELETE FROM GROUPC WHERE ID = @ID", MainClass.con);
                                 cmd.Parameters.AddWithValue("@ID", groupid); // Assuming the Ingredient ID is in the first cell of the selected row.
                                 cmd.ExecuteNonQuery();
-                                MainClass.con.Close();
-
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
                                 //tabControl1.SelectedIndex = 2;
                                 ShowGroupC(guna2DataGridView4, gcid, gcnar, gcnen);
                                 UpdateGroupsC();
@@ -3901,7 +4274,7 @@ namespace HelloWorldSolutionIMS
 
                     }
 
-                    if (MainClass.con.State == ConnectionState.Open)
+                    if (conn == 1)
                     {
                         MainClass.con.Close();
                         conn = 0;
@@ -4004,7 +4377,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         SqlCommand cmd = new SqlCommand("SELECT ID, MealAr, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
                             " WHERE (GroupNAr LIKE @GroupArName)", MainClass.con);
@@ -4043,7 +4420,11 @@ namespace HelloWorldSolutionIMS
 
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         SqlCommand cmd = new SqlCommand("SELECT ID, MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
                             " WHERE (GroupNAr LIKE @GroupArName)", MainClass.con);
@@ -4087,7 +4468,11 @@ namespace HelloWorldSolutionIMS
                     SqlCommand cmd;
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         cmd = new SqlCommand("SELECT ID, MealAr,PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal", MainClass.con);
 
@@ -4119,7 +4504,11 @@ namespace HelloWorldSolutionIMS
                     SqlCommand cmd;
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         cmd = new SqlCommand("SELECT ID, MealEn,PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal", MainClass.con);
 
@@ -4160,7 +4549,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         SqlCommand cmd = new SqlCommand("SELECT ID, MealAr, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
                             " WHERE (GroupCAr LIKE @GroupArName)", MainClass.con);
@@ -4198,7 +4591,11 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         SqlCommand cmd = new SqlCommand("SELECT ID, MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
                             " WHERE (GroupCAr LIKE @GroupArName)", MainClass.con);
@@ -4240,7 +4637,11 @@ namespace HelloWorldSolutionIMS
                     SqlCommand cmd;
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         cmd = new SqlCommand("SELECT ID,MealAr,PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal", MainClass.con);
 
@@ -4272,7 +4673,11 @@ namespace HelloWorldSolutionIMS
                     SqlCommand cmd;
                     try
                     {
-                        MainClass.con.Open();
+                        if (MainClass.con.State != ConnectionState.Open)
+                        {
+                            MainClass.con.Open();
+                            conn = 1;
+                        }
 
                         cmd = new SqlCommand("SELECT ID,MealEn,PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal", MainClass.con);
 
@@ -4331,7 +4736,11 @@ namespace HelloWorldSolutionIMS
         {
             try
             {
-                MainClass.con.Open();
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
 
                 // SQL query to select all rows from the Ingredient table
                 string query = "SELECT * FROM Meal;";

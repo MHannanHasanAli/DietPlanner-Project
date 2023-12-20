@@ -125,7 +125,7 @@ namespace HelloWorldSolutionIMS
                     fats.DefaultCellStyle.Format = "N2";
                     carbohydrates.DefaultCellStyle.Format = "N2";
                     protein.DefaultCellStyle.Format = "N2";
-                    calories.DefaultCellStyle.Format = "N2";
+                    calories.DefaultCellStyle.Format = "N0";
 
                     dgv.DataSource = dt;
                     MainClass.con.Close();
@@ -165,7 +165,7 @@ namespace HelloWorldSolutionIMS
                     fats.DefaultCellStyle.Format = "N2";
                     carbohydrates.DefaultCellStyle.Format = "N2";
                     protein.DefaultCellStyle.Format = "N2";
-                    calories.DefaultCellStyle.Format = "N2";
+                    calories.DefaultCellStyle.Format = "N0";
 
                     dgv.DataSource = dt;
                     MainClass.con.Close();
@@ -219,7 +219,7 @@ namespace HelloWorldSolutionIMS
                         fats.DefaultCellStyle.Format = "N2";
                         carbohydrates.DefaultCellStyle.Format = "N2";
                         protein.DefaultCellStyle.Format = "N2";
-                        calories.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
                         dgv.DataSource = dt;
                         MainClass.con.Close();
@@ -261,7 +261,7 @@ namespace HelloWorldSolutionIMS
                         fats.DefaultCellStyle.Format = "N2";
                         carbohydrates.DefaultCellStyle.Format = "N2";
                         protein.DefaultCellStyle.Format = "N2";
-                        calories.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
                         dgv.DataSource = dt;
                         MainClass.con.Close();
@@ -303,7 +303,7 @@ namespace HelloWorldSolutionIMS
                         fats.DefaultCellStyle.Format = "N2";
                         carbohydrates.DefaultCellStyle.Format = "N2";
                         protein.DefaultCellStyle.Format = "N2";
-                        calories.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
                         dgv.DataSource = dt;
                         MainClass.con.Close();
                     }
@@ -353,7 +353,7 @@ namespace HelloWorldSolutionIMS
                         fats.DefaultCellStyle.Format = "N2";
                         carbohydrates.DefaultCellStyle.Format = "N2";
                         protein.DefaultCellStyle.Format = "N2";
-                        calories.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
                         dgv.DataSource = dt;
                         MainClass.con.Close();
@@ -395,7 +395,7 @@ namespace HelloWorldSolutionIMS
                         fats.DefaultCellStyle.Format = "N2";
                         carbohydrates.DefaultCellStyle.Format = "N2";
                         protein.DefaultCellStyle.Format = "N2";
-                        calories.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
                         dgv.DataSource = dt;
                         MainClass.con.Close();
@@ -434,10 +434,11 @@ namespace HelloWorldSolutionIMS
                         fdc.DataPropertyName = dt.Columns["fdc_id"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
+                        // Set formatting for columns
                         fats.DefaultCellStyle.Format = "N2";
                         carbohydrates.DefaultCellStyle.Format = "N2";
                         protein.DefaultCellStyle.Format = "N2";
-                        calories.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
 
                         dgv.DataSource = dt;
@@ -809,7 +810,7 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView1.Columns["fatsdgv"].DefaultCellStyle.Format = "N2";
             guna2DataGridView1.Columns["carbohydratedgv"].DefaultCellStyle.Format = "N2";
             guna2DataGridView1.Columns["proteindgv"].DefaultCellStyle.Format = "N2";
-            guna2DataGridView1.Columns["calloriesdgv"].DefaultCellStyle.Format = "N2";
+            guna2DataGridView1.Columns["calloriesdgv"].DefaultCellStyle.Format = "N0";
 
             ShowIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
 
@@ -899,7 +900,7 @@ namespace HelloWorldSolutionIMS
                     {
 
                         MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("UPDATE Ingredient SET INGREDIENT_AR = @INGREDIENT_AR, INGREDIENT_EN = @INGREDIENT_EN, GROUP_AR = @GROUP_AR, GROUP_EN = @GROUP_EN, CLASSIFICATION = @CLASSIFICATION, CALORIES = @CALORIES, FATS = @FATS, FIBERS = @FIBERS, POTASSIUM = @POTASSIUM, WATER = @WATER, SUGAR = @SUGAR, CALCIUM = @CALCIUM, A = @A, PROTEIN = @PROTEIN, CARBOHYDRATES = @CARBOHYDRATES, SODIUM = @SODIUM, PHOSPHOR = @PHOSPHOR, MAGNESIUM = @MAGNESIUM, IRON = @IRON, IODINE = @IODINE, B = @B, Category = @Category WHERE ID = @ID", MainClass.con);
+                        SqlCommand cmd = new SqlCommand("UPDATE Ingredient SET INGREDIENT_AR = @INGREDIENT_AR, INGREDIENT_EN = @INGREDIENT_EN, GROUP_AR = @GROUP_AR, GROUP_EN = @GROUP_EN, CLASSIFICATION = @CLASSIFICATION, CALORIES = @CALORIES, FATS = @FATS, FIBERS = @FIBERS, POTASSIUM = @POTASSIUM, WATER = @WATER, SUGAR = @SUGAR, CALCIUM = @CALCIUM, A = @A, PROTEIN = @PROTEIN, CARBOHYDRATES = @CARBOHYDRATES, SODIUM = @SODIUM, PHOSPHOR = @PHOSPHOR, MAGNESIUM = @MAGNESIUM, IRON = @IRON, IODINE = @IODINE, B = @B WHERE ID = @ID", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@ID", ingredientIDToEdit); // Replace with the actual input control for ID.
                         cmd.Parameters.AddWithValue("@INGREDIENT_AR", ingredientar.Text); // Replace with the actual input control for INGREDIENT_AR.
@@ -1834,7 +1835,68 @@ namespace HelloWorldSolutionIMS
 
         }
 
+        private void calories_TextChanged(object sender, EventArgs e)
+        {
+            //if (!string.IsNullOrWhiteSpace(calories.Text))
+            //{
+            //    int selectionStart = calories.SelectionStart;
+            //    int selectionLength = calories.SelectionLength;
 
+            //    decimal value;
+            //    if (decimal.TryParse(calories.Text, out value))
+            //    {
+            //        calories.Text = value.ToString("0.##");
+
+            //        // Adjust cursor position based on the original selection
+            //        if (selectionStart > calories.Text.Length)
+            //            selectionStart = calories.Text.Length;
+
+            //        calories.SelectionStart = selectionStart + calories.Text.Length - calories.Text.IndexOf('.') - selectionLength;
+            //    }
+            //    else
+            //    {
+            //        // Handle invalid input if needed
+            //        calories.Text = "0";
+            //    }
+            //}
+        }
+        private void TwoDecimalLock(object sender, KeyPressEventArgs e)
+        {
+
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+
+            // Allow only digits, one decimal point, and control characters
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.' || textBox.Text.Contains(".")))
+            {
+                e.Handled = true;
+            }
+
+            // Allow only up to two decimal places
+            if (textBox.Text.Contains("."))
+            {
+                string[] parts = textBox.Text.Split('.');
+                if (parts.Length > 1 && parts[1].Length >= 2)
+                {
+                    e.Handled = true;
+                }
+            }
+
+            // Allow backspace after two digits
+            if (e.KeyChar == '\b' && textBox.Text.Length > 2)
+            {
+                e.Handled = false;
+            }
+
+
+        }
+        private void calories_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignore the keypress if it's not a number or a control character
+            }
+        }
     }
 
 }
