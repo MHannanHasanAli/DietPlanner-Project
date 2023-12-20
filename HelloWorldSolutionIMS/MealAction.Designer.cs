@@ -112,26 +112,6 @@
             this.SaveBTN = new Guna.UI2.WinForms.Guna2Button();
             this.save = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.unitdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ingredientardgv = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ingredientendgv = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.quantitydgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caloriedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proteindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatsdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carbohydratesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calciumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fiberdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.potassiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phosphordgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.waterdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.magnesiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sugerdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.irondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iodinedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddIngredient = new Guna.UI2.WinForms.Guna2Button();
             this.preparation = new System.Windows.Forms.RichTextBox();
             this.notes = new System.Windows.Forms.RichTextBox();
@@ -211,6 +191,34 @@
             this.gcid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lunchbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.breakfastbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.allbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.snackbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.functionalfoodbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.dinnerbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.unitdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ingredientardgv = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ingredientendgv = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.quantitydgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caloriedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proteindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatsdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carbohydratesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calciumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fiberdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.potassiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phosphordgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.waterdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.magnesiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sugerdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.irondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iodinedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -849,6 +857,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.guna2Button4);
+            this.panel1.Controls.Add(this.guna2Button2);
+            this.panel1.Controls.Add(this.snackbtn);
+            this.panel1.Controls.Add(this.functionalfoodbtn);
+            this.panel1.Controls.Add(this.dinnerbtn);
+            this.panel1.Controls.Add(this.lunchbtn);
+            this.panel1.Controls.Add(this.breakfastbtn);
+            this.panel1.Controls.Add(this.allbtn);
             this.panel1.Controls.Add(this.label41);
             this.panel1.Controls.Add(this.ingredientar);
             this.panel1.Controls.Add(this.label40);
@@ -1194,146 +1210,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellValueChanged);
             this.guna2DataGridView1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.guna2DataGridView1_EditingControlShowing);
-            // 
-            // unitdgv
-            // 
-            this.unitdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.unitdgv.FillWeight = 50F;
-            this.unitdgv.Frozen = true;
-            resources.ApplyResources(this.unitdgv, "unitdgv");
-            this.unitdgv.Name = "unitdgv";
-            this.unitdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ingredientardgv
-            // 
-            this.ingredientardgv.FillWeight = 200F;
-            this.ingredientardgv.Frozen = true;
-            resources.ApplyResources(this.ingredientardgv, "ingredientardgv");
-            this.ingredientardgv.Name = "ingredientardgv";
-            this.ingredientardgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ingredientendgv
-            // 
-            this.ingredientendgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ingredientendgv.FillWeight = 200F;
-            this.ingredientendgv.Frozen = true;
-            resources.ApplyResources(this.ingredientendgv, "ingredientendgv");
-            this.ingredientendgv.Name = "ingredientendgv";
-            this.ingredientendgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ingredientendgv.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // quantitydgv
-            // 
-            this.quantitydgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.quantitydgv.FillWeight = 20F;
-            this.quantitydgv.Frozen = true;
-            resources.ApplyResources(this.quantitydgv, "quantitydgv");
-            this.quantitydgv.Name = "quantitydgv";
-            this.quantitydgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // caloriedgv
-            // 
-            this.caloriedgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.caloriedgv.FillWeight = 50F;
-            this.caloriedgv.Frozen = true;
-            resources.ApplyResources(this.caloriedgv, "caloriedgv");
-            this.caloriedgv.Name = "caloriedgv";
-            this.caloriedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // proteindgv
-            // 
-            this.proteindgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.proteindgv.FillWeight = 50F;
-            this.proteindgv.Frozen = true;
-            resources.ApplyResources(this.proteindgv, "proteindgv");
-            this.proteindgv.Name = "proteindgv";
-            this.proteindgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // fatsdgv
-            // 
-            this.fatsdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.fatsdgv.FillWeight = 50F;
-            this.fatsdgv.Frozen = true;
-            resources.ApplyResources(this.fatsdgv, "fatsdgv");
-            this.fatsdgv.Name = "fatsdgv";
-            this.fatsdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // carbohydratesdgv
-            // 
-            this.carbohydratesdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.carbohydratesdgv.FillWeight = 50F;
-            this.carbohydratesdgv.Frozen = true;
-            resources.ApplyResources(this.carbohydratesdgv, "carbohydratesdgv");
-            this.carbohydratesdgv.Name = "carbohydratesdgv";
-            this.carbohydratesdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // calciumdgv
-            // 
-            this.calciumdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.calciumdgv.Frozen = true;
-            resources.ApplyResources(this.calciumdgv, "calciumdgv");
-            this.calciumdgv.Name = "calciumdgv";
-            // 
-            // fiberdgv
-            // 
-            this.fiberdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.fiberdgv.Frozen = true;
-            resources.ApplyResources(this.fiberdgv, "fiberdgv");
-            this.fiberdgv.Name = "fiberdgv";
-            // 
-            // sodiumdgv
-            // 
-            this.sodiumdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.sodiumdgv.Frozen = true;
-            resources.ApplyResources(this.sodiumdgv, "sodiumdgv");
-            this.sodiumdgv.Name = "sodiumdgv";
-            // 
-            // potassiumdgv
-            // 
-            this.potassiumdgv.Frozen = true;
-            resources.ApplyResources(this.potassiumdgv, "potassiumdgv");
-            this.potassiumdgv.Name = "potassiumdgv";
-            // 
-            // phosphordgv
-            // 
-            this.phosphordgv.Frozen = true;
-            resources.ApplyResources(this.phosphordgv, "phosphordgv");
-            this.phosphordgv.Name = "phosphordgv";
-            // 
-            // waterdgv
-            // 
-            resources.ApplyResources(this.waterdgv, "waterdgv");
-            this.waterdgv.Name = "waterdgv";
-            // 
-            // magnesiumdgv
-            // 
-            resources.ApplyResources(this.magnesiumdgv, "magnesiumdgv");
-            this.magnesiumdgv.Name = "magnesiumdgv";
-            // 
-            // sugerdgv
-            // 
-            resources.ApplyResources(this.sugerdgv, "sugerdgv");
-            this.sugerdgv.Name = "sugerdgv";
-            // 
-            // irondgv
-            // 
-            resources.ApplyResources(this.irondgv, "irondgv");
-            this.irondgv.Name = "irondgv";
-            // 
-            // iodinedgv
-            // 
-            resources.ApplyResources(this.iodinedgv, "iodinedgv");
-            this.iodinedgv.Name = "iodinedgv";
-            // 
-            // adgv
-            // 
-            resources.ApplyResources(this.adgv, "adgv");
-            this.adgv.Name = "adgv";
-            // 
-            // bdgv
-            // 
-            resources.ApplyResources(this.bdgv, "bdgv");
-            this.bdgv.Name = "bdgv";
             // 
             // AddIngredient
             // 
@@ -2312,6 +2188,266 @@
             this.gcnen.ReadOnly = true;
             this.gcnen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // lunchbtn
+            // 
+            this.lunchbtn.AutoRoundedCorners = true;
+            this.lunchbtn.BorderRadius = 10;
+            this.lunchbtn.CausesValidation = false;
+            this.lunchbtn.CheckedState.Parent = this.lunchbtn;
+            this.lunchbtn.CustomImages.Parent = this.lunchbtn;
+            this.lunchbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.lunchbtn, "lunchbtn");
+            this.lunchbtn.ForeColor = System.Drawing.Color.White;
+            this.lunchbtn.HoverState.Parent = this.lunchbtn;
+            this.lunchbtn.Name = "lunchbtn";
+            this.lunchbtn.ShadowDecoration.Parent = this.lunchbtn;
+            this.lunchbtn.Click += new System.EventHandler(this.lunchbtn_Click);
+            // 
+            // breakfastbtn
+            // 
+            this.breakfastbtn.AutoRoundedCorners = true;
+            this.breakfastbtn.BorderRadius = 10;
+            this.breakfastbtn.CausesValidation = false;
+            this.breakfastbtn.CheckedState.Parent = this.breakfastbtn;
+            this.breakfastbtn.CustomImages.Parent = this.breakfastbtn;
+            this.breakfastbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.breakfastbtn, "breakfastbtn");
+            this.breakfastbtn.ForeColor = System.Drawing.Color.White;
+            this.breakfastbtn.HoverState.Parent = this.breakfastbtn;
+            this.breakfastbtn.Name = "breakfastbtn";
+            this.breakfastbtn.ShadowDecoration.Parent = this.breakfastbtn;
+            this.breakfastbtn.Click += new System.EventHandler(this.breakfastbtn_Click);
+            // 
+            // allbtn
+            // 
+            this.allbtn.AutoRoundedCorners = true;
+            this.allbtn.BorderRadius = 10;
+            this.allbtn.CausesValidation = false;
+            this.allbtn.CheckedState.Parent = this.allbtn;
+            this.allbtn.CustomImages.Parent = this.allbtn;
+            this.allbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.allbtn, "allbtn");
+            this.allbtn.ForeColor = System.Drawing.Color.White;
+            this.allbtn.HoverState.Parent = this.allbtn;
+            this.allbtn.Name = "allbtn";
+            this.allbtn.ShadowDecoration.Parent = this.allbtn;
+            this.allbtn.Click += new System.EventHandler(this.allbtn_Click);
+            // 
+            // snackbtn
+            // 
+            this.snackbtn.AutoRoundedCorners = true;
+            this.snackbtn.BorderRadius = 10;
+            this.snackbtn.CausesValidation = false;
+            this.snackbtn.CheckedState.Parent = this.snackbtn;
+            this.snackbtn.CustomImages.Parent = this.snackbtn;
+            this.snackbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.snackbtn, "snackbtn");
+            this.snackbtn.ForeColor = System.Drawing.Color.White;
+            this.snackbtn.HoverState.Parent = this.snackbtn;
+            this.snackbtn.Name = "snackbtn";
+            this.snackbtn.ShadowDecoration.Parent = this.snackbtn;
+            this.snackbtn.Click += new System.EventHandler(this.snackbtn_Click);
+            // 
+            // functionalfoodbtn
+            // 
+            this.functionalfoodbtn.AutoRoundedCorners = true;
+            this.functionalfoodbtn.BorderRadius = 10;
+            this.functionalfoodbtn.CausesValidation = false;
+            this.functionalfoodbtn.CheckedState.Parent = this.functionalfoodbtn;
+            this.functionalfoodbtn.CustomImages.Parent = this.functionalfoodbtn;
+            this.functionalfoodbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.functionalfoodbtn, "functionalfoodbtn");
+            this.functionalfoodbtn.ForeColor = System.Drawing.Color.White;
+            this.functionalfoodbtn.HoverState.Parent = this.functionalfoodbtn;
+            this.functionalfoodbtn.Name = "functionalfoodbtn";
+            this.functionalfoodbtn.ShadowDecoration.Parent = this.functionalfoodbtn;
+            this.functionalfoodbtn.Click += new System.EventHandler(this.functionalfoodbtn_Click);
+            // 
+            // dinnerbtn
+            // 
+            this.dinnerbtn.AutoRoundedCorners = true;
+            this.dinnerbtn.BorderRadius = 10;
+            this.dinnerbtn.CausesValidation = false;
+            this.dinnerbtn.CheckedState.Parent = this.dinnerbtn;
+            this.dinnerbtn.CustomImages.Parent = this.dinnerbtn;
+            this.dinnerbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.dinnerbtn, "dinnerbtn");
+            this.dinnerbtn.ForeColor = System.Drawing.Color.White;
+            this.dinnerbtn.HoverState.Parent = this.dinnerbtn;
+            this.dinnerbtn.Name = "dinnerbtn";
+            this.dinnerbtn.ShadowDecoration.Parent = this.dinnerbtn;
+            this.dinnerbtn.Click += new System.EventHandler(this.dinnerbtn_Click);
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.AutoRoundedCorners = true;
+            this.guna2Button2.BorderRadius = 10;
+            this.guna2Button2.CausesValidation = false;
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button2, "guna2Button2");
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.AutoRoundedCorners = true;
+            this.guna2Button4.BorderRadius = 10;
+            this.guna2Button4.CausesValidation = false;
+            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
+            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
+            this.guna2Button4.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button4, "guna2Button4");
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.HoverState.Parent = this.guna2Button4;
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            // 
+            // unitdgv
+            // 
+            this.unitdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.unitdgv.FillWeight = 50F;
+            this.unitdgv.Frozen = true;
+            resources.ApplyResources(this.unitdgv, "unitdgv");
+            this.unitdgv.Name = "unitdgv";
+            this.unitdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ingredientardgv
+            // 
+            this.ingredientardgv.FillWeight = 200F;
+            this.ingredientardgv.Frozen = true;
+            resources.ApplyResources(this.ingredientardgv, "ingredientardgv");
+            this.ingredientardgv.Name = "ingredientardgv";
+            this.ingredientardgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ingredientendgv
+            // 
+            this.ingredientendgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ingredientendgv.FillWeight = 200F;
+            this.ingredientendgv.Frozen = true;
+            resources.ApplyResources(this.ingredientendgv, "ingredientendgv");
+            this.ingredientendgv.Name = "ingredientendgv";
+            this.ingredientendgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ingredientendgv.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // quantitydgv
+            // 
+            this.quantitydgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.quantitydgv.FillWeight = 20F;
+            this.quantitydgv.Frozen = true;
+            resources.ApplyResources(this.quantitydgv, "quantitydgv");
+            this.quantitydgv.Name = "quantitydgv";
+            this.quantitydgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // caloriedgv
+            // 
+            this.caloriedgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.caloriedgv.FillWeight = 50F;
+            this.caloriedgv.Frozen = true;
+            resources.ApplyResources(this.caloriedgv, "caloriedgv");
+            this.caloriedgv.Name = "caloriedgv";
+            this.caloriedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // proteindgv
+            // 
+            this.proteindgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.proteindgv.FillWeight = 50F;
+            this.proteindgv.Frozen = true;
+            resources.ApplyResources(this.proteindgv, "proteindgv");
+            this.proteindgv.Name = "proteindgv";
+            this.proteindgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // fatsdgv
+            // 
+            this.fatsdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.fatsdgv.FillWeight = 50F;
+            this.fatsdgv.Frozen = true;
+            resources.ApplyResources(this.fatsdgv, "fatsdgv");
+            this.fatsdgv.Name = "fatsdgv";
+            this.fatsdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // carbohydratesdgv
+            // 
+            this.carbohydratesdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.carbohydratesdgv.FillWeight = 50F;
+            this.carbohydratesdgv.Frozen = true;
+            resources.ApplyResources(this.carbohydratesdgv, "carbohydratesdgv");
+            this.carbohydratesdgv.Name = "carbohydratesdgv";
+            this.carbohydratesdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // calciumdgv
+            // 
+            this.calciumdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.calciumdgv.Frozen = true;
+            resources.ApplyResources(this.calciumdgv, "calciumdgv");
+            this.calciumdgv.Name = "calciumdgv";
+            // 
+            // fiberdgv
+            // 
+            this.fiberdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.fiberdgv.Frozen = true;
+            resources.ApplyResources(this.fiberdgv, "fiberdgv");
+            this.fiberdgv.Name = "fiberdgv";
+            // 
+            // sodiumdgv
+            // 
+            this.sodiumdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.sodiumdgv.Frozen = true;
+            resources.ApplyResources(this.sodiumdgv, "sodiumdgv");
+            this.sodiumdgv.Name = "sodiumdgv";
+            // 
+            // potassiumdgv
+            // 
+            this.potassiumdgv.Frozen = true;
+            resources.ApplyResources(this.potassiumdgv, "potassiumdgv");
+            this.potassiumdgv.Name = "potassiumdgv";
+            // 
+            // phosphordgv
+            // 
+            this.phosphordgv.Frozen = true;
+            resources.ApplyResources(this.phosphordgv, "phosphordgv");
+            this.phosphordgv.Name = "phosphordgv";
+            // 
+            // waterdgv
+            // 
+            resources.ApplyResources(this.waterdgv, "waterdgv");
+            this.waterdgv.Name = "waterdgv";
+            // 
+            // magnesiumdgv
+            // 
+            resources.ApplyResources(this.magnesiumdgv, "magnesiumdgv");
+            this.magnesiumdgv.Name = "magnesiumdgv";
+            // 
+            // sugerdgv
+            // 
+            resources.ApplyResources(this.sugerdgv, "sugerdgv");
+            this.sugerdgv.Name = "sugerdgv";
+            // 
+            // irondgv
+            // 
+            resources.ApplyResources(this.irondgv, "irondgv");
+            this.irondgv.Name = "irondgv";
+            // 
+            // iodinedgv
+            // 
+            resources.ApplyResources(this.iodinedgv, "iodinedgv");
+            this.iodinedgv.Name = "iodinedgv";
+            // 
+            // adgv
+            // 
+            resources.ApplyResources(this.adgv, "adgv");
+            this.adgv.Name = "adgv";
+            // 
+            // bdgv
+            // 
+            resources.ApplyResources(this.bdgv, "bdgv");
+            this.bdgv.Name = "bdgv";
+            // 
             // MealAction
             // 
             resources.ApplyResources(this, "$this");
@@ -2486,6 +2622,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn calciummaindgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn fibermaindgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodiummaindgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idgn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gnnar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gnnen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gcid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gcnar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gcnen;
+        private Guna.UI2.WinForms.Guna2Button export;
+        private Guna.UI2.WinForms.Guna2Button lunchbtn;
+        private Guna.UI2.WinForms.Guna2Button breakfastbtn;
+        private Guna.UI2.WinForms.Guna2Button allbtn;
+        private Guna.UI2.WinForms.Guna2Button snackbtn;
+        private Guna.UI2.WinForms.Guna2Button functionalfoodbtn;
+        private Guna.UI2.WinForms.Guna2Button dinnerbtn;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn unitdgv;
         private System.Windows.Forms.DataGridViewComboBoxColumn ingredientardgv;
         private System.Windows.Forms.DataGridViewComboBoxColumn ingredientendgv;
@@ -2506,12 +2657,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iodinedgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn adgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn bdgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idgn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gnnar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gnnen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gcid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gcnar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gcnen;
-        private Guna.UI2.WinForms.Guna2Button export;
     }
 }

@@ -931,7 +931,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1412, 912</value>
+    <value>1151, 1005</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1180,7 +1180,7 @@
     <value>3, 3</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1406, 906</value>
+    <value>1145, 999</value>
   </data>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1204,7 +1204,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1412, 912</value>
+    <value>1151, 1005</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1223,6 +1223,222 @@
   </data>
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="guna2Button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="guna2Button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>652, 123</value>
+  </data>
+  <data name="guna2Button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="guna2Button4.TabIndex" type="System.Int32, mscorlib">
+    <value>285</value>
+  </data>
+  <data name="guna2Button4.Text" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="&gt;&gt;guna2Button4.Name" xml:space="preserve">
+    <value>guna2Button4</value>
+  </data>
+  <data name="&gt;&gt;guna2Button4.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2Button4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;guna2Button4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="guna2Button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="guna2Button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>652, 72</value>
+  </data>
+  <data name="guna2Button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="guna2Button2.TabIndex" type="System.Int32, mscorlib">
+    <value>284</value>
+  </data>
+  <data name="guna2Button2.Text" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="&gt;&gt;guna2Button2.Name" xml:space="preserve">
+    <value>guna2Button2</value>
+  </data>
+  <data name="&gt;&gt;guna2Button2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2Button2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;guna2Button2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="snackbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="snackbtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>622, 210</value>
+  </data>
+  <data name="snackbtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="snackbtn.TabIndex" type="System.Int32, mscorlib">
+    <value>283</value>
+  </data>
+  <data name="snackbtn.Text" xml:space="preserve">
+    <value>Snack</value>
+  </data>
+  <data name="&gt;&gt;snackbtn.Name" xml:space="preserve">
+    <value>snackbtn</value>
+  </data>
+  <data name="&gt;&gt;snackbtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;snackbtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;snackbtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="functionalfoodbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8pt</value>
+  </data>
+  <data name="functionalfoodbtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>622, 238</value>
+  </data>
+  <data name="functionalfoodbtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="functionalfoodbtn.TabIndex" type="System.Int32, mscorlib">
+    <value>282</value>
+  </data>
+  <data name="functionalfoodbtn.Text" xml:space="preserve">
+    <value>Functional Food</value>
+  </data>
+  <data name="&gt;&gt;functionalfoodbtn.Name" xml:space="preserve">
+    <value>functionalfoodbtn</value>
+  </data>
+  <data name="&gt;&gt;functionalfoodbtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;functionalfoodbtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;functionalfoodbtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dinnerbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="dinnerbtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>622, 180</value>
+  </data>
+  <data name="dinnerbtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 22</value>
+  </data>
+  <data name="dinnerbtn.TabIndex" type="System.Int32, mscorlib">
+    <value>281</value>
+  </data>
+  <data name="dinnerbtn.Text" xml:space="preserve">
+    <value>Dinner</value>
+  </data>
+  <data name="&gt;&gt;dinnerbtn.Name" xml:space="preserve">
+    <value>dinnerbtn</value>
+  </data>
+  <data name="&gt;&gt;dinnerbtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;dinnerbtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;dinnerbtn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lunchbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="lunchbtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 238</value>
+  </data>
+  <data name="lunchbtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="lunchbtn.TabIndex" type="System.Int32, mscorlib">
+    <value>280</value>
+  </data>
+  <data name="lunchbtn.Text" xml:space="preserve">
+    <value>Lunch</value>
+  </data>
+  <data name="&gt;&gt;lunchbtn.Name" xml:space="preserve">
+    <value>lunchbtn</value>
+  </data>
+  <data name="&gt;&gt;lunchbtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;lunchbtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lunchbtn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="breakfastbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="breakfastbtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 208</value>
+  </data>
+  <data name="breakfastbtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="breakfastbtn.TabIndex" type="System.Int32, mscorlib">
+    <value>278</value>
+  </data>
+  <data name="breakfastbtn.Text" xml:space="preserve">
+    <value>Breakfast</value>
+  </data>
+  <data name="&gt;&gt;breakfastbtn.Name" xml:space="preserve">
+    <value>breakfastbtn</value>
+  </data>
+  <data name="&gt;&gt;breakfastbtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;breakfastbtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;breakfastbtn.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="allbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="allbtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 180</value>
+  </data>
+  <data name="allbtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 22</value>
+  </data>
+  <data name="allbtn.TabIndex" type="System.Int32, mscorlib">
+    <value>277</value>
+  </data>
+  <data name="allbtn.Text" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="&gt;&gt;allbtn.Name" xml:space="preserve">
+    <value>allbtn</value>
+  </data>
+  <data name="&gt;&gt;allbtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;allbtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;allbtn.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="label41.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1252,7 +1468,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label41.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>8</value>
   </data>
   <data name="ingredientar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -1270,7 +1486,7 @@
     <value>485, 109</value>
   </data>
   <data name="ingredientar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 36</value>
+    <value>161, 36</value>
   </data>
   <data name="ingredientar.TabIndex" type="System.Int32, mscorlib">
     <value>275</value>
@@ -1285,7 +1501,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;ingredientar.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>9</value>
   </data>
   <data name="label40.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1315,7 +1531,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label40.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>10</value>
   </data>
   <data name="ingredienten.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -1333,7 +1549,7 @@
     <value>485, 58</value>
   </data>
   <data name="ingredienten.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 36</value>
+    <value>161, 36</value>
   </data>
   <data name="ingredienten.TabIndex" type="System.Int32, mscorlib">
     <value>273</value>
@@ -1348,7 +1564,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;ingredienten.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>11</value>
   </data>
   <data name="groupcen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -1375,7 +1591,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;groupcen.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>12</value>
   </data>
   <data name="groupcar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -1402,7 +1618,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;groupcar.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>13</value>
   </data>
   <data name="groupnen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -1429,7 +1645,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;groupnen.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>14</value>
   </data>
   <data name="groupnar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -1456,7 +1672,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;groupnar.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>15</value>
   </data>
   <data name="agc.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1483,7 +1699,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;agc.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>16</value>
   </data>
   <data name="dgc.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1510,7 +1726,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;dgc.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>17</value>
   </data>
   <data name="dgn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1537,7 +1753,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;dgn.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>18</value>
   </data>
   <data name="agn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1564,7 +1780,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;agn.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>19</value>
   </data>
   <data name="SaveBTN.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1591,7 +1807,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SaveBTN.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>20</value>
   </data>
   <data name="save.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1618,7 +1834,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;save.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>21</value>
   </data>
   <data name="guna2DataGridView1.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>52</value>
@@ -1675,7 +1891,7 @@
     <value>True</value>
   </metadata>
   <data name="caloriedgv.HeaderText" xml:space="preserve">
-    <value>CALORIE</value>
+    <value>KCAL</value>
   </data>
   <data name="caloriedgv.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1897,7 +2113,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;guna2DataGridView1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>22</value>
   </data>
   <data name="AddIngredient.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1924,7 +2140,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;AddIngredient.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>23</value>
   </data>
   <data name="preparation.Location" type="System.Drawing.Point, System.Drawing">
     <value>704, 273</value>
@@ -1948,7 +2164,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;preparation.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>24</value>
   </data>
   <data name="notes.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 273</value>
@@ -1972,7 +2188,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;notes.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>25</value>
   </data>
   <data name="Meals.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1999,13 +2215,13 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;Meals.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>26</value>
   </data>
   <data name="chart1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>704, 3</value>
+    <value>772, 3</value>
   </data>
   <data name="chart1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 264</value>
+    <value>316, 264</value>
   </data>
   <data name="chart1.TabIndex" type="System.Int32, mscorlib">
     <value>256</value>
@@ -2023,7 +2239,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;chart1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>27</value>
   </data>
   <data name="mealar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2050,7 +2266,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;mealar.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>28</value>
   </data>
   <data name="mealen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2077,7 +2293,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;mealen.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>29</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2107,7 +2323,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>30</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2137,7 +2353,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>31</value>
   </data>
   <data name="label25.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2167,7 +2383,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>32</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2197,7 +2413,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>33</value>
   </data>
   <data name="classification.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -2215,7 +2431,7 @@
     <value>485, 10</value>
   </data>
   <data name="classification.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 36</value>
+    <value>161, 36</value>
   </data>
   <data name="classification.TabIndex" type="System.Int32, mscorlib">
     <value>210</value>
@@ -2230,7 +2446,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;classification.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>34</value>
   </data>
   <data name="label24.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2260,7 +2476,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>35</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2290,7 +2506,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>36</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2320,7 +2536,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>37</value>
   </data>
   <data name="label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2350,7 +2566,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>38</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2380,7 +2596,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>39</value>
   </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2410,7 +2626,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>40</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2440,7 +2656,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>41</value>
   </data>
   <data name="label18.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2470,7 +2686,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>42</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2500,7 +2716,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>43</value>
   </data>
   <data name="bbox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2527,7 +2743,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;bbox.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>44</value>
   </data>
   <data name="calories.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2554,7 +2770,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;calories.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>45</value>
   </data>
   <data name="iodine.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2581,7 +2797,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;iodine.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>46</value>
   </data>
   <data name="fats.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2608,7 +2824,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;fats.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>47</value>
   </data>
   <data name="iron.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2635,7 +2851,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;iron.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>48</value>
   </data>
   <data name="fibers.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2662,7 +2878,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;fibers.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>49</value>
   </data>
   <data name="magnesium.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2689,7 +2905,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;magnesium.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>50</value>
   </data>
   <data name="potassium.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2716,7 +2932,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;potassium.ZOrder" xml:space="preserve">
-    <value>43</value>
+    <value>51</value>
   </data>
   <data name="label19.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2746,7 +2962,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
-    <value>44</value>
+    <value>52</value>
   </data>
   <data name="label23.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2776,7 +2992,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
-    <value>45</value>
+    <value>53</value>
   </data>
   <data name="label20.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2806,7 +3022,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
-    <value>46</value>
+    <value>54</value>
   </data>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2836,7 +3052,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>47</value>
+    <value>55</value>
   </data>
   <data name="label21.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2866,7 +3082,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
-    <value>48</value>
+    <value>56</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2896,7 +3112,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>49</value>
+    <value>57</value>
   </data>
   <data name="label22.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2926,7 +3142,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
-    <value>50</value>
+    <value>58</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2956,7 +3172,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>51</value>
+    <value>59</value>
   </data>
   <data name="phosphor.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2983,7 +3199,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;phosphor.ZOrder" xml:space="preserve">
-    <value>52</value>
+    <value>60</value>
   </data>
   <data name="water.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -3010,7 +3226,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;water.ZOrder" xml:space="preserve">
-    <value>53</value>
+    <value>61</value>
   </data>
   <data name="sodium.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -3037,7 +3253,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;sodium.ZOrder" xml:space="preserve">
-    <value>54</value>
+    <value>62</value>
   </data>
   <data name="sugar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -3064,7 +3280,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;sugar.ZOrder" xml:space="preserve">
-    <value>55</value>
+    <value>63</value>
   </data>
   <data name="carbohydrates.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -3091,7 +3307,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;carbohydrates.ZOrder" xml:space="preserve">
-    <value>56</value>
+    <value>64</value>
   </data>
   <data name="calcium.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -3118,7 +3334,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;calcium.ZOrder" xml:space="preserve">
-    <value>57</value>
+    <value>65</value>
   </data>
   <data name="protein.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -3145,7 +3361,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;protein.ZOrder" xml:space="preserve">
-    <value>58</value>
+    <value>66</value>
   </data>
   <data name="abox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -3172,7 +3388,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;abox.ZOrder" xml:space="preserve">
-    <value>59</value>
+    <value>67</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3202,7 +3418,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>60</value>
+    <value>68</value>
   </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3232,7 +3448,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>61</value>
+    <value>69</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3262,7 +3478,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>62</value>
+    <value>70</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3292,7 +3508,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>63</value>
+    <value>71</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -3520,7 +3736,7 @@
     <value>3, 3</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1406, 906</value>
+    <value>1145, 999</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3544,7 +3760,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1412, 912</value>
+    <value>1151, 1005</value>
   </data>
   <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3793,7 +4009,7 @@
     <value>3, 3</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1406, 906</value>
+    <value>1145, 999</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3817,7 +4033,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1412, 912</value>
+    <value>1151, 1005</value>
   </data>
   <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -4012,7 +4228,7 @@
     <value>3, 3</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1406, 906</value>
+    <value>1145, 999</value>
   </data>
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -4036,7 +4252,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1412, 912</value>
+    <value>1151, 1005</value>
   </data>
   <data name="tabPage6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -4144,6 +4360,42 @@
     <value>sodiummaindgv</value>
   </data>
   <data name="&gt;&gt;sodiummaindgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;idgn.Name" xml:space="preserve">
+    <value>idgn</value>
+  </data>
+  <data name="&gt;&gt;idgn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gnnar.Name" xml:space="preserve">
+    <value>gnnar</value>
+  </data>
+  <data name="&gt;&gt;gnnar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gnnen.Name" xml:space="preserve">
+    <value>gnnen</value>
+  </data>
+  <data name="&gt;&gt;gnnen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gcid.Name" xml:space="preserve">
+    <value>gcid</value>
+  </data>
+  <data name="&gt;&gt;gcid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gcnar.Name" xml:space="preserve">
+    <value>gcnar</value>
+  </data>
+  <data name="&gt;&gt;gcnar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gcnen.Name" xml:space="preserve">
+    <value>gcnen</value>
+  </data>
+  <data name="&gt;&gt;gcnen.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;unitdgv.Name" xml:space="preserve">
@@ -4264,42 +4516,6 @@
     <value>bdgv</value>
   </data>
   <data name="&gt;&gt;bdgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;idgn.Name" xml:space="preserve">
-    <value>idgn</value>
-  </data>
-  <data name="&gt;&gt;idgn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gnnar.Name" xml:space="preserve">
-    <value>gnnar</value>
-  </data>
-  <data name="&gt;&gt;gnnar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gnnen.Name" xml:space="preserve">
-    <value>gnnen</value>
-  </data>
-  <data name="&gt;&gt;gnnen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gcid.Name" xml:space="preserve">
-    <value>gcid</value>
-  </data>
-  <data name="&gt;&gt;gcid.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gcnar.Name" xml:space="preserve">
-    <value>gcnar</value>
-  </data>
-  <data name="&gt;&gt;gcnar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gcnen.Name" xml:space="preserve">
-    <value>gcnen</value>
-  </data>
-  <data name="&gt;&gt;gcnen.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

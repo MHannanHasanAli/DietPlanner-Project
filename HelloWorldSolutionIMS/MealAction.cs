@@ -396,7 +396,7 @@ namespace HelloWorldSolutionIMS
         static string mealIDToEdit;
         static int counter = 0;
         static int conn = 0;
-        static string Catgry;
+        static string Catgry = "All";
         public class GroupnarContent
         {
             public int ID { get; set; }
@@ -2660,6 +2660,12 @@ namespace HelloWorldSolutionIMS
         }
         private void Add_Click(object sender, EventArgs e)
         {
+            allbtn.FillColor = Color.MediumSeaGreen;
+            breakfastbtn.FillColor = Color.MediumSeaGreen;
+            lunchbtn.FillColor = Color.MediumSeaGreen;
+            dinnerbtn.FillColor = Color.MediumSeaGreen;
+            snackbtn.FillColor = Color.MediumSeaGreen;
+            functionalfoodbtn.FillColor = Color.MediumSeaGreen;
             mealar.Text = "";
             mealen.Text = "";
             groupnar.SelectedItem = null;
@@ -2723,6 +2729,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
+
                         // Get the Ingredient ID to display in the confirmation message
                         string ingredientIDToDelete = guna2DataGridView2.CurrentRow.Cells[1].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
 
@@ -2993,6 +3000,61 @@ namespace HelloWorldSolutionIMS
                         MainClass.con.Close();
                         conn = 0;
                     }
+
+                    if (Catgry == "All")
+                    {
+                        allbtn.FillColor = Color.Red;
+                        breakfastbtn.FillColor = Color.MediumSeaGreen;
+                        lunchbtn.FillColor = Color.MediumSeaGreen;
+                        dinnerbtn.FillColor = Color.MediumSeaGreen;
+                        snackbtn.FillColor = Color.MediumSeaGreen;
+                        functionalfoodbtn.FillColor = Color.MediumSeaGreen;
+                    }
+                    else if (Catgry == "Breakfast")
+                    {
+                        allbtn.FillColor = Color.MediumSeaGreen;
+                        breakfastbtn.FillColor = Color.Red;
+                        lunchbtn.FillColor = Color.MediumSeaGreen;
+                        dinnerbtn.FillColor = Color.MediumSeaGreen;
+                        snackbtn.FillColor = Color.MediumSeaGreen;
+                        functionalfoodbtn.FillColor = Color.MediumSeaGreen;
+                    }
+                    else if (Catgry == "Lunch")
+                    {
+                        allbtn.FillColor = Color.MediumSeaGreen;
+                        breakfastbtn.FillColor = Color.MediumSeaGreen;
+                        lunchbtn.FillColor = Color.Red;
+                        dinnerbtn.FillColor = Color.MediumSeaGreen;
+                        snackbtn.FillColor = Color.MediumSeaGreen;
+                        functionalfoodbtn.FillColor = Color.MediumSeaGreen;
+                    }
+                    else if (Catgry == "Dinner")
+                    {
+                        allbtn.FillColor = Color.MediumSeaGreen;
+                        breakfastbtn.FillColor = Color.MediumSeaGreen;
+                        lunchbtn.FillColor = Color.MediumSeaGreen;
+                        dinnerbtn.FillColor = Color.Red;
+                        snackbtn.FillColor = Color.MediumSeaGreen;
+                        functionalfoodbtn.FillColor = Color.MediumSeaGreen;
+                    }
+                    else if (Catgry == "Snack")
+                    {
+                        allbtn.FillColor = Color.MediumSeaGreen;
+                        breakfastbtn.FillColor = Color.MediumSeaGreen;
+                        lunchbtn.FillColor = Color.MediumSeaGreen;
+                        dinnerbtn.FillColor = Color.MediumSeaGreen;
+                        snackbtn.FillColor = Color.Red;
+                        functionalfoodbtn.FillColor = Color.MediumSeaGreen;
+                    }
+                    else if (Catgry == "Functional Food")
+                    {
+                        allbtn.FillColor = Color.MediumSeaGreen;
+                        breakfastbtn.FillColor = Color.MediumSeaGreen;
+                        lunchbtn.FillColor = Color.MediumSeaGreen;
+                        dinnerbtn.FillColor = Color.MediumSeaGreen;
+                        snackbtn.FillColor = Color.MediumSeaGreen;
+                        functionalfoodbtn.FillColor = Color.Red;
+                    }
                     groupnar.Text = temp1;
                     groupnen.Text = temp2;
                     groupcar.Text = temp3;
@@ -3122,7 +3184,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@GroupNEn", groupnen.Text);
                         cmd.Parameters.AddWithValue("@GroupCAr", groupcar.Text);
                         cmd.Parameters.AddWithValue("@GroupCEn", groupcen.Text);
-                        //cmd.Parameters.AddWithValue("@Category", category.Text);
+                        //cmd.Parameters.AddWithValue("@Category", Catgry);
                         cmd.Parameters.AddWithValue("@CLASSIFICATION", classification.Text);
                         cmd.Parameters.AddWithValue("@CALORIES", Convert.ToDouble(calories.Text));
                         cmd.Parameters.AddWithValue("@FATS", Convert.ToDouble(fats.Text));
@@ -3142,7 +3204,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text));
                         cmd.Parameters.AddWithValue("@Notes", notes.Text);
                         cmd.Parameters.AddWithValue("@Preparation", preparation.Text);
-                        cmd.Parameters.AddWithValue("@Category", "All");
+                        cmd.Parameters.AddWithValue("@Category", Catgry);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Meal added successfully");
                         if (conn == 1)
@@ -3299,7 +3361,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@GroupNEn", groupnen.Text);
                         cmd.Parameters.AddWithValue("@GroupCAr", groupcar.Text);
                         cmd.Parameters.AddWithValue("@GroupCEn", groupcen.Text);
-                        //cmd.Parameters.AddWithValue("@Category", category.Text);
+                        //cmd.Parameters.AddWithValue("@Category", Catgry);
                         cmd.Parameters.AddWithValue("@CLASSIFICATION", classification.Text);
                         cmd.Parameters.AddWithValue("@CALORIES", Convert.ToDouble(calories.Text));
                         cmd.Parameters.AddWithValue("@FATS", Convert.ToDouble(fats.Text));
@@ -4782,10 +4844,16 @@ namespace HelloWorldSolutionIMS
                     var workbook = new XLWorkbook();
                     var worksheet = workbook.Worksheets.Add("Sheet1");
 
-                    // Writing Header
+                    // Writing Header with modification
                     for (int i = 1; i <= dataTable.Columns.Count; i++)
                     {
-                        worksheet.Cell(1, i).Value = dataTable.Columns[i - 1].ColumnName;
+                        string columnName = dataTable.Columns[i - 1].ColumnName;
+                        // Change "Category" to "Data Source"
+                        if (columnName == "Category")
+                        {
+                            columnName = "Data Source";
+                        }
+                        worksheet.Cell(1, i).Value = columnName;
                     }
 
                     // Writing Rows
@@ -4808,6 +4876,96 @@ namespace HelloWorldSolutionIMS
             {
                 MessageBox.Show($"Error exporting data: {ex.Message}", "Export Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+        private void allbtn_Click(object sender, EventArgs e)
+        {
+            allbtn.FillColor = Color.Red;
+            breakfastbtn.FillColor = Color.MediumSeaGreen;
+            lunchbtn.FillColor = Color.MediumSeaGreen;
+            dinnerbtn.FillColor = Color.MediumSeaGreen;
+            snackbtn.FillColor = Color.MediumSeaGreen;
+            functionalfoodbtn.FillColor = Color.MediumSeaGreen;
+
+            Catgry = "All";
+        }
+
+        private void breakfastbtn_Click(object sender, EventArgs e)
+        {
+            allbtn.FillColor = Color.MediumSeaGreen;
+            breakfastbtn.FillColor = Color.Red;
+            lunchbtn.FillColor = Color.MediumSeaGreen;
+            dinnerbtn.FillColor = Color.MediumSeaGreen;
+            snackbtn.FillColor = Color.MediumSeaGreen;
+            functionalfoodbtn.FillColor = Color.MediumSeaGreen;
+
+            Catgry = "Breakfast";
+
+        }
+
+        private void lunchbtn_Click(object sender, EventArgs e)
+        {
+            allbtn.FillColor = Color.MediumSeaGreen;
+            breakfastbtn.FillColor = Color.MediumSeaGreen;
+            lunchbtn.FillColor = Color.Red;
+            dinnerbtn.FillColor = Color.MediumSeaGreen;
+            snackbtn.FillColor = Color.MediumSeaGreen;
+            functionalfoodbtn.FillColor = Color.MediumSeaGreen;
+
+            Catgry = "Lunch";
+        }
+
+        private void dinnerbtn_Click(object sender, EventArgs e)
+        {
+            allbtn.FillColor = Color.MediumSeaGreen;
+            breakfastbtn.FillColor = Color.MediumSeaGreen;
+            lunchbtn.FillColor = Color.MediumSeaGreen;
+            dinnerbtn.FillColor = Color.Red;
+            snackbtn.FillColor = Color.MediumSeaGreen;
+            functionalfoodbtn.FillColor = Color.MediumSeaGreen;
+
+            Catgry = "Dinner";
+        }
+
+        private void snackbtn_Click(object sender, EventArgs e)
+        {
+            allbtn.FillColor = Color.MediumSeaGreen;
+            breakfastbtn.FillColor = Color.MediumSeaGreen;
+            lunchbtn.FillColor = Color.MediumSeaGreen;
+            dinnerbtn.FillColor = Color.MediumSeaGreen;
+            snackbtn.FillColor = Color.Red;
+            functionalfoodbtn.FillColor = Color.MediumSeaGreen;
+
+            Catgry = "Snack";
+        }
+
+        private void functionalfoodbtn_Click(object sender, EventArgs e)
+        {
+            allbtn.FillColor = Color.MediumSeaGreen;
+            breakfastbtn.FillColor = Color.MediumSeaGreen;
+            lunchbtn.FillColor = Color.MediumSeaGreen;
+            dinnerbtn.FillColor = Color.MediumSeaGreen;
+            snackbtn.FillColor = Color.MediumSeaGreen;
+            functionalfoodbtn.FillColor = Color.Red;
+
+            Catgry = "Functional Food";
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            ingredientar.Visible = true;
+            ingredienten.Visible = true;
+            label40.Visible = true;
+            label41.Visible = true;
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            ingredientar.Visible = false;
+            ingredienten.Visible = false;
+            label40.Visible = false;
+            label41.Visible = false;
         }
     }
 
