@@ -8500,7 +8500,7 @@ namespace HelloWorldSolutionIMS
                 }
 
                 namecover.Text = firstnamen.Text + " " + familynamen.Text;
-                covername.Text = namecover.Text;
+                covername.Text = firstnamen.Text + " " + familynamen.Text;
                 agecover.Text = agen.Text;
                 numbercover.Text = mobilenon.Text;
                 currentdatecover.Text = DateTime.Now.ToShortDateString();
@@ -11862,14 +11862,14 @@ namespace HelloWorldSolutionIMS
                     // Set resolution
                     bmp2.SetResolution(resolution, resolution);
 
-
-                    using (Graphics gg = Graphics.FromImage(bmp2))
+                    using (Graphics gg = Graphics.FromHwnd(IntPtr.Zero))
                     {
                         gg.SmoothingMode = SmoothingMode.HighQuality;
                         gg.InterpolationMode = InterpolationMode.HighQualityBicubic;
                         gg.PixelOffsetMode = PixelOffsetMode.HighQuality;
 
-                        currentPanel.DrawToBitmap(bmp2, new Rectangle(0, 0, bmp2.Width, bmp2.Height));
+                        // Draw the panel to the bitmap using the Graphics object created from the screen (Graphics.FromHwnd(IntPtr.Zero))
+                        gg.CopyFromScreen(currentPanel.PointToScreen(Point.Empty), Point.Empty, currentPanel.Size);
                     }
 
                     // Add a page to the document with the specified size
