@@ -2200,12 +2200,9 @@ namespace HelloWorldSolutionIMS
                         string ingredienten = reader["INGREDIENT_EN"].ToString();
 
 
-
-
                         string unit = (reader["CLASSIFICATION"]).ToString();
 
-                        // Set the calculated values for other cells in the row.
-                        //guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value = ingredienten;
+
                         if (calories != null && calories != 0)
                         {
                             // Rounding to 2 decimal places

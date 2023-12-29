@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -98,10 +99,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.medicalhistoryBTN = new Guna.UI2.WinForms.Guna2Button();
+            this.bodycompositionbtn = new Guna.UI2.WinForms.Guna2Button();
             this.Reset = new Guna.UI2.WinForms.Guna2Button();
             this.AddClient = new Guna.UI2.WinForms.Guna2Button();
             this.nutritionistname = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -312,8 +314,17 @@
             this.firstnamemh = new Guna.UI2.WinForms.Guna2TextBox();
             this.filenomh = new Guna.UI2.WinForms.Guna2TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.bodycompositionbtn = new Guna.UI2.WinForms.Guna2Button();
-            this.medicalhistoryBTN = new Guna.UI2.WinForms.Guna2Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -406,6 +417,34 @@
             this.panel1.Controls.Add(this.fileno);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // medicalhistoryBTN
+            // 
+            this.medicalhistoryBTN.AutoRoundedCorners = true;
+            this.medicalhistoryBTN.BorderRadius = 21;
+            this.medicalhistoryBTN.CheckedState.Parent = this.medicalhistoryBTN;
+            this.medicalhistoryBTN.CustomImages.Parent = this.medicalhistoryBTN;
+            this.medicalhistoryBTN.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.medicalhistoryBTN, "medicalhistoryBTN");
+            this.medicalhistoryBTN.ForeColor = System.Drawing.Color.White;
+            this.medicalhistoryBTN.HoverState.Parent = this.medicalhistoryBTN;
+            this.medicalhistoryBTN.Name = "medicalhistoryBTN";
+            this.medicalhistoryBTN.ShadowDecoration.Parent = this.medicalhistoryBTN;
+            this.medicalhistoryBTN.Click += new System.EventHandler(this.medicalhistoryBTN_Click);
+            // 
+            // bodycompositionbtn
+            // 
+            this.bodycompositionbtn.AutoRoundedCorners = true;
+            this.bodycompositionbtn.BorderRadius = 21;
+            this.bodycompositionbtn.CheckedState.Parent = this.bodycompositionbtn;
+            this.bodycompositionbtn.CustomImages.Parent = this.bodycompositionbtn;
+            this.bodycompositionbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.bodycompositionbtn, "bodycompositionbtn");
+            this.bodycompositionbtn.ForeColor = System.Drawing.Color.White;
+            this.bodycompositionbtn.HoverState.Parent = this.bodycompositionbtn;
+            this.bodycompositionbtn.Name = "bodycompositionbtn";
+            this.bodycompositionbtn.ShadowDecoration.Parent = this.bodycompositionbtn;
+            this.bodycompositionbtn.Click += new System.EventHandler(this.bodycompositionbtn_Click);
             // 
             // Reset
             // 
@@ -949,6 +988,17 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label63);
+            this.panel2.Controls.Add(this.label62);
+            this.panel2.Controls.Add(this.label61);
+            this.panel2.Controls.Add(this.label60);
+            this.panel2.Controls.Add(this.label59);
+            this.panel2.Controls.Add(this.label58);
+            this.panel2.Controls.Add(this.label57);
+            this.panel2.Controls.Add(this.label55);
+            this.panel2.Controls.Add(this.label56);
+            this.panel2.Controls.Add(this.label54);
+            this.panel2.Controls.Add(this.label32);
             this.panel2.Controls.Add(this.Close);
             this.panel2.Controls.Add(this.EditBMI);
             this.panel2.Controls.Add(this.AddBMI);
@@ -3573,33 +3623,60 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             resources.ApplyResources(this.contextMenuStrip2, "contextMenuStrip2");
             // 
-            // bodycompositionbtn
+            // label32
             // 
-            this.bodycompositionbtn.AutoRoundedCorners = true;
-            this.bodycompositionbtn.BorderRadius = 21;
-            this.bodycompositionbtn.CheckedState.Parent = this.bodycompositionbtn;
-            this.bodycompositionbtn.CustomImages.Parent = this.bodycompositionbtn;
-            this.bodycompositionbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
-            resources.ApplyResources(this.bodycompositionbtn, "bodycompositionbtn");
-            this.bodycompositionbtn.ForeColor = System.Drawing.Color.White;
-            this.bodycompositionbtn.HoverState.Parent = this.bodycompositionbtn;
-            this.bodycompositionbtn.Name = "bodycompositionbtn";
-            this.bodycompositionbtn.ShadowDecoration.Parent = this.bodycompositionbtn;
-            this.bodycompositionbtn.Click += new System.EventHandler(this.bodycompositionbtn_Click);
+            resources.ApplyResources(this.label32, "label32");
+            this.label32.Name = "label32";
             // 
-            // medicalhistoryBTN
+            // label54
             // 
-            this.medicalhistoryBTN.AutoRoundedCorners = true;
-            this.medicalhistoryBTN.BorderRadius = 21;
-            this.medicalhistoryBTN.CheckedState.Parent = this.medicalhistoryBTN;
-            this.medicalhistoryBTN.CustomImages.Parent = this.medicalhistoryBTN;
-            this.medicalhistoryBTN.FillColor = System.Drawing.Color.MediumSeaGreen;
-            resources.ApplyResources(this.medicalhistoryBTN, "medicalhistoryBTN");
-            this.medicalhistoryBTN.ForeColor = System.Drawing.Color.White;
-            this.medicalhistoryBTN.HoverState.Parent = this.medicalhistoryBTN;
-            this.medicalhistoryBTN.Name = "medicalhistoryBTN";
-            this.medicalhistoryBTN.ShadowDecoration.Parent = this.medicalhistoryBTN;
-            this.medicalhistoryBTN.Click += new System.EventHandler(this.medicalhistoryBTN_Click);
+            resources.ApplyResources(this.label54, "label54");
+            this.label54.Name = "label54";
+            // 
+            // label55
+            // 
+            resources.ApplyResources(this.label55, "label55");
+            this.label55.Name = "label55";
+            // 
+            // label56
+            // 
+            resources.ApplyResources(this.label56, "label56");
+            this.label56.Name = "label56";
+            // 
+            // label57
+            // 
+            resources.ApplyResources(this.label57, "label57");
+            this.label57.Name = "label57";
+            // 
+            // label58
+            // 
+            resources.ApplyResources(this.label58, "label58");
+            this.label58.Name = "label58";
+            // 
+            // label59
+            // 
+            resources.ApplyResources(this.label59, "label59");
+            this.label59.Name = "label59";
+            // 
+            // label60
+            // 
+            resources.ApplyResources(this.label60, "label60");
+            this.label60.Name = "label60";
+            // 
+            // label61
+            // 
+            resources.ApplyResources(this.label61, "label61");
+            this.label61.Name = "label61";
+            // 
+            // label62
+            // 
+            resources.ApplyResources(this.label62, "label62");
+            this.label62.Name = "label62";
+            // 
+            // label63
+            // 
+            resources.ApplyResources(this.label63, "label63");
+            this.label63.Name = "label63";
             // 
             // Registration
             // 
@@ -3863,5 +3940,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn familynamemhdgv;
         private Guna.UI2.WinForms.Guna2Button bodycompositionbtn;
         private Guna.UI2.WinForms.Guna2Button medicalhistoryBTN;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label32;
     }
 }

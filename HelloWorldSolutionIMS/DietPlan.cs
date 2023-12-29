@@ -11,6 +11,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -7039,6 +7040,11 @@ namespace HelloWorldSolutionIMS
                 sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                 protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
+                fats.DefaultCellStyle.Format = "N2";
+                carbohydrates.DefaultCellStyle.Format = "N2";
+                protein.DefaultCellStyle.Format = "N2";
+                calories.DefaultCellStyle.Format = "N0";
+
                 dgv.DataSource = dt;
                 MainClass.con.Close();
             }
@@ -12900,6 +12906,102 @@ namespace HelloWorldSolutionIMS
         }
 
         private void caloried_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignore the keypress if it's not a number or a control character
+            }
+        }
+
+        private void DecimalLock(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+            string text = textBox.Text;
+
+            // Remove leading zeros
+            if (text.StartsWith("0") && text.Length > 1 && text[1] != '.')
+            {
+                textBox.Text = text.TrimStart('0');
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+
+            // Remove leading decimal point
+            if (text.Length > 1 && text.StartsWith("."))
+            {
+                textBox.Text = "0" + text;
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+
+            // Remove multiple consecutive decimal points
+            if (text.Contains(".."))
+            {
+                textBox.Text = text.Replace("..", ".");
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+
+            // Ensure only digits, one decimal point, and up to two decimal places are allowed
+            if (!IsValidInput(text))
+            {
+                // If the input is not valid, remove the last character
+                textBox.Text = text.Substring(0, text.Length - 1);
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+        private bool IsValidInput(string input)
+        {
+            // Implement your validation logic here
+            // Return true if the input is valid, false otherwise
+            // For example, allow only digits, one decimal point, and up to two decimal places
+            Regex regex = new Regex(@"^\d*\.?\d{0,2}$");
+            return regex.IsMatch(input);
+        }
+        private void dec(object sender, EventArgs e)
+        {
+
+        }
+
+        private void caloried_TextChanged(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+            string newText = GetFormattedText(text: textBox.Text);
+
+            // If the new text is different from the current text, update the TextBox
+            if (newText != textBox.Text)
+            {
+                textBox.Text = newText;
+                textBox.SelectionStart = newText.Length;
+            }
+        }
+
+        private string GetFormattedText(string text)
+        {
+            // Remove anything after the decimal point and any non-digit characters
+            string cleanText = Regex.Replace(text, @"[^\d.]", "");
+
+            // If a decimal point is present, keep the digits before it
+            int decimalIndex = cleanText.IndexOf('.');
+            if (decimalIndex != -1)
+            {
+                cleanText = cleanText.Substring(0, decimalIndex);
+            }
+
+            return cleanText;
+        }
+
+        private void caloriesm_TextChanged(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+            string newText = GetFormattedText(text: textBox.Text);
+
+            // If the new text is different from the current text, update the TextBox
+            if (newText != textBox.Text)
+            {
+                textBox.Text = newText;
+                textBox.SelectionStart = newText.Length;
+            }
+        }
+
+        private void caloriesm_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
