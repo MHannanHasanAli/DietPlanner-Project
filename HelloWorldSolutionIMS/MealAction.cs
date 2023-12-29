@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -690,6 +691,11 @@ namespace HelloWorldSolutionIMS
                     sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                     protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
+                    fats.DefaultCellStyle.Format = "N2";
+                    carbohydrates.DefaultCellStyle.Format = "N2";
+                    protein.DefaultCellStyle.Format = "N2";
+                    calories.DefaultCellStyle.Format = "N0";
+
                     dgv.DataSource = dt;
                     if (conn == 1)
                     {
@@ -729,6 +735,11 @@ namespace HelloWorldSolutionIMS
                     calcium.DataPropertyName = dt.Columns["CALCIUM"].ToString();
                     sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                     protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
+
+                    fats.DefaultCellStyle.Format = "N2";
+                    carbohydrates.DefaultCellStyle.Format = "N2";
+                    protein.DefaultCellStyle.Format = "N2";
+                    calories.DefaultCellStyle.Format = "N0";
 
                     dgv.DataSource = dt;
                     if (conn == 1)
@@ -783,7 +794,10 @@ namespace HelloWorldSolutionIMS
                         sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
                         dgv.DataSource = dt;
                         if (conn == 1)
@@ -828,7 +842,10 @@ namespace HelloWorldSolutionIMS
                         sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
                         dgv.DataSource = dt;
                         if (conn == 1)
@@ -873,6 +890,10 @@ namespace HelloWorldSolutionIMS
                         sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
                         dgv.DataSource = dt;
                         if (conn == 1)
@@ -927,7 +948,10 @@ namespace HelloWorldSolutionIMS
                         sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
                         dgv.DataSource = dt;
                         if (conn == 1)
@@ -972,7 +996,10 @@ namespace HelloWorldSolutionIMS
                         sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
                         dgv.DataSource = dt;
                         if (conn == 1)
@@ -1017,6 +1044,10 @@ namespace HelloWorldSolutionIMS
                         sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                         protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
+                        fats.DefaultCellStyle.Format = "N2";
+                        carbohydrates.DefaultCellStyle.Format = "N2";
+                        protein.DefaultCellStyle.Format = "N2";
+                        calories.DefaultCellStyle.Format = "N0";
 
                         dgv.DataSource = dt;
                         if (conn == 1)
@@ -1072,7 +1103,10 @@ namespace HelloWorldSolutionIMS
                     sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                     protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                    fats.DefaultCellStyle.Format = "N2";
+                    carbohydrates.DefaultCellStyle.Format = "N2";
+                    protein.DefaultCellStyle.Format = "N2";
+                    calories.DefaultCellStyle.Format = "N0";
 
                     dgv.DataSource = dt;
                     if (conn == 1)
@@ -1117,7 +1151,10 @@ namespace HelloWorldSolutionIMS
                     sodium.DataPropertyName = dt.Columns["SODIUM"].ToString();
                     protein.DataPropertyName = dt.Columns["PROTEIN"].ToString();
 
-
+                    fats.DefaultCellStyle.Format = "N2";
+                    carbohydrates.DefaultCellStyle.Format = "N2";
+                    protein.DefaultCellStyle.Format = "N2";
+                    calories.DefaultCellStyle.Format = "N0";
 
                     dgv.DataSource = dt;
                     if (conn == 1)
@@ -2169,10 +2206,42 @@ namespace HelloWorldSolutionIMS
 
                         // Set the calculated values for other cells in the row.
                         //guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value = ingredienten;
-                        guna2DataGridView1.Rows[e.RowIndex].Cells[4].Value = calories;
-                        guna2DataGridView1.Rows[e.RowIndex].Cells[5].Value = Protein;
-                        guna2DataGridView1.Rows[e.RowIndex].Cells[6].Value = fats;
-                        guna2DataGridView1.Rows[e.RowIndex].Cells[7].Value = carbohydrates;
+                        if (calories != null && calories != 0)
+                        {
+                            // Rounding to 2 decimal places
+                            double roundedProtein = Math.Round(calories, 0);
+
+                            // Set the rounded value in the DataGridView cell
+                            guna2DataGridView1.Rows[e.RowIndex].Cells[4].Value = roundedProtein;
+                        }
+
+                        if (Protein != null && Protein != 0)
+                        {
+                            // Rounding to 2 decimal places
+                            double roundedProtein = Math.Round(Protein, 2);
+
+                            // Set the rounded value in the DataGridView cell
+                            guna2DataGridView1.Rows[e.RowIndex].Cells[5].Value = roundedProtein;
+                        }
+
+                        if (fats != null && fats != 0)
+                        {
+                            // Rounding to 2 decimal places
+                            double roundedProtein = Math.Round(fats, 2);
+
+                            // Set the rounded value in the DataGridView cell
+                            guna2DataGridView1.Rows[e.RowIndex].Cells[6].Value = roundedProtein;
+                        }
+                        if (carbohydrates != null && carbohydrates != 0)
+                        {
+                            // Rounding to 2 decimal places
+                            double roundedProtein = Math.Round(carbohydrates, 2);
+
+                            // Set the rounded value in the DataGridView cell
+                            guna2DataGridView1.Rows[e.RowIndex].Cells[7].Value = roundedProtein;
+                        }
+                        //guna2DataGridView1.Rows[e.RowIndex].Cells[6].Value = fats;
+                        //guna2DataGridView1.Rows[e.RowIndex].Cells[7].Value = carbohydrates;
                         guna2DataGridView1.Rows[e.RowIndex].Cells[8].Value = calcium;
                         guna2DataGridView1.Rows[e.RowIndex].Cells[9].Value = fibers;
                         guna2DataGridView1.Rows[e.RowIndex].Cells[10].Value = sodium;
@@ -4966,6 +5035,116 @@ namespace HelloWorldSolutionIMS
             ingredienten.Visible = false;
             label40.Visible = false;
             label41.Visible = false;
+        }
+
+        private void TwoDecimalLock(object sender, KeyPressEventArgs e)
+        {
+
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+
+            // Allow only digits, one decimal point, and control characters
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.' || textBox.Text.Contains(".")))
+            {
+                e.Handled = true;
+            }
+
+            // Allow only up to two decimal places
+            if (textBox.Text.Contains("."))
+            {
+                string[] parts = textBox.Text.Split('.');
+                if (parts.Length > 1 && parts[1].Length >= 2)
+                {
+                    e.Handled = true;
+                }
+            }
+
+            // Allow backspace after two digits
+            if (e.KeyChar == '\b' && textBox.Text.Length > 2)
+            {
+                e.Handled = false;
+            }
+
+
+        }
+
+        private void calories_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignore the keypress if it's not a number or a control character
+            }
+        }
+
+        private void DecimalLock(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+            string text = textBox.Text;
+
+            // Remove leading zeros
+            if (text.StartsWith("0") && text.Length > 1 && text[1] != '.')
+            {
+                textBox.Text = text.TrimStart('0');
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+
+            // Remove leading decimal point
+            if (text.Length > 1 && text.StartsWith("."))
+            {
+                textBox.Text = "0" + text;
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+
+            // Remove multiple consecutive decimal points
+            if (text.Contains(".."))
+            {
+                textBox.Text = text.Replace("..", ".");
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+
+            // Ensure only digits, one decimal point, and up to two decimal places are allowed
+            if (!IsValidInput(text))
+            {
+                // If the input is not valid, remove the last character
+                textBox.Text = text.Substring(0, text.Length - 1);
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+        private bool IsValidInput(string input)
+        {
+            // Implement your validation logic here
+            // Return true if the input is valid, false otherwise
+            // For example, allow only digits, one decimal point, and up to two decimal places
+            Regex regex = new Regex(@"^\d*\.?\d{0,2}$");
+            return regex.IsMatch(input);
+        }
+
+        private void calories_TextChanged(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+            string newText = GetFormattedText(text: textBox.Text);
+
+            // If the new text is different from the current text, update the TextBox
+            if (newText != textBox.Text)
+            {
+                textBox.Text = newText;
+                textBox.SelectionStart = newText.Length;
+            }
+        }
+
+        private string GetFormattedText(string text)
+        {
+            // Remove anything after the decimal point and any non-digit characters
+            string cleanText = Regex.Replace(text, @"[^\d.]", "");
+
+            // If a decimal point is present, keep the digits before it
+            int decimalIndex = cleanText.IndexOf('.');
+            if (decimalIndex != -1)
+            {
+                cleanText = cleanText.Substring(0, decimalIndex);
+            }
+
+            return cleanText;
         }
     }
 

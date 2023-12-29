@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -99,17 +98,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Reset = new Guna.UI2.WinForms.Guna2Button();
-            this.label32 = new System.Windows.Forms.Label();
             this.AddClient = new Guna.UI2.WinForms.Guna2Button();
             this.nutritionistname = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Delete = new Guna.UI2.WinForms.Guna2Button();
             this.EditBTN = new Guna.UI2.WinForms.Guna2Button();
-            this.bodycomp = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.IDDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FILENODGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familynamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subscriptionstartdatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subscriptionenddatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nutritionistnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastvisitdate = new System.Windows.Forms.DateTimePicker();
             this.subscriptionstatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dob = new System.Windows.Forms.DateTimePicker();
@@ -147,6 +152,20 @@
             this.EditBMI = new Guna.UI2.WinForms.Guna2Button();
             this.AddBMI = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datebc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bcabc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.heightbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agebc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proteinbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.waterbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mineralsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.visceralfatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abdominalfatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bmibc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bmrbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderbmi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -271,6 +290,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.MedicalHistoryDelete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView17 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.idmhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filenomhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnamemhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familynamemhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.EditMedicalHistory = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -289,31 +312,8 @@
             this.firstnamemh = new Guna.UI2.WinForms.Guna2TextBox();
             this.filenomh = new Guna.UI2.WinForms.Guna2TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.IDDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FILENODGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familynamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subscriptionstartdatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subscriptionenddatedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nutritionistnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datebc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bcabc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.heightbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agebc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proteinbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.waterbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mineralsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.visceralfatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abdominalfatsbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bmibc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bmrbc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idmhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filenomhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnamemhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familynamemhdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bodycompositionbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.medicalhistoryBTN = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -365,13 +365,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.medicalhistoryBTN);
+            this.panel1.Controls.Add(this.bodycompositionbtn);
             this.panel1.Controls.Add(this.Reset);
-            this.panel1.Controls.Add(this.label32);
             this.panel1.Controls.Add(this.AddClient);
             this.panel1.Controls.Add(this.nutritionistname);
             this.panel1.Controls.Add(this.Delete);
             this.panel1.Controls.Add(this.EditBTN);
-            this.panel1.Controls.Add(this.bodycomp);
             this.panel1.Controls.Add(this.guna2DataGridView1);
             this.panel1.Controls.Add(this.lastvisitdate);
             this.panel1.Controls.Add(this.subscriptionstatus);
@@ -421,12 +421,6 @@
             this.Reset.Name = "Reset";
             this.Reset.ShadowDecoration.Parent = this.Reset;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
-            // 
-            // label32
-            // 
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.Name = "label32";
-            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // AddClient
             // 
@@ -485,12 +479,6 @@
             this.EditBTN.Name = "EditBTN";
             this.EditBTN.ShadowDecoration.Parent = this.EditBTN;
             this.EditBTN.Click += new System.EventHandler(this.EditBTN_Click);
-            // 
-            // bodycomp
-            // 
-            resources.ApplyResources(this.bodycomp, "bodycomp");
-            this.bodycomp.Name = "bodycomp";
-            this.bodycomp.Click += new System.EventHandler(this.bodycomp_Click);
             // 
             // guna2DataGridView1
             // 
@@ -564,6 +552,54 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // IDDGV
+            // 
+            resources.ApplyResources(this.IDDGV, "IDDGV");
+            this.IDDGV.Name = "IDDGV";
+            this.IDDGV.ReadOnly = true;
+            // 
+            // FILENODGV
+            // 
+            resources.ApplyResources(this.FILENODGV, "FILENODGV");
+            this.FILENODGV.Name = "FILENODGV";
+            this.FILENODGV.ReadOnly = true;
+            this.FILENODGV.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // firstnamedgv
+            // 
+            resources.ApplyResources(this.firstnamedgv, "firstnamedgv");
+            this.firstnamedgv.Name = "firstnamedgv";
+            this.firstnamedgv.ReadOnly = true;
+            this.firstnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // familynamedgv
+            // 
+            resources.ApplyResources(this.familynamedgv, "familynamedgv");
+            this.familynamedgv.Name = "familynamedgv";
+            this.familynamedgv.ReadOnly = true;
+            this.familynamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // subscriptionstartdatedgv
+            // 
+            resources.ApplyResources(this.subscriptionstartdatedgv, "subscriptionstartdatedgv");
+            this.subscriptionstartdatedgv.Name = "subscriptionstartdatedgv";
+            this.subscriptionstartdatedgv.ReadOnly = true;
+            this.subscriptionstartdatedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // subscriptionenddatedgv
+            // 
+            resources.ApplyResources(this.subscriptionenddatedgv, "subscriptionenddatedgv");
+            this.subscriptionenddatedgv.Name = "subscriptionenddatedgv";
+            this.subscriptionenddatedgv.ReadOnly = true;
+            this.subscriptionenddatedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nutritionistnamedgv
+            // 
+            resources.ApplyResources(this.nutritionistnamedgv, "nutritionistnamedgv");
+            this.nutritionistnamedgv.Name = "nutritionistnamedgv";
+            this.nutritionistnamedgv.ReadOnly = true;
+            this.nutritionistnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // lastvisitdate
             // 
@@ -1059,6 +1095,104 @@
             this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // idbc
+            // 
+            resources.ApplyResources(this.idbc, "idbc");
+            this.idbc.Name = "idbc";
+            this.idbc.ReadOnly = true;
+            this.idbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // datebc
+            // 
+            resources.ApplyResources(this.datebc, "datebc");
+            this.datebc.Name = "datebc";
+            this.datebc.ReadOnly = true;
+            this.datebc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // bcabc
+            // 
+            resources.ApplyResources(this.bcabc, "bcabc");
+            this.bcabc.Name = "bcabc";
+            this.bcabc.ReadOnly = true;
+            this.bcabc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // heightbc
+            // 
+            resources.ApplyResources(this.heightbc, "heightbc");
+            this.heightbc.Name = "heightbc";
+            this.heightbc.ReadOnly = true;
+            this.heightbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // weightbc
+            // 
+            resources.ApplyResources(this.weightbc, "weightbc");
+            this.weightbc.Name = "weightbc";
+            this.weightbc.ReadOnly = true;
+            this.weightbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // agebc
+            // 
+            resources.ApplyResources(this.agebc, "agebc");
+            this.agebc.Name = "agebc";
+            this.agebc.ReadOnly = true;
+            this.agebc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // fatsbc
+            // 
+            resources.ApplyResources(this.fatsbc, "fatsbc");
+            this.fatsbc.Name = "fatsbc";
+            this.fatsbc.ReadOnly = true;
+            this.fatsbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // proteinbc
+            // 
+            resources.ApplyResources(this.proteinbc, "proteinbc");
+            this.proteinbc.Name = "proteinbc";
+            this.proteinbc.ReadOnly = true;
+            this.proteinbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // waterbc
+            // 
+            resources.ApplyResources(this.waterbc, "waterbc");
+            this.waterbc.Name = "waterbc";
+            this.waterbc.ReadOnly = true;
+            this.waterbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // mineralsbc
+            // 
+            resources.ApplyResources(this.mineralsbc, "mineralsbc");
+            this.mineralsbc.Name = "mineralsbc";
+            this.mineralsbc.ReadOnly = true;
+            this.mineralsbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // visceralfatsbc
+            // 
+            resources.ApplyResources(this.visceralfatsbc, "visceralfatsbc");
+            this.visceralfatsbc.Name = "visceralfatsbc";
+            this.visceralfatsbc.ReadOnly = true;
+            this.visceralfatsbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // abdominalfatsbc
+            // 
+            resources.ApplyResources(this.abdominalfatsbc, "abdominalfatsbc");
+            this.abdominalfatsbc.Name = "abdominalfatsbc";
+            this.abdominalfatsbc.ReadOnly = true;
+            this.abdominalfatsbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // bmibc
+            // 
+            resources.ApplyResources(this.bmibc, "bmibc");
+            this.bmibc.Name = "bmibc";
+            this.bmibc.ReadOnly = true;
+            this.bmibc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // bmrbc
+            // 
+            resources.ApplyResources(this.bmrbc, "bmrbc");
+            this.bmrbc.Name = "bmrbc";
+            this.bmrbc.ReadOnly = true;
+            this.bmrbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // genderbmi
             // 
@@ -3178,6 +3312,34 @@
             this.guna2DataGridView17.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView17.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // idmhdgv
+            // 
+            resources.ApplyResources(this.idmhdgv, "idmhdgv");
+            this.idmhdgv.Name = "idmhdgv";
+            this.idmhdgv.ReadOnly = true;
+            this.idmhdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // filenomhdgv
+            // 
+            resources.ApplyResources(this.filenomhdgv, "filenomhdgv");
+            this.filenomhdgv.Name = "filenomhdgv";
+            this.filenomhdgv.ReadOnly = true;
+            this.filenomhdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // firstnamemhdgv
+            // 
+            resources.ApplyResources(this.firstnamemhdgv, "firstnamemhdgv");
+            this.firstnamemhdgv.Name = "firstnamemhdgv";
+            this.firstnamemhdgv.ReadOnly = true;
+            this.firstnamemhdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // familynamemhdgv
+            // 
+            resources.ApplyResources(this.familynamemhdgv, "familynamemhdgv");
+            this.familynamemhdgv.Name = "familynamemhdgv";
+            this.familynamemhdgv.ReadOnly = true;
+            this.familynamemhdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // guna2Button1
             // 
             this.guna2Button1.AutoRoundedCorners = true;
@@ -3411,179 +3573,33 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             resources.ApplyResources(this.contextMenuStrip2, "contextMenuStrip2");
             // 
-            // IDDGV
+            // bodycompositionbtn
             // 
-            resources.ApplyResources(this.IDDGV, "IDDGV");
-            this.IDDGV.Name = "IDDGV";
-            this.IDDGV.ReadOnly = true;
+            this.bodycompositionbtn.AutoRoundedCorners = true;
+            this.bodycompositionbtn.BorderRadius = 21;
+            this.bodycompositionbtn.CheckedState.Parent = this.bodycompositionbtn;
+            this.bodycompositionbtn.CustomImages.Parent = this.bodycompositionbtn;
+            this.bodycompositionbtn.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.bodycompositionbtn, "bodycompositionbtn");
+            this.bodycompositionbtn.ForeColor = System.Drawing.Color.White;
+            this.bodycompositionbtn.HoverState.Parent = this.bodycompositionbtn;
+            this.bodycompositionbtn.Name = "bodycompositionbtn";
+            this.bodycompositionbtn.ShadowDecoration.Parent = this.bodycompositionbtn;
+            this.bodycompositionbtn.Click += new System.EventHandler(this.bodycompositionbtn_Click);
             // 
-            // FILENODGV
+            // medicalhistoryBTN
             // 
-            resources.ApplyResources(this.FILENODGV, "FILENODGV");
-            this.FILENODGV.Name = "FILENODGV";
-            this.FILENODGV.ReadOnly = true;
-            this.FILENODGV.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // firstnamedgv
-            // 
-            resources.ApplyResources(this.firstnamedgv, "firstnamedgv");
-            this.firstnamedgv.Name = "firstnamedgv";
-            this.firstnamedgv.ReadOnly = true;
-            this.firstnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // familynamedgv
-            // 
-            resources.ApplyResources(this.familynamedgv, "familynamedgv");
-            this.familynamedgv.Name = "familynamedgv";
-            this.familynamedgv.ReadOnly = true;
-            this.familynamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // subscriptionstartdatedgv
-            // 
-            resources.ApplyResources(this.subscriptionstartdatedgv, "subscriptionstartdatedgv");
-            this.subscriptionstartdatedgv.Name = "subscriptionstartdatedgv";
-            this.subscriptionstartdatedgv.ReadOnly = true;
-            this.subscriptionstartdatedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // subscriptionenddatedgv
-            // 
-            resources.ApplyResources(this.subscriptionenddatedgv, "subscriptionenddatedgv");
-            this.subscriptionenddatedgv.Name = "subscriptionenddatedgv";
-            this.subscriptionenddatedgv.ReadOnly = true;
-            this.subscriptionenddatedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // nutritionistnamedgv
-            // 
-            resources.ApplyResources(this.nutritionistnamedgv, "nutritionistnamedgv");
-            this.nutritionistnamedgv.Name = "nutritionistnamedgv";
-            this.nutritionistnamedgv.ReadOnly = true;
-            this.nutritionistnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // idbc
-            // 
-            resources.ApplyResources(this.idbc, "idbc");
-            this.idbc.Name = "idbc";
-            this.idbc.ReadOnly = true;
-            this.idbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // datebc
-            // 
-            resources.ApplyResources(this.datebc, "datebc");
-            this.datebc.Name = "datebc";
-            this.datebc.ReadOnly = true;
-            this.datebc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // bcabc
-            // 
-            resources.ApplyResources(this.bcabc, "bcabc");
-            this.bcabc.Name = "bcabc";
-            this.bcabc.ReadOnly = true;
-            this.bcabc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // heightbc
-            // 
-            resources.ApplyResources(this.heightbc, "heightbc");
-            this.heightbc.Name = "heightbc";
-            this.heightbc.ReadOnly = true;
-            this.heightbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // weightbc
-            // 
-            resources.ApplyResources(this.weightbc, "weightbc");
-            this.weightbc.Name = "weightbc";
-            this.weightbc.ReadOnly = true;
-            this.weightbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // agebc
-            // 
-            resources.ApplyResources(this.agebc, "agebc");
-            this.agebc.Name = "agebc";
-            this.agebc.ReadOnly = true;
-            this.agebc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // fatsbc
-            // 
-            resources.ApplyResources(this.fatsbc, "fatsbc");
-            this.fatsbc.Name = "fatsbc";
-            this.fatsbc.ReadOnly = true;
-            this.fatsbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // proteinbc
-            // 
-            resources.ApplyResources(this.proteinbc, "proteinbc");
-            this.proteinbc.Name = "proteinbc";
-            this.proteinbc.ReadOnly = true;
-            this.proteinbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // waterbc
-            // 
-            resources.ApplyResources(this.waterbc, "waterbc");
-            this.waterbc.Name = "waterbc";
-            this.waterbc.ReadOnly = true;
-            this.waterbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // mineralsbc
-            // 
-            resources.ApplyResources(this.mineralsbc, "mineralsbc");
-            this.mineralsbc.Name = "mineralsbc";
-            this.mineralsbc.ReadOnly = true;
-            this.mineralsbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // visceralfatsbc
-            // 
-            resources.ApplyResources(this.visceralfatsbc, "visceralfatsbc");
-            this.visceralfatsbc.Name = "visceralfatsbc";
-            this.visceralfatsbc.ReadOnly = true;
-            this.visceralfatsbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // abdominalfatsbc
-            // 
-            resources.ApplyResources(this.abdominalfatsbc, "abdominalfatsbc");
-            this.abdominalfatsbc.Name = "abdominalfatsbc";
-            this.abdominalfatsbc.ReadOnly = true;
-            this.abdominalfatsbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // bmibc
-            // 
-            resources.ApplyResources(this.bmibc, "bmibc");
-            this.bmibc.Name = "bmibc";
-            this.bmibc.ReadOnly = true;
-            this.bmibc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // bmrbc
-            // 
-            resources.ApplyResources(this.bmrbc, "bmrbc");
-            this.bmrbc.Name = "bmrbc";
-            this.bmrbc.ReadOnly = true;
-            this.bmrbc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // idmhdgv
-            // 
-            resources.ApplyResources(this.idmhdgv, "idmhdgv");
-            this.idmhdgv.Name = "idmhdgv";
-            this.idmhdgv.ReadOnly = true;
-            this.idmhdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // filenomhdgv
-            // 
-            resources.ApplyResources(this.filenomhdgv, "filenomhdgv");
-            this.filenomhdgv.Name = "filenomhdgv";
-            this.filenomhdgv.ReadOnly = true;
-            this.filenomhdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // firstnamemhdgv
-            // 
-            resources.ApplyResources(this.firstnamemhdgv, "firstnamemhdgv");
-            this.firstnamemhdgv.Name = "firstnamemhdgv";
-            this.firstnamemhdgv.ReadOnly = true;
-            this.firstnamemhdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // familynamemhdgv
-            // 
-            resources.ApplyResources(this.familynamemhdgv, "familynamemhdgv");
-            this.familynamemhdgv.Name = "familynamemhdgv";
-            this.familynamemhdgv.ReadOnly = true;
-            this.familynamemhdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.medicalhistoryBTN.AutoRoundedCorners = true;
+            this.medicalhistoryBTN.BorderRadius = 21;
+            this.medicalhistoryBTN.CheckedState.Parent = this.medicalhistoryBTN;
+            this.medicalhistoryBTN.CustomImages.Parent = this.medicalhistoryBTN;
+            this.medicalhistoryBTN.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.medicalhistoryBTN, "medicalhistoryBTN");
+            this.medicalhistoryBTN.ForeColor = System.Drawing.Color.White;
+            this.medicalhistoryBTN.HoverState.Parent = this.medicalhistoryBTN;
+            this.medicalhistoryBTN.Name = "medicalhistoryBTN";
+            this.medicalhistoryBTN.ShadowDecoration.Parent = this.medicalhistoryBTN;
+            this.medicalhistoryBTN.Click += new System.EventHandler(this.medicalhistoryBTN_Click);
             // 
             // Registration
             // 
@@ -3668,7 +3684,6 @@
         private Guna.UI2.WinForms.Guna2TextBox familyname;
         private Guna.UI2.WinForms.Guna2TextBox firstname;
         private Guna.UI2.WinForms.Guna2TextBox fileno;
-        private System.Windows.Forms.Label bodycomp;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
         private Guna.UI2.WinForms.Guna2ComboBox genderbmi;
@@ -3722,7 +3737,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn one2;
         private System.Windows.Forms.DataGridViewTextBoxColumn one3;
         private System.Windows.Forms.DataGridViewTextBoxColumn one4;
-        private System.Windows.Forms.Label label32;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -3847,5 +3861,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn filenomhdgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnamemhdgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn familynamemhdgv;
+        private Guna.UI2.WinForms.Guna2Button bodycompositionbtn;
+        private Guna.UI2.WinForms.Guna2Button medicalhistoryBTN;
     }
 }

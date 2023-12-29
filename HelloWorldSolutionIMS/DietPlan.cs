@@ -12868,6 +12868,44 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView20.Columns[5].Visible = true;
             guna2DataGridView14.Columns[4].Visible = true;
         }
+        private void TwoDecimalLock(object sender, KeyPressEventArgs e)
+        {
+
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+
+            // Allow only digits, one decimal point, and control characters
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.' || textBox.Text.Contains(".")))
+            {
+                e.Handled = true;
+            }
+
+            // Allow only up to two decimal places
+            if (textBox.Text.Contains("."))
+            {
+                string[] parts = textBox.Text.Split('.');
+                if (parts.Length > 1 && parts[1].Length >= 2)
+                {
+                    e.Handled = true;
+                }
+            }
+
+            // Allow backspace after two digits
+            if (e.KeyChar == '\b' && textBox.Text.Length > 2)
+            {
+                e.Handled = false;
+            }
+
+
+        }
+
+        private void caloried_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignore the keypress if it's not a number or a control character
+            }
+        }
     }
 
 

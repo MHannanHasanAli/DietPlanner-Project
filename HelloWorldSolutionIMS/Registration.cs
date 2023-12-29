@@ -3877,5 +3877,33 @@ namespace HelloWorldSolutionIMS
         {
 
         }
+
+        private void bodycompositionbtn_Click(object sender, EventArgs e)
+        {
+            filenobmi.Text = "";
+            firstnamebmi.Text = "";
+            familynamebmi.Text = "";
+            mobilenobmi.Text = "";
+            genderbmi.SelectedItem = null;
+            agebmi.Text = "";
+            nutritionistbmi.Text = "";
+            ShowBodyCompositionAll(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void medicalhistoryBTN_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 4;
+            filenomh.Text = "";
+            firstnamemh.Text = "";
+            familynamemh.Text = "";
+            agemh.Text = "";
+            mobilenomh.Text = "";
+            nutritionistmh.Text = "";
+            gendermh.SelectedItem = null;
+
+            ShowMedicalHistoryAll(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
+            guna2DataGridView17.ClearSelection();
+        }
     }
 }

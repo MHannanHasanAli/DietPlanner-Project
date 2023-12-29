@@ -118,16 +118,70 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="medicalhistoryBTN.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="medicalhistoryBTN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>851, 363</value>
+  </data>
+  <data name="medicalhistoryBTN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 45</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="medicalhistoryBTN.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="medicalhistoryBTN.Text" xml:space="preserve">
+    <value>Medical History</value>
+  </data>
+  <data name="&gt;&gt;medicalhistoryBTN.Name" xml:space="preserve">
+    <value>medicalhistoryBTN</value>
+  </data>
+  <data name="&gt;&gt;medicalhistoryBTN.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;medicalhistoryBTN.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;medicalhistoryBTN.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="bodycompositionbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="bodycompositionbtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>851, 313</value>
+  </data>
+  <data name="bodycompositionbtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 45</value>
+  </data>
+  <data name="bodycompositionbtn.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="bodycompositionbtn.Text" xml:space="preserve">
+    <value>Body Composition</value>
+  </data>
+  <data name="&gt;&gt;bodycompositionbtn.Name" xml:space="preserve">
+    <value>bodycompositionbtn</value>
+  </data>
+  <data name="&gt;&gt;bodycompositionbtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;bodycompositionbtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;bodycompositionbtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="Reset.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
   <data name="Reset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>902, 420</value>
+    <value>851, 420</value>
   </data>
   <data name="Reset.Size" type="System.Drawing.Size, System.Drawing">
     <value>214, 45</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Reset.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
   </data>
@@ -144,37 +198,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;Reset.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label32.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label32.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold, Underline</value>
-  </data>
-  <data name="label32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>897, 383</value>
-  </data>
-  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 25</value>
-  </data>
-  <data name="label32.TabIndex" type="System.Int32, mscorlib">
-    <value>71</value>
-  </data>
-  <data name="label32.Text" xml:space="preserve">
-    <value>Medical History</value>
-  </data>
-  <data name="&gt;&gt;label32.Name" xml:space="preserve">
-    <value>label32</value>
-  </data>
-  <data name="&gt;&gt;label32.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label32.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="AddClient.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -201,7 +225,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;AddClient.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="nutritionistname.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -228,7 +252,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;nutritionistname.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Delete.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -255,7 +279,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;Delete.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="EditBTN.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -282,36 +306,6 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;EditBTN.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="bodycomp.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bodycomp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold, Underline</value>
-  </data>
-  <data name="bodycomp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 343</value>
-  </data>
-  <data name="bodycomp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 25</value>
-  </data>
-  <data name="bodycomp.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="bodycomp.Text" xml:space="preserve">
-    <value>Body Composition</value>
-  </data>
-  <data name="&gt;&gt;bodycomp.Name" xml:space="preserve">
-    <value>bodycomp</value>
-  </data>
-  <data name="&gt;&gt;bodycomp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bodycomp.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;bodycomp.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="guna2DataGridView1.ColumnHeadersHeight" type="System.Int32, mscorlib">
@@ -4782,6 +4776,132 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Registration</value>
   </data>
+  <data name="&gt;&gt;IDDGV.Name" xml:space="preserve">
+    <value>IDDGV</value>
+  </data>
+  <data name="&gt;&gt;IDDGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FILENODGV.Name" xml:space="preserve">
+    <value>FILENODGV</value>
+  </data>
+  <data name="&gt;&gt;FILENODGV.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstnamedgv.Name" xml:space="preserve">
+    <value>firstnamedgv</value>
+  </data>
+  <data name="&gt;&gt;firstnamedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;familynamedgv.Name" xml:space="preserve">
+    <value>familynamedgv</value>
+  </data>
+  <data name="&gt;&gt;familynamedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;subscriptionstartdatedgv.Name" xml:space="preserve">
+    <value>subscriptionstartdatedgv</value>
+  </data>
+  <data name="&gt;&gt;subscriptionstartdatedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;subscriptionenddatedgv.Name" xml:space="preserve">
+    <value>subscriptionenddatedgv</value>
+  </data>
+  <data name="&gt;&gt;subscriptionenddatedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nutritionistnamedgv.Name" xml:space="preserve">
+    <value>nutritionistnamedgv</value>
+  </data>
+  <data name="&gt;&gt;nutritionistnamedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;idbc.Name" xml:space="preserve">
+    <value>idbc</value>
+  </data>
+  <data name="&gt;&gt;idbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;datebc.Name" xml:space="preserve">
+    <value>datebc</value>
+  </data>
+  <data name="&gt;&gt;datebc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bcabc.Name" xml:space="preserve">
+    <value>bcabc</value>
+  </data>
+  <data name="&gt;&gt;bcabc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;heightbc.Name" xml:space="preserve">
+    <value>heightbc</value>
+  </data>
+  <data name="&gt;&gt;heightbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;weightbc.Name" xml:space="preserve">
+    <value>weightbc</value>
+  </data>
+  <data name="&gt;&gt;weightbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;agebc.Name" xml:space="preserve">
+    <value>agebc</value>
+  </data>
+  <data name="&gt;&gt;agebc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fatsbc.Name" xml:space="preserve">
+    <value>fatsbc</value>
+  </data>
+  <data name="&gt;&gt;fatsbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proteinbc.Name" xml:space="preserve">
+    <value>proteinbc</value>
+  </data>
+  <data name="&gt;&gt;proteinbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;waterbc.Name" xml:space="preserve">
+    <value>waterbc</value>
+  </data>
+  <data name="&gt;&gt;waterbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mineralsbc.Name" xml:space="preserve">
+    <value>mineralsbc</value>
+  </data>
+  <data name="&gt;&gt;mineralsbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;visceralfatsbc.Name" xml:space="preserve">
+    <value>visceralfatsbc</value>
+  </data>
+  <data name="&gt;&gt;visceralfatsbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;abdominalfatsbc.Name" xml:space="preserve">
+    <value>abdominalfatsbc</value>
+  </data>
+  <data name="&gt;&gt;abdominalfatsbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bmibc.Name" xml:space="preserve">
+    <value>bmibc</value>
+  </data>
+  <data name="&gt;&gt;bmibc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bmrbc.Name" xml:space="preserve">
+    <value>bmrbc</value>
+  </data>
+  <data name="&gt;&gt;bmrbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn31.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn31</value>
   </data>
@@ -5056,132 +5176,6 @@
     <value>one4</value>
   </data>
   <data name="&gt;&gt;one4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IDDGV.Name" xml:space="preserve">
-    <value>IDDGV</value>
-  </data>
-  <data name="&gt;&gt;IDDGV.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FILENODGV.Name" xml:space="preserve">
-    <value>FILENODGV</value>
-  </data>
-  <data name="&gt;&gt;FILENODGV.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;firstnamedgv.Name" xml:space="preserve">
-    <value>firstnamedgv</value>
-  </data>
-  <data name="&gt;&gt;firstnamedgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;familynamedgv.Name" xml:space="preserve">
-    <value>familynamedgv</value>
-  </data>
-  <data name="&gt;&gt;familynamedgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;subscriptionstartdatedgv.Name" xml:space="preserve">
-    <value>subscriptionstartdatedgv</value>
-  </data>
-  <data name="&gt;&gt;subscriptionstartdatedgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;subscriptionenddatedgv.Name" xml:space="preserve">
-    <value>subscriptionenddatedgv</value>
-  </data>
-  <data name="&gt;&gt;subscriptionenddatedgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nutritionistnamedgv.Name" xml:space="preserve">
-    <value>nutritionistnamedgv</value>
-  </data>
-  <data name="&gt;&gt;nutritionistnamedgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;idbc.Name" xml:space="preserve">
-    <value>idbc</value>
-  </data>
-  <data name="&gt;&gt;idbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;datebc.Name" xml:space="preserve">
-    <value>datebc</value>
-  </data>
-  <data name="&gt;&gt;datebc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bcabc.Name" xml:space="preserve">
-    <value>bcabc</value>
-  </data>
-  <data name="&gt;&gt;bcabc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;heightbc.Name" xml:space="preserve">
-    <value>heightbc</value>
-  </data>
-  <data name="&gt;&gt;heightbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;weightbc.Name" xml:space="preserve">
-    <value>weightbc</value>
-  </data>
-  <data name="&gt;&gt;weightbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;agebc.Name" xml:space="preserve">
-    <value>agebc</value>
-  </data>
-  <data name="&gt;&gt;agebc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fatsbc.Name" xml:space="preserve">
-    <value>fatsbc</value>
-  </data>
-  <data name="&gt;&gt;fatsbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;proteinbc.Name" xml:space="preserve">
-    <value>proteinbc</value>
-  </data>
-  <data name="&gt;&gt;proteinbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;waterbc.Name" xml:space="preserve">
-    <value>waterbc</value>
-  </data>
-  <data name="&gt;&gt;waterbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mineralsbc.Name" xml:space="preserve">
-    <value>mineralsbc</value>
-  </data>
-  <data name="&gt;&gt;mineralsbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;visceralfatsbc.Name" xml:space="preserve">
-    <value>visceralfatsbc</value>
-  </data>
-  <data name="&gt;&gt;visceralfatsbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;abdominalfatsbc.Name" xml:space="preserve">
-    <value>abdominalfatsbc</value>
-  </data>
-  <data name="&gt;&gt;abdominalfatsbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bmibc.Name" xml:space="preserve">
-    <value>bmibc</value>
-  </data>
-  <data name="&gt;&gt;bmibc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bmrbc.Name" xml:space="preserve">
-    <value>bmrbc</value>
-  </data>
-  <data name="&gt;&gt;bmrbc.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;idmhdgv.Name" xml:space="preserve">
