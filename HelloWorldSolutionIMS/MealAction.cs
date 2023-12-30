@@ -1171,6 +1171,7 @@ namespace HelloWorldSolutionIMS
             }
 
         }
+        static int titleflag = 0;
         private void UpdateChart(object sender, EventArgs e)
         {
             // Create a sample DataTable with data (replace this with your data source).
@@ -1211,7 +1212,12 @@ namespace HelloWorldSolutionIMS
 
                 titlecheck = 1;
             }
-            chart1.Titles[0].Alignment = ContentAlignment.TopCenter; // Align the title to the top center
+
+
+            chart1.Titles[0].Alignment = ContentAlignment.TopCenter;
+
+
+            // Align the title to the top center
 
             // Your existing code for chart settings
             chart1.Legends[0].Enabled = true; // Enable the legend.
@@ -1239,6 +1245,7 @@ namespace HelloWorldSolutionIMS
         }
         private void MealAction_Load(object sender, EventArgs e)
         {
+            titlecheck = 0;
             LanguageInfo();
             try
             {
@@ -3008,6 +3015,9 @@ namespace HelloWorldSolutionIMS
         {
             //UpdateGroupsC();
             //UpdateGroupsN();
+            fats.Text = "0";
+            carbohydrates.Text = "0";
+            protein.Text = "0";
             edit = 1;
             try
             {

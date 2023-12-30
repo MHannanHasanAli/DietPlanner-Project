@@ -2735,6 +2735,7 @@ namespace HelloWorldSolutionIMS
 
         private void DietPlan_Load(object sender, EventArgs e)
         {
+            IngredientFiller();
             instructionflag = 0;
             UpdateInstruction();
             chart1.Series.Clear();
@@ -3074,7 +3075,7 @@ namespace HelloWorldSolutionIMS
             }
             TableLayoutFill();
             tabControl1.SelectedIndex = 5;
-
+            ingredientflag = 0;
             //foreach (DataGridViewColumn column in guna2DataGridView13.Columns)
             //{
             //    // Replace "FullName" with the actual name of the column you want to modify
@@ -13007,6 +13008,161 @@ namespace HelloWorldSolutionIMS
             {
                 e.Handled = true; // Ignore the keypress if it's not a number or a control character
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        static int conn2 = 0;
+        public void IngredientFiller()
+        {
+            SqlCommand cmd;
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn2 = 1;
+                }
+
+                cmd = new SqlCommand("SELECT ID, INGREDIENT_EN, INGREDIENT_AR FROM Ingredient", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                // Clear the dropdown items before adding new ones
+                ingredienten.DataSource = null;
+                ingredientar.DataSource = null;
+                // Clear the items (if DataSource is not being set)
+                ingredienten.Items.Clear();
+                ingredientar.Items.Clear();
+                List<IngredientList> ingredients = new List<IngredientList>();
+
+                // Add the default 'Null' option
+                ingredients.Add(new IngredientList { ID = 0, NameEn = "Null", NameAr = "Null" });
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    int Id = row.Field<int>("ID");
+                    string Nameen = row.Field<string>("INGREDIENT_EN");
+                    string Namear = row.Field<string>("INGREDIENT_AR");
+
+                    IngredientList Temp = new IngredientList { ID = Id, NameEn = Nameen, NameAr = Namear };
+                    ingredients.Add(Temp);
+                }
+
+                ingredienten.DataSource = ingredients;
+                ingredienten.DisplayMember = "NameEn"; // Display Member is Name
+                ingredienten.ValueMember = "ID"; // Value Member is ID
+
+                ingredientar.DataSource = ingredients;
+                ingredientar.DisplayMember = "NameAr"; // Display Member is Name
+                ingredientar.ValueMember = "ID"; // Value Member is ID
+
+                if (conn2 == 1)
+                {
+                    MainClass.con.Close();
+                    conn2 = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+        List<int> mealIdList = new List<int>();
+        List<int> UniquemealIdList = new List<int>();
+        static int ingredientflag = 1;
+        private void ShowMeals(string specificId, DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealar, DataGridViewColumn mealen, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
+        {
+
+            if (ingredientflag == 0)
+            {
+
+
+                SqlCommand cmd;
+                try
+                {
+                    MainClass.con.Open();
+
+                    cmd = new SqlCommand("SELECT MealID FROM MealIngredients WHERE IngredientEn = @SpecificId", MainClass.con);
+                    cmd.Parameters.AddWithValue("@SpecificId", specificId);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (int.TryParse(row["MealID"].ToString(), out int mealId))
+                        {
+                            mealIdList.Add(mealId);
+                        }
+                    }
+                    MainClass.con.Close();
+
+                    UniquemealIdList = mealIdList.Distinct().ToList();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+                foreach (var item in UniquemealIdList)
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd2 = new SqlCommand("SELECT ID, MealAr, MealEn, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID = @SpecificId", MainClass.con);
+                        cmd2.Parameters.AddWithValue("@SpecificId", item);
+
+                        SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Assuming dgv.DataSource is set to a DataTable
+                        DataTable dataTable = (DataTable)dgv.DataSource;
+
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            // Add the row to the existing DataTable
+                            dataTable.Rows.Add(row.ItemArray);
+                        }
+
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+            }
+
+        }
+
+        private void ingredienten_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MealAction.IngredientList selectedIngredient = (MealAction.IngredientList)ingredienten.SelectedItem;
+            string selectedValue = selectedIngredient.ID.ToString();
+
+            DataTable dataTable = (DataTable)guna2DataGridView12.DataSource;
+            if (dataTable != null)
+            {
+                dataTable.Rows.Clear();
+                // Refresh the DataGridView to reflect the changes
+                guna2DataGridView12.Refresh();
+            }
+            mealIdList.Clear();
+            UniquemealIdList.Clear();
+            ShowMeals(selectedValue, guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+
         }
     }
 
