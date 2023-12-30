@@ -13146,11 +13146,78 @@ namespace HelloWorldSolutionIMS
             }
 
         }
+        private void HideMeals(string specificId, DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealar, DataGridViewColumn mealen, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
+        {
+
+            if (ingredientflag == 0)
+            {
+
+
+                SqlCommand cmd;
+                try
+                {
+                    MainClass.con.Open();
+
+                    cmd = new SqlCommand("SELECT MealID FROM MealIngredients WHERE IngredientEn <> @SpecificId\r\n", MainClass.con);
+                    cmd.Parameters.AddWithValue("@SpecificId", specificId);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (int.TryParse(row["MealID"].ToString(), out int mealId))
+                        {
+                            mealIdList.Add(mealId);
+                        }
+                    }
+                    MainClass.con.Close();
+
+                    UniquemealIdList = mealIdList.Distinct().ToList();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+                foreach (var item in UniquemealIdList)
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd2 = new SqlCommand("SELECT ID, MealAr, MealEn, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID = @SpecificId", MainClass.con);
+                        cmd2.Parameters.AddWithValue("@SpecificId", item);
+
+                        SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Assuming dgv.DataSource is set to a DataTable
+                        DataTable dataTable = (DataTable)dgv.DataSource;
+
+                        foreach (DataRow row in dt.Rows)
+                        {
+                            // Add the row to the existing DataTable
+                            dataTable.Rows.Add(row.ItemArray);
+                        }
+
+                        MainClass.con.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+            }
+
+        }
 
         private void ingredienten_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MealAction.IngredientList selectedIngredient = (MealAction.IngredientList)ingredienten.SelectedItem;
-            string selectedValue = selectedIngredient.ID.ToString();
 
             DataTable dataTable = (DataTable)guna2DataGridView12.DataSource;
             if (dataTable != null)
@@ -13161,7 +13228,41 @@ namespace HelloWorldSolutionIMS
             }
             mealIdList.Clear();
             UniquemealIdList.Clear();
+
+
+        }
+
+        private void guna2Button13_Click(object sender, EventArgs e)
+        {
+            MealAction.IngredientList selectedIngredient = (MealAction.IngredientList)ingredienten.SelectedItem;
+            string selectedValue = selectedIngredient.ID.ToString();
+            DataTable dataTable = (DataTable)guna2DataGridView12.DataSource;
+            if (dataTable != null)
+            {
+                dataTable.Rows.Clear();
+                // Refresh the DataGridView to reflect the changes
+                guna2DataGridView12.Refresh();
+            }
+            mealIdList.Clear();
+            UniquemealIdList.Clear();
             ShowMeals(selectedValue, guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+
+        }
+
+        private void guna2Button12_Click(object sender, EventArgs e)
+        {
+            MealAction.IngredientList selectedIngredient = (MealAction.IngredientList)ingredienten.SelectedItem;
+            string selectedValue = selectedIngredient.ID.ToString();
+            DataTable dataTable = (DataTable)guna2DataGridView12.DataSource;
+            if (dataTable != null)
+            {
+                dataTable.Rows.Clear();
+                // Refresh the DataGridView to reflect the changes
+                guna2DataGridView12.Refresh();
+            }
+            mealIdList.Clear();
+            UniquemealIdList.Clear();
+            HideMeals(selectedValue, guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
 
         }
     }

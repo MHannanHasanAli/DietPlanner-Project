@@ -4010,6 +4010,7 @@
             this.guna2Button12.HoverState.Parent = this.guna2Button12;
             this.guna2Button12.Name = "guna2Button12";
             this.guna2Button12.ShadowDecoration.Parent = this.guna2Button12;
+            this.guna2Button12.Click += new System.EventHandler(this.guna2Button12_Click);
             // 
             // guna2Button13
             // 
@@ -4024,6 +4025,7 @@
             this.guna2Button13.HoverState.Parent = this.guna2Button13;
             this.guna2Button13.Name = "guna2Button13";
             this.guna2Button13.ShadowDecoration.Parent = this.guna2Button13;
+            this.guna2Button13.Click += new System.EventHandler(this.guna2Button13_Click);
             // 
             // label128
             // 
