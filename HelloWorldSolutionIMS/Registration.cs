@@ -1814,6 +1814,113 @@ namespace HelloWorldSolutionIMS
             }
         }
 
+        private void ExportMHToExcel()
+        {
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
+
+                // SQL query to select all rows from the Ingredient table
+                string query = @"
+           SELECT
+                MH.FileNo,
+                C.Firstname,
+                C.Familyname,
+                MH.Status,
+                MH.Smoking,
+                MH.BloodType,
+                Q.HormonalDisease,
+                Q.Cancer,
+                Q.ImmuneDisease,
+                Q.HereditaryDisease,
+                Q.PancreaticDisease,
+                Q.OtherDisease,
+                DH.Disease_History,
+                FA.Food_Allergies,
+                M.Medication,
+                D.Deficiency,
+                Diet.Diet  -- Assuming Diet is the column from the Diet table
+            FROM
+                MedicalHistory MH
+            LEFT JOIN
+                customer C ON MH.FileNo = C.FileNo
+            LEFT JOIN
+                Questions Q ON MH.FileNo = Q.FileNo
+            LEFT JOIN
+                (
+                    SELECT
+                        FileNo,
+                        STRING_AGG(data, ', ') AS Disease_History
+                    FROM
+                        DiseaseHistory
+                    GROUP BY
+                        FileNo
+                ) DH ON MH.FileNo = DH.FileNo
+            LEFT JOIN
+                (
+                    SELECT
+                        FileNo,
+                        STRING_AGG(data, ', ') AS Food_Allergies
+                    FROM
+                        FoodAllergies
+                    GROUP BY
+                        FileNo
+                ) FA ON MH.FileNo = FA.FileNo
+            LEFT JOIN
+                (
+                    SELECT
+                        FileNo,
+                        STRING_AGG(data, ', ') AS Medication
+                    FROM
+                        Medication
+                    GROUP BY
+                        FileNo
+                ) M ON MH.FileNo = M.FileNo
+            LEFT JOIN
+                (
+                    SELECT
+                        FileNo,
+                        STRING_AGG(data, ', ') AS Deficiency
+                    FROM
+                        Deficiency
+                    GROUP BY
+                        FileNo
+                ) D ON MH.FileNo = D.FileNo
+            LEFT JOIN
+                (
+                    SELECT
+                        FileNo,
+                        STRING_AGG(data, ', ') AS Diet
+                    FROM
+                        Diet
+                    GROUP BY
+                        FileNo
+                ) Diet ON MH.FileNo = Diet.FileNo;";
+
+                using (SqlCommand command = new SqlCommand(query, MainClass.con))
+                {
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(command))
+                    {
+                        // Create a DataTable to hold the data
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        // Call the ExportToExcel function to save the data to Excel
+                        ExportToExcel(dataTable);
+                    }
+                }
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error exporting data: {ex.Message}", "Export Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void ExportToExcel(DataTable dataTable)
         {
             try
@@ -4016,6 +4123,11 @@ namespace HelloWorldSolutionIMS
         private void exportbc_Click(object sender, EventArgs e)
         {
             ExportBCToExcel();
+        }
+
+        private void ExportMH_Click(object sender, EventArgs e)
+        {
+            ExportMHToExcel();
         }
     }
 }
