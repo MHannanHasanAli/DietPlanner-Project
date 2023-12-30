@@ -170,9 +170,6 @@
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="Reset.TabIndex" type="System.Int32, mscorlib">
-    <value>170</value>
-  </data>
   <data name="label8.Text" xml:space="preserve">
     <value>1.How do you evaluate the specialist’s knowledge of nutritional information and the diet plans?</value>
   </data>
@@ -300,9 +297,6 @@
   <data name="label55.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
-  <data name="Save.Location" type="System.Drawing.Point, System.Drawing">
-    <value>769, 779</value>
-  </data>
   <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
@@ -387,8 +381,8 @@
   <data name="&gt;&gt;guna2DataGridView13.Name" xml:space="preserve">
     <value>guna2DataGridView13</value>
   </data>
-  <data name="Column13.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="Save.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
   </data>
   <data name="&gt;&gt;guna2DataGridView4.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -425,9 +419,6 @@
   </data>
   <data name="&gt;&gt;guna2DataGridView11.Parent" xml:space="preserve">
     <value>panel2</value>
-  </data>
-  <data name="Column24.HeaderText" xml:space="preserve">
-    <value>Column24</value>
   </data>
   <data name="&gt;&gt;Save.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -515,6 +506,9 @@
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 86</value>
+  </data>
+  <data name="&gt;&gt;familyname.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="Reset.Text" xml:space="preserve">
     <value>Reset</value>
@@ -711,9 +705,6 @@
   <data name="&gt;&gt;label9.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>338, 16</value>
-  </data>
   <data name="guna2DataGridView5.Location" type="System.Drawing.Point, System.Drawing">
     <value>595, 249</value>
   </data>
@@ -753,8 +744,8 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;familyname.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Column5.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -789,8 +780,8 @@
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>524, 16</value>
   </data>
-  <data name="&gt;&gt;familyname.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="Save.Location" type="System.Drawing.Point, System.Drawing">
+    <value>769, 779</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -852,6 +843,9 @@
   <data name="&gt;&gt;guna2DataGridView7.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>6.Do diets fit your lifestyle?</value>
+  </data>
   <data name="&gt;&gt;label13.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
@@ -863,9 +857,6 @@
   </data>
   <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
     <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;Column19.Name" xml:space="preserve">
-    <value>Column19</value>
   </data>
   <data name="&gt;&gt;label16.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -912,6 +903,9 @@
   <data name="tabPage2.Text" xml:space="preserve">
     <value>tabPage2</value>
   </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
   <data name="label55.Text" xml:space="preserve">
     <value>Family Name</value>
   </data>
@@ -939,14 +933,17 @@
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 25</value>
   </data>
+  <data name="guna2DataGridView13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 507</value>
+  </data>
   <data name="guna2DataGridView2.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="Save.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 16</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -1041,9 +1038,6 @@
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;firstname.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
@@ -1052,6 +1046,9 @@
   </data>
   <data name="Column11.HeaderText" xml:space="preserve">
     <value>Column11</value>
+  </data>
+  <data name="&gt;&gt;familyname.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="familyname.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 41</value>
@@ -1107,8 +1104,8 @@
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;Column24.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label15.Parent" xml:space="preserve">
     <value>panel2</value>
@@ -1151,6 +1148,9 @@
   </data>
   <data name="&gt;&gt;guna2DataGridView5.Name" xml:space="preserve">
     <value>guna2DataGridView5</value>
+  </data>
+  <data name="&gt;&gt;Column15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label12.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1245,8 +1245,8 @@
   <data name="familyname.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>6.Do diets fit your lifestyle?</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Evaluation</value>
   </data>
   <data name="guna2DataGridView7.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1314,7 +1314,7 @@
   <data name="&gt;&gt;guna2DataGridView7.Name" xml:space="preserve">
     <value>guna2DataGridView7</value>
   </data>
-  <data name="&gt;&gt;Column15.Type" xml:space="preserve">
+  <data name="&gt;&gt;Column24.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Column9.MinimumWidth" type="System.Int32, mscorlib">
@@ -1344,8 +1344,8 @@
   <data name="guna2DataGridView3.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="Reset.TabIndex" type="System.Int32, mscorlib">
+    <value>170</value>
   </data>
   <data name="&gt;&gt;Column14.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1401,8 +1401,8 @@
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
   </data>
-  <data name="guna2DataGridView13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 507</value>
+  <data name="Column24.HeaderText" xml:space="preserve">
+    <value>Column24</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1446,8 +1446,8 @@
   <data name="guna2DataGridView8.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Column24.Name" xml:space="preserve">
     <value>Column24</value>
@@ -1457,6 +1457,9 @@
   </data>
   <data name="&gt;&gt;guna2DataGridView2.Parent" xml:space="preserve">
     <value>panel1</value>
+  </data>
+  <data name="Column13.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;Column22.Name" xml:space="preserve">
     <value>Column22</value>
@@ -1497,14 +1500,11 @@
   <data name="fileno.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="&gt;&gt;Column10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Column8.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Evaluation</value>
+  <data name="&gt;&gt;Column19.Name" xml:space="preserve">
+    <value>Column19</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1527,8 +1527,8 @@
   <data name="Column4.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Column10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
@@ -1619,9 +1619,6 @@
   </metadata>
   <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ar-AE</value>
   </metadata>
   <metadata name="Column21.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -657,5 +657,10 @@ namespace HelloWorldSolutionIMS
                 others.Text = "";
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
