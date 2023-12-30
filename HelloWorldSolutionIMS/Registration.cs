@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using ClosedXML.Excel;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -1757,6 +1758,107 @@ namespace HelloWorldSolutionIMS
             {
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
+            }
+        }
+        private void ExportBCToExcel()
+        {
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
+
+                // SQL query to select all rows from the Ingredient table
+                string query = @"
+            SELECT 
+                    C.Fileno,
+                    C.Firstname,
+                    C.Familyname,
+                	BC.DATE,
+                    BC.BCA,
+                    BC.WATER,
+                    BC.MINERALS,
+                    BC.AGE,
+                    BC.LENGTH,
+                    BC.WEIGHT,
+                    BC.FATS,
+                    BC.PROTEIN,
+                    BC.ABDOMINAL_FAT,
+                    BC.VISCERAL_FATS,
+                    BC.BMI,
+                    BC.BMR
+                FROM 
+                    BodyComposition BC
+                JOIN 
+                    customer C ON BC.CustomerID = C.FileNo;";
+
+                using (SqlCommand command = new SqlCommand(query, MainClass.con))
+                {
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(command))
+                    {
+                        // Create a DataTable to hold the data
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        // Call the ExportToExcel function to save the data to Excel
+                        ExportToExcel(dataTable);
+                    }
+                }
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error exporting data: {ex.Message}", "Export Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ExportToExcel(DataTable dataTable)
+        {
+            try
+            {
+                // Create SaveFileDialog object
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx";
+                saveFileDialog.Title = "Save As Excel File";
+                saveFileDialog.DefaultExt = "xlsx";
+
+                // Show the Save As dialog and check if the user selects a file
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Creating Excel Workbook
+                    var workbook = new XLWorkbook();
+                    var worksheet = workbook.Worksheets.Add("Sheet1");
+
+                    // Writing Header with modification
+                    for (int i = 1; i <= dataTable.Columns.Count; i++)
+                    {
+                        string columnName = dataTable.Columns[i - 1].ColumnName;
+                        // Change "Category" to "Data Source"
+
+                        worksheet.Cell(1, i).Value = columnName;
+                    }
+
+                    // Writing Rows
+                    for (int i = 0; i < dataTable.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataTable.Columns.Count; j++)
+                        {
+                            worksheet.Cell(i + 2, j + 1).Value = dataTable.Rows[i][j].ToString();
+                        }
+                    }
+
+                    // Save the workbook to the user-selected file path
+                    string filePath = saveFileDialog.FileName;
+                    workbook.SaveAs(filePath);
+
+                    MessageBox.Show($"Data exported to {filePath}", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error exporting data: {ex.Message}", "Export Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ShowBodyCompositionAll(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn date, DataGridViewColumn bca, DataGridViewColumn height, DataGridViewColumn weight, DataGridViewColumn age, DataGridViewColumn fats, DataGridViewColumn protein, DataGridViewColumn water, DataGridViewColumn mineral, DataGridViewColumn fat1, DataGridViewColumn fat2, DataGridViewColumn bmi, DataGridViewColumn bmr)
@@ -3904,6 +4006,16 @@ namespace HelloWorldSolutionIMS
 
             ShowMedicalHistoryAll(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
             guna2DataGridView17.ClearSelection();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void exportbc_Click(object sender, EventArgs e)
+        {
+            ExportBCToExcel();
         }
     }
 }
