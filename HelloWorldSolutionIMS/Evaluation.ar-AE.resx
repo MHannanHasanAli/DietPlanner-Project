@@ -199,4 +199,22 @@
   <data name="label8.Text" xml:space="preserve">
     <value>1كيف تقيم معرفة الاخصائي بمعلومات التغذية وعمل البرامج الغذائية</value>
   </data>
+  <data name="Delete.Text" xml:space="preserve">
+    <value>حذف </value>
+  </data>
+  <data name="Edit.Text" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="Add.Text" xml:space="preserve">
+    <value>اضافة </value>
+  </data>
+  <data name="filenodgv.HeaderText" xml:space="preserve">
+    <value>رقم الملف</value>
+  </data>
+  <data name="firstnamedgv.HeaderText" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="familynamedgv.HeaderText" xml:space="preserve">
+    <value>اسم العائلة </value>
+  </data>
 </root>
