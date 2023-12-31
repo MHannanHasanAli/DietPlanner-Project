@@ -373,6 +373,36 @@
   <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing">
     <value>1331, 1026</value>
   </data>
+  <data name="guna2Button12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="guna2Button12.Text" xml:space="preserve">
+    <value>اخفاء</value>
+  </data>
+  <data name="guna2Button13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="guna2Button13.Text" xml:space="preserve">
+    <value>اظهار</value>
+  </data>
+  <data name="label128.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 114</value>
+  </data>
+  <data name="label128.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 24</value>
+  </data>
+  <data name="label128.Text" xml:space="preserve">
+    <value>المكون (عربي)</value>
+  </data>
+  <data name="label129.Location" type="System.Drawing.Point, System.Drawing">
+    <value>357, 69</value>
+  </data>
+  <data name="label129.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 24</value>
+  </data>
+  <data name="label129.Text" xml:space="preserve">
+    <value>المكون (انجليزي)</value>
+  </data>
   <data name="ChooseBtn.Text" xml:space="preserve">
     <value>اضافة </value>
   </data>
@@ -425,6 +455,9 @@
   <data name="label77.Text" xml:space="preserve">
     <value>طريقة التحضير</value>
   </data>
+  <data name="label78.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 17</value>
+  </data>
   <data name="label78.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 24</value>
   </data>
@@ -432,7 +465,7 @@
     <value>وحدة القياس </value>
   </data>
   <data name="classification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>429, 14</value>
+    <value>508, 14</value>
   </data>
   <data name="label79.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 24</value>
@@ -834,6 +867,33 @@
     <value>1331, 1026</value>
   </data>
   <data name="tabPage12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
+  </data>
+  <data name="panel23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1325, 1020</value>
+  </data>
+  <data name="tabPage13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
+  </data>
+  <data name="panel24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1325, 1020</value>
+  </data>
+  <data name="tabPage14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
+  </data>
+  <data name="panel40.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1325, 1020</value>
+  </data>
+  <data name="tabPage15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
+  </data>
+  <data name="guna2DataGridView24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1325, 1020</value>
+  </data>
+  <data name="panel41.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1325, 1020</value>
+  </data>
+  <data name="tabPage16.Size" type="System.Drawing.Size, System.Drawing">
     <value>1331, 1026</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
