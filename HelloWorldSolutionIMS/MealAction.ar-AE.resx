@@ -256,6 +256,51 @@
   <data name="label26.Text" xml:space="preserve">
     <value>Name (عربي)</value>
   </data>
+  <data name="guna2Button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="guna2Button4.Text" xml:space="preserve">
+    <value>اخفاء</value>
+  </data>
+  <data name="guna2Button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="guna2Button2.Text" xml:space="preserve">
+    <value>اظهار</value>
+  </data>
+  <data name="snackbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="snackbtn.Text" xml:space="preserve">
+    <value>وجبات خفيفة</value>
+  </data>
+  <data name="functionalfoodbtn.Text" xml:space="preserve">
+    <value>غذاء وظيفي</value>
+  </data>
+  <data name="dinnerbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="dinnerbtn.Text" xml:space="preserve">
+    <value>العشاء</value>
+  </data>
+  <data name="lunchbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="lunchbtn.Text" xml:space="preserve">
+    <value>الغداء</value>
+  </data>
+  <data name="breakfastbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="breakfastbtn.Text" xml:space="preserve">
+    <value>الافطار</value>
+  </data>
+  <data name="allbtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="allbtn.Text" xml:space="preserve">
+    <value>الجميع</value>
+  </data>
   <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
     <value>102, 24</value>
   </data>
