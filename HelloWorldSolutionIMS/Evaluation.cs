@@ -42,11 +42,47 @@ namespace HelloWorldSolutionIMS
             MainClass.con.Close();
 
         }
+
+        private void ShowEvaluations(DataGridView dgv, DataGridViewColumn fileno, DataGridViewColumn name, DataGridViewColumn fname)
+        {
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT DISTINCT FILENO, FIRSTNAME, LASTNAME FROM Evaluation ORDER BY FILENO", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                fileno.DataPropertyName = dt.Columns["FILENO"].ToString();
+                name.DataPropertyName = dt.Columns["FIRSTNAME"].ToString();
+                fname.DataPropertyName = dt.Columns["LASTNAME"].ToString();
+
+                dgv.DataSource = dt;
+                MainClass.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+
+        }
         private void Evaluation_Load(object sender, EventArgs e)
         {
             MainClass.HideAllTabsOnTabControl(tabControl1);
             TableStyle();
             ClearForm();
+            ShowEvaluations(guna2DataGridView17, filenodgv, firstnamedgv, familynamedgv);
+            guna2DataGridView17.ClearSelection();
+
+            guna2DataGridView17.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView17.GridColor = Color.Black;
+            guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.ForeColor;
 
             try
             {
@@ -75,6 +111,16 @@ namespace HelloWorldSolutionIMS
                         }
                     }
 
+                    foreach (Control control in panel3.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
 
                 }
 
@@ -115,7 +161,16 @@ namespace HelloWorldSolutionIMS
                         }
                     }
 
-
+                    foreach (Control control in panel3.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
 
                 }
 
@@ -172,7 +227,16 @@ namespace HelloWorldSolutionIMS
                         }
                     }
 
+                    foreach (System.Windows.Forms.Control control in panel3.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
 
+                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
 
 
                 }
@@ -214,12 +278,37 @@ namespace HelloWorldSolutionIMS
                     }
                 }
 
+                foreach (Control control in panel3.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel3.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
             }
             else
             {
                 PrepareMCQsEnglish();
             }
             ClearForm();
+
+            tabControl1.SelectedIndex = 1;
         }
 
         private void ClearForm()
@@ -446,6 +535,10 @@ namespace HelloWorldSolutionIMS
                 ClearForm();
                 MessageBox.Show("Evaluation added successfully!");
             }
+
+            ShowEvaluations(guna2DataGridView17, filenodgv, firstnamedgv, familynamedgv);
+            guna2DataGridView17.ClearSelection();
+            tabControl1.SelectedIndex = 1;
         }
 
         private void SaveAnswers(Guna2DataGridView table)
@@ -661,6 +754,63 @@ namespace HelloWorldSolutionIMS
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView17.SelectedRows.Count > 0)
+            {
+                string selectedfileno = guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString();
+                fileno.Text = selectedfileno;
+            }
+            tabControl1.SelectedIndex = 0;
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView17 != null)
+            {
+                if (guna2DataGridView17.Rows.Count > 0)
+                {
+                    if (guna2DataGridView17.SelectedRows.Count == 1)
+                    {
+                        string filenoToDelete = guna2DataGridView17.SelectedRows[0].Cells[0].Value.ToString();
+
+                        // Ask for confirmation
+                        DialogResult result = MessageBox.Show("Are you sure you want to delete evaluation of Customer with FILE NO: " + filenoToDelete + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("delete from Evaluation where FileNo = @CustomerID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@CustomerID", filenoToDelete);
+                                cmd.ExecuteNonQuery();
+                                MainClass.con.Close();
+                                ShowEvaluations(guna2DataGridView17, filenodgv, firstnamedgv, familynamedgv);
+                                guna2DataGridView17.ClearSelection();
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            ClearForm();
+            tabControl1.SelectedIndex = 0;
         }
     }
 }
