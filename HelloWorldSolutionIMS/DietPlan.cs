@@ -1952,43 +1952,43 @@ namespace HelloWorldSolutionIMS
                                     if (selectedchart == "guna2DataGridView13")
                                     {
                                         guna2DataGridView13.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                                        guna2DataGridView22.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView22.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView15")
                                     {
                                         guna2DataGridView15.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                                        guna2DataGridView21.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView21.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView16")
                                     {
                                         guna2DataGridView16.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                                        guna2DataGridView11.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView11.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView17")
                                     {
                                         guna2DataGridView17.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                                        guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView10.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView18")
                                     {
                                         guna2DataGridView18.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                                        guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView9.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView19")
                                     {
                                         guna2DataGridView19.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                                        guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView8.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
                                     else if (selectedchart == "guna2DataGridView20")
                                     {
                                         guna2DataGridView20.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
-                                        guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealAr"].ToString();
+                                        guna2DataGridView7.Rows[selectedRow].Cells[selectedColumn].Value = reader["MealEn"].ToString();
 
                                     }
 
