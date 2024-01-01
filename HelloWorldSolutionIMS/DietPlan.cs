@@ -880,6 +880,36 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
+                    foreach (System.Windows.Forms.Control control in panel42.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel40.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel23.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
                 }
 
                 reader.Close();
@@ -949,6 +979,38 @@ namespace HelloWorldSolutionIMS
                         }
                     }
 
+                    foreach (System.Windows.Forms.Control control in panel40.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+
+                    foreach (System.Windows.Forms.Control control in panel42.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+
+                    foreach (System.Windows.Forms.Control control in panel23.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
                 }
 
                 reader.Close();
@@ -1033,9 +1095,36 @@ namespace HelloWorldSolutionIMS
                             label.Font = font;
                         }
                     }
+                    foreach (System.Windows.Forms.Control control in panel42.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
 
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel40.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
 
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
+                    foreach (System.Windows.Forms.Control control in panel23.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
 
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
 
                 }
 
