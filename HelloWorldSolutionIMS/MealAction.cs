@@ -396,7 +396,7 @@ namespace HelloWorldSolutionIMS
         static int dropdown = 0;
         static string mealIDToEdit;
         static int counter = 0;
-        static int conn = 0;
+        public static int conn = 0;
         static string Catgry = "All";
         public class GroupnarContent
         {
