@@ -2182,8 +2182,7 @@ namespace HelloWorldSolutionIMS
             comboCell2.DisplayMember = "Name";
             comboCell2.ValueMember = "ID";
             comboCell2.Value = GetIngredientsEn()[0].ID;
-
-            // Create a DataGridViewTextBoxCell for the first cell (just an assumption for the text cell).
+            //comboCell2.AutoCompleteSource = AutoCompleteSource.ListItems;            // Create a DataGridViewTextBoxCell for the first cell (just an assumption for the text cell).
 
 
             // Add cells to the row
