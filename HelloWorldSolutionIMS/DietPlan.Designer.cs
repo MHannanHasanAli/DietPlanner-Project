@@ -4276,7 +4276,7 @@
             // guna2Button5
             // 
             this.guna2Button5.AutoRoundedCorners = true;
-            this.guna2Button5.BorderRadius = 6;
+            this.guna2Button5.BorderRadius = 11;
             this.guna2Button5.CausesValidation = false;
             this.guna2Button5.CheckedState.Parent = this.guna2Button5;
             this.guna2Button5.CustomImages.Parent = this.guna2Button5;
@@ -4291,7 +4291,7 @@
             // guna2Button6
             // 
             this.guna2Button6.AutoRoundedCorners = true;
-            this.guna2Button6.BorderRadius = 6;
+            this.guna2Button6.BorderRadius = 11;
             this.guna2Button6.CausesValidation = false;
             this.guna2Button6.CheckedState.Parent = this.guna2Button6;
             this.guna2Button6.CustomImages.Parent = this.guna2Button6;

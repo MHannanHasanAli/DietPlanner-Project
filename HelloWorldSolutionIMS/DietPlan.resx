@@ -4972,7 +4972,7 @@
     <value>0</value>
   </data>
   <data name="day6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 781</value>
+    <value>4, 802</value>
   </data>
   <data name="day6.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 149</value>
@@ -5026,7 +5026,7 @@
     <value>0</value>
   </data>
   <data name="day2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 198</value>
+    <value>4, 219</value>
   </data>
   <data name="day2.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 149</value>
@@ -5080,7 +5080,7 @@
     <value>0</value>
   </data>
   <data name="day5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 637</value>
+    <value>4, 658</value>
   </data>
   <data name="day5.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 148</value>
@@ -5134,7 +5134,7 @@
     <value>0</value>
   </data>
   <data name="day7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 928</value>
+    <value>3, 949</value>
   </data>
   <data name="day7.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 149</value>
@@ -5245,7 +5245,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="guna2DataGridView20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 925</value>
+    <value>63, 946</value>
   </data>
   <data name="guna2DataGridView20.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
@@ -5359,7 +5359,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="guna2DataGridView19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 781</value>
+    <value>63, 802</value>
   </data>
   <data name="guna2DataGridView19.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
@@ -5473,7 +5473,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="guna2DataGridView18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 637</value>
+    <value>63, 658</value>
   </data>
   <data name="guna2DataGridView18.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
@@ -5530,7 +5530,7 @@
     <value>0</value>
   </data>
   <data name="day4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 490</value>
+    <value>5, 511</value>
   </data>
   <data name="day4.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 150</value>
@@ -5641,7 +5641,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="guna2DataGridView17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 490</value>
+    <value>63, 511</value>
   </data>
   <data name="guna2DataGridView17.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
@@ -5698,7 +5698,7 @@
     <value>0</value>
   </data>
   <data name="day3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 344</value>
+    <value>3, 365</value>
   </data>
   <data name="day3.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 150</value>
@@ -5809,7 +5809,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="guna2DataGridView16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 344</value>
+    <value>63, 365</value>
   </data>
   <data name="guna2DataGridView16.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
@@ -5923,7 +5923,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="guna2DataGridView15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 198</value>
+    <value>63, 219</value>
   </data>
   <data name="guna2DataGridView15.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
@@ -5950,10 +5950,10 @@
     <value>Segoe UI, 11pt</value>
   </data>
   <data name="guna2Button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 4</value>
+    <value>174, 3</value>
   </data>
   <data name="guna2Button5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 15</value>
+    <value>164, 24</value>
   </data>
   <data name="guna2Button5.TabIndex" type="System.Int32, mscorlib">
     <value>346</value>
@@ -5980,7 +5980,7 @@
     <value>4, 4</value>
   </data>
   <data name="guna2Button6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 15</value>
+    <value>164, 24</value>
   </data>
   <data name="guna2Button6.TabIndex" type="System.Int32, mscorlib">
     <value>345</value>
@@ -6034,10 +6034,10 @@
     <value>0</value>
   </data>
   <data name="panel20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 23</value>
+    <value>3, 44</value>
   </data>
   <data name="panel20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 27</value>
+    <value>60, 27</value>
   </data>
   <data name="panel20.TabIndex" type="System.Int32, mscorlib">
     <value>339</value>
@@ -6088,7 +6088,7 @@
     <value>0</value>
   </data>
   <data name="day1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 46</value>
+    <value>4, 67</value>
   </data>
   <data name="day1.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 154</value>
@@ -6199,7 +6199,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="guna2DataGridView13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 50</value>
+    <value>63, 71</value>
   </data>
   <data name="guna2DataGridView13.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
@@ -6271,7 +6271,7 @@
     <value>6</value>
   </data>
   <data name="guna2DataGridView14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 23</value>
+    <value>63, 44</value>
   </data>
   <data name="guna2DataGridView14.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
@@ -9061,7 +9061,7 @@
     <value>NoControl</value>
   </data>
   <data name="label108.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 63</value>
+    <value>-3, 63</value>
   </data>
   <data name="label108.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 16</value>
@@ -9115,7 +9115,7 @@
     <value>NoControl</value>
   </data>
   <data name="label113.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-2, 65</value>
+    <value>-2, 62</value>
   </data>
   <data name="label113.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 16</value>
@@ -9211,13 +9211,13 @@
     <value>6</value>
   </data>
   <data name="guna2DataGridView21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 166</value>
+    <value>57, 166</value>
   </data>
   <data name="guna2DataGridView21.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="guna2DataGridView21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>985, 142</value>
+    <value>1263, 142</value>
   </data>
   <data name="guna2DataGridView21.TabIndex" type="System.Int32, mscorlib">
     <value>363</value>
@@ -9286,13 +9286,13 @@
     <value>6</value>
   </data>
   <data name="guna2DataGridView7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 879</value>
+    <value>57, 879</value>
   </data>
   <data name="guna2DataGridView7.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="guna2DataGridView7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>985, 142</value>
+    <value>1263, 142</value>
   </data>
   <data name="guna2DataGridView7.TabIndex" type="System.Int32, mscorlib">
     <value>373</value>
@@ -9319,7 +9319,7 @@
     <value>NoControl</value>
   </data>
   <data name="label109.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 63</value>
+    <value>-2, 59</value>
   </data>
   <data name="label109.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 16</value>
@@ -9415,13 +9415,13 @@
     <value>6</value>
   </data>
   <data name="guna2DataGridView8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 736</value>
+    <value>57, 736</value>
   </data>
   <data name="guna2DataGridView8.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="guna2DataGridView8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>985, 142</value>
+    <value>1263, 142</value>
   </data>
   <data name="guna2DataGridView8.TabIndex" type="System.Int32, mscorlib">
     <value>371</value>
@@ -9448,7 +9448,7 @@
     <value>NoControl</value>
   </data>
   <data name="label110.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 63</value>
+    <value>-1, 59</value>
   </data>
   <data name="label110.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 16</value>
@@ -9544,13 +9544,13 @@
     <value>6</value>
   </data>
   <data name="guna2DataGridView9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 594</value>
+    <value>57, 594</value>
   </data>
   <data name="guna2DataGridView9.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="guna2DataGridView9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>985, 142</value>
+    <value>1263, 142</value>
   </data>
   <data name="guna2DataGridView9.TabIndex" type="System.Int32, mscorlib">
     <value>369</value>
@@ -9577,7 +9577,7 @@
     <value>NoControl</value>
   </data>
   <data name="label111.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 60</value>
+    <value>-1, 54</value>
   </data>
   <data name="label111.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 16</value>
@@ -9673,13 +9673,13 @@
     <value>6</value>
   </data>
   <data name="guna2DataGridView10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 451</value>
+    <value>57, 451</value>
   </data>
   <data name="guna2DataGridView10.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="guna2DataGridView10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>985, 142</value>
+    <value>1263, 142</value>
   </data>
   <data name="guna2DataGridView10.TabIndex" type="System.Int32, mscorlib">
     <value>367</value>
@@ -9706,7 +9706,7 @@
     <value>NoControl</value>
   </data>
   <data name="label112.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 63</value>
+    <value>-3, 57</value>
   </data>
   <data name="label112.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 16</value>
@@ -9802,13 +9802,13 @@
     <value>6</value>
   </data>
   <data name="guna2DataGridView11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 308</value>
+    <value>57, 308</value>
   </data>
   <data name="guna2DataGridView11.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="guna2DataGridView11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>985, 142</value>
+    <value>1263, 142</value>
   </data>
   <data name="guna2DataGridView11.TabIndex" type="System.Int32, mscorlib">
     <value>365</value>
@@ -9889,7 +9889,7 @@
     <value>NoControl</value>
   </data>
   <data name="label115.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 66</value>
+    <value>-2, 65</value>
   </data>
   <data name="label115.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 16</value>
@@ -9985,13 +9985,13 @@
     <value>6</value>
   </data>
   <data name="guna2DataGridView22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 23</value>
+    <value>57, 23</value>
   </data>
   <data name="guna2DataGridView22.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="guna2DataGridView22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>985, 142</value>
+    <value>1263, 142</value>
   </data>
   <data name="guna2DataGridView22.TabIndex" type="System.Int32, mscorlib">
     <value>360</value>
@@ -10057,13 +10057,13 @@
     <value>6</value>
   </data>
   <data name="guna2DataGridView23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>51, 0</value>
+    <value>57, 0</value>
   </data>
   <data name="guna2DataGridView23.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="guna2DataGridView23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>985, 27</value>
+    <value>1263, 27</value>
   </data>
   <data name="guna2DataGridView23.TabIndex" type="System.Int32, mscorlib">
     <value>359</value>
