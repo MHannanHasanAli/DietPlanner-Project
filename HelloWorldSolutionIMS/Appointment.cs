@@ -736,9 +736,11 @@ namespace HelloWorldSolutionIMS
                                         SqlCommand cmd = new SqlCommand("INSERT INTO Appointment (Fileno, Firstname, Familyname, Mobileno, Date, Room, RowIndex, ColumnIndex, Slot) " +
                                        "VALUES (@Fileno, @Firstname, @Familyname, @Mobileno, @Date, @Room, @RowIndex, @ColumnIndex, @Slot)", MainClass.con);
 
+                                        string fname = firstname.Text;
+                                        string lname = familyname.Text;
                                         cmd.Parameters.AddWithValue("@Fileno", fileno.Text); // Assuming 'fileno' is a control related to 'Fileno' in the database
-                                        cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
-                                        cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
+                                        cmd.Parameters.AddWithValue("@Firstname", fname);
+                                        cmd.Parameters.AddWithValue("@Familyname", lname);
                                         cmd.Parameters.AddWithValue("@Mobileno", mobileno.Text);
                                         cmd.Parameters.AddWithValue("@Date", date.SelectionStart); // Assuming it's the current date
                                         cmd.Parameters.AddWithValue("@Room", selectedCellIndexesRoom1.RoomNo); // Assuming 'room' is a control related to 'Room' in the database

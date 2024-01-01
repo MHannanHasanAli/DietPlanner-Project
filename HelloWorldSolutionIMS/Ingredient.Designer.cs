@@ -673,6 +673,7 @@
             this.bbox.PlaceholderText = "";
             this.bbox.SelectedText = "";
             this.bbox.ShadowDecoration.Parent = this.bbox;
+            this.bbox.TextChanged += new System.EventHandler(this.DecimalLock);
             this.bbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // iodine
@@ -695,6 +696,7 @@
             this.iodine.PlaceholderText = "";
             this.iodine.SelectedText = "";
             this.iodine.ShadowDecoration.Parent = this.iodine;
+            this.iodine.TextChanged += new System.EventHandler(this.DecimalLock);
             this.iodine.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // iron
@@ -717,6 +719,7 @@
             this.iron.PlaceholderText = "";
             this.iron.SelectedText = "";
             this.iron.ShadowDecoration.Parent = this.iron;
+            this.iron.TextChanged += new System.EventHandler(this.DecimalLock);
             this.iron.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // magnesium
@@ -739,6 +742,7 @@
             this.magnesium.PlaceholderText = "";
             this.magnesium.SelectedText = "";
             this.magnesium.ShadowDecoration.Parent = this.magnesium;
+            this.magnesium.TextChanged += new System.EventHandler(this.DecimalLock);
             this.magnesium.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // label19
@@ -781,6 +785,7 @@
             this.phosphor.PlaceholderText = "";
             this.phosphor.SelectedText = "";
             this.phosphor.ShadowDecoration.Parent = this.phosphor;
+            this.phosphor.TextChanged += new System.EventHandler(this.DecimalLock);
             this.phosphor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // sodium
@@ -803,6 +808,7 @@
             this.sodium.PlaceholderText = "";
             this.sodium.SelectedText = "";
             this.sodium.ShadowDecoration.Parent = this.sodium;
+            this.sodium.TextChanged += new System.EventHandler(this.DecimalLock);
             this.sodium.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // carbohydrates
@@ -825,6 +831,7 @@
             this.carbohydrates.PlaceholderText = "";
             this.carbohydrates.SelectedText = "";
             this.carbohydrates.ShadowDecoration.Parent = this.carbohydrates;
+            this.carbohydrates.TextChanged += new System.EventHandler(this.DecimalLock);
             this.carbohydrates.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // protein
@@ -847,6 +854,7 @@
             this.protein.PlaceholderText = "";
             this.protein.SelectedText = "";
             this.protein.ShadowDecoration.Parent = this.protein;
+            this.protein.TextChanged += new System.EventHandler(this.DecimalLock);
             this.protein.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // label9
@@ -890,6 +898,7 @@
             this.abox.PlaceholderText = "";
             this.abox.SelectedText = "";
             this.abox.ShadowDecoration.Parent = this.abox;
+            this.abox.TextChanged += new System.EventHandler(this.DecimalLock);
             this.abox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // calcium
@@ -912,6 +921,7 @@
             this.calcium.PlaceholderText = "";
             this.calcium.SelectedText = "";
             this.calcium.ShadowDecoration.Parent = this.calcium;
+            this.calcium.TextChanged += new System.EventHandler(this.DecimalLock);
             this.calcium.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // sugar
@@ -934,6 +944,7 @@
             this.sugar.PlaceholderText = "";
             this.sugar.SelectedText = "";
             this.sugar.ShadowDecoration.Parent = this.sugar;
+            this.sugar.TextChanged += new System.EventHandler(this.DecimalLock);
             this.sugar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // water
@@ -956,6 +967,7 @@
             this.water.PlaceholderText = "";
             this.water.SelectedText = "";
             this.water.ShadowDecoration.Parent = this.water;
+            this.water.TextChanged += new System.EventHandler(this.DecimalLock);
             this.water.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // label4
@@ -998,6 +1010,7 @@
             this.potassium.PlaceholderText = "";
             this.potassium.SelectedText = "";
             this.potassium.ShadowDecoration.Parent = this.potassium;
+            this.potassium.TextChanged += new System.EventHandler(this.DecimalLock);
             this.potassium.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // fibers
@@ -1020,6 +1033,7 @@
             this.fibers.PlaceholderText = "";
             this.fibers.SelectedText = "";
             this.fibers.ShadowDecoration.Parent = this.fibers;
+            this.fibers.TextChanged += new System.EventHandler(this.DecimalLock);
             this.fibers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // fats
@@ -1042,6 +1056,7 @@
             this.fats.PlaceholderText = "";
             this.fats.SelectedText = "";
             this.fats.ShadowDecoration.Parent = this.fats;
+            this.fats.TextChanged += new System.EventHandler(this.DecimalLock);
             this.fats.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TwoDecimalLock);
             // 
             // calories

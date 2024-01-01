@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using static HelloWorldSolutionIMS.MealAction;
@@ -94,6 +95,49 @@ namespace HelloWorldSolutionIMS
         }
         static string ingredientIDToEdit;
         static int edit = 0;
+
+        private void DecimalLock(object sender, EventArgs e)
+        {
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+            string text = textBox.Text;
+
+            // Remove leading zeros
+            if (text.StartsWith("0") && text.Length > 1 && text[1] != '.')
+            {
+                textBox.Text = text.TrimStart('0');
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+
+            // Remove leading decimal point
+            if (text.Length > 1 && text.StartsWith("."))
+            {
+                textBox.Text = "0" + text;
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+
+            // Remove multiple consecutive decimal points
+            if (text.Contains(".."))
+            {
+                textBox.Text = text.Replace("..", ".");
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+
+            // Ensure only digits, one decimal point, and up to two decimal places are allowed
+            if (!IsValidInput(text))
+            {
+                // If the input is not valid, remove the last character
+                textBox.Text = text.Substring(0, text.Length - 1);
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+        private bool IsValidInput(string input)
+        {
+            // Implement your validation logic here
+            // Return true if the input is valid, false otherwise
+            // For example, allow only digits, one decimal point, and up to two decimal places
+            Regex regex = new Regex(@"^\d*\.?\d{0,2}$");
+            return regex.IsMatch(input);
+        }
         private void ShowIngredients(DataGridView dgv, DataGridViewColumn no, DataGridViewColumn fdc, DataGridViewColumn classification, DataGridViewColumn ingredientAr, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
         {
             if (languagestatus == 1)
@@ -1837,28 +1881,29 @@ namespace HelloWorldSolutionIMS
 
         private void calories_TextChanged(object sender, EventArgs e)
         {
-            //if (!string.IsNullOrWhiteSpace(calories.Text))
-            //{
-            //    int selectionStart = calories.SelectionStart;
-            //    int selectionLength = calories.SelectionLength;
+            Guna2TextBox textBox = (Guna2TextBox)sender;
+            string newText = GetFormattedText(text: textBox.Text);
 
-            //    decimal value;
-            //    if (decimal.TryParse(calories.Text, out value))
-            //    {
-            //        calories.Text = value.ToString("0.##");
+            // If the new text is different from the current text, update the TextBox
+            if (newText != textBox.Text)
+            {
+                textBox.Text = newText;
+                textBox.SelectionStart = newText.Length;
+            }
+        }
+        private string GetFormattedText(string text)
+        {
+            // Remove anything after the decimal point and any non-digit characters
+            string cleanText = Regex.Replace(text, @"[^\d.]", "");
 
-            //        // Adjust cursor position based on the original selection
-            //        if (selectionStart > calories.Text.Length)
-            //            selectionStart = calories.Text.Length;
+            // If a decimal point is present, keep the digits before it
+            int decimalIndex = cleanText.IndexOf('.');
+            if (decimalIndex != -1)
+            {
+                cleanText = cleanText.Substring(0, decimalIndex);
+            }
 
-            //        calories.SelectionStart = selectionStart + calories.Text.Length - calories.Text.IndexOf('.') - selectionLength;
-            //    }
-            //    else
-            //    {
-            //        // Handle invalid input if needed
-            //        calories.Text = "0";
-            //    }
-            //}
+            return cleanText;
         }
         private void TwoDecimalLock(object sender, KeyPressEventArgs e)
         {
