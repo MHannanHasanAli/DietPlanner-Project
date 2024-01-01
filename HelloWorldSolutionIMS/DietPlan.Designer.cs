@@ -3175,11 +3175,11 @@
             resources.ApplyResources(this.panel19, "panel19");
             this.panel19.BackColor = System.Drawing.Color.White;
             this.panel19.Controls.Add(this.dietplanreport);
+            this.panel19.Controls.Add(this.day6);
             this.panel19.Controls.Add(this.day2);
             this.panel19.Controls.Add(this.day5);
             this.panel19.Controls.Add(this.day7);
             this.panel19.Controls.Add(this.guna2DataGridView20);
-            this.panel19.Controls.Add(this.day6);
             this.panel19.Controls.Add(this.guna2DataGridView19);
             this.panel19.Controls.Add(this.guna2DataGridView18);
             this.panel19.Controls.Add(this.day4);

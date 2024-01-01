@@ -4938,6 +4938,60 @@
   <data name="&gt;&gt;dietplanreport.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="label106.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label106.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 7.8pt</value>
+  </data>
+  <data name="label106.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label106.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 63</value>
+  </data>
+  <data name="label106.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 16</value>
+  </data>
+  <data name="label106.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label106.Text" xml:space="preserve">
+    <value>6th Day</value>
+  </data>
+  <data name="&gt;&gt;label106.Name" xml:space="preserve">
+    <value>label106</value>
+  </data>
+  <data name="&gt;&gt;label106.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label106.Parent" xml:space="preserve">
+    <value>day6</value>
+  </data>
+  <data name="&gt;&gt;label106.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="day6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 781</value>
+  </data>
+  <data name="day6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 149</value>
+  </data>
+  <data name="day6.TabIndex" type="System.Int32, mscorlib">
+    <value>356</value>
+  </data>
+  <data name="&gt;&gt;day6.Name" xml:space="preserve">
+    <value>day6</value>
+  </data>
+  <data name="&gt;&gt;day6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;day6.Parent" xml:space="preserve">
+    <value>panel19</value>
+  </data>
+  <data name="&gt;&gt;day6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="label102.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -4990,7 +5044,7 @@
     <value>panel19</value>
   </data>
   <data name="&gt;&gt;day2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label105.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5026,7 +5080,7 @@
     <value>0</value>
   </data>
   <data name="day5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 721</value>
+    <value>2, 637</value>
   </data>
   <data name="day5.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 148</value>
@@ -5044,7 +5098,7 @@
     <value>panel19</value>
   </data>
   <data name="&gt;&gt;day5.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label107.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5080,10 +5134,10 @@
     <value>0</value>
   </data>
   <data name="day7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 1015</value>
+    <value>1, 928</value>
   </data>
   <data name="day7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 149</value>
+    <value>60, 149</value>
   </data>
   <data name="day7.TabIndex" type="System.Int32, mscorlib">
     <value>358</value>
@@ -5098,7 +5152,7 @@
     <value>panel19</value>
   </data>
   <data name="&gt;&gt;day7.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="guna2DataGridView20.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>27</value>
@@ -5191,7 +5245,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="guna2DataGridView20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 1015</value>
+    <value>61, 925</value>
   </data>
   <data name="guna2DataGridView20.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
@@ -5212,60 +5266,6 @@
     <value>panel19</value>
   </data>
   <data name="&gt;&gt;guna2DataGridView20.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label106.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label106.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 7.8pt</value>
-  </data>
-  <data name="label106.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label106.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 63</value>
-  </data>
-  <data name="label106.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 16</value>
-  </data>
-  <data name="label106.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label106.Text" xml:space="preserve">
-    <value>6th Day</value>
-  </data>
-  <data name="&gt;&gt;label106.Name" xml:space="preserve">
-    <value>label106</value>
-  </data>
-  <data name="&gt;&gt;label106.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label106.Parent" xml:space="preserve">
-    <value>day6</value>
-  </data>
-  <data name="&gt;&gt;label106.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="day6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 869</value>
-  </data>
-  <data name="day6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 149</value>
-  </data>
-  <data name="day6.TabIndex" type="System.Int32, mscorlib">
-    <value>356</value>
-  </data>
-  <data name="&gt;&gt;day6.Name" xml:space="preserve">
-    <value>day6</value>
-  </data>
-  <data name="&gt;&gt;day6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;day6.Parent" xml:space="preserve">
-    <value>panel19</value>
-  </data>
-  <data name="&gt;&gt;day6.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="guna2DataGridView19.ColumnHeadersHeight" type="System.Int32, mscorlib">
@@ -5359,7 +5359,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="guna2DataGridView19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 869</value>
+    <value>61, 781</value>
   </data>
   <data name="guna2DataGridView19.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
@@ -5473,13 +5473,13 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="guna2DataGridView18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 721</value>
+    <value>61, 637</value>
   </data>
   <data name="guna2DataGridView18.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>51</value>
   </data>
   <data name="guna2DataGridView18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1232, 148</value>
+    <value>1232, 152</value>
   </data>
   <data name="guna2DataGridView18.TabIndex" type="System.Int32, mscorlib">
     <value>353</value>
@@ -5533,7 +5533,7 @@
     <value>3, 490</value>
   </data>
   <data name="day4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 156</value>
+    <value>58, 150</value>
   </data>
   <data name="day4.TabIndex" type="System.Int32, mscorlib">
     <value>352</value>
@@ -5647,7 +5647,7 @@
     <value>51</value>
   </data>
   <data name="guna2DataGridView17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1232, 149</value>
+    <value>1232, 150</value>
   </data>
   <data name="guna2DataGridView17.TabIndex" type="System.Int32, mscorlib">
     <value>351</value>
@@ -6091,7 +6091,7 @@
     <value>2, 46</value>
   </data>
   <data name="day1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 154</value>
+    <value>59, 154</value>
   </data>
   <data name="day1.TabIndex" type="System.Int32, mscorlib">
     <value>338</value>
@@ -6277,7 +6277,7 @@
     <value>51</value>
   </data>
   <data name="guna2DataGridView14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1027, 27</value>
+    <value>1232, 27</value>
   </data>
   <data name="guna2DataGridView14.TabIndex" type="System.Int32, mscorlib">
     <value>336</value>
