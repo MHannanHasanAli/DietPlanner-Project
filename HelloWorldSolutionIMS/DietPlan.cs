@@ -11988,7 +11988,7 @@ namespace HelloWorldSolutionIMS
         }
         private async void generatereport_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 14;
+            tabControl1.SelectedIndex = 16;
 
         }
 
@@ -12738,7 +12738,7 @@ namespace HelloWorldSolutionIMS
 
         private void guna2Button9_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 12;
+            tabControl1.SelectedIndex = 16;
         }
 
         private void PrepareNPforReprt()
@@ -13077,7 +13077,7 @@ namespace HelloWorldSolutionIMS
         List<int> mealIdList = new List<int>();
         List<int> UniquemealIdList = new List<int>();
         static int ingredientflag = 1;
-        private void ShowMeals(string specificId, DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealar, DataGridViewColumn mealen, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
+        private void ShowMeals(string specificId, DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealar, DataGridViewColumn mealer, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
         {
 
             if (ingredientflag == 0)
@@ -13116,25 +13116,50 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
-
-                        SqlCommand cmd2 = new SqlCommand("SELECT ID, MealAr, MealEn, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID = @SpecificId", MainClass.con);
-                        cmd2.Parameters.AddWithValue("@SpecificId", item);
-
-                        SqlDataAdapter da = new SqlDataAdapter(cmd2);
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
-
-                        // Assuming dgv.DataSource is set to a DataTable
-                        DataTable dataTable = (DataTable)dgv.DataSource;
-
-                        foreach (DataRow row in dt.Rows)
+                        if (languagestatus == 1)
                         {
-                            // Add the row to the existing DataTable
-                            dataTable.Rows.Add(row.ItemArray);
-                        }
+                            MainClass.con.Open();
 
-                        MainClass.con.Close();
+                            SqlCommand cmd2 = new SqlCommand("SELECT ID, MealAr, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID = @SpecificId", MainClass.con);
+                            cmd2.Parameters.AddWithValue("@SpecificId", item);
+
+                            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            // Assuming dgv.DataSource is set to a DataTable
+                            DataTable dataTable = (DataTable)dgv.DataSource;
+
+                            foreach (DataRow row in dt.Rows)
+                            {
+                                // Add the row to the existing DataTable
+                                dataTable.Rows.Add(row.ItemArray);
+                            }
+
+                            MainClass.con.Close();
+                        }
+                        else
+                        {
+                            MainClass.con.Open();
+
+                            SqlCommand cmd2 = new SqlCommand("SELECT ID, MealEn, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID = @SpecificId", MainClass.con);
+                            cmd2.Parameters.AddWithValue("@SpecificId", item);
+
+                            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            // Assuming dgv.DataSource is set to a DataTable
+                            DataTable dataTable = (DataTable)dgv.DataSource;
+
+                            foreach (DataRow row in dt.Rows)
+                            {
+                                // Add the row to the existing DataTable
+                                dataTable.Rows.Add(row.ItemArray);
+                            }
+
+                            MainClass.con.Close();
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -13158,7 +13183,7 @@ namespace HelloWorldSolutionIMS
                 {
                     MainClass.con.Open();
 
-                    cmd = new SqlCommand("SELECT MealID FROM MealIngredients WHERE IngredientEn <> @SpecificId\r\n", MainClass.con);
+                    cmd = new SqlCommand("SELECT MealID FROM MealIngredients WHERE IngredientEn = @SpecificId", MainClass.con);
                     cmd.Parameters.AddWithValue("@SpecificId", specificId);
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -13185,25 +13210,50 @@ namespace HelloWorldSolutionIMS
                 {
                     try
                     {
-                        MainClass.con.Open();
-
-                        SqlCommand cmd2 = new SqlCommand("SELECT ID, MealAr, MealEn, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID = @SpecificId", MainClass.con);
-                        cmd2.Parameters.AddWithValue("@SpecificId", item);
-
-                        SqlDataAdapter da = new SqlDataAdapter(cmd2);
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
-
-                        // Assuming dgv.DataSource is set to a DataTable
-                        DataTable dataTable = (DataTable)dgv.DataSource;
-
-                        foreach (DataRow row in dt.Rows)
+                        if (languagestatus == 1)
                         {
-                            // Add the row to the existing DataTable
-                            dataTable.Rows.Add(row.ItemArray);
-                        }
+                            MainClass.con.Open();
 
-                        MainClass.con.Close();
+                            SqlCommand cmd2 = new SqlCommand("SELECT ID, MealAr, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID <> @SpecificId", MainClass.con);
+                            cmd2.Parameters.AddWithValue("@SpecificId", item);
+
+                            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            // Assuming dgv.DataSource is set to a DataTable
+                            DataTable dataTable = (DataTable)dgv.DataSource;
+
+                            foreach (DataRow row in dt.Rows)
+                            {
+                                // Add the row to the existing DataTable
+                                dataTable.Rows.Add(row.ItemArray);
+                            }
+
+                            MainClass.con.Close();
+                        }
+                        else
+                        {
+                            MainClass.con.Open();
+
+                            SqlCommand cmd2 = new SqlCommand("SELECT ID, MealEn, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID <> @SpecificId", MainClass.con);
+                            cmd2.Parameters.AddWithValue("@SpecificId", item);
+
+                            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            // Assuming dgv.DataSource is set to a DataTable
+                            DataTable dataTable = (DataTable)dgv.DataSource;
+
+                            foreach (DataRow row in dt.Rows)
+                            {
+                                // Add the row to the existing DataTable
+                                dataTable.Rows.Add(row.ItemArray);
+                            }
+
+                            MainClass.con.Close();
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -13215,6 +13265,7 @@ namespace HelloWorldSolutionIMS
             }
 
         }
+
 
         private void ingredienten_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -13264,6 +13315,21 @@ namespace HelloWorldSolutionIMS
             UniquemealIdList.Clear();
             HideMeals(selectedValue, guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
 
+        }
+
+        private void guna2Button14_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 12;
+        }
+
+        private void guna2Button15_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 14;
+            lab1.Text = input1.Text;
+            lab2.Text = input2.Text;
+            lab3.Text = input3.Text;
+            lab4.Text = input4.Text;
+            lab5.Text = input5.Text;
         }
     }
 

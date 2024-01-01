@@ -1083,10 +1083,13 @@ namespace HelloWorldSolutionIMS
                         conn = 1;
                     }
 
-                    SqlCommand cmd = new SqlCommand("SELECT ID, MealAr, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
-                        " WHERE CATEGORY LIKE @type", MainClass.con);
+                    SqlCommand cmd = new SqlCommand("SELECT ID, MealAr, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, PROTEIN FROM Meal " +
+                                 "WHERE (CATEGORY LIKE @type OR CATEGORY = @typeall) OR CATEGORY = 'All'", MainClass.con);
 
                     cmd.Parameters.AddWithValue("@type", "%" + category + "%");
+                    cmd.Parameters.AddWithValue("@typeall", "All");
+
+
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -1131,10 +1134,11 @@ namespace HelloWorldSolutionIMS
                         conn = 1;
                     }
 
-                    SqlCommand cmd = new SqlCommand("SELECT ID,MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM,PROTEIN FROM Meal " +
-                        " WHERE CATEGORY LIKE @type", MainClass.con);
+                    SqlCommand cmd = new SqlCommand("SELECT ID, MealEn, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, PROTEIN FROM Meal " +
+                                 "WHERE (CATEGORY LIKE @type OR CATEGORY = @typeall) OR CATEGORY = 'All'", MainClass.con);
 
                     cmd.Parameters.AddWithValue("@type", "%" + category + "%");
+                    cmd.Parameters.AddWithValue("@typeall", "All");
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -1731,6 +1735,34 @@ namespace HelloWorldSolutionIMS
                 }
 
             }
+
+            mealar.Text = "";
+            mealen.Text = "";
+            groupnar.Text = "";
+            groupnen.Text = "";
+            groupcar.Text = "";
+            groupcen.Text = "";
+            classification.SelectedItem = null;
+            //category.SelectedItem = null;
+            calories.Text = "";
+            fats.Text = "";
+            fibers.Text = "";
+            potassium.Text = "";
+            water.Text = "";
+            sugar.Text = "";
+            calcium.Text = "";
+            abox.Text = "";
+            protein.Text = "";
+            carbohydrates.Text = "";
+            sodium.Text = "";
+            phosphor.Text = "";
+            magnesium.Text = "";
+            iron.Text = "";
+            iodine.Text = "";
+            bbox.Text = "";
+            notes.Text = "";
+            preparation.Text = "";
+            ingredientflag = 0;
         }
         List<int> idlist = new List<int>();
         private List<int> GetIngredientsForMeal()
@@ -2934,6 +2966,37 @@ namespace HelloWorldSolutionIMS
         private void Meals_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
+            groupcars.SelectedItem = null;
+            groupcens.SelectedItem = null;
+            groupnars.SelectedItem = null;
+            groupnens.SelectedItem = null;
+            ShowMeals(guna2DataGridView2, iddgv, mealardgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
+            mealar.Text = "";
+            mealen.Text = "";
+            groupnar.Text = "";
+            groupnen.Text = "";
+            groupcar.Text = "";
+            groupcen.Text = "";
+            classification.SelectedItem = null;
+            //category.SelectedItem = null;
+            calories.Text = "";
+            fats.Text = "";
+            fibers.Text = "";
+            potassium.Text = "";
+            water.Text = "";
+            sugar.Text = "";
+            calcium.Text = "";
+            abox.Text = "";
+            protein.Text = "";
+            carbohydrates.Text = "";
+            sodium.Text = "";
+            phosphor.Text = "";
+            magnesium.Text = "";
+            iron.Text = "";
+            iodine.Text = "";
+            bbox.Text = "";
+            notes.Text = "";
+            preparation.Text = "";
         }
         private void search_Click(object sender, EventArgs e)
         {
@@ -5186,6 +5249,242 @@ namespace HelloWorldSolutionIMS
             }
 
             return cleanText;
+        }
+
+        List<int> mealIdList = new List<int>();
+        List<int> UniquemealIdList = new List<int>();
+        static int ingredientflag = 1;
+        private void ShowMeals(string specificId, DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealar, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
+        {
+
+            if (ingredientflag == 0)
+            {
+
+
+                SqlCommand cmd;
+                try
+                {
+                    MainClass.con.Open();
+
+                    cmd = new SqlCommand("SELECT MealID FROM MealIngredients WHERE IngredientEn = @SpecificId", MainClass.con);
+                    cmd.Parameters.AddWithValue("@SpecificId", specificId);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (int.TryParse(row["MealID"].ToString(), out int mealId))
+                        {
+                            mealIdList.Add(mealId);
+                        }
+                    }
+                    MainClass.con.Close();
+
+                    UniquemealIdList = mealIdList.Distinct().ToList();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+                foreach (var item in UniquemealIdList)
+                {
+                    try
+                    {
+                        if (languagestatus == 1)
+                        {
+                            MainClass.con.Open();
+
+                            SqlCommand cmd2 = new SqlCommand("SELECT ID, MealAr, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID = @SpecificId", MainClass.con);
+                            cmd2.Parameters.AddWithValue("@SpecificId", item);
+
+                            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            // Assuming dgv.DataSource is set to a DataTable
+                            DataTable dataTable = (DataTable)dgv.DataSource;
+
+                            foreach (DataRow row in dt.Rows)
+                            {
+                                // Add the row to the existing DataTable
+                                dataTable.Rows.Add(row.ItemArray);
+                            }
+
+                            MainClass.con.Close();
+                        }
+                        else
+                        {
+                            MainClass.con.Open();
+
+                            SqlCommand cmd2 = new SqlCommand("SELECT ID, MealEn, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID = @SpecificId", MainClass.con);
+                            cmd2.Parameters.AddWithValue("@SpecificId", item);
+
+                            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            // Assuming dgv.DataSource is set to a DataTable
+                            DataTable dataTable = (DataTable)dgv.DataSource;
+
+                            foreach (DataRow row in dt.Rows)
+                            {
+                                // Add the row to the existing DataTable
+                                dataTable.Rows.Add(row.ItemArray);
+                            }
+
+                            MainClass.con.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+            }
+
+        }
+        private void HideMeals(string specificId, DataGridView dgv, DataGridViewColumn no, DataGridViewColumn mealar, DataGridViewColumn calories, DataGridViewColumn protein, DataGridViewColumn fats, DataGridViewColumn carbohydrates, DataGridViewColumn fibers, DataGridViewColumn calcium, DataGridViewColumn sodium)
+        {
+
+            if (ingredientflag == 0)
+            {
+
+
+                SqlCommand cmd;
+                try
+                {
+                    MainClass.con.Open();
+
+                    cmd = new SqlCommand("SELECT MealID FROM MealIngredients WHERE IngredientEn = @SpecificId", MainClass.con);
+                    cmd.Parameters.AddWithValue("@SpecificId", specificId);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (int.TryParse(row["MealID"].ToString(), out int mealId))
+                        {
+                            mealIdList.Add(mealId);
+                        }
+                    }
+                    MainClass.con.Close();
+
+                    UniquemealIdList = mealIdList.Distinct().ToList();
+                }
+                catch (Exception ex)
+                {
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
+                }
+                foreach (var item in UniquemealIdList)
+                {
+                    try
+                    {
+                        if (languagestatus == 1)
+                        {
+                            MainClass.con.Open();
+
+                            SqlCommand cmd2 = new SqlCommand("SELECT ID, MealAr, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID <> @SpecificId", MainClass.con);
+                            cmd2.Parameters.AddWithValue("@SpecificId", item);
+
+                            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            // Assuming dgv.DataSource is set to a DataTable
+                            DataTable dataTable = (DataTable)dgv.DataSource;
+
+                            foreach (DataRow row in dt.Rows)
+                            {
+                                // Add the row to the existing DataTable
+                                dataTable.Rows.Add(row.ItemArray);
+                            }
+
+                            MainClass.con.Close();
+                        }
+                        else
+                        {
+                            MainClass.con.Open();
+
+                            SqlCommand cmd2 = new SqlCommand("SELECT ID, MealEn, PROTEIN, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM FROM Meal WHERE ID <> @SpecificId", MainClass.con);
+                            cmd2.Parameters.AddWithValue("@SpecificId", item);
+
+                            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            // Assuming dgv.DataSource is set to a DataTable
+                            DataTable dataTable = (DataTable)dgv.DataSource;
+
+                            foreach (DataRow row in dt.Rows)
+                            {
+                                // Add the row to the existing DataTable
+                                dataTable.Rows.Add(row.ItemArray);
+                            }
+
+                            MainClass.con.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+            }
+
+        }
+        private void ingredienten_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dataTable = (DataTable)guna2DataGridView2.DataSource;
+            if (dataTable != null)
+            {
+                dataTable.Rows.Clear();
+                // Refresh the DataGridView to reflect the changes
+                guna2DataGridView2.Refresh();
+            }
+            mealIdList.Clear();
+            UniquemealIdList.Clear();
+        }
+
+        private void guna2Button2_Click_1(object sender, EventArgs e)
+        {
+            MealAction.IngredientList selectedIngredient = (MealAction.IngredientList)ingredienten.SelectedItem;
+            string selectedValue = selectedIngredient.ID.ToString();
+            DataTable dataTable = (DataTable)guna2DataGridView2.DataSource;
+            if (dataTable != null)
+            {
+                dataTable.Rows.Clear();
+                guna2DataGridView2.Refresh();
+            }
+            mealIdList.Clear();
+            UniquemealIdList.Clear();
+            ShowMeals(selectedValue, guna2DataGridView2, iddgv, mealardgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
+        }
+
+        private void guna2Button4_Click_1(object sender, EventArgs e)
+        {
+            MealAction.IngredientList selectedIngredient = (MealAction.IngredientList)ingredienten.SelectedItem;
+            string selectedValue = selectedIngredient.ID.ToString();
+            DataTable dataTable = (DataTable)guna2DataGridView2.DataSource;
+            if (dataTable != null)
+            {
+                dataTable.Rows.Clear();
+                // Refresh the DataGridView to reflect the changes
+                guna2DataGridView2.Refresh();
+            }
+            mealIdList.Clear();
+            UniquemealIdList.Clear();
+            HideMeals(selectedValue, guna2DataGridView2, iddgv, mealardgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
+
         }
     }
 
