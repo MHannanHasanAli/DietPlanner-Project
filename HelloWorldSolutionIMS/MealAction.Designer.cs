@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealAction));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -103,6 +103,7 @@
             this.agnar = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.snackbtn = new Guna.UI2.WinForms.Guna2Button();
             this.functionalfoodbtn = new Guna.UI2.WinForms.Guna2Button();
             this.dinnerbtn = new Guna.UI2.WinForms.Guna2Button();
@@ -120,6 +121,26 @@
             this.SaveBTN = new Guna.UI2.WinForms.Guna2Button();
             this.save = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.unitdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ingredientardgv = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ingredientendgv = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.quantitydgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caloriedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proteindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fatsdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carbohydratesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calciumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fiberdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sodiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.potassiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phosphordgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.waterdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.magnesiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sugerdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.irondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iodinedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddIngredient = new Guna.UI2.WinForms.Guna2Button();
             this.preparation = new System.Windows.Forms.RichTextBox();
             this.notes = new System.Windows.Forms.RichTextBox();
@@ -199,27 +220,6 @@
             this.gcid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ingredientardgv = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ingredientendgv = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.quantitydgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.caloriedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proteindgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fatsdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.carbohydratesdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calciumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fiberdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sodiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.potassiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phosphordgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.waterdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.magnesiumdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sugerdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.irondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iodinedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -634,21 +634,21 @@
             // 
             this.guna2DataGridView2.AllowUserToAddRows = false;
             this.guna2DataGridView2.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             resources.ApplyResources(this.guna2DataGridView2, "guna2DataGridView2");
             this.guna2DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddgv,
@@ -660,24 +660,24 @@
             this.calciummaindgv,
             this.fibermaindgv,
             this.sodiummaindgv});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView2.EnableHeadersVisualStyles = false;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.ReadOnly = true;
             this.guna2DataGridView2.RowHeadersVisible = false;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView2.RowTemplate.Height = 24;
             this.guna2DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView2.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
@@ -1011,6 +1011,14 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items")});
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            // 
             // snackbtn
             // 
             this.snackbtn.AutoRoundedCorners = true;
@@ -1253,21 +1261,21 @@
             // guna2DataGridView1
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.unitdgv,
@@ -1290,23 +1298,23 @@
             this.iodinedgv,
             this.adgv,
             this.bdgv});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.guna2DataGridView1.RowTemplate.Height = 24;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
@@ -1333,6 +1341,147 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellValueChanged);
             this.guna2DataGridView1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.guna2DataGridView1_EditingControlShowing);
+            // 
+            // unitdgv
+            // 
+            this.unitdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.unitdgv.FillWeight = 50F;
+            this.unitdgv.Frozen = true;
+            resources.ApplyResources(this.unitdgv, "unitdgv");
+            this.unitdgv.Name = "unitdgv";
+            this.unitdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ingredientardgv
+            // 
+            this.ingredientardgv.FillWeight = 200F;
+            this.ingredientardgv.Frozen = true;
+            resources.ApplyResources(this.ingredientardgv, "ingredientardgv");
+            this.ingredientardgv.Name = "ingredientardgv";
+            this.ingredientardgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ingredientendgv
+            // 
+            this.ingredientendgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ingredientendgv.FillWeight = 200F;
+            this.ingredientendgv.Frozen = true;
+            resources.ApplyResources(this.ingredientendgv, "ingredientendgv");
+            this.ingredientendgv.MaxDropDownItems = 100;
+            this.ingredientendgv.Name = "ingredientendgv";
+            this.ingredientendgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ingredientendgv.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // quantitydgv
+            // 
+            this.quantitydgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.quantitydgv.FillWeight = 20F;
+            this.quantitydgv.Frozen = true;
+            resources.ApplyResources(this.quantitydgv, "quantitydgv");
+            this.quantitydgv.Name = "quantitydgv";
+            this.quantitydgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // caloriedgv
+            // 
+            this.caloriedgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.caloriedgv.FillWeight = 50F;
+            this.caloriedgv.Frozen = true;
+            resources.ApplyResources(this.caloriedgv, "caloriedgv");
+            this.caloriedgv.Name = "caloriedgv";
+            this.caloriedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // proteindgv
+            // 
+            this.proteindgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.proteindgv.FillWeight = 50F;
+            this.proteindgv.Frozen = true;
+            resources.ApplyResources(this.proteindgv, "proteindgv");
+            this.proteindgv.Name = "proteindgv";
+            this.proteindgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // fatsdgv
+            // 
+            this.fatsdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.fatsdgv.FillWeight = 50F;
+            this.fatsdgv.Frozen = true;
+            resources.ApplyResources(this.fatsdgv, "fatsdgv");
+            this.fatsdgv.Name = "fatsdgv";
+            this.fatsdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // carbohydratesdgv
+            // 
+            this.carbohydratesdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.carbohydratesdgv.FillWeight = 50F;
+            this.carbohydratesdgv.Frozen = true;
+            resources.ApplyResources(this.carbohydratesdgv, "carbohydratesdgv");
+            this.carbohydratesdgv.Name = "carbohydratesdgv";
+            this.carbohydratesdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // calciumdgv
+            // 
+            this.calciumdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.calciumdgv.Frozen = true;
+            resources.ApplyResources(this.calciumdgv, "calciumdgv");
+            this.calciumdgv.Name = "calciumdgv";
+            // 
+            // fiberdgv
+            // 
+            this.fiberdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.fiberdgv.Frozen = true;
+            resources.ApplyResources(this.fiberdgv, "fiberdgv");
+            this.fiberdgv.Name = "fiberdgv";
+            // 
+            // sodiumdgv
+            // 
+            this.sodiumdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.sodiumdgv.Frozen = true;
+            resources.ApplyResources(this.sodiumdgv, "sodiumdgv");
+            this.sodiumdgv.Name = "sodiumdgv";
+            // 
+            // potassiumdgv
+            // 
+            this.potassiumdgv.Frozen = true;
+            resources.ApplyResources(this.potassiumdgv, "potassiumdgv");
+            this.potassiumdgv.Name = "potassiumdgv";
+            // 
+            // phosphordgv
+            // 
+            this.phosphordgv.Frozen = true;
+            resources.ApplyResources(this.phosphordgv, "phosphordgv");
+            this.phosphordgv.Name = "phosphordgv";
+            // 
+            // waterdgv
+            // 
+            resources.ApplyResources(this.waterdgv, "waterdgv");
+            this.waterdgv.Name = "waterdgv";
+            // 
+            // magnesiumdgv
+            // 
+            resources.ApplyResources(this.magnesiumdgv, "magnesiumdgv");
+            this.magnesiumdgv.Name = "magnesiumdgv";
+            // 
+            // sugerdgv
+            // 
+            resources.ApplyResources(this.sugerdgv, "sugerdgv");
+            this.sugerdgv.Name = "sugerdgv";
+            // 
+            // irondgv
+            // 
+            resources.ApplyResources(this.irondgv, "irondgv");
+            this.irondgv.Name = "irondgv";
+            // 
+            // iodinedgv
+            // 
+            resources.ApplyResources(this.iodinedgv, "iodinedgv");
+            this.iodinedgv.Name = "iodinedgv";
+            // 
+            // adgv
+            // 
+            resources.ApplyResources(this.adgv, "adgv");
+            this.adgv.Name = "adgv";
+            // 
+            // bdgv
+            // 
+            resources.ApplyResources(this.bdgv, "bdgv");
+            this.bdgv.Name = "bdgv";
             // 
             // AddIngredient
             // 
@@ -1376,16 +1525,16 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             resources.ApplyResources(this.chart1, "chart1");
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             // 
             // mealar
             // 
@@ -2002,44 +2151,44 @@
             // 
             this.guna2DataGridView3.AllowUserToAddRows = false;
             this.guna2DataGridView3.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.guna2DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView3.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             resources.ApplyResources(this.guna2DataGridView3, "guna2DataGridView3");
             this.guna2DataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idgn,
             this.gnnar,
             this.gnnen});
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView3.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView3.DefaultCellStyle = dataGridViewCellStyle11;
             this.guna2DataGridView3.EnableHeadersVisualStyles = false;
             this.guna2DataGridView3.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView3.Name = "guna2DataGridView3";
             this.guna2DataGridView3.ReadOnly = true;
             this.guna2DataGridView3.RowHeadersVisible = false;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.guna2DataGridView3.RowTemplate.Height = 24;
             this.guna2DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView3.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
@@ -2259,44 +2408,44 @@
             // 
             this.guna2DataGridView4.AllowUserToAddRows = false;
             this.guna2DataGridView4.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView4.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.guna2DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView4.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView4.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             resources.ApplyResources(this.guna2DataGridView4, "guna2DataGridView4");
             this.guna2DataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.gcid,
             this.gcnar,
             this.gcnen});
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView4.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView4.DefaultCellStyle = dataGridViewCellStyle15;
             this.guna2DataGridView4.EnableHeadersVisualStyles = false;
             this.guna2DataGridView4.GridColor = System.Drawing.Color.Black;
             this.guna2DataGridView4.Name = "guna2DataGridView4";
             this.guna2DataGridView4.ReadOnly = true;
             this.guna2DataGridView4.RowHeadersVisible = false;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
-            this.guna2DataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.guna2DataGridView4.RowTemplate.Height = 24;
             this.guna2DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView4.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
@@ -2342,155 +2491,6 @@
             this.gcnen.Name = "gcnen";
             this.gcnen.ReadOnly = true;
             this.gcnen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // unitdgv
-            // 
-            this.unitdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.unitdgv.FillWeight = 50F;
-            this.unitdgv.Frozen = true;
-            resources.ApplyResources(this.unitdgv, "unitdgv");
-            this.unitdgv.Name = "unitdgv";
-            this.unitdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ingredientardgv
-            // 
-            this.ingredientardgv.FillWeight = 200F;
-            this.ingredientardgv.Frozen = true;
-            resources.ApplyResources(this.ingredientardgv, "ingredientardgv");
-            this.ingredientardgv.Name = "ingredientardgv";
-            this.ingredientardgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ingredientendgv
-            // 
-            this.ingredientendgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ingredientendgv.FillWeight = 200F;
-            this.ingredientendgv.Frozen = true;
-            resources.ApplyResources(this.ingredientendgv, "ingredientendgv");
-            this.ingredientendgv.MaxDropDownItems = 100;
-            this.ingredientendgv.Name = "ingredientendgv";
-            this.ingredientendgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ingredientendgv.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // quantitydgv
-            // 
-            this.quantitydgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.quantitydgv.FillWeight = 20F;
-            this.quantitydgv.Frozen = true;
-            resources.ApplyResources(this.quantitydgv, "quantitydgv");
-            this.quantitydgv.Name = "quantitydgv";
-            this.quantitydgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // caloriedgv
-            // 
-            this.caloriedgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.caloriedgv.FillWeight = 50F;
-            this.caloriedgv.Frozen = true;
-            resources.ApplyResources(this.caloriedgv, "caloriedgv");
-            this.caloriedgv.Name = "caloriedgv";
-            this.caloriedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // proteindgv
-            // 
-            this.proteindgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.proteindgv.FillWeight = 50F;
-            this.proteindgv.Frozen = true;
-            resources.ApplyResources(this.proteindgv, "proteindgv");
-            this.proteindgv.Name = "proteindgv";
-            this.proteindgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // fatsdgv
-            // 
-            this.fatsdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.fatsdgv.FillWeight = 50F;
-            this.fatsdgv.Frozen = true;
-            resources.ApplyResources(this.fatsdgv, "fatsdgv");
-            this.fatsdgv.Name = "fatsdgv";
-            this.fatsdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // carbohydratesdgv
-            // 
-            this.carbohydratesdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.carbohydratesdgv.FillWeight = 50F;
-            this.carbohydratesdgv.Frozen = true;
-            resources.ApplyResources(this.carbohydratesdgv, "carbohydratesdgv");
-            this.carbohydratesdgv.Name = "carbohydratesdgv";
-            this.carbohydratesdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // calciumdgv
-            // 
-            this.calciumdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.calciumdgv.Frozen = true;
-            resources.ApplyResources(this.calciumdgv, "calciumdgv");
-            this.calciumdgv.Name = "calciumdgv";
-            // 
-            // fiberdgv
-            // 
-            this.fiberdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.fiberdgv.Frozen = true;
-            resources.ApplyResources(this.fiberdgv, "fiberdgv");
-            this.fiberdgv.Name = "fiberdgv";
-            // 
-            // sodiumdgv
-            // 
-            this.sodiumdgv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.sodiumdgv.Frozen = true;
-            resources.ApplyResources(this.sodiumdgv, "sodiumdgv");
-            this.sodiumdgv.Name = "sodiumdgv";
-            // 
-            // potassiumdgv
-            // 
-            this.potassiumdgv.Frozen = true;
-            resources.ApplyResources(this.potassiumdgv, "potassiumdgv");
-            this.potassiumdgv.Name = "potassiumdgv";
-            // 
-            // phosphordgv
-            // 
-            this.phosphordgv.Frozen = true;
-            resources.ApplyResources(this.phosphordgv, "phosphordgv");
-            this.phosphordgv.Name = "phosphordgv";
-            // 
-            // waterdgv
-            // 
-            resources.ApplyResources(this.waterdgv, "waterdgv");
-            this.waterdgv.Name = "waterdgv";
-            // 
-            // magnesiumdgv
-            // 
-            resources.ApplyResources(this.magnesiumdgv, "magnesiumdgv");
-            this.magnesiumdgv.Name = "magnesiumdgv";
-            // 
-            // sugerdgv
-            // 
-            resources.ApplyResources(this.sugerdgv, "sugerdgv");
-            this.sugerdgv.Name = "sugerdgv";
-            // 
-            // irondgv
-            // 
-            resources.ApplyResources(this.irondgv, "irondgv");
-            this.irondgv.Name = "irondgv";
-            // 
-            // iodinedgv
-            // 
-            resources.ApplyResources(this.iodinedgv, "iodinedgv");
-            this.iodinedgv.Name = "iodinedgv";
-            // 
-            // adgv
-            // 
-            resources.ApplyResources(this.adgv, "adgv");
-            this.adgv.Name = "adgv";
-            // 
-            // bdgv
-            // 
-            resources.ApplyResources(this.bdgv, "bdgv");
-            this.bdgv.Name = "bdgv";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items")});
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
             // 
             // MealAction
             // 
