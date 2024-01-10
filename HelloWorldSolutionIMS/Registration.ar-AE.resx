@@ -307,15 +307,6 @@
   <data name="exportbc.Text" xml:space="preserve">
     <value>يصدّر</value>
   </data>
-  <data name="label32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>929, 383</value>
-  </data>
-  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 16</value>
-  </data>
-  <data name="label32.Text" xml:space="preserve">
-    <value>الاستبيان الصحي</value>
-  </data>
   <data name="Close.Text" xml:space="preserve">
     <value>يغلق</value>
   </data>

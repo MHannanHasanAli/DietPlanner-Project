@@ -161,7 +161,6 @@
             this.label55 = new System.Windows.Forms.Label();
             this.label56 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.Close = new Guna.UI2.WinForms.Guna2Button();
             this.EditBMI = new Guna.UI2.WinForms.Guna2Button();
             this.AddBMI = new Guna.UI2.WinForms.Guna2Button();
@@ -1003,7 +1002,6 @@
             this.panel2.Controls.Add(this.label55);
             this.panel2.Controls.Add(this.label56);
             this.panel2.Controls.Add(this.label54);
-            this.panel2.Controls.Add(this.label32);
             this.panel2.Controls.Add(this.Close);
             this.panel2.Controls.Add(this.EditBMI);
             this.panel2.Controls.Add(this.AddBMI);
@@ -1088,11 +1086,6 @@
             // 
             resources.ApplyResources(this.label54, "label54");
             this.label54.Name = "label54";
-            // 
-            // label32
-            // 
-            resources.ApplyResources(this.label32, "label32");
-            this.label32.Name = "label32";
             // 
             // Close
             // 
@@ -3985,7 +3978,6 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label32;
         private Guna.UI2.WinForms.Guna2Button exportbc;
         private Guna.UI2.WinForms.Guna2Button ExportMH;
     }
