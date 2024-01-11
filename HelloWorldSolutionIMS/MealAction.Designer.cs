@@ -103,7 +103,7 @@
             this.agnar = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ingredientsearch = new System.Windows.Forms.ComboBox();
             this.snackbtn = new Guna.UI2.WinForms.Guna2Button();
             this.functionalfoodbtn = new Guna.UI2.WinForms.Guna2Button();
             this.dinnerbtn = new Guna.UI2.WinForms.Guna2Button();
@@ -294,6 +294,7 @@
             this.panel6.Controls.Add(this.label28);
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // guna2Button4
             // 
@@ -941,7 +942,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.ingredientsearch);
             this.panel1.Controls.Add(this.snackbtn);
             this.panel1.Controls.Add(this.functionalfoodbtn);
             this.panel1.Controls.Add(this.dinnerbtn);
@@ -1011,13 +1012,15 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // comboBox1
+            // ingredientsearch
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items")});
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
+            this.ingredientsearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ingredientsearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ingredientsearch.FormattingEnabled = true;
+            this.ingredientsearch.Items.AddRange(new object[] {
+            resources.GetString("ingredientsearch.Items")});
+            resources.ApplyResources(this.ingredientsearch, "ingredientsearch");
+            this.ingredientsearch.Name = "ingredientsearch";
             // 
             // snackbtn
             // 
@@ -2701,6 +2704,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iodinedgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn adgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn bdgv;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ingredientsearch;
     }
 }

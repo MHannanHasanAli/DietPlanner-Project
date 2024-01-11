@@ -1416,31 +1416,28 @@
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="comboBox1.Items" xml:space="preserve">
+  <data name="ingredientsearch.Items" xml:space="preserve">
     <value>Ingredients List</value>
   </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ingredientsearch.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 567</value>
   </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 24</value>
+  <data name="ingredientsearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>429, 24</value>
   </data>
-  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="ingredientsearch.TabIndex" type="System.Int32, mscorlib">
     <value>284</value>
   </data>
-  <data name="comboBox1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;ingredientsearch.Name" xml:space="preserve">
+    <value>ingredientsearch</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
-    <value>comboBox1</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;ingredientsearch.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ingredientsearch.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ingredientsearch.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="snackbtn.Font" type="System.Drawing.Font, System.Drawing">

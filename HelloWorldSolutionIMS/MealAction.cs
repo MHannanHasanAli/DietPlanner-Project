@@ -2184,6 +2184,13 @@ namespace HelloWorldSolutionIMS
             comboCell2.Value = GetIngredientsEn()[0].ID;
             //comboCell2.AutoCompleteSource = AutoCompleteSource.ListItems;            // Create a DataGridViewTextBoxCell for the first cell (just an assumption for the text cell).
 
+            int ingredientid;
+            if (ingredientsearch.SelectedItem != null)
+            {
+                ingredientid = int.Parse(ingredientsearch.SelectedValue.ToString());
+                comboCell1.Value = ingredientid;
+                comboCell2.Value = ingredientid;
+            }
 
             // Add cells to the row
 
@@ -2800,6 +2807,20 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView1.Rows.Clear();
             UpdateGroupsN();
             UpdateGroupsC();
+            if (languagestatus == 1)
+            {
+                ingredientsearch.DataSource = GetIngredients();
+                ingredientsearch.DisplayMember = "Name";
+                ingredientsearch.ValueMember = "ID";
+                ingredientsearch.SelectedItem = null;
+            }
+            else
+            {
+                ingredientsearch.DataSource = GetIngredientsEn();
+                ingredientsearch.DisplayMember = "Name";
+                ingredientsearch.ValueMember = "ID";
+                ingredientsearch.SelectedItem = null;
+            }
             tabControl1.SelectedIndex = 2;
         }
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -5483,6 +5504,11 @@ namespace HelloWorldSolutionIMS
             mealIdList.Clear();
             UniquemealIdList.Clear();
             HideMeals(selectedValue, guna2DataGridView2, iddgv, mealardgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
