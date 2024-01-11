@@ -603,5 +603,10 @@ namespace HelloWorldSolutionIMS
         {
             loadform(new Evaluation());
         }
+
+        private void mainpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

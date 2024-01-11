@@ -2260,6 +2260,8 @@ namespace HelloWorldSolutionIMS
                 cmd.Parameters.AddWithValue("@FileNoE", filenoTobeedited);
                 cmd.ExecuteNonQuery();
                 MainClass.con.Close();
+                filenobmi.Text = filenoTobeedited.ToString();
+                filenomh.Text = filenoTobeedited.ToString();
             }
             catch (Exception ex)
             {

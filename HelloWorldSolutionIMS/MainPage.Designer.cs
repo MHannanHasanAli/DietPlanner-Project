@@ -42,7 +42,9 @@
             this.guna2TileButton6 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton9 = new Guna.UI2.WinForms.Guna2TileButton();
             this.mainpanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.closebutton = new Guna.UI2.WinForms.Guna2CircleButton();
             this.sidebar.SuspendLayout();
+            this.mainpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
@@ -67,7 +69,7 @@
             this.sidebar.Location = new System.Drawing.Point(0, 0);
             this.sidebar.Name = "sidebar";
             this.sidebar.ShadowDecoration.Parent = this.sidebar;
-            this.sidebar.Size = new System.Drawing.Size(250, 887);
+            this.sidebar.Size = new System.Drawing.Size(313, 1109);
             this.sidebar.TabIndex = 0;
             // 
             // guna2TileButton1
@@ -87,7 +89,7 @@
             this.guna2TileButton1.Location = new System.Drawing.Point(0, 770);
             this.guna2TileButton1.Name = "guna2TileButton1";
             this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton1.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton1.TabIndex = 0;
             this.guna2TileButton1.Text = "Setting";
             this.guna2TileButton1.TextOffset = new System.Drawing.Point(0, -15);
@@ -110,7 +112,7 @@
             this.guna2TileButton10.Location = new System.Drawing.Point(0, 700);
             this.guna2TileButton10.Name = "guna2TileButton10";
             this.guna2TileButton10.ShadowDecoration.Parent = this.guna2TileButton10;
-            this.guna2TileButton10.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton10.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton10.TabIndex = 9;
             this.guna2TileButton10.Text = "Special Deals";
             this.guna2TileButton10.TextOffset = new System.Drawing.Point(0, -15);
@@ -133,7 +135,7 @@
             this.guna2TileButton5.Location = new System.Drawing.Point(0, 630);
             this.guna2TileButton5.Name = "guna2TileButton5";
             this.guna2TileButton5.ShadowDecoration.Parent = this.guna2TileButton5;
-            this.guna2TileButton5.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton5.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton5.TabIndex = 4;
             this.guna2TileButton5.Text = "Evaluation";
             this.guna2TileButton5.TextOffset = new System.Drawing.Point(0, -15);
@@ -156,7 +158,7 @@
             this.guna2TileButton11.Location = new System.Drawing.Point(0, 560);
             this.guna2TileButton11.Name = "guna2TileButton11";
             this.guna2TileButton11.ShadowDecoration.Parent = this.guna2TileButton11;
-            this.guna2TileButton11.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton11.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton11.TabIndex = 10;
             this.guna2TileButton11.Text = "Payment";
             this.guna2TileButton11.TextOffset = new System.Drawing.Point(0, -15);
@@ -179,7 +181,7 @@
             this.guna2TileButton7.Location = new System.Drawing.Point(0, 490);
             this.guna2TileButton7.Name = "guna2TileButton7";
             this.guna2TileButton7.ShadowDecoration.Parent = this.guna2TileButton7;
-            this.guna2TileButton7.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton7.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton7.TabIndex = 6;
             this.guna2TileButton7.Text = "Diet Plan Temp.";
             this.guna2TileButton7.TextOffset = new System.Drawing.Point(0, -15);
@@ -202,7 +204,7 @@
             this.guna2TileButton3.Location = new System.Drawing.Point(0, 420);
             this.guna2TileButton3.Name = "guna2TileButton3";
             this.guna2TileButton3.ShadowDecoration.Parent = this.guna2TileButton3;
-            this.guna2TileButton3.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton3.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton3.TabIndex = 2;
             this.guna2TileButton3.Text = "Diet Plan";
             this.guna2TileButton3.TextOffset = new System.Drawing.Point(0, -15);
@@ -225,7 +227,7 @@
             this.guna2TileButton4.Location = new System.Drawing.Point(0, 350);
             this.guna2TileButton4.Name = "guna2TileButton4";
             this.guna2TileButton4.ShadowDecoration.Parent = this.guna2TileButton4;
-            this.guna2TileButton4.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton4.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton4.TabIndex = 3;
             this.guna2TileButton4.Text = "Diabetes";
             this.guna2TileButton4.TextOffset = new System.Drawing.Point(0, -15);
@@ -248,7 +250,7 @@
             this.guna2TileButton2.Location = new System.Drawing.Point(0, 280);
             this.guna2TileButton2.Name = "guna2TileButton2";
             this.guna2TileButton2.ShadowDecoration.Parent = this.guna2TileButton2;
-            this.guna2TileButton2.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton2.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton2.TabIndex = 1;
             this.guna2TileButton2.Text = "Instruction";
             this.guna2TileButton2.TextOffset = new System.Drawing.Point(0, -15);
@@ -271,7 +273,7 @@
             this.guna2TileButton8.Location = new System.Drawing.Point(0, 210);
             this.guna2TileButton8.Name = "guna2TileButton8";
             this.guna2TileButton8.ShadowDecoration.Parent = this.guna2TileButton8;
-            this.guna2TileButton8.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton8.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton8.TabIndex = 7;
             this.guna2TileButton8.Text = "Meals";
             this.guna2TileButton8.TextOffset = new System.Drawing.Point(0, -15);
@@ -294,7 +296,7 @@
             this.guna2TileButton12.Location = new System.Drawing.Point(0, 140);
             this.guna2TileButton12.Name = "guna2TileButton12";
             this.guna2TileButton12.ShadowDecoration.Parent = this.guna2TileButton12;
-            this.guna2TileButton12.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton12.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton12.TabIndex = 11;
             this.guna2TileButton12.Text = "Ingredients";
             this.guna2TileButton12.TextOffset = new System.Drawing.Point(0, -15);
@@ -317,7 +319,7 @@
             this.guna2TileButton6.Location = new System.Drawing.Point(0, 70);
             this.guna2TileButton6.Name = "guna2TileButton6";
             this.guna2TileButton6.ShadowDecoration.Parent = this.guna2TileButton6;
-            this.guna2TileButton6.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton6.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton6.TabIndex = 5;
             this.guna2TileButton6.Text = "Appoinments";
             this.guna2TileButton6.TextOffset = new System.Drawing.Point(0, -15);
@@ -340,7 +342,7 @@
             this.guna2TileButton9.Location = new System.Drawing.Point(0, 0);
             this.guna2TileButton9.Name = "guna2TileButton9";
             this.guna2TileButton9.ShadowDecoration.Parent = this.guna2TileButton9;
-            this.guna2TileButton9.Size = new System.Drawing.Size(250, 70);
+            this.guna2TileButton9.Size = new System.Drawing.Size(313, 70);
             this.guna2TileButton9.TabIndex = 8;
             this.guna2TileButton9.Text = "Registration";
             this.guna2TileButton9.TextOffset = new System.Drawing.Point(0, -15);
@@ -348,28 +350,47 @@
             // 
             // mainpanel
             // 
+            this.mainpanel.Controls.Add(this.closebutton);
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.FillColor = System.Drawing.Color.Honeydew;
             this.mainpanel.ForeColor = System.Drawing.Color.Black;
-            this.mainpanel.Location = new System.Drawing.Point(250, 0);
+            this.mainpanel.Location = new System.Drawing.Point(313, 0);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.ShadowDecoration.Parent = this.mainpanel;
-            this.mainpanel.Size = new System.Drawing.Size(732, 887);
+            this.mainpanel.Size = new System.Drawing.Size(915, 1109);
             this.mainpanel.TabIndex = 1;
+            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
+            // 
+            // closebutton
+            // 
+            this.closebutton.CheckedState.Parent = this.closebutton;
+            this.closebutton.CustomImages.Parent = this.closebutton;
+            this.closebutton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.closebutton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.closebutton.ForeColor = System.Drawing.Color.White;
+            this.closebutton.HoverState.Parent = this.closebutton;
+            this.closebutton.Location = new System.Drawing.Point(873, 3);
+            this.closebutton.Name = "closebutton";
+            this.closebutton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.closebutton.ShadowDecoration.Parent = this.closebutton;
+            this.closebutton.Size = new System.Drawing.Size(39, 41);
+            this.closebutton.TabIndex = 0;
+            this.closebutton.Text = "X";
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 887);
+            this.ClientSize = new System.Drawing.Size(1228, 1109);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.sidebar);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainPage";
             this.Load += new System.EventHandler(this.MainPage_Load);
             this.sidebar.ResumeLayout(false);
+            this.mainpanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -389,5 +410,6 @@
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton3;
         private Guna.UI2.WinForms.Guna2Panel mainpanel;
         public Guna.UI2.WinForms.Guna2GradientPanel sidebar;
+        private Guna.UI2.WinForms.Guna2CircleButton closebutton;
     }
 }
