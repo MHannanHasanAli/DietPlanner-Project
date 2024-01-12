@@ -812,5 +812,15 @@ namespace HelloWorldSolutionIMS
             ClearForm();
             tabControl1.SelectedIndex = 0;
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView17_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Edit.PerformClick();
+        }
     }
 }

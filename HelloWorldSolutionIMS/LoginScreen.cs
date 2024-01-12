@@ -3,7 +3,9 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace HelloWorldSolutionIMS
@@ -381,9 +383,32 @@ namespace HelloWorldSolutionIMS
 
                 MainClass.con.Close();
             }
-            MainPage obj = new MainPage();
-            this.Hide();
-            obj.Show();
+
+            if (languagebox.Text == "English")
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+                MainPage obj = new MainPage();
+                this.Hide();
+                obj.Show();
+
+            }
+            else
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
+                MainPage obj = new MainPage();
+                this.Hide();
+                obj.Show();
+            }
+            //MainPage obj = new MainPage();
+            //this.Hide();
+            //obj.Show();
+        }
+
+
+
+        private void loginpanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

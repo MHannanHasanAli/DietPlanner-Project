@@ -44,6 +44,15 @@
             this.nonpaidpayment = new Guna.UI2.WinForms.Guna2Button();
             this.totalvalues = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familynamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountaftrpromotiondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promotionpercentagedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,15 +101,6 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.defaultlabel = new System.Windows.Forms.Label();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familynamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountaftrpromotiondgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.promotionpercentagedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iddefaultdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filenodefaultdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.defaulterdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -150,6 +150,7 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Name = "panel1";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // nonpaidpayment
             // 
@@ -246,6 +247,70 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellDoubleClick);
+            // 
+            // iddgv
+            // 
+            resources.ApplyResources(this.iddgv, "iddgv");
+            this.iddgv.Name = "iddgv";
+            this.iddgv.ReadOnly = true;
+            this.iddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // filenodgv
+            // 
+            resources.ApplyResources(this.filenodgv, "filenodgv");
+            this.filenodgv.Name = "filenodgv";
+            this.filenodgv.ReadOnly = true;
+            this.filenodgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // paymentnamedgv
+            // 
+            resources.ApplyResources(this.paymentnamedgv, "paymentnamedgv");
+            this.paymentnamedgv.Name = "paymentnamedgv";
+            this.paymentnamedgv.ReadOnly = true;
+            this.paymentnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // firstnamedgv
+            // 
+            resources.ApplyResources(this.firstnamedgv, "firstnamedgv");
+            this.firstnamedgv.Name = "firstnamedgv";
+            this.firstnamedgv.ReadOnly = true;
+            this.firstnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // familynamedgv
+            // 
+            resources.ApplyResources(this.familynamedgv, "familynamedgv");
+            this.familynamedgv.Name = "familynamedgv";
+            this.familynamedgv.ReadOnly = true;
+            this.familynamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // amountdgv
+            // 
+            resources.ApplyResources(this.amountdgv, "amountdgv");
+            this.amountdgv.Name = "amountdgv";
+            this.amountdgv.ReadOnly = true;
+            this.amountdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // amountaftrpromotiondgv
+            // 
+            resources.ApplyResources(this.amountaftrpromotiondgv, "amountaftrpromotiondgv");
+            this.amountaftrpromotiondgv.Name = "amountaftrpromotiondgv";
+            this.amountaftrpromotiondgv.ReadOnly = true;
+            this.amountaftrpromotiondgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // promotionpercentagedgv
+            // 
+            resources.ApplyResources(this.promotionpercentagedgv, "promotionpercentagedgv");
+            this.promotionpercentagedgv.Name = "promotionpercentagedgv";
+            this.promotionpercentagedgv.ReadOnly = true;
+            this.promotionpercentagedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // datedgv
+            // 
+            resources.ApplyResources(this.datedgv, "datedgv");
+            this.datedgv.Name = "datedgv";
+            this.datedgv.ReadOnly = true;
+            this.datedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // contextMenuStrip1
             // 
@@ -896,69 +961,6 @@
             this.guna2DataGridView2.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView2.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // iddgv
-            // 
-            resources.ApplyResources(this.iddgv, "iddgv");
-            this.iddgv.Name = "iddgv";
-            this.iddgv.ReadOnly = true;
-            this.iddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // filenodgv
-            // 
-            resources.ApplyResources(this.filenodgv, "filenodgv");
-            this.filenodgv.Name = "filenodgv";
-            this.filenodgv.ReadOnly = true;
-            this.filenodgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // paymentnamedgv
-            // 
-            resources.ApplyResources(this.paymentnamedgv, "paymentnamedgv");
-            this.paymentnamedgv.Name = "paymentnamedgv";
-            this.paymentnamedgv.ReadOnly = true;
-            this.paymentnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // firstnamedgv
-            // 
-            resources.ApplyResources(this.firstnamedgv, "firstnamedgv");
-            this.firstnamedgv.Name = "firstnamedgv";
-            this.firstnamedgv.ReadOnly = true;
-            this.firstnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // familynamedgv
-            // 
-            resources.ApplyResources(this.familynamedgv, "familynamedgv");
-            this.familynamedgv.Name = "familynamedgv";
-            this.familynamedgv.ReadOnly = true;
-            this.familynamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // amountdgv
-            // 
-            resources.ApplyResources(this.amountdgv, "amountdgv");
-            this.amountdgv.Name = "amountdgv";
-            this.amountdgv.ReadOnly = true;
-            this.amountdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // amountaftrpromotiondgv
-            // 
-            resources.ApplyResources(this.amountaftrpromotiondgv, "amountaftrpromotiondgv");
-            this.amountaftrpromotiondgv.Name = "amountaftrpromotiondgv";
-            this.amountaftrpromotiondgv.ReadOnly = true;
-            this.amountaftrpromotiondgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // promotionpercentagedgv
-            // 
-            resources.ApplyResources(this.promotionpercentagedgv, "promotionpercentagedgv");
-            this.promotionpercentagedgv.Name = "promotionpercentagedgv";
-            this.promotionpercentagedgv.ReadOnly = true;
-            this.promotionpercentagedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // datedgv
-            // 
-            resources.ApplyResources(this.datedgv, "datedgv");
-            this.datedgv.Name = "datedgv";
-            this.datedgv.ReadOnly = true;
-            this.datedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // iddefaultdgv
             // 

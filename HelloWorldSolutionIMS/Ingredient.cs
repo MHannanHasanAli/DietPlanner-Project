@@ -1942,6 +1942,16 @@ namespace HelloWorldSolutionIMS
                 e.Handled = true; // Ignore the keypress if it's not a number or a control character
             }
         }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EditBTN.PerformClick();
+        }
     }
 
 }

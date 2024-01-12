@@ -869,6 +869,7 @@ namespace HelloWorldSolutionIMS
         }
         private void Registration_Load(object sender, EventArgs e)
         {
+            editstatus = 0;
             try
             {
                 MainClass.con.Open();
@@ -2127,7 +2128,10 @@ namespace HelloWorldSolutionIMS
                         conn = 0;
                     }
                     ShowBodyComposition(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
-
+                    if (editstatus == 1)
+                    {
+                        tabControl1.SelectedIndex = 0;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -2152,8 +2156,10 @@ namespace HelloWorldSolutionIMS
         }
 
         static int filenoTobeedited;
+        static int editstatus = 0;
         private void EditBTN_Click(object sender, EventArgs e)
         {
+            editstatus = 1;
             edit = 1;
             int id = int.Parse(guna2DataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             try
@@ -2318,7 +2324,7 @@ namespace HelloWorldSolutionIMS
             fileno.Text = fileno_new.ToString();
 
             subscriptionstatus.Text = "No";
-
+            editstatus = 0;
             //fileno.ReadOnly = true;
         }
 
@@ -2909,6 +2915,10 @@ namespace HelloWorldSolutionIMS
 
                 }
                 ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
+                if (editstatus == 1)
+                {
+                    tabControl1.SelectedIndex = 0;
+                }
             }
             else
             {
@@ -4372,13 +4382,17 @@ namespace HelloWorldSolutionIMS
 
         private void bodycompositionbtn_Click(object sender, EventArgs e)
         {
-            filenobmi.Text = "";
-            firstnamebmi.Text = "";
-            familynamebmi.Text = "";
-            mobilenobmi.Text = "";
-            genderbmi.SelectedItem = null;
-            agebmi.Text = "";
-            nutritionistbmi.Text = "";
+            if (fileno.Text == "")
+            {
+                filenobmi.Text = "";
+                firstnamebmi.Text = "";
+                familynamebmi.Text = "";
+                mobilenobmi.Text = "";
+                genderbmi.SelectedItem = null;
+                agebmi.Text = "";
+                nutritionistbmi.Text = "";
+            }
+
             ShowBodyCompositionAll(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
             tabControl1.SelectedIndex = 1;
             edit = 0;
@@ -4387,14 +4401,16 @@ namespace HelloWorldSolutionIMS
         private void medicalhistoryBTN_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 4;
-            filenomh.Text = "";
-            firstnamemh.Text = "";
-            familynamemh.Text = "";
-            agemh.Text = "";
-            mobilenomh.Text = "";
-            nutritionistmh.Text = "";
-            gendermh.SelectedItem = null;
-
+            if (fileno.Text == "")
+            {
+                filenomh.Text = "";
+                firstnamemh.Text = "";
+                familynamemh.Text = "";
+                agemh.Text = "";
+                mobilenomh.Text = "";
+                nutritionistmh.Text = "";
+                gendermh.SelectedItem = null;
+            }
             ShowMedicalHistoryAll(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
             guna2DataGridView17.ClearSelection();
             edit = 0;
@@ -4413,6 +4429,11 @@ namespace HelloWorldSolutionIMS
         private void ExportMH_Click(object sender, EventArgs e)
         {
             ExportMHToExcel();
+        }
+
+        private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EditBTN.PerformClick();
         }
     }
 }

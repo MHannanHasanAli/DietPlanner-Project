@@ -1339,5 +1339,15 @@ namespace HelloWorldSolutionIMS
         {
             tabControl1.SelectedIndex = 0;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            editToolStripMenuItem.PerformClick();
+        }
     }
 }

@@ -519,5 +519,10 @@ namespace HelloWorldSolutionIMS
         {
 
         }
+
+        private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            editToolStripMenuItem.PerformClick();
+        }
     }
 }

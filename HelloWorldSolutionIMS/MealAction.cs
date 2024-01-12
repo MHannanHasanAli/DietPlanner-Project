@@ -5511,6 +5511,11 @@ namespace HelloWorldSolutionIMS
         {
 
         }
+
+        private void guna2DataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EditBTN.PerformClick();
+        }
     }
 
 }

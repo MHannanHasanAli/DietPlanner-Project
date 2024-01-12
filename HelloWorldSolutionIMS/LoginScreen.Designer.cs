@@ -192,6 +192,7 @@ namespace HelloWorldSolutionIMS
             this.loginpanel.Name = "loginpanel";
             this.loginpanel.Size = new System.Drawing.Size(1168, 690);
             this.loginpanel.TabIndex = 0;
+            this.loginpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginpanel_Paint);
             // 
             // liscense
             // 

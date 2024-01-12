@@ -53,6 +53,14 @@
             this.search = new Guna.UI2.WinForms.Guna2Button();
             this.New = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.familynamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mobilenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slotdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -91,14 +99,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familynamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mobilenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.slotdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             back = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -226,6 +226,63 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellDoubleClick);
+            // 
+            // iddgv
+            // 
+            resources.ApplyResources(this.iddgv, "iddgv");
+            this.iddgv.Name = "iddgv";
+            this.iddgv.ReadOnly = true;
+            this.iddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // filenodgv
+            // 
+            resources.ApplyResources(this.filenodgv, "filenodgv");
+            this.filenodgv.Name = "filenodgv";
+            this.filenodgv.ReadOnly = true;
+            this.filenodgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // firstnamedgv
+            // 
+            resources.ApplyResources(this.firstnamedgv, "firstnamedgv");
+            this.firstnamedgv.Name = "firstnamedgv";
+            this.firstnamedgv.ReadOnly = true;
+            this.firstnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // familynamedgv
+            // 
+            resources.ApplyResources(this.familynamedgv, "familynamedgv");
+            this.familynamedgv.Name = "familynamedgv";
+            this.familynamedgv.ReadOnly = true;
+            this.familynamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // mobilenodgv
+            // 
+            resources.ApplyResources(this.mobilenodgv, "mobilenodgv");
+            this.mobilenodgv.Name = "mobilenodgv";
+            this.mobilenodgv.ReadOnly = true;
+            this.mobilenodgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // datedgv
+            // 
+            resources.ApplyResources(this.datedgv, "datedgv");
+            this.datedgv.Name = "datedgv";
+            this.datedgv.ReadOnly = true;
+            this.datedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // roomdgv
+            // 
+            resources.ApplyResources(this.roomdgv, "roomdgv");
+            this.roomdgv.Name = "roomdgv";
+            this.roomdgv.ReadOnly = true;
+            this.roomdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // slotdgv
+            // 
+            resources.ApplyResources(this.slotdgv, "slotdgv");
+            this.slotdgv.Name = "slotdgv";
+            this.slotdgv.ReadOnly = true;
+            this.slotdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // tabControl1
             // 
@@ -257,6 +314,7 @@
             this.panel1.Controls.Add(this.search);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // CalendarFilter
             // 
@@ -863,62 +921,6 @@
             // 
             resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            // 
-            // iddgv
-            // 
-            resources.ApplyResources(this.iddgv, "iddgv");
-            this.iddgv.Name = "iddgv";
-            this.iddgv.ReadOnly = true;
-            this.iddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // filenodgv
-            // 
-            resources.ApplyResources(this.filenodgv, "filenodgv");
-            this.filenodgv.Name = "filenodgv";
-            this.filenodgv.ReadOnly = true;
-            this.filenodgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // firstnamedgv
-            // 
-            resources.ApplyResources(this.firstnamedgv, "firstnamedgv");
-            this.firstnamedgv.Name = "firstnamedgv";
-            this.firstnamedgv.ReadOnly = true;
-            this.firstnamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // familynamedgv
-            // 
-            resources.ApplyResources(this.familynamedgv, "familynamedgv");
-            this.familynamedgv.Name = "familynamedgv";
-            this.familynamedgv.ReadOnly = true;
-            this.familynamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // mobilenodgv
-            // 
-            resources.ApplyResources(this.mobilenodgv, "mobilenodgv");
-            this.mobilenodgv.Name = "mobilenodgv";
-            this.mobilenodgv.ReadOnly = true;
-            this.mobilenodgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // datedgv
-            // 
-            resources.ApplyResources(this.datedgv, "datedgv");
-            this.datedgv.Name = "datedgv";
-            this.datedgv.ReadOnly = true;
-            this.datedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // roomdgv
-            // 
-            resources.ApplyResources(this.roomdgv, "roomdgv");
-            this.roomdgv.Name = "roomdgv";
-            this.roomdgv.ReadOnly = true;
-            this.roomdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // slotdgv
-            // 
-            resources.ApplyResources(this.slotdgv, "slotdgv");
-            this.slotdgv.Name = "slotdgv";
-            this.slotdgv.ReadOnly = true;
-            this.slotdgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Appointment
             // 

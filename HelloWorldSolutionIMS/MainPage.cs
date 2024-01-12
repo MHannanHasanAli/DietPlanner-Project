@@ -14,6 +14,11 @@ namespace HelloWorldSolutionIMS
         static int client_id = 0;
         public MainPage()
         {
+            LanguageInfo();
+            if (languagestatus == 1)
+            {
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-AE");
+            }
             InitializeComponent();
             try
             {
@@ -606,6 +611,31 @@ namespace HelloWorldSolutionIMS
 
         private void mainpanel_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void closebutton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to close?", "Close Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Check the user's response
+            if (result == DialogResult.Yes)
+            {
+                // User clicked Yes, close the form or perform other closing actions
+                Application.Exit();
+            }
+        }
+
+        private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Close Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Check the user's response
+            if (result == DialogResult.No)
+            {
+                // If the user clicked No, cancel the form closing event
+                e.Cancel = true;
+            }
 
         }
     }

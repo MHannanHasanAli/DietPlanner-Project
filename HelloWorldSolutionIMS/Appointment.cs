@@ -2186,6 +2186,16 @@ namespace HelloWorldSolutionIMS
             SearchAppointmentsWithDate(guna2DataGridView1, iddgv, filenodgv, firstnamedgv, familynamedgv, mobilenodgv, roomdgv, slotdgv, datedgv);
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EditBTN.PerformClick();
+        }
     }
 }
 

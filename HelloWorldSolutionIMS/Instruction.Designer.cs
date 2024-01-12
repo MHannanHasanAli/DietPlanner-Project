@@ -60,28 +60,27 @@
             // 
             // contextMenuStrip1
             // 
-            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // editToolStripMenuItem
             // 
-            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            resources.ApplyResources(this.editToolStripMenuItem, "editToolStripMenuItem");
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
-            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.nutritionistname);
             this.panel1.Controls.Add(this.Search);
             this.panel1.Controls.Add(this.New);
@@ -93,17 +92,18 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.instructionname);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // nutritionistname
             // 
-            resources.ApplyResources(this.nutritionistname, "nutritionistname");
             this.nutritionistname.BackColor = System.Drawing.Color.Transparent;
             this.nutritionistname.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.nutritionistname.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nutritionistname.FocusedColor = System.Drawing.Color.Empty;
             this.nutritionistname.FocusedState.Parent = this.nutritionistname;
+            resources.ApplyResources(this.nutritionistname, "nutritionistname");
             this.nutritionistname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.nutritionistname.FormattingEnabled = true;
             this.nutritionistname.HoverState.Parent = this.nutritionistname;
@@ -113,12 +113,12 @@
             // 
             // Search
             // 
-            resources.ApplyResources(this.Search, "Search");
             this.Search.AutoRoundedCorners = true;
             this.Search.BorderRadius = 21;
             this.Search.CheckedState.Parent = this.Search;
             this.Search.CustomImages.Parent = this.Search;
             this.Search.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Search, "Search");
             this.Search.ForeColor = System.Drawing.Color.White;
             this.Search.HoverState.Parent = this.Search;
             this.Search.Name = "Search";
@@ -127,13 +127,13 @@
             // 
             // New
             // 
-            resources.ApplyResources(this.New, "New");
             this.New.AutoRoundedCorners = true;
             this.New.BorderRadius = 21;
             this.New.CausesValidation = false;
             this.New.CheckedState.Parent = this.New;
             this.New.CustomImages.Parent = this.New;
             this.New.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.New, "New");
             this.New.ForeColor = System.Drawing.Color.White;
             this.New.HoverState.Parent = this.New;
             this.New.Name = "New";
@@ -142,7 +142,6 @@
             // 
             // guna2DataGridView1
             // 
-            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -160,6 +159,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nodgv,
             this.instructionnamedgv,
@@ -208,6 +208,7 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellDoubleClick);
             // 
             // nodgv
             // 
@@ -244,7 +245,6 @@
             // 
             // instructionbox
             // 
-            resources.ApplyResources(this.instructionbox, "instructionbox");
             this.instructionbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.instructionbox.DefaultText = "";
             this.instructionbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -256,6 +256,7 @@
             this.instructionbox.FocusedState.Parent = this.instructionbox;
             this.instructionbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.instructionbox.HoverState.Parent = this.instructionbox;
+            resources.ApplyResources(this.instructionbox, "instructionbox");
             this.instructionbox.Multiline = true;
             this.instructionbox.Name = "instructionbox";
             this.instructionbox.PasswordChar = '\0';
@@ -265,8 +266,8 @@
             // 
             // date
             // 
-            resources.ApplyResources(this.date, "date");
             this.date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            resources.ApplyResources(this.date, "date");
             this.date.Name = "date";
             // 
             // label5
@@ -286,7 +287,6 @@
             // 
             // instructionname
             // 
-            resources.ApplyResources(this.instructionname, "instructionname");
             this.instructionname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.instructionname.DefaultText = "";
             this.instructionname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -296,6 +296,7 @@
             this.instructionname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.instructionname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.instructionname.FocusedState.Parent = this.instructionname;
+            resources.ApplyResources(this.instructionname, "instructionname");
             this.instructionname.ForeColor = System.Drawing.Color.Black;
             this.instructionname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.instructionname.HoverState.Parent = this.instructionname;
