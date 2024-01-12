@@ -1692,7 +1692,7 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Open();
 
                 // SQL query to select all rows from the Ingredient table
-                string query = "SELECT fdc_id, INGREDIENT_AR, INGREDIENT_EN, GROUP_AR, GROUP_EN, CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B FROM Ingredient;";
+                string query = "SELECT fdc_id,datatype AS Data_Source, INGREDIENT_EN AS description_en , INGREDIENT_AR AS description_ar, GROUP_EN AS category_en, GROUP_AR AS category_ar, CALORIES,PROTEIN, FATS,CARBOHYDRATES,WATER,SUGAR, FIBERS, CALCIUM,IRON, MAGNESIUM ,PHOSPHOR AS PHOSPHORUS, POTASSIUM, SODIUM, IODINE,A, B FROM Ingredient;";
 
                 using (SqlCommand command = new SqlCommand(query, MainClass.con))
                 {

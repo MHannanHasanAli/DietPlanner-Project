@@ -4954,7 +4954,7 @@ namespace HelloWorldSolutionIMS
                 }
 
                 // SQL query to select all rows from the Ingredient table
-                string query = "SELECT * FROM Meal;";
+                string query = "SELECT MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Notes, Preparation, Category as Data_Source FROM Meal;";
 
                 using (SqlCommand command = new SqlCommand(query, MainClass.con))
                 {
