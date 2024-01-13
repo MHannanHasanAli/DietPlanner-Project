@@ -122,7 +122,7 @@
     <value>Segoe UI, 11pt</value>
   </data>
   <data name="ImportIngredients.Location" type="System.Drawing.Point, System.Drawing">
-    <value>905, 81</value>
+    <value>902, 73</value>
   </data>
   <data name="ImportIngredients.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 45</value>
@@ -2497,7 +2497,7 @@
     <value>485, 10</value>
   </data>
   <data name="classification.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 36</value>
+    <value>281, 36</value>
   </data>
   <data name="classification.TabIndex" type="System.Int32, mscorlib">
     <value>210</value>

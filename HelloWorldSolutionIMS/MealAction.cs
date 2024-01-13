@@ -4494,19 +4494,29 @@ namespace HelloWorldSolutionIMS
                         string source;
                         if (worksheet.Cells[row, 25].Value == null)
                         {
-                            source = "All";
+                            source = "";
                         }
                         else
                         {
                             source = worksheet.Cells[row, 25].Value.ToString();
                         }
 
+                        string ingredientid;
+                        if (worksheet.Cells[row, 26].Value == null)
+                        {
+                            ingredientid = "";
+                        }
+                        else
+                        {
+                            ingredientid = worksheet.Cells[row, 26].Value.ToString();
+                        }
+
                         string query = "INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, " +
                                 "CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, " +
-                                "PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Category, Notes, Preparation) " +
+                                "PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Category, Notes, Preparation, IngredientID) " +
                                 "VALUES (@MealAr, @MealEn, @GroupNAr, @GroupNEn, @GroupCAr, @GroupCEn, " +
                                 "@Classification, @Calories, @Fats, @Fibers, @Potassium, @Water, @Sugar, @Calcium, @A, " +
-                                "@Protein, @Carbohydrates, @Sodium, @Phosphor, @Magnesium, @Iron, @Iodine, @B, @Category, @Notes, @Preparation)";
+                                "@Protein, @Carbohydrates, @Sodium, @Phosphor, @Magnesium, @Iron, @Iodine, @B, @Category, @Notes, @Preparation, @IngredientID)";
 
                         using (SqlCommand command = new SqlCommand(query, MainClass.con))
                         {
@@ -4536,6 +4546,7 @@ namespace HelloWorldSolutionIMS
                             command.Parameters.AddWithValue("@Category", source);
                             command.Parameters.AddWithValue("@Notes", notes);
                             command.Parameters.AddWithValue("@Preparation", preparation);
+                            command.Parameters.AddWithValue("@IngredientID", ingredientid);
 
                             command.ExecuteNonQuery();
                         }
