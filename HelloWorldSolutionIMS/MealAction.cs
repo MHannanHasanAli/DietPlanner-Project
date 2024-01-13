@@ -1776,7 +1776,7 @@ namespace HelloWorldSolutionIMS
                 }
                 ingredientsList.Clear();
                 SqlCommand cmdthree = new SqlCommand("SELECT ID FROM MealIngredients WHERE MealID = @Mealid", MainClass.con);
-                cmdthree.Parameters.AddWithValue("@Mealid", mealIDToEdit);
+                cmdthree.Parameters.AddWithValue("@Mealid", MealGUID);
                 SqlDataReader reader6 = cmdthree.ExecuteReader();
                 idlist.Clear();
                 while (reader6.Read())
@@ -3151,6 +3151,7 @@ namespace HelloWorldSolutionIMS
                         preparation.Text = reader["Preparation"].ToString();
                         classification.Text = reader["CLASSIFICATION"].ToString();
                         Catgry = reader["Category"].ToString();
+                        MealGUID = reader["IngredientID"].ToString();
                     }
                     reader.Close(); // Close the first DataReader
 
@@ -3264,6 +3265,52 @@ namespace HelloWorldSolutionIMS
                         if (result == DialogResult.Yes)
                         {
                             string id = guna2DataGridView2.CurrentRow.Cells[0].Value.ToString();
+                            string deletemealing = "";
+                            try
+                            {
+                                mealIDToEdit = guna2DataGridView2.CurrentRow.Cells[0].Value.ToString();
+                                if (MainClass.con.State != ConnectionState.Open)
+                                {
+                                    MainClass.con.Open();
+                                    conn = 1;
+                                }
+                                SqlCommand cmd = new SqlCommand("SELECT IngredientID FROM Meal WHERE ID = @MealID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@MealID", id);
+
+                                SqlDataReader reader = cmd.ExecuteReader();
+                                if (reader.HasRows)
+                                {
+                                    while (reader.Read())
+                                    {
+                                        // Set the retrieved data into input controls
+                                        deletemealing = reader["IngredientID"].ToString();
+
+                                    }
+                                    reader.Close(); // Close the first DataReader
+
+                                    //ShowIngredients(guna2DataGridView1, unitdgv, ingredientardgv, ingredientendgv,quantitydgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, potassiumdgv, phosphordgv,waterdgv,magnesiumdgv,sugerdgv,irondgv,iodinedgv,adgv,bdgv);
+                                    if (conn == 1)
+                                    {
+                                        MainClass.con.Close();
+                                        conn = 0;
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Meal not found with ID: " + mealIDToEdit);
+                                }
+
+                                if (conn == 1)
+                                {
+                                    MainClass.con.Close();
+                                    conn = 0;
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
                             try
                             {
                                 if (MainClass.con.State != ConnectionState.Open)
@@ -3285,7 +3332,7 @@ namespace HelloWorldSolutionIMS
                                     conn = 1;
                                 }
                                 SqlCommand cmdingredients = new SqlCommand("DELETE FROM MealIngredients WHERE MealID = @MealID", MainClass.con);
-                                cmdingredients.Parameters.AddWithValue("@MealID", id); // Assuming the Ingredient ID is in the first cell of the selected row.
+                                cmdingredients.Parameters.AddWithValue("@MealID", deletemealing); // Assuming the Ingredient ID is in the first cell of the selected row.
                                 cmdingredients.ExecuteNonQuery();
                                 MessageBox.Show("Meal removed successfully");
                                 if (conn == 1)
@@ -3300,6 +3347,7 @@ namespace HelloWorldSolutionIMS
                                 MainClass.con.Close();
                                 MessageBox.Show(ex.Message);
                             }
+
                         }
                     }
                 }
@@ -3322,8 +3370,8 @@ namespace HelloWorldSolutionIMS
                             MainClass.con.Open();
                             conn = 1;
                         }
-                        SqlCommand cmd = new SqlCommand("INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Notes, Preparation, Category) " +
-                            "VALUES (@MealAr, @MealEn, @GroupNAr, @GroupNEn, @GroupCAr, @GroupCEn, @CLASSIFICATION, @CALORIES, @FATS, @FIBERS, @POTASSIUM, @WATER, @SUGAR, @CALCIUM, @A, @PROTEIN, @CARBOHYDRATES, @SODIUM, @PHOSPHOR, @MAGNESIUM, @IRON, @IODINE, @B, @Notes, @Preparation, @Category)", MainClass.con);
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Meal (MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Notes, Preparation, Category,IngredientID) " +
+                            "VALUES (@MealAr, @MealEn, @GroupNAr, @GroupNEn, @GroupCAr, @GroupCEn, @CLASSIFICATION, @CALORIES, @FATS, @FIBERS, @POTASSIUM, @WATER, @SUGAR, @CALCIUM, @A, @PROTEIN, @CARBOHYDRATES, @SODIUM, @PHOSPHOR, @MAGNESIUM, @IRON, @IODINE, @B, @Notes, @Preparation, @Category, @IngredientID)", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@MealAr", mealar.Text);
                         cmd.Parameters.AddWithValue("@MealEn", mealen.Text);
@@ -3352,6 +3400,8 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@Notes", notes.Text);
                         cmd.Parameters.AddWithValue("@Preparation", preparation.Text);
                         cmd.Parameters.AddWithValue("@Category", resultString);
+                        cmd.Parameters.AddWithValue("@IngredientID", GenerateMealGUID());
+
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Meal added successfully");
                         if (conn == 1)
@@ -3441,7 +3491,7 @@ namespace HelloWorldSolutionIMS
                                     "VALUES (@MealID, @IngredientAr, @IngredientEn, @Unit, @Calories, @Fats, @Carbohydrates, @Fibers, @Protein, @Calcium, @Sodium, @Potassium, @Iodine, @A, @B, @Iron, @Water, @Suger, @Magnesium, @Phosphor, @Quantity)", MainClass.con))
                                 {
                                     // Add parameters to the SQL command
-                                    command.Parameters.AddWithValue("@MealID", GetLastMeal());
+                                    command.Parameters.AddWithValue("@MealID", MealGUID);
                                     command.Parameters.AddWithValue("@IngredientAr", ingredientAr);
                                     command.Parameters.AddWithValue("@IngredientEn", ingredientEn);
                                     command.Parameters.AddWithValue("@Unit", unit);
@@ -3678,6 +3728,13 @@ namespace HelloWorldSolutionIMS
                     MessageBox.Show("Meal AR name cannot be empty.");
                 }
             }
+        }
+        public static string MealGUID;
+        private string GenerateMealGUID()
+        {
+            Guid newGuid = Guid.NewGuid();
+            MealGUID = newGuid.ToString();
+            return newGuid.ToString();
         }
         private void SaveGroupn_Click(object sender, EventArgs e)
         {
@@ -4504,7 +4561,6 @@ namespace HelloWorldSolutionIMS
             {
             }
         }
-
         private void All_Click(object sender, EventArgs e)
         {
 
@@ -4940,10 +4996,11 @@ namespace HelloWorldSolutionIMS
 
         private void export_Click(object sender, EventArgs e)
         {
-            ExportIngredientsToExcel();
+            ExportMealsToExcel();
+            ExportMealIngredientsToExcel();
         }
 
-        private void ExportIngredientsToExcel()
+        private void ExportMealsToExcel()
         {
             try
             {
@@ -4954,7 +5011,7 @@ namespace HelloWorldSolutionIMS
                 }
 
                 // SQL query to select all rows from the Ingredient table
-                string query = "SELECT MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Notes, Preparation, Category as Data_Source FROM Meal;";
+                string query = "SELECT MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Notes, Preparation, Category as Data_Source, IngredientID FROM Meal;";
 
                 using (SqlCommand command = new SqlCommand(query, MainClass.con))
                 {
@@ -4965,7 +5022,7 @@ namespace HelloWorldSolutionIMS
                         dataAdapter.Fill(dataTable);
 
                         // Call the ExportToExcel function to save the data to Excel
-                        ExportToExcel(dataTable);
+                        ExportToExcel(dataTable, "Meals");
                     }
                 }
                 MainClass.con.Close();
@@ -4975,8 +5032,39 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show($"Error exporting data: {ex.Message}", "Export Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void ExportMealIngredientsToExcel()
+        {
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
 
-        private void ExportToExcel(DataTable dataTable)
+                // SQL query to select all rows from the Ingredient table
+                string query = "SELECT IngredientAr, IngredientEn, Unit, CALORIES, FATS, CARBOHYDRATES, FIBERS, PROTEIN, CALCIUM, SODIUM, POTASSIUM, IODINE, A, B, IRON, WATER, SUGER, MAGNESIUM, PHOSPHOR, Quantity, MealID FROM MealIngredients;";
+
+                using (SqlCommand command = new SqlCommand(query, MainClass.con))
+                {
+                    using (SqlDataAdapter dataAdapter = new SqlDataAdapter(command))
+                    {
+                        // Create a DataTable to hold the data
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        // Call the ExportToExcel function to save the data to Excel
+                        ExportToExcel(dataTable, "Meal_Ingredients");
+                    }
+                }
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error exporting data: {ex.Message}", "Export Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ExportToExcel(DataTable dataTable, string filenameForExport)
         {
             try
             {
@@ -4985,6 +5073,8 @@ namespace HelloWorldSolutionIMS
                 saveFileDialog.Filter = "Excel Files (*.xlsx)|*.xlsx";
                 saveFileDialog.Title = "Save As Excel File";
                 saveFileDialog.DefaultExt = "xlsx";
+
+                saveFileDialog.FileName = filenameForExport;
 
                 // Show the Save As dialog and check if the user selects a file
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -5507,6 +5597,125 @@ namespace HelloWorldSolutionIMS
 
         }
 
+        public void ImportIngredientsToDatabase(string excelFilePath)
+        {
+
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            try
+            {
+                using (ExcelPackage package = new ExcelPackage(new FileInfo(excelFilePath)))
+                {
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    int rowCount = worksheet.Dimension.Rows;
+                    if (MainClass.con.State != ConnectionState.Open)
+                    {
+                        MainClass.con.Open();
+                        conn = 1;
+                    }
+                    for (int row = 2; row <= rowCount; row++)
+                    {
+
+                        string ingAr = worksheet.Cells[row, 1].Value?.ToString();
+                        string ingEn = worksheet.Cells[row, 2].Value?.ToString();
+
+                        string Unit;
+                        if (worksheet.Cells[row, 3].Value == null)
+                        {
+                            Unit = "Per 100 gram";
+                        }
+                        else
+                        {
+                            Unit = worksheet.Cells[row, 3].Value.ToString();
+                        }
+
+                        float calories, fats, fibers, potassium, water, sugar, calcium, a, protein, carbohydrates, sodium, phosphor, magnesium, iron, iodine, b;
+
+                        float.TryParse(worksheet.Cells[row, 4].Value?.ToString(), out calories);
+                        float.TryParse(worksheet.Cells[row, 5].Value?.ToString(), out fats);
+                        float.TryParse(worksheet.Cells[row, 7].Value?.ToString(), out fibers);
+                        float.TryParse(worksheet.Cells[row, 11].Value?.ToString(), out potassium);
+                        float.TryParse(worksheet.Cells[row, 16].Value?.ToString(), out water);
+                        float.TryParse(worksheet.Cells[row, 17].Value?.ToString(), out sugar);
+                        float.TryParse(worksheet.Cells[row, 9].Value?.ToString(), out calcium);
+                        float.TryParse(worksheet.Cells[row, 13].Value?.ToString(), out a);
+                        float.TryParse(worksheet.Cells[row, 8].Value?.ToString(), out protein);
+                        float.TryParse(worksheet.Cells[row, 6].Value?.ToString(), out carbohydrates);
+                        float.TryParse(worksheet.Cells[row, 10].Value?.ToString(), out sodium);
+                        float.TryParse(worksheet.Cells[row, 19].Value?.ToString(), out phosphor);
+                        float.TryParse(worksheet.Cells[row, 18].Value?.ToString(), out magnesium);
+                        float.TryParse(worksheet.Cells[row, 15].Value?.ToString(), out iron);
+                        float.TryParse(worksheet.Cells[row, 12].Value?.ToString(), out iodine);
+                        float.TryParse(worksheet.Cells[row, 14].Value?.ToString(), out b);
+
+                        string Quantity;
+                        if (worksheet.Cells[row, 20].Value == null)
+                        {
+                            Quantity = "100";
+                        }
+                        else
+                        {
+                            Quantity = worksheet.Cells[row, 20].Value.ToString();
+                        }
+
+                        string MealID = worksheet.Cells[row, 21].Value?.ToString();
+
+                        string query = "INSERT INTO MealIngredients (MealID, IngredientAr, IngredientEn, Unit, " +
+                                "CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGER, CALCIUM, A, " +
+                                "PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Quantity) " +
+                                "VALUES (@MealID, @IngredientAr, @IngredientEn, @Unit, " +
+                                "@Calories, @Fats, @Fibers, @Potassium, @Water, @Sugar, @Calcium, @A, " +
+                                "@Protein, @Carbohydrates, @Sodium, @Phosphor, @Magnesium, @Iron, @Iodine, @B, @Quantity)";
+
+                        using (SqlCommand command = new SqlCommand(query, MainClass.con))
+                        {
+                            command.Parameters.AddWithValue("@MealID", MealID);
+                            command.Parameters.AddWithValue("@IngredientAr", ingAr);
+                            command.Parameters.AddWithValue("@IngredientEn", ingEn);
+                            command.Parameters.AddWithValue("@Unit", Unit);
+                            command.Parameters.AddWithValue("@Calories", calories);
+                            command.Parameters.AddWithValue("@Fats", fats);
+                            command.Parameters.AddWithValue("@Fibers", fibers);
+                            command.Parameters.AddWithValue("@Potassium", potassium);
+                            command.Parameters.AddWithValue("@Water", water);
+                            command.Parameters.AddWithValue("@Sugar", sugar);
+                            command.Parameters.AddWithValue("@Calcium", calcium);
+                            command.Parameters.AddWithValue("@A", a);
+                            command.Parameters.AddWithValue("@Protein", protein);
+                            command.Parameters.AddWithValue("@Carbohydrates", carbohydrates);
+                            command.Parameters.AddWithValue("@Sodium", sodium);
+                            command.Parameters.AddWithValue("@Phosphor", phosphor);
+                            command.Parameters.AddWithValue("@Magnesium", magnesium);
+                            command.Parameters.AddWithValue("@Iron", iron);
+                            command.Parameters.AddWithValue("@Iodine", iodine);
+                            command.Parameters.AddWithValue("@B", b);
+                            command.Parameters.AddWithValue("@Quantity", Quantity);
+
+                            command.ExecuteNonQuery();
+                        }
+
+                    }
+
+                    if (conn == 1)
+                    {
+                        MainClass.con.Close();
+                        conn = 0;
+                    }
+
+                    ShowMeals(guna2DataGridView2, iddgv, mealardgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+                    MessageBox.Show("Data imported successfully!");
+                    //tabControl1.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+            }
+        }
+
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
@@ -5515,6 +5724,35 @@ namespace HelloWorldSolutionIMS
         private void guna2DataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             EditBTN.PerformClick();
+        }
+
+        private void ImportIngredients_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = openFileDialog.FileName;
+
+                    try
+                    {
+                        ImportIngredientsToDatabase(filePath);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 

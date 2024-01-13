@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealAction));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,6 +47,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealAction));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -220,6 +220,7 @@
             this.gcid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImportIngredients = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -261,6 +262,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.ImportIngredients);
             this.panel6.Controls.Add(this.guna2Button4);
             this.panel6.Controls.Add(this.guna2Button2);
             this.panel6.Controls.Add(this.label41);
@@ -2496,6 +2498,21 @@
             this.gcnen.ReadOnly = true;
             this.gcnen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // ImportIngredients
+            // 
+            this.ImportIngredients.AutoRoundedCorners = true;
+            this.ImportIngredients.BorderRadius = 21;
+            this.ImportIngredients.CausesValidation = false;
+            this.ImportIngredients.CheckedState.Parent = this.ImportIngredients;
+            this.ImportIngredients.CustomImages.Parent = this.ImportIngredients;
+            this.ImportIngredients.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.ImportIngredients, "ImportIngredients");
+            this.ImportIngredients.ForeColor = System.Drawing.Color.White;
+            this.ImportIngredients.HoverState.Parent = this.ImportIngredients;
+            this.ImportIngredients.Name = "ImportIngredients";
+            this.ImportIngredients.ShadowDecoration.Parent = this.ImportIngredients;
+            this.ImportIngredients.Click += new System.EventHandler(this.ImportIngredients_Click);
+            // 
             // MealAction
             // 
             resources.ApplyResources(this, "$this");
@@ -2706,5 +2723,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn adgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn bdgv;
         private System.Windows.Forms.ComboBox ingredientsearch;
+        private Guna.UI2.WinForms.Guna2Button ImportIngredients;
     }
 }
