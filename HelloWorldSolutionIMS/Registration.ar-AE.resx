@@ -162,6 +162,15 @@
   <data name="subscriptionstatus.Items2" xml:space="preserve">
     <value>مجمدة</value>
   </data>
+  <data name="gender.Items" xml:space="preserve">
+    <value>ذكر</value>
+  </data>
+  <data name="gender.Items1" xml:space="preserve">
+    <value>أنثى </value>
+  </data>
+  <data name="gender.Items2" xml:space="preserve">
+    <value>أخرى</value>
+  </data>
   <data name="Search.Text" xml:space="preserve">
     <value>البحث عن عميل</value>
   </data>
@@ -305,16 +314,16 @@
     <value>رقم الملف</value>
   </data>
   <data name="exportbc.Text" xml:space="preserve">
-    <value>يصدّر</value>
+    <value> تصدير</value>
   </data>
   <data name="Close.Text" xml:space="preserve">
-    <value>يغلق</value>
+    <value>غلاق</value>
   </data>
   <data name="EditBMI.Text" xml:space="preserve">
     <value>تعديل</value>
   </data>
   <data name="AddBMI.Text" xml:space="preserve">
-    <value>يضيف</value>
+    <value> إضافة</value>
   </data>
   <data name="idbc.HeaderText" xml:space="preserve">
     <value>رقم </value>
