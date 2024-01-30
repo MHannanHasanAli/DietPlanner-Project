@@ -564,9 +564,9 @@ namespace HelloWorldSolutionIMS
                     int blue = Convert.ToInt32(reader["Blue"]);
 
                     // Create Color object from the read components
-                    Color color = Color.FromArgb(red, green, blue);
+                    System.Drawing.Color color = System.Drawing.Color.FromArgb(red, green, blue);
 
-                    foreach (Control control in panel1.Controls)
+                    foreach (System.Windows.Forms.Control control in panel1.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -605,9 +605,9 @@ namespace HelloWorldSolutionIMS
                     int blue = Convert.ToInt32(reader["Blue"]);
 
                     // Create Color object from the read components
-                    Color color = Color.FromArgb(red, green, blue);
+                    System.Drawing.Color color = System.Drawing.Color.FromArgb(red, green, blue);
 
-                    foreach (Control control in panel1.Controls)
+                    foreach (System.Windows.Forms.Control control in panel1.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -671,7 +671,7 @@ namespace HelloWorldSolutionIMS
                         {
                             Label label = (Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -690,34 +690,34 @@ namespace HelloWorldSolutionIMS
             }
 
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.GridColor = System.Drawing.Color.Black;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView2.GridColor = Color.Black;
+            guna2DataGridView2.GridColor = System.Drawing.Color.Black;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView4.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView4.GridColor = Color.Black;
+            guna2DataGridView4.GridColor = System.Drawing.Color.Black;
             guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView4.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView4.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView5.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView5.GridColor = Color.Black;
+            guna2DataGridView5.GridColor = System.Drawing.Color.Black;
             guna2DataGridView5.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView5.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView5.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView5.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView7.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView7.GridColor = Color.Black;
+            guna2DataGridView7.GridColor = System.Drawing.Color.Black;
             guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView7.Visible = false;
 
             guna2DataGridView6.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView6.GridColor = Color.Black;
+            guna2DataGridView6.GridColor = System.Drawing.Color.Black;
             guna2DataGridView6.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView6.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView6.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView6.RowTemplate.DefaultCellStyle.ForeColor;
 
@@ -727,7 +727,7 @@ namespace HelloWorldSolutionIMS
             if (languagestatus == 1)
             {
 
-                foreach (Control control in panel1.Controls)
+                foreach (System.Windows.Forms.Control control in panel1.Controls)
                 {
                     // Get the current location of the control
                     var currentLoc = control.Location;
@@ -1215,6 +1215,215 @@ namespace HelloWorldSolutionIMS
                 }
             }
             counterfor4--;
+        }
+
+        private void AddDiabetesCalculation()
+        {
+            string filenosave = fileno.Text;
+            float weightsave;
+
+            if (float.TryParse(weight.Text, out weightsave))
+            {
+            }
+            else
+            {
+                weightsave = 0.00f;
+            }
+
+            float bfinsulin;
+            object cellValue = guna2DataGridView1.Rows[0].Cells[1].Value;
+
+            if (cellValue != null && float.TryParse(cellValue.ToString(), out bfinsulin))
+            {
+                // Parsing successful, bfinsulin now contains the float value
+            }
+            else
+            {
+                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
+                bfinsulin = 0.00f;
+            }
+            cellValue = null;
+            float linsulin;
+
+            cellValue = guna2DataGridView1.Rows[1].Cells[1].Value;
+
+            if (cellValue != null && float.TryParse(cellValue.ToString(), out linsulin))
+            {
+                // Parsing successful, bfinsulin now contains the float value
+            }
+            else
+            {
+                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
+                linsulin = 0.00f;
+            }
+            cellValue = null;
+            float dinsulin;
+
+            cellValue = guna2DataGridView1.Rows[2].Cells[1].Value;
+
+            if (cellValue != null && float.TryParse(cellValue.ToString(), out dinsulin))
+            {
+                // Parsing successful, bfinsulin now contains the float value
+            }
+            else
+            {
+                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
+                dinsulin = 0.00f;
+            }
+            cellValue = null;
+            float sinsulin;
+
+            cellValue = guna2DataGridView1.Rows[3].Cells[1].Value;
+
+            if (cellValue != null && float.TryParse(cellValue.ToString(), out sinsulin))
+            {
+                // Parsing successful, bfinsulin now contains the float value
+            }
+            else
+            {
+                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
+                sinsulin = 0.00f;
+            }
+            cellValue = null;
+
+            float bfcarbs;
+            cellValue = guna2DataGridView2.Rows[0].Cells[1].Value;
+
+            if (cellValue != null && float.TryParse(cellValue.ToString(), out bfcarbs))
+            {
+                // Parsing successful, bfinsulin now contains the float value
+            }
+            else
+            {
+                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
+                bfcarbs = 0.00f;
+            }
+            cellValue = null;
+            float lcarbs;
+
+            cellValue = guna2DataGridView2.Rows[1].Cells[1].Value;
+
+            if (cellValue != null && float.TryParse(cellValue.ToString(), out lcarbs))
+            {
+                // Parsing successful, bfinsulin now contains the float value
+            }
+            else
+            {
+                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
+                lcarbs = 0.00f;
+            }
+            cellValue = null;
+            float dcarbs;
+
+            cellValue = guna2DataGridView2.Rows[2].Cells[1].Value;
+
+            if (cellValue != null && float.TryParse(cellValue.ToString(), out dcarbs))
+            {
+                // Parsing successful, bfinsulin now contains the float value
+            }
+            else
+            {
+                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
+                dcarbs = 0.00f;
+            }
+            cellValue = null;
+            float scarbs;
+
+            cellValue = guna2DataGridView2.Rows[3].Cells[1].Value;
+
+            if (cellValue != null && float.TryParse(cellValue.ToString(), out scarbs))
+            {
+                // Parsing successful, bfinsulin now contains the float value
+            }
+            else
+            {
+                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
+                scarbs = 0.00f;
+            }
+            cellValue = null;
+
+            try
+            {
+                if (string.IsNullOrEmpty(fileno.Text))
+                {
+
+                }
+                else
+                {
+                    //if (edit == 0)
+                    //{
+
+                    //    MainClass.con.Open();
+                    //    SqlCommand cmd = new SqlCommand("INSERT INTO Diabetes (FileNo, Weight, BFInsulin, LInsulin, DInsulin, SInsulin, BFCarbs, LCarbs, DCarbs, SCarbs, FastingGlucose, BeforeLunch, BeforeDinner, BedTime) VALUES (@FileNo, @Weight, @BFInsulin, @LInsulin, @DInsulin, @SInsulin, @BFCarbs, @LCarbs, @DCarbs, @SCarbs, @FastingGlucose, @BeforeLunch, @BeforeDinner, @BedTime)", MainClass.con);
+
+                    //    cmd.Parameters.AddWithValue("@FileNo", fileno.Text);
+                    //    cmd.Parameters.AddWithValue("@Weight", float.TryParse(weight.Text, out float weightVal) ? weightVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@BFInsulin", float.TryParse(guna2DataGridView1.Rows[0].Cells[1].Value?.ToString(), out float bfInsulinVal) ? bfInsulinVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@LInsulin", float.TryParse(guna2DataGridView1.Rows[0].Cells[2].Value?.ToString(), out float lInsulinVal) ? lInsulinVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@DInsulin", float.TryParse(guna2DataGridView1.Rows[0].Cells[3].Value?.ToString(), out float dInsulinVal) ? dInsulinVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@SInsulin", float.TryParse(guna2DataGridView1.Rows[0].Cells[4].Value?.ToString(), out float sInsulinVal) ? sInsulinVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@BFCarbs", float.TryParse(guna2DataGridView1.Rows[0].Cells[5].Value?.ToString(), out float bfCarbsVal) ? bfCarbsVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@LCarbs", float.TryParse(guna2DataGridView1.Rows[0].Cells[6].Value?.ToString(), out float lCarbsVal) ? lCarbsVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@DCarbs", float.TryParse(guna2DataGridView1.Rows[0].Cells[7].Value?.ToString(), out float dCarbsVal) ? dCarbsVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@SCarbs", float.TryParse(guna2DataGridView1.Rows[0].Cells[8].Value?.ToString(), out float sCarbsVal) ? sCarbsVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@FastingGlucose", float.TryParse(guna2DataGridView1.Rows[0].Cells[9].Value?.ToString(), out float fastingGlucoseVal) ? fastingGlucoseVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@BeforeLunch", float.TryParse(guna2DataGridView1.Rows[0].Cells[10].Value?.ToString(), out float beforeLunchVal) ? beforeLunchVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@BeforeDinner", float.TryParse(guna2DataGridView1.Rows[0].Cells[11].Value?.ToString(), out float beforeDinnerVal) ? beforeDinnerVal : 0.00f);
+                    //    cmd.Parameters.AddWithValue("@BedTime", float.TryParse(guna2DataGridView1.Rows[0].Cells[12].Value?.ToString(), out float bedTimeVal) ? bedTimeVal : 0.00f);
+
+                    //    cmd.ExecuteNonQuery();
+                    //    MessageBox.Show("Data added successfully");
+
+                    //    MainClass.con.Close();
+
+                    //}
+                    //else
+                    //{
+
+                    //}
+                }
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                MainClass.con.Close();
+            }
+        }
+
+        private void EditDiabetesCalculation()
+        {
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+
+            }
+        }
+
+        private void DeleteDiabetesCalculation()
+        {
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
