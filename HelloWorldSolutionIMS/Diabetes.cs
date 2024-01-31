@@ -24,6 +24,7 @@ namespace HelloWorldSolutionIMS
             weight.KeyPress += weight_KeyPress;
             weight.TextChanged += weight_TextChanged;
             coderunner = id;
+            LoadData(id);
 
 
         }
@@ -45,6 +46,66 @@ namespace HelloWorldSolutionIMS
             }
 
         }
+
+        private void LoadData(int id)
+        {
+            try
+            {
+                string filenoTOedit = "";
+                string savedweight = "";
+                idToEdit = id;
+
+                MainClass.con.Open();
+
+                // Fetch the row based on ID
+                SqlCommand selectCmd = new SqlCommand("SELECT * FROM Diabetes WHERE ID = @ID", MainClass.con);
+                selectCmd.Parameters.AddWithValue("@ID", idToEdit);
+
+                SqlDataReader reader = selectCmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    filenoTOedit = reader["FileNo"].ToString();
+                    savedweight = reader["Weight"].ToString();
+                    weight.Text = reader["Weight"].ToString();
+                    guna2DataGridView1.Rows[0].Cells[1].Value = reader["BFInsulin"];
+                    guna2DataGridView1.Rows[1].Cells[1].Value = reader["LInsulin"];
+                    guna2DataGridView1.Rows[2].Cells[1].Value = reader["DInsulin"];
+                    guna2DataGridView1.Rows[3].Cells[1].Value = reader["SInsulin"];
+                    guna2DataGridView2.Rows[0].Cells[1].Value = reader["BFCarbs"];
+                    guna2DataGridView2.Rows[1].Cells[1].Value = reader["LCarbs"];
+                    guna2DataGridView2.Rows[2].Cells[1].Value = reader["DCarbs"];
+                    guna2DataGridView2.Rows[3].Cells[1].Value = reader["SCarbs"];
+                    guna2DataGridView4.Rows[0].Cells[2].Value = reader["FastingGlucose"];
+                    guna2DataGridView4.Rows[1].Cells[2].Value = reader["BeforeLunch"];
+                    guna2DataGridView4.Rows[2].Cells[2].Value = reader["BeforeDinner"];
+                    guna2DataGridView4.Rows[3].Cells[2].Value = reader["BedTime"];
+
+                }
+                else
+                {
+                    MessageBox.Show("No data found for the specified ID");
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+                fileno.Text = filenoTOedit;
+                weight.Text = savedweight;
+                FillData();
+                tabControl1.SelectedIndex = 1;
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MainClass.con.Close();
+            }
+        }
+
         private void AddFiveRowsToTablecarbs()
         {
 
