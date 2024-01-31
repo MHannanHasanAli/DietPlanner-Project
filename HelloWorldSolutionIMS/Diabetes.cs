@@ -521,6 +521,22 @@ namespace HelloWorldSolutionIMS
             insulincharb.Text = "";
 
             guna2DataGridView1.Rows[4].Cells[1].Value = "0";
+            guna2DataGridView1.Rows[0].Cells[1].Value = "0";
+            guna2DataGridView1.Rows[1].Cells[1].Value = "0";
+            guna2DataGridView1.Rows[2].Cells[1].Value = "0";
+            guna2DataGridView1.Rows[3].Cells[1].Value = "0";
+
+            //guna2DataGridView2.Rows[4].Cells[1].Value = "0";
+            //guna2DataGridView2.Rows[0].Cells[1].Value = "0";
+            //guna2DataGridView2.Rows[1].Cells[1].Value = "0";
+            //guna2DataGridView2.Rows[2].Cells[1].Value = "0";
+            //guna2DataGridView2.Rows[3].Cells[1].Value = "0";
+
+            guna2DataGridView4.Rows[0].Cells[2].Value = "0";
+            guna2DataGridView4.Rows[1].Cells[2].Value = "0";
+            guna2DataGridView4.Rows[2].Cells[2].Value = "0";
+            guna2DataGridView4.Rows[3].Cells[2].Value = "0";
+
         }
         private void LanguageInfo()
         {
@@ -550,6 +566,7 @@ namespace HelloWorldSolutionIMS
         static int edit = 0;
         private void Diabetes_Load(object sender, EventArgs e)
         {
+            MainClass.HideAllTabsOnTabControl(tabControl1);
             fastingglucose = 0;
             beforelunch = 0;
             beforedinner = 0;
@@ -793,6 +810,7 @@ namespace HelloWorldSolutionIMS
             AddRowsToBloodSuger();
             ShowDiabetes(guna2DataGridView8, iddgv, filenodgv, firstnamedgv, familynamedgv, weightdgv);
             edit = 0;
+
         }
 
         static int counter = 0;
@@ -1380,6 +1398,7 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     fileno.Text = filenoTOedit;
                     weight.Text = savedweight;
+                    FillData();
 
                 }
                 else
@@ -1429,6 +1448,49 @@ namespace HelloWorldSolutionIMS
             finally
             {
                 MainClass.con.Close();
+            }
+        }
+
+        private void FillData()
+        {
+            if (guna2DataGridView4.Rows[0].Cells[2].Value != "")
+            {
+                fastingglucose = double.Parse(guna2DataGridView4.Rows[0].Cells[2].Value.ToString());
+                fastingglucose = fastingglucose - 130;
+                guna2DataGridView5.Rows.Clear();
+                AddRowsToCorrectionFactor();
+                guna2DataGridView6.Rows.Clear();
+                AddRowsToCorrection();
+            }
+
+            if (guna2DataGridView4.Rows[1].Cells[2].Value != "")
+            {
+                beforelunch = double.Parse(guna2DataGridView4.Rows[1].Cells[2].Value.ToString());
+                beforelunch = beforelunch - 180;
+                guna2DataGridView5.Rows.Clear();
+                AddRowsToCorrectionFactor();
+                guna2DataGridView6.Rows.Clear();
+                AddRowsToCorrection();
+            }
+
+            if (guna2DataGridView4.Rows[2].Cells[2].Value != "")
+            {
+                beforedinner = double.Parse(guna2DataGridView4.Rows[2].Cells[2].Value.ToString());
+                beforedinner = beforedinner - 180;
+                guna2DataGridView5.Rows.Clear();
+                AddRowsToCorrectionFactor();
+                guna2DataGridView6.Rows.Clear();
+                AddRowsToCorrection();
+            }
+
+            if (guna2DataGridView4.Rows[3].Cells[2].Value != "")
+            {
+                bedtime = double.Parse(guna2DataGridView4.Rows[3].Cells[2].Value.ToString());
+                bedtime = bedtime - 150;
+                guna2DataGridView5.Rows.Clear();
+                AddRowsToCorrectionFactor();
+                guna2DataGridView6.Rows.Clear();
+                AddRowsToCorrection();
             }
         }
 
