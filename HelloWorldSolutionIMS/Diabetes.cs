@@ -526,16 +526,32 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView1.Rows[2].Cells[1].Value = "0";
             guna2DataGridView1.Rows[3].Cells[1].Value = "0";
 
-            //guna2DataGridView2.Rows[4].Cells[1].Value = "0";
-            //guna2DataGridView2.Rows[0].Cells[1].Value = "0";
-            //guna2DataGridView2.Rows[1].Cells[1].Value = "0";
-            //guna2DataGridView2.Rows[2].Cells[1].Value = "0";
-            //guna2DataGridView2.Rows[3].Cells[1].Value = "0";
+            guna2DataGridView2.Rows[4].Cells[1].Value = "0";
+            guna2DataGridView2.Rows[0].Cells[1].Value = "0";
+            guna2DataGridView2.Rows[1].Cells[1].Value = "0";
+            guna2DataGridView2.Rows[2].Cells[1].Value = "0";
+            guna2DataGridView2.Rows[3].Cells[1].Value = "0";
+
+            guna2DataGridView2.Rows[4].Cells[2].Value = "0";
+            guna2DataGridView2.Rows[0].Cells[2].Value = "0";
+            guna2DataGridView2.Rows[1].Cells[2].Value = "0";
+            guna2DataGridView2.Rows[2].Cells[2].Value = "0";
+            guna2DataGridView2.Rows[3].Cells[2].Value = "0";
 
             guna2DataGridView4.Rows[0].Cells[2].Value = "0";
             guna2DataGridView4.Rows[1].Cells[2].Value = "0";
             guna2DataGridView4.Rows[2].Cells[2].Value = "0";
             guna2DataGridView4.Rows[3].Cells[2].Value = "0";
+
+            if (guna2DataGridView6.Rows.Count > 0)
+            {
+                guna2DataGridView6.Rows[4].Cells[1].Value = "0";
+                guna2DataGridView6.Rows[0].Cells[1].Value = "0";
+                guna2DataGridView6.Rows[1].Cells[1].Value = "0";
+                guna2DataGridView6.Rows[2].Cells[1].Value = "0";
+                guna2DataGridView6.Rows[3].Cells[1].Value = "0";
+            }
+
 
         }
         private void LanguageInfo()
@@ -786,7 +802,7 @@ namespace HelloWorldSolutionIMS
                     var currentLoc = control.Location;
 
                     // Calculate the mirrored location
-                    var mirroredLoc = new Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+                    var mirroredLoc = new System.Drawing.Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
 
                     // Set the mirrored location to the control
                     control.Location = mirroredLoc;
@@ -794,12 +810,12 @@ namespace HelloWorldSolutionIMS
                     // Check if the control is a TextBox and set RightToLeft to true
                     if (control is Guna2TextBox textBox)
                     {
-                        textBox.RightToLeft = RightToLeft.Yes;
+                        textBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
                     }
 
                     if (control is Guna2DataGridView tabel)
                     {
-                        tabel.RightToLeft = RightToLeft.Yes;
+                        tabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
                     }
                 }
 
@@ -938,6 +954,11 @@ namespace HelloWorldSolutionIMS
                     table_total2 = 0;
                     shots = 0;
                     string changedValue = guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+
+                    if (changedValue == "0")
+                    {
+                        return;
+                    }
                     guna2DataGridView7.Visible = true;
                     for (int i = 0; i < 4; i++)
                     {
@@ -946,6 +967,8 @@ namespace HelloWorldSolutionIMS
                             table_total2 += double.Parse(guna2DataGridView2.Rows[0 + i].Cells[e.ColumnIndex].Value.ToString());
                         }
                     }
+
+
                     //table_total2 += double.Parse(changedValue);
 
                     double cellvalue = double.Parse(changedValue) / insulincharbcalc;
@@ -1186,7 +1209,7 @@ namespace HelloWorldSolutionIMS
                     }
                     else
                     {
-                        MessageBox.Show("No customer with this file no exist!");
+
                     }
                     if (conn == 1)
                     {
@@ -1300,10 +1323,10 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@LCarbs", float.TryParse(guna2DataGridView2.Rows[1].Cells[1].Value?.ToString(), out float lCarbsVal) ? lCarbsVal : 0.00f);
                         cmd.Parameters.AddWithValue("@DCarbs", float.TryParse(guna2DataGridView2.Rows[2].Cells[1].Value?.ToString(), out float dCarbsVal) ? dCarbsVal : 0.00f);
                         cmd.Parameters.AddWithValue("@SCarbs", float.TryParse(guna2DataGridView2.Rows[3].Cells[1].Value?.ToString(), out float sCarbsVal) ? sCarbsVal : 0.00f);
-                        cmd.Parameters.AddWithValue("@FastingGlucose", float.TryParse(guna2DataGridView4.Rows[0].Cells[1].Value?.ToString(), out float fastingGlucoseVal) ? fastingGlucoseVal : 0.00f);
-                        cmd.Parameters.AddWithValue("@BeforeLunch", float.TryParse(guna2DataGridView4.Rows[1].Cells[1].Value?.ToString(), out float beforeLunchVal) ? beforeLunchVal : 0.00f);
-                        cmd.Parameters.AddWithValue("@BeforeDinner", float.TryParse(guna2DataGridView4.Rows[2].Cells[1].Value?.ToString(), out float beforeDinnerVal) ? beforeDinnerVal : 0.00f);
-                        cmd.Parameters.AddWithValue("@BedTime", float.TryParse(guna2DataGridView4.Rows[3].Cells[1].Value?.ToString(), out float bedTimeVal) ? bedTimeVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@FastingGlucose", float.TryParse(guna2DataGridView4.Rows[0].Cells[2].Value?.ToString(), out float fastingGlucoseVal) ? fastingGlucoseVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BeforeLunch", float.TryParse(guna2DataGridView4.Rows[1].Cells[2].Value?.ToString(), out float beforeLunchVal) ? beforeLunchVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BeforeDinner", float.TryParse(guna2DataGridView4.Rows[2].Cells[2].Value?.ToString(), out float beforeDinnerVal) ? beforeDinnerVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BedTime", float.TryParse(guna2DataGridView4.Rows[3].Cells[2].Value?.ToString(), out float bedTimeVal) ? bedTimeVal : 0.00f);
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Data added successfully");
@@ -1538,6 +1561,14 @@ namespace HelloWorldSolutionIMS
 
             edit = 0;
             tabControl1.SelectedIndex = 1;
+            //if (guna2DataGridView6.Rows.Count > 0)
+            //{
+            //    guna2DataGridView2.Rows[4].Cells[1].Value = "0";
+            //    guna2DataGridView2.Rows[0].Cells[1].Value = "0";
+            //    guna2DataGridView2.Rows[1].Cells[1].Value = "0";
+            //    guna2DataGridView2.Rows[2].Cells[1].Value = "0";
+            //    guna2DataGridView2.Rows[3].Cells[1].Value = "0";
+            //}
         }
 
         private void EditDiabetes_Click(object sender, EventArgs e)
