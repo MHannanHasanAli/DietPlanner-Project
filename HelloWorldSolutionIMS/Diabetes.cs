@@ -1569,14 +1569,7 @@ namespace HelloWorldSolutionIMS
 
             edit = 0;
             tabControl1.SelectedIndex = 1;
-            //if (guna2DataGridView6.Rows.Count > 0)
-            //{
-            //    guna2DataGridView2.Rows[4].Cells[1].Value = "0";
-            //    guna2DataGridView2.Rows[0].Cells[1].Value = "0";
-            //    guna2DataGridView2.Rows[1].Cells[1].Value = "0";
-            //    guna2DataGridView2.Rows[2].Cells[1].Value = "0";
-            //    guna2DataGridView2.Rows[3].Cells[1].Value = "0";
-            //}
+
         }
 
         private void EditDiabetes_Click(object sender, EventArgs e)

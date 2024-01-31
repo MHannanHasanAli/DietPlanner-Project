@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.sidebar = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.mainpanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton10 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton5 = new Guna.UI2.WinForms.Guna2TileButton();
@@ -43,12 +42,12 @@
             this.guna2TileButton12 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton6 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton9 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.mainpanel = new Guna.UI2.WinForms.Guna2Panel();
             this.sidebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebar
             // 
-            resources.ApplyResources(this.sidebar, "sidebar");
             this.sidebar.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.sidebar.Controls.Add(this.guna2TileButton1);
             this.sidebar.Controls.Add(this.guna2TileButton10);
@@ -62,27 +61,19 @@
             this.sidebar.Controls.Add(this.guna2TileButton12);
             this.sidebar.Controls.Add(this.guna2TileButton6);
             this.sidebar.Controls.Add(this.guna2TileButton9);
+            resources.ApplyResources(this.sidebar, "sidebar");
             this.sidebar.FillColor = System.Drawing.Color.Transparent;
             this.sidebar.FillColor2 = System.Drawing.Color.Transparent;
             this.sidebar.ForeColor = System.Drawing.Color.Black;
             this.sidebar.Name = "sidebar";
             this.sidebar.ShadowDecoration.Parent = this.sidebar;
             // 
-            // mainpanel
-            // 
-            resources.ApplyResources(this.mainpanel, "mainpanel");
-            this.mainpanel.FillColor = System.Drawing.Color.Honeydew;
-            this.mainpanel.ForeColor = System.Drawing.Color.Black;
-            this.mainpanel.Name = "mainpanel";
-            this.mainpanel.ShadowDecoration.Parent = this.mainpanel;
-            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
-            // 
             // guna2TileButton1
             // 
-            resources.ApplyResources(this.guna2TileButton1, "guna2TileButton1");
             this.guna2TileButton1.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton1.CheckedState.Parent = this.guna2TileButton1;
             this.guna2TileButton1.CustomImages.Parent = this.guna2TileButton1;
+            resources.ApplyResources(this.guna2TileButton1, "guna2TileButton1");
             this.guna2TileButton1.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton1.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton1.HoverState.Parent = this.guna2TileButton1;
@@ -97,10 +88,10 @@
             // 
             // guna2TileButton10
             // 
-            resources.ApplyResources(this.guna2TileButton10, "guna2TileButton10");
             this.guna2TileButton10.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton10.CheckedState.Parent = this.guna2TileButton10;
             this.guna2TileButton10.CustomImages.Parent = this.guna2TileButton10;
+            resources.ApplyResources(this.guna2TileButton10, "guna2TileButton10");
             this.guna2TileButton10.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton10.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton10.HoverState.Parent = this.guna2TileButton10;
@@ -115,10 +106,10 @@
             // 
             // guna2TileButton5
             // 
-            resources.ApplyResources(this.guna2TileButton5, "guna2TileButton5");
             this.guna2TileButton5.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton5.CheckedState.Parent = this.guna2TileButton5;
             this.guna2TileButton5.CustomImages.Parent = this.guna2TileButton5;
+            resources.ApplyResources(this.guna2TileButton5, "guna2TileButton5");
             this.guna2TileButton5.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton5.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton5.HoverState.Parent = this.guna2TileButton5;
@@ -133,10 +124,10 @@
             // 
             // guna2TileButton11
             // 
-            resources.ApplyResources(this.guna2TileButton11, "guna2TileButton11");
             this.guna2TileButton11.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton11.CheckedState.Parent = this.guna2TileButton11;
             this.guna2TileButton11.CustomImages.Parent = this.guna2TileButton11;
+            resources.ApplyResources(this.guna2TileButton11, "guna2TileButton11");
             this.guna2TileButton11.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton11.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton11.HoverState.Parent = this.guna2TileButton11;
@@ -151,10 +142,10 @@
             // 
             // guna2TileButton7
             // 
-            resources.ApplyResources(this.guna2TileButton7, "guna2TileButton7");
             this.guna2TileButton7.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton7.CheckedState.Parent = this.guna2TileButton7;
             this.guna2TileButton7.CustomImages.Parent = this.guna2TileButton7;
+            resources.ApplyResources(this.guna2TileButton7, "guna2TileButton7");
             this.guna2TileButton7.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton7.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton7.HoverState.Parent = this.guna2TileButton7;
@@ -169,10 +160,10 @@
             // 
             // guna2TileButton3
             // 
-            resources.ApplyResources(this.guna2TileButton3, "guna2TileButton3");
             this.guna2TileButton3.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton3.CheckedState.Parent = this.guna2TileButton3;
             this.guna2TileButton3.CustomImages.Parent = this.guna2TileButton3;
+            resources.ApplyResources(this.guna2TileButton3, "guna2TileButton3");
             this.guna2TileButton3.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton3.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton3.HoverState.Parent = this.guna2TileButton3;
@@ -187,10 +178,10 @@
             // 
             // guna2TileButton4
             // 
-            resources.ApplyResources(this.guna2TileButton4, "guna2TileButton4");
             this.guna2TileButton4.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton4.CheckedState.Parent = this.guna2TileButton4;
             this.guna2TileButton4.CustomImages.Parent = this.guna2TileButton4;
+            resources.ApplyResources(this.guna2TileButton4, "guna2TileButton4");
             this.guna2TileButton4.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton4.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton4.HoverState.Parent = this.guna2TileButton4;
@@ -205,10 +196,10 @@
             // 
             // guna2TileButton2
             // 
-            resources.ApplyResources(this.guna2TileButton2, "guna2TileButton2");
             this.guna2TileButton2.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton2.CheckedState.Parent = this.guna2TileButton2;
             this.guna2TileButton2.CustomImages.Parent = this.guna2TileButton2;
+            resources.ApplyResources(this.guna2TileButton2, "guna2TileButton2");
             this.guna2TileButton2.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton2.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton2.HoverState.Parent = this.guna2TileButton2;
@@ -223,10 +214,10 @@
             // 
             // guna2TileButton8
             // 
-            resources.ApplyResources(this.guna2TileButton8, "guna2TileButton8");
             this.guna2TileButton8.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton8.CheckedState.Parent = this.guna2TileButton8;
             this.guna2TileButton8.CustomImages.Parent = this.guna2TileButton8;
+            resources.ApplyResources(this.guna2TileButton8, "guna2TileButton8");
             this.guna2TileButton8.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton8.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton8.HoverState.Parent = this.guna2TileButton8;
@@ -241,10 +232,10 @@
             // 
             // guna2TileButton12
             // 
-            resources.ApplyResources(this.guna2TileButton12, "guna2TileButton12");
             this.guna2TileButton12.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton12.CheckedState.Parent = this.guna2TileButton12;
             this.guna2TileButton12.CustomImages.Parent = this.guna2TileButton12;
+            resources.ApplyResources(this.guna2TileButton12, "guna2TileButton12");
             this.guna2TileButton12.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton12.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton12.HoverState.Parent = this.guna2TileButton12;
@@ -259,10 +250,10 @@
             // 
             // guna2TileButton6
             // 
-            resources.ApplyResources(this.guna2TileButton6, "guna2TileButton6");
             this.guna2TileButton6.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton6.CheckedState.Parent = this.guna2TileButton6;
             this.guna2TileButton6.CustomImages.Parent = this.guna2TileButton6;
+            resources.ApplyResources(this.guna2TileButton6, "guna2TileButton6");
             this.guna2TileButton6.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton6.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton6.HoverState.Parent = this.guna2TileButton6;
@@ -277,10 +268,10 @@
             // 
             // guna2TileButton9
             // 
-            resources.ApplyResources(this.guna2TileButton9, "guna2TileButton9");
             this.guna2TileButton9.BackColor = System.Drawing.Color.Transparent;
             this.guna2TileButton9.CheckedState.Parent = this.guna2TileButton9;
             this.guna2TileButton9.CustomImages.Parent = this.guna2TileButton9;
+            resources.ApplyResources(this.guna2TileButton9, "guna2TileButton9");
             this.guna2TileButton9.FillColor = System.Drawing.Color.Transparent;
             this.guna2TileButton9.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton9.HoverState.Parent = this.guna2TileButton9;
@@ -292,6 +283,15 @@
             this.guna2TileButton9.ShadowDecoration.Parent = this.guna2TileButton9;
             this.guna2TileButton9.TextOffset = new System.Drawing.Point(0, -15);
             this.guna2TileButton9.Click += new System.EventHandler(this.guna2TileButton9_Click);
+            // 
+            // mainpanel
+            // 
+            resources.ApplyResources(this.mainpanel, "mainpanel");
+            this.mainpanel.FillColor = System.Drawing.Color.Honeydew;
+            this.mainpanel.ForeColor = System.Drawing.Color.Black;
+            this.mainpanel.Name = "mainpanel";
+            this.mainpanel.ShadowDecoration.Parent = this.mainpanel;
+            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
             // MainPage
             // 
