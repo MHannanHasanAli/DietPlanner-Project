@@ -492,6 +492,36 @@ namespace HelloWorldSolutionIMS
         static double table_total2;
 
         static int languagestatus;
+
+        private void ClearForm()
+        {
+            fastingglucose = 0;
+            beforelunch = 0;
+            beforedinner = 0;
+            bedtime = 0;
+            cofactor = 0;
+
+            ib = 0;
+            il = 0;
+            id = 0;
+            iss = 0;
+
+            cfb = 0;
+            cfl = 0;
+            cfd = 0;
+            cfs = 0;
+
+            table_total = 0;
+
+            fileno.Text = "";
+            weight.Text = "";
+            totalinsulin.Text = "";
+            baselineinsulin.Text = "";
+            bolusinsulin.Text = "";
+            insulincharb.Text = "";
+
+            guna2DataGridView1.Rows[4].Cells[1].Value = "0";
+        }
         private void LanguageInfo()
         {
             MainClass.con.Open();
@@ -517,6 +547,7 @@ namespace HelloWorldSolutionIMS
             MainClass.con.Close();
 
         }
+        static int edit = 0;
         private void Diabetes_Load(object sender, EventArgs e)
         {
             fastingglucose = 0;
@@ -723,6 +754,11 @@ namespace HelloWorldSolutionIMS
 
             guna2DataGridView6.Rows.Clear();
 
+            guna2DataGridView8.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            guna2DataGridView8.GridColor = System.Drawing.Color.Black;
+            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView8.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView8.RowTemplate.DefaultCellStyle.ForeColor;
+
             LanguageInfo();
             if (languagestatus == 1)
             {
@@ -755,6 +791,8 @@ namespace HelloWorldSolutionIMS
             AddFiveRowsToTable();
             AddFiveRowsToTablecarbs();
             AddRowsToBloodSuger();
+            ShowDiabetes(guna2DataGridView8, iddgv, filenodgv, firstnamedgv, familynamedgv, weightdgv);
+            edit = 0;
         }
 
         static int counter = 0;
@@ -1219,128 +1257,6 @@ namespace HelloWorldSolutionIMS
 
         private void AddDiabetesCalculation()
         {
-            string filenosave = fileno.Text;
-            float weightsave;
-
-            if (float.TryParse(weight.Text, out weightsave))
-            {
-            }
-            else
-            {
-                weightsave = 0.00f;
-            }
-
-            float bfinsulin;
-            object cellValue = guna2DataGridView1.Rows[0].Cells[1].Value;
-
-            if (cellValue != null && float.TryParse(cellValue.ToString(), out bfinsulin))
-            {
-                // Parsing successful, bfinsulin now contains the float value
-            }
-            else
-            {
-                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
-                bfinsulin = 0.00f;
-            }
-            cellValue = null;
-            float linsulin;
-
-            cellValue = guna2DataGridView1.Rows[1].Cells[1].Value;
-
-            if (cellValue != null && float.TryParse(cellValue.ToString(), out linsulin))
-            {
-                // Parsing successful, bfinsulin now contains the float value
-            }
-            else
-            {
-                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
-                linsulin = 0.00f;
-            }
-            cellValue = null;
-            float dinsulin;
-
-            cellValue = guna2DataGridView1.Rows[2].Cells[1].Value;
-
-            if (cellValue != null && float.TryParse(cellValue.ToString(), out dinsulin))
-            {
-                // Parsing successful, bfinsulin now contains the float value
-            }
-            else
-            {
-                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
-                dinsulin = 0.00f;
-            }
-            cellValue = null;
-            float sinsulin;
-
-            cellValue = guna2DataGridView1.Rows[3].Cells[1].Value;
-
-            if (cellValue != null && float.TryParse(cellValue.ToString(), out sinsulin))
-            {
-                // Parsing successful, bfinsulin now contains the float value
-            }
-            else
-            {
-                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
-                sinsulin = 0.00f;
-            }
-            cellValue = null;
-
-            float bfcarbs;
-            cellValue = guna2DataGridView2.Rows[0].Cells[1].Value;
-
-            if (cellValue != null && float.TryParse(cellValue.ToString(), out bfcarbs))
-            {
-                // Parsing successful, bfinsulin now contains the float value
-            }
-            else
-            {
-                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
-                bfcarbs = 0.00f;
-            }
-            cellValue = null;
-            float lcarbs;
-
-            cellValue = guna2DataGridView2.Rows[1].Cells[1].Value;
-
-            if (cellValue != null && float.TryParse(cellValue.ToString(), out lcarbs))
-            {
-                // Parsing successful, bfinsulin now contains the float value
-            }
-            else
-            {
-                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
-                lcarbs = 0.00f;
-            }
-            cellValue = null;
-            float dcarbs;
-
-            cellValue = guna2DataGridView2.Rows[2].Cells[1].Value;
-
-            if (cellValue != null && float.TryParse(cellValue.ToString(), out dcarbs))
-            {
-                // Parsing successful, bfinsulin now contains the float value
-            }
-            else
-            {
-                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
-                dcarbs = 0.00f;
-            }
-            cellValue = null;
-            float scarbs;
-
-            cellValue = guna2DataGridView2.Rows[3].Cells[1].Value;
-
-            if (cellValue != null && float.TryParse(cellValue.ToString(), out scarbs))
-            {
-                // Parsing successful, bfinsulin now contains the float value
-            }
-            else
-            {
-                // Parsing failed or cell value is null, set bfinsulin to 0.00 or any default value
-                scarbs = 0.00f;
-            }
-            cellValue = null;
 
             try
             {
@@ -1350,43 +1266,131 @@ namespace HelloWorldSolutionIMS
                 }
                 else
                 {
-                    //if (edit == 0)
-                    //{
+                    if (edit == 0)
+                    {
 
-                    //    MainClass.con.Open();
-                    //    SqlCommand cmd = new SqlCommand("INSERT INTO Diabetes (FileNo, Weight, BFInsulin, LInsulin, DInsulin, SInsulin, BFCarbs, LCarbs, DCarbs, SCarbs, FastingGlucose, BeforeLunch, BeforeDinner, BedTime) VALUES (@FileNo, @Weight, @BFInsulin, @LInsulin, @DInsulin, @SInsulin, @BFCarbs, @LCarbs, @DCarbs, @SCarbs, @FastingGlucose, @BeforeLunch, @BeforeDinner, @BedTime)", MainClass.con);
+                        MainClass.con.Open();
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Diabetes (FileNo, Weight, BFInsulin, LInsulin, DInsulin, SInsulin, BFCarbs, LCarbs, DCarbs, SCarbs, FastingGlucose, BeforeLunch, BeforeDinner, BedTime) VALUES (@FileNo, @Weight, @BFInsulin, @LInsulin, @DInsulin, @SInsulin, @BFCarbs, @LCarbs, @DCarbs, @SCarbs, @FastingGlucose, @BeforeLunch, @BeforeDinner, @BedTime)", MainClass.con);
 
-                    //    cmd.Parameters.AddWithValue("@FileNo", fileno.Text);
-                    //    cmd.Parameters.AddWithValue("@Weight", float.TryParse(weight.Text, out float weightVal) ? weightVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@BFInsulin", float.TryParse(guna2DataGridView1.Rows[0].Cells[1].Value?.ToString(), out float bfInsulinVal) ? bfInsulinVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@LInsulin", float.TryParse(guna2DataGridView1.Rows[0].Cells[2].Value?.ToString(), out float lInsulinVal) ? lInsulinVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@DInsulin", float.TryParse(guna2DataGridView1.Rows[0].Cells[3].Value?.ToString(), out float dInsulinVal) ? dInsulinVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@SInsulin", float.TryParse(guna2DataGridView1.Rows[0].Cells[4].Value?.ToString(), out float sInsulinVal) ? sInsulinVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@BFCarbs", float.TryParse(guna2DataGridView1.Rows[0].Cells[5].Value?.ToString(), out float bfCarbsVal) ? bfCarbsVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@LCarbs", float.TryParse(guna2DataGridView1.Rows[0].Cells[6].Value?.ToString(), out float lCarbsVal) ? lCarbsVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@DCarbs", float.TryParse(guna2DataGridView1.Rows[0].Cells[7].Value?.ToString(), out float dCarbsVal) ? dCarbsVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@SCarbs", float.TryParse(guna2DataGridView1.Rows[0].Cells[8].Value?.ToString(), out float sCarbsVal) ? sCarbsVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@FastingGlucose", float.TryParse(guna2DataGridView1.Rows[0].Cells[9].Value?.ToString(), out float fastingGlucoseVal) ? fastingGlucoseVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@BeforeLunch", float.TryParse(guna2DataGridView1.Rows[0].Cells[10].Value?.ToString(), out float beforeLunchVal) ? beforeLunchVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@BeforeDinner", float.TryParse(guna2DataGridView1.Rows[0].Cells[11].Value?.ToString(), out float beforeDinnerVal) ? beforeDinnerVal : 0.00f);
-                    //    cmd.Parameters.AddWithValue("@BedTime", float.TryParse(guna2DataGridView1.Rows[0].Cells[12].Value?.ToString(), out float bedTimeVal) ? bedTimeVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@FileNo", fileno.Text);
+                        cmd.Parameters.AddWithValue("@Weight", float.TryParse(weight.Text, out float weightVal) ? weightVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BFInsulin", float.TryParse(guna2DataGridView1.Rows[0].Cells[1].Value?.ToString(), out float bfInsulinVal) ? bfInsulinVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@LInsulin", float.TryParse(guna2DataGridView1.Rows[1].Cells[1].Value?.ToString(), out float lInsulinVal) ? lInsulinVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@DInsulin", float.TryParse(guna2DataGridView1.Rows[2].Cells[1].Value?.ToString(), out float dInsulinVal) ? dInsulinVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@SInsulin", float.TryParse(guna2DataGridView1.Rows[3].Cells[1].Value?.ToString(), out float sInsulinVal) ? sInsulinVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BFCarbs", float.TryParse(guna2DataGridView2.Rows[0].Cells[1].Value?.ToString(), out float bfCarbsVal) ? bfCarbsVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@LCarbs", float.TryParse(guna2DataGridView2.Rows[1].Cells[1].Value?.ToString(), out float lCarbsVal) ? lCarbsVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@DCarbs", float.TryParse(guna2DataGridView2.Rows[2].Cells[1].Value?.ToString(), out float dCarbsVal) ? dCarbsVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@SCarbs", float.TryParse(guna2DataGridView2.Rows[3].Cells[1].Value?.ToString(), out float sCarbsVal) ? sCarbsVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@FastingGlucose", float.TryParse(guna2DataGridView4.Rows[0].Cells[1].Value?.ToString(), out float fastingGlucoseVal) ? fastingGlucoseVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BeforeLunch", float.TryParse(guna2DataGridView4.Rows[1].Cells[1].Value?.ToString(), out float beforeLunchVal) ? beforeLunchVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BeforeDinner", float.TryParse(guna2DataGridView4.Rows[2].Cells[1].Value?.ToString(), out float beforeDinnerVal) ? beforeDinnerVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BedTime", float.TryParse(guna2DataGridView4.Rows[3].Cells[1].Value?.ToString(), out float bedTimeVal) ? bedTimeVal : 0.00f);
 
-                    //    cmd.ExecuteNonQuery();
-                    //    MessageBox.Show("Data added successfully");
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data added successfully");
 
-                    //    MainClass.con.Close();
+                        MainClass.con.Close();
 
-                    //}
-                    //else
-                    //{
+                    }
+                    else
+                    {
+                        MainClass.con.Open();
+                        SqlCommand cmd = new SqlCommand("UPDATE Diabetes SET FileNo = @FileNo, Weight = @Weight, BFInsulin = @BFInsulin, LInsulin = @LInsulin, DInsulin = @DInsulin, SInsulin = @SInsulin, BFCarbs = @BFCarbs, LCarbs = @LCarbs, DCarbs = @DCarbs, SCarbs = @SCarbs, FastingGlucose = @FastingGlucose, BeforeLunch = @BeforeLunch, BeforeDinner = @BeforeDinner, BedTime = @BedTime WHERE ID = @ID", MainClass.con);
 
-                    //}
+                        cmd.Parameters.AddWithValue("@ID", idToEdit); // Replace yourSelectedId with the actual ID of the row you want to update.
+                        cmd.Parameters.AddWithValue("@FileNo", fileno.Text);
+                        cmd.Parameters.AddWithValue("@Weight", float.TryParse(weight.Text, out float weightVal) ? weightVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BFInsulin", float.TryParse(guna2DataGridView1.Rows[0].Cells[1].Value?.ToString(), out float bfInsulinVal) ? bfInsulinVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@LInsulin", float.TryParse(guna2DataGridView1.Rows[1].Cells[1].Value?.ToString(), out float lInsulinVal) ? lInsulinVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@DInsulin", float.TryParse(guna2DataGridView1.Rows[2].Cells[1].Value?.ToString(), out float dInsulinVal) ? dInsulinVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@SInsulin", float.TryParse(guna2DataGridView1.Rows[3].Cells[1].Value?.ToString(), out float sInsulinVal) ? sInsulinVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BFCarbs", float.TryParse(guna2DataGridView2.Rows[0].Cells[1].Value?.ToString(), out float bfCarbsVal) ? bfCarbsVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@LCarbs", float.TryParse(guna2DataGridView2.Rows[1].Cells[1].Value?.ToString(), out float lCarbsVal) ? lCarbsVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@DCarbs", float.TryParse(guna2DataGridView2.Rows[2].Cells[1].Value?.ToString(), out float dCarbsVal) ? dCarbsVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@SCarbs", float.TryParse(guna2DataGridView2.Rows[3].Cells[1].Value?.ToString(), out float sCarbsVal) ? sCarbsVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@FastingGlucose", float.TryParse(guna2DataGridView4.Rows[0].Cells[2].Value?.ToString(), out float fastingGlucoseVal) ? fastingGlucoseVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BeforeLunch", float.TryParse(guna2DataGridView4.Rows[1].Cells[2].Value?.ToString(), out float beforeLunchVal) ? beforeLunchVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BeforeDinner", float.TryParse(guna2DataGridView4.Rows[2].Cells[2].Value?.ToString(), out float beforeDinnerVal) ? beforeDinnerVal : 0.00f);
+                        cmd.Parameters.AddWithValue("@BedTime", float.TryParse(guna2DataGridView4.Rows[3].Cells[2].Value?.ToString(), out float bedTimeVal) ? bedTimeVal : 0.00f);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data updated successfully");
+
+                        MainClass.con.Close();
+
+                    }
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MainClass.con.Close();
+            }
+        }
+        static int idToEdit;
+        private void EditDiabetesCalculation()
+        {
+            try
+            {
+                if (guna2DataGridView8.SelectedRows.Count > 0)
+                {
+                    string filenoTOedit = "";
+                    string savedweight = "";
+                    idToEdit = Convert.ToInt32(guna2DataGridView8.SelectedRows[0].Cells["iddgv"].Value);
 
+                    MainClass.con.Open();
+
+                    // Fetch the row based on ID
+                    SqlCommand selectCmd = new SqlCommand("SELECT * FROM Diabetes WHERE ID = @ID", MainClass.con);
+                    selectCmd.Parameters.AddWithValue("@ID", idToEdit);
+
+                    SqlDataReader reader = selectCmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        filenoTOedit = reader["FileNo"].ToString();
+                        savedweight = reader["Weight"].ToString();
+                        weight.Text = reader["Weight"].ToString();
+                        guna2DataGridView1.Rows[0].Cells[1].Value = reader["BFInsulin"];
+                        guna2DataGridView1.Rows[1].Cells[1].Value = reader["LInsulin"];
+                        guna2DataGridView1.Rows[2].Cells[1].Value = reader["DInsulin"];
+                        guna2DataGridView1.Rows[3].Cells[1].Value = reader["SInsulin"];
+                        guna2DataGridView2.Rows[0].Cells[1].Value = reader["BFCarbs"];
+                        guna2DataGridView2.Rows[1].Cells[1].Value = reader["LCarbs"];
+                        guna2DataGridView2.Rows[2].Cells[1].Value = reader["DCarbs"];
+                        guna2DataGridView2.Rows[3].Cells[1].Value = reader["SCarbs"];
+                        guna2DataGridView4.Rows[0].Cells[2].Value = reader["FastingGlucose"];
+                        guna2DataGridView4.Rows[1].Cells[2].Value = reader["BeforeLunch"];
+                        guna2DataGridView4.Rows[2].Cells[2].Value = reader["BeforeDinner"];
+                        guna2DataGridView4.Rows[3].Cells[2].Value = reader["BedTime"];
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No data found for the specified ID");
+                    }
+
+                    reader.Close();
+                    MainClass.con.Close();
+                    fileno.Text = filenoTOedit;
+                    weight.Text = savedweight;
+
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row in the DataGridView.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -1394,19 +1398,37 @@ namespace HelloWorldSolutionIMS
             }
         }
 
-        private void EditDiabetesCalculation()
+        private void ShowDiabetes(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn file, DataGridViewColumn weight, DataGridViewColumn firstname, DataGridViewColumn lastname)
         {
+            SqlCommand cmd;
             try
             {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT D.ID, D.FileNo, D.Weight, R.FirstName, R.familyName FROM Diabetes D INNER JOIN Customer R ON D.FileNo = R.FileNo", MainClass.con);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                id.DataPropertyName = dt.Columns["ID"].ToString();
+                file.DataPropertyName = dt.Columns["FileNo"].ToString();
+                weight.DataPropertyName = dt.Columns["Weight"].ToString();
+                firstname.DataPropertyName = dt.Columns["FirstName"].ToString();
+                lastname.DataPropertyName = dt.Columns["familyName"].ToString();
+
+                dgv.DataSource = dt;
+                MainClass.con.Close();
 
             }
-            catch
+            catch (Exception ex)
             {
-
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
             }
             finally
             {
-
+                MainClass.con.Close();
             }
         }
 
@@ -1414,21 +1436,77 @@ namespace HelloWorldSolutionIMS
         {
             try
             {
+                if (guna2DataGridView8.SelectedRows.Count > 0)
+                {
+                    int idToDelete = Convert.ToInt32(guna2DataGridView8.SelectedRows[0].Cells[0].Value);
 
+                    MainClass.con.Open();
+
+                    // Delete row based on ID
+                    SqlCommand deleteCmd = new SqlCommand("DELETE FROM Diabetes WHERE ID = @ID", MainClass.con);
+                    deleteCmd.Parameters.AddWithValue("@ID", idToDelete);
+
+                    MainClass.con.Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("Please select a diabetes calculation to delete.");
+                }
             }
-            catch
+            catch (Exception ex)
             {
-
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
             }
             finally
             {
-
+                MainClass.con.Close();
             }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void AddDiabetes_Click(object sender, EventArgs e)
+        {
+            ClearForm();
+
+            edit = 0;
+            tabControl1.SelectedIndex = 1;
+        }
+
+        private void EditDiabetes_Click(object sender, EventArgs e)
+        {
+            ClearForm();
+            EditDiabetesCalculation();
+
+            edit = 1;
+            tabControl1.SelectedIndex = 1;
+
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            edit = 0;
+            tabControl1.SelectedIndex = 0;
+            ClearForm();
+        }
+
+        private void SaveDiabetes_Click(object sender, EventArgs e)
+        {
+            AddDiabetesCalculation();
+            edit = 0;
+            ShowDiabetes(guna2DataGridView8, iddgv, filenodgv, firstnamedgv, familynamedgv, weightdgv);
+            tabControl1.SelectedIndex = 0;
+        }
+
+        private void DeleteDiabetes_Click(object sender, EventArgs e)
+        {
+            DeleteDiabetesCalculation();
+            ShowDiabetes(guna2DataGridView8, iddgv, filenodgv, firstnamedgv, familynamedgv, weightdgv);
         }
     }
 }
