@@ -1392,36 +1392,6 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Diabetes</value>
   </data>
-  <data name="&gt;&gt;iddgv.Name" xml:space="preserve">
-    <value>iddgv</value>
-  </data>
-  <data name="&gt;&gt;iddgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;filenodgv.Name" xml:space="preserve">
-    <value>filenodgv</value>
-  </data>
-  <data name="&gt;&gt;filenodgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;firstnamedgv.Name" xml:space="preserve">
-    <value>firstnamedgv</value>
-  </data>
-  <data name="&gt;&gt;firstnamedgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;familynamedgv.Name" xml:space="preserve">
-    <value>familynamedgv</value>
-  </data>
-  <data name="&gt;&gt;familynamedgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;weightdgv.Name" xml:space="preserve">
-    <value>weightdgv</value>
-  </data>
-  <data name="&gt;&gt;weightdgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn8.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn8</value>
   </data>
@@ -1516,6 +1486,36 @@
     <value>COL3</value>
   </data>
   <data name="&gt;&gt;COL3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;iddgv.Name" xml:space="preserve">
+    <value>iddgv</value>
+  </data>
+  <data name="&gt;&gt;iddgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;filenodgv.Name" xml:space="preserve">
+    <value>filenodgv</value>
+  </data>
+  <data name="&gt;&gt;filenodgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;firstnamedgv.Name" xml:space="preserve">
+    <value>firstnamedgv</value>
+  </data>
+  <data name="&gt;&gt;firstnamedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;familynamedgv.Name" xml:space="preserve">
+    <value>familynamedgv</value>
+  </data>
+  <data name="&gt;&gt;familynamedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;weightdgv.Name" xml:space="preserve">
+    <value>weightdgv</value>
+  </data>
+  <data name="&gt;&gt;weightdgv.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

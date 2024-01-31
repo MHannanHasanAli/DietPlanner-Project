@@ -1523,15 +1523,23 @@ namespace HelloWorldSolutionIMS
             {
                 if (guna2DataGridView8.SelectedRows.Count > 0)
                 {
-                    int idToDelete = Convert.ToInt32(guna2DataGridView8.SelectedRows[0].Cells[0].Value);
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete this diabetes calculation?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    MainClass.con.Open();
+                    if (result == DialogResult.Yes)
+                    {
+                        int idToDelete = Convert.ToInt32(guna2DataGridView8.SelectedRows[0].Cells[0].Value);
 
-                    // Delete row based on ID
-                    SqlCommand deleteCmd = new SqlCommand("DELETE FROM Diabetes WHERE ID = @ID", MainClass.con);
-                    deleteCmd.Parameters.AddWithValue("@ID", idToDelete);
+                        MainClass.con.Open();
 
-                    MainClass.con.Close();
+                        // Delete row based on ID
+                        SqlCommand deleteCmd = new SqlCommand("DELETE FROM Diabetes WHERE ID = @ID", MainClass.con);
+                        deleteCmd.Parameters.AddWithValue("@ID", idToDelete);
+
+                        // Execute the DELETE command
+                        deleteCmd.ExecuteNonQuery();
+
+                        MainClass.con.Close();
+                    }
 
                 }
                 else
