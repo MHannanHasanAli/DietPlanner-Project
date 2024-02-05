@@ -380,6 +380,7 @@
             this.firstnamesearch.PlaceholderText = "";
             this.firstnamesearch.SelectedText = "";
             this.firstnamesearch.ShadowDecoration.Parent = this.firstnamesearch;
+            this.firstnamesearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.filenosearch_KeyPress);
             // 
             // filenosearch
             // 
@@ -401,6 +402,7 @@
             this.filenosearch.PlaceholderText = "";
             this.filenosearch.SelectedText = "";
             this.filenosearch.ShadowDecoration.Parent = this.filenosearch;
+            this.filenosearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.filenosearch_KeyPress);
             // 
             // tabPage2
             // 

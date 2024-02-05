@@ -1663,5 +1663,75 @@ namespace HelloWorldSolutionIMS
             DeleteDiabetesCalculation();
             ShowDiabetes(guna2DataGridView8, iddgv, filenodgv, firstnamedgv, familynamedgv, weightdgv);
         }
+
+        private void SearchDiabetes(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn file, DataGridViewColumn weight, DataGridViewColumn firstname, DataGridViewColumn lastname)
+        {
+            SqlCommand cmd;
+            try
+            {
+
+
+                string fileNo = searchbox.Text;
+                if (fileNo == "")
+                {
+                    ShowDiabetes(guna2DataGridView8, iddgv, filenodgv, firstnamedgv, familynamedgv, weightdgv);
+                }
+                else
+                {
+                    MainClass.con.Open();
+                    cmd = new SqlCommand("SELECT D.ID, D.FileNo, D.Weight, R.FirstName, R.familyName FROM Diabetes D INNER JOIN Customer R ON D.FileNo = R.FileNo WHERE D.FileNo = @FileNo", MainClass.con);
+                    cmd.Parameters.AddWithValue("@FileNo", fileNo);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    id.DataPropertyName = dt.Columns["ID"].ToString();
+                    file.DataPropertyName = dt.Columns["FileNo"].ToString();
+                    weight.DataPropertyName = dt.Columns["Weight"].ToString();
+                    firstname.DataPropertyName = dt.Columns["FirstName"].ToString();
+                    lastname.DataPropertyName = dt.Columns["familyName"].ToString();
+
+                    dgv.DataSource = dt;
+                    MainClass.con.Close();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MainClass.con.Close();
+            }
+        }
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void searchbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchDiabetes(guna2DataGridView8, iddgv, filenodgv, firstnamedgv, familynamedgv, weightdgv);
+            }
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // Ignore the keypress if it's not a number or a control character
+            }
+
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            SearchDiabetes(guna2DataGridView8, iddgv, filenodgv, firstnamedgv, familynamedgv, weightdgv);
+
+        }
     }
 }

@@ -105,11 +105,11 @@ namespace HelloWorldSolutionIMS
 
                 // Fetch additional data based on the selected Ingredient ID and new quantity from your database.
                 // You can use a SQL query to retrieve data for other cells.
-                string query = "SELECT Quantity,CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, PROTEIN, SODIUM, UNIT, POTASSIUM, PHOSPHOR, WATER, MAGNESIUM, SUGER, IRON, IODINE, A, B, IngredientEn, IngredientAr FROM MealIngredients WHERE ID = @MealID";
+                string query = "SELECT Quantity,CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, PROTEIN, SODIUM, UNIT, POTASSIUM, PHOSPHOR, WATER, MAGNESIUM, SUGER, IRON, IODINE, A, B, IngredientEn, IngredientAr FROM MealIngredients WHERE MealID = @MealID";
 
                 using (SqlCommand cmdtwo = new SqlCommand(query, MainClass.con))
                 {
-                    cmdtwo.Parameters.AddWithValue("@MealID", itemids[i]);
+                    cmdtwo.Parameters.AddWithValue("@MealID", MealGUID);
 
                     SqlDataReader reader5 = cmdtwo.ExecuteReader();
 
@@ -3217,6 +3217,20 @@ namespace HelloWorldSolutionIMS
                     MainClass.con.Close();
                     conn = 0;
                 }
+                if (languagestatus == 1)
+                {
+                    ingredientsearch.DataSource = GetIngredients();
+                    ingredientsearch.DisplayMember = "Name";
+                    ingredientsearch.ValueMember = "ID";
+                    ingredientsearch.SelectedItem = null;
+                }
+                else
+                {
+                    ingredientsearch.DataSource = GetIngredientsEn();
+                    ingredientsearch.DisplayMember = "Name";
+                    ingredientsearch.ValueMember = "ID";
+                    ingredientsearch.SelectedItem = null;
+                }
             }
             catch (Exception ex)
             {
@@ -3637,7 +3651,7 @@ namespace HelloWorldSolutionIMS
                             conn = 1;
                         }
                         SqlCommand cmdingredients = new SqlCommand("DELETE FROM MealIngredients WHERE MealID = @MealID", MainClass.con);
-                        cmdingredients.Parameters.AddWithValue("@MealID", mealIDToEdit); // Assuming the Ingredient ID is in the first cell of the selected row.
+                        cmdingredients.Parameters.AddWithValue("@MealID", MealGUID); // Assuming the Ingredient ID is in the first cell of the selected row.
                         cmdingredients.ExecuteNonQuery();
                         //MessageBox.Show("Meal removed successfully");
                         if (conn == 1)
@@ -3680,7 +3694,7 @@ namespace HelloWorldSolutionIMS
                                     "VALUES (@MealID, @IngredientAr, @IngredientEn, @Unit, @Calories, @Fats, @Carbohydrates, @Fibers, @Protein, @Calcium, @Sodium, @Potassium, @Iodine, @A, @B, @Iron, @Water, @Suger, @Magnesium, @Phosphor, @Quantity)", MainClass.con))
                                 {
                                     // Add parameters to the SQL command
-                                    command.Parameters.AddWithValue("@MealID", mealIDToEdit);
+                                    command.Parameters.AddWithValue("@MealID", MealGUID);
                                     command.Parameters.AddWithValue("@IngredientAr", ingredientAr);
                                     command.Parameters.AddWithValue("@IngredientEn", ingredientEn);
                                     command.Parameters.AddWithValue("@Unit", unit);
@@ -5022,7 +5036,7 @@ namespace HelloWorldSolutionIMS
                 }
 
                 // SQL query to select all rows from the Ingredient table
-                string query = "SELECT MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, Notes, Preparation, Category as Data_Source, IngredientID FROM Meal;";
+                string query = "SELECT  MealAr, MealEn, GroupNAr, GroupNEn, GroupCAr, GroupCEn, ROUND(CALORIES, 0) AS CALORIES,  ROUND(FATS, 2) AS FATS,  ROUND(FIBERS, 2) AS FIBERS, ROUND(POTASSIUM, 2) AS POTASSIUM, ROUND(WATER, 2) AS WATER, ROUND(SUGAR, 2) AS SUGAR, ROUND(CALCIUM, 2) AS CALCIUM, ROUND(A, 2) AS A, ROUND(PROTEIN, 2) AS PROTEIN, ROUND(CARBOHYDRATES, 2) AS CARBOHYDRATES, ROUND(SODIUM, 2) AS SODIUM, ROUND(PHOSPHOR, 2) AS PHOSPHOR, ROUND(MAGNESIUM, 2) AS MAGNESIUM, ROUND(IRON, 2) AS IRON, ROUND(IODINE, 2) AS IODINE, ROUND(B, 2) AS B, Notes, Preparation, Category as Data_Source, IngredientID FROM Meal;";
 
                 using (SqlCommand command = new SqlCommand(query, MainClass.con))
                 {
@@ -5053,8 +5067,26 @@ namespace HelloWorldSolutionIMS
                     conn = 1;
                 }
 
-                // SQL query to select all rows from the Ingredient table
-                string query = "SELECT IngredientAr, IngredientEn, Unit, CALORIES, FATS, CARBOHYDRATES, FIBERS, PROTEIN, CALCIUM, SODIUM, POTASSIUM, IODINE, A, B, IRON, WATER, SUGER, MAGNESIUM, PHOSPHOR, Quantity, MealID FROM MealIngredients;";
+                string query = "SELECT " +
+                  "IngredientAr, IngredientEn, Unit, " +
+                  "ROUND(CALORIES, 0) AS CALORIES, " +
+                  "ROUND(FATS, 2) AS FATS, " +
+                  "ROUND(CARBOHYDRATES, 2) AS CARBOHYDRATES, " +
+                  "ROUND(FIBERS, 2) AS FIBERS, " +
+                  "ROUND(PROTEIN, 2) AS PROTEIN, " +
+                  "ROUND(CALCIUM, 2) AS CALCIUM, " +
+                  "ROUND(SODIUM, 2) AS SODIUM, " +
+                  "ROUND(POTASSIUM, 2) AS POTASSIUM, " +
+                  "ROUND(IODINE, 2) AS IODINE, " +
+                  "ROUND(A, 2) AS A, " +
+                  "ROUND(B, 2) AS B, " +
+                  "ROUND(IRON, 2) AS IRON, " +
+                  "ROUND(WATER, 2) AS WATER, " +
+                  "ROUND(SUGER, 2) AS SUGER, " +
+                  "ROUND(MAGNESIUM, 2) AS MAGNESIUM, " +
+                  "ROUND(PHOSPHOR, 2) AS PHOSPHOR, " +
+                  "Quantity, MealID " +
+                  "FROM MealIngredients;";
 
                 using (SqlCommand command = new SqlCommand(query, MainClass.con))
                 {
@@ -5068,6 +5100,7 @@ namespace HelloWorldSolutionIMS
                         ExportToExcel(dataTable, "Meal_Ingredients");
                     }
                 }
+
                 MainClass.con.Close();
             }
             catch (Exception ex)
@@ -5763,6 +5796,14 @@ namespace HelloWorldSolutionIMS
             {
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void mealarsearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchMeals(guna2DataGridView2, iddgv, mealardgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv);
             }
         }
     }

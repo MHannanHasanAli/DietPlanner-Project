@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealAction));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,10 +48,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealAction));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.ImportIngredients = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.label41 = new System.Windows.Forms.Label();
@@ -220,7 +221,6 @@
             this.gcid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcnen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImportIngredients = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -297,6 +297,21 @@
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // ImportIngredients
+            // 
+            this.ImportIngredients.AutoRoundedCorners = true;
+            this.ImportIngredients.BorderRadius = 21;
+            this.ImportIngredients.CausesValidation = false;
+            this.ImportIngredients.CheckedState.Parent = this.ImportIngredients;
+            this.ImportIngredients.CustomImages.Parent = this.ImportIngredients;
+            this.ImportIngredients.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.ImportIngredients, "ImportIngredients");
+            this.ImportIngredients.ForeColor = System.Drawing.Color.White;
+            this.ImportIngredients.HoverState.Parent = this.ImportIngredients;
+            this.ImportIngredients.Name = "ImportIngredients";
+            this.ImportIngredients.ShadowDecoration.Parent = this.ImportIngredients;
+            this.ImportIngredients.Click += new System.EventHandler(this.ImportIngredients_Click);
             // 
             // guna2Button4
             // 
@@ -410,6 +425,7 @@
             this.mealensearch.PlaceholderText = "";
             this.mealensearch.SelectedText = "";
             this.mealensearch.ShadowDecoration.Parent = this.mealensearch;
+            this.mealensearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mealarsearch_KeyPress);
             // 
             // label27
             // 
@@ -819,6 +835,7 @@
             this.mealarsearch.PlaceholderText = "";
             this.mealarsearch.SelectedText = "";
             this.mealarsearch.ShadowDecoration.Parent = this.mealarsearch;
+            this.mealarsearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mealarsearch_KeyPress);
             // 
             // label28
             // 
@@ -2497,21 +2514,6 @@
             this.gcnen.Name = "gcnen";
             this.gcnen.ReadOnly = true;
             this.gcnen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // ImportIngredients
-            // 
-            this.ImportIngredients.AutoRoundedCorners = true;
-            this.ImportIngredients.BorderRadius = 21;
-            this.ImportIngredients.CausesValidation = false;
-            this.ImportIngredients.CheckedState.Parent = this.ImportIngredients;
-            this.ImportIngredients.CustomImages.Parent = this.ImportIngredients;
-            this.ImportIngredients.FillColor = System.Drawing.Color.MediumSeaGreen;
-            resources.ApplyResources(this.ImportIngredients, "ImportIngredients");
-            this.ImportIngredients.ForeColor = System.Drawing.Color.White;
-            this.ImportIngredients.HoverState.Parent = this.ImportIngredients;
-            this.ImportIngredients.Name = "ImportIngredients";
-            this.ImportIngredients.ShadowDecoration.Parent = this.ImportIngredients;
-            this.ImportIngredients.Click += new System.EventHandler(this.ImportIngredients_Click);
             // 
             // MealAction
             // 

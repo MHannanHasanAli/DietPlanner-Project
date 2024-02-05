@@ -316,7 +316,7 @@ namespace HelloWorldSolutionIMS
             fileno.Text = "";
             firstname.Text = "";
             familyname.Text = "";
-
+            nutritionist.Text = "";
             guna2DataGridView5.ClearSelection();
             guna2DataGridView6.ClearSelection();
             guna2DataGridView7.ClearSelection();
@@ -336,7 +336,7 @@ namespace HelloWorldSolutionIMS
 
             firstname.Text = "";
             familyname.Text = "";
-
+            nutritionist.Text = "";
             guna2DataGridView5.ClearSelection();
             guna2DataGridView6.ClearSelection();
             guna2DataGridView7.ClearSelection();
@@ -596,7 +596,7 @@ namespace HelloWorldSolutionIMS
                         conn = 1;
                     }
 
-                    SqlCommand cmd2 = new SqlCommand("SELECT  FIRSTNAME, FAMILYNAME FROM CUSTOMER " +
+                    SqlCommand cmd2 = new SqlCommand("SELECT  FIRSTNAME, FAMILYNAME, NutritionistName FROM CUSTOMER " +
                         "WHERE FILENO = @fileno", MainClass.con);
 
                     cmd2.Parameters.AddWithValue("@fileno", value);
@@ -606,6 +606,7 @@ namespace HelloWorldSolutionIMS
                         // Assign values from the reader to the respective text boxes
                         firstname.Text = reader2["FIRSTNAME"].ToString();
                         familyname.Text = reader2["FAMILYNAME"].ToString();
+                        nutritionist.Text = reader2["NutritionistName"].ToString();
 
                     }
                     else

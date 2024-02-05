@@ -524,5 +524,13 @@ namespace HelloWorldSolutionIMS
         {
             editToolStripMenuItem.PerformClick();
         }
+
+        private void instructionname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchInstructions(guna2DataGridView1, nodgv, instructionnamedgv, nutritionistnamedgv, datedgv);
+            }
+        }
     }
 }

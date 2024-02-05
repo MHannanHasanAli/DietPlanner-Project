@@ -305,6 +305,7 @@
             this.instructionname.PlaceholderText = "";
             this.instructionname.SelectedText = "";
             this.instructionname.ShadowDecoration.Parent = this.instructionname;
+            this.instructionname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.instructionname_KeyPress);
             // 
             // Instruction
             // 

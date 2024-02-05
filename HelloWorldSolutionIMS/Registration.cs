@@ -1446,10 +1446,16 @@ namespace HelloWorldSolutionIMS
 
         private void fileno_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+            }
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true; // Ignore the keypress if it's not a number or a control character
             }
+
+
         }
 
         private void bodycomp_Click(object sender, EventArgs e)
@@ -4434,6 +4440,19 @@ namespace HelloWorldSolutionIMS
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             EditBTN.PerformClick();
+        }
+
+        private void fileno_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void firstname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+            }
         }
     }
 }

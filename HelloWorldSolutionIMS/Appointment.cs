@@ -2196,6 +2196,14 @@ namespace HelloWorldSolutionIMS
         {
             EditBTN.PerformClick();
         }
+
+        private void filenosearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchAppointments(guna2DataGridView1, iddgv, filenodgv, firstnamedgv, familynamedgv, mobilenodgv, roomdgv, slotdgv, datedgv);
+            }
+        }
     }
 }
 

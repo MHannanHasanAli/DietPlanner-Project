@@ -9750,6 +9750,14 @@ namespace HelloWorldSolutionIMS
         {
 
         }
+
+        private void filenon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchDIetPlan.PerformClick();
+            }
+        }
     }
 
 

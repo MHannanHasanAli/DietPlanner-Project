@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Evaluation));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -91,6 +90,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Evaluation));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -167,6 +167,8 @@
             this.filenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.familynamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label17 = new System.Windows.Forms.Label();
+            this.nutritionist = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -222,6 +224,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.nutritionist);
             this.panel2.Controls.Add(this.Back);
             this.panel2.Controls.Add(this.others);
             this.panel2.Controls.Add(this.Reset);
@@ -1726,6 +1730,31 @@
             this.familynamedgv.ReadOnly = true;
             this.familynamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
+            // nutritionist
+            // 
+            this.nutritionist.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nutritionist.DefaultText = "";
+            this.nutritionist.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.nutritionist.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.nutritionist.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nutritionist.DisabledState.Parent = this.nutritionist;
+            this.nutritionist.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nutritionist.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nutritionist.FocusedState.Parent = this.nutritionist;
+            this.nutritionist.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nutritionist.HoverState.Parent = this.nutritionist;
+            resources.ApplyResources(this.nutritionist, "nutritionist");
+            this.nutritionist.Name = "nutritionist";
+            this.nutritionist.PasswordChar = '\0';
+            this.nutritionist.PlaceholderText = "";
+            this.nutritionist.SelectedText = "";
+            this.nutritionist.ShadowDecoration.Parent = this.nutritionist;
+            // 
             // Evaluation
             // 
             resources.ApplyResources(this, "$this");
@@ -1838,5 +1867,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn filenodgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstnamedgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn familynamedgv;
+        private System.Windows.Forms.Label label17;
+        private Guna.UI2.WinForms.Guna2TextBox nutritionist;
     }
 }

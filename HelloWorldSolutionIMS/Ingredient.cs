@@ -1952,6 +1952,14 @@ namespace HelloWorldSolutionIMS
         {
             EditBTN.PerformClick();
         }
+
+        private void ingredientar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
+            }
+        }
     }
 
 }

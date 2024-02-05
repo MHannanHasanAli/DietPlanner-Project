@@ -452,9 +452,9 @@ namespace HelloWorldSolutionIMS
                     int blue = Convert.ToInt32(reader["Blue"]);
 
                     // Create Color object from the read components
-                    Color color = Color.FromArgb(red, green, blue);
+                    System.Drawing.Color color = System.Drawing.Color.FromArgb(red, green, blue);
 
-                    foreach (Control control in panel1.Controls)
+                    foreach (System.Windows.Forms.Control control in panel1.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -464,7 +464,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                    foreach (Control control in panel2.Controls)
+                    foreach (System.Windows.Forms.Control control in panel2.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -474,7 +474,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                    foreach (Control control in panel3.Controls)
+                    foreach (System.Windows.Forms.Control control in panel3.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -511,9 +511,9 @@ namespace HelloWorldSolutionIMS
                     int blue = Convert.ToInt32(reader["Blue"]);
 
                     // Create Color object from the read components
-                    Color color = Color.FromArgb(red, green, blue);
+                    System.Drawing.Color color = System.Drawing.Color.FromArgb(red, green, blue);
 
-                    foreach (Control control in panel1.Controls)
+                    foreach (System.Windows.Forms.Control control in panel1.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -524,7 +524,7 @@ namespace HelloWorldSolutionIMS
                         }
                     }
 
-                    foreach (Control control in panel2.Controls)
+                    foreach (System.Windows.Forms.Control control in panel2.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -534,7 +534,7 @@ namespace HelloWorldSolutionIMS
                             // You can access other properties or perform actions with the buttons here
                         }
                     }
-                    foreach (Control control in panel3.Controls)
+                    foreach (System.Windows.Forms.Control control in panel3.Controls)
                     {
                         if (control is Guna2Button)
                         {
@@ -595,7 +595,7 @@ namespace HelloWorldSolutionIMS
                         {
                             Label label = (Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -605,7 +605,7 @@ namespace HelloWorldSolutionIMS
                         {
                             Label label = (Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -615,7 +615,7 @@ namespace HelloWorldSolutionIMS
                         {
                             Label label = (Label)control;
 
-                            Font font = new Font(label.Font.FontFamily, fontSize, fontStyle);
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
                             label.Font = font;
                         }
                     }
@@ -637,11 +637,11 @@ namespace HelloWorldSolutionIMS
             ShowPayments(guna2DataGridView1, iddgv, filenodgv, paymentnamedgv, firstnamedgv, familynamedgv, amountdgv, amountaftrpromotiondgv, promotionpercentagedgv, datedgv);
 
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView1.GridColor = Color.Black;
+            guna2DataGridView1.GridColor = System.Drawing.Color.Black;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
             guna2DataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-            guna2DataGridView2.GridColor = Color.Black;
+            guna2DataGridView2.GridColor = System.Drawing.Color.Black;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.ForeColor;
 
@@ -649,7 +649,7 @@ namespace HelloWorldSolutionIMS
             if (languagestatus == 1)
             {
 
-                foreach (Control control in panel1.Controls)
+                foreach (System.Windows.Forms.Control control in panel1.Controls)
                 {
                     // Get the current location of the control
                     var currentLoc = control.Location;
@@ -672,7 +672,7 @@ namespace HelloWorldSolutionIMS
                     }
                 }
 
-                foreach (Control control in panel2.Controls)
+                foreach (System.Windows.Forms.Control control in panel2.Controls)
                 {
                     // Get the current location of the control
                     var currentLoc = control.Location;
@@ -695,7 +695,7 @@ namespace HelloWorldSolutionIMS
                     }
                 }
 
-                foreach (Control control in panel3.Controls)
+                foreach (System.Windows.Forms.Control control in panel3.Controls)
                 {
                     // Get the current location of the control
                     var currentLoc = control.Location;
@@ -901,8 +901,8 @@ namespace HelloWorldSolutionIMS
             mobileno.Text = "";
             paymentname.Text = "";
             amount.Text = "";
-            enddate.Text = "";
-            startdate.Text = "";
+            enddate.Value = DateTime.Today.AddMonths(1);
+            startdate.Value = DateTime.Today;
             amountafterpromotion.Text = "";
             promotionpercentage.Text = "";
             promotioncode.Text = "";
@@ -1348,6 +1348,22 @@ namespace HelloWorldSolutionIMS
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             editToolStripMenuItem.PerformClick();
+        }
+
+        private void firstnamesearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchPayments(guna2DataGridView1, iddgv, filenodgv, paymentnamedgv, firstnamedgv, familynamedgv, amountdgv, amountaftrpromotiondgv, promotionpercentagedgv, datedgv);
+            }
+        }
+
+        private void filenosearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SearchPayments(guna2DataGridView1, iddgv, filenodgv, paymentnamedgv, firstnamedgv, familynamedgv, amountdgv, amountaftrpromotiondgv, promotionpercentagedgv, datedgv);
+            }
         }
     }
 }
