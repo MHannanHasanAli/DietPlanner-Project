@@ -105,11 +105,11 @@ namespace HelloWorldSolutionIMS
 
                 // Fetch additional data based on the selected Ingredient ID and new quantity from your database.
                 // You can use a SQL query to retrieve data for other cells.
-                string query = "SELECT Quantity,CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, PROTEIN, SODIUM, UNIT, POTASSIUM, PHOSPHOR, WATER, MAGNESIUM, SUGER, IRON, IODINE, A, B, IngredientEn, IngredientAr FROM MealIngredients WHERE MealID = @MealID";
+                string query = "SELECT Quantity,CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, PROTEIN, SODIUM, UNIT, POTASSIUM, PHOSPHOR, WATER, MAGNESIUM, SUGER, IRON, IODINE, A, B, IngredientEn, IngredientAr FROM MealIngredients WHERE ID = @MealID";
 
                 using (SqlCommand cmdtwo = new SqlCommand(query, MainClass.con))
                 {
-                    cmdtwo.Parameters.AddWithValue("@MealID", MealGUID);
+                    cmdtwo.Parameters.AddWithValue("@MealID", itemids[i]);
 
                     SqlDataReader reader5 = cmdtwo.ExecuteReader();
 
@@ -3098,7 +3098,57 @@ namespace HelloWorldSolutionIMS
         {
             //UpdateGroupsC();
             //UpdateGroupsN();
+            try
+            {
+                if (MainClass.con.State != ConnectionState.Open)
+                {
+                    MainClass.con.Open();
+                    conn = 1;
+                }
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM buttoncolor", MainClass.con);
 
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
+
+                    foreach (Control control in panel1.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
+
+                }
+
+                reader.Close();
+                if (conn == 1)
+                {
+                    MainClass.con.Close();
+                    conn = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                MainClass.con.Close();
+
+            }
             fats.Text = "0";
             carbohydrates.Text = "0";
             protein.Text = "0";
@@ -5166,7 +5216,7 @@ namespace HelloWorldSolutionIMS
         private void allbtn_Click(object sender, EventArgs e)
         {
 
-            if (allbtn.FillColor == Color.MediumSeaGreen)
+            if (allbtn.FillColor != Color.Red)
             {
                 allbtn.FillColor = Color.Red;
                 breakfastbtn.FillColor = Color.Red;
@@ -5206,7 +5256,7 @@ namespace HelloWorldSolutionIMS
 
         private void breakfastbtn_Click(object sender, EventArgs e)
         {
-            if (breakfastbtn.FillColor == Color.MediumSeaGreen)
+            if (breakfastbtn.FillColor != Color.Red)
             {
                 breakfastbtn.FillColor = Color.Red;
                 categoryForMeals.Add("Breakfast");
@@ -5221,7 +5271,7 @@ namespace HelloWorldSolutionIMS
 
         private void lunchbtn_Click(object sender, EventArgs e)
         {
-            if (lunchbtn.FillColor == Color.MediumSeaGreen)
+            if (lunchbtn.FillColor != Color.Red)
             {
                 lunchbtn.FillColor = Color.Red;
                 categoryForMeals.Add("Lunch");
@@ -5236,7 +5286,7 @@ namespace HelloWorldSolutionIMS
 
         private void dinnerbtn_Click(object sender, EventArgs e)
         {
-            if (dinnerbtn.FillColor == Color.MediumSeaGreen)
+            if (dinnerbtn.FillColor != Color.Red)
             {
                 dinnerbtn.FillColor = Color.Red;
                 categoryForMeals.Add("Dinner");
@@ -5251,7 +5301,7 @@ namespace HelloWorldSolutionIMS
 
         private void snackbtn_Click(object sender, EventArgs e)
         {
-            if (snackbtn.FillColor == Color.MediumSeaGreen)
+            if (snackbtn.FillColor != Color.Red)
             {
                 snackbtn.FillColor = Color.Red;
                 categoryForMeals.Add("Snack");
@@ -5266,7 +5316,7 @@ namespace HelloWorldSolutionIMS
         static string resultString;
         private void functionalfoodbtn_Click(object sender, EventArgs e)
         {
-            if (functionalfoodbtn.FillColor == Color.MediumSeaGreen)
+            if (functionalfoodbtn.FillColor != Color.Red)
             {
                 functionalfoodbtn.FillColor = Color.Red;
                 categoryForMeals.Add("Functional Food");
