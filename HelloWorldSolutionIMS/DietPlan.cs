@@ -123,6 +123,7 @@ namespace HelloWorldSolutionIMS
         static int counter = 0;
         static int connectionflag = 0;
 
+
         ArtificialMapping EditMap1 = new ArtificialMapping();
         ArtificialMapping EditMap2 = new ArtificialMapping();
         ArtificialMapping EditMap3 = new ArtificialMapping();
@@ -1237,6 +1238,7 @@ namespace HelloWorldSolutionIMS
             TableLayoutFill();
             tabControl1.SelectedIndex = 5;
             ingredientflag = 0;
+            calculationflag = 0;
             //foreach (DataGridViewColumn column in guna2DataGridView13.Columns)
             //{
             //    // Replace "FullName" with the actual name of the column you want to modify
@@ -2268,6 +2270,154 @@ namespace HelloWorldSolutionIMS
 
         }
 
+        static int calculationflag = 0;
+        private void ChartAddWithCalculation(string id)
+        {
+            double calories = 0;
+            double fats = 0;
+            double fibers = 0;
+            double potassium = 0;
+            double water = 0;
+            double sugar = 0;
+            double calcium = 0;
+            double vitaminA = 0;
+            double protein = 0;
+            double carbohydrates = 0;
+            double sodium = 0;
+            double phosphorus = 0;
+            double magnesium = 0;
+            double iron = 0;
+            double iodine = 0;
+            double vitaminB = 0;
+            titlecheck = 0;
+
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                cmd.Parameters.AddWithValue("@MealID", id);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        // Set the retrieved data into input controls
+
+                        calories = Convert.ToDouble(reader["CALORIES"]);
+                        fats = Convert.ToDouble(reader["FATS"]);
+                        fibers = Convert.ToDouble(reader["FIBERS"]);
+                        potassium = Convert.ToDouble(reader["POTASSIUM"]);
+                        water = Convert.ToDouble(reader["WATER"]);
+                        sugar = Convert.ToDouble(reader["SUGAR"]);
+                        calcium = Convert.ToDouble(reader["CALCIUM"]);
+                        vitaminA = Convert.ToDouble(reader["A"]);
+                        protein = Convert.ToDouble(reader["PROTEIN"]);
+                        carbohydrates = Convert.ToDouble(reader["CARBOHYDRATES"]);
+                        sodium = Convert.ToDouble(reader["SODIUM"]);
+                        phosphorus = Convert.ToDouble(reader["PHOSPHOR"]);
+                        magnesium = Convert.ToDouble(reader["MAGNESIUM"]);
+                        iron = Convert.ToDouble(reader["IRON"]);
+                        iodine = Convert.ToDouble(reader["IODINE"]);
+                        vitaminB = Convert.ToDouble(reader["B"]);
+
+                    }
+                    reader.Close();
+
+                    MainClass.con.Close();
+                    //extrafunc();
+
+                    //tabControl1.SelectedIndex = 2;
+                }
+
+
+                MainClass.con.Close();
+
+
+                if (calculationflag == 0)
+                {
+                    caloried.Text = calories.ToString();
+                    fatsd.Text = fats.ToString();
+                    fibersd.Text = fibers.ToString();
+                    potassiumd.Text = potassium.ToString();
+                    waterd.Text = water.ToString();
+                    sugerd.Text = sugar.ToString();
+                    calciumd.Text = calcium.ToString();
+                    ad.Text = vitaminA.ToString();
+                    proteind.Text = protein.ToString();
+                    carbsd.Text = carbohydrates.ToString();
+                    sodiumd.Text = sodium.ToString();
+                    phosphorusd.Text = phosphorus.ToString();
+                    magnesiumd.Text = magnesium.ToString();
+                    irond.Text = iron.ToString();
+                    iodined.Text = iodine.ToString();
+                    bd.Text = vitaminB.ToString();
+                    calculationflag = 1;
+                }
+                else
+                {
+
+                    double Tcalories = Convert.ToDouble(caloried.Text);
+                    double Tfats = Convert.ToDouble(fatsd.Text);
+                    double Tfibers = Convert.ToDouble(fibersd.Text);
+                    double Tpotassium = Convert.ToDouble(potassiumd.Text);
+                    double Twater = Convert.ToDouble(waterd.Text);
+                    double Tsugar = Convert.ToDouble(sugerd.Text);
+                    double Tcalcium = Convert.ToDouble(calciumd.Text);
+                    double TvitaminA = Convert.ToDouble(ad.Text);
+                    double Tprotein = Convert.ToDouble(proteind.Text);
+                    double Tcarbohydrates = Convert.ToDouble(carbsd.Text);
+                    double Tsodium = Convert.ToDouble(sodiumd.Text);
+                    double Tphosphorus = Convert.ToDouble(phosphorusd.Text);
+                    double Tmagnesium = Convert.ToDouble(magnesiumd.Text);
+                    double Tiron = Convert.ToDouble(irond.Text);
+                    double Tiodine = Convert.ToDouble(iodined.Text);
+                    double TvitaminB = Convert.ToDouble(bd.Text);
+
+                    Tcalories = Tcalories + calories;
+                    Tfats = Tfats + fats;
+                    Tfibers = Tfibers + fibers;
+                    Tpotassium = Tpotassium + potassium;
+                    Twater = Twater + water;
+                    Tsugar = Tsugar + sugar;
+                    Tcalcium = Tcalcium + calcium;
+                    TvitaminA = TvitaminA + vitaminA;
+                    Tprotein = Tprotein + protein;
+                    Tcarbohydrates = Tcarbohydrates + carbohydrates;
+                    Tsodium = Tsodium + sodium;
+                    Tphosphorus = Tphosphorus + phosphorus;
+                    Tmagnesium = Tmagnesium + magnesium;
+                    Tiron = Tiron + iron;
+                    Tiodine = Tiodine + iodine;
+                    TvitaminB = TvitaminB + vitaminB;
+
+                    caloried.Text = Tcalories.ToString();
+                    fatsd.Text = Tfats.ToString();
+                    fibersd.Text = Tfibers.ToString();
+                    potassiumd.Text = Tpotassium.ToString();
+                    waterd.Text = Twater.ToString();
+                    sugerd.Text = Tsugar.ToString();
+                    calciumd.Text = Tcalcium.ToString();
+                    ad.Text = TvitaminA.ToString();
+                    proteind.Text = Tprotein.ToString();
+                    carbsd.Text = Tcarbohydrates.ToString();
+                    sodiumd.Text = Tsodium.ToString();
+                    phosphorusd.Text = Tphosphorus.ToString();
+                    magnesiumd.Text = Tmagnesium.ToString();
+                    irond.Text = Tiron.ToString();
+                    iodined.Text = Tiodine.ToString();
+                    bd.Text = TvitaminB.ToString();
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void ChartAdd(string id)
         {
             double calories = 0;
@@ -2291,7 +2441,7 @@ namespace HelloWorldSolutionIMS
             {
                 MainClass.con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
-                cmd.Parameters.AddWithValue("@MealID", MealID);
+                cmd.Parameters.AddWithValue("@MealID", id);
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows)
@@ -4215,7 +4365,7 @@ namespace HelloWorldSolutionIMS
                 {
                     if (item.ChartName == "guna2DataGridView13")
                     {
-                        ChartAdd(item.ID.ToString());
+                        ChartAddWithCalculation(item.ID.ToString());
                     }
                 }
             }
@@ -4225,7 +4375,7 @@ namespace HelloWorldSolutionIMS
                 {
                     if (item.ChartName == "guna2DataGridView15")
                     {
-                        ChartAdd(item.ID.ToString());
+                        ChartAddWithCalculation(item.ID.ToString());
                     }
                 }
             }
@@ -4235,7 +4385,7 @@ namespace HelloWorldSolutionIMS
                 {
                     if (item.ChartName == "guna2DataGridView16")
                     {
-                        ChartAdd(item.ID.ToString());
+                        ChartAddWithCalculation(item.ID.ToString());
                     }
                 }
             }
@@ -4245,7 +4395,7 @@ namespace HelloWorldSolutionIMS
                 {
                     if (item.ChartName == "guna2DataGridView17")
                     {
-                        ChartAdd(item.ID.ToString());
+                        ChartAddWithCalculation(item.ID.ToString());
                     }
                 }
             }
@@ -4255,7 +4405,7 @@ namespace HelloWorldSolutionIMS
                 {
                     if (item.ChartName == "guna2DataGridView18")
                     {
-                        ChartAdd(item.ID.ToString());
+                        ChartAddWithCalculation(item.ID.ToString());
                     }
                 }
             }
@@ -4265,7 +4415,7 @@ namespace HelloWorldSolutionIMS
                 {
                     if (item.ChartName == "guna2DataGridView19")
                     {
-                        ChartAdd(item.ID.ToString());
+                        ChartAddWithCalculation(item.ID.ToString());
                     }
                 }
             }
@@ -4275,7 +4425,7 @@ namespace HelloWorldSolutionIMS
                 {
                     if (item.ChartName == "guna2DataGridView20")
                     {
-                        ChartAdd(item.ID.ToString());
+                        ChartAddWithCalculation(item.ID.ToString());
                     }
                 }
             }
@@ -4283,7 +4433,7 @@ namespace HelloWorldSolutionIMS
             {
                 foreach (var item in artificialMappings)
                 {
-                    ChartAdd(item.ID.ToString());
+                    ChartAddWithCalculation(item.ID.ToString());
                 }
             }
         }
