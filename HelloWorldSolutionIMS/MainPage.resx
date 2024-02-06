@@ -436,7 +436,7 @@
     <value>5</value>
   </data>
   <data name="guna2TileButton6.Text" xml:space="preserve">
-    <value>    Appoinments</value>
+    <value>   </value>
   </data>
   <data name="&gt;&gt;guna2TileButton6.Name" xml:space="preserve">
     <value>guna2TileButton6</value>
@@ -464,9 +464,6 @@
   </data>
   <data name="guna2TileButton9.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
-  </data>
-  <data name="guna2TileButton9.Text" xml:space="preserve">
-    <value>   Registration</value>
   </data>
   <data name="&gt;&gt;guna2TileButton9.Name" xml:space="preserve">
     <value>guna2TileButton9</value>

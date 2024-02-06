@@ -638,5 +638,10 @@ namespace HelloWorldSolutionIMS
             }
 
         }
+        ToolTip toolTip1 = new ToolTip();
+        private void guna2TileButton9_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(guna2TileButton9, "Registration");
+        }
     }
 }

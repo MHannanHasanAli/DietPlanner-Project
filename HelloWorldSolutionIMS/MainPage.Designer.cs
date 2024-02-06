@@ -283,6 +283,7 @@
             this.guna2TileButton9.ShadowDecoration.Parent = this.guna2TileButton9;
             this.guna2TileButton9.TextOffset = new System.Drawing.Point(0, -15);
             this.guna2TileButton9.Click += new System.EventHandler(this.guna2TileButton9_Click);
+            this.guna2TileButton9.MouseHover += new System.EventHandler(this.guna2TileButton9_MouseHover);
             // 
             // mainpanel
             // 
