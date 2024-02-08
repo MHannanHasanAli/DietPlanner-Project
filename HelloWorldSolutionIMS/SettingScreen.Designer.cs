@@ -130,6 +130,8 @@ namespace HelloWorldSolutionIMS
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.Deletegc = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView4 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
@@ -146,6 +148,8 @@ namespace HelloWorldSolutionIMS
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.DeleteUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.useriddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
@@ -209,10 +213,6 @@ namespace HelloWorldSolutionIMS
             this.label29 = new System.Windows.Forms.Label();
             this.selectedpanel = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
-            this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.useriddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagridview1)).BeginInit();
@@ -286,6 +286,7 @@ namespace HelloWorldSolutionIMS
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.Name = "panel2";
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Datagridview1
             // 
@@ -1271,6 +1272,20 @@ namespace HelloWorldSolutionIMS
             this.guna2DataGridView4.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView4.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // iddgv
+            // 
+            resources.ApplyResources(this.iddgv, "iddgv");
+            this.iddgv.Name = "iddgv";
+            this.iddgv.ReadOnly = true;
+            this.iddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // namedgv
+            // 
+            resources.ApplyResources(this.namedgv, "namedgv");
+            this.namedgv.Name = "namedgv";
+            this.namedgv.ReadOnly = true;
+            this.namedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.panel7);
@@ -1509,6 +1524,20 @@ namespace HelloWorldSolutionIMS
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 24;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // useriddgv
+            // 
+            resources.ApplyResources(this.useriddgv, "useriddgv");
+            this.useriddgv.Name = "useriddgv";
+            this.useriddgv.ReadOnly = true;
+            this.useriddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // usernamedgv
+            // 
+            resources.ApplyResources(this.usernamedgv, "usernamedgv");
+            this.usernamedgv.Name = "usernamedgv";
+            this.usernamedgv.ReadOnly = true;
+            this.usernamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // tabPage6
             // 
@@ -2278,34 +2307,6 @@ namespace HelloWorldSolutionIMS
             // 
             resources.ApplyResources(this.label28, "label28");
             this.label28.Name = "label28";
-            // 
-            // iddgv
-            // 
-            resources.ApplyResources(this.iddgv, "iddgv");
-            this.iddgv.Name = "iddgv";
-            this.iddgv.ReadOnly = true;
-            this.iddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // namedgv
-            // 
-            resources.ApplyResources(this.namedgv, "namedgv");
-            this.namedgv.Name = "namedgv";
-            this.namedgv.ReadOnly = true;
-            this.namedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // useriddgv
-            // 
-            resources.ApplyResources(this.useriddgv, "useriddgv");
-            this.useriddgv.Name = "useriddgv";
-            this.useriddgv.ReadOnly = true;
-            this.useriddgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // usernamedgv
-            // 
-            resources.ApplyResources(this.usernamedgv, "usernamedgv");
-            this.usernamedgv.Name = "usernamedgv";
-            this.usernamedgv.ReadOnly = true;
-            this.usernamedgv.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // SettingScreen
             // 
