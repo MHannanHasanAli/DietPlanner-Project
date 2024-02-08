@@ -117,10 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 21</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>الاخصائي</value>
+  </data>
+  <data name="Back.Text" xml:space="preserve">
+    <value>رجوع </value>
+  </data>
+  <data name="Reset.Text" xml:space="preserve">
+    <value>اعادة تعيين </value>
+  </data>
   <data name="Save.Text" xml:space="preserve">
     <value>حفظ</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label55.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 17</value>
   </data>

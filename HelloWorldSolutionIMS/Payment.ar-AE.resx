@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="nonpaidpayment.Text" xml:space="preserve">
+    <value>المبلغ المتبقي </value>
+  </data>
   <data name="filenodgv.HeaderText" xml:space="preserve">
     <value>رقم الملف </value>
   </data>

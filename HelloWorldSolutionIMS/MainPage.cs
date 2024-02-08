@@ -647,10 +647,142 @@ namespace HelloWorldSolutionIMS
             }
             else
             {
-                toolTip1.SetToolTip(guna2TileButton9, "التسجيل ");
+                toolTip1.SetToolTip(guna2TileButton9, "التسجيل");
             }
 
 
+        }
+
+        private void guna2TileButton6_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton6, "Appointment");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton6, "المواعيد");
+            }
+        }
+
+        private void guna2TileButton12_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton12, "Ingredients");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton12, "المكونات");
+            }
+        }
+
+        private void guna2TileButton8_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton8, "Meals");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton8, "الوجبات");
+            }
+        }
+
+        private void guna2TileButton2_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton2, "Instructions");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton2, "الارشادات");
+            }
+        }
+
+        private void guna2TileButton4_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton4, "Diabetes");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton4, "السكري");
+            }
+        }
+
+        private void guna2TileButton3_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton3, "Diet Plan");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton3, "تخطيط الحميات");
+            }
+        }
+
+        private void guna2TileButton7_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton7, "Diet Plan Template");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton7, "نماذج الحميات");
+            }
+        }
+
+        private void guna2TileButton11_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton11, "Payment");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton11, "الدفعات");
+            }
+        }
+
+        private void guna2TileButton5_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton5, "Evaluation");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton5, "التقييم");
+            }
+        }
+
+        private void guna2TileButton10_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton10, "Special Deals");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton10, "عروض خاصة");
+            }
+        }
+
+        private void guna2TileButton1_MouseHover(object sender, EventArgs e)
+        {
+            if (languagestatus == 0)
+            {
+                toolTip1.SetToolTip(guna2TileButton1, "Settings");
+            }
+            else
+            {
+                toolTip1.SetToolTip(guna2TileButton1, "الاعدادات");
+            }
         }
     }
 }

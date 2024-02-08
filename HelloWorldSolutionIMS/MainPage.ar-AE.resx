@@ -122,69 +122,75 @@
     <value>0, 786</value>
   </data>
   <data name="guna2TileButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 74</value>
+    <value>72, 74</value>
   </data>
   <data name="guna2TileButton10.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 708</value>
   </data>
   <data name="guna2TileButton10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 78</value>
+    <value>72, 78</value>
   </data>
   <data name="guna2TileButton5.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 631</value>
   </data>
   <data name="guna2TileButton5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 77</value>
+    <value>72, 77</value>
   </data>
   <data name="guna2TileButton11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 71</value>
+    <value>72, 71</value>
   </data>
   <data name="guna2TileButton7.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 482</value>
   </data>
   <data name="guna2TileButton7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 78</value>
+    <value>72, 78</value>
   </data>
   <data name="guna2TileButton3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 419</value>
   </data>
   <data name="guna2TileButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 63</value>
+    <value>72, 63</value>
   </data>
   <data name="guna2TileButton4.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 349</value>
+  </data>
+  <data name="guna2TileButton4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 70</value>
   </data>
   <data name="guna2TileButton2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 276</value>
   </data>
   <data name="guna2TileButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 73</value>
+    <value>72, 73</value>
   </data>
   <data name="guna2TileButton8.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 208</value>
   </data>
   <data name="guna2TileButton8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 68</value>
+    <value>72, 68</value>
   </data>
   <data name="guna2TileButton12.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 142</value>
   </data>
   <data name="guna2TileButton12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 66</value>
+    <value>72, 66</value>
   </data>
   <data name="guna2TileButton6.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 72</value>
   </data>
+  <data name="guna2TileButton6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 70</value>
+  </data>
   <data name="guna2TileButton9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 72</value>
+    <value>72, 72</value>
   </data>
   <data name="sidebar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 1328</value>
+    <value>72, 1328</value>
+  </data>
+  <data name="mainpanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 0</value>
   </data>
   <data name="mainpanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1272, 1328</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1540, 1328</value>
+    <value>1468, 1328</value>
   </data>
 </root>
