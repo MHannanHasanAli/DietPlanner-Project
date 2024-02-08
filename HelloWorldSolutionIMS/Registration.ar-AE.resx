@@ -317,7 +317,7 @@
     <value> تصدير</value>
   </data>
   <data name="Close.Text" xml:space="preserve">
-    <value>غلاق</value>
+    <value>اغلاق</value>
   </data>
   <data name="EditBMI.Text" xml:space="preserve">
     <value>تعديل</value>
@@ -491,19 +491,31 @@
     <value>حفظ</value>
   </data>
   <data name="ExportMH.Text" xml:space="preserve">
-    <value>يصدّر</value>
+    <value>تصدير</value>
   </data>
   <data name="MedicalHistoryDelete.Text" xml:space="preserve">
     <value>حذف</value>
   </data>
+  <data name="idmhdgv.HeaderText" xml:space="preserve">
+    <value>رقم</value>
+  </data>
+  <data name="filenomhdgv.HeaderText" xml:space="preserve">
+    <value>رقم الملف</value>
+  </data>
+  <data name="firstnamemhdgv.HeaderText" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="familynamemhdgv.HeaderText" xml:space="preserve">
+    <value>العائلة</value>
+  </data>
   <data name="guna2Button1.Text" xml:space="preserve">
-    <value>يغلق</value>
+    <value>اغلاق</value>
   </data>
   <data name="EditMedicalHistory.Text" xml:space="preserve">
     <value>تعديل</value>
   </data>
   <data name="guna2Button3.Text" xml:space="preserve">
-    <value>يضيف</value>
+    <value>اضافة </value>
   </data>
   <data name="label47.Location" type="System.Drawing.Point, System.Drawing">
     <value>618, 123</value>

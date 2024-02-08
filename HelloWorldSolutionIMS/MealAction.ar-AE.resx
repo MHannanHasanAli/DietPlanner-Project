@@ -117,7 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ImportIngredients.Text" xml:space="preserve">
+    <value>استيراد المكونات </value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="guna2Button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="guna2Button4.Text" xml:space="preserve">
+    <value>اخفاء</value>
+  </data>
+  <data name="guna2Button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="guna2Button2.Text" xml:space="preserve">
+    <value>اظهار</value>
+  </data>
+  <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 24</value>
+  </data>
+  <data name="label41.Text" xml:space="preserve">
+    <value>المكون (عربي)</value>
+  </data>
+  <data name="label40.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 24</value>
+  </data>
+  <data name="label40.Text" xml:space="preserve">
+    <value>المكون (انجليزي)</value>
+  </data>
+  <data name="export.Text" xml:space="preserve">
+    <value>تصدير  الوجبات </value>
+  </data>
   <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 79</value>
   </data>
@@ -131,37 +161,37 @@
     <value>0, 120</value>
   </data>
   <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 24</value>
+    <value>164, 30</value>
   </data>
   <data name="label42.Text" xml:space="preserve">
-    <value>جروب ن (عربي)</value>
+    <value>مجموعة  ن (عربي)</value>
   </data>
   <data name="label43.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 164</value>
   </data>
   <data name="label43.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 24</value>
+    <value>181, 30</value>
   </data>
   <data name="label43.Text" xml:space="preserve">
-    <value>جروب ن (انجليزي)</value>
+    <value>مجموعة  ن (انجليزي)</value>
   </data>
   <data name="label44.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 205</value>
   </data>
   <data name="label44.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 24</value>
+    <value>178, 30</value>
   </data>
   <data name="label44.Text" xml:space="preserve">
-    <value>جروب سي (عربي)</value>
+    <value>مجموعة  سي (عربي)</value>
   </data>
   <data name="label45.Location" type="System.Drawing.Point, System.Drawing">
     <value>-3, 248</value>
   </data>
   <data name="label45.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 24</value>
+    <value>195, 30</value>
   </data>
   <data name="label45.Text" xml:space="preserve">
-    <value>جروب سي (انجليزي)</value>
+    <value>مجموعة  سي (انجليزي)</value>
   </data>
   <data name="ImportMeal.Text" xml:space="preserve">
     <value>استيراد الوجبات</value>
@@ -239,34 +269,22 @@
     <value>462, 27</value>
   </data>
   <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 54</value>
+    <value>259, 68</value>
   </data>
   <data name="label30.Text" xml:space="preserve">
-    <value>جروب ن</value>
+    <value>مجموعة  ن</value>
   </data>
   <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 24</value>
+    <value>133, 30</value>
   </data>
   <data name="label29.Text" xml:space="preserve">
-    <value>Name (انجليزي)</value>
+    <value>الاسم (انجليزي)</value>
   </data>
   <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 24</value>
+    <value>115, 30</value>
   </data>
   <data name="label26.Text" xml:space="preserve">
-    <value>Name (عربي)</value>
-  </data>
-  <data name="guna2Button4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="guna2Button4.Text" xml:space="preserve">
-    <value>اخفاء</value>
-  </data>
-  <data name="guna2Button2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="guna2Button2.Text" xml:space="preserve">
-    <value>اظهار</value>
+    <value>الاسم (عربي)</value>
   </data>
   <data name="snackbtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
@@ -300,18 +318,6 @@
   </data>
   <data name="allbtn.Text" xml:space="preserve">
     <value>الجميع</value>
-  </data>
-  <data name="label41.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 24</value>
-  </data>
-  <data name="label41.Text" xml:space="preserve">
-    <value>المكون (عربي)</value>
-  </data>
-  <data name="label40.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 24</value>
-  </data>
-  <data name="label40.Text" xml:space="preserve">
-    <value>المكون (انجليزي)</value>
   </data>
   <data name="agc.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8pt</value>
@@ -479,16 +485,25 @@
     <value>455, 11</value>
   </data>
   <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 54</value>
+    <value>259, 68</value>
   </data>
   <data name="label33.Text" xml:space="preserve">
-    <value>جروب ن</value>
+    <value>مجموعة  ن</value>
   </data>
   <data name="CLoseDGN.Text" xml:space="preserve">
     <value>خلف</value>
   </data>
   <data name="Deletegn.Text" xml:space="preserve">
     <value>حذف</value>
+  </data>
+  <data name="idgn.HeaderText" xml:space="preserve">
+    <value>رقم</value>
+  </data>
+  <data name="gnnar.HeaderText" xml:space="preserve">
+    <value>الاسم (عربي)</value>
+  </data>
+  <data name="gnnen.HeaderText" xml:space="preserve">
+    <value>الاسم (انجليزي)</value>
   </data>
   <data name="guna2Button1.Text" xml:space="preserve">
     <value>خلف</value>
@@ -506,22 +521,22 @@
     <value>444, 18</value>
   </data>
   <data name="label35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 54</value>
+    <value>315, 68</value>
   </data>
   <data name="label35.Text" xml:space="preserve">
-    <value>جروب سي </value>
+    <value>مجموعة  سي </value>
   </data>
   <data name="label36.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 24</value>
+    <value>133, 30</value>
   </data>
   <data name="label36.Text" xml:space="preserve">
-    <value>Name (انجليزي)</value>
+    <value>الاسم (انجليزي)</value>
   </data>
   <data name="label37.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 24</value>
+    <value>115, 30</value>
   </data>
   <data name="label37.Text" xml:space="preserve">
-    <value>Name (عربي)</value>
+    <value>الاسم (عربي)</value>
   </data>
   <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 36</value>
@@ -533,15 +548,24 @@
     <value>469, 14</value>
   </data>
   <data name="label39.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 54</value>
+    <value>315, 68</value>
   </data>
   <data name="label39.Text" xml:space="preserve">
-    <value>جروب سي </value>
+    <value>مجموعة  سي </value>
   </data>
   <data name="guna2Button3.Text" xml:space="preserve">
     <value>خلف</value>
   </data>
   <data name="Deletegc.Text" xml:space="preserve">
     <value>حذف</value>
+  </data>
+  <data name="gcid.HeaderText" xml:space="preserve">
+    <value>رقم</value>
+  </data>
+  <data name="gcnar.HeaderText" xml:space="preserve">
+    <value>الاسم (عربي)</value>
+  </data>
+  <data name="gcnen.HeaderText" xml:space="preserve">
+    <value>الاسم (انجليزي)</value>
   </data>
 </root>

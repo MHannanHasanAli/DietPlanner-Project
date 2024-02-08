@@ -702,6 +702,16 @@ namespace HelloWorldSolutionIMS
                         }
                     }
 
+                    foreach (System.Windows.Forms.Control control in panel2.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.ForeColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
 
 
                 }
@@ -743,6 +753,16 @@ namespace HelloWorldSolutionIMS
                         }
                     }
 
+                    foreach (System.Windows.Forms.Control control in panel2.Controls)
+                    {
+                        if (control is Guna2Button)
+                        {
+                            Guna2Button button = (Guna2Button)control;
+                            // Access each button here, for instance, you can print the text of each button
+                            button.FillColor = color;
+                            // You can access other properties or perform actions with the buttons here
+                        }
+                    }
 
 
                 }
@@ -801,6 +821,16 @@ namespace HelloWorldSolutionIMS
                         }
                     }
 
+                    foreach (System.Windows.Forms.Control control in panel2.Controls)
+                    {
+                        if (control is Label)
+                        {
+                            Label label = (Label)control;
+
+                            System.Drawing.Font font = new System.Drawing.Font(label.Font.FontFamily, fontSize, fontStyle);
+                            label.Font = font;
+                        }
+                    }
 
                 }
 
@@ -864,6 +894,29 @@ namespace HelloWorldSolutionIMS
 
                     // Calculate the mirrored location
                     var mirroredLoc = new System.Drawing.Point(panel1.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+                    }
+                }
+
+                foreach (System.Windows.Forms.Control control in panel2.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new System.Drawing.Point(panel2.Width - currentLoc.X - control.Width, currentLoc.Y);
 
                     // Set the mirrored location to the control
                     control.Location = mirroredLoc;
