@@ -281,7 +281,7 @@
     <value>الوزن </value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 20</value>
+    <value>52, 16</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>رقم الملف</value>

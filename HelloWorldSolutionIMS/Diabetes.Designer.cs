@@ -117,15 +117,15 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.searchbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DataGridView8 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.EditDiabetes = new Guna.UI2.WinForms.Guna2Button();
-            this.DeleteDiabetes = new Guna.UI2.WinForms.Guna2Button();
-            this.AddDiabetes = new Guna.UI2.WinForms.Guna2Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.iddgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filenodgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstnamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.familynamedgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.weightdgv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EditDiabetes = new Guna.UI2.WinForms.Guna2Button();
+            this.DeleteDiabetes = new Guna.UI2.WinForms.Guna2Button();
+            this.AddDiabetes = new Guna.UI2.WinForms.Guna2Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView7)).BeginInit();
@@ -1193,6 +1193,36 @@
             this.guna2DataGridView8.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.guna2DataGridView8.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
+            // iddgv
+            // 
+            resources.ApplyResources(this.iddgv, "iddgv");
+            this.iddgv.Name = "iddgv";
+            this.iddgv.ReadOnly = true;
+            // 
+            // filenodgv
+            // 
+            resources.ApplyResources(this.filenodgv, "filenodgv");
+            this.filenodgv.Name = "filenodgv";
+            this.filenodgv.ReadOnly = true;
+            // 
+            // firstnamedgv
+            // 
+            resources.ApplyResources(this.firstnamedgv, "firstnamedgv");
+            this.firstnamedgv.Name = "firstnamedgv";
+            this.firstnamedgv.ReadOnly = true;
+            // 
+            // familynamedgv
+            // 
+            resources.ApplyResources(this.familynamedgv, "familynamedgv");
+            this.familynamedgv.Name = "familynamedgv";
+            this.familynamedgv.ReadOnly = true;
+            // 
+            // weightdgv
+            // 
+            resources.ApplyResources(this.weightdgv, "weightdgv");
+            this.weightdgv.Name = "weightdgv";
+            this.weightdgv.ReadOnly = true;
+            // 
             // EditDiabetes
             // 
             resources.ApplyResources(this.EditDiabetes, "EditDiabetes");
@@ -1244,36 +1274,6 @@
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // iddgv
-            // 
-            resources.ApplyResources(this.iddgv, "iddgv");
-            this.iddgv.Name = "iddgv";
-            this.iddgv.ReadOnly = true;
-            // 
-            // filenodgv
-            // 
-            resources.ApplyResources(this.filenodgv, "filenodgv");
-            this.filenodgv.Name = "filenodgv";
-            this.filenodgv.ReadOnly = true;
-            // 
-            // firstnamedgv
-            // 
-            resources.ApplyResources(this.firstnamedgv, "firstnamedgv");
-            this.firstnamedgv.Name = "firstnamedgv";
-            this.firstnamedgv.ReadOnly = true;
-            // 
-            // familynamedgv
-            // 
-            resources.ApplyResources(this.familynamedgv, "familynamedgv");
-            this.familynamedgv.Name = "familynamedgv";
-            this.familynamedgv.ReadOnly = true;
-            // 
-            // weightdgv
-            // 
-            resources.ApplyResources(this.weightdgv, "weightdgv");
-            this.weightdgv.Name = "weightdgv";
-            this.weightdgv.ReadOnly = true;
             // 
             // Diabetes
             // 
