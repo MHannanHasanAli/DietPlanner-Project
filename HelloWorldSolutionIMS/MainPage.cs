@@ -628,14 +628,25 @@ namespace HelloWorldSolutionIMS
 
         private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Close Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (languagestatus == 0)
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Close Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("هل انت متاكد من اغلاق التطبيق", "Close Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
 
             // Check the user's response
-            if (result == DialogResult.No)
-            {
-                // If the user clicked No, cancel the form closing event
-                e.Cancel = true;
-            }
+
 
         }
         ToolTip toolTip1 = new ToolTip();

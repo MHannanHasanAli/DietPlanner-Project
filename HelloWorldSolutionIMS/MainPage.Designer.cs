@@ -79,7 +79,7 @@
             this.guna2TileButton1.HoverState.Parent = this.guna2TileButton1;
             this.guna2TileButton1.Image = global::HelloWorldSolutionIMS.Properties.Resources.settings1;
             this.guna2TileButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton1.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton1.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton1.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton1.Name = "guna2TileButton1";
             this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
@@ -98,7 +98,7 @@
             this.guna2TileButton10.HoverState.Parent = this.guna2TileButton10;
             this.guna2TileButton10.Image = global::HelloWorldSolutionIMS.Properties.Resources.hot_deal1;
             this.guna2TileButton10.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton10.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton10.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton10.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton10.Name = "guna2TileButton10";
             this.guna2TileButton10.ShadowDecoration.Parent = this.guna2TileButton10;
@@ -117,7 +117,7 @@
             this.guna2TileButton5.HoverState.Parent = this.guna2TileButton5;
             this.guna2TileButton5.Image = global::HelloWorldSolutionIMS.Properties.Resources.calculator1;
             this.guna2TileButton5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton5.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton5.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton5.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton5.Name = "guna2TileButton5";
             this.guna2TileButton5.ShadowDecoration.Parent = this.guna2TileButton5;
@@ -136,7 +136,7 @@
             this.guna2TileButton11.HoverState.Parent = this.guna2TileButton11;
             this.guna2TileButton11.Image = global::HelloWorldSolutionIMS.Properties.Resources.money1;
             this.guna2TileButton11.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton11.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton11.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton11.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton11.Name = "guna2TileButton11";
             this.guna2TileButton11.ShadowDecoration.Parent = this.guna2TileButton11;
@@ -155,7 +155,7 @@
             this.guna2TileButton7.HoverState.Parent = this.guna2TileButton7;
             this.guna2TileButton7.Image = global::HelloWorldSolutionIMS.Properties.Resources.diet__2_1;
             this.guna2TileButton7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton7.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton7.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton7.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton7.Name = "guna2TileButton7";
             this.guna2TileButton7.ShadowDecoration.Parent = this.guna2TileButton7;
@@ -174,7 +174,7 @@
             this.guna2TileButton3.HoverState.Parent = this.guna2TileButton3;
             this.guna2TileButton3.Image = global::HelloWorldSolutionIMS.Properties.Resources.grocery;
             this.guna2TileButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton3.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton3.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton3.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton3.Name = "guna2TileButton3";
             this.guna2TileButton3.ShadowDecoration.Parent = this.guna2TileButton3;
@@ -193,7 +193,7 @@
             this.guna2TileButton4.HoverState.Parent = this.guna2TileButton4;
             this.guna2TileButton4.Image = global::HelloWorldSolutionIMS.Properties.Resources.sugar_cube1;
             this.guna2TileButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton4.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton4.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton4.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton4.Name = "guna2TileButton4";
             this.guna2TileButton4.ShadowDecoration.Parent = this.guna2TileButton4;
@@ -212,7 +212,7 @@
             this.guna2TileButton2.HoverState.Parent = this.guna2TileButton2;
             this.guna2TileButton2.Image = global::HelloWorldSolutionIMS.Properties.Resources.booking;
             this.guna2TileButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton2.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton2.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton2.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton2.Name = "guna2TileButton2";
             this.guna2TileButton2.ShadowDecoration.Parent = this.guna2TileButton2;
@@ -231,7 +231,7 @@
             this.guna2TileButton8.HoverState.Parent = this.guna2TileButton8;
             this.guna2TileButton8.Image = global::HelloWorldSolutionIMS.Properties.Resources.diet__2_;
             this.guna2TileButton8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton8.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton8.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton8.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton8.Name = "guna2TileButton8";
             this.guna2TileButton8.ShadowDecoration.Parent = this.guna2TileButton8;
@@ -250,7 +250,7 @@
             this.guna2TileButton12.HoverState.Parent = this.guna2TileButton12;
             this.guna2TileButton12.Image = global::HelloWorldSolutionIMS.Properties.Resources.diet3;
             this.guna2TileButton12.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton12.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton12.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton12.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton12.Name = "guna2TileButton12";
             this.guna2TileButton12.ShadowDecoration.Parent = this.guna2TileButton12;
@@ -269,7 +269,7 @@
             this.guna2TileButton6.HoverState.Parent = this.guna2TileButton6;
             this.guna2TileButton6.Image = global::HelloWorldSolutionIMS.Properties.Resources.manual_book1;
             this.guna2TileButton6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton6.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton6.ImageOffset = new System.Drawing.Point(5, 10);
             this.guna2TileButton6.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton6.Name = "guna2TileButton6";
             this.guna2TileButton6.ShadowDecoration.Parent = this.guna2TileButton6;
@@ -288,7 +288,7 @@
             this.guna2TileButton9.HoverState.Parent = this.guna2TileButton9;
             this.guna2TileButton9.Image = global::HelloWorldSolutionIMS.Properties.Resources.verify1;
             this.guna2TileButton9.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton9.ImageOffset = new System.Drawing.Point(10, 10);
+            this.guna2TileButton9.ImageOffset = new System.Drawing.Point(8, 10);
             this.guna2TileButton9.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton9.Name = "guna2TileButton9";
             this.guna2TileButton9.ShadowDecoration.Parent = this.guna2TileButton9;
