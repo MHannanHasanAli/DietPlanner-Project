@@ -77,6 +77,30 @@ namespace HelloWorldSolutionIMS
             }
         }
 
+        public void loadLogo()
+        {
+            SqlCommand cmd;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd = new SqlCommand("SELECT LOGO FROM SETTINGS", MainClass.con);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    sidebarlogo.ImageLocation = dr["LOGO"].ToString();
+                }
+
+                dr.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void MainPage_Load(object sender, EventArgs e)
         {
             LanguageInfo();
@@ -120,7 +144,7 @@ namespace HelloWorldSolutionIMS
 
             }
 
-
+            loadLogo();
 
             int w = 1200;
             int h = 737;
@@ -200,7 +224,7 @@ namespace HelloWorldSolutionIMS
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.mainpanel.Controls.Add(f);
-            foreach (Control control in f.Controls)
+            foreach (System.Windows.Forms.Control control in f.Controls)
             {
                 if (control is Guna2Button)
                 {
@@ -210,7 +234,7 @@ namespace HelloWorldSolutionIMS
                     // You can access other properties or perform actions with the buttons here
                 }
             }
-            foreach (Control control in f.Controls)
+            foreach (System.Windows.Forms.Control control in f.Controls)
             {
                 if (control is Guna2Button)
                 {
@@ -221,7 +245,7 @@ namespace HelloWorldSolutionIMS
                 }
             }
             MealAction obj = new MealAction();
-            foreach (Control control in obj.tabControl1.Controls)
+            foreach (System.Windows.Forms.Control control in obj.tabControl1.Controls)
             {
                 if (control is Guna2Button)
                 {
@@ -231,7 +255,7 @@ namespace HelloWorldSolutionIMS
                     // You can access other properties or perform actions with the buttons here
                 }
             }
-            foreach (Control control in obj.tabControl1.Controls)
+            foreach (System.Windows.Forms.Control control in obj.tabControl1.Controls)
             {
                 if (control is Guna2Button)
                 {

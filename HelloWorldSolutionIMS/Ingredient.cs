@@ -510,7 +510,7 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Open();
 
                 SqlCommand cmd = new SqlCommand("SELECT ID, fdc_id, INGREDIENT_AR, CALORIES, FATS, CARBOHYDRATES, FIBERS, CALCIUM, SODIUM, CLASSIFICATION FROM Ingredient " +
-                    "WHERE CATEGORY LIKE @Category", MainClass.con);
+                    "WHERE Datatype LIKE @Category", MainClass.con);
 
                 cmd.Parameters.AddWithValue("@Category", "%" + category + "%");
 
@@ -868,8 +868,8 @@ namespace HelloWorldSolutionIMS
                     try
                     {
                         MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("INSERT INTO Ingredient (INGREDIENT_AR, INGREDIENT_EN, GROUP_AR, GROUP_EN, CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B) " +
-                            "VALUES (@INGREDIENT_AR, @INGREDIENT_EN, @GROUP_AR, @GROUP_EN, @CLASSIFICATION, @CALORIES, @FATS, @FIBERS, @POTASSIUM, @WATER, @SUGAR, @CALCIUM, @A, @PROTEIN, @CARBOHYDRATES, @SODIUM, @PHOSPHOR, @MAGNESIUM, @IRON, @IODINE, @B)", MainClass.con);
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Ingredient (INGREDIENT_AR, INGREDIENT_EN, GROUP_AR, GROUP_EN, CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, datatype) " +
+                            "VALUES (@INGREDIENT_AR, @INGREDIENT_EN, @GROUP_AR, @GROUP_EN, @CLASSIFICATION, @CALORIES, @FATS, @FIBERS, @POTASSIUM, @WATER, @SUGAR, @CALCIUM, @A, @PROTEIN, @CARBOHYDRATES, @SODIUM, @PHOSPHOR, @MAGNESIUM, @IRON, @IODINE, @B, @datatype)", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@INGREDIENT_AR", ingredientar.Text); // Replace with the actual input control for INGREDIENT_AR.
                         cmd.Parameters.AddWithValue("@INGREDIENT_EN", ingredienten.Text); // Replace with the actual input control for INGREDIENT_EN.
@@ -892,7 +892,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@IRON", Convert.ToDouble(iron.Text)); // Replace with the actual input control for IRON.
                         cmd.Parameters.AddWithValue("@IODINE", Convert.ToDouble(iodine.Text)); // Replace with the actual input control for IODINE.
                         cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text)); // Replace with the actual input control for B.
-
+                        cmd.Parameters.AddWithValue("@datatype", categorybox.Text);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Ingredient added successfully");
 
@@ -918,7 +918,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-                        //categorybox.SelectedItem = null;
+                        categorybox.SelectedItem = null;
 
                         MainClass.con.Close();
 
@@ -944,7 +944,7 @@ namespace HelloWorldSolutionIMS
                     {
 
                         MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("UPDATE Ingredient SET INGREDIENT_AR = @INGREDIENT_AR, INGREDIENT_EN = @INGREDIENT_EN, GROUP_AR = @GROUP_AR, GROUP_EN = @GROUP_EN, CLASSIFICATION = @CLASSIFICATION, CALORIES = @CALORIES, FATS = @FATS, FIBERS = @FIBERS, POTASSIUM = @POTASSIUM, WATER = @WATER, SUGAR = @SUGAR, CALCIUM = @CALCIUM, A = @A, PROTEIN = @PROTEIN, CARBOHYDRATES = @CARBOHYDRATES, SODIUM = @SODIUM, PHOSPHOR = @PHOSPHOR, MAGNESIUM = @MAGNESIUM, IRON = @IRON, IODINE = @IODINE, B = @B WHERE ID = @ID", MainClass.con);
+                        SqlCommand cmd = new SqlCommand("UPDATE Ingredient SET INGREDIENT_AR = @INGREDIENT_AR, INGREDIENT_EN = @INGREDIENT_EN, GROUP_AR = @GROUP_AR, GROUP_EN = @GROUP_EN, CLASSIFICATION = @CLASSIFICATION, CALORIES = @CALORIES, FATS = @FATS, FIBERS = @FIBERS, POTASSIUM = @POTASSIUM, WATER = @WATER, SUGAR = @SUGAR, CALCIUM = @CALCIUM, A = @A, PROTEIN = @PROTEIN, CARBOHYDRATES = @CARBOHYDRATES, SODIUM = @SODIUM, PHOSPHOR = @PHOSPHOR, MAGNESIUM = @MAGNESIUM, IRON = @IRON, IODINE = @IODINE, B = @B, datatype = @datatype WHERE ID = @ID", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@ID", ingredientIDToEdit); // Replace with the actual input control for ID.
                         cmd.Parameters.AddWithValue("@INGREDIENT_AR", ingredientar.Text); // Replace with the actual input control for INGREDIENT_AR.
@@ -968,7 +968,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@IRON", Convert.ToDouble(iron.Text)); // Replace with the actual input control for IRON.
                         cmd.Parameters.AddWithValue("@IODINE", Convert.ToDouble(iodine.Text)); // Replace with the actual input control for IODINE.
                         cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text)); // Replace with the actual input control for B.
-                        //cmd.Parameters.AddWithValue("@Category", categorybox.Text);
+                        cmd.Parameters.AddWithValue("@datatype", categorybox.Text);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Ingredient updated successfully");
 
@@ -994,7 +994,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-                        //categorybox.SelectedItem = null;
+                        categorybox.SelectedItem = null;
                         MainClass.con.Close();
                         importall.Visible = true;
                         importbranded.Visible = true;
@@ -1056,6 +1056,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = reader["IRON"].ToString();
                         iodine.Text = reader["IODINE"].ToString();
                         bbox.Text = reader["B"].ToString();
+                        categorybox.Text = reader["Datatype"].ToString();
                     }
                 }
                 else
@@ -1102,7 +1103,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-                        //categorybox.SelectedItem = null;
+                        categorybox.SelectedItem = null;
                         // Get the Ingredient ID to display in the confirmation message
                         string ingredientIDToDelete = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
 
@@ -1203,7 +1204,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = reader["IRON"].ToString();
                         iodine.Text = reader["IODINE"].ToString();
                         bbox.Text = reader["B"].ToString();
-                        //categorybox.Text = reader["Category"].ToString();
+                        categorybox.Text = reader["Datatype"].ToString();
                     }
                 }
                 else
@@ -1249,6 +1250,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
+                        categorybox.SelectedItem = null;
                         // Get the Ingredient ID to display in the confirmation message
                         string ingredientIDToDelete = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
 
@@ -1692,7 +1694,7 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Open();
 
                 // SQL query to select all rows from the Ingredient table
-                string query = "SELECT fdc_id,datatype AS Data_Source, INGREDIENT_EN AS description_en , INGREDIENT_AR AS description_ar, GROUP_EN AS category_en, GROUP_AR AS category_ar, CALORIES,PROTEIN, FATS,CARBOHYDRATES,WATER,SUGAR, FIBERS, CALCIUM,IRON, MAGNESIUM ,PHOSPHOR AS PHOSPHORUS, POTASSIUM, SODIUM, IODINE,A, B FROM Ingredient;";
+                string query = "SELECT fdc_id,datatype AS Category, INGREDIENT_EN AS description_en , INGREDIENT_AR AS description_ar, GROUP_EN AS category_en, GROUP_AR AS category_ar, CALORIES,PROTEIN, FATS,CARBOHYDRATES,WATER,SUGAR, FIBERS, CALCIUM,IRON, MAGNESIUM ,PHOSPHOR AS PHOSPHORUS, POTASSIUM, SODIUM, IODINE,A, B FROM Ingredient;";
 
                 using (SqlCommand command = new SqlCommand(query, MainClass.con))
                 {

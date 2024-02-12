@@ -2987,10 +2987,10 @@ namespace HelloWorldSolutionIMS
 
                 }
                 ShowMedicalHistory(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
-                if (editstatus == 1)
-                {
-                    tabControl1.SelectedIndex = 0;
-                }
+                //if (editstatus == 1)
+                //{
+                //    tabControl1.SelectedIndex = 0;
+                //}
             }
             else
             {

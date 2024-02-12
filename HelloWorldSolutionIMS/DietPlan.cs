@@ -1838,68 +1838,71 @@ namespace HelloWorldSolutionIMS
 
         private void guna2DataGridView12_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            UpdateGroupsC();
-            UpdateGroupsN();
-            MealID = guna2DataGridView12.Rows[e.RowIndex].Cells[0].Value.ToString();
-            try
+            if (e.RowIndex != -1)
             {
-                MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
-                cmd.Parameters.AddWithValue("@MealID", MealID);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.HasRows)
+                UpdateGroupsC();
+                UpdateGroupsN();
+                MealID = guna2DataGridView12.Rows[e.RowIndex].Cells[0].Value.ToString();
+                try
                 {
-                    while (reader.Read())
+                    MainClass.con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Meal WHERE ID = @MealID", MainClass.con);
+                    cmd.Parameters.AddWithValue("@MealID", MealID);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
                     {
-                        // Set the retrieved data into input controls
-                        mealar.Text = reader["MealAr"].ToString();
-                        mealen.Text = reader["MealEn"].ToString();
-                        groupnar.Text = reader["GroupNAr"].ToString();
-                        groupnen.Text = reader["GroupNEn"].ToString();
-                        groupcar.Text = reader["GroupCAr"].ToString();
-                        groupcen.Text = reader["GroupCEn"].ToString();
-                        caloriesm.Text = reader["CALORIES"].ToString();
-                        fatsm.Text = reader["FATS"].ToString();
-                        fibersm.Text = reader["FIBERS"].ToString();
-                        potassiumm.Text = reader["POTASSIUM"].ToString();
-                        waterm.Text = reader["WATER"].ToString();
-                        sugerm.Text = reader["SUGAR"].ToString();
-                        calciumm.Text = reader["CALCIUM"].ToString();
-                        am.Text = reader["A"].ToString();
-                        proteinm.Text = reader["PROTEIN"].ToString();
-                        carbsm.Text = reader["CARBOHYDRATES"].ToString();
-                        sodiumm.Text = reader["SODIUM"].ToString();
-                        phosphorusm.Text = reader["PHOSPHOR"].ToString();
-                        magnesiumm.Text = reader["MAGNESIUM"].ToString();
-                        ironm.Text = reader["IRON"].ToString();
-                        iodinem.Text = reader["IODINE"].ToString();
-                        bm.Text = reader["B"].ToString();
-                        //category.Text = reader["Category"].ToString();
-                        notes.Text = reader["Notes"].ToString();
-                        preparation.Text = reader["Preparation"].ToString();
-                        classification.Text = reader["CLASSIFICATION"].ToString();
-                        //Catgry = reader["Category"].ToString();
+                        while (reader.Read())
+                        {
+                            // Set the retrieved data into input controls
+                            mealar.Text = reader["MealAr"].ToString();
+                            mealen.Text = reader["MealEn"].ToString();
+                            groupnar.Text = reader["GroupNAr"].ToString();
+                            groupnen.Text = reader["GroupNEn"].ToString();
+                            groupcar.Text = reader["GroupCAr"].ToString();
+                            groupcen.Text = reader["GroupCEn"].ToString();
+                            caloriesm.Text = reader["CALORIES"].ToString();
+                            fatsm.Text = reader["FATS"].ToString();
+                            fibersm.Text = reader["FIBERS"].ToString();
+                            potassiumm.Text = reader["POTASSIUM"].ToString();
+                            waterm.Text = reader["WATER"].ToString();
+                            sugerm.Text = reader["SUGAR"].ToString();
+                            calciumm.Text = reader["CALCIUM"].ToString();
+                            am.Text = reader["A"].ToString();
+                            proteinm.Text = reader["PROTEIN"].ToString();
+                            carbsm.Text = reader["CARBOHYDRATES"].ToString();
+                            sodiumm.Text = reader["SODIUM"].ToString();
+                            phosphorusm.Text = reader["PHOSPHOR"].ToString();
+                            magnesiumm.Text = reader["MAGNESIUM"].ToString();
+                            ironm.Text = reader["IRON"].ToString();
+                            iodinem.Text = reader["IODINE"].ToString();
+                            bm.Text = reader["B"].ToString();
+                            //category.Text = reader["Category"].ToString();
+                            notes.Text = reader["Notes"].ToString();
+                            preparation.Text = reader["Preparation"].ToString();
+                            classification.Text = reader["CLASSIFICATION"].ToString();
+                            //Catgry = reader["Category"].ToString();
+                        }
+                        reader.Close(); // Close the first DataReader
+
+                        //ShowIngredients(guna2DataGridView1, unitdgv, ingredientardgv, ingredientendgv,quantitydgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, potassiumdgv, phosphordgv,waterdgv,magnesiumdgv,sugerdgv,irondgv,iodinedgv,adgv,bdgv);
+                        MainClass.con.Close();
+                        //extrafunc();
+
+                        //tabControl1.SelectedIndex = 2;
                     }
-                    reader.Close(); // Close the first DataReader
+                    else
+                    {
+                        MessageBox.Show("Meal not found with ID: " + MealID);
+                    }
 
-                    //ShowIngredients(guna2DataGridView1, unitdgv, ingredientardgv, ingredientendgv,quantitydgv, caloriedgv, proteindgv, fatsdgv, carbohydratesdgv, calciumdgv, fiberdgv, sodiumdgv, potassiumdgv, phosphordgv,waterdgv,magnesiumdgv,sugerdgv,irondgv,iodinedgv,adgv,bdgv);
                     MainClass.con.Close();
-                    //extrafunc();
-
-                    //tabControl1.SelectedIndex = 2;
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Meal not found with ID: " + MealID);
+                    MainClass.con.Close();
+                    MessageBox.Show(ex.Message);
                 }
-
-                MainClass.con.Close();
-            }
-            catch (Exception ex)
-            {
-                MainClass.con.Close();
-                MessageBox.Show(ex.Message);
             }
         }
         private void UpdateGroupsC()

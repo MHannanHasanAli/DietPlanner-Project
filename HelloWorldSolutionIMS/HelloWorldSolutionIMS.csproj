@@ -1109,6 +1109,51 @@
   <ItemGroup>
     <None Include="Resources\RoadMap Graphic-011.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diet %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guidebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\healthy-food3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drop-counter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diet %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balanced-diet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\math.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings %281%291.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\StrongNamer.0.2.5\build\StrongNamer.targets" Condition="Exists('..\packages\StrongNamer.0.2.5\build\StrongNamer.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

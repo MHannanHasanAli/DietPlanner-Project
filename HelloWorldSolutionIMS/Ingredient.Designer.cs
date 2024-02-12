@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingredient));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -40,6 +39,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingredient));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -132,6 +132,8 @@
             this.idgn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gnnar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gnnen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categorybox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -163,6 +165,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.categorybox);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.export);
             this.panel1.Controls.Add(this.dgn);
             this.panel1.Controls.Add(this.agn);
@@ -1428,6 +1432,33 @@
             this.gnnen.ReadOnly = true;
             this.gnnen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // categorybox
+            // 
+            this.categorybox.BackColor = System.Drawing.Color.Transparent;
+            this.categorybox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.categorybox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categorybox.FocusedColor = System.Drawing.Color.Empty;
+            this.categorybox.FocusedState.Parent = this.categorybox;
+            resources.ApplyResources(this.categorybox, "categorybox");
+            this.categorybox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.categorybox.FormattingEnabled = true;
+            this.categorybox.HoverState.Parent = this.categorybox;
+            this.categorybox.Items.AddRange(new object[] {
+            resources.GetString("categorybox.Items"),
+            resources.GetString("categorybox.Items1"),
+            resources.GetString("categorybox.Items2"),
+            resources.GetString("categorybox.Items3"),
+            resources.GetString("categorybox.Items4"),
+            resources.GetString("categorybox.Items5")});
+            this.categorybox.ItemsAppearance.Parent = this.categorybox;
+            this.categorybox.Name = "categorybox";
+            this.categorybox.ShadowDecoration.Parent = this.categorybox;
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
             // Ingredient
             // 
             resources.ApplyResources(this, "$this");
@@ -1549,5 +1580,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn calciumdgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn fibersdgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodiumdgv;
+        private Guna.UI2.WinForms.Guna2ComboBox categorybox;
+        private System.Windows.Forms.Label label13;
     }
 }
