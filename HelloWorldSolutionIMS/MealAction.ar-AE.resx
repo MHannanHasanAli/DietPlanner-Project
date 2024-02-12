@@ -386,7 +386,7 @@
     <value>جروب ن (عربي)</value>
   </data>
   <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 30</value>
+    <value>110, 24</value>
   </data>
   <data name="label25.Text" xml:space="preserve">
     <value>طريقة التحضير </value>
@@ -404,7 +404,7 @@
     <value>لكل حصة </value>
   </data>
   <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 30</value>
+    <value>72, 24</value>
   </data>
   <data name="label24.Text" xml:space="preserve">
     <value>ملاحظات </value>

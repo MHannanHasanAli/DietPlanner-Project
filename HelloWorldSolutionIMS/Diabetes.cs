@@ -15,7 +15,9 @@ namespace HelloWorldSolutionIMS
             InitializeComponent();
             weight.KeyPress += weight_KeyPress;
             weight.TextChanged += weight_TextChanged;
-
+            AddFiveRowsToTable();
+            AddFiveRowsToTablecarbs();
+            AddRowsToBloodSuger();
         }
         static int valueid = 0;
         public Diabetes(int id)
@@ -24,10 +26,13 @@ namespace HelloWorldSolutionIMS
             weight.KeyPress += weight_KeyPress;
             weight.TextChanged += weight_TextChanged;
             coderunner = id;
+            AddFiveRowsToTable();
+            AddFiveRowsToTablecarbs();
+            AddRowsToBloodSuger();
+            table_total = 0;
             LoadData(id);
             openingflag = 1;
-
-
+            edit = 1;
         }
         static int total;
         static double insulincharbcalc;
@@ -40,15 +45,14 @@ namespace HelloWorldSolutionIMS
         static int openingflag = 0;
         private void updatetotal()
         {
-            if (openingflag != 0)
+
+            if (guna2DataGridView1.Rows[4].Cells[1].Value != "")
             {
-                if (guna2DataGridView1.Rows[4].Cells[1].Value != "")
-                {
-                    int totalval = int.Parse(guna2DataGridView1.Rows[4].Cells[1].Value.ToString());
-                    totalval = total;
-                    guna2DataGridView1.Rows[4].Cells[1].Value = totalval;
-                }
+                int totalval = int.Parse(guna2DataGridView1.Rows[4].Cells[1].Value.ToString());
+                totalval = total;
+                guna2DataGridView1.Rows[4].Cells[1].Value = totalval;
             }
+
         }
 
         static int loadflag = 0;
@@ -65,7 +69,7 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Open();
 
                 // Fetch the row based on ID
-                SqlCommand selectCmd = new SqlCommand("SELECT * FROM Diabetes WHERE ID = @ID", MainClass.con);
+                SqlCommand selectCmd = new SqlCommand("SELECT * FROM Diabetes WHERE FileNo = @ID", MainClass.con);
                 selectCmd.Parameters.AddWithValue("@ID", idToEdit);
 
                 SqlDataReader reader = selectCmd.ExecuteReader();
@@ -74,19 +78,19 @@ namespace HelloWorldSolutionIMS
                 {
                     filenoTOedit = reader["FileNo"].ToString();
                     savedweight = reader["Weight"].ToString();
-
-                    //guna2DataGridView1.Rows[0].Cells[1].Value = reader["BFInsulin"];
-                    //guna2DataGridView1.Rows[1].Cells[1].Value = reader["LInsulin"];
-                    //guna2DataGridView1.Rows[2].Cells[1].Value = reader["DInsulin"];
-                    //guna2DataGridView1.Rows[3].Cells[1].Value = reader["SInsulin"];
-                    //guna2DataGridView2.Rows[0].Cells[1].Value = reader["BFCarbs"];
-                    //guna2DataGridView2.Rows[1].Cells[1].Value = reader["LCarbs"];
-                    //guna2DataGridView2.Rows[2].Cells[1].Value = reader["DCarbs"];
-                    //guna2DataGridView2.Rows[3].Cells[1].Value = reader["SCarbs"];
-                    //guna2DataGridView4.Rows[0].Cells[2].Value = reader["FastingGlucose"];
-                    //guna2DataGridView4.Rows[1].Cells[2].Value = reader["BeforeLunch"];
-                    //guna2DataGridView4.Rows[2].Cells[2].Value = reader["BeforeDinner"];
-                    //guna2DataGridView4.Rows[3].Cells[2].Value = reader["BedTime"];
+                    weight.Text = savedweight;
+                    guna2DataGridView1.Rows[0].Cells[1].Value = reader["BFInsulin"];
+                    guna2DataGridView1.Rows[1].Cells[1].Value = reader["LInsulin"];
+                    guna2DataGridView1.Rows[2].Cells[1].Value = reader["DInsulin"];
+                    guna2DataGridView1.Rows[3].Cells[1].Value = reader["SInsulin"];
+                    guna2DataGridView2.Rows[0].Cells[1].Value = reader["BFCarbs"];
+                    guna2DataGridView2.Rows[1].Cells[1].Value = reader["LCarbs"];
+                    guna2DataGridView2.Rows[2].Cells[1].Value = reader["DCarbs"];
+                    guna2DataGridView2.Rows[3].Cells[1].Value = reader["SCarbs"];
+                    guna2DataGridView4.Rows[0].Cells[2].Value = reader["FastingGlucose"];
+                    guna2DataGridView4.Rows[1].Cells[2].Value = reader["BeforeLunch"];
+                    guna2DataGridView4.Rows[2].Cells[2].Value = reader["BeforeDinner"];
+                    guna2DataGridView4.Rows[3].Cells[2].Value = reader["BedTime"];
 
                 }
                 else
@@ -97,10 +101,12 @@ namespace HelloWorldSolutionIMS
                 reader.Close();
                 MainClass.con.Close();
                 fileno.Text = filenoTOedit;
-                weight.Text = savedweight;
+
                 FillData();
                 tabControl1.SelectedIndex = 1;
-
+                edit = 1;
+                //guna2DataGridView7.Visible = true;
+                //guna2DataGridView6.Visible = true;
             }
             finally
             {
@@ -937,11 +943,11 @@ namespace HelloWorldSolutionIMS
 
             }
 
-            AddFiveRowsToTable();
-            AddFiveRowsToTablecarbs();
-            AddRowsToBloodSuger();
+            //AddFiveRowsToTable();
+            //AddFiveRowsToTablecarbs();
+            //AddRowsToBloodSuger();
             ShowDiabetes(guna2DataGridView8, iddgv, filenodgv, firstnamedgv, familynamedgv, weightdgv);
-            edit = 0;
+            edit = 1;
             loadflag = 1;
         }
 
@@ -1076,6 +1082,7 @@ namespace HelloWorldSolutionIMS
                         return;
                     }
                     guna2DataGridView7.Visible = true;
+                    guna2DataGridView6.Visible = true;
                     for (int i = 0; i < 4; i++)
                     {
                         if (guna2DataGridView2.Rows[0 + i].Cells[e.ColumnIndex].Value != null)
@@ -1158,11 +1165,15 @@ namespace HelloWorldSolutionIMS
         {
             guna2DataGridView1.Visible = true;
             guna2DataGridView2.Visible = false;
+            guna2DataGridView7.Visible = true;
+            guna2DataGridView6.Visible = true;
         }
         private void Add_Click(object sender, EventArgs e)
         {
             guna2DataGridView1.Visible = false;
             guna2DataGridView2.Visible = true;
+            guna2DataGridView7.Visible = true;
+            guna2DataGridView6.Visible = true;
         }
         private void floatlock(object sender, KeyPressEventArgs e)
         {
@@ -1418,7 +1429,6 @@ namespace HelloWorldSolutionIMS
 
         private void AddDiabetesCalculation()
         {
-
             try
             {
                 if (string.IsNullOrEmpty(fileno.Text))

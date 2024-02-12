@@ -367,6 +367,15 @@
   <data name="bmrbc.HeaderText" xml:space="preserve">
     <value>معدل الحرق </value>
   </data>
+  <data name="genderbmi.Items" xml:space="preserve">
+    <value>ذكر</value>
+  </data>
+  <data name="genderbmi.Items1" xml:space="preserve">
+    <value>أنثى </value>
+  </data>
+  <data name="genderbmi.Items2" xml:space="preserve">
+    <value>أخرى</value>
+  </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>607, 125</value>
   </data>

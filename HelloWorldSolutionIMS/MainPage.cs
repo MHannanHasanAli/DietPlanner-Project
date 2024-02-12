@@ -630,22 +630,27 @@ namespace HelloWorldSolutionIMS
         {
             if (languagestatus == 0)
             {
-                DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Close Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.No)
+                using (var customDialog = new CustomDialogForm())
                 {
-                    e.Cancel = true;
+                    customDialog.ConfirmationMessage = "Are you sure you want to close the application?";
+                    if (customDialog.ShowDialogWithCustomButtons("Yes", "No") == DialogResult.No)
+                    {
+                        e.Cancel = true;
+                    }
                 }
             }
             else
             {
-                DialogResult result = MessageBox.Show("هل انت متاكد من اغلاق التطبيق", "Close Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.No)
+                using (var customDialog = new CustomDialogForm())
                 {
-                    e.Cancel = true;
+                    customDialog.ConfirmationMessage = "هل انت متاكد من اغلاق التطبيق؟";
+                    if (customDialog.ShowDialogWithCustomButtons("نعم", "لا") == DialogResult.No)
+                    {
+                        e.Cancel = true;
+                    }
                 }
             }
 
-            // Check the user's response
 
 
         }

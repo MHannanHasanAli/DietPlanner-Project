@@ -143,7 +143,6 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.SaveDiabetes);
             this.panel1.Controls.Add(this.Back);
@@ -175,18 +174,19 @@
             this.panel1.Controls.Add(this.weight);
             this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.guna2DataGridView4);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // SaveDiabetes
             // 
-            resources.ApplyResources(this.SaveDiabetes, "SaveDiabetes");
             this.SaveDiabetes.AutoRoundedCorners = true;
             this.SaveDiabetes.BorderRadius = 21;
             this.SaveDiabetes.CausesValidation = false;
             this.SaveDiabetes.CheckedState.Parent = this.SaveDiabetes;
             this.SaveDiabetes.CustomImages.Parent = this.SaveDiabetes;
             this.SaveDiabetes.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.SaveDiabetes, "SaveDiabetes");
             this.SaveDiabetes.ForeColor = System.Drawing.Color.White;
             this.SaveDiabetes.HoverState.Parent = this.SaveDiabetes;
             this.SaveDiabetes.Name = "SaveDiabetes";
@@ -195,13 +195,13 @@
             // 
             // Back
             // 
-            resources.ApplyResources(this.Back, "Back");
             this.Back.AutoRoundedCorners = true;
             this.Back.BorderRadius = 21;
             this.Back.CausesValidation = false;
             this.Back.CheckedState.Parent = this.Back;
             this.Back.CustomImages.Parent = this.Back;
             this.Back.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Back, "Back");
             this.Back.ForeColor = System.Drawing.Color.White;
             this.Back.HoverState.Parent = this.Back;
             this.Back.Name = "Back";
@@ -210,7 +210,6 @@
             // 
             // guna2DataGridView6
             // 
-            resources.ApplyResources(this.guna2DataGridView6, "guna2DataGridView6");
             this.guna2DataGridView6.AllowUserToAddRows = false;
             this.guna2DataGridView6.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -228,6 +227,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.guna2DataGridView6, "guna2DataGridView6");
             this.guna2DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.guna2DataGridView6.ColumnHeadersVisible = false;
             this.guna2DataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -301,7 +301,6 @@
             // 
             // guna2DataGridView7
             // 
-            resources.ApplyResources(this.guna2DataGridView7, "guna2DataGridView7");
             this.guna2DataGridView7.AllowUserToAddRows = false;
             this.guna2DataGridView7.AllowUserToDeleteRows = false;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
@@ -319,6 +318,7 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            resources.ApplyResources(this.guna2DataGridView7, "guna2DataGridView7");
             this.guna2DataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.guna2DataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn10});
@@ -372,7 +372,6 @@
             // 
             // guna2DataGridView5
             // 
-            resources.ApplyResources(this.guna2DataGridView5, "guna2DataGridView5");
             this.guna2DataGridView5.AllowUserToAddRows = false;
             this.guna2DataGridView5.AllowUserToDeleteRows = false;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
@@ -390,6 +389,7 @@
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            resources.ApplyResources(this.guna2DataGridView5, "guna2DataGridView5");
             this.guna2DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.guna2DataGridView5.ColumnHeadersVisible = false;
             this.guna2DataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -463,7 +463,6 @@
             // 
             // guna2DataGridView3
             // 
-            resources.ApplyResources(this.guna2DataGridView3, "guna2DataGridView3");
             this.guna2DataGridView3.AllowUserToAddRows = false;
             this.guna2DataGridView3.AllowUserToDeleteRows = false;
             dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
@@ -481,6 +480,7 @@
             dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            resources.ApplyResources(this.guna2DataGridView3, "guna2DataGridView3");
             this.guna2DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.guna2DataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4,
@@ -541,8 +541,8 @@
             // 
             // dob
             // 
-            resources.ApplyResources(this.dob, "dob");
             this.dob.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            resources.ApplyResources(this.dob, "dob");
             this.dob.Name = "dob";
             // 
             // label7
@@ -567,7 +567,6 @@
             // 
             // familyname
             // 
-            resources.ApplyResources(this.familyname, "familyname");
             this.familyname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.familyname.DefaultText = "";
             this.familyname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -577,6 +576,7 @@
             this.familyname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.familyname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.familyname.FocusedState.Parent = this.familyname;
+            resources.ApplyResources(this.familyname, "familyname");
             this.familyname.ForeColor = System.Drawing.Color.Black;
             this.familyname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.familyname.HoverState.Parent = this.familyname;
@@ -588,7 +588,6 @@
             // 
             // firstname
             // 
-            resources.ApplyResources(this.firstname, "firstname");
             this.firstname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.firstname.DefaultText = "";
             this.firstname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -598,6 +597,7 @@
             this.firstname.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.firstname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstname.FocusedState.Parent = this.firstname;
+            resources.ApplyResources(this.firstname, "firstname");
             this.firstname.ForeColor = System.Drawing.Color.Black;
             this.firstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstname.HoverState.Parent = this.firstname;
@@ -609,7 +609,6 @@
             // 
             // fileno
             // 
-            resources.ApplyResources(this.fileno, "fileno");
             this.fileno.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fileno.DefaultText = "";
             this.fileno.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -619,6 +618,7 @@
             this.fileno.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.fileno.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.fileno.FocusedState.Parent = this.fileno;
+            resources.ApplyResources(this.fileno, "fileno");
             this.fileno.ForeColor = System.Drawing.Color.Black;
             this.fileno.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.fileno.HoverState.Parent = this.fileno;
@@ -632,7 +632,6 @@
             // 
             // guna2DataGridView2
             // 
-            resources.ApplyResources(this.guna2DataGridView2, "guna2DataGridView2");
             this.guna2DataGridView2.AllowUserToAddRows = false;
             this.guna2DataGridView2.AllowUserToDeleteRows = false;
             dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
@@ -650,6 +649,7 @@
             dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            resources.ApplyResources(this.guna2DataGridView2, "guna2DataGridView2");
             this.guna2DataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn3,
@@ -714,7 +714,6 @@
             // 
             // guna2DataGridView1
             // 
-            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
@@ -732,6 +731,7 @@
             dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            resources.ApplyResources(this.guna2DataGridView1, "guna2DataGridView1");
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.typedgv,
             this.insulindgv,
@@ -797,13 +797,13 @@
             // 
             // Add
             // 
-            resources.ApplyResources(this.Add, "Add");
             this.Add.AutoRoundedCorners = true;
             this.Add.BorderRadius = 21;
             this.Add.CausesValidation = false;
             this.Add.CheckedState.Parent = this.Add;
             this.Add.CustomImages.Parent = this.Add;
             this.Add.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.Add, "Add");
             this.Add.ForeColor = System.Drawing.Color.White;
             this.Add.HoverState.Parent = this.Add;
             this.Add.Name = "Add";
@@ -812,13 +812,13 @@
             // 
             // search
             // 
-            resources.ApplyResources(this.search, "search");
             this.search.AutoRoundedCorners = true;
             this.search.BorderRadius = 21;
             this.search.CausesValidation = false;
             this.search.CheckedState.Parent = this.search;
             this.search.CustomImages.Parent = this.search;
             this.search.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.search, "search");
             this.search.ForeColor = System.Drawing.Color.White;
             this.search.HoverState.Parent = this.search;
             this.search.Name = "search";
@@ -832,7 +832,6 @@
             // 
             // totalinsulin
             // 
-            resources.ApplyResources(this.totalinsulin, "totalinsulin");
             this.totalinsulin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.totalinsulin.DefaultText = "";
             this.totalinsulin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -842,6 +841,7 @@
             this.totalinsulin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.totalinsulin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.totalinsulin.FocusedState.Parent = this.totalinsulin;
+            resources.ApplyResources(this.totalinsulin, "totalinsulin");
             this.totalinsulin.ForeColor = System.Drawing.Color.Black;
             this.totalinsulin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.totalinsulin.HoverState.Parent = this.totalinsulin;
@@ -860,7 +860,6 @@
             // 
             // baselineinsulin
             // 
-            resources.ApplyResources(this.baselineinsulin, "baselineinsulin");
             this.baselineinsulin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.baselineinsulin.DefaultText = "";
             this.baselineinsulin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -870,6 +869,7 @@
             this.baselineinsulin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.baselineinsulin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.baselineinsulin.FocusedState.Parent = this.baselineinsulin;
+            resources.ApplyResources(this.baselineinsulin, "baselineinsulin");
             this.baselineinsulin.ForeColor = System.Drawing.Color.Black;
             this.baselineinsulin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.baselineinsulin.HoverState.Parent = this.baselineinsulin;
@@ -887,7 +887,6 @@
             // 
             // bolusinsulin
             // 
-            resources.ApplyResources(this.bolusinsulin, "bolusinsulin");
             this.bolusinsulin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bolusinsulin.DefaultText = "";
             this.bolusinsulin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -897,6 +896,7 @@
             this.bolusinsulin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.bolusinsulin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.bolusinsulin.FocusedState.Parent = this.bolusinsulin;
+            resources.ApplyResources(this.bolusinsulin, "bolusinsulin");
             this.bolusinsulin.ForeColor = System.Drawing.Color.Black;
             this.bolusinsulin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.bolusinsulin.HoverState.Parent = this.bolusinsulin;
@@ -914,7 +914,6 @@
             // 
             // insulincharb
             // 
-            resources.ApplyResources(this.insulincharb, "insulincharb");
             this.insulincharb.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.insulincharb.DefaultText = "";
             this.insulincharb.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -924,6 +923,7 @@
             this.insulincharb.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.insulincharb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.insulincharb.FocusedState.Parent = this.insulincharb;
+            resources.ApplyResources(this.insulincharb, "insulincharb");
             this.insulincharb.ForeColor = System.Drawing.Color.Black;
             this.insulincharb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.insulincharb.HoverState.Parent = this.insulincharb;
@@ -941,7 +941,6 @@
             // 
             // weight
             // 
-            resources.ApplyResources(this.weight, "weight");
             this.weight.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.weight.DefaultText = "";
             this.weight.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -951,6 +950,7 @@
             this.weight.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.weight.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.weight.FocusedState.Parent = this.weight;
+            resources.ApplyResources(this.weight, "weight");
             this.weight.ForeColor = System.Drawing.Color.Black;
             this.weight.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.weight.HoverState.Parent = this.weight;
@@ -969,7 +969,6 @@
             // 
             // guna2DataGridView4
             // 
-            resources.ApplyResources(this.guna2DataGridView4, "guna2DataGridView4");
             this.guna2DataGridView4.AllowUserToAddRows = false;
             this.guna2DataGridView4.AllowUserToDeleteRows = false;
             dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
@@ -987,6 +986,7 @@
             dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            resources.ApplyResources(this.guna2DataGridView4, "guna2DataGridView4");
             this.guna2DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.guna2DataGridView4.ColumnHeadersVisible = false;
             this.guna2DataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1056,22 +1056,21 @@
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.panel2);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.guna2Button1);
@@ -1080,6 +1079,7 @@
             this.panel2.Controls.Add(this.EditDiabetes);
             this.panel2.Controls.Add(this.DeleteDiabetes);
             this.panel2.Controls.Add(this.AddDiabetes);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -1090,13 +1090,13 @@
             // 
             // guna2Button1
             // 
-            resources.ApplyResources(this.guna2Button1, "guna2Button1");
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BorderRadius = 15;
             this.guna2Button1.CausesValidation = false;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.guna2Button1, "guna2Button1");
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Name = "guna2Button1";
@@ -1105,7 +1105,6 @@
             // 
             // searchbox
             // 
-            resources.ApplyResources(this.searchbox, "searchbox");
             this.searchbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.searchbox.DefaultText = "";
             this.searchbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -1117,6 +1116,7 @@
             this.searchbox.FocusedState.Parent = this.searchbox;
             this.searchbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.searchbox.HoverState.Parent = this.searchbox;
+            resources.ApplyResources(this.searchbox, "searchbox");
             this.searchbox.Name = "searchbox";
             this.searchbox.PasswordChar = '\0';
             this.searchbox.PlaceholderText = "";
@@ -1126,7 +1126,6 @@
             // 
             // guna2DataGridView8
             // 
-            resources.ApplyResources(this.guna2DataGridView8, "guna2DataGridView8");
             this.guna2DataGridView8.AllowUserToAddRows = false;
             this.guna2DataGridView8.AllowUserToDeleteRows = false;
             dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
@@ -1144,6 +1143,7 @@
             dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView8.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            resources.ApplyResources(this.guna2DataGridView8, "guna2DataGridView8");
             this.guna2DataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddgv,
             this.filenodgv,
@@ -1225,13 +1225,13 @@
             // 
             // EditDiabetes
             // 
-            resources.ApplyResources(this.EditDiabetes, "EditDiabetes");
             this.EditDiabetes.AutoRoundedCorners = true;
             this.EditDiabetes.BorderRadius = 21;
             this.EditDiabetes.CausesValidation = false;
             this.EditDiabetes.CheckedState.Parent = this.EditDiabetes;
             this.EditDiabetes.CustomImages.Parent = this.EditDiabetes;
             this.EditDiabetes.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.EditDiabetes, "EditDiabetes");
             this.EditDiabetes.ForeColor = System.Drawing.Color.White;
             this.EditDiabetes.HoverState.Parent = this.EditDiabetes;
             this.EditDiabetes.Name = "EditDiabetes";
@@ -1240,13 +1240,13 @@
             // 
             // DeleteDiabetes
             // 
-            resources.ApplyResources(this.DeleteDiabetes, "DeleteDiabetes");
             this.DeleteDiabetes.AutoRoundedCorners = true;
             this.DeleteDiabetes.BorderRadius = 21;
             this.DeleteDiabetes.CausesValidation = false;
             this.DeleteDiabetes.CheckedState.Parent = this.DeleteDiabetes;
             this.DeleteDiabetes.CustomImages.Parent = this.DeleteDiabetes;
             this.DeleteDiabetes.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.DeleteDiabetes, "DeleteDiabetes");
             this.DeleteDiabetes.ForeColor = System.Drawing.Color.White;
             this.DeleteDiabetes.HoverState.Parent = this.DeleteDiabetes;
             this.DeleteDiabetes.Name = "DeleteDiabetes";
@@ -1255,13 +1255,13 @@
             // 
             // AddDiabetes
             // 
-            resources.ApplyResources(this.AddDiabetes, "AddDiabetes");
             this.AddDiabetes.AutoRoundedCorners = true;
             this.AddDiabetes.BorderRadius = 21;
             this.AddDiabetes.CausesValidation = false;
             this.AddDiabetes.CheckedState.Parent = this.AddDiabetes;
             this.AddDiabetes.CustomImages.Parent = this.AddDiabetes;
             this.AddDiabetes.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.AddDiabetes, "AddDiabetes");
             this.AddDiabetes.ForeColor = System.Drawing.Color.White;
             this.AddDiabetes.HoverState.Parent = this.AddDiabetes;
             this.AddDiabetes.Name = "AddDiabetes";
@@ -1270,8 +1270,8 @@
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.panel1);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 

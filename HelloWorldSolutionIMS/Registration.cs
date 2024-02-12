@@ -2109,7 +2109,41 @@ namespace HelloWorldSolutionIMS
                         firstnamebmi.Text = reader2["FIRSTNAME"].ToString();
                         familynamebmi.Text = reader2["FAMILYNAME"].ToString();
                         mobilenobmi.Text = reader2["MOBILENO"].ToString();
-                        genderbmi.Text = reader2["GENDER"].ToString();
+                        string gender = reader2["GENDER"].ToString();
+                        genderbmi.Text = gender;
+
+                        if (languagestatus == 1)
+                        {
+                            if (gender == "Male")
+                            {
+                                genderbmi.Text = "ذكر";
+                            }
+                            else if (gender == "Female")
+                            {
+                                genderbmi.Text = "أنثى";
+                            }
+                            else if (gender == "Other")
+                            {
+                                genderbmi.Text = "أخرى";
+                            }
+
+                        }
+                        else
+                        {
+                            if (gender == "ذكر")
+                            {
+                                genderbmi.Text = "Male";
+                            }
+                            else if (gender == "أنثى")
+                            {
+                                genderbmi.Text = "Female";
+                            }
+                            else if (gender == "أخرى")
+                            {
+                                genderbmi.Text = "Other";
+                            }
+                        }
+
                         agebmi.Text = reader2["AGE"].ToString();
                         nutritionistbmi.Text = reader2["NutritionistName"].ToString();
                         tabControl1.SelectedIndex = 1;
@@ -2186,7 +2220,39 @@ namespace HelloWorldSolutionIMS
                         fileno.Text = reader["FileNo"].ToString();
                         firstname.Text = reader["FirstName"].ToString();
                         familyname.Text = reader["FamilyName"].ToString();
+                        string gendervar = reader["Gender"].ToString();
                         gender.Text = reader["Gender"].ToString();
+                        if (languagestatus == 1)
+                        {
+                            if (gendervar == "Male")
+                            {
+                                gender.Text = "ذكر";
+                            }
+                            else if (gendervar == "Female")
+                            {
+                                gender.Text = "أنثى";
+                            }
+                            else if (gendervar == "Other")
+                            {
+                                gender.Text = "أخرى";
+                            }
+
+                        }
+                        else
+                        {
+                            if (gendervar == "ذكر")
+                            {
+                                gender.Text = "Male";
+                            }
+                            else if (gendervar == "أنثى")
+                            {
+                                gender.Text = "Female";
+                            }
+                            else if (gendervar == "أخرى")
+                            {
+                                gender.Text = "Other";
+                            }
+                        }
                         dob.Value = Convert.ToDateTime(reader["DOB"]);
                         age.Text = reader["Age"].ToString();
                         mobileno.Text = reader["MobileNo"].ToString();
