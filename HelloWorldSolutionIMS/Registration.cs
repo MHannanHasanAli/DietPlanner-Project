@@ -1734,7 +1734,7 @@ namespace HelloWorldSolutionIMS
             {
                 MainClass.con.Open();
 
-                cmd = new SqlCommand("SELECT ID,BCA,WATER,MINERALS,DATE,AGE,LENGTH,WEIGHT,FATS,PROTEIN,ABDOMINAL_FAT,VISCERAL_FATS,BMI,BMR FROM BodyComposition WHERE CustomerID = @CUSTOMERID ORDER BY ID", MainClass.con);
+                cmd = new SqlCommand("SELECT  ID, ROUND(BCA, 2) AS BCA, ROUND(WATER, 2) AS WATER, ROUND(MINERALS, 2) AS MINERALS, DATE, ROUND(AGE, 2) AS AGE, ROUND(LENGTH, 2) AS LENGTH, ROUND(WEIGHT, 2) AS WEIGHT, ROUND(FATS, 2) AS FATS, ROUND(PROTEIN, 2) AS PROTEIN, ROUND(ABDOMINAL_FAT, 2) AS ABDOMINAL_FAT, ROUND(VISCERAL_FATS, 2) AS VISCERAL_FATS, ROUND(BMI, 2) AS BMI, ROUND(BMR, 2) AS BMR FROM  BodyComposition WHERE  CustomerID = @CUSTOMERID ORDER BY  ID;", MainClass.con);
                 cmd.Parameters.AddWithValue("@CUSTOMERID", filenobmi.Text); // Replace 'customerIdToFind' with the actual ID you want to find.
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -1780,26 +1780,27 @@ namespace HelloWorldSolutionIMS
                 // SQL query to select all rows from the Ingredient table
                 string query = @"
             SELECT 
-                    C.Fileno,
-                    C.Firstname,
-                    C.Familyname,
-                	BC.DATE,
-                    BC.BCA,
-                    BC.WATER,
-                    BC.MINERALS,
-                    BC.AGE,
-                    BC.LENGTH,
-                    BC.WEIGHT,
-                    BC.FATS,
-                    BC.PROTEIN,
-                    BC.ABDOMINAL_FAT,
-                    BC.VISCERAL_FATS,
-                    BC.BMI,
-                    BC.BMR
-                FROM 
-                    BodyComposition BC
-                JOIN 
-                    customer C ON BC.CustomerID = C.FileNo;";
+    C.Fileno,
+    C.Firstname,
+    C.Familyname,
+    BC.DATE,
+    ROUND(BC.BCA, 2) AS BCA,
+    ROUND(BC.WATER, 2) AS WATER,
+    ROUND(BC.MINERALS, 2) AS MINERALS,
+    ROUND(BC.AGE, 2) AS AGE,
+    ROUND(BC.LENGTH, 2) AS LENGTH,
+    ROUND(BC.WEIGHT, 2) AS WEIGHT,
+    ROUND(BC.FATS, 2) AS FATS,
+    ROUND(BC.PROTEIN, 2) AS PROTEIN,
+    ROUND(BC.ABDOMINAL_FAT, 2) AS ABDOMINAL_FAT,
+    ROUND(BC.VISCERAL_FATS, 2) AS VISCERAL_FATS,
+    ROUND(BC.BMI, 2) AS BMI,
+    ROUND(BC.BMR, 2) AS BMR
+FROM 
+    BodyComposition BC
+JOIN 
+    customer C ON BC.CustomerID = C.FileNo;
+";
 
                 using (SqlCommand command = new SqlCommand(query, MainClass.con))
                 {
@@ -1982,7 +1983,7 @@ namespace HelloWorldSolutionIMS
             {
                 MainClass.con.Open();
 
-                cmd = new SqlCommand("SELECT ID,BCA,WATER,MINERALS,DATE,AGE,LENGTH,WEIGHT,FATS,PROTEIN,ABDOMINAL_FAT,VISCERAL_FATS,BMI,BMR FROM BodyComposition ORDER BY ID", MainClass.con);
+                cmd = new SqlCommand("SELECT  ID, ROUND(BCA, 2) AS BCA, ROUND(WATER, 2) AS WATER, ROUND(MINERALS, 2) AS MINERALS, DATE, ROUND(AGE, 2) AS AGE, ROUND(LENGTH, 2) AS LENGTH, ROUND(WEIGHT, 2) AS WEIGHT, ROUND(FATS, 2) AS FATS, ROUND(PROTEIN, 2) AS PROTEIN, ROUND(ABDOMINAL_FAT, 2) AS ABDOMINAL_FAT, ROUND(VISCERAL_FATS, 2) AS VISCERAL_FATS, ROUND(BMI, 2) AS BMI, ROUND(BMR, 2) AS BMR FROM  BodyComposition  ORDER BY  ID;", MainClass.con);
                 /* cmd.Parameters.AddWithValue("@CUSTOMERID", filenobmi.Text);*/ // Replace 'customerIdToFind' with the actual ID you want to find.
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -2171,7 +2172,9 @@ namespace HelloWorldSolutionIMS
                     if (editstatus == 1)
                     {
                         tabControl1.SelectedIndex = 0;
+                        editstatus = 0;
                     }
+
                 }
                 catch (Exception ex)
                 {
@@ -2397,6 +2400,7 @@ namespace HelloWorldSolutionIMS
 
             subscriptionstatus.Text = "No";
             editstatus = 0;
+            edit = 0;
             //fileno.ReadOnly = true;
         }
 
@@ -4445,6 +4449,10 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+
+            ShowBodyCompositionAll(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
+            ShowMedicalHistoryAll(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -4463,9 +4471,11 @@ namespace HelloWorldSolutionIMS
                 genderbmi.SelectedItem = null;
                 agebmi.Text = "";
                 nutritionistbmi.Text = "";
+                ShowBodyCompositionAll(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
             }
 
-            ShowBodyCompositionAll(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
+
+
             tabControl1.SelectedIndex = 1;
             edit = 0;
         }
@@ -4482,8 +4492,8 @@ namespace HelloWorldSolutionIMS
                 mobilenomh.Text = "";
                 nutritionistmh.Text = "";
                 gendermh.SelectedItem = null;
+                ShowMedicalHistoryAll(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
             }
-            ShowMedicalHistoryAll(guna2DataGridView17, idmhdgv, filenomhdgv, firstnamemhdgv, familynamemhdgv);
             guna2DataGridView17.ClearSelection();
             edit = 0;
         }

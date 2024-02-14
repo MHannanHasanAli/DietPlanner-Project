@@ -745,11 +745,11 @@ namespace HelloWorldSolutionIMS
         {
             if (languagestatus == 0)
             {
-                toolTip1.SetToolTip(guna2TileButton4, "Diabetes");
+                toolTip1.SetToolTip(guna2TileButton13, "Diabetes");
             }
             else
             {
-                toolTip1.SetToolTip(guna2TileButton4, "السكري");
+                toolTip1.SetToolTip(guna2TileButton13, "السكري");
             }
         }
 
@@ -757,11 +757,11 @@ namespace HelloWorldSolutionIMS
         {
             if (languagestatus == 0)
             {
-                toolTip1.SetToolTip(guna2TileButton3, "Diet Plan");
+                toolTip1.SetToolTip(guna2TileButton14, "Diet Plan");
             }
             else
             {
-                toolTip1.SetToolTip(guna2TileButton3, "تخطيط الحميات");
+                toolTip1.SetToolTip(guna2TileButton14, "تخطيط الحميات");
             }
         }
 
@@ -769,11 +769,11 @@ namespace HelloWorldSolutionIMS
         {
             if (languagestatus == 0)
             {
-                toolTip1.SetToolTip(guna2TileButton7, "Diet Plan Template");
+                toolTip1.SetToolTip(guna2TileButton15, "Diet Plan Template");
             }
             else
             {
-                toolTip1.SetToolTip(guna2TileButton7, "نماذج الحميات");
+                toolTip1.SetToolTip(guna2TileButton15, "نماذج الحميات");
             }
         }
 
@@ -781,11 +781,11 @@ namespace HelloWorldSolutionIMS
         {
             if (languagestatus == 0)
             {
-                toolTip1.SetToolTip(guna2TileButton11, "Payment");
+                toolTip1.SetToolTip(guna2TileButton16, "Payment");
             }
             else
             {
-                toolTip1.SetToolTip(guna2TileButton11, "الدفعات");
+                toolTip1.SetToolTip(guna2TileButton16, "الدفعات");
             }
         }
 
@@ -793,11 +793,11 @@ namespace HelloWorldSolutionIMS
         {
             if (languagestatus == 0)
             {
-                toolTip1.SetToolTip(guna2TileButton5, "Evaluation");
+                toolTip1.SetToolTip(guna2TileButton17, "Evaluation");
             }
             else
             {
-                toolTip1.SetToolTip(guna2TileButton5, "التقييم");
+                toolTip1.SetToolTip(guna2TileButton17, "التقييم");
             }
         }
 
@@ -805,11 +805,11 @@ namespace HelloWorldSolutionIMS
         {
             if (languagestatus == 0)
             {
-                toolTip1.SetToolTip(guna2TileButton10, "Special Deals");
+                toolTip1.SetToolTip(guna2TileButton18, "Special Deals");
             }
             else
             {
-                toolTip1.SetToolTip(guna2TileButton10, "عروض خاصة");
+                toolTip1.SetToolTip(guna2TileButton18, "عروض خاصة");
             }
         }
 
@@ -817,11 +817,11 @@ namespace HelloWorldSolutionIMS
         {
             if (languagestatus == 0)
             {
-                toolTip1.SetToolTip(guna2TileButton1, "Settings");
+                toolTip1.SetToolTip(guna2TileButton20, "Settings");
             }
             else
             {
-                toolTip1.SetToolTip(guna2TileButton1, "الاعدادات");
+                toolTip1.SetToolTip(guna2TileButton20, "الاعدادات");
             }
         }
     }
