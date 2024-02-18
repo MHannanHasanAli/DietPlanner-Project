@@ -1570,7 +1570,7 @@ namespace HelloWorldSolutionIMS
             }
         }
 
-        private void ShowDiabetes(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn file, DataGridViewColumn weight, DataGridViewColumn firstname, DataGridViewColumn lastname)
+        private void ShowDiabetes(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn file, DataGridViewColumn firstname, DataGridViewColumn lastname, DataGridViewColumn weight)
         {
             SqlCommand cmd;
             try
@@ -1739,7 +1739,7 @@ namespace HelloWorldSolutionIMS
             ShowDiabetes(guna2DataGridView8, iddgv, filenodgv, firstnamedgv, familynamedgv, weightdgv);
         }
 
-        private void SearchDiabetes(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn file, DataGridViewColumn weight, DataGridViewColumn firstname, DataGridViewColumn lastname)
+        private void SearchDiabetes(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn file, DataGridViewColumn firstname, DataGridViewColumn lastname, DataGridViewColumn weight)
         {
             SqlCommand cmd;
             try

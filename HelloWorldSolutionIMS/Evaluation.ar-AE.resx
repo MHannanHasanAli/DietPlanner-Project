@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 21</value>
+    <value>53, 17</value>
   </data>
   <data name="label17.Text" xml:space="preserve">
     <value>الاخصائي</value>

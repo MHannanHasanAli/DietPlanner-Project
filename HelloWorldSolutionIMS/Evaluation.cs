@@ -11,9 +11,22 @@ namespace HelloWorldSolutionIMS
     {
         public Evaluation()
         {
-            InitializeComponent();
+
         }
 
+        static int loader = 0;
+        static int loaddataid = 0;
+        public Evaluation(int id)
+        {
+            InitializeComponent();
+            loader = 1;
+            loaddataid = id;
+        }
+
+        void LoadData(int id)
+        {
+            fileno.Text = id.ToString();
+        }
         static int conn = 0;
 
         static int languagestatus;
@@ -309,6 +322,14 @@ namespace HelloWorldSolutionIMS
             ClearForm();
 
             tabControl1.SelectedIndex = 1;
+
+            if (loader == 1)
+            {
+                LoadData(loaddataid);
+                loader = 0;
+                loaddataid = 0;
+                tabControl1.SelectedIndex = 0;
+            }
         }
 
         private void ClearForm()

@@ -630,7 +630,43 @@ namespace HelloWorldSolutionIMS
 
         private void guna2TileButton5_Click(object sender, EventArgs e)
         {
-            loadform(new Evaluation());
+            SqlCommand cmd2;
+            try
+            {
+                MainClass.con.Open();
+
+                cmd2 = new SqlCommand("SELECT ClientID FROM LoadData", MainClass.con);
+
+                SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                while (reader2.Read())
+                {
+
+                    client_id = int.Parse(reader2["ClientID"].ToString());
+
+                }
+
+
+
+                MainClass.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            if (client_id != 0)
+            {
+                loadform(new Evaluation(client_id));
+
+            }
+            else
+            {
+                loadform(new Evaluation());
+
+            }
+
         }
 
         private void mainpanel_Paint(object sender, PaintEventArgs e)
