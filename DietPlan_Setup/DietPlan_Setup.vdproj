@@ -6559,7 +6559,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:HelloWorldSolutionIMS.resources, Version=1.0.13.0, Culture=ar-SA, PublicKeyToken=1332f772169d20ff, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:HelloWorldSolutionIMS.resources, Version=1.0.14.0, Culture=ar-SA, PublicKeyToken=1332f772169d20ff, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_8FE2B782F55D4C13B0BDFFF8C53BF8FE"
@@ -8140,7 +8140,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:HelloWorldSolutionIMS.resources, Version=1.0.13.0, Culture=ar-AE, PublicKeyToken=1332f772169d20ff, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:HelloWorldSolutionIMS.resources, Version=1.0.14.0, Culture=ar-AE, PublicKeyToken=1332f772169d20ff, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_DE1543E3ACE348DD863E7420EF642810"
@@ -8876,15 +8876,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DietPlan_Setup"
-        "ProductCode" = "8:{14DC93AC-6797-4A03-9EBC-2FC9BA067F5A}"
-        "PackageCode" = "8:{86912ED3-D3CF-422E-90B0-3B00323343FF}"
+        "ProductCode" = "8:{76672730-257E-4738-93E8-8AD685C0A744}"
+        "PackageCode" = "8:{FAF562B0-CEDC-479A-B48A-0B897F300E70}"
         "UpgradeCode" = "8:{EC46ACA8-938A-4917-BA7D-4E4DBA630496}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.14"
+        "ProductVersion" = "8:1.0.15"
         "Manufacturer" = "8:Hannan"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

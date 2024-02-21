@@ -1175,6 +1175,7 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.ForeColor;
 
 
+
             if (languagestatus == 1)
             {
                 foreach (Control control in panel1.Controls)
@@ -1560,7 +1561,14 @@ namespace HelloWorldSolutionIMS
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Body composition data added successfully");
                         MainClass.con.Close();
-                        ShowBodyComposition(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
+                        filenobmi.Text = "";
+                        firstnamebmi.Text = "";
+                        familynamebmi.Text = "";
+                        mobilenobmi.Text = "";
+                        genderbmi.SelectedItem = null;
+                        agebmi.Text = "";
+                        nutritionistbmi.Text = "";
+                        ShowBodyCompositionAll(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
                         tabControl1.SelectedIndex = 1;
 
                     }
@@ -1662,6 +1670,15 @@ namespace HelloWorldSolutionIMS
         static string filenoforbmi;
         private void back_Click(object sender, EventArgs e)
         {
+
+            filenobmi.Text = "";
+            firstnamebmi.Text = "";
+            familynamebmi.Text = "";
+            mobilenobmi.Text = "";
+            genderbmi.SelectedItem = null;
+            agebmi.Text = "";
+            nutritionistbmi.Text = "";
+            ShowBodyCompositionAll(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
             tabControl1.SelectedIndex = 1;
         }
         private void ShowMedicalHistoryAll(DataGridView dgv, DataGridViewColumn id, DataGridViewColumn fileno, DataGridViewColumn name, DataGridViewColumn fname)
@@ -4516,6 +4533,7 @@ JOIN
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             EditBTN.PerformClick();
+            edit = 0;
         }
 
         private void fileno_KeyPress_1(object sender, KeyPressEventArgs e)
@@ -4528,6 +4546,43 @@ JOIN
             if (e.KeyChar == (char)Keys.Enter)
             {
                 SearchCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+            }
+        }
+
+        private void DeleteBodyComp_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView2 != null)
+            {
+                if (guna2DataGridView2.Rows.Count > 0)
+                {
+                    if (guna2DataGridView2.SelectedRows.Count == 1)
+                    {
+                        // Get the CustomerID to display in the confirmation message
+                        string customerIDToDelete = guna2DataGridView2.SelectedRows[0].Cells[1].Value.ToString();
+
+                        // Ask for confirmation
+                        DialogResult result = MessageBox.Show("Are you sure you want to delete this Body composition?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                MainClass.con.Open();
+                                SqlCommand cmd = new SqlCommand("delete from BodyComposition where ID = @CustomerID", MainClass.con);
+                                cmd.Parameters.AddWithValue("@CustomerID", guna2DataGridView2.CurrentRow.Cells[0].Value.ToString());
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Body composition removed successfully");
+                                MainClass.con.Close();
+                                ShowBodyCompositionAll(guna2DataGridView2, idbc, datebc, bcabc, heightbc, weightbc, agebc, fatsbc, proteinbc, waterbc, mineralsbc, visceralfatsbc, abdominalfatsbc, bmibc, bmrbc);
+                            }
+                            catch (Exception ex)
+                            {
+                                MainClass.con.Close();
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                    }
+                }
             }
         }
     }
