@@ -148,7 +148,7 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 798</value>
+    <value>-1, 798</value>
   </data>
   <data name="guna2TileButton20.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 67</value>
@@ -580,7 +580,7 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 133</value>
+    <value>3, 118</value>
   </data>
   <data name="guna2TileButton6.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 55</value>
@@ -683,9 +683,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1540, 1328</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

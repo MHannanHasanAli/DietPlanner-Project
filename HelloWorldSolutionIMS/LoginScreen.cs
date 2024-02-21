@@ -195,7 +195,7 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM SideBarColor", MainClass.con);
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM LoginPageColor", MainClass.con);
 
                 // Execute the select query
                 SqlDataReader reader = cmd.ExecuteReader();

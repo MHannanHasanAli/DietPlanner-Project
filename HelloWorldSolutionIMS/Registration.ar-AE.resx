@@ -124,7 +124,7 @@
     <value>تحليل مكونات الجسم</value>
   </data>
   <data name="Reset.Text" xml:space="preserve">
-    <value>إعادة تعيين الصفحات</value>
+    <value>إعادة تعيين</value>
   </data>
   <data name="AddClient.Text" xml:space="preserve">
     <value>عميل جديد</value>
@@ -324,10 +324,6 @@
   </data>
   <data name="AddBMI.Text" xml:space="preserve">
     <value> إضافة</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="guna2DataGridView2.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>80</value>
   </data>
   <data name="idbc.HeaderText" xml:space="preserve">
     <value>رقم </value>

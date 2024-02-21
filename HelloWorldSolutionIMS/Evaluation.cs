@@ -11,7 +11,7 @@ namespace HelloWorldSolutionIMS
     {
         public Evaluation()
         {
-
+            InitializeComponent();
         }
 
         static int loader = 0;

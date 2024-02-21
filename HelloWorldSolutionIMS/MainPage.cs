@@ -688,31 +688,45 @@ namespace HelloWorldSolutionIMS
 
         private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (languagestatus == 0)
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                using (var customDialog = new CustomDialogForm())
+                if (languagestatus == 0)
                 {
-                    customDialog.ConfirmationMessage = "Are you sure you want to close the application?";
-                    if (customDialog.ShowDialogWithCustomButtons("Yes", "No") == DialogResult.No)
+                    using (var customDialog = new CustomDialogForm())
                     {
-                        e.Cancel = true;
+                        customDialog.ConfirmationMessage = "Are you sure you want to close the application?";
+                        if (customDialog.ShowDialogWithCustomButtons("Yes", "No") == DialogResult.No)
+                        {
+                            e.Cancel = true;
+                        }
                     }
                 }
+                else
+                {
+                    using (var customDialog = new CustomDialogForm())
+                    {
+                        customDialog.ConfirmationMessage = "هل انت متاكد من اغلاق التطبيق؟";
+                        if (customDialog.ShowDialogWithCustomButtons("نعم", "لا") == DialogResult.No)
+                        {
+                            e.Cancel = true;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        public void ClosetheApp(int task, FormClosingEventArgs e)
+        {
+            if (task == 1)
+            {
+
             }
             else
             {
-                using (var customDialog = new CustomDialogForm())
-                {
-                    customDialog.ConfirmationMessage = "هل انت متاكد من اغلاق التطبيق؟";
-                    if (customDialog.ShowDialogWithCustomButtons("نعم", "لا") == DialogResult.No)
-                    {
-                        e.Cancel = true;
-                    }
-                }
+
             }
-
-
-
         }
         ToolTip toolTip1 = new ToolTip();
         private void guna2TileButton9_MouseHover(object sender, EventArgs e)

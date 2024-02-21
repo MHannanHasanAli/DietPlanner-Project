@@ -600,7 +600,35 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM LoginPageColor", MainClass.con);
 
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+                    guna2TextBox12.Text = red.ToString();
+                    guna2TextBox11.Text = green.ToString();
+                    guna2TextBox10.Text = blue.ToString();
+                    Color color = Color.FromArgb(red, green, blue);
+                    panel14.BackColor = color;
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
             try
             {
                 MainClass.con.Open();
@@ -1869,7 +1897,25 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE LoginPageColor SET Red = @red, Green = @green, Blue = @blue WHERE Id = @id", MainClass.con);
 
+                // Set the command parameters
+                cmd.Parameters.AddWithValue("@id", 1);
+                cmd.Parameters.AddWithValue("@red", guna2TextBox12.Text);
+                cmd.Parameters.AddWithValue("@green", guna2TextBox11.Text);
+                cmd.Parameters.AddWithValue("@blue", guna2TextBox10.Text);
+
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
             try
             {
                 MainClass.con.Open();
@@ -1909,9 +1955,17 @@ namespace HelloWorldSolutionIMS
                 MainClass.con.Close();
                 MessageBox.Show(ex.Message);
             }
+
             Application.Restart();
+            //MainPage obj = new MainPage();
+            //FormClosingEventArgs alpha = null;
+            //obj.ClosetheApp(1, alpha);
         }
 
+        private void RestartApp()
+        {
+            Application.Restart();
+        }
         private void IntLock(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -2182,6 +2236,81 @@ namespace HelloWorldSolutionIMS
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2TextBox12_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox12.Text != "")
+            {
+                int value = int.Parse(guna2TextBox12.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar12.Value = value;
+                    panel14.BackColor = Color.FromArgb(guna2TrackBar12.Value, guna2TrackBar11.Value, guna2TrackBar10.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TextBox11_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox11.Text != "")
+            {
+                int value = int.Parse(guna2TextBox11.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar11.Value = value;
+                    panel14.BackColor = Color.FromArgb(guna2TrackBar12.Value, guna2TrackBar11.Value, guna2TrackBar10.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TextBox10_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox10.Text != "")
+            {
+                int value = int.Parse(guna2TextBox10.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar10.Value = value;
+                    panel14.BackColor = Color.FromArgb(guna2TrackBar12.Value, guna2TrackBar11.Value, guna2TrackBar10.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TrackBar12_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel14.BackColor = Color.FromArgb(guna2TrackBar12.Value, guna2TrackBar11.Value, guna2TrackBar10.Value);
+            guna2TextBox12.Text = guna2TrackBar12.Value.ToString();
+            guna2TextBox11.Text = guna2TrackBar11.Value.ToString();
+            guna2TextBox10.Text = guna2TrackBar10.Value.ToString();
+        }
+
+        private void guna2TrackBar11_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel14.BackColor = Color.FromArgb(guna2TrackBar12.Value, guna2TrackBar11.Value, guna2TrackBar10.Value);
+            guna2TextBox12.Text = guna2TrackBar12.Value.ToString();
+            guna2TextBox11.Text = guna2TrackBar11.Value.ToString();
+            guna2TextBox10.Text = guna2TrackBar10.Value.ToString();
+        }
+
+        private void guna2TrackBar10_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel14.BackColor = Color.FromArgb(guna2TrackBar12.Value, guna2TrackBar11.Value, guna2TrackBar10.Value);
+            guna2TextBox12.Text = guna2TrackBar12.Value.ToString();
+            guna2TextBox11.Text = guna2TrackBar11.Value.ToString();
+            guna2TextBox10.Text = guna2TrackBar10.Value.ToString();
         }
     }
 }
