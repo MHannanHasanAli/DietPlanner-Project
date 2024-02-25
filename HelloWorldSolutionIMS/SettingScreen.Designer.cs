@@ -167,6 +167,17 @@ namespace HelloWorldSolutionIMS
             this.downloadingredient = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.guna2TextBox10 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox12 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.guna2TrackBar10 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar11 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar12 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label50 = new System.Windows.Forms.Label();
             this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -213,17 +224,17 @@ namespace HelloWorldSolutionIMS
             this.label29 = new System.Windows.Forms.Label();
             this.selectedpanel = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
-            this.guna2TextBox10 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox12 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.guna2TrackBar10 = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.guna2TrackBar11 = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.guna2TrackBar12 = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label50 = new System.Windows.Forms.Label();
+            this.guna2TextBox13 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox14 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox15 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.guna2TrackBar13 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar14 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.guna2TrackBar15 = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label54 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagridview1)).BeginInit();
@@ -1742,6 +1753,17 @@ namespace HelloWorldSolutionIMS
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Controls.Add(this.guna2TextBox13);
+            this.panel11.Controls.Add(this.guna2TextBox14);
+            this.panel11.Controls.Add(this.guna2TextBox15);
+            this.panel11.Controls.Add(this.label51);
+            this.panel11.Controls.Add(this.label52);
+            this.panel11.Controls.Add(this.label53);
+            this.panel11.Controls.Add(this.guna2TrackBar13);
+            this.panel11.Controls.Add(this.guna2TrackBar14);
+            this.panel11.Controls.Add(this.guna2TrackBar15);
+            this.panel11.Controls.Add(this.panel15);
+            this.panel11.Controls.Add(this.label54);
             this.panel11.Controls.Add(this.guna2TextBox10);
             this.panel11.Controls.Add(this.guna2TextBox11);
             this.panel11.Controls.Add(this.guna2TextBox12);
@@ -1801,6 +1823,127 @@ namespace HelloWorldSolutionIMS
             this.panel11.Controls.Add(this.label28);
             resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Name = "panel11";
+            // 
+            // guna2TextBox10
+            // 
+            this.guna2TextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox10.DefaultText = "";
+            this.guna2TextBox10.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox10.DisabledState.Parent = this.guna2TextBox10;
+            this.guna2TextBox10.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox10.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox10.FocusedState.Parent = this.guna2TextBox10;
+            resources.ApplyResources(this.guna2TextBox10, "guna2TextBox10");
+            this.guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox10.HoverState.Parent = this.guna2TextBox10;
+            this.guna2TextBox10.Name = "guna2TextBox10";
+            this.guna2TextBox10.PasswordChar = '\0';
+            this.guna2TextBox10.PlaceholderText = "";
+            this.guna2TextBox10.SelectedText = "";
+            this.guna2TextBox10.ShadowDecoration.Parent = this.guna2TextBox10;
+            this.guna2TextBox10.TextChanged += new System.EventHandler(this.guna2TextBox10_TextChanged);
+            // 
+            // guna2TextBox11
+            // 
+            this.guna2TextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox11.DefaultText = "";
+            this.guna2TextBox11.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox11.DisabledState.Parent = this.guna2TextBox11;
+            this.guna2TextBox11.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox11.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox11.FocusedState.Parent = this.guna2TextBox11;
+            resources.ApplyResources(this.guna2TextBox11, "guna2TextBox11");
+            this.guna2TextBox11.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox11.HoverState.Parent = this.guna2TextBox11;
+            this.guna2TextBox11.Name = "guna2TextBox11";
+            this.guna2TextBox11.PasswordChar = '\0';
+            this.guna2TextBox11.PlaceholderText = "";
+            this.guna2TextBox11.SelectedText = "";
+            this.guna2TextBox11.ShadowDecoration.Parent = this.guna2TextBox11;
+            this.guna2TextBox11.TextChanged += new System.EventHandler(this.guna2TextBox11_TextChanged);
+            // 
+            // guna2TextBox12
+            // 
+            this.guna2TextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox12.DefaultText = "";
+            this.guna2TextBox12.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox12.DisabledState.Parent = this.guna2TextBox12;
+            this.guna2TextBox12.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox12.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox12.FocusedState.Parent = this.guna2TextBox12;
+            resources.ApplyResources(this.guna2TextBox12, "guna2TextBox12");
+            this.guna2TextBox12.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox12.HoverState.Parent = this.guna2TextBox12;
+            this.guna2TextBox12.Name = "guna2TextBox12";
+            this.guna2TextBox12.PasswordChar = '\0';
+            this.guna2TextBox12.PlaceholderText = "";
+            this.guna2TextBox12.SelectedText = "";
+            this.guna2TextBox12.ShadowDecoration.Parent = this.guna2TextBox12;
+            this.guna2TextBox12.TextChanged += new System.EventHandler(this.guna2TextBox12_TextChanged);
+            // 
+            // label47
+            // 
+            resources.ApplyResources(this.label47, "label47");
+            this.label47.Name = "label47";
+            // 
+            // label48
+            // 
+            resources.ApplyResources(this.label48, "label48");
+            this.label48.Name = "label48";
+            // 
+            // label49
+            // 
+            resources.ApplyResources(this.label49, "label49");
+            this.label49.Name = "label49";
+            // 
+            // guna2TrackBar10
+            // 
+            this.guna2TrackBar10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar10.HoverState.Parent = this.guna2TrackBar10;
+            resources.ApplyResources(this.guna2TrackBar10, "guna2TrackBar10");
+            this.guna2TrackBar10.Maximum = 255;
+            this.guna2TrackBar10.Name = "guna2TrackBar10";
+            this.guna2TrackBar10.ThumbColor = System.Drawing.Color.Blue;
+            this.guna2TrackBar10.Value = 0;
+            this.guna2TrackBar10.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar10_Scroll);
+            // 
+            // guna2TrackBar11
+            // 
+            this.guna2TrackBar11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar11.HoverState.Parent = this.guna2TrackBar11;
+            resources.ApplyResources(this.guna2TrackBar11, "guna2TrackBar11");
+            this.guna2TrackBar11.Maximum = 255;
+            this.guna2TrackBar11.Name = "guna2TrackBar11";
+            this.guna2TrackBar11.ThumbColor = System.Drawing.Color.Lime;
+            this.guna2TrackBar11.Value = 0;
+            this.guna2TrackBar11.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar11_Scroll);
+            // 
+            // guna2TrackBar12
+            // 
+            this.guna2TrackBar12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar12.HoverState.Parent = this.guna2TrackBar12;
+            resources.ApplyResources(this.guna2TrackBar12, "guna2TrackBar12");
+            this.guna2TrackBar12.Maximum = 255;
+            this.guna2TrackBar12.Name = "guna2TrackBar12";
+            this.guna2TrackBar12.ThumbColor = System.Drawing.Color.Red;
+            this.guna2TrackBar12.Value = 0;
+            this.guna2TrackBar12.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar12_Scroll);
+            // 
+            // panel14
+            // 
+            resources.ApplyResources(this.panel14, "panel14");
+            this.panel14.Name = "panel14";
+            // 
+            // label50
+            // 
+            resources.ApplyResources(this.label50, "label50");
+            this.label50.Name = "label50";
             // 
             // guna2TextBox7
             // 
@@ -2330,126 +2473,126 @@ namespace HelloWorldSolutionIMS
             resources.ApplyResources(this.label28, "label28");
             this.label28.Name = "label28";
             // 
-            // guna2TextBox10
+            // guna2TextBox13
             // 
-            this.guna2TextBox10.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox10.DefaultText = "";
-            this.guna2TextBox10.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox10.DisabledState.Parent = this.guna2TextBox10;
-            this.guna2TextBox10.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox10.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.FocusedState.Parent = this.guna2TextBox10;
-            resources.ApplyResources(this.guna2TextBox10, "guna2TextBox10");
-            this.guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.HoverState.Parent = this.guna2TextBox10;
-            this.guna2TextBox10.Name = "guna2TextBox10";
-            this.guna2TextBox10.PasswordChar = '\0';
-            this.guna2TextBox10.PlaceholderText = "";
-            this.guna2TextBox10.SelectedText = "";
-            this.guna2TextBox10.ShadowDecoration.Parent = this.guna2TextBox10;
-            this.guna2TextBox10.TextChanged += new System.EventHandler(this.guna2TextBox10_TextChanged);
+            this.guna2TextBox13.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox13.DefaultText = "";
+            this.guna2TextBox13.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox13.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox13.DisabledState.Parent = this.guna2TextBox13;
+            this.guna2TextBox13.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox13.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox13.FocusedState.Parent = this.guna2TextBox13;
+            resources.ApplyResources(this.guna2TextBox13, "guna2TextBox13");
+            this.guna2TextBox13.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox13.HoverState.Parent = this.guna2TextBox13;
+            this.guna2TextBox13.Name = "guna2TextBox13";
+            this.guna2TextBox13.PasswordChar = '\0';
+            this.guna2TextBox13.PlaceholderText = "";
+            this.guna2TextBox13.SelectedText = "";
+            this.guna2TextBox13.ShadowDecoration.Parent = this.guna2TextBox13;
+            this.guna2TextBox13.TextChanged += new System.EventHandler(this.guna2TextBox13_TextChanged);
             // 
-            // guna2TextBox11
+            // guna2TextBox14
             // 
-            this.guna2TextBox11.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox11.DefaultText = "";
-            this.guna2TextBox11.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.DisabledState.Parent = this.guna2TextBox11;
-            this.guna2TextBox11.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox11.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.FocusedState.Parent = this.guna2TextBox11;
-            resources.ApplyResources(this.guna2TextBox11, "guna2TextBox11");
-            this.guna2TextBox11.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.HoverState.Parent = this.guna2TextBox11;
-            this.guna2TextBox11.Name = "guna2TextBox11";
-            this.guna2TextBox11.PasswordChar = '\0';
-            this.guna2TextBox11.PlaceholderText = "";
-            this.guna2TextBox11.SelectedText = "";
-            this.guna2TextBox11.ShadowDecoration.Parent = this.guna2TextBox11;
-            this.guna2TextBox11.TextChanged += new System.EventHandler(this.guna2TextBox11_TextChanged);
+            this.guna2TextBox14.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox14.DefaultText = "";
+            this.guna2TextBox14.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox14.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox14.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox14.DisabledState.Parent = this.guna2TextBox14;
+            this.guna2TextBox14.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox14.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox14.FocusedState.Parent = this.guna2TextBox14;
+            resources.ApplyResources(this.guna2TextBox14, "guna2TextBox14");
+            this.guna2TextBox14.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox14.HoverState.Parent = this.guna2TextBox14;
+            this.guna2TextBox14.Name = "guna2TextBox14";
+            this.guna2TextBox14.PasswordChar = '\0';
+            this.guna2TextBox14.PlaceholderText = "";
+            this.guna2TextBox14.SelectedText = "";
+            this.guna2TextBox14.ShadowDecoration.Parent = this.guna2TextBox14;
+            this.guna2TextBox14.TextChanged += new System.EventHandler(this.guna2TextBox14_TextChanged);
             // 
-            // guna2TextBox12
+            // guna2TextBox15
             // 
-            this.guna2TextBox12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox12.DefaultText = "";
-            this.guna2TextBox12.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox12.DisabledState.Parent = this.guna2TextBox12;
-            this.guna2TextBox12.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox12.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox12.FocusedState.Parent = this.guna2TextBox12;
-            resources.ApplyResources(this.guna2TextBox12, "guna2TextBox12");
-            this.guna2TextBox12.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox12.HoverState.Parent = this.guna2TextBox12;
-            this.guna2TextBox12.Name = "guna2TextBox12";
-            this.guna2TextBox12.PasswordChar = '\0';
-            this.guna2TextBox12.PlaceholderText = "";
-            this.guna2TextBox12.SelectedText = "";
-            this.guna2TextBox12.ShadowDecoration.Parent = this.guna2TextBox12;
-            this.guna2TextBox12.TextChanged += new System.EventHandler(this.guna2TextBox12_TextChanged);
+            this.guna2TextBox15.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox15.DefaultText = "";
+            this.guna2TextBox15.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox15.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox15.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox15.DisabledState.Parent = this.guna2TextBox15;
+            this.guna2TextBox15.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox15.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox15.FocusedState.Parent = this.guna2TextBox15;
+            resources.ApplyResources(this.guna2TextBox15, "guna2TextBox15");
+            this.guna2TextBox15.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox15.HoverState.Parent = this.guna2TextBox15;
+            this.guna2TextBox15.Name = "guna2TextBox15";
+            this.guna2TextBox15.PasswordChar = '\0';
+            this.guna2TextBox15.PlaceholderText = "";
+            this.guna2TextBox15.SelectedText = "";
+            this.guna2TextBox15.ShadowDecoration.Parent = this.guna2TextBox15;
+            this.guna2TextBox15.TextChanged += new System.EventHandler(this.guna2TextBox15_TextChanged);
             // 
-            // label47
+            // label51
             // 
-            resources.ApplyResources(this.label47, "label47");
-            this.label47.Name = "label47";
+            resources.ApplyResources(this.label51, "label51");
+            this.label51.Name = "label51";
             // 
-            // label48
+            // label52
             // 
-            resources.ApplyResources(this.label48, "label48");
-            this.label48.Name = "label48";
+            resources.ApplyResources(this.label52, "label52");
+            this.label52.Name = "label52";
             // 
-            // label49
+            // label53
             // 
-            resources.ApplyResources(this.label49, "label49");
-            this.label49.Name = "label49";
+            resources.ApplyResources(this.label53, "label53");
+            this.label53.Name = "label53";
             // 
-            // guna2TrackBar10
+            // guna2TrackBar13
             // 
-            this.guna2TrackBar10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.guna2TrackBar10.HoverState.Parent = this.guna2TrackBar10;
-            resources.ApplyResources(this.guna2TrackBar10, "guna2TrackBar10");
-            this.guna2TrackBar10.Maximum = 255;
-            this.guna2TrackBar10.Name = "guna2TrackBar10";
-            this.guna2TrackBar10.ThumbColor = System.Drawing.Color.Blue;
-            this.guna2TrackBar10.Value = 0;
-            this.guna2TrackBar10.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar10_Scroll);
+            this.guna2TrackBar13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar13.HoverState.Parent = this.guna2TrackBar13;
+            resources.ApplyResources(this.guna2TrackBar13, "guna2TrackBar13");
+            this.guna2TrackBar13.Maximum = 255;
+            this.guna2TrackBar13.Name = "guna2TrackBar13";
+            this.guna2TrackBar13.ThumbColor = System.Drawing.Color.Blue;
+            this.guna2TrackBar13.Value = 0;
+            this.guna2TrackBar13.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar13_Scroll);
             // 
-            // guna2TrackBar11
+            // guna2TrackBar14
             // 
-            this.guna2TrackBar11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.guna2TrackBar11.HoverState.Parent = this.guna2TrackBar11;
-            resources.ApplyResources(this.guna2TrackBar11, "guna2TrackBar11");
-            this.guna2TrackBar11.Maximum = 255;
-            this.guna2TrackBar11.Name = "guna2TrackBar11";
-            this.guna2TrackBar11.ThumbColor = System.Drawing.Color.Lime;
-            this.guna2TrackBar11.Value = 0;
-            this.guna2TrackBar11.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar11_Scroll);
+            this.guna2TrackBar14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar14.HoverState.Parent = this.guna2TrackBar14;
+            resources.ApplyResources(this.guna2TrackBar14, "guna2TrackBar14");
+            this.guna2TrackBar14.Maximum = 255;
+            this.guna2TrackBar14.Name = "guna2TrackBar14";
+            this.guna2TrackBar14.ThumbColor = System.Drawing.Color.Lime;
+            this.guna2TrackBar14.Value = 0;
+            this.guna2TrackBar14.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar14_Scroll);
             // 
-            // guna2TrackBar12
+            // guna2TrackBar15
             // 
-            this.guna2TrackBar12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.guna2TrackBar12.HoverState.Parent = this.guna2TrackBar12;
-            resources.ApplyResources(this.guna2TrackBar12, "guna2TrackBar12");
-            this.guna2TrackBar12.Maximum = 255;
-            this.guna2TrackBar12.Name = "guna2TrackBar12";
-            this.guna2TrackBar12.ThumbColor = System.Drawing.Color.Red;
-            this.guna2TrackBar12.Value = 0;
-            this.guna2TrackBar12.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar12_Scroll);
+            this.guna2TrackBar15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.guna2TrackBar15.HoverState.Parent = this.guna2TrackBar15;
+            resources.ApplyResources(this.guna2TrackBar15, "guna2TrackBar15");
+            this.guna2TrackBar15.Maximum = 255;
+            this.guna2TrackBar15.Name = "guna2TrackBar15";
+            this.guna2TrackBar15.ThumbColor = System.Drawing.Color.Red;
+            this.guna2TrackBar15.Value = 0;
+            this.guna2TrackBar15.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar15_Scroll);
             // 
-            // panel14
+            // panel15
             // 
-            resources.ApplyResources(this.panel14, "panel14");
-            this.panel14.Name = "panel14";
+            resources.ApplyResources(this.panel15, "panel15");
+            this.panel15.Name = "panel15";
             // 
-            // label50
+            // label54
             // 
-            resources.ApplyResources(this.label50, "label50");
-            this.label50.Name = "label50";
+            resources.ApplyResources(this.label54, "label54");
+            this.label54.Name = "label54";
             // 
             // SettingScreen
             // 
@@ -2686,5 +2829,16 @@ namespace HelloWorldSolutionIMS
         private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar12;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label50;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox13;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox14;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox15;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar13;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar14;
+        private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar15;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label54;
     }
 }

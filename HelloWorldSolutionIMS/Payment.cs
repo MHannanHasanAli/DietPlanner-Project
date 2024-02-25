@@ -645,6 +645,36 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView2.RowTemplate.DefaultCellStyle.ForeColor;
 
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM RowSelection", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
+
+                    guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+
             LanguageInfo();
             if (languagestatus == 1)
             {

@@ -632,6 +632,35 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM RowSelection", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+                    guna2TextBox15.Text = red.ToString();
+                    guna2TextBox14.Text = green.ToString();
+                    guna2TextBox13.Text = blue.ToString();
+                    Color color = Color.FromArgb(red, green, blue);
+                    panel15.BackColor = color;
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+            try
+            {
+                MainClass.con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM SideBarColor", MainClass.con);
 
                 // Execute the select query
@@ -1919,6 +1948,25 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("UPDATE RowSelection SET Red = @red, Green = @green, Blue = @blue WHERE Id = @id", MainClass.con);
+
+                // Set the command parameters
+                cmd.Parameters.AddWithValue("@id", 1);
+                cmd.Parameters.AddWithValue("@red", guna2TextBox15.Text);
+                cmd.Parameters.AddWithValue("@green", guna2TextBox14.Text);
+                cmd.Parameters.AddWithValue("@blue", guna2TextBox13.Text);
+
+                cmd.ExecuteNonQuery();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+            }
+            try
+            {
+                MainClass.con.Open();
                 SqlCommand cmd = new SqlCommand("UPDATE Settings SET CompanyName = @CompanyName, Branch = @Branch, Landline = @Landline, Mobile = @Mobile, Email = @Email, POBox = @POBox, TradeNo = @TradeNo, Welcome = @Welcome, Logo = @logo, Room1 = @Room1, Room2 = @Room2, Room3 = @Room3, Room4 = @Room4 WHERE ID = @ID", MainClass.con);
 
                 cmd.Parameters.AddWithValue("@ID", 1); // Replace with the actual input control for ID.
@@ -2311,6 +2359,81 @@ namespace HelloWorldSolutionIMS
             guna2TextBox12.Text = guna2TrackBar12.Value.ToString();
             guna2TextBox11.Text = guna2TrackBar11.Value.ToString();
             guna2TextBox10.Text = guna2TrackBar10.Value.ToString();
+        }
+
+        private void guna2TrackBar15_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel15.BackColor = Color.FromArgb(guna2TrackBar15.Value, guna2TrackBar14.Value, guna2TrackBar13.Value);
+            guna2TextBox15.Text = guna2TrackBar15.Value.ToString();
+            guna2TextBox14.Text = guna2TrackBar14.Value.ToString();
+            guna2TextBox13.Text = guna2TrackBar13.Value.ToString();
+        }
+
+        private void guna2TrackBar14_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel15.BackColor = Color.FromArgb(guna2TrackBar15.Value, guna2TrackBar14.Value, guna2TrackBar13.Value);
+            guna2TextBox15.Text = guna2TrackBar15.Value.ToString();
+            guna2TextBox14.Text = guna2TrackBar14.Value.ToString();
+            guna2TextBox13.Text = guna2TrackBar13.Value.ToString();
+        }
+
+        private void guna2TrackBar13_Scroll(object sender, ScrollEventArgs e)
+        {
+            panel15.BackColor = Color.FromArgb(guna2TrackBar15.Value, guna2TrackBar14.Value, guna2TrackBar13.Value);
+            guna2TextBox15.Text = guna2TrackBar15.Value.ToString();
+            guna2TextBox14.Text = guna2TrackBar14.Value.ToString();
+            guna2TextBox13.Text = guna2TrackBar13.Value.ToString();
+        }
+
+        private void guna2TextBox15_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox15.Text != "")
+            {
+                int value = int.Parse(guna2TextBox15.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar15.Value = value;
+                    panel15.BackColor = Color.FromArgb(guna2TrackBar15.Value, guna2TrackBar14.Value, guna2TrackBar13.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TextBox14_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox14.Text != "")
+            {
+                int value = int.Parse(guna2TextBox14.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar14.Value = value;
+                    panel15.BackColor = Color.FromArgb(guna2TrackBar15.Value, guna2TrackBar14.Value, guna2TrackBar13.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
+        }
+
+        private void guna2TextBox13_TextChanged(object sender, EventArgs e)
+        {
+            if (guna2TextBox13.Text != "")
+            {
+                int value = int.Parse(guna2TextBox13.Text);
+                if (value >= 0 && value <= 255)
+                {
+                    guna2TrackBar13.Value = value;
+                    panel15.BackColor = Color.FromArgb(guna2TrackBar15.Value, guna2TrackBar14.Value, guna2TrackBar13.Value);
+                }
+                else
+                {
+                    MessageBox.Show("Vaue should be between 0 to 255");
+                }
+            }
         }
     }
 }

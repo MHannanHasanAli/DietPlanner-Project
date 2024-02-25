@@ -1319,29 +1319,45 @@ namespace HelloWorldSolutionIMS
             tabControl1.SelectedIndex = 5;
             ingredientflag = 0;
             calculationflag = 0;
-            //foreach (DataGridViewColumn column in guna2DataGridView13.Columns)
-            //{
-            //    // Replace "FullName" with the actual name of the column you want to modify
-            //    if (column.Name != "action1")
-            //    {
-            //        // Set AutoSizeMode to AllCells
-            //        column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
-            //        // Set WrapMode to True for word wrapping
-            //        column.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM RowSelection", MainClass.con);
 
-            //        // Optionally, you can set MinimumWidth to prevent the column from becoming too narrow
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
 
-            //        column.MinimumWidth = 225;
-            //    }
-            //    else
-            //    {
-            //        column.MinimumWidth = 15;
-            //    }
-            //}
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
 
-            //guna2DataGridView13.Rows.RemoveAt(1);
-            //CheckRows(guna2DataGridView13);
+                    guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView15.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView16.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView18.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView19.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView20.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
         }
 
 
@@ -9989,6 +10005,22 @@ namespace HelloWorldSolutionIMS
             if (e.KeyChar == (char)Keys.Enter)
             {
                 SearchDIetPlan.PerformClick();
+            }
+        }
+
+        private void mealar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
+            }
+        }
+
+        private void mealen_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
             }
         }
     }

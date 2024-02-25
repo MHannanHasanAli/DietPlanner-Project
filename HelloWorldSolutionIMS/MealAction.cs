@@ -1594,6 +1594,40 @@ namespace HelloWorldSolutionIMS
             ShowMeals(guna2DataGridView2, iddgv, mealardgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
             colmn = 1;
 
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM RowSelection", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
+
+                    guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView3.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView4.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+
             if (languagestatus == 1)
             {
                 foreach (Control control in panel1.Controls)

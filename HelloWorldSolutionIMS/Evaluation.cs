@@ -100,6 +100,35 @@ namespace HelloWorldSolutionIMS
             try
             {
                 MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM RowSelection", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
+
+                    guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
+            try
+            {
+                MainClass.con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM textcolor", MainClass.con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -420,6 +449,43 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView13.RowTemplate.DefaultCellStyle.BackColor;
             guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView13.RowTemplate.DefaultCellStyle.ForeColor;
 
+            try
+            {
+                MainClass.con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Red, Green, Blue FROM RowSelection", MainClass.con);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                // Read color value from the database
+                if (reader.Read())
+                {
+                    int red = Convert.ToInt32(reader["Red"]);
+                    int green = Convert.ToInt32(reader["Green"]);
+                    int blue = Convert.ToInt32(reader["Blue"]);
+
+                    // Create Color object from the read components
+                    Color color = Color.FromArgb(red, green, blue);
+
+                    guna2DataGridView5.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView6.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView11.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+                    guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
+
+                }
+
+                reader.Close();
+                MainClass.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MainClass.con.Close();
+                MessageBox.Show(ex.Message);
+
+            }
         }
         private void PrepareMCQsEnglish()
         {
@@ -481,10 +547,10 @@ namespace HelloWorldSolutionIMS
             guna2DataGridView12.Rows.Add();
             guna2DataGridView13.Rows.Add();
 
-            guna2DataGridView8.Rows[0].Cells[0].Value = "على دراية كاملة بالمعلومات والاساليب";
-            guna2DataGridView8.Rows[0].Cells[1].Value = "على دراية متوسطة بالمعلومات والاساليب";
-            guna2DataGridView8.Rows[0].Cells[2].Value = "على دراية بالمعلومات الاساسية فقط";
-            guna2DataGridView8.Rows[0].Cells[3].Value = "لا تمتلك معلومات ولا اساليب كافية لعمل برنامج غذائي";
+            guna2DataGridView8.Rows[0].Cells[0].Value = "ممتاز";
+            guna2DataGridView8.Rows[0].Cells[1].Value = "جيد جدا";
+            guna2DataGridView8.Rows[0].Cells[2].Value = "جيد";
+            guna2DataGridView8.Rows[0].Cells[3].Value = "غير جيد";
 
             guna2DataGridView7.Rows[0].Cells[0].Value = "سريع ولبق في التعامل";
             guna2DataGridView7.Rows[0].Cells[1].Value = "سرعة متوسطة وغير لبق في التعامل";
