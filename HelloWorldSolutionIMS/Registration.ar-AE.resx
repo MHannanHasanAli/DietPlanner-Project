@@ -313,6 +313,9 @@
   <data name="label1.Text" xml:space="preserve">
     <value>رقم الملف</value>
   </data>
+  <data name="DeleteBodyComp.Text" xml:space="preserve">
+    <value>حذف</value>
+  </data>
   <data name="exportbc.Text" xml:space="preserve">
     <value> تصدير</value>
   </data>

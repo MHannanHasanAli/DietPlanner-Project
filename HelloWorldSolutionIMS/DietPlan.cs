@@ -8228,10 +8228,10 @@ namespace HelloWorldSolutionIMS
         private void guna2Button15_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 14;
-            lab1.Text = input1.Text;
-            lab2.Text = input2.Text;
-            lab3.Text = input3.Text;
-            lab4.Text = input4.Text;
+            lab4.Text = input1.Text;
+            lab3.Text = input2.Text;
+            lab2.Text = input3.Text;
+            lab1.Text = input4.Text;
             lab5.Text = input5.Text;
         }
 

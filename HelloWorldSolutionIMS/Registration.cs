@@ -510,6 +510,30 @@ namespace HelloWorldSolutionIMS
 
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Customer updated successfully");
+
+                        MainClass.con.Close();
+
+
+                        ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
+                    }
+                    catch (Exception ex)
+                    {
+                        MainClass.con.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                    try
+                    {
+                        MainClass.con.Open();
+
+                        SqlCommand cmd = new SqlCommand("UPDATE Appointment SET Firstname = @Firstname, Familyname = @Familyname, Mobileno = @Mobileno WHERE Fileno = @AppointmentID", MainClass.con);
+
+                        cmd.Parameters.AddWithValue("@Firstname", firstname.Text);
+                        cmd.Parameters.AddWithValue("@Familyname", familyname.Text);
+                        cmd.Parameters.AddWithValue("@Mobileno", mobileno.Text);
+                        cmd.Parameters.AddWithValue("@AppointmentID", fileno.Text);
+
+                        cmd.ExecuteNonQuery();
+                        MainClass.con.Close();
                         fileno.Text = "";
                         firstname.Text = "";
                         familyname.Text = "";
@@ -525,14 +549,12 @@ namespace HelloWorldSolutionIMS
                         branch.Text = "";
                         lastvisitdate.Value = DateTime.Now; // Reset the last visit date to the current date or your default value.
                         nutritionistname.Text = "";
-                        MainClass.con.Close();
 
                         int filenonew = GetLastFileno();
                         filenonew = filenonew + 1;
 
                         fileno.Text = filenonew.ToString();
 
-                        ShowCustomer(guna2DataGridView1, IDDGV, FILENODGV, firstnamedgv, familynamedgv, subscriptionstartdatedgv, subscriptionenddatedgv, nutritionistnamedgv);
                     }
                     catch (Exception ex)
                     {
