@@ -7665,11 +7665,14 @@ namespace HelloWorldSolutionIMS
                         string notes = reader["Notes"].ToString();
                         string preparation = reader["Preparation"].ToString();
 
-                        // Assuming your Guna2DataGridView24 has columns named "NotesColumn" and "PreparationColumn"
-                        int rowIndex = guna2DataGridView24.Rows.Add(); // Add a new row
-                        guna2DataGridView24.Rows[lastRowIndex].Cells[0].Value = mealname;
-                        guna2DataGridView24.Rows[lastRowIndex].Cells[1].Value = notes;
-                        guna2DataGridView24.Rows[lastRowIndex].Cells[2].Value = preparation;
+                        if ((notes != "Nothing" && preparation != "Nothing" && notes != "" && preparation != ""))
+                        {
+                            int rowIndex = guna2DataGridView24.Rows.Add(); // Add a new row
+                            guna2DataGridView24.Rows[lastRowIndex].Cells[0].Value = mealname;
+                            guna2DataGridView24.Rows[lastRowIndex].Cells[1].Value = notes;
+                            guna2DataGridView24.Rows[lastRowIndex].Cells[2].Value = preparation;
+                        }
+
                     }
 
                     reader.Close();
