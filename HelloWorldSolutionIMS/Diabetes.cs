@@ -1476,7 +1476,9 @@ namespace HelloWorldSolutionIMS
                     {
 
                         MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("INSERT INTO Diabetes (FileNo, Weight, BFInsulin, LInsulin, DInsulin, SInsulin, BFCarbs, LCarbs, DCarbs, SCarbs, FastingGlucose, BeforeLunch, BeforeDinner, BedTime) VALUES (@FileNo, @Weight, @BFInsulin, @LInsulin, @DInsulin, @SInsulin, @BFCarbs, @LCarbs, @DCarbs, @SCarbs, @FastingGlucose, @BeforeLunch, @BeforeDinner, @BedTime)", MainClass.con);
+                        SqlCommand cmd = new SqlCommand("INSERT INTO Diabetes (FileNo, Weight, BFInsulin, LInsulin, DInsulin, SInsulin, BFCarbs, LCarbs, DCarbs, SCarbs, " +
+                            "FastingGlucose, BeforeLunch, BeforeDinner, BedTime) VALUES (@FileNo, @Weight, @BFInsulin, @LInsulin, @DInsulin, @SInsulin, @BFCarbs, @LCarbs, @DCarbs, " +
+                            "@SCarbs, @FastingGlucose, @BeforeLunch, @BeforeDinner, @BedTime)", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@FileNo", fileno.Text);
                         cmd.Parameters.AddWithValue("@Weight", float.TryParse(weight.Text, out float weightVal) ? weightVal : 0.00f);

@@ -6813,7 +6813,18 @@ namespace HelloWorldSolutionIMS
                         XFont font = new XFont("Arial", 14, XFontStyle.Bold);
                         XBrush brush = new XSolidBrush(XColor.FromKnownColor(XKnownColor.Green));
                         XRect rect = new XRect(xCoordinate, topSpacing, scaledWidth, 20);
-                        gfx.DrawString("Diet Plan", font, brush, rect, XStringFormats.TopLeft);
+
+                        if (languagestatus == 1)
+                        {
+                            gfx.DrawString("الحمية الغذائية", font, brush, rect, XStringFormats.TopLeft);
+
+                        }
+                        else
+                        {
+                            gfx.DrawString("Diet Plan", font, brush, rect, XStringFormats.TopLeft);
+
+                        }
+
 
                         // Increment topSpacing to leave space for the text
                         topSpacing += 20;
@@ -6828,7 +6839,16 @@ namespace HelloWorldSolutionIMS
                         XFont font = new XFont("Arial", 14, XFontStyle.Bold);
                         XBrush brush = new XSolidBrush(XColor.FromKnownColor(XKnownColor.Green));
                         XRect rect = new XRect(xCoordinate, topSpacing, scaledWidth, 20);
-                        gfx.DrawString("Notes And Preparation", font, brush, rect, XStringFormats.TopLeft);
+                        if (languagestatus == 1)
+                        {
+                            gfx.DrawString("ملاحظات وطريقة التحضير", font, brush, rect, XStringFormats.TopLeft);
+
+                        }
+                        else
+                        {
+                            gfx.DrawString("Notes And Preparation", font, brush, rect, XStringFormats.TopLeft);
+
+                        }
 
                         // Increment topSpacing to leave space for the text
                         topSpacing += 20;
@@ -7665,13 +7685,17 @@ namespace HelloWorldSolutionIMS
                         string notes = reader["Notes"].ToString();
                         string preparation = reader["Preparation"].ToString();
 
-                        if ((notes != "Nothing" && preparation != "Nothing" && notes != "" && preparation != ""))
+                        if (notes != "" || preparation != "")
                         {
-                            int rowIndex = guna2DataGridView24.Rows.Add(); // Add a new row
-                            guna2DataGridView24.Rows[lastRowIndex].Cells[0].Value = mealname;
-                            guna2DataGridView24.Rows[lastRowIndex].Cells[1].Value = notes;
-                            guna2DataGridView24.Rows[lastRowIndex].Cells[2].Value = preparation;
+                            if (notes != "Nothing" || preparation != "Nothing")
+                            {
+                                int rowIndex = guna2DataGridView24.Rows.Add(); // Add a new row
+                                guna2DataGridView24.Rows[lastRowIndex].Cells[0].Value = mealname;
+                                guna2DataGridView24.Rows[lastRowIndex].Cells[1].Value = notes;
+                                guna2DataGridView24.Rows[lastRowIndex].Cells[2].Value = preparation;
+                            }
                         }
+
 
                     }
 

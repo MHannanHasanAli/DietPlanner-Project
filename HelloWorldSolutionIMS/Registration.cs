@@ -490,15 +490,20 @@ namespace HelloWorldSolutionIMS
                     try
                     {
                         MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("UPDATE Customer SET FileNo = @FileNo, FirstName = @FirstName, FamilyName = @FamilyName, Gender = @Gender, DOB = @DOB, Age = @Age, MobileNo = @MobileNo, Landline = @Landline, Email = @Email, SubscriptionStatus = @SubscriptionStatus, SubscriptionStartDate = @SubscriptionStartDate, SubscriptionEndDate = @SubscriptionEndDate, Branch = @Branch, LastVisitDate = @LastVisitDate, NutritionistName = @NutritionistName WHERE FileNo = @FileNo", MainClass.con);
+                        SqlCommand cmd = new SqlCommand("UPDATE Customer SET FileNo = @FileNo, " +
+                            "FirstName = @FirstName, FamilyName = @FamilyName, Gender = @Gender, DOB = @DOB, " +
+                            "Age = @Age, MobileNo = @MobileNo, Landline = @Landline, Email = @Email, " +
+                            "SubscriptionStatus = @SubscriptionStatus, " +
+                            "SubscriptionStartDate = @SubscriptionStartDate, " +
+                            "SubscriptionEndDate = @SubscriptionEndDate, Branch = @Branch, " +
+                            "LastVisitDate = @LastVisitDate, NutritionistName = @NutritionistName WHERE " +
+                            "FileNo = @FileNo", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@FileNo", filenoTobeedited); // Replace fileNoValue with the actual file number.
                         cmd.Parameters.AddWithValue("@FirstName", firstname.Text);
                         cmd.Parameters.AddWithValue("@FamilyName", familyname.Text);
                         cmd.Parameters.AddWithValue("@Gender", gender.Text);
-                        cmd.Parameters.AddWithValue("@DOB", Convert.ToDateTime(dob.Value)); // Assuming dateTimePickerDOB is used to select the date of birth.
-                        cmd.Parameters.AddWithValue("@Age", age.Text); // Replace ageValue with the actual age.
-                        cmd.Parameters.AddWithValue("@MobileNo", mobileno.Text);
+                        cmd.Parameters.AddWithValue("@DOB", Convert.ToDateTime(dob.Value));
                         cmd.Parameters.AddWithValue("@Landline", landline.Text);
                         cmd.Parameters.AddWithValue("@Email", email.Text);
                         cmd.Parameters.AddWithValue("@SubscriptionStatus", subscriptionstatus.Text);

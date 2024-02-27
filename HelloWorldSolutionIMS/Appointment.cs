@@ -953,7 +953,11 @@ namespace HelloWorldSolutionIMS
                                 {
                                     MainClass.con.Open();
 
-                                    SqlCommand cmd = new SqlCommand("UPDATE Appointment SET Fileno = @Fileno, Firstname = @Firstname, Familyname = @Familyname, Mobileno = @Mobileno, Date = @Date, Room = @Room, RowIndex = @RowIndex, ColumnIndex = @ColumnIndex, Slot = @Slot WHERE ID = @AppointmentID", MainClass.con);
+                                    SqlCommand cmd = new SqlCommand("UPDATE Appointment SET Fileno = @Fileno, " +
+                                        "Firstname = @Firstname, Familyname = @Familyname, Mobileno = @Mobileno, " +
+                                        "Date = @Date, Room = @Room, RowIndex = @RowIndex, " +
+                                        "ColumnIndex = @ColumnIndex, Slot = @Slot " +
+                                        "WHERE ID = @AppointmentID", MainClass.con);
 
                                     cmd.Parameters.AddWithValue("@Fileno", fileno.Text);
                                     cmd.Parameters.AddWithValue("@Firstname", firstname.Text);

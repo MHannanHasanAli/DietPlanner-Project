@@ -282,8 +282,12 @@ namespace HelloWorldSolutionIMS
                     try
                     {
                         MainClass.con.Open();
-                        SqlCommand cmd = new SqlCommand("INSERT INTO SpecialDeals (PromotionName, PromotionCode, PromotionPercentage, StartDate, EndDate, NutritionistName, Branch, PromotionDetails) " +
-                            "VALUES (@PromotionName, @PromotionCode, @PromotionPercentage, @StartDate, @EndDate, @NutritionistName, @Branch, @PromotionDetails)", MainClass.con);
+                        SqlCommand cmd = new SqlCommand("INSERT INTO SpecialDeals " +
+                            "(PromotionName, PromotionCode, PromotionPercentage, StartDate, EndDate, " +
+                            "NutritionistName, Branch, PromotionDetails) " +
+                            "VALUES (@PromotionName, @PromotionCode, @PromotionPercentage, " +
+                            "@StartDate, @EndDate, @NutritionistName, @Branch, " +
+                            "@PromotionDetails)", MainClass.con);
 
                         cmd.Parameters.AddWithValue("@PromotionName", promotionname.Text);
                         cmd.Parameters.AddWithValue("@PromotionCode", promotioncode.Text);

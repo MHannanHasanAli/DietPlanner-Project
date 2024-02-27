@@ -944,6 +944,70 @@
   <data name="dataGridViewTextBoxColumn16.HeaderText" xml:space="preserve">
     <value>وجبات خفيفة </value>
   </data>
+  <data name="guna2HtmlLabel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 40</value>
+  </data>
+  <data name="guna2HtmlLabel6.Text" xml:space="preserve">
+    <value>ارشادات </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="instructioncontent.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="guna2HtmlLabel15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 33</value>
+  </data>
+  <data name="guna2HtmlLabel15.Text" xml:space="preserve">
+    <value>الدهون </value>
+  </data>
+  <data name="guna2HtmlLabel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 33</value>
+  </data>
+  <data name="guna2HtmlLabel13.Text" xml:space="preserve">
+    <value>بروتين</value>
+  </data>
+  <data name="guna2HtmlLabel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 33</value>
+  </data>
+  <data name="guna2HtmlLabel11.Text" xml:space="preserve">
+    <value>الكربوهيدرات </value>
+  </data>
+  <data name="guna2HtmlLabel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 33</value>
+  </data>
+  <data name="guna2HtmlLabel9.Text" xml:space="preserve">
+    <value>الطاقة </value>
+  </data>
+  <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 39</value>
+  </data>
+  <data name="label42.Text" xml:space="preserve">
+    <value>التحليل البياني </value>
+  </data>
+  <data name="guna2HtmlLabel16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 33</value>
+  </data>
+  <data name="guna2HtmlLabel16.Text" xml:space="preserve">
+    <value>الكمية المحققة  </value>
+  </data>
+  <data name="guna2HtmlLabel12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 33</value>
+  </data>
+  <data name="guna2HtmlLabel12.Text" xml:space="preserve">
+    <value>تاريخ الوصول المتوقع </value>
+  </data>
+  <data name="guna2HtmlLabel14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 33</value>
+  </data>
+  <data name="guna2HtmlLabel14.Text" xml:space="preserve">
+    <value>الهدف </value>
+  </data>
+  <data name="guna2HtmlLabel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 33</value>
+  </data>
+  <data name="guna2HtmlLabel10.Text" xml:space="preserve">
+    <value>بداية تحقيق الحلم </value>
+  </data>
   <data name="panel23.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
   </data>
@@ -979,6 +1043,60 @@
   </data>
   <data name="panel24.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
+  </data>
+  <data name="label108.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 16</value>
+  </data>
+  <data name="label108.Text" xml:space="preserve">
+    <value>اليوم السابع  </value>
+  </data>
+  <data name="label109.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 16</value>
+  </data>
+  <data name="label109.Text" xml:space="preserve">
+    <value>اليوم السادس </value>
+  </data>
+  <data name="label110.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 16</value>
+  </data>
+  <data name="label110.Text" xml:space="preserve">
+    <value>اليوم الخامس </value>
+  </data>
+  <data name="label111.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 16</value>
+  </data>
+  <data name="label111.Text" xml:space="preserve">
+    <value>اليوم الرابع </value>
+  </data>
+  <data name="label112.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 16</value>
+  </data>
+  <data name="label112.Text" xml:space="preserve">
+    <value>اليوم الثالث </value>
+  </data>
+  <data name="label113.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 16</value>
+  </data>
+  <data name="label113.Text" xml:space="preserve">
+    <value>اليوم الثاني </value>
+  </data>
+  <data name="label115.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 16</value>
+  </data>
+  <data name="label115.Text" xml:space="preserve">
+    <value>اليوم الاول </value>
+  </data>
+  <data name="dataGridViewTextBoxColumn75.HeaderText" xml:space="preserve">
+    <value>الافطار </value>
+  </data>
+  <data name="dataGridViewTextBoxColumn76.HeaderText" xml:space="preserve">
+    <value>الغداء  </value>
+  </data>
+  <data name="dataGridViewTextBoxColumn77.HeaderText" xml:space="preserve">
+    <value>العشاء</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn78.HeaderText" xml:space="preserve">
+    <value>وجبات خفيفة</value>
   </data>
   <data name="panel40.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
@@ -1018,6 +1136,15 @@
   </data>
   <data name="panel41.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
+  </data>
+  <data name="mealdgv.HeaderText" xml:space="preserve">
+    <value>الوجبة  </value>
+  </data>
+  <data name="notesdgv.HeaderText" xml:space="preserve">
+    <value>ملاحظات  </value>
+  </data>
+  <data name="preparationdgv.HeaderText" xml:space="preserve">
+    <value>التحضير  </value>
   </data>
   <data name="guna2DataGridView24.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
@@ -1068,7 +1195,7 @@
     <value>الوزن 1 </value>
   </data>
   <data name="preparereport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 1055</value>
+    <value>32, 1055</value>
   </data>
   <data name="label127.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 28</value>
@@ -1079,7 +1206,22 @@
   <data name="label127.Text" xml:space="preserve">
     <value> ....معاينة التقرير</value>
   </data>
+  <data name="panel45.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 83</value>
+  </data>
+  <data name="panel45.Size" type="System.Drawing.Size, System.Drawing">
+    <value>610, 280</value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 3</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>336, 159</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1339, 1055</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
 </root>

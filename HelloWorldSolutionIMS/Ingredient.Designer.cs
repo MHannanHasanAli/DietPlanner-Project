@@ -43,6 +43,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.categorybox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.export = new Guna.UI2.WinForms.Guna2Button();
             this.dgn = new Guna.UI2.WinForms.Guna2Button();
             this.agn = new Guna.UI2.WinForms.Guna2Button();
@@ -132,8 +134,7 @@
             this.idgn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gnnar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gnnen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categorybox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.NewIngredient = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -165,6 +166,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.NewIngredient);
             this.panel1.Controls.Add(this.categorybox);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.export);
@@ -228,6 +230,33 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // categorybox
+            // 
+            this.categorybox.BackColor = System.Drawing.Color.Transparent;
+            this.categorybox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.categorybox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.categorybox.FocusedColor = System.Drawing.Color.Empty;
+            this.categorybox.FocusedState.Parent = this.categorybox;
+            resources.ApplyResources(this.categorybox, "categorybox");
+            this.categorybox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.categorybox.FormattingEnabled = true;
+            this.categorybox.HoverState.Parent = this.categorybox;
+            this.categorybox.Items.AddRange(new object[] {
+            resources.GetString("categorybox.Items"),
+            resources.GetString("categorybox.Items1"),
+            resources.GetString("categorybox.Items2"),
+            resources.GetString("categorybox.Items3"),
+            resources.GetString("categorybox.Items4"),
+            resources.GetString("categorybox.Items5")});
+            this.categorybox.ItemsAppearance.Parent = this.categorybox;
+            this.categorybox.Name = "categorybox";
+            this.categorybox.ShadowDecoration.Parent = this.categorybox;
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
             // 
             // export
             // 
@@ -1432,32 +1461,20 @@
             this.gnnen.ReadOnly = true;
             this.gnnen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // categorybox
+            // NewIngredient
             // 
-            this.categorybox.BackColor = System.Drawing.Color.Transparent;
-            this.categorybox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.categorybox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.categorybox.FocusedColor = System.Drawing.Color.Empty;
-            this.categorybox.FocusedState.Parent = this.categorybox;
-            resources.ApplyResources(this.categorybox, "categorybox");
-            this.categorybox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.categorybox.FormattingEnabled = true;
-            this.categorybox.HoverState.Parent = this.categorybox;
-            this.categorybox.Items.AddRange(new object[] {
-            resources.GetString("categorybox.Items"),
-            resources.GetString("categorybox.Items1"),
-            resources.GetString("categorybox.Items2"),
-            resources.GetString("categorybox.Items3"),
-            resources.GetString("categorybox.Items4"),
-            resources.GetString("categorybox.Items5")});
-            this.categorybox.ItemsAppearance.Parent = this.categorybox;
-            this.categorybox.Name = "categorybox";
-            this.categorybox.ShadowDecoration.Parent = this.categorybox;
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            this.NewIngredient.AutoRoundedCorners = true;
+            this.NewIngredient.BorderRadius = 21;
+            this.NewIngredient.CausesValidation = false;
+            this.NewIngredient.CheckedState.Parent = this.NewIngredient;
+            this.NewIngredient.CustomImages.Parent = this.NewIngredient;
+            this.NewIngredient.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.NewIngredient, "NewIngredient");
+            this.NewIngredient.ForeColor = System.Drawing.Color.White;
+            this.NewIngredient.HoverState.Parent = this.NewIngredient;
+            this.NewIngredient.Name = "NewIngredient";
+            this.NewIngredient.ShadowDecoration.Parent = this.NewIngredient;
+            this.NewIngredient.Click += new System.EventHandler(this.NewIngredient_Click);
             // 
             // Ingredient
             // 
@@ -1582,5 +1599,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sodiumdgv;
         private Guna.UI2.WinForms.Guna2ComboBox categorybox;
         private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2Button NewIngredient;
     }
 }

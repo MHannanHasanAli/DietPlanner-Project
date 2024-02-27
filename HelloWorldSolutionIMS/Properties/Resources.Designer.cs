@@ -423,6 +423,16 @@ namespace HelloWorldSolutionIMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap goals {
+            get {
+                object obj = ResourceManager.GetObject("goals", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grocery {
             get {
                 object obj = ResourceManager.GetObject("grocery", resourceCulture);

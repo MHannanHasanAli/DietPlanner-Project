@@ -901,32 +901,32 @@ namespace HelloWorldSolutionIMS
                         SqlCommand cmd = new SqlCommand("INSERT INTO Ingredient (INGREDIENT_AR, INGREDIENT_EN, GROUP_AR, GROUP_EN, CLASSIFICATION, CALORIES, FATS, FIBERS, POTASSIUM, WATER, SUGAR, CALCIUM, A, PROTEIN, CARBOHYDRATES, SODIUM, PHOSPHOR, MAGNESIUM, IRON, IODINE, B, datatype) " +
                             "VALUES (@INGREDIENT_AR, @INGREDIENT_EN, @GROUP_AR, @GROUP_EN, @CLASSIFICATION, @CALORIES, @FATS, @FIBERS, @POTASSIUM, @WATER, @SUGAR, @CALCIUM, @A, @PROTEIN, @CARBOHYDRATES, @SODIUM, @PHOSPHOR, @MAGNESIUM, @IRON, @IODINE, @B, @datatype)", MainClass.con);
 
-                        cmd.Parameters.AddWithValue("@INGREDIENT_AR", ingredientar.Text); // Replace with the actual input control for INGREDIENT_AR.
-                        cmd.Parameters.AddWithValue("@INGREDIENT_EN", ingredienten.Text); // Replace with the actual input control for INGREDIENT_EN.
-                        cmd.Parameters.AddWithValue("@GROUP_AR", groupar.Text); // Replace with the actual input control for GROUP_AR.
-                        cmd.Parameters.AddWithValue("@GROUP_EN", groupen.Text); // Replace with the actual input control for GROUP_EN.
-                        cmd.Parameters.AddWithValue("@CLASSIFICATION", classification.Text); // Replace with the actual input control for CLASSIFICATION.
-                        cmd.Parameters.AddWithValue("@CALORIES", Convert.ToDouble(calories.Text)); // Replace with the actual input control for CALORIES.
-                        cmd.Parameters.AddWithValue("@FATS", Convert.ToDouble(fats.Text)); // Replace with the actual input control for FATS.
-                        cmd.Parameters.AddWithValue("@FIBERS", Convert.ToDouble(fibers.Text)); // Replace with the actual input control for FIBERS.
-                        cmd.Parameters.AddWithValue("@POTASSIUM", Convert.ToDouble(potassium.Text)); // Replace with the actual input control for POTASIUM.
-                        cmd.Parameters.AddWithValue("@WATER", Convert.ToDouble(water.Text)); // Replace with the actual input control for WATER.
-                        cmd.Parameters.AddWithValue("@SUGAR", Convert.ToDouble(sugar.Text)); // Replace with the actual input control for SUGER.
-                        cmd.Parameters.AddWithValue("@CALCIUM", Convert.ToDouble(calcium.Text)); // Replace with the actual input control for CALCIUM.
-                        cmd.Parameters.AddWithValue("@A", Convert.ToDouble(abox.Text)); // Replace with the actual input control for A.
-                        cmd.Parameters.AddWithValue("@PROTEIN", Convert.ToDouble(protein.Text)); // Replace with the actual input control for Protein.
-                        cmd.Parameters.AddWithValue("@CARBOHYDRATES", Convert.ToDouble(carbohydrates.Text)); // Replace with the actual input control for CARBOHYDRATES.
-                        cmd.Parameters.AddWithValue("@SODIUM", Convert.ToDouble(sodium.Text)); // Replace with the actual input control for SODIUM.
-                        cmd.Parameters.AddWithValue("@PHOSPHOR", Convert.ToDouble(phosphor.Text)); // Replace with the actual input control for PHOSPHOR.
-                        cmd.Parameters.AddWithValue("@MAGNESIUM", Convert.ToDouble(magnesium.Text)); // Replace with the actual input control for MAGNESIUM.
-                        cmd.Parameters.AddWithValue("@IRON", Convert.ToDouble(iron.Text)); // Replace with the actual input control for IRON.
-                        cmd.Parameters.AddWithValue("@IODINE", Convert.ToDouble(iodine.Text)); // Replace with the actual input control for IODINE.
-                        cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text)); // Replace with the actual input control for B.
+                        cmd.Parameters.AddWithValue("@INGREDIENT_AR", ingredientar.Text);
+                        cmd.Parameters.AddWithValue("@INGREDIENT_EN", ingredienten.Text);
+                        cmd.Parameters.AddWithValue("@GROUP_AR", groupar.Text);
+                        cmd.Parameters.AddWithValue("@GROUP_EN", groupen.Text);
+                        cmd.Parameters.AddWithValue("@CLASSIFICATION", classification.Text);
+                        cmd.Parameters.AddWithValue("@CALORIES", Convert.ToDouble(calories.Text));
+                        cmd.Parameters.AddWithValue("@FATS", Convert.ToDouble(fats.Text));
+                        cmd.Parameters.AddWithValue("@FIBERS", Convert.ToDouble(fibers.Text));
+                        cmd.Parameters.AddWithValue("@POTASSIUM", Convert.ToDouble(potassium.Text));
+                        cmd.Parameters.AddWithValue("@WATER", Convert.ToDouble(water.Text));
+                        cmd.Parameters.AddWithValue("@SUGAR", Convert.ToDouble(sugar.Text));
+                        cmd.Parameters.AddWithValue("@CALCIUM", Convert.ToDouble(calcium.Text));
+                        cmd.Parameters.AddWithValue("@A", Convert.ToDouble(abox.Text));
+                        cmd.Parameters.AddWithValue("@PROTEIN", Convert.ToDouble(protein.Text));
+                        cmd.Parameters.AddWithValue("@CARBOHYDRATES", Convert.ToDouble(carbohydrates.Text));
+                        cmd.Parameters.AddWithValue("@SODIUM", Convert.ToDouble(sodium.Text));
+                        cmd.Parameters.AddWithValue("@PHOSPHOR", Convert.ToDouble(phosphor.Text));
+                        cmd.Parameters.AddWithValue("@MAGNESIUM", Convert.ToDouble(magnesium.Text));
+                        cmd.Parameters.AddWithValue("@IRON", Convert.ToDouble(iron.Text));
+                        cmd.Parameters.AddWithValue("@IODINE", Convert.ToDouble(iodine.Text));
+                        cmd.Parameters.AddWithValue("@B", Convert.ToDouble(bbox.Text));
                         cmd.Parameters.AddWithValue("@datatype", categorybox.Text);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Ingredient added successfully");
 
-                        // Clear the input controls or set them to default values.
+
                         ingredientar.Text = "";
                         ingredienten.Text = "";
                         groupar.Text = "";
@@ -948,7 +948,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-                        categorybox.SelectedItem = null;
+                        categorybox.SelectedItem = "All";
 
                         MainClass.con.Close();
 
@@ -1024,7 +1024,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-                        categorybox.SelectedItem = null;
+                        categorybox.SelectedItem = "All";
                         MainClass.con.Close();
                         importall.Visible = true;
                         importbranded.Visible = true;
@@ -1133,7 +1133,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-                        categorybox.SelectedItem = null;
+                        categorybox.SelectedItem = "All";
                         // Get the Ingredient ID to display in the confirmation message
                         string ingredientIDToDelete = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
 
@@ -1280,7 +1280,7 @@ namespace HelloWorldSolutionIMS
                         iron.Text = "";
                         iodine.Text = "";
                         bbox.Text = "";
-                        categorybox.SelectedItem = null;
+                        categorybox.SelectedItem = "All";
                         // Get the Ingredient ID to display in the confirmation message
                         string ingredientIDToDelete = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString(); // Assuming the Ingredient ID is in the first cell of the selected row.
 
@@ -1991,6 +1991,33 @@ namespace HelloWorldSolutionIMS
             {
                 SearchIngredients(guna2DataGridView1, nodgv, fdciddgv, classificationdgv, ingredientardgv, calloriesdgv, proteindgv, fatsdgv, carbohydratedgv, calciumdgv, fibersdgv, sodiumdgv);
             }
+        }
+
+        private void NewIngredient_Click(object sender, EventArgs e)
+        {
+            edit = 0;
+            ingredientar.Text = "";
+            ingredienten.Text = "";
+            groupar.Text = "";
+            groupen.Text = "";
+            classification.SelectedItem = null;
+            calories.Text = "";
+            fats.Text = "";
+            fibers.Text = "";
+            potassium.Text = "";
+            water.Text = "";
+            sugar.Text = "";
+            calcium.Text = "";
+            abox.Text = "";
+            protein.Text = "";
+            carbohydrates.Text = "";
+            sodium.Text = "";
+            phosphor.Text = "";
+            magnesium.Text = "";
+            iron.Text = "";
+            iodine.Text = "";
+            bbox.Text = "";
+            categorybox.SelectedItem = "All";
         }
     }
 
