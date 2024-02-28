@@ -954,6 +954,51 @@
   <data name="instructioncontent.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
+  <data name="guna2HtmlLabel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 41</value>
+  </data>
+  <data name="guna2HtmlLabel8.Text" xml:space="preserve">
+    <value>اليوم السابع  </value>
+  </data>
+  <data name="guna2HtmlLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 41</value>
+  </data>
+  <data name="guna2HtmlLabel7.Text" xml:space="preserve">
+    <value>اليوم السادس </value>
+  </data>
+  <data name="guna2HtmlLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 1080</value>
+  </data>
+  <data name="guna2HtmlLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 33</value>
+  </data>
+  <data name="guna2HtmlLabel5.Text" xml:space="preserve">
+    <value>اليوم الخامس </value>
+  </data>
+  <data name="guna2HtmlLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 41</value>
+  </data>
+  <data name="guna2HtmlLabel4.Text" xml:space="preserve">
+    <value>اليوم الرابع </value>
+  </data>
+  <data name="guna2HtmlLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 41</value>
+  </data>
+  <data name="guna2HtmlLabel3.Text" xml:space="preserve">
+    <value>اليوم الثالث </value>
+  </data>
+  <data name="guna2HtmlLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 41</value>
+  </data>
+  <data name="guna2HtmlLabel2.Text" xml:space="preserve">
+    <value>اليوم الثاني </value>
+  </data>
+  <data name="guna2HtmlLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 41</value>
+  </data>
+  <data name="guna2HtmlLabel1.Text" xml:space="preserve">
+    <value>اليوم الاول </value>
+  </data>
   <data name="guna2HtmlLabel15.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 33</value>
   </data>
@@ -978,11 +1023,20 @@
   <data name="guna2HtmlLabel9.Text" xml:space="preserve">
     <value>الطاقة </value>
   </data>
+  <data name="chart8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 883</value>
+  </data>
   <data name="label42.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 39</value>
   </data>
   <data name="label42.Text" xml:space="preserve">
     <value>التحليل البياني </value>
+  </data>
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 3</value>
+  </data>
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>336, 159</value>
   </data>
   <data name="guna2HtmlLabel16.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 33</value>
@@ -1206,22 +1260,7 @@
   <data name="label127.Text" xml:space="preserve">
     <value> ....معاينة التقرير</value>
   </data>
-  <data name="panel45.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 83</value>
-  </data>
-  <data name="panel45.Size" type="System.Drawing.Size, System.Drawing">
-    <value>610, 280</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 3</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>336, 159</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1339, 1055</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
 </root>

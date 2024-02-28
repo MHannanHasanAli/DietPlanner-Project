@@ -1147,13 +1147,13 @@
     <value>373, 33</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 24</value>
+    <value>104, 30</value>
   </data>
   <data name="label12.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>File No.</value>
+    <value>File No.*</value>
   </data>
   <data name="&gt;&gt;label12.Name" xml:space="preserve">
     <value>label12</value>
@@ -1177,13 +1177,13 @@
     <value>373, 202</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 24</value>
+    <value>136, 30</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
-    <value>Mobile No.</value>
+    <value>Mobile No.*</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
@@ -1207,13 +1207,13 @@
     <value>373, 83</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 24</value>
+    <value>135, 30</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
-    <value>First Name</value>
+    <value>First Name*</value>
   </data>
   <data name="&gt;&gt;label13.Name" xml:space="preserve">
     <value>label13</value>
@@ -1237,13 +1237,13 @@
     <value>373, 143</value>
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 24</value>
+    <value>160, 30</value>
   </data>
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
   <data name="label14.Text" xml:space="preserve">
-    <value>Family Name</value>
+    <value>Family Name*</value>
   </data>
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>

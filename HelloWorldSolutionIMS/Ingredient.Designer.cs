@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingredient));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -39,10 +40,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingredient));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.NewIngredient = new Guna.UI2.WinForms.Guna2Button();
             this.categorybox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.export = new Guna.UI2.WinForms.Guna2Button();
@@ -134,7 +135,6 @@
             this.idgn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gnnar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gnnen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NewIngredient = new Guna.UI2.WinForms.Guna2Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -230,6 +230,21 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // NewIngredient
+            // 
+            this.NewIngredient.AutoRoundedCorners = true;
+            this.NewIngredient.BorderRadius = 21;
+            this.NewIngredient.CausesValidation = false;
+            this.NewIngredient.CheckedState.Parent = this.NewIngredient;
+            this.NewIngredient.CustomImages.Parent = this.NewIngredient;
+            this.NewIngredient.FillColor = System.Drawing.Color.MediumSeaGreen;
+            resources.ApplyResources(this.NewIngredient, "NewIngredient");
+            this.NewIngredient.ForeColor = System.Drawing.Color.White;
+            this.NewIngredient.HoverState.Parent = this.NewIngredient;
+            this.NewIngredient.Name = "NewIngredient";
+            this.NewIngredient.ShadowDecoration.Parent = this.NewIngredient;
+            this.NewIngredient.Click += new System.EventHandler(this.NewIngredient_Click);
             // 
             // categorybox
             // 
@@ -1460,21 +1475,6 @@
             this.gnnen.Name = "gnnen";
             this.gnnen.ReadOnly = true;
             this.gnnen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // NewIngredient
-            // 
-            this.NewIngredient.AutoRoundedCorners = true;
-            this.NewIngredient.BorderRadius = 21;
-            this.NewIngredient.CausesValidation = false;
-            this.NewIngredient.CheckedState.Parent = this.NewIngredient;
-            this.NewIngredient.CustomImages.Parent = this.NewIngredient;
-            this.NewIngredient.FillColor = System.Drawing.Color.MediumSeaGreen;
-            resources.ApplyResources(this.NewIngredient, "NewIngredient");
-            this.NewIngredient.ForeColor = System.Drawing.Color.White;
-            this.NewIngredient.HoverState.Parent = this.NewIngredient;
-            this.NewIngredient.Name = "NewIngredient";
-            this.NewIngredient.ShadowDecoration.Parent = this.NewIngredient;
-            this.NewIngredient.Click += new System.EventHandler(this.NewIngredient_Click);
             // 
             // Ingredient
             // 

@@ -33,6 +33,7 @@ namespace HelloWorldSolutionIMS
             carbsd.TextChanged += UpdateChart3;
         }
         static int coderunner = 0;
+        static int reporttablefiller = 0;
         public DietPlan(int id)
         {
             InitializeComponent();
@@ -45,6 +46,8 @@ namespace HelloWorldSolutionIMS
             carbsd.TextChanged += UpdateChart3;
             coderunner = id;
             filenon.Text = id.ToString();
+            PrepareReportTable();
+            reporttablefiller = 1;
             LoadData(id);
         }
         private void LoadData(int id)
@@ -822,8 +825,10 @@ namespace HelloWorldSolutionIMS
             chart9.Series.Clear();
             chart10.Series.Clear();
 
-
-            PrepareReportTable();
+            if (reporttablefiller == 0)
+            {
+                PrepareReportTable();
+            }
             instructionflag = 1;
             try
             {
@@ -1358,6 +1363,8 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
+
+            reporttablefiller = 0;
         }
 
 
@@ -7786,7 +7793,6 @@ namespace HelloWorldSolutionIMS
             proteinvalue.Text = $"{double.Parse(proteind.Text):0.##} g";
             fatsvalue.Text = $"{double.Parse(fatsd.Text):0.##} g";
 
-
             List<Panel> panelList = new List<Panel> { panel13, panel24, panel41, panel22, panel12 };
             SavePanelsAsPdfWithFooter(panelList, 610, 800);
 
@@ -10050,6 +10056,8 @@ namespace HelloWorldSolutionIMS
                 SearchMeals(guna2DataGridView12, mealiddgv, mealardgv, mealendgv, caloriesdgv, proteinmaindgv, fatsmaindgv, carbohydratesmaindgv, calciummaindgv, fibermaindgv, sodiummaindgv);
             }
         }
+
+
     }
 
 

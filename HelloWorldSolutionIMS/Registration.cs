@@ -1491,6 +1491,17 @@ namespace HelloWorldSolutionIMS
             DateTime selectedDate = dob.Value;
             DateTime currentDate = DateTime.Today;
 
+            // Check if the selected date is in the future
+            if (selectedDate > currentDate)
+            {
+                // Reset the selected date to the current date
+                dob.Value = currentDate;
+                selectedDate = currentDate;
+
+                // Show a message to the user
+                MessageBox.Show("You have selected a date from the future. The date has been set to the current date.", "Date Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
             int years = currentDate.Year - selectedDate.Year;
             if (selectedDate.Date > currentDate.AddYears(-years)) years--;
 

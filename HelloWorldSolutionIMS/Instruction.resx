@@ -433,13 +433,13 @@
     <value>23, 19</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 24</value>
+    <value>198, 30</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Instruction Name</value>
+    <value>Instruction Name*</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>

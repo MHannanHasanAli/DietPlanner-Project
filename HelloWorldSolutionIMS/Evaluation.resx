@@ -355,13 +355,13 @@
     <value>19, 42</value>
   </data>
   <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 17</value>
+    <value>76, 21</value>
   </data>
   <data name="label15.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
-    <value>File No.</value>
+    <value>File No.*</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
