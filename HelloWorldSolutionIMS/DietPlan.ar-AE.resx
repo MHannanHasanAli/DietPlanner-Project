@@ -118,80 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabPage17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1331, 1026</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1339, 1055</value>
-  </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
   </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
+  </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1325, 1020</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
+  </data>
+  <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
   </data>
-  <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1325, 1020</value>
+  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
   </data>
-  <data name="panel11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1325, 1020</value>
+  <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="PrintBTN.Text" xml:space="preserve">
     <value>طباعة </value>
@@ -430,8 +388,11 @@
   <data name="label74.Text" xml:space="preserve">
     <value>سعرات</value>
   </data>
-  <data name="panel17.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel11.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
+  </data>
+  <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="guna2Button12.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
@@ -662,8 +623,11 @@
   <data name="label99.Text" xml:space="preserve">
     <value>كالسيوم</value>
   </data>
-  <data name="panel18.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel17.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
+  </data>
+  <data name="tabPage7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="deletehistory.Text" xml:space="preserve">
     <value>حذف </value>
@@ -686,8 +650,11 @@
   <data name="dietnamedgv.HeaderText" xml:space="preserve">
     <value>تاريخ </value>
   </data>
-  <data name="panel19.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel18.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
+  </data>
+  <data name="tabPage8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="label106.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7pt</value>
@@ -737,9 +704,6 @@
   <data name="label107.Text" xml:space="preserve">
     <value>اليوم السابع </value>
   </data>
-  <data name="contextMenuStrip7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 76</value>
-  </data>
   <data name="toolStripMenuItem16.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 24</value>
   </data>
@@ -758,7 +722,7 @@
   <data name="toolStripMenuItem18.Text" xml:space="preserve">
     <value>حذف وجبة</value>
   </data>
-  <data name="contextMenuStrip6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="contextMenuStrip7.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 76</value>
   </data>
   <data name="toolStripMenuItem13.Size" type="System.Drawing.Size, System.Drawing">
@@ -779,7 +743,7 @@
   <data name="toolStripMenuItem15.Text" xml:space="preserve">
     <value>حذف وجبة</value>
   </data>
-  <data name="contextMenuStrip5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="contextMenuStrip6.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 76</value>
   </data>
   <data name="toolStripMenuItem10.Size" type="System.Drawing.Size, System.Drawing">
@@ -800,6 +764,9 @@
   <data name="toolStripMenuItem12.Text" xml:space="preserve">
     <value>حذف وجبة</value>
   </data>
+  <data name="contextMenuStrip5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 76</value>
+  </data>
   <data name="label104.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7pt</value>
   </data>
@@ -811,9 +778,6 @@
   </data>
   <data name="label104.Text" xml:space="preserve">
     <value>اليوم الرابع </value>
-  </data>
-  <data name="contextMenuStrip4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 76</value>
   </data>
   <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 24</value>
@@ -833,6 +797,9 @@
   <data name="toolStripMenuItem9.Text" xml:space="preserve">
     <value>حذف وجبة</value>
   </data>
+  <data name="contextMenuStrip4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 76</value>
+  </data>
   <data name="label103.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7pt</value>
   </data>
@@ -844,9 +811,6 @@
   </data>
   <data name="label103.Text" xml:space="preserve">
     <value>اليوم الثالث</value>
-  </data>
-  <data name="contextMenuStrip3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 76</value>
   </data>
   <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 24</value>
@@ -866,7 +830,7 @@
   <data name="toolStripMenuItem6.Text" xml:space="preserve">
     <value>حذف وجبة</value>
   </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="contextMenuStrip3.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 76</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
@@ -886,6 +850,9 @@
   </data>
   <data name="toolStripMenuItem3.Text" xml:space="preserve">
     <value>حذف وجبة</value>
+  </data>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 76</value>
   </data>
   <data name="guna2Button5.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 35</value>
@@ -911,9 +878,6 @@
   <data name="label101.Text" xml:space="preserve">
     <value>اليوم الاول</value>
   </data>
-  <data name="contextMenuStrip2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 76</value>
-  </data>
   <data name="addToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 24</value>
   </data>
@@ -932,6 +896,9 @@
   <data name="deleteToolStripMenuItem.Text" xml:space="preserve">
     <value>حذف وجبة</value>
   </data>
+  <data name="contextMenuStrip2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 76</value>
+  </data>
   <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
     <value> وجبة الافطار</value>
   </data>
@@ -944,6 +911,12 @@
   <data name="dataGridViewTextBoxColumn16.HeaderText" xml:space="preserve">
     <value>وجبات خفيفة </value>
   </data>
+  <data name="panel19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1325, 1020</value>
+  </data>
+  <data name="tabPage9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
+  </data>
   <data name="guna2HtmlLabel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 40</value>
   </data>
@@ -954,14 +927,17 @@
   <data name="instructioncontent.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
+  <data name="tabPage10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
+  </data>
   <data name="guna2HtmlLabel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 41</value>
+    <value>102, 33</value>
   </data>
   <data name="guna2HtmlLabel8.Text" xml:space="preserve">
     <value>اليوم السابع  </value>
   </data>
   <data name="guna2HtmlLabel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 41</value>
+    <value>114, 33</value>
   </data>
   <data name="guna2HtmlLabel7.Text" xml:space="preserve">
     <value>اليوم السادس </value>
@@ -976,25 +952,25 @@
     <value>اليوم الخامس </value>
   </data>
   <data name="guna2HtmlLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 41</value>
+    <value>99, 33</value>
   </data>
   <data name="guna2HtmlLabel4.Text" xml:space="preserve">
     <value>اليوم الرابع </value>
   </data>
   <data name="guna2HtmlLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 41</value>
+    <value>99, 33</value>
   </data>
   <data name="guna2HtmlLabel3.Text" xml:space="preserve">
     <value>اليوم الثالث </value>
   </data>
   <data name="guna2HtmlLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 41</value>
+    <value>97, 33</value>
   </data>
   <data name="guna2HtmlLabel2.Text" xml:space="preserve">
     <value>اليوم الثاني </value>
   </data>
   <data name="guna2HtmlLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 41</value>
+    <value>95, 33</value>
   </data>
   <data name="guna2HtmlLabel1.Text" xml:space="preserve">
     <value>اليوم الاول </value>
@@ -1032,6 +1008,9 @@
   <data name="label42.Text" xml:space="preserve">
     <value>التحليل البياني </value>
   </data>
+  <data name="tabPage11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
+  </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 3</value>
   </data>
@@ -1062,8 +1041,8 @@
   <data name="guna2HtmlLabel10.Text" xml:space="preserve">
     <value>بداية تحقيق الحلم </value>
   </data>
-  <data name="panel23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1325, 1020</value>
+  <data name="tabPage12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="guna2Button8.Text" xml:space="preserve">
     <value>رجوع </value>
@@ -1095,8 +1074,11 @@
   <data name="label41.Text" xml:space="preserve">
     <value>تاريخ البداية </value>
   </data>
-  <data name="panel24.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel23.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
+  </data>
+  <data name="tabPage13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="label108.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 16</value>
@@ -1152,8 +1134,11 @@
   <data name="dataGridViewTextBoxColumn78.HeaderText" xml:space="preserve">
     <value>وجبات خفيفة</value>
   </data>
-  <data name="panel40.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel24.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
+  </data>
+  <data name="tabPage14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="guna2Button10.Text" xml:space="preserve">
     <value>حفظ </value>
@@ -1188,8 +1173,11 @@
   <data name="label123.Text" xml:space="preserve">
     <value>اختر اليوم </value>
   </data>
-  <data name="panel41.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel40.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
+  </data>
+  <data name="tabPage15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="mealdgv.HeaderText" xml:space="preserve">
     <value>الوجبة  </value>
@@ -1203,8 +1191,11 @@
   <data name="guna2DataGridView24.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
   </data>
-  <data name="panel42.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel41.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>
+  </data>
+  <data name="tabPage16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>186, 32</value>
@@ -1248,8 +1239,14 @@
   <data name="label130.Text" xml:space="preserve">
     <value>الوزن 1 </value>
   </data>
-  <data name="preparereport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 1055</value>
+  <data name="panel42.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1325, 1020</value>
+  </data>
+  <data name="tabPage17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1331, 1026</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1339, 1055</value>
   </data>
   <data name="label127.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 28</value>
@@ -1259,6 +1256,9 @@
   </data>
   <data name="label127.Text" xml:space="preserve">
     <value> ....معاينة التقرير</value>
+  </data>
+  <data name="preparereport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1019, 1055</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1339, 1055</value>

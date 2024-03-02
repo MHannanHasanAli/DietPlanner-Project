@@ -118,40 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="sidebarlogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 4</value>
+  <data name="guna2TileButton16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
   </data>
-  <data name="sidebarlogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 45</value>
+  <data name="guna2TileButton16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 592</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="sidebarlogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="guna2TileButton16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>273, 66</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="sidebarlogo.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="guna2TileButton16.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
-  <data name="&gt;&gt;sidebarlogo.Name" xml:space="preserve">
-    <value>sidebarlogo</value>
+  <data name="&gt;&gt;guna2TileButton16.Name" xml:space="preserve">
+    <value>guna2TileButton16</value>
   </data>
-  <data name="&gt;&gt;sidebarlogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;guna2TileButton16.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;sidebarlogo.Parent" xml:space="preserve">
+  <data name="&gt;&gt;guna2TileButton16.Parent" xml:space="preserve">
     <value>sidebar</value>
   </data>
-  <data name="&gt;&gt;sidebarlogo.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;guna2TileButton16.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="guna2TileButton20.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 798</value>
+    <value>0, 810</value>
   </data>
   <data name="guna2TileButton20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 67</value>
+    <value>95, 59</value>
   </data>
   <data name="guna2TileButton20.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -168,110 +167,42 @@
   <data name="&gt;&gt;guna2TileButton20.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="guna2TileButton19.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="sidebarlogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="guna2TileButton19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 1773</value>
+  <data name="sidebarlogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 12</value>
   </data>
-  <data name="guna2TileButton19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>273, 133</value>
+  <data name="sidebarlogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 43</value>
   </data>
-  <data name="guna2TileButton19.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="sidebarlogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
-  <data name="&gt;&gt;guna2TileButton19.Name" xml:space="preserve">
-    <value>guna2TileButton19</value>
+  <data name="sidebarlogo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;guna2TileButton19.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="&gt;&gt;sidebarlogo.Name" xml:space="preserve">
+    <value>sidebarlogo</value>
   </data>
-  <data name="&gt;&gt;guna2TileButton19.Parent" xml:space="preserve">
+  <data name="&gt;&gt;sidebarlogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sidebarlogo.Parent" xml:space="preserve">
     <value>sidebar</value>
   </data>
-  <data name="&gt;&gt;guna2TileButton19.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;sidebarlogo.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="guna2TileButton18.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="guna2TileButton18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 736</value>
-  </data>
-  <data name="guna2TileButton18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 56</value>
-  </data>
-  <data name="guna2TileButton18.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton18.Name" xml:space="preserve">
-    <value>guna2TileButton18</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton18.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton18.Parent" xml:space="preserve">
-    <value>sidebar</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton18.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="guna2TileButton17.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="guna2TileButton17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 657</value>
-  </data>
-  <data name="guna2TileButton17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 64</value>
-  </data>
-  <data name="guna2TileButton17.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton17.Name" xml:space="preserve">
-    <value>guna2TileButton17</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton17.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton17.Parent" xml:space="preserve">
-    <value>sidebar</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton17.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="guna2TileButton16.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt</value>
-  </data>
-  <data name="guna2TileButton16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 586</value>
-  </data>
-  <data name="guna2TileButton16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 54</value>
-  </data>
-  <data name="guna2TileButton16.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton16.Name" xml:space="preserve">
-    <value>guna2TileButton16</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton16.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton16.Parent" xml:space="preserve">
-    <value>sidebar</value>
-  </data>
-  <data name="&gt;&gt;guna2TileButton16.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="guna2TileButton15.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 515</value>
+    <value>0, 526</value>
   </data>
   <data name="guna2TileButton15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 65</value>
+    <value>260, 60</value>
   </data>
   <data name="guna2TileButton15.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -286,16 +217,64 @@
     <value>sidebar</value>
   </data>
   <data name="&gt;&gt;guna2TileButton15.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
+  </data>
+  <data name="guna2TileButton19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="guna2TileButton19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 6764</value>
+  </data>
+  <data name="guna2TileButton19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1041, 508</value>
+  </data>
+  <data name="guna2TileButton19.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton19.Name" xml:space="preserve">
+    <value>guna2TileButton19</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton19.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton19.Parent" xml:space="preserve">
+    <value>sidebar</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton19.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="guna2TileButton17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="guna2TileButton17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 665</value>
+  </data>
+  <data name="guna2TileButton17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 73</value>
+  </data>
+  <data name="guna2TileButton17.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton17.Name" xml:space="preserve">
+    <value>guna2TileButton17</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton17.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton17.Parent" xml:space="preserve">
+    <value>sidebar</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton17.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="guna2TileButton14.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 448</value>
+    <value>3, 445</value>
   </data>
   <data name="guna2TileButton14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 61</value>
+    <value>264, 75</value>
   </data>
   <data name="guna2TileButton14.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -310,16 +289,40 @@
     <value>sidebar</value>
   </data>
   <data name="&gt;&gt;guna2TileButton14.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="guna2TileButton18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="guna2TileButton18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 744</value>
+  </data>
+  <data name="guna2TileButton18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 60</value>
+  </data>
+  <data name="guna2TileButton18.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton18.Name" xml:space="preserve">
+    <value>guna2TileButton18</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton18.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TileButton, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton18.Parent" xml:space="preserve">
+    <value>sidebar</value>
+  </data>
+  <data name="&gt;&gt;guna2TileButton18.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="guna2TileButton13.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 380</value>
+    <value>3, 387</value>
   </data>
   <data name="guna2TileButton13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 62</value>
+    <value>248, 61</value>
   </data>
   <data name="guna2TileButton13.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -340,10 +343,10 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 26700</value>
+    <value>0, 40959</value>
   </data>
   <data name="guna2TileButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2713, 2523</value>
+    <value>10350, 9626</value>
   </data>
   <data name="guna2TileButton1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -364,10 +367,10 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 19239</value>
+    <value>0, 40959</value>
   </data>
   <data name="guna2TileButton11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2713, 2523</value>
+    <value>10350, 9626</value>
   </data>
   <data name="guna2TileButton11.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -388,10 +391,10 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 312</value>
+    <value>3, 313</value>
   </data>
   <data name="guna2TileButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 62</value>
+    <value>361, 84</value>
   </data>
   <data name="guna2TileButton2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -412,10 +415,10 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 243</value>
+    <value>0, 262</value>
   </data>
   <data name="guna2TileButton8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 63</value>
+    <value>310, 49</value>
   </data>
   <data name="guna2TileButton8.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -436,10 +439,10 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 179</value>
+    <value>3, 187</value>
   </data>
   <data name="guna2TileButton12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 58</value>
+    <value>338, 69</value>
   </data>
   <data name="guna2TileButton12.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -460,10 +463,10 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 131</value>
+    <value>3, 143</value>
   </data>
   <data name="guna2TileButton6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 55</value>
+    <value>369, 64</value>
   </data>
   <data name="guna2TileButton6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -487,10 +490,10 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="guna2TileButton9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 55</value>
+    <value>3, 61</value>
   </data>
   <data name="guna2TileButton9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 55</value>
+    <value>283, 61</value>
   </data>
   <data name="guna2TileButton9.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>

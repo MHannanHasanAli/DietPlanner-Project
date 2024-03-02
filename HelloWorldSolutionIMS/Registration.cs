@@ -1488,7 +1488,7 @@ namespace HelloWorldSolutionIMS
         }
         private void dob_ValueChanged(object sender, EventArgs e)
         {
-            DateTime selectedDate = dob.Value;
+            DateTime selectedDate = dob.Value.Date;
             DateTime currentDate = DateTime.Today;
 
             // Check if the selected date is in the future
@@ -1507,6 +1507,7 @@ namespace HelloWorldSolutionIMS
 
             // Use the 'years' variable as needed, for instance, displaying it in a label
             age.Text = years.ToString();
+
         }
         private void age_KeyPress(object sender, KeyPressEventArgs e)
         {

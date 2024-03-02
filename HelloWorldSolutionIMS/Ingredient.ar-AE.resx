@@ -117,6 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="NewIngredient.Text" xml:space="preserve">
+    <value>مكون جديد</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 254</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>فئة المكونات</value>
+  </data>
   <data name="export.Text" xml:space="preserve">
     <value>تصدير المكونات </value>
   </data>
@@ -165,7 +175,6 @@
   <data name="carbohydratedgv.HeaderText" xml:space="preserve">
     <value>كاربوهيدرات</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 24</value>
   </data>
@@ -278,10 +287,10 @@
     <value>5, 212</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 24</value>
+    <value>103, 30</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
-    <value>التصنيف</value>
+    <value>وحدة القياس</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 125</value>

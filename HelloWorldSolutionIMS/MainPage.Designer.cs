@@ -30,14 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.sidebar = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.sidebarlogo = new System.Windows.Forms.PictureBox();
-            this.guna2TileButton20 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton19 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton18 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2TileButton17 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.mainpanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TileButton16 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2TileButton20 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.sidebarlogo = new System.Windows.Forms.PictureBox();
             this.guna2TileButton15 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2TileButton19 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2TileButton17 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton14 = new Guna.UI2.WinForms.Guna2TileButton();
+            this.guna2TileButton18 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton13 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton11 = new Guna.UI2.WinForms.Guna2TileButton();
@@ -46,7 +47,6 @@
             this.guna2TileButton12 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton6 = new Guna.UI2.WinForms.Guna2TileButton();
             this.guna2TileButton9 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.mainpanel = new Guna.UI2.WinForms.Guna2Panel();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sidebarlogo)).BeginInit();
             this.SuspendLayout();
@@ -54,14 +54,14 @@
             // sidebar
             // 
             this.sidebar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.sidebar.Controls.Add(this.sidebarlogo);
-            this.sidebar.Controls.Add(this.guna2TileButton20);
-            this.sidebar.Controls.Add(this.guna2TileButton19);
-            this.sidebar.Controls.Add(this.guna2TileButton18);
-            this.sidebar.Controls.Add(this.guna2TileButton17);
             this.sidebar.Controls.Add(this.guna2TileButton16);
+            this.sidebar.Controls.Add(this.guna2TileButton20);
+            this.sidebar.Controls.Add(this.sidebarlogo);
             this.sidebar.Controls.Add(this.guna2TileButton15);
+            this.sidebar.Controls.Add(this.guna2TileButton19);
+            this.sidebar.Controls.Add(this.guna2TileButton17);
             this.sidebar.Controls.Add(this.guna2TileButton14);
+            this.sidebar.Controls.Add(this.guna2TileButton18);
             this.sidebar.Controls.Add(this.guna2TileButton13);
             this.sidebar.Controls.Add(this.guna2TileButton1);
             this.sidebar.Controls.Add(this.guna2TileButton11);
@@ -77,11 +77,33 @@
             this.sidebar.Name = "sidebar";
             this.sidebar.ShadowDecoration.Parent = this.sidebar;
             // 
-            // sidebarlogo
+            // mainpanel
             // 
-            resources.ApplyResources(this.sidebarlogo, "sidebarlogo");
-            this.sidebarlogo.Name = "sidebarlogo";
-            this.sidebarlogo.TabStop = false;
+            resources.ApplyResources(this.mainpanel, "mainpanel");
+            this.mainpanel.FillColor = System.Drawing.Color.Honeydew;
+            this.mainpanel.ForeColor = System.Drawing.Color.Black;
+            this.mainpanel.Name = "mainpanel";
+            this.mainpanel.ShadowDecoration.Parent = this.mainpanel;
+            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
+            // 
+            // guna2TileButton16
+            // 
+            this.guna2TileButton16.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TileButton16.CheckedState.Parent = this.guna2TileButton16;
+            this.guna2TileButton16.CustomImages.Parent = this.guna2TileButton16;
+            this.guna2TileButton16.FillColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2TileButton16, "guna2TileButton16");
+            this.guna2TileButton16.ForeColor = System.Drawing.Color.Black;
+            this.guna2TileButton16.HoverState.Parent = this.guna2TileButton16;
+            this.guna2TileButton16.Image = global::HelloWorldSolutionIMS.Properties.Resources.Asset_5;
+            this.guna2TileButton16.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2TileButton16.ImageOffset = new System.Drawing.Point(1, 0);
+            this.guna2TileButton16.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2TileButton16.Name = "guna2TileButton16";
+            this.guna2TileButton16.ShadowDecoration.Parent = this.guna2TileButton16;
+            this.guna2TileButton16.TextOffset = new System.Drawing.Point(0, -15);
+            this.guna2TileButton16.Click += new System.EventHandler(this.guna2TileButton11_Click);
+            this.guna2TileButton16.MouseHover += new System.EventHandler(this.guna2TileButton11_MouseHover);
             // 
             // guna2TileButton20
             // 
@@ -102,80 +124,11 @@
             this.guna2TileButton20.Click += new System.EventHandler(this.guna2TileButton1_Click);
             this.guna2TileButton20.MouseHover += new System.EventHandler(this.guna2TileButton1_MouseHover);
             // 
-            // guna2TileButton19
+            // sidebarlogo
             // 
-            this.guna2TileButton19.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TileButton19.CheckedState.Parent = this.guna2TileButton19;
-            this.guna2TileButton19.CustomImages.Parent = this.guna2TileButton19;
-            this.guna2TileButton19.FillColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2TileButton19, "guna2TileButton19");
-            this.guna2TileButton19.ForeColor = System.Drawing.Color.Black;
-            this.guna2TileButton19.HoverState.Parent = this.guna2TileButton19;
-            this.guna2TileButton19.Image = global::HelloWorldSolutionIMS.Properties.Resources.settings__1_;
-            this.guna2TileButton19.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton19.ImageOffset = new System.Drawing.Point(5, 10);
-            this.guna2TileButton19.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2TileButton19.Name = "guna2TileButton19";
-            this.guna2TileButton19.ShadowDecoration.Parent = this.guna2TileButton19;
-            this.guna2TileButton19.TextOffset = new System.Drawing.Point(0, -15);
-            this.guna2TileButton19.Click += new System.EventHandler(this.guna2TileButton1_Click);
-            // 
-            // guna2TileButton18
-            // 
-            this.guna2TileButton18.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TileButton18.CheckedState.Parent = this.guna2TileButton18;
-            this.guna2TileButton18.CustomImages.Parent = this.guna2TileButton18;
-            this.guna2TileButton18.FillColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2TileButton18, "guna2TileButton18");
-            this.guna2TileButton18.ForeColor = System.Drawing.Color.Black;
-            this.guna2TileButton18.HoverState.Parent = this.guna2TileButton18;
-            this.guna2TileButton18.Image = global::HelloWorldSolutionIMS.Properties.Resources.deal;
-            this.guna2TileButton18.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton18.ImageOffset = new System.Drawing.Point(1, 0);
-            this.guna2TileButton18.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2TileButton18.Name = "guna2TileButton18";
-            this.guna2TileButton18.ShadowDecoration.Parent = this.guna2TileButton18;
-            this.guna2TileButton18.TextOffset = new System.Drawing.Point(0, -15);
-            this.guna2TileButton18.Click += new System.EventHandler(this.guna2TileButton10_Click);
-            this.guna2TileButton18.MouseHover += new System.EventHandler(this.guna2TileButton10_MouseHover);
-            // 
-            // guna2TileButton17
-            // 
-            this.guna2TileButton17.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TileButton17.CheckedState.Parent = this.guna2TileButton17;
-            this.guna2TileButton17.CustomImages.Parent = this.guna2TileButton17;
-            this.guna2TileButton17.FillColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2TileButton17, "guna2TileButton17");
-            this.guna2TileButton17.ForeColor = System.Drawing.Color.Black;
-            this.guna2TileButton17.HoverState.Parent = this.guna2TileButton17;
-            this.guna2TileButton17.Image = global::HelloWorldSolutionIMS.Properties.Resources.math;
-            this.guna2TileButton17.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton17.ImageOffset = new System.Drawing.Point(1, 0);
-            this.guna2TileButton17.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2TileButton17.Name = "guna2TileButton17";
-            this.guna2TileButton17.ShadowDecoration.Parent = this.guna2TileButton17;
-            this.guna2TileButton17.TextOffset = new System.Drawing.Point(0, -15);
-            this.guna2TileButton17.Click += new System.EventHandler(this.guna2TileButton5_Click);
-            this.guna2TileButton17.MouseHover += new System.EventHandler(this.guna2TileButton5_MouseHover);
-            // 
-            // guna2TileButton16
-            // 
-            this.guna2TileButton16.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TileButton16.CheckedState.Parent = this.guna2TileButton16;
-            this.guna2TileButton16.CustomImages.Parent = this.guna2TileButton16;
-            this.guna2TileButton16.FillColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.guna2TileButton16, "guna2TileButton16");
-            this.guna2TileButton16.ForeColor = System.Drawing.Color.Black;
-            this.guna2TileButton16.HoverState.Parent = this.guna2TileButton16;
-            this.guna2TileButton16.Image = global::HelloWorldSolutionIMS.Properties.Resources.wallet;
-            this.guna2TileButton16.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2TileButton16.ImageOffset = new System.Drawing.Point(1, 0);
-            this.guna2TileButton16.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2TileButton16.Name = "guna2TileButton16";
-            this.guna2TileButton16.ShadowDecoration.Parent = this.guna2TileButton16;
-            this.guna2TileButton16.TextOffset = new System.Drawing.Point(0, -15);
-            this.guna2TileButton16.Click += new System.EventHandler(this.guna2TileButton11_Click);
-            this.guna2TileButton16.MouseHover += new System.EventHandler(this.guna2TileButton11_MouseHover);
+            resources.ApplyResources(this.sidebarlogo, "sidebarlogo");
+            this.sidebarlogo.Name = "sidebarlogo";
+            this.sidebarlogo.TabStop = false;
             // 
             // guna2TileButton15
             // 
@@ -196,6 +149,43 @@
             this.guna2TileButton15.Click += new System.EventHandler(this.guna2TileButton7_Click);
             this.guna2TileButton15.MouseHover += new System.EventHandler(this.guna2TileButton7_MouseHover);
             // 
+            // guna2TileButton19
+            // 
+            this.guna2TileButton19.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TileButton19.CheckedState.Parent = this.guna2TileButton19;
+            this.guna2TileButton19.CustomImages.Parent = this.guna2TileButton19;
+            this.guna2TileButton19.FillColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2TileButton19, "guna2TileButton19");
+            this.guna2TileButton19.ForeColor = System.Drawing.Color.Black;
+            this.guna2TileButton19.HoverState.Parent = this.guna2TileButton19;
+            this.guna2TileButton19.Image = global::HelloWorldSolutionIMS.Properties.Resources.settings__1_;
+            this.guna2TileButton19.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2TileButton19.ImageOffset = new System.Drawing.Point(5, 10);
+            this.guna2TileButton19.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2TileButton19.Name = "guna2TileButton19";
+            this.guna2TileButton19.ShadowDecoration.Parent = this.guna2TileButton19;
+            this.guna2TileButton19.TextOffset = new System.Drawing.Point(0, -15);
+            this.guna2TileButton19.Click += new System.EventHandler(this.guna2TileButton1_Click);
+            // 
+            // guna2TileButton17
+            // 
+            this.guna2TileButton17.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TileButton17.CheckedState.Parent = this.guna2TileButton17;
+            this.guna2TileButton17.CustomImages.Parent = this.guna2TileButton17;
+            this.guna2TileButton17.FillColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2TileButton17, "guna2TileButton17");
+            this.guna2TileButton17.ForeColor = System.Drawing.Color.Black;
+            this.guna2TileButton17.HoverState.Parent = this.guna2TileButton17;
+            this.guna2TileButton17.Image = global::HelloWorldSolutionIMS.Properties.Resources.Asset_2;
+            this.guna2TileButton17.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2TileButton17.ImageOffset = new System.Drawing.Point(1, 0);
+            this.guna2TileButton17.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2TileButton17.Name = "guna2TileButton17";
+            this.guna2TileButton17.ShadowDecoration.Parent = this.guna2TileButton17;
+            this.guna2TileButton17.TextOffset = new System.Drawing.Point(0, -15);
+            this.guna2TileButton17.Click += new System.EventHandler(this.guna2TileButton5_Click);
+            this.guna2TileButton17.MouseHover += new System.EventHandler(this.guna2TileButton5_MouseHover);
+            // 
             // guna2TileButton14
             // 
             this.guna2TileButton14.BackColor = System.Drawing.Color.Transparent;
@@ -215,6 +205,25 @@
             this.guna2TileButton14.Click += new System.EventHandler(this.guna2TileButton3_Click);
             this.guna2TileButton14.MouseHover += new System.EventHandler(this.guna2TileButton3_MouseHover);
             // 
+            // guna2TileButton18
+            // 
+            this.guna2TileButton18.BackColor = System.Drawing.Color.Transparent;
+            this.guna2TileButton18.CheckedState.Parent = this.guna2TileButton18;
+            this.guna2TileButton18.CustomImages.Parent = this.guna2TileButton18;
+            this.guna2TileButton18.FillColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2TileButton18, "guna2TileButton18");
+            this.guna2TileButton18.ForeColor = System.Drawing.Color.Black;
+            this.guna2TileButton18.HoverState.Parent = this.guna2TileButton18;
+            this.guna2TileButton18.Image = global::HelloWorldSolutionIMS.Properties.Resources.deal;
+            this.guna2TileButton18.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2TileButton18.ImageOffset = new System.Drawing.Point(1, 0);
+            this.guna2TileButton18.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2TileButton18.Name = "guna2TileButton18";
+            this.guna2TileButton18.ShadowDecoration.Parent = this.guna2TileButton18;
+            this.guna2TileButton18.TextOffset = new System.Drawing.Point(0, -15);
+            this.guna2TileButton18.Click += new System.EventHandler(this.guna2TileButton10_Click);
+            this.guna2TileButton18.MouseHover += new System.EventHandler(this.guna2TileButton10_MouseHover);
+            // 
             // guna2TileButton13
             // 
             this.guna2TileButton13.BackColor = System.Drawing.Color.Transparent;
@@ -224,7 +233,7 @@
             resources.ApplyResources(this.guna2TileButton13, "guna2TileButton13");
             this.guna2TileButton13.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton13.HoverState.Parent = this.guna2TileButton13;
-            this.guna2TileButton13.Image = global::HelloWorldSolutionIMS.Properties.Resources.drop_counter;
+            this.guna2TileButton13.Image = global::HelloWorldSolutionIMS.Properties.Resources.Asset_8;
             this.guna2TileButton13.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2TileButton13.ImageOffset = new System.Drawing.Point(1, 0);
             this.guna2TileButton13.ImageSize = new System.Drawing.Size(30, 30);
@@ -299,7 +308,7 @@
             resources.ApplyResources(this.guna2TileButton8, "guna2TileButton8");
             this.guna2TileButton8.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton8.HoverState.Parent = this.guna2TileButton8;
-            this.guna2TileButton8.Image = global::HelloWorldSolutionIMS.Properties.Resources.healthy_food3;
+            this.guna2TileButton8.Image = global::HelloWorldSolutionIMS.Properties.Resources.Asset_3;
             this.guna2TileButton8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2TileButton8.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton8.Name = "guna2TileButton8";
@@ -317,7 +326,7 @@
             resources.ApplyResources(this.guna2TileButton12, "guna2TileButton12");
             this.guna2TileButton12.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton12.HoverState.Parent = this.guna2TileButton12;
-            this.guna2TileButton12.Image = global::HelloWorldSolutionIMS.Properties.Resources.diet__3_;
+            this.guna2TileButton12.Image = global::HelloWorldSolutionIMS.Properties.Resources.Asset_4;
             this.guna2TileButton12.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2TileButton12.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2TileButton12.Name = "guna2TileButton12";
@@ -335,7 +344,7 @@
             resources.ApplyResources(this.guna2TileButton6, "guna2TileButton6");
             this.guna2TileButton6.ForeColor = System.Drawing.Color.Black;
             this.guna2TileButton6.HoverState.Parent = this.guna2TileButton6;
-            this.guna2TileButton6.Image = global::HelloWorldSolutionIMS.Properties.Resources.calendar;
+            this.guna2TileButton6.Image = global::HelloWorldSolutionIMS.Properties.Resources.Asset_6;
             this.guna2TileButton6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2TileButton6.ImageOffset = new System.Drawing.Point(0, 5);
             this.guna2TileButton6.ImageSize = new System.Drawing.Size(30, 30);
@@ -362,15 +371,6 @@
             this.guna2TileButton9.TextOffset = new System.Drawing.Point(0, -15);
             this.guna2TileButton9.Click += new System.EventHandler(this.guna2TileButton9_Click);
             this.guna2TileButton9.MouseHover += new System.EventHandler(this.guna2TileButton9_MouseHover);
-            // 
-            // mainpanel
-            // 
-            resources.ApplyResources(this.mainpanel, "mainpanel");
-            this.mainpanel.FillColor = System.Drawing.Color.Honeydew;
-            this.mainpanel.ForeColor = System.Drawing.Color.Black;
-            this.mainpanel.Name = "mainpanel";
-            this.mainpanel.ShadowDecoration.Parent = this.mainpanel;
-            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
             // MainPage
             // 
