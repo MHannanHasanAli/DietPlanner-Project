@@ -1247,6 +1247,8 @@ namespace HelloWorldSolutionIMS
 
 
         }
+
+        static Color supercolor = Color.Red;
         private void MealAction_Load(object sender, EventArgs e)
         {
             titlecheck = 0;
@@ -1609,7 +1611,7 @@ namespace HelloWorldSolutionIMS
 
                     // Create Color object from the read components
                     Color color = Color.FromArgb(red, green, blue);
-
+                    supercolor = color;
                     guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
                     guna2DataGridView2.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
                     guna2DataGridView3.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
@@ -2096,9 +2098,19 @@ namespace HelloWorldSolutionIMS
             {
                 DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
                 buttonColumn.Name = "RemoveColumn";
-                buttonColumn.HeaderText = "Action";
+                if (languagestatus == 0)
+                {
+                    buttonColumn.HeaderText = "Action";
+                }
+                else
+                {
+                    buttonColumn.HeaderText = "حذف";
+                }
+
                 buttonColumn.Text = "X";
                 buttonColumn.UseColumnTextForButtonValue = true;
+                buttonColumn.DefaultCellStyle.BackColor = supercolor;
+
                 guna2DataGridView1.Columns.Add(buttonColumn);
                 removeflag = 1;
 
@@ -4572,7 +4584,7 @@ namespace HelloWorldSolutionIMS
                         string notes;
                         if (worksheet.Cells[row, 23].Value == null)
                         {
-                            notes = "Nothing";
+                            notes = " ";
                         }
                         else
                         {
@@ -4582,7 +4594,7 @@ namespace HelloWorldSolutionIMS
 
                         if (worksheet.Cells[row, 24].Value == null)
                         {
-                            preparation = "Nothing";
+                            preparation = " ";
                         }
                         else
                         {

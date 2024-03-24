@@ -809,6 +809,7 @@ namespace HelloWorldSolutionIMS
 
         }
 
+        static Color SuperColor = Color.Red;
         private void DietPlan_Load(object sender, EventArgs e)
         {
             IngredientFiller();
@@ -1251,6 +1252,29 @@ namespace HelloWorldSolutionIMS
                     }
                 }
 
+                foreach (Control control in panel24.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel24.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
                 foreach (Control control in panel23.Controls)
                 {
                     // Get the current location of the control
@@ -1297,6 +1321,29 @@ namespace HelloWorldSolutionIMS
                     }
                 }
 
+                foreach (Control control in panel41.Controls)
+                {
+                    // Get the current location of the control
+                    var currentLoc = control.Location;
+
+                    // Calculate the mirrored location
+                    var mirroredLoc = new Point(panel41.Width - currentLoc.X - control.Width, currentLoc.Y);
+
+                    // Set the mirrored location to the control
+                    control.Location = mirroredLoc;
+
+                    // Check if the control is a TextBox and set RightToLeft to true
+                    if (control is Guna2TextBox textBox)
+                    {
+                        textBox.RightToLeft = RightToLeft.Yes;
+                    }
+
+                    if (control is Guna2DataGridView tabel)
+                    {
+                        tabel.RightToLeft = RightToLeft.Yes;
+                    }
+                }
+
                 foreach (Control control in panel42.Controls)
                 {
                     // Get the current location of the control
@@ -1320,11 +1367,6 @@ namespace HelloWorldSolutionIMS
                     }
                 }
             }
-            TableLayoutFill();
-            tabControl1.SelectedIndex = 5;
-            ingredientflag = 0;
-            calculationflag = 0;
-
             try
             {
                 MainClass.con.Open();
@@ -1340,7 +1382,7 @@ namespace HelloWorldSolutionIMS
 
                     // Create Color object from the read components
                     Color color = Color.FromArgb(red, green, blue);
-
+                    SuperColor = color;
                     guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
                     guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
                     guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionBackColor = color;
@@ -1363,6 +1405,12 @@ namespace HelloWorldSolutionIMS
                 MessageBox.Show(ex.Message);
 
             }
+            TableLayoutFill();
+            tabControl1.SelectedIndex = 5;
+            ingredientflag = 0;
+            calculationflag = 0;
+
+
 
             reporttablefiller = 0;
         }
@@ -5083,99 +5131,99 @@ namespace HelloWorldSolutionIMS
         {
             guna2DataGridView24.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView24.GridColor = Color.Black;
-            guna2DataGridView24.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView24.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView24.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView24.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView24.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView21.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView21.GridColor = Color.Black;
-            guna2DataGridView21.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView21.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView21.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView21.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView21.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView22.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView22.GridColor = Color.Black;
-            guna2DataGridView22.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView22.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView22.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView22.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView22.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView11.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView11.GridColor = Color.Black;
-            guna2DataGridView11.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView11.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView11.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView11.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView11.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView10.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView10.GridColor = Color.Black;
-            guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView10.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView10.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView10.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView9.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView9.GridColor = Color.Black;
-            guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView9.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView9.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView9.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView8.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView8.GridColor = Color.Black;
-            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView8.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView8.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView8.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView7.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView7.GridColor = Color.Black;
-            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView1.GridColor = Color.Black;
-            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView1.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView12.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView12.GridColor = Color.Black;
-            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView12.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView12.RowTemplate.DefaultCellStyle.ForeColor;
 
             guna2DataGridView13.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView13.GridColor = Color.Black;
-            guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView13.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView13.RowTemplate.DefaultCellStyle.ForeColor;
             guna2DataGridView13.Columns[5].Width = 20;
 
             guna2DataGridView15.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView15.GridColor = Color.Black;
-            guna2DataGridView15.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView15.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView15.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView15.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView15.RowTemplate.DefaultCellStyle.ForeColor;
             guna2DataGridView15.Columns[5].Width = 20;
 
             guna2DataGridView16.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView16.GridColor = Color.Black;
-            guna2DataGridView16.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView16.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView16.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView16.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView16.RowTemplate.DefaultCellStyle.ForeColor;
             guna2DataGridView16.Columns[5].Width = 20;
 
             guna2DataGridView17.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView17.GridColor = Color.Black;
-            guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView17.RowTemplate.DefaultCellStyle.ForeColor;
             guna2DataGridView17.Columns[5].Width = 20;
 
             guna2DataGridView18.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView18.GridColor = Color.Black;
-            guna2DataGridView18.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView18.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView18.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView18.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView18.RowTemplate.DefaultCellStyle.ForeColor;
             guna2DataGridView18.Columns[5].Width = 20;
 
             guna2DataGridView19.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView19.GridColor = Color.Black;
-            guna2DataGridView19.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView19.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView19.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView19.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView19.RowTemplate.DefaultCellStyle.ForeColor;
             guna2DataGridView19.Columns[5].Width = 20;
 
             guna2DataGridView20.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView20.GridColor = Color.Black;
-            guna2DataGridView20.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView20.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView20.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView20.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView20.RowTemplate.DefaultCellStyle.ForeColor;
             guna2DataGridView20.Columns[5].Width = 20;
 
             guna2DataGridView7.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             guna2DataGridView7.GridColor = Color.Black;
-            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.BackColor;
+            guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
             guna2DataGridView7.RowTemplate.DefaultCellStyle.SelectionForeColor = guna2DataGridView7.RowTemplate.DefaultCellStyle.ForeColor;
 
             while (guna2DataGridView13.Rows.Count < 5)
@@ -5232,6 +5280,19 @@ namespace HelloWorldSolutionIMS
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
+
+
+            guna2DataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
+            guna2DataGridView12.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
+            guna2DataGridView13.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
+            guna2DataGridView15.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
+            guna2DataGridView16.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
+            guna2DataGridView17.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
+            guna2DataGridView18.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
+            guna2DataGridView19.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
+            guna2DataGridView20.RowTemplate.DefaultCellStyle.SelectionBackColor = SuperColor;
+
+
             tabControl1.SelectedIndex = 8;
         }
 
@@ -6821,20 +6882,10 @@ namespace HelloWorldSolutionIMS
                         XBrush brush = new XSolidBrush(XColor.FromKnownColor(XKnownColor.Green));
                         XRect rect = new XRect(xCoordinate, topSpacing, scaledWidth, 20);
 
-                        if (languagestatus == 1)
-                        {
-                            gfx.DrawString("الحمية الغذائية", font, brush, rect, XStringFormats.TopLeft);
-
-                        }
-                        else
-                        {
-                            gfx.DrawString("Diet Plan", font, brush, rect, XStringFormats.TopLeft);
-
-                        }
 
 
                         // Increment topSpacing to leave space for the text
-                        topSpacing += 20;
+                        topSpacing += 1;
                     }
 
                     if (currentPanel == panel41)
@@ -6846,19 +6897,8 @@ namespace HelloWorldSolutionIMS
                         XFont font = new XFont("Arial", 14, XFontStyle.Bold);
                         XBrush brush = new XSolidBrush(XColor.FromKnownColor(XKnownColor.Green));
                         XRect rect = new XRect(xCoordinate, topSpacing, scaledWidth, 20);
-                        if (languagestatus == 1)
-                        {
-                            gfx.DrawString("ملاحظات وطريقة التحضير", font, brush, rect, XStringFormats.TopLeft);
 
-                        }
-                        else
-                        {
-                            gfx.DrawString("Notes And Preparation", font, brush, rect, XStringFormats.TopLeft);
-
-                        }
-
-                        // Increment topSpacing to leave space for the text
-                        topSpacing += 20;
+                        topSpacing += 1;
                     }
 
                     // Draw the scaled image onto the PDF page with adjusted coordinates
@@ -7677,45 +7717,91 @@ namespace HelloWorldSolutionIMS
             {
 
                 int lastRowIndex = guna2DataGridView24.RowCount;
-                try
+                if (languagestatus == 0)
                 {
-                    MainClass.con.Open();
-                    // Adjust the SQL query based on your database schema
-                    SqlCommand cmd = new SqlCommand("SELECT MealEn,Notes, Preparation FROM Meal WHERE ID = @MealID", MainClass.con);
-                    cmd.Parameters.AddWithValue("@MealID", item.ID);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    if (reader.Read())
+                    try
                     {
-                        string mealname = reader["MealEn"].ToString();
-                        string notes = reader["Notes"].ToString();
-                        string preparation = reader["Preparation"].ToString();
+                        MainClass.con.Open();
+                        // Adjust the SQL query based on your database schema
+                        SqlCommand cmd = new SqlCommand("SELECT MealEn,Notes, Preparation FROM Meal WHERE ID = @MealID", MainClass.con);
+                        cmd.Parameters.AddWithValue("@MealID", item.ID);
 
-                        if (notes != "" || preparation != "")
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
                         {
-                            if (notes != "Nothing" || preparation != "Nothing")
+                            string mealname = reader["MealEn"].ToString();
+                            string notes = reader["Notes"].ToString();
+                            string preparation = reader["Preparation"].ToString();
+
+                            if (notes != "" || preparation != "")
                             {
-                                int rowIndex = guna2DataGridView24.Rows.Add(); // Add a new row
-                                guna2DataGridView24.Rows[lastRowIndex].Cells[0].Value = mealname;
-                                guna2DataGridView24.Rows[lastRowIndex].Cells[1].Value = notes;
-                                guna2DataGridView24.Rows[lastRowIndex].Cells[2].Value = preparation;
+                                if (notes != " " || preparation != " ")
+                                {
+                                    int rowIndex = guna2DataGridView24.Rows.Add(); // Add a new row
+                                    guna2DataGridView24.Rows[lastRowIndex].Cells[0].Value = mealname;
+                                    guna2DataGridView24.Rows[lastRowIndex].Cells[1].Value = notes;
+                                    guna2DataGridView24.Rows[lastRowIndex].Cells[2].Value = preparation;
+                                }
                             }
+
+
                         }
 
-
+                        reader.Close();
                     }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        MainClass.con.Close();
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        MainClass.con.Open();
+                        // Adjust the SQL query based on your database schema
+                        SqlCommand cmd = new SqlCommand("SELECT MealAr,Notes, Preparation FROM Meal WHERE ID = @MealID", MainClass.con);
+                        cmd.Parameters.AddWithValue("@MealID", item.ID);
 
-                    reader.Close();
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            string mealname = reader["MealAr"].ToString();
+                            string notes = reader["Notes"].ToString();
+                            string preparation = reader["Preparation"].ToString();
+
+                            if (notes != "" || preparation != "")
+                            {
+                                if (notes != " " || preparation != " ")
+                                {
+                                    int rowIndex = guna2DataGridView24.Rows.Add(); // Add a new row
+                                    guna2DataGridView24.Rows[lastRowIndex].Cells[0].Value = mealname;
+                                    guna2DataGridView24.Rows[lastRowIndex].Cells[1].Value = notes;
+                                    guna2DataGridView24.Rows[lastRowIndex].Cells[2].Value = preparation;
+                                }
+                            }
+
+
+                        }
+
+                        reader.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        MainClass.con.Close();
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    MainClass.con.Close();
-                }
+
 
             }
         }
@@ -9650,7 +9736,18 @@ namespace HelloWorldSolutionIMS
 
         private void goalend_ValueChanged(object sender, EventArgs e)
         {
+            // Get the selected date
+            DateTime selectedDate = goalend.Value;
 
+            // Get the current date
+            DateTime currentDate = DateTime.Today;
+
+            // Check if the selected date is in the past
+            if (selectedDate < currentDate)
+            {
+                // If selected date is in the past, reset it to the current date
+                goalend.Value = currentDate;
+            }
         }
 
         private void goalstart_ValueChanged(object sender, EventArgs e)
@@ -10057,7 +10154,35 @@ namespace HelloWorldSolutionIMS
             }
         }
 
+        private void label2_Click_1(object sender, EventArgs e)
+        {
 
+        }
+
+        private void panel6_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel17_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

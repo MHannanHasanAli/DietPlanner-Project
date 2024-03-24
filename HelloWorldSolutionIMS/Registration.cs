@@ -503,8 +503,10 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@FirstName", firstname.Text);
                         cmd.Parameters.AddWithValue("@FamilyName", familyname.Text);
                         cmd.Parameters.AddWithValue("@Gender", gender.Text);
+                        cmd.Parameters.AddWithValue("@Age", age.Text);
                         cmd.Parameters.AddWithValue("@DOB", Convert.ToDateTime(dob.Value));
                         cmd.Parameters.AddWithValue("@Landline", landline.Text);
+                        cmd.Parameters.AddWithValue("@MobileNo", mobileno.Text);
                         cmd.Parameters.AddWithValue("@Email", email.Text);
                         cmd.Parameters.AddWithValue("@SubscriptionStatus", subscriptionstatus.Text);
                         cmd.Parameters.AddWithValue("@SubscriptionStartDate", Convert.ToDateTime(startdate.Value)); // Assuming dateTimePickerSubscriptionStart is used to select the subscription start date.
@@ -4605,7 +4607,7 @@ JOIN
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             EditBTN.PerformClick();
-            edit = 0;
+            edit = 1;
         }
 
         private void fileno_KeyPress_1(object sender, KeyPressEventArgs e)

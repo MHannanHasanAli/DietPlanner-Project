@@ -1690,7 +1690,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9415BD78E7880769653361CB88717156"
+        "OwnerKey" = "8:_2A6B3DFFDCC34D4EB89402AC26FFFDA2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1703,12 +1703,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_8FE2B782F55D4C13B0BDFFF8C53BF8FE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2A6B3DFFDCC34D4EB89402AC26FFFDA2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2165,6 +2159,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A39FA189AEE66644741BD3C18EDB3EAE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9415BD78E7880769653361CB88717156"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -6541,7 +6541,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:HelloWorldSolutionIMS.resources, Version=1.0.15.0, Culture=ar-SA, PublicKeyToken=1332f772169d20ff, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:HelloWorldSolutionIMS.resources, Version=1.0.16.0, Culture=ar-SA, PublicKeyToken=1332f772169d20ff, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_8FE2B782F55D4C13B0BDFFF8C53BF8FE"
@@ -8122,7 +8122,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:HelloWorldSolutionIMS.resources, Version=1.0.15.0, Culture=ar-AE, PublicKeyToken=1332f772169d20ff, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:HelloWorldSolutionIMS.resources, Version=1.0.16.0, Culture=ar-AE, PublicKeyToken=1332f772169d20ff, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_DE1543E3ACE348DD863E7420EF642810"
@@ -8858,15 +8858,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DietPlan_Setup"
-        "ProductCode" = "8:{3A7886FF-9C42-4791-B484-838FD86D5BB4}"
-        "PackageCode" = "8:{B42049C9-B9AC-41F5-8388-926AEB307DB0}"
+        "ProductCode" = "8:{F7AD86AE-5B6E-426B-AC38-69D0BA62DF50}"
+        "PackageCode" = "8:{33192B15-CCBD-43E3-8B38-FC9E1099F243}"
         "UpgradeCode" = "8:{EC46ACA8-938A-4917-BA7D-4E4DBA630496}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.16"
+        "ProductVersion" = "8:1.0.17"
         "Manufacturer" = "8:Hannan"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
