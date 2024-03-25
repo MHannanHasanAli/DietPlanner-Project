@@ -521,7 +521,6 @@
             this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.label114 = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
             this.label108 = new System.Windows.Forms.Label();
             this.panel38 = new System.Windows.Forms.Panel();
             this.label121 = new System.Windows.Forms.Label();
@@ -529,16 +528,12 @@
             this.panel37 = new System.Windows.Forms.Panel();
             this.label120 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel26 = new System.Windows.Forms.Panel();
             this.label109 = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
             this.label110 = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
             this.label111 = new System.Windows.Forms.Label();
             this.panel35 = new System.Windows.Forms.Panel();
             this.label118 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel29 = new System.Windows.Forms.Panel();
             this.label112 = new System.Windows.Forms.Label();
             this.panel34 = new System.Windows.Forms.Panel();
             this.label117 = new System.Windows.Forms.Label();
@@ -632,6 +627,11 @@
             this.input1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.preparereport = new System.Windows.Forms.Panel();
             this.label127 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -707,14 +707,9 @@
             this.panel33.SuspendLayout();
             this.panel39.SuspendLayout();
             this.panel31.SuspendLayout();
-            this.panel25.SuspendLayout();
             this.panel38.SuspendLayout();
             this.panel37.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel28.SuspendLayout();
             this.panel35.SuspendLayout();
-            this.panel29.SuspendLayout();
             this.panel34.SuspendLayout();
             this.panel30.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView21)).BeginInit();
@@ -734,6 +729,11 @@
             this.tabPage17.SuspendLayout();
             this.panel42.SuspendLayout();
             this.preparereport.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel25.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -5388,19 +5388,19 @@
             // 
             resources.ApplyResources(this.panel24, "panel24");
             this.panel24.BackColor = System.Drawing.Color.White;
+            this.panel24.Controls.Add(this.panel25);
+            this.panel24.Controls.Add(this.panel26);
+            this.panel24.Controls.Add(this.panel27);
+            this.panel24.Controls.Add(this.panel28);
+            this.panel24.Controls.Add(this.panel7);
             this.panel24.Controls.Add(this.guna2HtmlLabel25);
             this.panel24.Controls.Add(this.panel36);
             this.panel24.Controls.Add(this.panel33);
             this.panel24.Controls.Add(this.panel39);
             this.panel24.Controls.Add(this.panel31);
-            this.panel24.Controls.Add(this.panel25);
             this.panel24.Controls.Add(this.panel38);
             this.panel24.Controls.Add(this.panel37);
-            this.panel24.Controls.Add(this.panel26);
-            this.panel24.Controls.Add(this.panel27);
-            this.panel24.Controls.Add(this.panel28);
             this.panel24.Controls.Add(this.panel35);
-            this.panel24.Controls.Add(this.panel29);
             this.panel24.Controls.Add(this.panel34);
             this.panel24.Controls.Add(this.panel30);
             this.panel24.Controls.Add(this.guna2DataGridView21);
@@ -5509,15 +5509,6 @@
             this.label114.Name = "label114";
             this.label114.Click += new System.EventHandler(this.label114_Click);
             // 
-            // panel25
-            // 
-            resources.ApplyResources(this.panel25, "panel25");
-            this.panel25.BackColor = System.Drawing.Color.Silver;
-            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel25.Controls.Add(this.label108);
-            this.panel25.Name = "panel25";
-            this.panel25.Paint += new System.Windows.Forms.PaintEventHandler(this.panel25_Paint);
-            // 
             // label108
             // 
             resources.ApplyResources(this.label108, "label108");
@@ -5573,15 +5564,6 @@
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
             this.guna2HtmlLabel22.Click += new System.EventHandler(this.guna2HtmlLabel22_Click);
             // 
-            // panel26
-            // 
-            resources.ApplyResources(this.panel26, "panel26");
-            this.panel26.BackColor = System.Drawing.Color.Silver;
-            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel26.Controls.Add(this.label109);
-            this.panel26.Name = "panel26";
-            this.panel26.Paint += new System.Windows.Forms.PaintEventHandler(this.panel26_Paint);
-            // 
             // label109
             // 
             resources.ApplyResources(this.label109, "label109");
@@ -5589,30 +5571,12 @@
             this.label109.Name = "label109";
             this.label109.Click += new System.EventHandler(this.label109_Click);
             // 
-            // panel27
-            // 
-            resources.ApplyResources(this.panel27, "panel27");
-            this.panel27.BackColor = System.Drawing.Color.Silver;
-            this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel27.Controls.Add(this.label110);
-            this.panel27.Name = "panel27";
-            this.panel27.Paint += new System.Windows.Forms.PaintEventHandler(this.panel27_Paint);
-            // 
             // label110
             // 
             resources.ApplyResources(this.label110, "label110");
             this.label110.ForeColor = System.Drawing.Color.Black;
             this.label110.Name = "label110";
             this.label110.Click += new System.EventHandler(this.label110_Click);
-            // 
-            // panel28
-            // 
-            resources.ApplyResources(this.panel28, "panel28");
-            this.panel28.BackColor = System.Drawing.Color.Silver;
-            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel28.Controls.Add(this.label111);
-            this.panel28.Name = "panel28";
-            this.panel28.Paint += new System.Windows.Forms.PaintEventHandler(this.panel28_Paint);
             // 
             // label111
             // 
@@ -5644,15 +5608,6 @@
             this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
             this.guna2HtmlLabel20.Click += new System.EventHandler(this.guna2HtmlLabel20_Click);
-            // 
-            // panel29
-            // 
-            resources.ApplyResources(this.panel29, "panel29");
-            this.panel29.BackColor = System.Drawing.Color.Silver;
-            this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel29.Controls.Add(this.label112);
-            this.panel29.Name = "panel29";
-            this.panel29.Paint += new System.Windows.Forms.PaintEventHandler(this.panel29_Paint);
             // 
             // label112
             // 
@@ -7152,6 +7107,46 @@
             this.label127.Name = "label127";
             this.label127.Click += new System.EventHandler(this.label127_Click);
             // 
+            // panel7
+            // 
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.BackColor = System.Drawing.Color.Silver;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label112);
+            this.panel7.Name = "panel7";
+            // 
+            // panel28
+            // 
+            resources.ApplyResources(this.panel28, "panel28");
+            this.panel28.BackColor = System.Drawing.Color.Silver;
+            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel28.Controls.Add(this.label111);
+            this.panel28.Name = "panel28";
+            // 
+            // panel27
+            // 
+            resources.ApplyResources(this.panel27, "panel27");
+            this.panel27.BackColor = System.Drawing.Color.Silver;
+            this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel27.Controls.Add(this.label110);
+            this.panel27.Name = "panel27";
+            // 
+            // panel26
+            // 
+            resources.ApplyResources(this.panel26, "panel26");
+            this.panel26.BackColor = System.Drawing.Color.Silver;
+            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel26.Controls.Add(this.label109);
+            this.panel26.Name = "panel26";
+            // 
+            // panel25
+            // 
+            resources.ApplyResources(this.panel25, "panel25");
+            this.panel25.BackColor = System.Drawing.Color.Silver;
+            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel25.Controls.Add(this.label108);
+            this.panel25.Name = "panel25";
+            // 
             // DietPlan
             // 
             resources.ApplyResources(this, "$this");
@@ -7261,22 +7256,12 @@
             this.panel39.PerformLayout();
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
             this.panel37.ResumeLayout(false);
             this.panel37.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
             this.panel30.ResumeLayout(false);
@@ -7303,6 +7288,16 @@
             this.panel42.PerformLayout();
             this.preparereport.ResumeLayout(false);
             this.preparereport.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -7655,19 +7650,14 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel achievedvalue;
         private System.Windows.Forms.TabPage tabPage14;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label label108;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView7;
-        private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label109;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView8;
-        private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label110;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView9;
-        private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Label label111;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView10;
-        private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Label label112;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Label label113;
@@ -7792,5 +7782,10 @@
         private System.Windows.Forms.Panel panel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel25;
     }
 }

@@ -117,18 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="iodine.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;label15.Name" xml:space="preserve">
     <value>label15</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label33.Location" type="System.Drawing.Point, System.Drawing">
     <value>447, 13</value>
   </data>
+  <data name="groupen.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
   <data name="&gt;&gt;guna2DataGridView1.ZOrder" xml:space="preserve">
     <value>20</value>
+  </data>
+  <data name="agn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 29</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="importall.TabIndex" type="System.Int32, mscorlib">
@@ -170,15 +176,17 @@
   <data name="dgn.Location" type="System.Drawing.Point, System.Drawing">
     <value>414, 163</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="categorybox.Items3" xml:space="preserve">
+    <value>FNDDS</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="label26.Text" xml:space="preserve">
     <value>Name (AR)</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Magnesium</value>
   </data>
   <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
     <value>tabControl1</value>
@@ -207,23 +215,30 @@
   <data name="label3.Text" xml:space="preserve">
     <value>Group (AR)</value>
   </data>
+  <data name="classification.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
   <data name="label26.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="phosphor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 29</value>
   </data>
   <data name="calloriesdgv.HeaderText" xml:space="preserve">
     <value>KCAL</value>
   </data>
+  <data name="calories.TabIndex" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Ingredient (EN)</value>
+  </data>
+  <data name="importfndds.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 29</value>
   </data>
   <data name="&gt;&gt;fatsdgv.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -234,17 +249,14 @@
   <data name="&gt;&gt;label33.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="&gt;&gt;ingredientar.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="label21.TabIndex" type="System.Int32, mscorlib">
     <value>155</value>
   </data>
-  <data name="categorybox.ItemHeight" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="agnar.TabIndex" type="System.Int32, mscorlib">
-    <value>268</value>
+  <data name="EditBTN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>466, 480</value>
   </data>
   <data name="&gt;&gt;label7.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -260,9 +272,6 @@
   </data>
   <data name="importfndds.TabIndex" type="System.Int32, mscorlib">
     <value>175</value>
-  </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1242, 846</value>
@@ -285,9 +294,6 @@
   <data name="importsr.Text" xml:space="preserve">
     <value>SR legacy</value>
   </data>
-  <data name="&gt;&gt;CLoseDGN.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="classificationdgv.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -306,8 +312,8 @@
   <data name="guna2DataGridView3.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>27</value>
   </data>
-  <data name="export.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 33</value>
+  <data name="&gt;&gt;agnen.Parent" xml:space="preserve">
+    <value>panel5</value>
   </data>
   <data name="NewIngredient.Location" type="System.Drawing.Point, System.Drawing">
     <value>419, 242</value>
@@ -315,8 +321,8 @@
   <data name="export.Location" type="System.Drawing.Point, System.Drawing">
     <value>414, 203</value>
   </data>
-  <data name="&gt;&gt;label31.Name" xml:space="preserve">
-    <value>label31</value>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>140</value>
   </data>
   <data name="&gt;&gt;protein.Name" xml:space="preserve">
     <value>protein</value>
@@ -333,8 +339,8 @@
   <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupen.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 36</value>
   </data>
   <data name="&gt;&gt;categorybox.Name" xml:space="preserve">
     <value>categorybox</value>
@@ -375,8 +381,8 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;idgn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;potassium.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="label31.TabIndex" type="System.Int32, mscorlib">
     <value>274</value>
@@ -426,8 +432,8 @@
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
     <value>874, 403</value>
   </data>
-  <data name="carbohydrates.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;label32.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="magnesium.Location" type="System.Drawing.Point, System.Drawing">
     <value>991, 316</value>
@@ -438,8 +444,8 @@
   <data name="label19.Text" xml:space="preserve">
     <value>Phosphorous</value>
   </data>
-  <data name="classification.Items" xml:space="preserve">
-    <value>Per 100 gram</value>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
   </data>
   <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
@@ -468,17 +474,17 @@
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
+  <data name="bbox.TabIndex" type="System.Int32, mscorlib">
+    <value>161</value>
+  </data>
   <data name="ingredienten.TabIndex" type="System.Int32, mscorlib">
     <value>125</value>
   </data>
   <data name="importall.Location" type="System.Drawing.Point, System.Drawing">
     <value>652, 40</value>
   </data>
-  <data name="&gt;&gt;ImportButton.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="label29.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1242, 846</value>
   </data>
   <data name="&gt;&gt;label18.Name" xml:space="preserve">
     <value>label18</value>
@@ -492,8 +498,8 @@
   <data name="carbohydrates.Location" type="System.Drawing.Point, System.Drawing">
     <value>451, 357</value>
   </data>
-  <data name="potassium.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="label29.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 24</value>
@@ -552,8 +558,8 @@
   <data name="&gt;&gt;EditBTN.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;fats.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="categorybox.Items5" xml:space="preserve">
+    <value>Local</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>138, 24</value>
@@ -582,8 +588,8 @@
   <data name="&gt;&gt;groupen.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="label30.TabIndex" type="System.Int32, mscorlib">
-    <value>272</value>
+  <data name="sodiumdgv.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;label12.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -606,9 +612,6 @@
   <data name="iodine.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 29</value>
   </data>
-  <data name="guna2DataGridView3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;label30.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -620,9 +623,6 @@
   </data>
   <data name="water.TabIndex" type="System.Int32, mscorlib">
     <value>142</value>
-  </data>
-  <data name="&gt;&gt;agnar.Parent" xml:space="preserve">
-    <value>panel5</value>
   </data>
   <data name="&gt;&gt;label21.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -642,8 +642,8 @@
   <data name="&gt;&gt;calciumdgv.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;importlocal.Name" xml:space="preserve">
+    <value>importlocal</value>
   </data>
   <data name="&gt;&gt;label17.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -720,20 +720,20 @@
   <data name="&gt;&gt;label12.Name" xml:space="preserve">
     <value>label12</value>
   </data>
-  <data name="New.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Ingredient (AR)*</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>133</value>
   </data>
   <data name="&gt;&gt;CLoseDGN.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="calories.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 29</value>
-  </data>
-  <data name="CLoseDGN.Text" xml:space="preserve">
-    <value>Close</value>
   </data>
   <data name="&gt;&gt;label19.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -750,8 +750,8 @@
   <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
   </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>Water</value>
+  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;magnesium.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -765,17 +765,17 @@
   <data name="ImportButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 45</value>
   </data>
-  <data name="&gt;&gt;CLoseDGN.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="idgn.HeaderText" xml:space="preserve">
+    <value>ID</value>
   </data>
-  <data name="sodiumdgv.HeaderText" xml:space="preserve">
-    <value>SODIUM</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 403</value>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="proteindgv.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 212</value>
   </data>
   <data name="label31.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold, Underline</value>
@@ -785,6 +785,9 @@
   </data>
   <data name="&gt;&gt;abox.ZOrder" xml:space="preserve">
     <value>41</value>
+  </data>
+  <data name="categorybox.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
     <value>617, 442</value>
@@ -873,26 +876,17 @@
   <data name="label17.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
   </data>
-  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="New.Location" type="System.Drawing.Point, System.Drawing">
     <value>51, 480</value>
   </data>
   <data name="&gt;&gt;water.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;label32.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="magnesium.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 24</value>
   </data>
   <data name="&gt;&gt;water.Name" xml:space="preserve">
     <value>water</value>
-  </data>
-  <data name="&gt;&gt;label16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="calories.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 316</value>
@@ -915,8 +909,11 @@
   <data name="importff.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="label29.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
+  <data name="fats.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 29</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>tabPage3</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -942,11 +939,8 @@
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;fatsdgv.Name" xml:space="preserve">
-    <value>fatsdgv</value>
-  </data>
-  <data name="groupar.ItemHeight" type="System.Int32, mscorlib">
-    <value>30</value>
+  <data name="&gt;&gt;fats.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>38</value>
@@ -972,20 +966,17 @@
   <data name="&gt;&gt;phosphor.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
-  <data name="EditBTN.Location" type="System.Drawing.Point, System.Drawing">
-    <value>466, 480</value>
+  <data name="agnen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>826, 191</value>
   </data>
   <data name="&gt;&gt;DeleteBTN.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="&gt;&gt;importbranded.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
   </data>
-  <data name="calories.TabIndex" type="System.Int32, mscorlib">
-    <value>134</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 24</value>
+  <data name="&gt;&gt;categorybox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="fatsdgv.HeaderText" xml:space="preserve">
     <value>FATS</value>
@@ -1035,11 +1026,8 @@
   <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
   </data>
-  <data name="phosphor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>451, 442</value>
-  </data>
-  <data name="&gt;&gt;label20.Name" xml:space="preserve">
-    <value>label20</value>
+  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="importlocal.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1047,11 +1035,8 @@
   <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
   </data>
-  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label33.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1059,14 +1044,11 @@
   <data name="&gt;&gt;calories.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;gnnen.Name" xml:space="preserve">
-    <value>gnnen</value>
+  <data name="categorybox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 251</value>
   </data>
   <data name="&gt;&gt;iron.Parent" xml:space="preserve">
     <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;importsr.ZOrder" xml:space="preserve">
-    <value>12</value>
   </data>
   <data name="agnen.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 44</value>
@@ -1104,20 +1086,14 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>269</value>
-  </data>
-  <data name="&gt;&gt;agnar.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="agnen.TabIndex" type="System.Int32, mscorlib">
-    <value>269</value>
-  </data>
   <data name="SaveGroupn.Location" type="System.Drawing.Point, System.Drawing">
     <value>926, 280</value>
   </data>
-  <data name="NewIngredient.Text" xml:space="preserve">
-    <value>New Ingredient</value>
+  <data name="CLoseDGN.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 357</value>
   </data>
   <data name="&gt;&gt;importsr.Name" xml:space="preserve">
     <value>importsr</value>
@@ -1134,23 +1110,20 @@
   <data name="guna2DataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 547</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="agnar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 191</value>
+  </data>
+  <data name="&gt;&gt;ImportButton.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 24</value>
   </data>
   <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
     <value>31</value>
-  </data>
-  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="label31.Text" xml:space="preserve">
     <value>ADD GROUP</value>
@@ -1160,9 +1133,6 @@
   </data>
   <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 24</value>
-  </data>
-  <data name="&gt;&gt;carbohydratedgv.Name" xml:space="preserve">
-    <value>carbohydratedgv</value>
   </data>
   <data name="importbranded.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1185,20 +1155,17 @@
   <data name="&gt;&gt;ingredientar.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Group (EN)</value>
   </data>
-  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
-    <value>tabPage3</value>
+  <data name="&gt;&gt;importall.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="&gt;&gt;dgn.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -1224,11 +1191,11 @@
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
   </data>
-  <data name="&gt;&gt;importall.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>877, 357</value>
   </data>
-  <data name="&gt;&gt;agnen.Parent" xml:space="preserve">
-    <value>panel5</value>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="classification.TabIndex" type="System.Int32, mscorlib">
     <value>131</value>
@@ -1239,11 +1206,14 @@
   <data name="&gt;&gt;label30.Name" xml:space="preserve">
     <value>label30</value>
   </data>
+  <data name="&gt;&gt;ingredienten.ZOrder" xml:space="preserve">
+    <value>59</value>
+  </data>
   <data name="fdciddgv.HeaderText" xml:space="preserve">
     <value>FDC ID</value>
   </data>
-  <data name="&gt;&gt;ingredienten.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="&gt;&gt;gnnen.Name" xml:space="preserve">
+    <value>gnnen</value>
   </data>
   <data name="nodgv.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1257,8 +1227,8 @@
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
   </data>
-  <data name="SaveGroupn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 45</value>
+  <data name="nodgv.HeaderText" xml:space="preserve">
+    <value>NO</value>
   </data>
   <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
     <value>314, 442</value>
@@ -1293,6 +1263,9 @@
   <data name="&gt;&gt;NewIngredient.Name" xml:space="preserve">
     <value>NewIngredient</value>
   </data>
+  <data name="export.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 33</value>
+  </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>48</value>
   </data>
@@ -1301,9 +1274,6 @@
   </data>
   <data name="&gt;&gt;calloriesdgv.Name" xml:space="preserve">
     <value>calloriesdgv</value>
-  </data>
-  <data name="&gt;&gt;ingredientardgv.Name" xml:space="preserve">
-    <value>ingredientardgv</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 25</value>
@@ -1329,9 +1299,6 @@
   <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
     <value>314, 321</value>
   </data>
-  <data name="&gt;&gt;agnar.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
   <data name="&gt;&gt;export.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
@@ -1353,8 +1320,8 @@
   <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
     <value>105, 24</value>
   </data>
-  <data name="&gt;&gt;ingredienten.ZOrder" xml:space="preserve">
-    <value>59</value>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1250, 875</value>
@@ -1362,8 +1329,8 @@
   <data name="groupar.Size" type="System.Drawing.Size, System.Drawing">
     <value>229, 36</value>
   </data>
-  <data name="categorybox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
     <value>50, 202</value>
@@ -1380,11 +1347,11 @@
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="&gt;&gt;label31.Name" xml:space="preserve">
+    <value>label31</value>
   </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="water.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1392,14 +1359,8 @@
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Fats</value>
-  </data>
   <data name="&gt;&gt;ingredienten.Name" xml:space="preserve">
     <value>ingredienten</value>
-  </data>
-  <data name="classification.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -1407,14 +1368,14 @@
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
     <value>164</value>
   </data>
-  <data name="&gt;&gt;phosphor.Name" xml:space="preserve">
-    <value>phosphor</value>
-  </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
     <value>702, 202</value>
+  </data>
+  <data name="Search.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>54</value>
@@ -1431,29 +1392,26 @@
   <data name="NewIngredient.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>877, 357</value>
-  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
   </data>
-  <data name="&gt;&gt;label32.Parent" xml:space="preserve">
-    <value>panel2</value>
+  <data name="&gt;&gt;fatsdgv.Name" xml:space="preserve">
+    <value>fatsdgv</value>
   </data>
   <data name="&gt;&gt;water.ZOrder" xml:space="preserve">
     <value>44</value>
   </data>
-  <data name="&gt;&gt;fibers.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="label30.Text" xml:space="preserve">
-    <value>GROUP</value>
+  <data name="&gt;&gt;SaveGroupn.Parent" xml:space="preserve">
+    <value>panel5</value>
   </data>
   <data name="calories.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
   <data name="ingredientardgv.HeaderText" xml:space="preserve">
     <value>INGREDIENT (EN)</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="categorybox.Items4" xml:space="preserve">
     <value>Branded</value>
@@ -1464,9 +1422,6 @@
   <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
   </data>
-  <data name="&gt;&gt;SaveGroupn.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>146</value>
   </data>
@@ -1476,11 +1431,8 @@
   <data name="calciumdgv.HeaderText" xml:space="preserve">
     <value>CALCIUM</value>
   </data>
-  <data name="phosphor.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Group (EN)</value>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
   <data name="NewIngredient.TabIndex" type="System.Int32, mscorlib">
     <value>272</value>
@@ -1491,23 +1443,20 @@
   <data name="carbohydrates.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
     <value>201, 54</value>
   </data>
   <data name="&gt;&gt;fibers.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="idgn.HeaderText" xml:space="preserve">
-    <value>ID</value>
-  </data>
   <data name="&gt;&gt;DeleteBTN.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 357</value>
+  <data name="&gt;&gt;agnar.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="New.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
   </data>
   <data name="label16.Text" xml:space="preserve">
     <value>Iron</value>
@@ -1530,6 +1479,9 @@
   <data name="&gt;&gt;chart1.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
   <data name="&gt;&gt;panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1539,23 +1491,20 @@
   <data name="&gt;&gt;Deletegn.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 36</value>
-  </data>
   <data name="&gt;&gt;label9.Name" xml:space="preserve">
     <value>label9</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>128</value>
+  <data name="&gt;&gt;ingredienten.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 24</value>
   </data>
-  <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
-  </data>
-  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
-    <value>30</value>
+  <data name="categorybox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="&gt;&gt;groupen.Name" xml:space="preserve">
     <value>groupen</value>
@@ -1587,9 +1536,6 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
-  </data>
   <data name="calcium.Location" type="System.Drawing.Point, System.Drawing">
     <value>700, 398</value>
   </data>
@@ -1605,14 +1551,11 @@
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="categorybox.Items5" xml:space="preserve">
-    <value>Local</value>
+  <data name="&gt;&gt;CLoseDGN.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;sugar.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="agnen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>826, 191</value>
   </data>
   <data name="&gt;&gt;chart1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
@@ -1659,9 +1602,6 @@
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>140</value>
-  </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 24</value>
   </data>
@@ -1692,8 +1632,8 @@
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="label18.Text" xml:space="preserve">
-    <value>Magnesium</value>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="DeleteBTN.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -1706,9 +1646,6 @@
   </data>
   <data name="importall.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="agnar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
   </data>
   <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
     <value>877, 442</value>
@@ -1737,8 +1674,11 @@
   <data name="groupen.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 167</value>
   </data>
-  <data name="fats.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;agnar.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>B</value>
   </data>
   <data name="&gt;&gt;bbox.Name" xml:space="preserve">
     <value>bbox</value>
@@ -1746,14 +1686,17 @@
   <data name="label17.TabIndex" type="System.Int32, mscorlib">
     <value>163</value>
   </data>
-  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Fats</value>
   </data>
   <data name="CLoseDGN.TabIndex" type="System.Int32, mscorlib">
     <value>268</value>
   </data>
   <data name="gnnen.MinimumWidth" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="&gt;&gt;New.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1766,6 +1709,9 @@
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>1236, 840</value>
+  </data>
+  <data name="magnesium.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="&gt;&gt;agn.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1788,6 +1734,9 @@
   <data name="ImportButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>881, 480</value>
   </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;classification.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
@@ -1796,6 +1745,9 @@
   </data>
   <data name="&gt;&gt;label9.Parent" xml:space="preserve">
     <value>panel1</value>
+  </data>
+  <data name="importbranded.Location" type="System.Drawing.Point, System.Drawing">
+    <value>652, 172</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 24</value>
@@ -1833,8 +1785,11 @@
   <data name="&gt;&gt;label8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="phosphor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 29</value>
+  <data name="fats.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="DeleteBTN.TabIndex" type="System.Int32, mscorlib">
     <value>171</value>
@@ -1845,6 +1800,9 @@
   <data name="label18.TabIndex" type="System.Int32, mscorlib">
     <value>162</value>
   </data>
+  <data name="&gt;&gt;calcium.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 24</value>
   </data>
@@ -1853,6 +1811,9 @@
   </data>
   <data name="&gt;&gt;label31.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sugar.Name" xml:space="preserve">
+    <value>sugar</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1872,8 +1833,8 @@
   <data name="iodine.Location" type="System.Drawing.Point, System.Drawing">
     <value>991, 398</value>
   </data>
-  <data name="nodgv.HeaderText" xml:space="preserve">
-    <value>NO</value>
+  <data name="agnar.TabIndex" type="System.Int32, mscorlib">
+    <value>268</value>
   </data>
   <data name="agnen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1896,6 +1857,9 @@
   <data name="&gt;&gt;label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="SaveGroupn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 45</value>
+  </data>
   <data name="&gt;&gt;importbranded.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
@@ -1914,9 +1878,6 @@
   <data name="protein.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="phosphor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
-  </data>
   <data name="&gt;&gt;Closebtn.Parent" xml:space="preserve">
     <value>panel5</value>
   </data>
@@ -1925,9 +1886,6 @@
   </data>
   <data name="sodium.TabIndex" type="System.Int32, mscorlib">
     <value>152</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>tabPage3</value>
   </data>
   <data name="label32.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1950,8 +1908,8 @@
   <data name="guna2DataGridView1.TabIndex" type="System.Int32, mscorlib">
     <value>166</value>
   </data>
-  <data name="&gt;&gt;categorybox.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;agnar.Parent" xml:space="preserve">
+    <value>panel5</value>
   </data>
   <data name="&gt;&gt;fibers.Name" xml:space="preserve">
     <value>fibers</value>
@@ -1967,6 +1925,9 @@
   </data>
   <data name="iron.TabIndex" type="System.Int32, mscorlib">
     <value>159</value>
+  </data>
+  <data name="importff.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 29</value>
   </data>
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>22</value>
@@ -1992,17 +1953,14 @@
   <data name="&gt;&gt;label18.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>B</value>
+  <data name="&gt;&gt;CLoseDGN.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
   <data name="&gt;&gt;calories.ZOrder" xml:space="preserve">
     <value>52</value>
   </data>
-  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 24</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -2013,11 +1971,17 @@
   <data name="&gt;&gt;importff.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
+  <data name="&gt;&gt;SaveGroupn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 28</value>
+  </data>
   <data name="dgn.TabIndex" type="System.Int32, mscorlib">
     <value>268</value>
   </data>
-  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1250, 875</value>
@@ -2028,17 +1992,11 @@
   <data name="ImportButton.Text" xml:space="preserve">
     <value>Import Ingredient</value>
   </data>
-  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1242, 846</value>
-  </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>58</value>
   </data>
   <data name="bbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 6, 5, 6</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
   </data>
   <data name="&gt;&gt;fats.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -2049,14 +2007,14 @@
   <data name="&gt;&gt;fats.ZOrder" xml:space="preserve">
     <value>51</value>
   </data>
-  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="Deletegn.Text" xml:space="preserve">
+    <value>Delete</value>
   </data>
   <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
     <value>tabPage2</value>
   </data>
-  <data name="sodiumdgv.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
   <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -2067,14 +2025,11 @@
   <data name="ingredientar.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 46</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
   <data name="abox.TabIndex" type="System.Int32, mscorlib">
     <value>145</value>
   </data>
-  <data name="&gt;&gt;gnnen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>30</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2100,10 +2055,13 @@
   <data name="sugar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 6, 5, 6</value>
   </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
   <data name="label14.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
@@ -2115,8 +2073,8 @@
   <data name="&gt;&gt;importff.Name" xml:space="preserve">
     <value>importff</value>
   </data>
-  <data name="&gt;&gt;potassium.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="importsr.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 29</value>
@@ -2127,8 +2085,14 @@
   <data name="&gt;&gt;phosphor.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="label13.TabIndex" type="System.Int32, mscorlib">
-    <value>270</value>
+  <data name="&gt;&gt;importsr.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;fibers.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
   </data>
   <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
     <value>260, 36</value>
@@ -2142,11 +2106,11 @@
   <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="classification.ItemHeight" type="System.Int32, mscorlib">
+  <data name="groupar.ItemHeight" type="System.Int32, mscorlib">
     <value>30</value>
   </data>
-  <data name="classification.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 36</value>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 403</value>
   </data>
   <data name="fibersdgv.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2160,8 +2124,8 @@
   <data name="abox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="&gt;&gt;potassium.ZOrder" xml:space="preserve">
-    <value>49</value>
+  <data name="&gt;&gt;idgn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;NewIngredient.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -2175,8 +2139,8 @@
   <data name="&gt;&gt;calcium.Name" xml:space="preserve">
     <value>calcium</value>
   </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 212</value>
+  <data name="&gt;&gt;potassium.ZOrder" xml:space="preserve">
+    <value>49</value>
   </data>
   <data name="sodium.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2190,32 +2154,38 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>47</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Kcal</value>
+  <data name="sugar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>700, 357</value>
   </data>
-  <data name="&gt;&gt;calcium.ZOrder" xml:space="preserve">
-    <value>42</value>
+  <data name="&gt;&gt;ingredientar.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="Deletegn.TabIndex" type="System.Int32, mscorlib">
-    <value>265</value>
+  <data name="phosphor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="classification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 36</value>
   </data>
   <data name="&gt;&gt;label33.Name" xml:space="preserve">
     <value>label33</value>
   </data>
-  <data name="Search.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;groupen.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;label26.Parent" xml:space="preserve">
     <value>panel5</value>
   </data>
-  <data name="importfndds.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 29</value>
+  <data name="potassium.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="guna2DataGridView3.Size" type="System.Drawing.Size, System.Drawing">
     <value>1072, 400</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>133</value>
+  <data name="&gt;&gt;DeleteBTN.Name" xml:space="preserve">
+    <value>DeleteBTN</value>
+  </data>
+  <data name="classification.Items" xml:space="preserve">
+    <value>Per 100 gram</value>
   </data>
   <data name="&gt;&gt;calcium.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
@@ -2232,23 +2202,26 @@
   <data name="label26.TabIndex" type="System.Int32, mscorlib">
     <value>270</value>
   </data>
-  <data name="&gt;&gt;sugar.Name" xml:space="preserve">
-    <value>sugar</value>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
   </data>
   <data name="&gt;&gt;iron.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <data name="Deletegn.Text" xml:space="preserve">
-    <value>Delete</value>
+  <data name="sodiumdgv.HeaderText" xml:space="preserve">
+    <value>SODIUM</value>
   </data>
   <data name="&gt;&gt;magnesium.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <data name="agnar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 191</value>
+  <data name="iodine.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
   </data>
-  <data name="sugar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>700, 357</value>
+  <data name="carbohydrates.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="agnen.TabIndex" type="System.Int32, mscorlib">
+    <value>269</value>
   </data>
   <data name="potassium.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2261,6 +2234,9 @@
   </data>
   <data name="&gt;&gt;fibers.ZOrder" xml:space="preserve">
     <value>50</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Water</value>
   </data>
   <data name="&gt;&gt;Closebtn.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -2283,11 +2259,11 @@
   <data name="iron.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>269</value>
   </data>
-  <data name="agn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 29</value>
+  <data name="&gt;&gt;ingredientardgv.Name" xml:space="preserve">
+    <value>ingredientardgv</value>
   </data>
   <data name="&gt;&gt;label13.Name" xml:space="preserve">
     <value>label13</value>
@@ -2295,11 +2271,20 @@
   <data name="&gt;&gt;label6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ingredienten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 29</value>
+  </data>
+  <data name="&gt;&gt;ImportButton.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="&gt;&gt;importfndds.Name" xml:space="preserve">
     <value>importfndds</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 24</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="classificationdgv.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2322,20 +2307,17 @@
   <data name="label32.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt, style=Bold, Underline</value>
   </data>
-  <data name="&gt;&gt;SaveGroupn.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  <data name="&gt;&gt;label32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Search.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;New.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="&gt;&gt;phosphor.Name" xml:space="preserve">
+    <value>phosphor</value>
   </data>
   <data name="ImportButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="bbox.TabIndex" type="System.Int32, mscorlib">
-    <value>161</value>
+  <data name="label29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
   </data>
   <data name="calcium.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 29</value>
@@ -2382,11 +2364,11 @@
   <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="protein.TabIndex" type="System.Int32, mscorlib">
-    <value>150</value>
+  <data name="phosphor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>451, 442</value>
   </data>
-  <data name="&gt;&gt;importlocal.Name" xml:space="preserve">
-    <value>importlocal</value>
+  <data name="&gt;&gt;gnnen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;guna2DataGridView3.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -2403,17 +2385,20 @@
   <data name="&gt;&gt;iron.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;ImportButton.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <data name="categorybox.Items3" xml:space="preserve">
-    <value>FNDDS</value>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="Deletegn.TabIndex" type="System.Int32, mscorlib">
+    <value>265</value>
   </data>
   <data name="categorybox.Items" xml:space="preserve">
     <value>All</value>
   </data>
-  <data name="ingredienten.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 29</value>
+  <data name="NewIngredient.Text" xml:space="preserve">
+    <value>New Ingredient</value>
   </data>
   <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2421,8 +2406,8 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>45</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="label30.Text" xml:space="preserve">
+    <value>GROUP</value>
   </data>
   <data name="&gt;&gt;label12.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2430,8 +2415,8 @@
   <data name="&gt;&gt;CLoseDGN.Name" xml:space="preserve">
     <value>CLoseDGN</value>
   </data>
-  <data name="categorybox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 251</value>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="sodium.Location" type="System.Drawing.Point, System.Drawing">
     <value>451, 398</value>
@@ -2445,11 +2430,17 @@
   <data name="CLoseDGN.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="importbranded.Location" type="System.Drawing.Point, System.Drawing">
-    <value>652, 172</value>
+  <data name="carbohydrates.TabIndex" type="System.Int32, mscorlib">
+    <value>151</value>
+  </data>
+  <data name="classification.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
   </data>
   <data name="Closebtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>54, 266</value>
@@ -2457,8 +2448,11 @@
   <data name="iodine.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 6, 5, 6</value>
   </data>
-  <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 28</value>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>270</value>
+  </data>
+  <data name="guna2DataGridView3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="sodiumdgv.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2472,8 +2466,8 @@
   <data name="New.Text" xml:space="preserve">
     <value>Save Ingredient</value>
   </data>
-  <data name="&gt;&gt;DeleteBTN.Name" xml:space="preserve">
-    <value>DeleteBTN</value>
+  <data name="&gt;&gt;importbranded.Parent" xml:space="preserve">
+    <value>panel1</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 24</value>
@@ -2505,8 +2499,8 @@
   <data name="label20.TabIndex" type="System.Int32, mscorlib">
     <value>156</value>
   </data>
-  <data name="fats.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 29</value>
+  <data name="&gt;&gt;Search.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
   <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -2516,6 +2510,9 @@
   </data>
   <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
     <value>314, 398</value>
+  </data>
+  <data name="protein.TabIndex" type="System.Int32, mscorlib">
+    <value>150</value>
   </data>
   <data name="&gt;&gt;fibersdgv.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2538,11 +2535,14 @@
   <data name="&gt;&gt;proteindgv.Name" xml:space="preserve">
     <value>proteindgv</value>
   </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>tabPage3</value>
+  <data name="phosphor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
   </data>
-  <data name="groupen.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10pt</value>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Kcal</value>
   </data>
   <data name="&gt;&gt;bbox.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -2556,11 +2556,11 @@
   <data name="protein.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 29</value>
   </data>
-  <data name="importff.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 29</value>
+  <data name="&gt;&gt;carbohydratedgv.Name" xml:space="preserve">
+    <value>carbohydratedgv</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="label30.TabIndex" type="System.Int32, mscorlib">
+    <value>272</value>
   </data>
   <data name="&gt;&gt;label26.Name" xml:space="preserve">
     <value>label26</value>
@@ -2592,20 +2592,17 @@
   <data name="calcium.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
-  <data name="carbohydrates.TabIndex" type="System.Int32, mscorlib">
-    <value>151</value>
+  <data name="agnar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
-  <metadata name="calciumdgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="fdciddgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="calloriesdgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ar-AE</value>
+  <metadata name="ingredientardgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="proteindgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2640,7 +2637,7 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ingredientardgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="calciumdgv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

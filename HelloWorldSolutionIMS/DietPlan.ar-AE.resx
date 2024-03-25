@@ -1083,6 +1083,90 @@
   <data name="tabPage13.Size" type="System.Drawing.Size, System.Drawing">
     <value>1331, 1026</value>
   </data>
+  <data name="label108.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-5, 70</value>
+  </data>
+  <data name="label108.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
+  </data>
+  <data name="label108.Text" xml:space="preserve">
+    <value> السابع  </value>
+  </data>
+  <data name="panel25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 1110</value>
+  </data>
+  <data name="panel25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 154</value>
+  </data>
+  <data name="panel25.TabIndex" type="System.Int32, mscorlib">
+    <value>369</value>
+  </data>
+  <data name="label109.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-8, 75</value>
+  </data>
+  <data name="label109.Text" xml:space="preserve">
+    <value> السادس </value>
+  </data>
+  <data name="panel26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 931</value>
+  </data>
+  <data name="panel26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 154</value>
+  </data>
+  <data name="panel26.TabIndex" type="System.Int32, mscorlib">
+    <value>368</value>
+  </data>
+  <data name="label110.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-4, 65</value>
+  </data>
+  <data name="label110.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 16</value>
+  </data>
+  <data name="label110.Text" xml:space="preserve">
+    <value>الخامس </value>
+  </data>
+  <data name="panel27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 753</value>
+  </data>
+  <data name="panel27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 154</value>
+  </data>
+  <data name="panel27.TabIndex" type="System.Int32, mscorlib">
+    <value>367</value>
+  </data>
+  <data name="label111.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 64</value>
+  </data>
+  <data name="label111.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 16</value>
+  </data>
+  <data name="label111.Text" xml:space="preserve">
+    <value>الرابع </value>
+  </data>
+  <data name="panel28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 575</value>
+  </data>
+  <data name="panel28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 157</value>
+  </data>
+  <data name="panel28.TabIndex" type="System.Int32, mscorlib">
+    <value>366</value>
+  </data>
+  <data name="label112.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 65</value>
+  </data>
+  <data name="label112.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 16</value>
+  </data>
+  <data name="label112.Text" xml:space="preserve">
+    <value>الثالث </value>
+  </data>
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 398</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 150</value>
+  </data>
   <data name="guna2HtmlLabel25.Location" type="System.Drawing.Point, System.Drawing">
     <value>70, 0</value>
   </data>
@@ -1092,23 +1176,29 @@
   <data name="guna2HtmlLabel25.Text" xml:space="preserve">
     <value>الحمية الغذائية</value>
   </data>
+  <data name="guna2HtmlLabel21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-2, 1</value>
+  </data>
   <data name="panel36.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 597</value>
+    <value>6, 733</value>
   </data>
   <data name="panel36.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 20</value>
   </data>
   <data name="guna2HtmlLabel18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 3</value>
+    <value>-1, 3</value>
   </data>
   <data name="panel33.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 178</value>
+    <value>6, 200</value>
   </data>
   <data name="panel33.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 26</value>
   </data>
+  <data name="guna2HtmlLabel24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 5</value>
+  </data>
   <data name="panel39.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 1021</value>
+    <value>6, 1265</value>
   </data>
   <data name="panel39.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 26</value>
@@ -1117,100 +1207,40 @@
     <value>0, 24</value>
   </data>
   <data name="panel31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 18</value>
+    <value>46, 24</value>
   </data>
-  <data name="label108.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-1, 61</value>
-  </data>
-  <data name="label108.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 16</value>
-  </data>
-  <data name="label108.Text" xml:space="preserve">
-    <value> السابع  </value>
-  </data>
-  <data name="panel25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 903</value>
-  </data>
-  <data name="panel25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 119</value>
+  <data name="guna2HtmlLabel23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-2, -2</value>
   </data>
   <data name="panel38.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 885</value>
+    <value>6, 1087</value>
   </data>
   <data name="panel38.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 20</value>
   </data>
+  <data name="guna2HtmlLabel22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 3</value>
+  </data>
   <data name="panel37.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 746</value>
+    <value>6, 907</value>
   </data>
   <data name="panel37.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 20</value>
+    <value>39, 35</value>
   </data>
-  <data name="label109.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-4, 57</value>
-  </data>
-  <data name="label109.Text" xml:space="preserve">
-    <value> السادس </value>
-  </data>
-  <data name="panel26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 764</value>
-  </data>
-  <data name="panel26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 120</value>
-  </data>
-  <data name="label110.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 61</value>
-  </data>
-  <data name="label110.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 16</value>
-  </data>
-  <data name="label110.Text" xml:space="preserve">
-    <value>الخامس </value>
-  </data>
-  <data name="panel27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 616</value>
-  </data>
-  <data name="panel27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 129</value>
-  </data>
-  <data name="label111.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 59</value>
-  </data>
-  <data name="label111.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 16</value>
-  </data>
-  <data name="label111.Text" xml:space="preserve">
-    <value>الرابع </value>
-  </data>
-  <data name="panel28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 468</value>
-  </data>
-  <data name="panel28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 130</value>
+  <data name="guna2HtmlLabel20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-3, 9</value>
   </data>
   <data name="panel35.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 452</value>
+    <value>5, 544</value>
   </data>
   <data name="panel35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 20</value>
+    <value>39, 32</value>
   </data>
-  <data name="label112.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 56</value>
-  </data>
-  <data name="label112.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 16</value>
-  </data>
-  <data name="label112.Text" xml:space="preserve">
-    <value>الثالث </value>
-  </data>
-  <data name="panel29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 333</value>
-  </data>
-  <data name="panel29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 121</value>
+  <data name="guna2HtmlLabel19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, -2</value>
   </data>
   <data name="panel34.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 314</value>
+    <value>5, 377</value>
   </data>
   <data name="panel34.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 20</value>
@@ -1225,49 +1255,49 @@
     <value>الثاني </value>
   </data>
   <data name="panel30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 211</value>
+    <value>5, 226</value>
   </data>
   <data name="panel30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 131</value>
+    <value>39, 150</value>
   </data>
   <data name="guna2DataGridView21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 218</value>
+    <value>45, 228</value>
   </data>
   <data name="guna2DataGridView21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1540, 188</value>
+    <value>1264, 184</value>
   </data>
   <data name="guna2DataGridView7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 903</value>
+    <value>45, 1116</value>
   </data>
   <data name="guna2DataGridView7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 146</value>
+    <value>1264, 184</value>
   </data>
   <data name="guna2DataGridView8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 764</value>
+    <value>45, 935</value>
   </data>
   <data name="guna2DataGridView8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 145</value>
+    <value>1264, 184</value>
   </data>
   <data name="guna2DataGridView9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 622</value>
+    <value>45, 758</value>
   </data>
   <data name="guna2DataGridView9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 144</value>
+    <value>1264, 184</value>
   </data>
   <data name="guna2DataGridView10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 477</value>
+    <value>45, 582</value>
   </data>
   <data name="guna2DataGridView10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 146</value>
+    <value>1264, 184</value>
   </data>
   <data name="guna2DataGridView11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 333</value>
+    <value>45, 398</value>
   </data>
   <data name="guna2DataGridView11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 154</value>
+    <value>1264, 186</value>
   </data>
   <data name="label115.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 60</value>
+    <value>-3, 60</value>
   </data>
   <data name="label115.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 16</value>
@@ -1276,10 +1306,10 @@
     <value> الاول </value>
   </data>
   <data name="panel32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 42</value>
+    <value>4, 48</value>
   </data>
   <data name="panel32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 142</value>
+    <value>42, 152</value>
   </data>
   <data name="dataGridViewTextBoxColumn75.HeaderText" xml:space="preserve">
     <value>الافطار </value>
@@ -1294,16 +1324,16 @@
     <value>وجبات خفيفة</value>
   </data>
   <data name="guna2DataGridView23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 24</value>
+    <value>45, 24</value>
   </data>
   <data name="guna2DataGridView23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1151, 22</value>
+    <value>1264, 28</value>
   </data>
   <data name="guna2DataGridView22.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 42</value>
+    <value>45, 51</value>
   </data>
   <data name="guna2DataGridView22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1231, 154</value>
+    <value>1264, 183</value>
   </data>
   <data name="panel24.Size" type="System.Drawing.Size, System.Drawing">
     <value>1325, 1020</value>

@@ -1198,6 +1198,7 @@ namespace HelloWorldSolutionIMS
             importfndds.Visible = false;
             importlocal.Visible = false;
             importsr.Visible = false;
+            New.Enabled = true;
             //categorylabel.Visible = true;
             //categorybox.Visible = true;
             try
@@ -1983,6 +1984,8 @@ namespace HelloWorldSolutionIMS
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             EditBTN.PerformClick();
+            edit = 0;
+            New.Enabled = false;
         }
 
         private void ingredientar_KeyPress(object sender, KeyPressEventArgs e)
@@ -1996,6 +1999,7 @@ namespace HelloWorldSolutionIMS
         private void NewIngredient_Click(object sender, EventArgs e)
         {
             edit = 0;
+            New.Enabled = true;
             ingredientar.Text = "";
             ingredienten.Text = "";
             groupar.Text = "";
