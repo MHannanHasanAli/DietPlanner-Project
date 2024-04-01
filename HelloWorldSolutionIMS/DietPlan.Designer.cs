@@ -509,6 +509,16 @@
             this.achieved = new Guna.UI2.WinForms.Guna2TextBox();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.label108 = new System.Windows.Forms.Label();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.label109 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.label110 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label111 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label112 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel36 = new System.Windows.Forms.Panel();
             this.label119 = new System.Windows.Forms.Label();
@@ -521,20 +531,15 @@
             this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.label114 = new System.Windows.Forms.Label();
-            this.label108 = new System.Windows.Forms.Label();
             this.panel38 = new System.Windows.Forms.Panel();
             this.label121 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel37 = new System.Windows.Forms.Panel();
             this.label120 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label109 = new System.Windows.Forms.Label();
-            this.label110 = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
             this.panel35 = new System.Windows.Forms.Panel();
             this.label118 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label112 = new System.Windows.Forms.Label();
             this.panel34 = new System.Windows.Forms.Panel();
             this.label117 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -627,11 +632,6 @@
             this.input1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.preparereport = new System.Windows.Forms.Panel();
             this.label127 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -703,6 +703,11 @@
             this.panel23.SuspendLayout();
             this.tabPage14.SuspendLayout();
             this.panel24.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel36.SuspendLayout();
             this.panel33.SuspendLayout();
             this.panel39.SuspendLayout();
@@ -729,11 +734,6 @@
             this.tabPage17.SuspendLayout();
             this.panel42.SuspendLayout();
             this.preparereport.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel28.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel25.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -5415,6 +5415,81 @@
             this.panel24.Name = "panel24";
             this.panel24.Paint += new System.Windows.Forms.PaintEventHandler(this.panel24_Paint);
             // 
+            // panel25
+            // 
+            resources.ApplyResources(this.panel25, "panel25");
+            this.panel25.BackColor = System.Drawing.Color.Silver;
+            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel25.Controls.Add(this.label108);
+            this.panel25.Name = "panel25";
+            // 
+            // label108
+            // 
+            resources.ApplyResources(this.label108, "label108");
+            this.label108.ForeColor = System.Drawing.Color.Black;
+            this.label108.Name = "label108";
+            this.label108.Click += new System.EventHandler(this.label108_Click);
+            // 
+            // panel26
+            // 
+            resources.ApplyResources(this.panel26, "panel26");
+            this.panel26.BackColor = System.Drawing.Color.Silver;
+            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel26.Controls.Add(this.label109);
+            this.panel26.Name = "panel26";
+            // 
+            // label109
+            // 
+            resources.ApplyResources(this.label109, "label109");
+            this.label109.ForeColor = System.Drawing.Color.Black;
+            this.label109.Name = "label109";
+            this.label109.Click += new System.EventHandler(this.label109_Click);
+            // 
+            // panel27
+            // 
+            resources.ApplyResources(this.panel27, "panel27");
+            this.panel27.BackColor = System.Drawing.Color.Silver;
+            this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel27.Controls.Add(this.label110);
+            this.panel27.Name = "panel27";
+            // 
+            // label110
+            // 
+            resources.ApplyResources(this.label110, "label110");
+            this.label110.ForeColor = System.Drawing.Color.Black;
+            this.label110.Name = "label110";
+            this.label110.Click += new System.EventHandler(this.label110_Click);
+            // 
+            // panel28
+            // 
+            resources.ApplyResources(this.panel28, "panel28");
+            this.panel28.BackColor = System.Drawing.Color.Silver;
+            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel28.Controls.Add(this.label111);
+            this.panel28.Name = "panel28";
+            // 
+            // label111
+            // 
+            resources.ApplyResources(this.label111, "label111");
+            this.label111.ForeColor = System.Drawing.Color.Black;
+            this.label111.Name = "label111";
+            this.label111.Click += new System.EventHandler(this.label111_Click);
+            // 
+            // panel7
+            // 
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.BackColor = System.Drawing.Color.Silver;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label112);
+            this.panel7.Name = "panel7";
+            // 
+            // label112
+            // 
+            resources.ApplyResources(this.label112, "label112");
+            this.label112.ForeColor = System.Drawing.Color.Black;
+            this.label112.Name = "label112";
+            this.label112.Click += new System.EventHandler(this.label112_Click);
+            // 
             // guna2HtmlLabel25
             // 
             resources.ApplyResources(this.guna2HtmlLabel25, "guna2HtmlLabel25");
@@ -5509,13 +5584,6 @@
             this.label114.Name = "label114";
             this.label114.Click += new System.EventHandler(this.label114_Click);
             // 
-            // label108
-            // 
-            resources.ApplyResources(this.label108, "label108");
-            this.label108.ForeColor = System.Drawing.Color.Black;
-            this.label108.Name = "label108";
-            this.label108.Click += new System.EventHandler(this.label108_Click);
-            // 
             // panel38
             // 
             resources.ApplyResources(this.panel38, "panel38");
@@ -5564,27 +5632,6 @@
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
             this.guna2HtmlLabel22.Click += new System.EventHandler(this.guna2HtmlLabel22_Click);
             // 
-            // label109
-            // 
-            resources.ApplyResources(this.label109, "label109");
-            this.label109.ForeColor = System.Drawing.Color.Black;
-            this.label109.Name = "label109";
-            this.label109.Click += new System.EventHandler(this.label109_Click);
-            // 
-            // label110
-            // 
-            resources.ApplyResources(this.label110, "label110");
-            this.label110.ForeColor = System.Drawing.Color.Black;
-            this.label110.Name = "label110";
-            this.label110.Click += new System.EventHandler(this.label110_Click);
-            // 
-            // label111
-            // 
-            resources.ApplyResources(this.label111, "label111");
-            this.label111.ForeColor = System.Drawing.Color.Black;
-            this.label111.Name = "label111";
-            this.label111.Click += new System.EventHandler(this.label111_Click);
-            // 
             // panel35
             // 
             resources.ApplyResources(this.panel35, "panel35");
@@ -5608,13 +5655,6 @@
             this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
             this.guna2HtmlLabel20.Click += new System.EventHandler(this.guna2HtmlLabel20_Click);
-            // 
-            // label112
-            // 
-            resources.ApplyResources(this.label112, "label112");
-            this.label112.ForeColor = System.Drawing.Color.Black;
-            this.label112.Name = "label112";
-            this.label112.Click += new System.EventHandler(this.label112_Click);
             // 
             // panel34
             // 
@@ -7107,46 +7147,6 @@
             this.label127.Name = "label127";
             this.label127.Click += new System.EventHandler(this.label127_Click);
             // 
-            // panel7
-            // 
-            resources.ApplyResources(this.panel7, "panel7");
-            this.panel7.BackColor = System.Drawing.Color.Silver;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label112);
-            this.panel7.Name = "panel7";
-            // 
-            // panel28
-            // 
-            resources.ApplyResources(this.panel28, "panel28");
-            this.panel28.BackColor = System.Drawing.Color.Silver;
-            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel28.Controls.Add(this.label111);
-            this.panel28.Name = "panel28";
-            // 
-            // panel27
-            // 
-            resources.ApplyResources(this.panel27, "panel27");
-            this.panel27.BackColor = System.Drawing.Color.Silver;
-            this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel27.Controls.Add(this.label110);
-            this.panel27.Name = "panel27";
-            // 
-            // panel26
-            // 
-            resources.ApplyResources(this.panel26, "panel26");
-            this.panel26.BackColor = System.Drawing.Color.Silver;
-            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel26.Controls.Add(this.label109);
-            this.panel26.Name = "panel26";
-            // 
-            // panel25
-            // 
-            resources.ApplyResources(this.panel25, "panel25");
-            this.panel25.BackColor = System.Drawing.Color.Silver;
-            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel25.Controls.Add(this.label108);
-            this.panel25.Name = "panel25";
-            // 
             // DietPlan
             // 
             resources.ApplyResources(this, "$this");
@@ -7248,6 +7248,16 @@
             this.tabPage14.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel36.ResumeLayout(false);
             this.panel36.PerformLayout();
             this.panel33.ResumeLayout(false);
@@ -7288,16 +7298,6 @@
             this.panel42.PerformLayout();
             this.preparereport.ResumeLayout(false);
             this.preparereport.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
             this.ResumeLayout(false);
 
         }

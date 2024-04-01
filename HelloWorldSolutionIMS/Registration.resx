@@ -117,7 +117,1365 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1153, 971</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1153, 971</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BMI_Value.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BMI_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="BMI_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BMI_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 223</value>
+  </data>
+  <data name="BMI_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 30</value>
+  </data>
+  <data name="BMI_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="BMI_Value.Text" xml:space="preserve">
+    <value>BMI</value>
+  </data>
+  <data name="&gt;&gt;BMI_Value.Name" xml:space="preserve">
+    <value>BMI_Value</value>
+  </data>
+  <data name="&gt;&gt;BMI_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BMI_Value.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;BMI_Value.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BMR_Value.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BMR_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="BMR_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BMR_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>569, 223</value>
+  </data>
+  <data name="BMR_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 24</value>
+  </data>
+  <data name="BMR_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="BMR_Value.Text" xml:space="preserve">
+    <value>BMR</value>
+  </data>
+  <data name="&gt;&gt;BMR_Value.Name" xml:space="preserve">
+    <value>BMR_Value</value>
+  </data>
+  <data name="&gt;&gt;BMR_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BMR_Value.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;BMR_Value.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="back.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="back.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 270</value>
+  </data>
+  <data name="back.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 45</value>
+  </data>
+  <data name="back.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="back.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="&gt;&gt;back.Name" xml:space="preserve">
+    <value>back</value>
+  </data>
+  <data name="&gt;&gt;back.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;back.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;back.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SaveBMI.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="SaveBMI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>933, 270</value>
+  </data>
+  <data name="SaveBMI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 45</value>
+  </data>
+  <data name="SaveBMI.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="SaveBMI.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;SaveBMI.Name" xml:space="preserve">
+    <value>SaveBMI</value>
+  </data>
+  <data name="&gt;&gt;SaveBMI.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;SaveBMI.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;SaveBMI.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label29.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>569, 173</value>
+  </data>
+  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 24</value>
+  </data>
+  <data name="label29.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>Abdominal Fats</value>
+  </data>
+  <data name="&gt;&gt;label29.Name" xml:space="preserve">
+    <value>label29</value>
+  </data>
+  <data name="&gt;&gt;label29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label30.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 223</value>
+  </data>
+  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 24</value>
+  </data>
+  <data name="label30.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>Visceral Fats</value>
+  </data>
+  <data name="&gt;&gt;label30.Name" xml:space="preserve">
+    <value>label30</value>
+  </data>
+  <data name="&gt;&gt;label30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label31.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label31.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label31.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 173</value>
+  </data>
+  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 24</value>
+  </data>
+  <data name="label31.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="label31.Text" xml:space="preserve">
+    <value>Minerals</value>
+  </data>
+  <data name="&gt;&gt;label31.Name" xml:space="preserve">
+    <value>label31</value>
+  </data>
+  <data name="&gt;&gt;label31.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label31.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="abdominalfats.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="abdominalfats.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 173</value>
+  </data>
+  <data name="abdominalfats.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="abdominalfats.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 38</value>
+  </data>
+  <data name="abdominalfats.TabIndex" type="System.Int32, mscorlib">
+    <value>94</value>
+  </data>
+  <data name="&gt;&gt;abdominalfats.Name" xml:space="preserve">
+    <value>abdominalfats</value>
+  </data>
+  <data name="&gt;&gt;abdominalfats.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;abdominalfats.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;abdominalfats.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="visceralfats.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="visceralfats.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 223</value>
+  </data>
+  <data name="visceralfats.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="visceralfats.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 38</value>
+  </data>
+  <data name="visceralfats.TabIndex" type="System.Int32, mscorlib">
+    <value>93</value>
+  </data>
+  <data name="&gt;&gt;visceralfats.Name" xml:space="preserve">
+    <value>visceralfats</value>
+  </data>
+  <data name="&gt;&gt;visceralfats.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;visceralfats.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;visceralfats.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="minerals.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="minerals.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 173</value>
+  </data>
+  <data name="minerals.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="minerals.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 38</value>
+  </data>
+  <data name="minerals.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="&gt;&gt;minerals.Name" xml:space="preserve">
+    <value>minerals</value>
+  </data>
+  <data name="&gt;&gt;minerals.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;minerals.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;minerals.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label23.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>569, 123</value>
+  </data>
+  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 24</value>
+  </data>
+  <data name="label23.TabIndex" type="System.Int32, mscorlib">
+    <value>91</value>
+  </data>
+  <data name="label23.Text" xml:space="preserve">
+    <value>Water</value>
+  </data>
+  <data name="&gt;&gt;label23.Name" xml:space="preserve">
+    <value>label23</value>
+  </data>
+  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label24.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>569, 73</value>
+  </data>
+  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 24</value>
+  </data>
+  <data name="label24.TabIndex" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>Protein</value>
+  </data>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
+  </data>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label25.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>569, 23</value>
+  </data>
+  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 24</value>
+  </data>
+  <data name="label25.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>Fats</value>
+  </data>
+  <data name="&gt;&gt;label25.Name" xml:space="preserve">
+    <value>label25</value>
+  </data>
+  <data name="&gt;&gt;label25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label26.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 123</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 24</value>
+  </data>
+  <data name="label26.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>Weight (kg)</value>
+  </data>
+  <data name="&gt;&gt;label26.Name" xml:space="preserve">
+    <value>label26</value>
+  </data>
+  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label27.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 73</value>
+  </data>
+  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 24</value>
+  </data>
+  <data name="label27.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>Height (cm)</value>
+  </data>
+  <data name="&gt;&gt;label27.Name" xml:space="preserve">
+    <value>label27</value>
+  </data>
+  <data name="&gt;&gt;label27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label27.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="label28.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt</value>
+  </data>
+  <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 23</value>
+  </data>
+  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 24</value>
+  </data>
+  <data name="label28.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>BCA</value>
+  </data>
+  <data name="&gt;&gt;label28.Name" xml:space="preserve">
+    <value>label28</value>
+  </data>
+  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="water.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="water.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 123</value>
+  </data>
+  <data name="water.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="water.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 38</value>
+  </data>
+  <data name="water.TabIndex" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="&gt;&gt;water.Name" xml:space="preserve">
+    <value>water</value>
+  </data>
+  <data name="&gt;&gt;water.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;water.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;water.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="protein.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="protein.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 73</value>
+  </data>
+  <data name="protein.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="protein.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 38</value>
+  </data>
+  <data name="protein.TabIndex" type="System.Int32, mscorlib">
+    <value>84</value>
+  </data>
+  <data name="&gt;&gt;protein.Name" xml:space="preserve">
+    <value>protein</value>
+  </data>
+  <data name="&gt;&gt;protein.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;protein.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;protein.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="fats.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="fats.Location" type="System.Drawing.Point, System.Drawing">
+    <value>728, 23</value>
+  </data>
+  <data name="fats.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="fats.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 38</value>
+  </data>
+  <data name="fats.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="&gt;&gt;fats.Name" xml:space="preserve">
+    <value>fats</value>
+  </data>
+  <data name="&gt;&gt;fats.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;fats.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;fats.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="weight.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="weight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 123</value>
+  </data>
+  <data name="weight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="weight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 38</value>
+  </data>
+  <data name="weight.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;weight.Name" xml:space="preserve">
+    <value>weight</value>
+  </data>
+  <data name="&gt;&gt;weight.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;weight.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;weight.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="height.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="height.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 73</value>
+  </data>
+  <data name="height.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="height.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 38</value>
+  </data>
+  <data name="height.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="&gt;&gt;height.Name" xml:space="preserve">
+    <value>height</value>
+  </data>
+  <data name="&gt;&gt;height.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;height.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;height.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="bca.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="bca.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 23</value>
+  </data>
+  <data name="bca.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="bca.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 38</value>
+  </data>
+  <data name="bca.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="&gt;&gt;bca.Name" xml:space="preserve">
+    <value>bca</value>
+  </data>
+  <data name="&gt;&gt;bca.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;bca.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;bca.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1147, 965</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1153, 971</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1153, 971</value>
+  </data>
+  <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
+    <value>tabPage4</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1153, 971</value>
+  </data>
+  <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabPage5.Text" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Name" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1161, 1000</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;medicalhistoryBTN.Name" xml:space="preserve">
+    <value>medicalhistoryBTN</value>
+  </data>
+  <data name="&gt;&gt;medicalhistoryBTN.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;medicalhistoryBTN.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;medicalhistoryBTN.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;bodycompositionbtn.Name" xml:space="preserve">
+    <value>bodycompositionbtn</value>
+  </data>
+  <data name="&gt;&gt;bodycompositionbtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;bodycompositionbtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;bodycompositionbtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Reset.Name" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="&gt;&gt;Reset.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;Reset.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Reset.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;AddClient.Name" xml:space="preserve">
+    <value>AddClient</value>
+  </data>
+  <data name="&gt;&gt;AddClient.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;AddClient.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;AddClient.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;nutritionistname.Name" xml:space="preserve">
+    <value>nutritionistname</value>
+  </data>
+  <data name="&gt;&gt;nutritionistname.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;nutritionistname.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;nutritionistname.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Delete.Name" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;Delete.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;Delete.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Delete.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;EditBTN.Name" xml:space="preserve">
+    <value>EditBTN</value>
+  </data>
+  <data name="&gt;&gt;EditBTN.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;EditBTN.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;EditBTN.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView1.Name" xml:space="preserve">
+    <value>guna2DataGridView1</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lastvisitdate.Name" xml:space="preserve">
+    <value>lastvisitdate</value>
+  </data>
+  <data name="&gt;&gt;lastvisitdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lastvisitdate.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;lastvisitdate.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;subscriptionstatus.Name" xml:space="preserve">
+    <value>subscriptionstatus</value>
+  </data>
+  <data name="&gt;&gt;subscriptionstatus.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;subscriptionstatus.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;subscriptionstatus.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;dob.Name" xml:space="preserve">
+    <value>dob</value>
+  </data>
+  <data name="&gt;&gt;dob.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dob.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;dob.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;gender.Name" xml:space="preserve">
+    <value>gender</value>
+  </data>
+  <data name="&gt;&gt;gender.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gender.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;gender.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;enddate.Name" xml:space="preserve">
+    <value>enddate</value>
+  </data>
+  <data name="&gt;&gt;enddate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;enddate.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;enddate.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;startdate.Name" xml:space="preserve">
+    <value>startdate</value>
+  </data>
+  <data name="&gt;&gt;startdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startdate.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;startdate.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;Search.Name" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;Search.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;Search.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Search.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;New.Name" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="&gt;&gt;New.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;New.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;New.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;branch.Name" xml:space="preserve">
+    <value>branch</value>
+  </data>
+  <data name="&gt;&gt;branch.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;branch.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;branch.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;email.Name" xml:space="preserve">
+    <value>email</value>
+  </data>
+  <data name="&gt;&gt;email.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;email.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;email.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;landline.Name" xml:space="preserve">
+    <value>landline</value>
+  </data>
+  <data name="&gt;&gt;landline.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;landline.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;landline.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;mobileno.Name" xml:space="preserve">
+    <value>mobileno</value>
+  </data>
+  <data name="&gt;&gt;mobileno.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;mobileno.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;mobileno.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;age.Name" xml:space="preserve">
+    <value>age</value>
+  </data>
+  <data name="&gt;&gt;age.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;age.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;age.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;familyname.Name" xml:space="preserve">
+    <value>familyname</value>
+  </data>
+  <data name="&gt;&gt;familyname.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;familyname.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;familyname.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;firstname.Name" xml:space="preserve">
+    <value>firstname</value>
+  </data>
+  <data name="&gt;&gt;firstname.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;firstname.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;firstname.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;fileno.Name" xml:space="preserve">
+    <value>fileno</value>
+  </data>
+  <data name="&gt;&gt;fileno.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;fileno.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;fileno.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1147, 965</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="medicalhistoryBTN.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
   </data>
@@ -127,7 +1485,6 @@
   <data name="medicalhistoryBTN.Size" type="System.Drawing.Size, System.Drawing">
     <value>214, 45</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="medicalhistoryBTN.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
   </data>
@@ -1067,7 +2424,6 @@
   <data name="branch.Location" type="System.Drawing.Point, System.Drawing">
     <value>789, 167</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="branch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 6, 5, 6</value>
   </data>
@@ -1278,55 +2634,280 @@
   <data name="&gt;&gt;fileno.ZOrder" xml:space="preserve">
     <value>38</value>
   </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;DeleteBodyComp.Name" xml:space="preserve">
+    <value>DeleteBodyComp</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="&gt;&gt;DeleteBodyComp.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1147, 965</value>
+  <data name="&gt;&gt;DeleteBodyComp.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;DeleteBodyComp.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;exportbc.Name" xml:space="preserve">
+    <value>exportbc</value>
+  </data>
+  <data name="&gt;&gt;exportbc.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;exportbc.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;exportbc.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Close.Name" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;Close.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;Close.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;Close.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;EditBMI.Name" xml:space="preserve">
+    <value>EditBMI</value>
+  </data>
+  <data name="&gt;&gt;EditBMI.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;EditBMI.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;EditBMI.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;AddBMI.Name" xml:space="preserve">
+    <value>AddBMI</value>
+  </data>
+  <data name="&gt;&gt;AddBMI.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;AddBMI.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;AddBMI.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView2.Name" xml:space="preserve">
+    <value>guna2DataGridView2</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;genderbmi.Name" xml:space="preserve">
+    <value>genderbmi</value>
+  </data>
+  <data name="&gt;&gt;genderbmi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;genderbmi.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;genderbmi.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;nutritionistbmi.Name" xml:space="preserve">
+    <value>nutritionistbmi</value>
+  </data>
+  <data name="&gt;&gt;nutritionistbmi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;nutritionistbmi.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;nutritionistbmi.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;mobilenobmi.Name" xml:space="preserve">
+    <value>mobilenobmi</value>
+  </data>
+  <data name="&gt;&gt;mobilenobmi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;mobilenobmi.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;mobilenobmi.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;agebmi.Name" xml:space="preserve">
+    <value>agebmi</value>
+  </data>
+  <data name="&gt;&gt;agebmi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;agebmi.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;agebmi.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;familynamebmi.Name" xml:space="preserve">
+    <value>familynamebmi</value>
+  </data>
+  <data name="&gt;&gt;familynamebmi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;familynamebmi.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;familynamebmi.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;firstnamebmi.Name" xml:space="preserve">
+    <value>firstnamebmi</value>
+  </data>
+  <data name="&gt;&gt;firstnamebmi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;firstnamebmi.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;firstnamebmi.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;filenobmi.Name" xml:space="preserve">
+    <value>filenobmi</value>
+  </data>
+  <data name="&gt;&gt;filenobmi.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;filenobmi.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;filenobmi.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1147, 965</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
   </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1153, 971</value>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>tabPage2</value>
   </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="DeleteBodyComp.Font" type="System.Drawing.Font, System.Drawing">
@@ -1355,6 +2936,147 @@
   </data>
   <data name="&gt;&gt;DeleteBodyComp.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;label63.Name" xml:space="preserve">
+    <value>label63</value>
+  </data>
+  <data name="&gt;&gt;label63.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label63.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label63.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label62.Name" xml:space="preserve">
+    <value>label62</value>
+  </data>
+  <data name="&gt;&gt;label62.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label62.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label62.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label61.Name" xml:space="preserve">
+    <value>label61</value>
+  </data>
+  <data name="&gt;&gt;label61.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label61.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label61.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label60.Name" xml:space="preserve">
+    <value>label60</value>
+  </data>
+  <data name="&gt;&gt;label60.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label60.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label60.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label59.Name" xml:space="preserve">
+    <value>label59</value>
+  </data>
+  <data name="&gt;&gt;label59.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label59.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label59.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label58.Name" xml:space="preserve">
+    <value>label58</value>
+  </data>
+  <data name="&gt;&gt;label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label58.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label58.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label57.Name" xml:space="preserve">
+    <value>label57</value>
+  </data>
+  <data name="&gt;&gt;label57.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label57.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label57.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label55.Name" xml:space="preserve">
+    <value>label55</value>
+  </data>
+  <data name="&gt;&gt;label55.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label55.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label55.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label56.Name" xml:space="preserve">
+    <value>label56</value>
+  </data>
+  <data name="&gt;&gt;label56.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label56.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label56.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label54.Name" xml:space="preserve">
+    <value>label54</value>
+  </data>
+  <data name="&gt;&gt;label54.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label54.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;label54.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 542</value>
+  </data>
+  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>741, 331</value>
+  </data>
+  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label63.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1661,27 +3383,6 @@
   </data>
   <data name="&gt;&gt;label54.ZOrder" xml:space="preserve">
     <value>9</value>
-  </data>
-  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 542</value>
-  </data>
-  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>741, 331</value>
-  </data>
-  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
-    <value>96</value>
-  </data>
-  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
-    <value>panel6</value>
-  </data>
-  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="exportbc.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -2355,674 +4056,461 @@
   <data name="&gt;&gt;filenobmi.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;guna2Button4.Name" xml:space="preserve">
+    <value>guna2Button4</value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1147, 965</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1153, 971</value>
-  </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="back.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="back.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 270</value>
-  </data>
-  <data name="back.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 45</value>
-  </data>
-  <data name="back.TabIndex" type="System.Int32, mscorlib">
-    <value>99</value>
-  </data>
-  <data name="back.Text" xml:space="preserve">
-    <value>Back</value>
-  </data>
-  <data name="&gt;&gt;back.Name" xml:space="preserve">
-    <value>back</value>
-  </data>
-  <data name="&gt;&gt;back.Type" xml:space="preserve">
+  <data name="&gt;&gt;guna2Button4.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;back.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;guna2Button4.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;back.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;guna2Button4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="SaveBMI.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;SaveMedicalHistory.Name" xml:space="preserve">
+    <value>SaveMedicalHistory</value>
   </data>
-  <data name="SaveBMI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>933, 270</value>
-  </data>
-  <data name="SaveBMI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 45</value>
-  </data>
-  <data name="SaveBMI.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
-  <data name="SaveBMI.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;SaveBMI.Name" xml:space="preserve">
-    <value>SaveBMI</value>
-  </data>
-  <data name="&gt;&gt;SaveBMI.Type" xml:space="preserve">
+  <data name="&gt;&gt;SaveMedicalHistory.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="&gt;&gt;SaveBMI.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;SaveMedicalHistory.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;SaveBMI.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;SaveMedicalHistory.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label29.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label46.Name" xml:space="preserve">
+    <value>label46</value>
   </data>
-  <data name="label29.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
-  </data>
-  <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>569, 173</value>
-  </data>
-  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 24</value>
-  </data>
-  <data name="label29.TabIndex" type="System.Int32, mscorlib">
-    <value>97</value>
-  </data>
-  <data name="label29.Text" xml:space="preserve">
-    <value>Abdominal Fats</value>
-  </data>
-  <data name="&gt;&gt;label29.Name" xml:space="preserve">
-    <value>label29</value>
-  </data>
-  <data name="&gt;&gt;label29.Type" xml:space="preserve">
+  <data name="&gt;&gt;label46.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;label46.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label46.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label30.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label45.Name" xml:space="preserve">
+    <value>label45</value>
   </data>
-  <data name="label30.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
-  </data>
-  <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 223</value>
-  </data>
-  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 24</value>
-  </data>
-  <data name="label30.TabIndex" type="System.Int32, mscorlib">
-    <value>96</value>
-  </data>
-  <data name="label30.Text" xml:space="preserve">
-    <value>Visceral Fats</value>
-  </data>
-  <data name="&gt;&gt;label30.Name" xml:space="preserve">
-    <value>label30</value>
-  </data>
-  <data name="&gt;&gt;label30.Type" xml:space="preserve">
+  <data name="&gt;&gt;label45.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;label45.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label45.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label31.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label44.Name" xml:space="preserve">
+    <value>label44</value>
   </data>
-  <data name="label31.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
-  </data>
-  <data name="label31.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 173</value>
-  </data>
-  <data name="label31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 24</value>
-  </data>
-  <data name="label31.TabIndex" type="System.Int32, mscorlib">
-    <value>95</value>
-  </data>
-  <data name="label31.Text" xml:space="preserve">
-    <value>Minerals</value>
-  </data>
-  <data name="&gt;&gt;label31.Name" xml:space="preserve">
-    <value>label31</value>
-  </data>
-  <data name="&gt;&gt;label31.Type" xml:space="preserve">
+  <data name="&gt;&gt;label44.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label31.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;label44.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label44.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="abdominalfats.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;label43.Name" xml:space="preserve">
+    <value>label43</value>
   </data>
-  <data name="abdominalfats.Location" type="System.Drawing.Point, System.Drawing">
-    <value>728, 173</value>
+  <data name="&gt;&gt;label43.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="abdominalfats.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;label43.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="abdominalfats.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 38</value>
-  </data>
-  <data name="abdominalfats.TabIndex" type="System.Int32, mscorlib">
-    <value>94</value>
-  </data>
-  <data name="&gt;&gt;abdominalfats.Name" xml:space="preserve">
-    <value>abdominalfats</value>
-  </data>
-  <data name="&gt;&gt;abdominalfats.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;abdominalfats.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;abdominalfats.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="visceralfats.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;label42.Name" xml:space="preserve">
+    <value>label42</value>
   </data>
-  <data name="visceralfats.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 223</value>
+  <data name="&gt;&gt;label42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="visceralfats.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;label42.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="visceralfats.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 38</value>
-  </data>
-  <data name="visceralfats.TabIndex" type="System.Int32, mscorlib">
-    <value>93</value>
-  </data>
-  <data name="&gt;&gt;visceralfats.Name" xml:space="preserve">
-    <value>visceralfats</value>
-  </data>
-  <data name="&gt;&gt;visceralfats.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;visceralfats.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;visceralfats.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="minerals.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;label41.Name" xml:space="preserve">
+    <value>label41</value>
   </data>
-  <data name="minerals.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 173</value>
+  <data name="&gt;&gt;label41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="minerals.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;label41.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="minerals.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 38</value>
-  </data>
-  <data name="minerals.TabIndex" type="System.Int32, mscorlib">
-    <value>92</value>
-  </data>
-  <data name="&gt;&gt;minerals.Name" xml:space="preserve">
-    <value>minerals</value>
-  </data>
-  <data name="&gt;&gt;minerals.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;minerals.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;minerals.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label41.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="label23.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label40.Name" xml:space="preserve">
+    <value>label40</value>
   </data>
-  <data name="label23.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
-  </data>
-  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
-    <value>569, 123</value>
-  </data>
-  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 24</value>
-  </data>
-  <data name="label23.TabIndex" type="System.Int32, mscorlib">
-    <value>91</value>
-  </data>
-  <data name="label23.Text" xml:space="preserve">
-    <value>Water</value>
-  </data>
-  <data name="&gt;&gt;label23.Name" xml:space="preserve">
-    <value>label23</value>
-  </data>
-  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+  <data name="&gt;&gt;label40.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;label40.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label40.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="label24.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label39.Name" xml:space="preserve">
+    <value>label39</value>
   </data>
-  <data name="label24.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
-  </data>
-  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>569, 73</value>
-  </data>
-  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
-  </data>
-  <data name="label24.TabIndex" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
-  <data name="label24.Text" xml:space="preserve">
-    <value>Protein</value>
-  </data>
-  <data name="&gt;&gt;label24.Name" xml:space="preserve">
-    <value>label24</value>
-  </data>
-  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+  <data name="&gt;&gt;label39.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;label39.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="label25.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label38.Name" xml:space="preserve">
+    <value>label38</value>
   </data>
-  <data name="label25.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
-  </data>
-  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>569, 23</value>
-  </data>
-  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 24</value>
-  </data>
-  <data name="label25.TabIndex" type="System.Int32, mscorlib">
-    <value>89</value>
-  </data>
-  <data name="label25.Text" xml:space="preserve">
-    <value>Fats</value>
-  </data>
-  <data name="&gt;&gt;label25.Name" xml:space="preserve">
-    <value>label25</value>
-  </data>
-  <data name="&gt;&gt;label25.Type" xml:space="preserve">
+  <data name="&gt;&gt;label38.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;label38.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="label26.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label37.Name" xml:space="preserve">
+    <value>label37</value>
   </data>
-  <data name="label26.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
-  </data>
-  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 123</value>
-  </data>
-  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 24</value>
-  </data>
-  <data name="label26.TabIndex" type="System.Int32, mscorlib">
-    <value>88</value>
-  </data>
-  <data name="label26.Text" xml:space="preserve">
-    <value>Weight (kg)</value>
-  </data>
-  <data name="&gt;&gt;label26.Name" xml:space="preserve">
-    <value>label26</value>
-  </data>
-  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+  <data name="&gt;&gt;label37.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;label37.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label37.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="label27.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label36.Name" xml:space="preserve">
+    <value>label36</value>
   </data>
-  <data name="label27.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
-  </data>
-  <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 73</value>
-  </data>
-  <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 24</value>
-  </data>
-  <data name="label27.TabIndex" type="System.Int32, mscorlib">
-    <value>87</value>
-  </data>
-  <data name="label27.Text" xml:space="preserve">
-    <value>Height (cm)</value>
-  </data>
-  <data name="&gt;&gt;label27.Name" xml:space="preserve">
-    <value>label27</value>
-  </data>
-  <data name="&gt;&gt;label27.Type" xml:space="preserve">
+  <data name="&gt;&gt;label36.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label27.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;label36.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label36.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="label28.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label35.Name" xml:space="preserve">
+    <value>label35</value>
   </data>
-  <data name="label28.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11pt</value>
-  </data>
-  <data name="label28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 23</value>
-  </data>
-  <data name="label28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 24</value>
-  </data>
-  <data name="label28.TabIndex" type="System.Int32, mscorlib">
-    <value>86</value>
-  </data>
-  <data name="label28.Text" xml:space="preserve">
-    <value>BCA</value>
-  </data>
-  <data name="&gt;&gt;label28.Name" xml:space="preserve">
-    <value>label28</value>
-  </data>
-  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+  <data name="&gt;&gt;label35.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;label35.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="water.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;label34.Name" xml:space="preserve">
+    <value>label34</value>
   </data>
-  <data name="water.Location" type="System.Drawing.Point, System.Drawing">
-    <value>728, 123</value>
+  <data name="&gt;&gt;label34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="water.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;label34.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="water.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 38</value>
-  </data>
-  <data name="water.TabIndex" type="System.Int32, mscorlib">
-    <value>85</value>
-  </data>
-  <data name="&gt;&gt;water.Name" xml:space="preserve">
-    <value>water</value>
-  </data>
-  <data name="&gt;&gt;water.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;water.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;water.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label34.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="protein.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;label33.Name" xml:space="preserve">
+    <value>label33</value>
   </data>
-  <data name="protein.Location" type="System.Drawing.Point, System.Drawing">
-    <value>728, 73</value>
+  <data name="&gt;&gt;label33.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="protein.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;label33.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="protein.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 38</value>
-  </data>
-  <data name="protein.TabIndex" type="System.Int32, mscorlib">
-    <value>84</value>
-  </data>
-  <data name="&gt;&gt;protein.Name" xml:space="preserve">
-    <value>protein</value>
-  </data>
-  <data name="&gt;&gt;protein.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;protein.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;protein.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="fats.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;guna2DataGridView16.Name" xml:space="preserve">
+    <value>guna2DataGridView16</value>
   </data>
-  <data name="fats.Location" type="System.Drawing.Point, System.Drawing">
-    <value>728, 23</value>
+  <data name="&gt;&gt;guna2DataGridView16.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="fats.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;guna2DataGridView16.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="fats.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 38</value>
-  </data>
-  <data name="fats.TabIndex" type="System.Int32, mscorlib">
-    <value>83</value>
-  </data>
-  <data name="&gt;&gt;fats.Name" xml:space="preserve">
-    <value>fats</value>
-  </data>
-  <data name="&gt;&gt;fats.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;fats.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;fats.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;guna2DataGridView16.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="weight.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;guna2DataGridView15.Name" xml:space="preserve">
+    <value>guna2DataGridView15</value>
   </data>
-  <data name="weight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 123</value>
+  <data name="&gt;&gt;guna2DataGridView15.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="weight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;guna2DataGridView15.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="weight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 38</value>
-  </data>
-  <data name="weight.TabIndex" type="System.Int32, mscorlib">
-    <value>82</value>
-  </data>
-  <data name="&gt;&gt;weight.Name" xml:space="preserve">
-    <value>weight</value>
-  </data>
-  <data name="&gt;&gt;weight.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;weight.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;weight.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;guna2DataGridView15.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="height.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;guna2DataGridView14.Name" xml:space="preserve">
+    <value>guna2DataGridView14</value>
   </data>
-  <data name="height.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 73</value>
+  <data name="&gt;&gt;guna2DataGridView14.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="height.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;guna2DataGridView14.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="height.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 38</value>
-  </data>
-  <data name="height.TabIndex" type="System.Int32, mscorlib">
-    <value>81</value>
-  </data>
-  <data name="&gt;&gt;height.Name" xml:space="preserve">
-    <value>height</value>
-  </data>
-  <data name="&gt;&gt;height.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;height.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;height.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;guna2DataGridView14.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="bca.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
+  <data name="&gt;&gt;guna2DataGridView13.Name" xml:space="preserve">
+    <value>guna2DataGridView13</value>
   </data>
-  <data name="bca.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 23</value>
+  <data name="&gt;&gt;guna2DataGridView13.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
   </data>
-  <data name="bca.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 6, 5, 6</value>
+  <data name="&gt;&gt;guna2DataGridView13.Parent" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="bca.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 38</value>
-  </data>
-  <data name="bca.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="&gt;&gt;bca.Name" xml:space="preserve">
-    <value>bca</value>
-  </data>
-  <data name="&gt;&gt;bca.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
-  </data>
-  <data name="&gt;&gt;bca.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;bca.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;guna2DataGridView13.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;od.Name" xml:space="preserve">
+    <value>od</value>
+  </data>
+  <data name="&gt;&gt;od.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;od.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;od.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pd.Name" xml:space="preserve">
+    <value>pd</value>
+  </data>
+  <data name="&gt;&gt;pd.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;pd.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;pd.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;hed.Name" xml:space="preserve">
+    <value>hed</value>
+  </data>
+  <data name="&gt;&gt;hed.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;hed.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;hed.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;idbox.Name" xml:space="preserve">
+    <value>idbox</value>
+  </data>
+  <data name="&gt;&gt;idbox.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;idbox.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;idbox.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;c.Name" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="&gt;&gt;c.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;c.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;c.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;hd.Name" xml:space="preserve">
+    <value>hd</value>
+  </data>
+  <data name="&gt;&gt;hd.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;hd.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;hd.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView12.Name" xml:space="preserve">
+    <value>guna2DataGridView12</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView12.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView12.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView12.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView11.Name" xml:space="preserve">
+    <value>guna2DataGridView11</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView11.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView11.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView11.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView10.Name" xml:space="preserve">
+    <value>guna2DataGridView10</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView10.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView10.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView10.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView9.Name" xml:space="preserve">
+    <value>guna2DataGridView9</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView9.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView9.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView9.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView8.Name" xml:space="preserve">
+    <value>guna2DataGridView8</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView8.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView8.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView8.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView7.Name" xml:space="preserve">
+    <value>guna2DataGridView7</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView7.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView7.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView7.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView6.Name" xml:space="preserve">
+    <value>guna2DataGridView6</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView6.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView6.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView6.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView5.Name" xml:space="preserve">
+    <value>guna2DataGridView5</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView5.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView5.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView5.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView4.Name" xml:space="preserve">
+    <value>guna2DataGridView4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView4.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView4.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView4.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView3.Name" xml:space="preserve">
+    <value>guna2DataGridView3</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView3.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView3.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>1147, 965</value>
   </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
+  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
+  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
+    <value>panel4</value>
   </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>tabPage3</value>
+  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
+    <value>tabPage4</value>
   </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1153, 971</value>
-  </data>
-  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>tabPage3</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
-    <value>tabPage3</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="guna2Button4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -4428,56 +5916,269 @@
   <data name="&gt;&gt;guna2DataGridView3.ZOrder" xml:space="preserve">
     <value>35</value>
   </data>
-  <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;ExportMH.Name" xml:space="preserve">
+    <value>ExportMH</value>
+  </data>
+  <data name="&gt;&gt;ExportMH.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;ExportMH.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;ExportMH.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MedicalHistoryDelete.Name" xml:space="preserve">
+    <value>MedicalHistoryDelete</value>
+  </data>
+  <data name="&gt;&gt;MedicalHistoryDelete.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;MedicalHistoryDelete.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;MedicalHistoryDelete.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView17.Name" xml:space="preserve">
+    <value>guna2DataGridView17</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView17.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView17.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;guna2DataGridView17.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;guna2Button1.Name" xml:space="preserve">
+    <value>guna2Button1</value>
+  </data>
+  <data name="&gt;&gt;guna2Button1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2Button1.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;guna2Button1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;EditMedicalHistory.Name" xml:space="preserve">
+    <value>EditMedicalHistory</value>
+  </data>
+  <data name="&gt;&gt;EditMedicalHistory.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;EditMedicalHistory.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;EditMedicalHistory.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;guna2Button3.Name" xml:space="preserve">
+    <value>guna2Button3</value>
+  </data>
+  <data name="&gt;&gt;guna2Button3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;guna2Button3.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;guna2Button3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;gendermh.Name" xml:space="preserve">
+    <value>gendermh</value>
+  </data>
+  <data name="&gt;&gt;gendermh.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;gendermh.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;gendermh.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label47.Name" xml:space="preserve">
+    <value>label47</value>
+  </data>
+  <data name="&gt;&gt;label47.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label47.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label47.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label48.Name" xml:space="preserve">
+    <value>label48</value>
+  </data>
+  <data name="&gt;&gt;label48.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label48.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label48.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label49.Name" xml:space="preserve">
+    <value>label49</value>
+  </data>
+  <data name="&gt;&gt;label49.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label49.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label49.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label50.Name" xml:space="preserve">
+    <value>label50</value>
+  </data>
+  <data name="&gt;&gt;label50.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label50.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label50.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label51.Name" xml:space="preserve">
+    <value>label51</value>
+  </data>
+  <data name="&gt;&gt;label51.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label51.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label51.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label52.Name" xml:space="preserve">
+    <value>label52</value>
+  </data>
+  <data name="&gt;&gt;label52.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label52.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label52.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label53.Name" xml:space="preserve">
+    <value>label53</value>
+  </data>
+  <data name="&gt;&gt;label53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label53.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;label53.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;nutritionistmh.Name" xml:space="preserve">
+    <value>nutritionistmh</value>
+  </data>
+  <data name="&gt;&gt;nutritionistmh.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;nutritionistmh.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;nutritionistmh.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;mobilenomh.Name" xml:space="preserve">
+    <value>mobilenomh</value>
+  </data>
+  <data name="&gt;&gt;mobilenomh.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;mobilenomh.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;mobilenomh.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;agemh.Name" xml:space="preserve">
+    <value>agemh</value>
+  </data>
+  <data name="&gt;&gt;agemh.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;agemh.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;agemh.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;familynamemh.Name" xml:space="preserve">
+    <value>familynamemh</value>
+  </data>
+  <data name="&gt;&gt;familynamemh.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;familynamemh.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;familynamemh.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;firstnamemh.Name" xml:space="preserve">
+    <value>firstnamemh</value>
+  </data>
+  <data name="&gt;&gt;firstnamemh.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;firstnamemh.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;firstnamemh.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;filenomh.Name" xml:space="preserve">
+    <value>filenomh</value>
+  </data>
+  <data name="&gt;&gt;filenomh.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b</value>
+  </data>
+  <data name="&gt;&gt;filenomh.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;filenomh.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>1147, 965</value>
   </data>
-  <data name="panel4.TabIndex" type="System.Int32, mscorlib">
+  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;panel4.Name" xml:space="preserve">
-    <value>panel4</value>
+  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
+    <value>panel5</value>
   </data>
-  <data name="&gt;&gt;panel4.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel4.Parent" xml:space="preserve">
-    <value>tabPage4</value>
+  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
+    <value>tabPage5</value>
   </data>
-  <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tabPage4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1153, 971</value>
-  </data>
-  <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tabPage4.Text" xml:space="preserve">
-    <value>tabPage4</value>
-  </data>
-  <data name="&gt;&gt;tabPage4.Name" xml:space="preserve">
-    <value>tabPage4</value>
-  </data>
-  <data name="&gt;&gt;tabPage4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage4.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="ExportMH.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11pt</value>
@@ -5088,81 +6789,6 @@
   <data name="&gt;&gt;filenomh.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
-  <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1147, 965</value>
-  </data>
-  <data name="panel5.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel5.Name" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;panel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel5.Parent" xml:space="preserve">
-    <value>tabPage5</value>
-  </data>
-  <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabPage5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tabPage5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1153, 971</value>
-  </data>
-  <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tabPage5.Text" xml:space="preserve">
-    <value>tabPage5</value>
-  </data>
-  <data name="&gt;&gt;tabPage5.Name" xml:space="preserve">
-    <value>tabPage5</value>
-  </data>
-  <data name="&gt;&gt;tabPage5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage5.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1161, 1000</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="contextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>203, 17</value>
   </metadata>
@@ -5227,6 +6853,90 @@
     <value>nutritionistnamedgv</value>
   </data>
   <data name="&gt;&gt;nutritionistnamedgv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;idbc.Name" xml:space="preserve">
+    <value>idbc</value>
+  </data>
+  <data name="&gt;&gt;idbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;datebc.Name" xml:space="preserve">
+    <value>datebc</value>
+  </data>
+  <data name="&gt;&gt;datebc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bcabc.Name" xml:space="preserve">
+    <value>bcabc</value>
+  </data>
+  <data name="&gt;&gt;bcabc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;heightbc.Name" xml:space="preserve">
+    <value>heightbc</value>
+  </data>
+  <data name="&gt;&gt;heightbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;weightbc.Name" xml:space="preserve">
+    <value>weightbc</value>
+  </data>
+  <data name="&gt;&gt;weightbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;agebc.Name" xml:space="preserve">
+    <value>agebc</value>
+  </data>
+  <data name="&gt;&gt;agebc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fatsbc.Name" xml:space="preserve">
+    <value>fatsbc</value>
+  </data>
+  <data name="&gt;&gt;fatsbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;proteinbc.Name" xml:space="preserve">
+    <value>proteinbc</value>
+  </data>
+  <data name="&gt;&gt;proteinbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;waterbc.Name" xml:space="preserve">
+    <value>waterbc</value>
+  </data>
+  <data name="&gt;&gt;waterbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mineralsbc.Name" xml:space="preserve">
+    <value>mineralsbc</value>
+  </data>
+  <data name="&gt;&gt;mineralsbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;visceralfatsbc.Name" xml:space="preserve">
+    <value>visceralfatsbc</value>
+  </data>
+  <data name="&gt;&gt;visceralfatsbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;abdominalfatsbc.Name" xml:space="preserve">
+    <value>abdominalfatsbc</value>
+  </data>
+  <data name="&gt;&gt;abdominalfatsbc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bmibc.Name" xml:space="preserve">
+    <value>bmibc</value>
+  </data>
+  <data name="&gt;&gt;bmibc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bmrbc.Name" xml:space="preserve">
+    <value>bmrbc</value>
+  </data>
+  <data name="&gt;&gt;bmrbc.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn31.Name" xml:space="preserve">
@@ -5527,90 +7237,6 @@
     <value>familynamemhdgv</value>
   </data>
   <data name="&gt;&gt;familynamemhdgv.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;idbc.Name" xml:space="preserve">
-    <value>idbc</value>
-  </data>
-  <data name="&gt;&gt;idbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;datebc.Name" xml:space="preserve">
-    <value>datebc</value>
-  </data>
-  <data name="&gt;&gt;datebc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bcabc.Name" xml:space="preserve">
-    <value>bcabc</value>
-  </data>
-  <data name="&gt;&gt;bcabc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;heightbc.Name" xml:space="preserve">
-    <value>heightbc</value>
-  </data>
-  <data name="&gt;&gt;heightbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;weightbc.Name" xml:space="preserve">
-    <value>weightbc</value>
-  </data>
-  <data name="&gt;&gt;weightbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;agebc.Name" xml:space="preserve">
-    <value>agebc</value>
-  </data>
-  <data name="&gt;&gt;agebc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fatsbc.Name" xml:space="preserve">
-    <value>fatsbc</value>
-  </data>
-  <data name="&gt;&gt;fatsbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;proteinbc.Name" xml:space="preserve">
-    <value>proteinbc</value>
-  </data>
-  <data name="&gt;&gt;proteinbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;waterbc.Name" xml:space="preserve">
-    <value>waterbc</value>
-  </data>
-  <data name="&gt;&gt;waterbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mineralsbc.Name" xml:space="preserve">
-    <value>mineralsbc</value>
-  </data>
-  <data name="&gt;&gt;mineralsbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;visceralfatsbc.Name" xml:space="preserve">
-    <value>visceralfatsbc</value>
-  </data>
-  <data name="&gt;&gt;visceralfatsbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;abdominalfatsbc.Name" xml:space="preserve">
-    <value>abdominalfatsbc</value>
-  </data>
-  <data name="&gt;&gt;abdominalfatsbc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bmibc.Name" xml:space="preserve">
-    <value>bmibc</value>
-  </data>
-  <data name="&gt;&gt;bmibc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bmrbc.Name" xml:space="preserve">
-    <value>bmrbc</value>
-  </data>
-  <data name="&gt;&gt;bmrbc.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

@@ -3376,12 +3376,95 @@ namespace HelloWorldSolutionIMS
         static string companynamefooter = "";
         static string companynumber = "";
         static string companyemail = "";
+        private string TranslateToArabicDigits(int number)
+        {
+            // Convert the number to string
+            string numberString = number.ToString();
+
+            // Custom mapping of English digits to Arabic-Indic digits
+            string[] arabicDigits = {
+                "٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"
+            };
+
+            // Translate each digit to Arabic
+            string arabicNumber = "";
+            foreach (char digit in numberString)
+            {
+                if (char.IsDigit(digit))
+                {
+                    arabicNumber += arabicDigits[digit - '0'];
+                }
+                else
+                {
+                    arabicNumber += digit; // Keep non-digit characters unchanged
+                }
+            }
+
+            return arabicNumber;
+        }
+        private string TranslateMonthToArabic(int month)
+        {
+            // Custom mapping of English month names to Arabic
+            string[] arabicMonths = {
+                "يناير", "فبراير", "مارس", "إبريل", "مايو", "يونيو",
+                "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"
+            };
+
+            // Ensure month value is within range
+            if (month >= 1 && month <= 12)
+            {
+                // Return the Arabic equivalent of the English month name
+                return arabicMonths[month - 1];
+            }
+            else
+            {
+                // Return empty string for invalid month value
+                return "";
+            }
+        }
         private void SettingCoverInfo()
         {
             goalstartvalue.Text = goalstart.Text;
             goalendvalue.Text = goalend.Text;
             targetvalue.Text = target.Text;
             achievedvalue.Text = achieved.Text;
+
+            if (languagestatus == 1)
+            {
+                // Get the selected date from the DateTimePicker
+                DateTime selectedDate = goalstart.Value;
+
+                // Translate the month name to Arabic
+                string arabicMonth = TranslateMonthToArabic(selectedDate.Month);
+
+                // Translate the day and year to Arabic digits
+                string arabicDay = TranslateToArabicDigits(selectedDate.Day);
+                string arabicYear = TranslateToArabicDigits(selectedDate.Year);
+
+                // Form the Arabic date
+                string arabicDate = arabicMonth + " " + arabicDay + ", " + arabicYear;
+
+                // Fill the label with the Arabic date
+                goalstartvalue.Text = arabicDate;
+
+                selectedDate = goalend.Value;
+
+                // Translate the month name to Arabic
+                arabicMonth = TranslateMonthToArabic(selectedDate.Month);
+
+                // Translate the day and year to Arabic digits
+                arabicDay = TranslateToArabicDigits(selectedDate.Day);
+                arabicYear = TranslateToArabicDigits(selectedDate.Year);
+
+                // Form the Arabic date
+                arabicDate = arabicMonth + " " + arabicDay + ", " + arabicYear;
+
+                // Fill the label with the Arabic date
+                goalendvalue.Text = arabicDate;
+            }
+
+
+
 
             SqlCommand cmd;
             try

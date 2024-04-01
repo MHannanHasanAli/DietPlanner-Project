@@ -583,6 +583,7 @@
             this.familyname.Name = "familyname";
             this.familyname.PasswordChar = '\0';
             this.familyname.PlaceholderText = "";
+            this.familyname.ReadOnly = true;
             this.familyname.SelectedText = "";
             this.familyname.ShadowDecoration.Parent = this.familyname;
             // 
@@ -604,6 +605,7 @@
             this.firstname.Name = "firstname";
             this.firstname.PasswordChar = '\0';
             this.firstname.PlaceholderText = "";
+            this.firstname.ReadOnly = true;
             this.firstname.SelectedText = "";
             this.firstname.ShadowDecoration.Parent = this.firstname;
             // 
@@ -848,6 +850,7 @@
             this.totalinsulin.Name = "totalinsulin";
             this.totalinsulin.PasswordChar = '\0';
             this.totalinsulin.PlaceholderText = "";
+            this.totalinsulin.ReadOnly = true;
             this.totalinsulin.SelectedText = "";
             this.totalinsulin.ShadowDecoration.Parent = this.totalinsulin;
             this.totalinsulin.TextChanged += new System.EventHandler(this.totalinsulin_TextChanged);
@@ -876,6 +879,7 @@
             this.baselineinsulin.Name = "baselineinsulin";
             this.baselineinsulin.PasswordChar = '\0';
             this.baselineinsulin.PlaceholderText = "";
+            this.baselineinsulin.ReadOnly = true;
             this.baselineinsulin.SelectedText = "";
             this.baselineinsulin.ShadowDecoration.Parent = this.baselineinsulin;
             this.baselineinsulin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.floatlock);
@@ -903,6 +907,7 @@
             this.bolusinsulin.Name = "bolusinsulin";
             this.bolusinsulin.PasswordChar = '\0';
             this.bolusinsulin.PlaceholderText = "";
+            this.bolusinsulin.ReadOnly = true;
             this.bolusinsulin.SelectedText = "";
             this.bolusinsulin.ShadowDecoration.Parent = this.bolusinsulin;
             this.bolusinsulin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.floatlock);
@@ -930,6 +935,7 @@
             this.insulincharb.Name = "insulincharb";
             this.insulincharb.PasswordChar = '\0';
             this.insulincharb.PlaceholderText = "";
+            this.insulincharb.ReadOnly = true;
             this.insulincharb.SelectedText = "";
             this.insulincharb.ShadowDecoration.Parent = this.insulincharb;
             this.insulincharb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.floatlock);

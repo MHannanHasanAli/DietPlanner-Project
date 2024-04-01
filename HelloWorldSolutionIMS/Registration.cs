@@ -1573,6 +1573,46 @@ namespace HelloWorldSolutionIMS
             tabControl1.SelectedIndex = 2;
         }
 
+        private void CalculateBMIandBMR()
+        {
+            if (genderbmi.Text != null && genderbmi.Text != ""
+                            && height.Text != null && height.Text != ""
+                            && weight.Text != null && weight.Text != ""
+                            && agebmi.Text != null && agebmi.Text != "")
+            {
+                var genderval = genderbmi.Text;
+                var heightval = double.Parse(height.Text);
+                var heightforBMR = heightval;
+                heightval = heightval / 100;
+                heightval = heightval * heightval;
+
+                var weightval = double.Parse(weight.Text);
+                bmi = weightval / heightval;
+
+                weightval = weightval * 10;
+                heightforBMR = heightforBMR * 6.25;
+
+                int ageval = int.Parse(agebmi.Text);
+
+                ageval = ageval * 5;
+
+
+                if (genderval == "Female")
+                {
+                    bmr = weightval + heightforBMR - ageval - 161;
+                }
+                else
+                {
+                    bmr = weightval + heightforBMR - ageval + 5;
+                }
+
+                BMI_Value.Text = "BMI : " + bmi.ToString();
+                BMR_Value.Text = "BMR : " + bmr.ToString();
+            }
+
+        }
+        static double bmr = 0;
+        static double bmi = 0;
         private void SaveBMI_Click(object sender, EventArgs e)
         {
 
@@ -1602,31 +1642,7 @@ namespace HelloWorldSolutionIMS
                         cmd.Parameters.AddWithValue("@VISCERAL_FATS", visceralfats.Text); // Replace visceralFatsValue with the actual value.
                         cmd.Parameters.AddWithValue("@ABDOMINAL_FAT", abdominalfats.Text); // Replace abdominalFatValue with the actual value.
 
-                        var genderval = genderbmi.Text;
-                        var heightval = double.Parse(height.Text);
-                        var heightforBMR = heightval;
-                        heightval = heightval / 100;
-                        heightval = heightval * heightval;
-
-                        var weightval = double.Parse(weight.Text);
-                        var bmi = weightval / heightval;
-
-                        weightval = weightval * 10;
-                        heightforBMR = heightforBMR * 6.25;
-
-                        int ageval = int.Parse(agebmi.Text);
-
-                        ageval = ageval * 5;
-                        double bmr = 0;
-
-                        if (genderval == "Female")
-                        {
-                            bmr = weightval + heightforBMR - ageval - 161;
-                        }
-                        else
-                        {
-                            bmr = weightval + heightforBMR - ageval + 5;
-                        }
+                        CalculateBMIandBMR();
 
                         cmd.Parameters.AddWithValue("@BMI", bmi); // Replace bmiValue with the actual value.
                         cmd.Parameters.AddWithValue("@BMR", bmr); // Replace bmrValue with the actual value.
@@ -4658,6 +4674,16 @@ JOIN
                     }
                 }
             }
+        }
+
+        private void height_TextChanged(object sender, EventArgs e)
+        {
+            CalculateBMIandBMR();
+        }
+
+        private void weight_TextChanged(object sender, EventArgs e)
+        {
+            CalculateBMIandBMR();
         }
     }
 }

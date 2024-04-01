@@ -18,6 +18,12 @@ namespace HelloWorldSolutionIMS
             AddFiveRowsToTable();
             AddFiveRowsToTablecarbs();
             AddRowsToBloodSuger();
+            guna2DataGridView4.Columns[0].ReadOnly = true;
+            guna2DataGridView4.Columns[1].ReadOnly = true;
+            guna2DataGridView1.Columns[0].ReadOnly = true;
+            guna2DataGridView1.Columns[2].ReadOnly = true;
+            guna2DataGridView2.Columns[0].ReadOnly = true;
+            guna2DataGridView2.Columns[2].ReadOnly = true;
         }
         static int valueid = 0;
         public Diabetes(int id)
@@ -33,6 +39,12 @@ namespace HelloWorldSolutionIMS
             LoadData(id);
             openingflag = 1;
             edit = 1;
+            guna2DataGridView4.Columns[0].ReadOnly = true;
+            guna2DataGridView4.Columns[1].ReadOnly = true;
+            guna2DataGridView1.Columns[0].ReadOnly = true;
+            guna2DataGridView1.Columns[2].ReadOnly = true;
+            guna2DataGridView2.Columns[0].ReadOnly = true;
+            guna2DataGridView2.Columns[2].ReadOnly = true;
         }
         static int total;
         static double insulincharbcalc;
@@ -998,6 +1010,21 @@ namespace HelloWorldSolutionIMS
             {
                 if (guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
+                    string userInput = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    if (!string.IsNullOrWhiteSpace(userInput))
+                    {
+                        // Try to parse the input as an integer
+                        if (!int.TryParse(userInput, out int intValue))
+                        {
+                            // If parsing as an integer fails, try to parse as a float
+                            if (!float.TryParse(userInput, out float floatValue))
+                            {
+                                MessageBox.Show("Invalid input! Please enter a valid integer or float.");
+                                guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = "0";
+                                return;
+                            }
+                        }
+                    }
                     table_total = 0;
                     string changedValue = guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
                     guna2DataGridView7.Visible = true;
@@ -1108,6 +1135,22 @@ namespace HelloWorldSolutionIMS
             {
                 if (guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
+                    string userInput = guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                    if (!string.IsNullOrWhiteSpace(userInput))
+                    {
+                        // Try to parse the input as an integer
+                        if (!int.TryParse(userInput, out int intValue))
+                        {
+                            // If parsing as an integer fails, try to parse as a float
+                            if (!float.TryParse(userInput, out float floatValue))
+                            {
+                                MessageBox.Show("Invalid input! Please enter a valid integer or float.");
+                                guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = "0";
+
+                                return;
+                            }
+                        }
+                    }
                     table_total2 = 0;
                     shots = 0;
                     string changedValue = guna2DataGridView2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
@@ -1422,39 +1465,117 @@ namespace HelloWorldSolutionIMS
                 {
                     if (guna2DataGridView4.Rows[0].Selected)
                     {
-                        fastingglucose = double.Parse(guna2DataGridView4.Rows[0].Cells[2].Value.ToString());
-                        fastingglucose = fastingglucose - 130;
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
+                        if (guna2DataGridView4.Rows[0].Cells[2].Value != null
+                            && guna2DataGridView4.Rows[0].Cells[2].Value != "")
+                        {
+                            string userInput = guna2DataGridView4.Rows[0].Cells[2].Value.ToString();
+                            if (!string.IsNullOrWhiteSpace(userInput))
+                            {
+                                // Try to parse the input as an integer
+                                if (!int.TryParse(userInput, out int intValue))
+                                {
+                                    // If parsing as an integer fails, try to parse as a float
+                                    if (!float.TryParse(userInput, out float floatValue))
+                                    {
+                                        MessageBox.Show("Invalid input! Please enter a valid integer or float.");
+                                        guna2DataGridView4.Rows[0].Cells[2].Value = "0";
+                                        return;
+                                    }
+                                }
+                            }
+                            fastingglucose = double.Parse(guna2DataGridView4.Rows[0].Cells[2].Value.ToString());
+                            fastingglucose = fastingglucose - 130;
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+                        }
+
                     }
                     else if (guna2DataGridView4.Rows[1].Selected)
                     {
-                        beforelunch = double.Parse(guna2DataGridView4.Rows[1].Cells[2].Value.ToString());
-                        beforelunch = beforelunch - 180;
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
+                        if (guna2DataGridView4.Rows[1].Cells[2].Value != null
+                            && guna2DataGridView4.Rows[1].Cells[2].Value != "")
+                        {
+                            string userInput = guna2DataGridView4.Rows[1].Cells[2].Value.ToString();
+                            if (!string.IsNullOrWhiteSpace(userInput))
+                            {
+                                // Try to parse the input as an integer
+                                if (!int.TryParse(userInput, out int intValue))
+                                {
+                                    // If parsing as an integer fails, try to parse as a float
+                                    if (!float.TryParse(userInput, out float floatValue))
+                                    {
+                                        MessageBox.Show("Invalid input! Please enter a valid integer or float.");
+                                        guna2DataGridView4.Rows[1].Cells[2].Value = "0";
+                                        return;
+                                    }
+                                }
+                            }
+                            beforelunch = double.Parse(guna2DataGridView4.Rows[1].Cells[2].Value.ToString());
+                            beforelunch = beforelunch - 180;
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+                        }
                     }
                     else if (guna2DataGridView4.Rows[2].Selected)
                     {
-                        beforedinner = double.Parse(guna2DataGridView4.Rows[2].Cells[2].Value.ToString());
-                        beforedinner = beforedinner - 180;
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
+                        if (guna2DataGridView4.Rows[2].Cells[2].Value != null
+                            && guna2DataGridView4.Rows[2].Cells[2].Value != "")
+                        {
+                            string userInput = guna2DataGridView4.Rows[2].Cells[2].Value.ToString();
+                            if (!string.IsNullOrWhiteSpace(userInput))
+                            {
+                                // Try to parse the input as an integer
+                                if (!int.TryParse(userInput, out int intValue))
+                                {
+                                    // If parsing as an integer fails, try to parse as a float
+                                    if (!float.TryParse(userInput, out float floatValue))
+                                    {
+                                        MessageBox.Show("Invalid input! Please enter a valid integer or float.");
+                                        guna2DataGridView4.Rows[2].Cells[2].Value = "0";
+                                        return;
+                                    }
+                                }
+                            }
+                            beforedinner = double.Parse(guna2DataGridView4.Rows[2].Cells[2].Value.ToString());
+                            beforedinner = beforedinner - 180;
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+                        }
                     }
                     else if (guna2DataGridView4.Rows[3].Selected)
                     {
-                        bedtime = double.Parse(guna2DataGridView4.Rows[3].Cells[2].Value.ToString());
-                        bedtime = bedtime - 150;
-                        guna2DataGridView5.Rows.Clear();
-                        AddRowsToCorrectionFactor();
-                        guna2DataGridView6.Rows.Clear();
-                        AddRowsToCorrection();
+                        if (guna2DataGridView4.Rows[3].Cells[2].Value != null
+                            && guna2DataGridView4.Rows[3].Cells[2].Value != "")
+                        {
+                            string userInput = guna2DataGridView4.Rows[3].Cells[2].Value.ToString();
+                            if (!string.IsNullOrWhiteSpace(userInput))
+                            {
+                                // Try to parse the input as an integer
+                                if (!int.TryParse(userInput, out int intValue))
+                                {
+                                    // If parsing as an integer fails, try to parse as a float
+                                    if (!float.TryParse(userInput, out float floatValue))
+                                    {
+                                        MessageBox.Show("Invalid input! Please enter a valid integer or float.");
+                                        guna2DataGridView4.Rows[3].Cells[2].Value = "0";
+
+                                        return;
+                                    }
+                                }
+                            }
+                            bedtime = double.Parse(guna2DataGridView4.Rows[3].Cells[2].Value.ToString());
+                            bedtime = bedtime - 150;
+                            guna2DataGridView5.Rows.Clear();
+                            AddRowsToCorrectionFactor();
+                            guna2DataGridView6.Rows.Clear();
+                            AddRowsToCorrection();
+                        }
                     }
                 }
                 counterfor4--;
